@@ -2,9 +2,9 @@
 using Android.Widget;
 using Android.OS;
 
-namespace Naxam.Busuu
+namespace Naxam.Busuu.Droid
 {
-    [Activity(Label = "Naxam.Busuu", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Naxam.Busuu.Droid", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
