@@ -129,6 +129,12 @@
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Naxam.Busuu.Droid.Profile\Naxam.Busuu.Droid.Profile.csproj">
+      <Project>{DFD37792-D1A1-463E-BA9F-8DD045E61178}</Project>
+      <Name>Naxam.Busuu.Droid.Profile</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

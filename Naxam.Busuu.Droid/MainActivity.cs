@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Naxam.Busuu.Droid.Profile.Views;
 
 namespace Naxam.Busuu.Droid
 {
@@ -12,7 +13,7 @@ namespace Naxam.Busuu.Droid
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-            // SetContentView (Resource.Layout.Main);
+            StartActivity(new Android.Content.Intent(this,typeof(BuyPremiumActivity)));
         }
     }
 }

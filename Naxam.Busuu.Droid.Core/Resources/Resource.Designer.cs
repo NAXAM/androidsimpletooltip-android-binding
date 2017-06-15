@@ -1632,40 +1632,49 @@ namespace Naxam.Busuu.Droid.Core
 			public static int abc_vector_test = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public static int notification_action_background = 2130837587;
+			public static int background = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public static int notification_bg = 2130837588;
+			public static int cornerbutton = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public static int notification_bg_low = 2130837589;
+			public static int logo = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public static int notification_bg_low_normal = 2130837590;
+			public static int notification_action_background = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public static int notification_bg_low_pressed = 2130837591;
+			public static int notification_bg = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public static int notification_bg_normal = 2130837592;
+			public static int notification_bg_low = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public static int notification_bg_normal_pressed = 2130837593;
+			public static int notification_bg_low_normal = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public static int notification_icon_background = 2130837594;
-			
-			// aapt resource value: 0x7f02005d
-			public static int notification_template_icon_bg = 2130837597;
-			
-			// aapt resource value: 0x7f02005e
-			public static int notification_template_icon_low_bg = 2130837598;
+			public static int notification_bg_low_pressed = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public static int notification_tile_bg = 2130837595;
+			public static int notification_bg_normal = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public static int notify_panel_notification_icon_bg = 2130837596;
+			public static int notification_bg_normal_pressed = 2130837596;
+			
+			// aapt resource value: 0x7f02005d
+			public static int notification_icon_background = 2130837597;
+			
+			// aapt resource value: 0x7f020060
+			public static int notification_template_icon_bg = 2130837600;
+			
+			// aapt resource value: 0x7f020061
+			public static int notification_template_icon_low_bg = 2130837601;
+			
+			// aapt resource value: 0x7f02005e
+			public static int notification_tile_bg = 2130837598;
+			
+			// aapt resource value: 0x7f02005f
+			public static int notify_panel_notification_icon_bg = 2130837599;
 			
 			static Drawable()
 			{
