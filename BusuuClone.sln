@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.Busuu.Droid.Profile", "Naxam.Busuu.Droid.Profile\Naxam.Busuu.Droid.Profile.csproj", "{DFD37792-D1A1-463E-BA9F-8DD045E61178}"
 EndProject
@@ -35,6 +35,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DFD37792-D1A1-463E-BA9F-8DD045E61178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DFD37792-D1A1-463E-BA9F-8DD045E61178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD37792-D1A1-463E-BA9F-8DD045E61178}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{DFD37792-D1A1-463E-BA9F-8DD045E61178}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFD37792-D1A1-463E-BA9F-8DD045E61178}.Release|Any CPU.Build.0 = Release|Any CPU
 		{57DAE196-2D72-405B-AE3A-C18A107FDE4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

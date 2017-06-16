@@ -1,7 +1,8 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-
+using Android.Content;
+using Naxam.Busuu.Droid.Profile.Views;
 namespace Naxam.Busuu.Droid
 {
     [Activity(Label = "Naxam.Busuu.Droid", MainLauncher = true, Icon = "@drawable/icon")]
@@ -10,9 +11,7 @@ namespace Naxam.Busuu.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
-            // Set our view from the "main" layout resource
-            // SetContentView (Resource.Layout.Main);
+            StartActivity(new Intent(this, typeof(LoginPageActivity)));
         }
     }
 }
