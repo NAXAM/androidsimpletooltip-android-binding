@@ -57,6 +57,8 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Animation.abc_slide_in_top = global::Naxam.Busuu.Droid.Resource.Animation.abc_slide_in_top;
 			global::Naxam.Busuu.Droid.Profile.Resource.Animation.abc_slide_out_bottom = global::Naxam.Busuu.Droid.Resource.Animation.abc_slide_out_bottom;
 			global::Naxam.Busuu.Droid.Profile.Resource.Animation.abc_slide_out_top = global::Naxam.Busuu.Droid.Resource.Animation.abc_slide_out_top;
+			global::Naxam.Busuu.Droid.Profile.Resource.Animation.fade_in = global::Naxam.Busuu.Droid.Resource.Animation.fade_in;
+			global::Naxam.Busuu.Droid.Profile.Resource.Animation.slide_up = global::Naxam.Busuu.Droid.Resource.Animation.slide_up;
 			global::Naxam.Busuu.Droid.Profile.Resource.Attribute.MvxBind = global::Naxam.Busuu.Droid.Resource.Attribute.MvxBind;
 			global::Naxam.Busuu.Droid.Profile.Resource.Attribute.MvxDropDownItemTemplate = global::Naxam.Busuu.Droid.Resource.Attribute.MvxDropDownItemTemplate;
 			global::Naxam.Busuu.Droid.Profile.Resource.Attribute.MvxGroupItemTemplate = global::Naxam.Busuu.Droid.Resource.Attribute.MvxGroupItemTemplate;
@@ -1545,6 +1547,12 @@ namespace Naxam.Busuu.Droid
 			
 			// aapt resource value: 0x7f040009
 			public const int abc_slide_out_top = 2130968585;
+			
+			// aapt resource value: 0x7f04000a
+			public const int fade_in = 2130968586;
+			
+			// aapt resource value: 0x7f04000b
+			public const int slide_up = 2130968587;
 			
 			static Animation()
 			{
