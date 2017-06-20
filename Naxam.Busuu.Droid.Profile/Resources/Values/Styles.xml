@@ -1,0 +1,66 @@
+﻿<resources>
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:textColorSecondary">@color/colorHintEditText</item>
+  </style>
+  <!--Style Text Title-->
+  <style name="StyleTextTitle">
+    <item name="android:textColor">@color/colorTextPrimary</item>
+    <item name="android:textSize">@dimen/textSizeTitle</item>
+  </style>
+
+  <style name="StyleTextTitleRegular" parent="@style/StyleTextTitle"></style>
+
+  <style name="StyleTextTitleBold" parent="@style/StyleTextTitle">
+    <item name="android:textStyle">bold</item>
+  </style>
+  <!--Style Text Subtitle-->
+  <style name="StyleTextSubTitle">
+    <item name="android:textColor">@color/colorTextSecondary</item>
+    <item name="android:textSize">@dimen/textSizeSubTitle</item>
+  </style>
+  <!--Style Button-->
+  <style name="StyleButton">
+    <item name="android:layout_height">@dimen/buttonHeightDefault</item>
+  </style>
+
+  <style name="StyleEnableButton" parent="@style/StyleButton">
+    <item name="android:layout_height">@dimen/buttonHeightDefault</item>
+    <item name="android:background">@drawable/forgot_password_button_background</item>
+    <item name="android:textColor">@color/colorWhite</item>
+    <item name="android:enabled">false</item>
+  </style>
+
+  <style name="StyleButtonFacebook" parent="StyleButton">
+    <item name="android:layout_height">@dimen/buttonHeightDefault</item>
+    <item name="android:background">@drawable/background_facebook_button</item>
+    <item name="android:drawableLeft">@drawable/logo_facebook_40_40</item>
+    <item name="android:drawableRight">@drawable/blank_40_40</item>
+    <item name="android:textColor">@color/colorWhite</item>
+  </style>
+
+  <style name="StyleButtonGoogle" parent="StyleButton">
+    <item name="android:layout_height">@dimen/buttonHeightDefault</item>
+    <item name="android:background">@drawable/background_google_button</item>
+    <item name="android:drawableLeft">@drawable/logo_google_40_40</item>
+    <item name="android:drawableRight">@drawable/blank_40_40</item>
+    <item name="android:textColor">@color/colorWhite</item>
+  </style>
+
+  <style name="StyleButtonConfirmDialog" parent="StyleButton">
+    <item name="android:textColor">@color/colorPrimary</item>
+    <item name="android:background">@android:color/transparent</item>
+  </style>
+  <!--Style EditText-->
+  <style name="StyleEditText">
+    <item name="android:textColorHint">@color/colorHintEditText</item>
+    <item name="android:textColorHighlight">@color/colorPrimary</item>
+    <item name="android:textColor">@color/colorTextPrimary</item>
+    <item name="android:textSize">@dimen/textSizeSubTitle</item>
+    <item name="android:layout_height">@dimen/buttonHeightDefault</item>
+  </style>
+</resources>
