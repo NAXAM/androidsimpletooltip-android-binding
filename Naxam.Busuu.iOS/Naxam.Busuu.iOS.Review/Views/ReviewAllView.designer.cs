@@ -7,7 +7,6 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
@@ -15,14 +14,75 @@ namespace Naxam.Busuu.iOS.Review.Views
     partial class ReviewAllView
     {
         [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel SubTotalTextField { get; set; }
+        UIKit.UIButton btnDiscovery { get; set; }
+
+
+        [Outlet]
+        UIKit.UIButton btnFriends { get; set; }
+
+
+        [Outlet]
+        UIKit.UILabel lbButtonClicked { get; set; }
+
+
+        [Outlet]
+        UIKit.UITableView ReviewTableView { get; set; }
+
+
+        [Outlet]
+        UIKit.UISearchBar searchBar { get; set; }
+
+
+        [Outlet]
+        UIKit.UIView uiViewButton { get; set; }
+
+
+        [Outlet]
+        UIKit.UIView uiViewSlide { get; set; }
+
+
+        [Action ("btnDiscovery_TouchUpInside:")]
+        partial void btnDiscovery_TouchUpInside (Foundation.NSObject sender);
+
+
+        [Action ("btnFriends_TouchUpInside:")]
+        partial void btnFriends_TouchUpInside (Foundation.NSObject sender);
 
         void ReleaseDesignerOutlets ()
         {
-            if (SubTotalTextField != null) {
-                SubTotalTextField.Dispose ();
-                SubTotalTextField = null;
+            if (btnDiscovery != null) {
+                btnDiscovery.Dispose ();
+                btnDiscovery = null;
+            }
+
+            if (btnFriends != null) {
+                btnFriends.Dispose ();
+                btnFriends = null;
+            }
+
+            if (lbButtonClicked != null) {
+                lbButtonClicked.Dispose ();
+                lbButtonClicked = null;
+            }
+
+            if (ReviewTableView != null) {
+                ReviewTableView.Dispose ();
+                ReviewTableView = null;
+            }
+
+            if (searchBar != null) {
+                searchBar.Dispose ();
+                searchBar = null;
+            }
+
+            if (uiViewButton != null) {
+                uiViewButton.Dispose ();
+                uiViewButton = null;
+            }
+
+            if (uiViewSlide != null) {
+                uiViewSlide.Dispose ();
+                uiViewSlide = null;
             }
         }
     }
