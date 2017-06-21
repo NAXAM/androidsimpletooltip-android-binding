@@ -11,7 +11,7 @@ namespace Naxam.Busuu.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            StartActivity(new Intent(this, typeof(LoginPageActivity)));
+            StartActivity(new Intent(this, typeof(LoginView)));
         }
     }
 }

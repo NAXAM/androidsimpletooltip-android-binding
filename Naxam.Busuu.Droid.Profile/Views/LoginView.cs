@@ -13,11 +13,12 @@ using Android.Graphics;
 using Android.Graphics.Drawables;
 using static Android.Resource;
 using Android.Views.Animations;
+using Android.Views.InputMethods;
 
 namespace Naxam.Busuu.Droid.Profile.Views
 {
     [Activity(Label = "LoginPageActivity")]
-    public class LoginPageActivity : Activity
+    public class LoginView : Activity
     {
         private bool isClickLoginBtn;
         private bool isClickFBBtn;
@@ -33,7 +34,6 @@ namespace Naxam.Busuu.Droid.Profile.Views
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.LoginPage);
             InitActivity();
-
         }
 
         private void InitActivity()
@@ -61,16 +61,18 @@ namespace Naxam.Busuu.Droid.Profile.Views
             LinearLayout parent = (LinearLayout)btnFB.Parent;
             if (edtEmail.IsFocused || edtPassword.IsFocused)
             {
-                if (parent.Visibility!= ViewStates.Gone)
+                if (parent.Visibility != ViewStates.Gone)
                 {
                     parent.Visibility = ViewStates.Gone;
                 }
-               
+
             }
-            if(edtEmail.IsFocused== false && edtPassword.IsFocused== false)
+            if (edtEmail.IsFocused == false && edtPassword.IsFocused == false)
             {
                 parent.Visibility = ViewStates.Visible;
-
+                // Check if no view has focus: 
+                InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
+                imm.HideSoftInputFromWindow(edtPassword.WindowToken, 0);
             }
         }
 
