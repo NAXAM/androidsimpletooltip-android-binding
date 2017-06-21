@@ -1,20 +1,22 @@
 ﻿using System;
-
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.iOS.Views;
+using Naxam.Busuu.Review.ViewModels;
 using UIKit;
 
-namespace Naxam.Busuu.iOS
+namespace Naxam.Busuu.iOS.Review.Views
 {
-    public partial class ViewController : UIViewController
+    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>
     {
-        protected ViewController(IntPtr handle) : base(handle)
+        public ReviewAllView() : base("ReviewAllView", null)
         {
-            // Note: this .ctor should not contain any initialization logic.
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
+            this.CreateBinding(SubTotalTextField).To((ReviewAllViewModel vm) => vm.SubTotal).Apply();
         }
 
         public override void DidReceiveMemoryWarning()
@@ -24,3 +26,4 @@ namespace Naxam.Busuu.iOS
         }
     }
 }
+
