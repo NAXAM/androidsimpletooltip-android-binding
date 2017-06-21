@@ -2049,8 +2049,6 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.forgot_password_button_background = global::Naxam.Busuu.Droid.Resource.Drawable.forgot_password_button_background;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.forgot_password_button_background_disable = global::Naxam.Busuu.Droid.Resource.Drawable.forgot_password_button_background_disable;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.forgot_password_button_background_enable = global::Naxam.Busuu.Droid.Resource.Drawable.forgot_password_button_background_enable;
-			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.google_logo = global::Naxam.Busuu.Droid.Resource.Drawable.google_logo;
-			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.ic_action_facebook_login = global::Naxam.Busuu.Droid.Resource.Drawable.ic_action_facebook_login;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.ic_expand_arrow = global::Naxam.Busuu.Droid.Resource.Drawable.ic_expand_arrow;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.ic_expand_arrow_20_20 = global::Naxam.Busuu.Droid.Resource.Drawable.ic_expand_arrow_20_20;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.icon_google_drawble_transparent = global::Naxam.Busuu.Droid.Resource.Drawable.icon_google_drawble_transparent;
@@ -4785,85 +4783,79 @@ namespace Naxam.Busuu.Droid
 			public const int forgot_password_button_background_enable = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int google_logo = 2130837620;
+			public const int ic_expand_arrow = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_action_facebook_login = 2130837621;
+			public const int ic_expand_arrow_20_20 = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int ic_expand_arrow = 2130837622;
+			public const int Icon = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int ic_expand_arrow_20_20 = 2130837623;
+			public const int icon_google_drawble_transparent = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int Icon = 2130837624;
+			public const int logo_facebook = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int icon_google_drawble_transparent = 2130837625;
+			public const int logo_facebook_40_40 = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int logo_facebook = 2130837626;
+			public const int logo_google = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int logo_facebook_40_40 = 2130837627;
+			public const int logo_google_40_40 = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int logo_google = 2130837628;
+			public const int notification_action_background = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int logo_google_40_40 = 2130837629;
+			public const int notification_bg = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int notification_action_background = 2130837630;
+			public const int notification_bg_low = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int notification_bg = 2130837631;
+			public const int notification_bg_low_normal = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int notification_bg_low = 2130837632;
+			public const int notification_bg_low_pressed = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int notification_bg_low_normal = 2130837633;
+			public const int notification_bg_normal = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int notification_bg_low_pressed = 2130837634;
+			public const int notification_bg_normal_pressed = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int notification_bg_normal = 2130837635;
-			
-			// aapt resource value: 0x7f020084
-			public const int notification_bg_normal_pressed = 2130837636;
-			
-			// aapt resource value: 0x7f020085
-			public const int notification_icon_background = 2130837637;
-			
-			// aapt resource value: 0x7f02008d
-			public const int notification_template_icon_bg = 2130837645;
-			
-			// aapt resource value: 0x7f02008e
-			public const int notification_template_icon_low_bg = 2130837646;
-			
-			// aapt resource value: 0x7f020086
-			public const int notification_tile_bg = 2130837638;
-			
-			// aapt resource value: 0x7f020087
-			public const int notify_panel_notification_icon_bg = 2130837639;
-			
-			// aapt resource value: 0x7f020088
-			public const int scrollbar_handle_holo_dark = 2130837640;
-			
-			// aapt resource value: 0x7f020089
-			public const int scrollbar_handle_holo_light = 2130837641;
-			
-			// aapt resource value: 0x7f02008a
-			public const int transparent = 2130837642;
+			public const int notification_icon_background = 2130837635;
 			
 			// aapt resource value: 0x7f02008b
-			public const int underline_background_focus = 2130837643;
+			public const int notification_template_icon_bg = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int underline_background_normal = 2130837644;
+			public const int notification_template_icon_low_bg = 2130837644;
+			
+			// aapt resource value: 0x7f020084
+			public const int notification_tile_bg = 2130837636;
+			
+			// aapt resource value: 0x7f020085
+			public const int notify_panel_notification_icon_bg = 2130837637;
+			
+			// aapt resource value: 0x7f020086
+			public const int scrollbar_handle_holo_dark = 2130837638;
+			
+			// aapt resource value: 0x7f020087
+			public const int scrollbar_handle_holo_light = 2130837639;
+			
+			// aapt resource value: 0x7f020088
+			public const int transparent = 2130837640;
+			
+			// aapt resource value: 0x7f020089
+			public const int underline_background_focus = 2130837641;
+			
+			// aapt resource value: 0x7f02008a
+			public const int underline_background_normal = 2130837642;
 			
 			static Drawable()
 			{
