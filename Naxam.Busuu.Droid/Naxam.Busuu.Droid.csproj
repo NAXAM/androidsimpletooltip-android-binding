@@ -171,7 +171,7 @@
       <Name>Naxam.Busuu.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Droid.Profile\Naxam.Busuu.Droid.Profile.csproj">
-      <Project>{DFD37792-D1A1-463E-BA9F-8DD045E61178}</Project>
+      <Project>{dfd37792-d1a1-463e-ba9f-8dd045e61178}</Project>
       <Name>Naxam.Busuu.Droid.Profile</Name>
     </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
