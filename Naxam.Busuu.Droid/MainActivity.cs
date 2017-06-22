@@ -16,16 +16,15 @@ using Android.Graphics;
 
 namespace Naxam.Busuu.Droid
 {
-    [Activity(Label = "MainActivity", MainLauncher = true, SupportsPictureInPicture = true,AllowEmbedded =true)]
+    [Activity(Label = "MainActivity", MainLauncher = true, SupportsPictureInPicture = true, AllowEmbedded = true)]
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Main);
-           StartActivity(new Intent(this, typeof(LoginView)));
-
-
+            //SetContentView(Resource.Layout.Main);
+            StartActivity(new Intent(this, typeof(LoginView)));
+         
         }
     }
 }
