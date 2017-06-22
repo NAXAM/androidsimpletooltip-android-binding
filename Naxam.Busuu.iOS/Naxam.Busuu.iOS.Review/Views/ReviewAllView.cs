@@ -6,10 +6,11 @@ using Naxam.Busuu.Review.ViewModels;
 using UIKit;
 using ObjCRuntime;
 using Foundation;
+using MvvmCross.Binding.iOS.Views;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
-    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource
+    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>
     {
         CGPoint oriPoint;
         bool IsDiscovery = true;
@@ -23,9 +24,14 @@ namespace Naxam.Busuu.iOS.Review.Views
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
             NavigationItem.TitleView = uiViewButton;
+            ReviewTableView.RowHeight = 60;
+            var source = new MvxSimpleTableViewSource(ReviewTableView, ReviewTableViewCell.Key, "reviewCell");
+            ReviewTableView.Source = source;
 
-            ReviewTableView.RegisterNibForCellReuse(ReviewTableViewCell.Nib, "reviewCell");
-            ReviewTableView.WeakDataSource = this;
+            var set = this.CreateBindingSet<ReviewAllView, ReviewAllViewModel>();
+            set.Bind(source).To(vm=>vm.Reviews);
+            set.Apply();
+            ReviewTableView.ReloadData();
         }
 
         public override void ViewDidLayoutSubviews()
@@ -83,18 +89,6 @@ namespace Naxam.Busuu.iOS.Review.Views
         {
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
-        }
-
-        public nint RowsInSection(UITableView tableView, nint section)
-        {
-            return 3;
-        }
-
-        public UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
-        {
-            var cell = ReviewTableView.DequeueReusableCell("reviewCell", indexPath);
-            cell.BackgroundColor = UIColor.Black;
-            return cell;
         }
     }
 }

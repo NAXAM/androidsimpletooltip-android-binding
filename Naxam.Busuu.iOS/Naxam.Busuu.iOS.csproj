@@ -93,6 +93,9 @@
     <Reference Include="MvvmCross.iOS">
       <HintPath>..\packages\MvvmCross.Core.5.0.3\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />

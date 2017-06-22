@@ -19,7 +19,7 @@ namespace Naxam.Busuu.iOS.Review.Views
         UIKit.UIButton btnStar { get; set; }
 
         [Outlet]
-        UIKit.UIImageView imgSignal { get; set; }
+        UIKit.UIImageView imgStrength { get; set; }
 
         [Outlet]
         UIKit.UIImageView imgWord { get; set; }
@@ -32,24 +32,14 @@ namespace Naxam.Busuu.iOS.Review.Views
         
         void ReleaseDesignerOutlets ()
         {
-            if (imgWord != null) {
-                imgWord.Dispose ();
-                imgWord = null;
+            if (btnPlay != null) {
+                btnPlay.Dispose ();
+                btnPlay = null;
             }
 
-            if (imgSignal != null) {
-                imgSignal.Dispose ();
-                imgSignal = null;
-            }
-
-            if (lbTitle != null) {
-                lbTitle.Dispose ();
-                lbTitle = null;
-            }
-
-            if (lbSubtitle != null) {
-                lbSubtitle.Dispose ();
-                lbSubtitle = null;
+            if (imgStrength != null) {
+                imgStrength.Dispose ();
+                imgStrength = null;
             }
 
             if (btnStar != null) {
@@ -57,9 +47,19 @@ namespace Naxam.Busuu.iOS.Review.Views
                 btnStar = null;
             }
 
-            if (btnPlay != null) {
-                btnPlay.Dispose ();
-                btnPlay = null;
+            if (imgWord != null) {
+                imgWord.Dispose ();
+                imgWord = null;
+            }
+
+            if (lbSubtitle != null) {
+                lbSubtitle.Dispose ();
+                lbSubtitle = null;
+            }
+
+            if (lbTitle != null) {
+                lbTitle.Dispose ();
+                lbTitle = null;
             }
         }
     }
