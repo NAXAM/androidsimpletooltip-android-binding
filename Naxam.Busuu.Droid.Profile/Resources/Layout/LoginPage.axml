@@ -49,7 +49,7 @@
     <EditText
         android:id="@+id/txtEmail"
         android:layout_marginEnd="24dp"
-        app:MvxBind="Text TextEmail" 
+        app:MvxBind="Text TextEmail"
         android:layout_marginStart="24dp"
         android:layout_width="match_parent"
         android:textColor="#A7ADAD"
@@ -74,12 +74,12 @@
         android:layout_marginEnd="24dp"
         android:textColor="#FEFFFF"
         android:textStyle="bold"
-        android:textSize="16dp" 
+        android:textSize="16dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/forgot_password_button_background"
         android:layout_width="match_parent"
-        app:MvxBind="Click TouchLoginBtn;Enabled IsEnableLoginBtn" 
+        app:MvxBind="Click TouchLoginBtn;Enabled IsEnableLoginBtn"
         android:layout_height="48dp" />
     <TextView
         android:id="@+id/txtForgotPass"

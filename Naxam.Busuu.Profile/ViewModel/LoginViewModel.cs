@@ -26,7 +26,6 @@ namespace Naxam.Busuu.Profile.ViewModel
         }
 
 
-
         private string _TextPass;
 
         public string TextPass
