@@ -63,4 +63,7 @@
     <item name="android:textSize">@dimen/textSizeSubTitle</item>
     <item name="android:layout_height">@dimen/buttonHeightDefault</item>
   </style>
+  <!--Style ProgressBar-->
+   
+  
 </resources>

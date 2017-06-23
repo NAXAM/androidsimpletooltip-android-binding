@@ -21,13 +21,11 @@ namespace Naxam.Busuu.Droid.Profile.Views
     [Activity(Label = "LoginPageActivity")]
     public class LoginView : MvxAppCompatActivity
     {
-        private bool isClickLoginBtn;
-        private bool isClickFBBtn;
+        private bool isClickLoginBtn; 
         private bool isClickGoogleBtn;
         EditText edtEmail, edtPassword;
         TextView txtForgotPass;
-        Button btnFB, btnGoogle, btnLogin;
-        Android.Views.Animations.Animation animFadein;
+        Button btnFB, btnGoogle, btnLogin; 
 
 
         protected override void OnCreate(Bundle savedInstanceState)

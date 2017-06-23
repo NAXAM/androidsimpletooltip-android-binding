@@ -20,7 +20,8 @@ namespace Naxam.Busuu.Droid
     public class App : MvxApplication
     {
         public App()
-        { 
+        {
+            Mvx.RegisterType<IDialogService, DialogService>();
         }
         public override void Initialize()
         {

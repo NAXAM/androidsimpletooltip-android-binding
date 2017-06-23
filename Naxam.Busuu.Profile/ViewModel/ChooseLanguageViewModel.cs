@@ -48,19 +48,19 @@ namespace Naxam.Busuu.Profile.ViewModel
         public ChooseLanguageViewModel()
         {
             string[] flags = new string[] {
-                "flag_small_arabic.png",
-                 "flag_small_chinese.png",
-                  "flag_small_english.png",
-                   "flag_small_french.png",
-                    "flag_small_german.png",
-                     "flag_small_indonesia.png",
-                      "flag_small_italian.png",
-                       "flag_small_japanese.png",
-                        "flag_small_polish.png",
-                         "flag_small_portuguese.png",
-                          "flag_small_russian.png",
-                           "flag_small_spanish.png",
-                            "flag_small_turkish.png"
+                "flag_small_arabic",
+                 "flag_small_chinese",
+                  "flag_small_english",
+                   "flag_small_french",
+                    "flag_small_german",
+                     "flag_small_indonesia",
+                      "flag_small_italian",
+                       "flag_small_japanese",
+                        "flag_small_polish",
+                         "flag_small_portuguese",
+                          "flag_small_russian",
+                           "flag_small_spanish",
+                            "flag_small_turkish"
             };
             string[] langs = new string[] {
                 "Arabic",
