@@ -17,6 +17,8 @@ using Naxam.Busuu.Droid.Profile.Views;
 using Naxam.Busuu.Profile.ViewModel;
 using Naxam.Busuu.Core.Converter;
 using System.Collections;
+using Naxam.Busuu.Droid.Learning.Views;
+using Naxam.Busuu.Learning.ViewModel;
 
 namespace Naxam.Busuu.Droid
 {
@@ -58,6 +60,7 @@ namespace Naxam.Busuu.Droid
             var list = new List<Assembly>();
             list.AddRange(base.GetViewModelAssemblies());
             list.Add(typeof(ForgotPasswordViewModel).Assembly);
+            list.Add(typeof(LearnViewModel).Assembly);
             return list.ToArray();
         }
 
@@ -66,6 +69,7 @@ namespace Naxam.Busuu.Droid
             var list = new List<Assembly>();
             list.AddRange(base.GetViewAssemblies());
             list.Add(typeof(ForgotPasswordView).Assembly);
+            list.Add(typeof(LearnView).Assembly);
             return list.ToArray();
         }
 
