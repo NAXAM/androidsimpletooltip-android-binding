@@ -19,10 +19,11 @@ using Android.Support.V4.Text;
 using Android.Graphics;
 using Android.Util;
 using Android.Content.Res;
+using Naxam.Busuu.Droid.Learning.Views;
 
 namespace Naxam.Busuu.Droid.Profile.Views
 {
-    [Activity(ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
+    [Activity(Label = "Languages", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize, ParentActivity = typeof(MainView))]
     public class ChangeLanguageView : MvxAppCompatActivity
     {
         MvxRecyclerView LanguageListview;
@@ -32,6 +33,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
         {
             base.OnViewModelSet();
             SetContentView(Resource.Layout.ChangeLanguageActivity);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             LanguageListview = FindViewById<MvxRecyclerView>(Resource.Id.LanguageListview);
             count = LanguageListview.Adapter.ItemsSource.Cast<object>().Count();
             SetLayoutManager(2);
@@ -39,21 +41,21 @@ namespace Naxam.Busuu.Droid.Profile.Views
 
         void SetLayoutManager(int column)
         {
-            if(ItemDecoration!=null)
+            if (ItemDecoration != null)
             {
                 LanguageListview.RemoveItemDecoration(ItemDecoration);
             }
             DisplayMetrics displayMetrics = ApplicationContext.Resources.DisplayMetrics;
             float dpHeight = displayMetrics.HeightPixels / displayMetrics.Density;
             float dpWidth = displayMetrics.WidthPixels / displayMetrics.Density;
- 
-            ItemDecoration = new GridSpacingItemDecoration(column, (int)(dpWidth-136* column) / column, false);
+
+            ItemDecoration = new GridSpacingItemDecoration(column, (int)(dpWidth - 136 * column) / column, false);
             LanguageListview.AddItemDecoration(ItemDecoration);
-            StaggeredGridLayoutManager grid2 = new StaggeredGridLayoutManager(column,1);
-            
+            StaggeredGridLayoutManager grid2 = new StaggeredGridLayoutManager(column, 1);
+
             GridLayoutManager grid = new GridLayoutManager(this, column);
             grid.SetSpanSizeLookup(new LanguageSpanSizeLookup(column, count));
-            LanguageListview.SetLayoutManager(grid); 
+            LanguageListview.SetLayoutManager(grid);
         }
 
         public override void OnConfigurationChanged(Configuration newConfig)
@@ -108,7 +110,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
                         outRect.Right = (column + 1) * spacing / spanCount; // (column + 1) * ((1f / spanCount) * spacing)
 
                         outRect.Top = spacing;
-                        outRect.Bottom = spacing; 
+                        outRect.Bottom = spacing;
                     }
                     else
                     {
@@ -144,7 +146,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
 
                 if (position >= count - col)
                 {
-                    return column - col+1;
+                    return column - col + 1;
                 }
 
                 return 1;

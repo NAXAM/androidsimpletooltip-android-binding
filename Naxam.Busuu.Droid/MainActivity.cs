@@ -23,7 +23,7 @@ namespace Naxam.Busuu.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState); 
-            StartActivity(new Intent(this, typeof(MainView)));
+            StartActivity(new Intent(this, typeof(StartPageView)));
              
         }
     }
