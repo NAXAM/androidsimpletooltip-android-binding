@@ -23,9 +23,7 @@ namespace Naxam.Busuu.Droid
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
-           StartActivity(new Intent(this, typeof(ChooseLanguageView)));
-
-
+           StartActivity(new Intent(this, typeof(StartPageView)));
         }
     }
 }

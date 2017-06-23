@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-               android:background="@color/colorWhite"
+    android:background="@color/colorWhite"
     android:padding="24dp" >
 
   <LinearLayout
@@ -14,21 +14,17 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="vertical"
-     
-      android:gravity="center_horizontal"
-        >
+      android:gravity="center_horizontal">
     <Button
         android:layout_width="match_parent"
         style="@style/StyleButtonFacebook"
-        android:text="Connect with facebook"
-            />
+        android:text="Connect with facebook"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_marginTop="16dp"
         style="@style/StyleButtonGoogle"
-        android:text="Connect with google"
-            />
+        android:text="Connect with google"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,36 +43,36 @@
     <EditText
         android:id="@+id/edtEmail"
         style="@style/StyleEditText"
-        android:layout_width="match_parent" 
+        android:layout_width="match_parent"
         android:visibility="gone"
-         app:MvxBind="Text Email" 
+        app:MvxBind="Text Email"
         android:hint="Email" />
     <LinearLayout
         android:id="@+id/layoutPhone"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" 
+        android:layout_height="match_parent"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-        android:layout_marginBottom="6dp"  
+        android:layout_marginBottom="6dp"
         android:clipChildren="true"
         android:orientation="horizontal" >
-      <EditText 
+      <EditText
           style="@style/StyleEditText"
           android:drawableRight="@drawable/ic_expand_arrow_20_20"
           android:layout_width="wrap_content"
-          android:editable="false" 
+          android:editable="false"
           android:background="@android:color/transparent"
-          app:MvxBind="Text PhoneCode;Click PhoneCodeCommand" 
+          app:MvxBind="Text PhoneCode;Click PhoneCodeCommand"
           android:text="+1"/>
       <EditText
           android:id="@+id/edtPhone"
           style="@style/StyleEditText"
           android:paddingLeft="16dp"
-          android:layout_marginLeft="-16dp" 
+          android:layout_marginLeft="-16dp"
           android:layout_width="match_parent"
           android:background="@android:color/transparent"
-           app:MvxBind="Text Phone" 
-          android:hint="Phone Number" />
+          app:MvxBind="Text Phone"
+          android:hint="Phone Number"/>
     </LinearLayout>
   </FrameLayout>
 
@@ -84,8 +80,8 @@
       android:id="@+id/edtUserName"
       style="@style/StyleEditText"
       android:layout_width="match_parent"
-       app:MvxBind="Text UserName" 
-      android:hint="UserName" />
+      app:MvxBind="Text UserName"
+      android:hint="UserName"/>
 
   <EditText
      android:id="@+id/edtPassword"
@@ -93,21 +89,21 @@
       android:layout_width="match_parent"
       android:hint="Password"
       android:layout_marginBottom="16dp"
-      app:MvxBind="Text Password"
-      />
+      app:MvxBind="Text Password"/>
 
   <Button
       android:id="@+id/btnButtonUsePhoneEmail"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       style="@style/StyleButtonConfirmDialog"
-      android:text="Use Phone Number" />
+      android:text="Use Phone Number" 
+      />
 
   <Button
       android:layout_width="match_parent"
       android:layout_marginTop="16dp"
       style="@style/StyleEnableButton"
-      android:text="Sign Up"  />
+      android:text="Sign Up"/>
   <TextView
       android:id="@+id/txtPolicy"
       android:layout_width="match_parent"
@@ -116,6 +112,5 @@
       android:layout_marginTop="16dp"
       android:textAlignment="center"
       android:textSize="12sp"
-      android:textColor="@color/colorHintEditText"
-          />
+      android:textColor="@color/colorHintEditText"/>
 </LinearLayout>

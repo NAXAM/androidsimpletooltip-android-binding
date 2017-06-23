@@ -42,6 +42,7 @@
     <Compile Include="ViewModel\ChooseLanguageViewModel.cs" />
     <Compile Include="ViewModel\ForgotPasswordViewModel.cs" />
     <Compile Include="ViewModel\RegisterViewModel.cs" />
+    <Compile Include="ViewModel\StartPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Binding, Version=5.0.2.0, Culture=neutral, processorArchitecture=MSIL">
