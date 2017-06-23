@@ -13,7 +13,7 @@ using Android.Util;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using Naxam.Busuu.Droid.Learning.Views;
 
-namespace Naxam.Busuu.Droid.Profile.Views
+namespace Naxam.Busuu.Droid.Learning.Views
 {
     [Activity(Label = "Premium", Theme = "@style/AppTheme.Premium", ParentActivity = typeof(MainView))]
     public class PremiumView : MvxAppCompatActivity
@@ -27,10 +27,10 @@ namespace Naxam.Busuu.Droid.Profile.Views
             Resource.Drawable.subscription_image_c_1,
             Resource.Drawable.subscription_image_c_2,
             Resource.Drawable.subscription_image_c_3,
-            Resource.Drawable.subscription_image_c_4,
-            Resource.Drawable.subscription_image_c_5,
-            Resource.Drawable.vocab_trainer_icon,
-            Resource.Drawable.certificate
+           Resource.Drawable.subscription_image_c_4,
+           Resource.Drawable.subscription_image_c_5,
+           Resource.Drawable.vocab_trainer_icon,
+           //Resource.Drawable.certificate
         };
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -43,11 +43,11 @@ namespace Naxam.Busuu.Droid.Profile.Views
             int height = displayMetrics.HeightPixels;
             int width = displayMetrics.WidthPixels;
 
-            scPremium = FindViewById<ScrollView>(Resource.Id.sv_premium);
-            lvPremium = FindViewById<ListView>(Resource.Id.lv_premium_value);
+           // scPremium = FindViewById<ScrollView>(Resource.Id.sv_premium);
+            //lvPremium = FindViewById<ListView>(Resource.Id.lv_premium_value);
 
             listPremiumItem = new List<PremiumObject>();
-            adapter = new PremiumArrayAdapter(this, Resource.Layout.buy_premium_list_item, listPremiumItem);
+             adapter = new PremiumArrayAdapter(this, Resource.Layout.buy_premium_list_item, listPremiumItem);
             lvPremium.Adapter = adapter;
 
             for (int i = 0; i < listImageSource.Length; i++)
@@ -77,8 +77,8 @@ namespace Naxam.Busuu.Droid.Profile.Views
             int height = displayMetrics.HeightPixels;
             int width = displayMetrics.WidthPixels;
 
-            scPremium = FindViewById<ScrollView>(Resource.Id.sv_premium);
-            lvPremium = FindViewById<ListView>(Resource.Id.lv_premium_value);
+            // scPremium = FindViewById<ScrollView>(Resource.Id.sv_premium);
+           // lvPremium = FindViewById<ListView>(Resource.Id.lv_premium_value);
 
             listPremiumItem = new List<PremiumObject>();
             adapter = new PremiumArrayAdapter(this, Resource.Layout.buy_premium_list_item, listPremiumItem);

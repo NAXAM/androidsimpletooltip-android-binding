@@ -36,14 +36,11 @@
     <Compile Include="Model\CountryModel.cs" />
     <Compile Include="Model\LanguageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\BuyPremiumViewModel.cs" />
-    <Compile Include="ViewModel\ChangeLanguageViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="Service\IDialogService.cs" />
     <Compile Include="ViewModel\ChooseCountryViewModel.cs" />
     <Compile Include="ViewModel\ChooseLanguageViewModel.cs" />
     <Compile Include="ViewModel\ForgotPasswordViewModel.cs" />
-    <Compile Include="ViewModel\PremiumViewModel.cs" />
     <Compile Include="ViewModel\RegisterViewModel.cs" />
     <Compile Include="ViewModel\StartPageViewModel.cs" />
   </ItemGroup>
@@ -64,6 +61,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
+      <Project>{e1334ff3-bc22-4f7c-b363-a01de69429f8}</Project>
+      <Name>Naxam.Busuu.Learning</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

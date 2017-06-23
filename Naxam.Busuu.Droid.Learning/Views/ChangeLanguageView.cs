@@ -21,7 +21,7 @@ using Android.Util;
 using Android.Content.Res;
 using Naxam.Busuu.Droid.Learning.Views;
 
-namespace Naxam.Busuu.Droid.Profile.Views
+namespace Naxam.Busuu.Droid.Learning.Views
 {
     [Activity(Label = "Languages", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize, ParentActivity = typeof(MainView))]
     public class ChangeLanguageView : MvxAppCompatActivity

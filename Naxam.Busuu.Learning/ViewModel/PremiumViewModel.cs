@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naxam.Busuu.Profile.ViewModel
+namespace Naxam.Busuu.Learning.ViewModel
 {
     public class PremiumViewModel : MvxViewModel
     {

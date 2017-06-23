@@ -15,6 +15,7 @@ using static Android.Resource;
 using Android.Views.Animations;
 using Android.Views.InputMethods;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using Naxam.Busuu.Droid.Profile.Utils;
 
 namespace Naxam.Busuu.Droid.Profile.Views
 {
@@ -57,6 +58,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
 
         private void EditText_FocusChange(object sender, View.FocusChangeEventArgs e)
         {
+            //MyDialog MyDialog = new MyDialog(this);// testing a dialog
             LinearLayout parent = (LinearLayout)btnFB.Parent;
             if (edtEmail.IsFocused || edtPassword.IsFocused)
             {

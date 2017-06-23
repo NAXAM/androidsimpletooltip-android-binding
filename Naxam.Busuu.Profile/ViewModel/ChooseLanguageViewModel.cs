@@ -37,7 +37,7 @@ namespace Naxam.Busuu.Profile.ViewModel
                     _selectedLanguage = value;
                     if (_selectedLanguage != null)
                     {
-                        ShowViewModel<ForgotPasswordViewModel>(_selectedLanguage);
+                        ShowViewModel<RegisterViewModel>(_selectedLanguage);
                     }
                     RaisePropertyChanged();
                 }

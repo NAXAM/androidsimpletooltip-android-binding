@@ -11,7 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Java.Util;
 
-namespace Naxam.Busuu.Droid.Profile.Views
+namespace Naxam.Busuu.Droid.Learning.Views
 {
     public class PremiumArrayAdapter : BaseAdapter<PremiumObject>
     {
@@ -51,7 +51,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
             }
 
             ImageView imPremiumIcon = convertView.FindViewById<ImageView>(Resource.Id.im_premium_icon);
-            TextView tvPremiumDescripe = convertView.FindViewById<TextView>(Resource.Id.tv_premium_describe);
+           TextView tvPremiumDescripe = convertView.FindViewById<TextView>(Resource.Id.tv_premium_describe);
 
             imPremiumIcon.SetBackgroundResource((this[position]).iconId);
             tvPremiumDescripe.Text = (this[position]).describe;

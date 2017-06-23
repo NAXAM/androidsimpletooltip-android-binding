@@ -12,7 +12,7 @@ using Android.Widget;
 using MvvmCross.Droid.Views;
 using MvvmCross.Droid.Support.V7.AppCompat;
 
-namespace Naxam.Busuu.Droid.Profile.Views
+namespace Naxam.Busuu.Droid.Learning.Views
 {
     [Activity(Label ="Premium",Theme ="@style/AppTheme.Premium",ParentActivity =typeof(PremiumView))]
     public class BuyPremiumView : MvxAppCompatActivity
