@@ -81,13 +81,55 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.5.0.2\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\packages\MvvmCross.Platform.5.0.2\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.5.0.2\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\packages\MvvmCross.Core.5.0.2\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.5.0.2\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\packages\MvvmCross.Binding.5.0.2\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.5.0.2\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\user_avatar_placeholder.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\user_avatar_placeholder.imageset\user_avatar_placeholder.png" />
+    <ImageAsset Include="Assets.xcassets\flag_small_spanish.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\flag_small_spanish.imageset\profile_flag_es.png" />
+    <ImageAsset Include="Assets.xcassets\flag_small_english.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\flag_small_english.imageset\flag_small_english.png" />
+    <ImageAsset Include="Assets.xcassets\flag_small_chinese.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\flag_small_chinese.imageset\flag_small_chinese.png" />
+    <ImageAsset Include="Assets.xcassets\flag_small_arabic.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\flag_small_arabic.imageset\flag_small_arabic.png" />
+    <ImageAsset Include="Assets.xcassets\profile_flag_vn.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\profile_flag_vn.imageset\profile_flag_vn.png" />
+    <ImageAsset Include="Assets.xcassets\social_background_pattern_image.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\social_background_pattern_image.imageset\social_background_pattern_image.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\user_avatar_placeholder.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_spanish.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_english.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_chinese.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_arabic.imageset\" />
+    <Folder Include="Assets.xcassets\profile_flag_vn.imageset\" />
+    <Folder Include="Assets.xcassets\social_background_pattern_image.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -96,6 +138,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -104,6 +147,18 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Setup.cs" />
+    <Compile Include="App.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
+      <Project>{6255CDA3-B742-4D16-AC6C-03E414EAC000}</Project>
+      <Name>Naxam.Busuu.Social</Name>
+    </ProjectReference>
+    <ProjectReference Include="Naxam.Busuu.iOS.Social\Naxam.Busuu.iOS.Social.csproj">
+      <Project>{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}</Project>
+      <Name>Naxam.Busuu.iOS.Social</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
