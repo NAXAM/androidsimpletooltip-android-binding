@@ -21,9 +21,9 @@ namespace Naxam.Busuu.iOS.Social
             base.ViewDidLoad();
 
 			nfloat viewCV_TB = (UIScreen.MainScreen.Bounds.Size.Height - 20) / 6;
-            nfloat viewCV_LR = ((UIScreen.MainScreen.Bounds.Size.Width - 88) * 0.16f) - 10;
+            nfloat viewCV_LR = ((UIScreen.MainScreen.Bounds.Size.Width - 80) * 0.12f);
 
-            CollectionViewLineLayout myFlow = new CollectionViewLineLayout();
+            CollectionViewLineLayout myFlow = new CollectionViewLineLayout(viewCV_TB, viewCV_LR);
             DiscoverCollectionView.SetCollectionViewLayout(myFlow, true);
 			DiscoverCollectionView.BackgroundColor = null;
             DiscoverCollectionView.ContentInset = new UIEdgeInsets(viewCV_TB, viewCV_LR, viewCV_TB, viewCV_LR);
@@ -45,18 +45,16 @@ namespace Naxam.Busuu.iOS.Social
 
 	public class CollectionViewLineLayout : UICollectionViewFlowLayout
 	{
-        public const float ZOOM_FACTOR = 0.16f;
+        public const float ZOOM_FACTOR = 0.12f;
 		public float ACTIVE_DISTANCE;
 
-        public CollectionViewLineLayout()
+        public CollectionViewLineLayout(nfloat insetsTB, nfloat insetsLR)
 		{
-            float ITEM_SIZE = (float)UIScreen.MainScreen.Bounds.Size.Width - 88 - ((float)UIScreen.MainScreen.Bounds.Size.Width - 88) * ZOOM_FACTOR;
+            float ITEM_SIZE = (float)UIScreen.MainScreen.Bounds.Size.Width - 80 - (float)insetsLR;
 			ACTIVE_DISTANCE = ITEM_SIZE;
-            nfloat insetsTB = (UIScreen.MainScreen.Bounds.Size.Height - 20) / 6;
-			nfloat insetsLR = ((UIScreen.MainScreen.Bounds.Size.Width - 88) * ZOOM_FACTOR) / 2 + 1.5f;           
-
+          
 			ItemSize = new CGSize(ITEM_SIZE, ITEM_SIZE);		
-			SectionInset = new UIEdgeInsets(insetsTB, insetsLR, insetsTB, insetsLR);
+			SectionInset = new UIEdgeInsets(insetsTB, insetsLR / 2, insetsTB, insetsLR / 2);
             ScrollDirection = UICollectionViewScrollDirection.Horizontal;
 			MinimumLineSpacing = 40.0f;
 		}
