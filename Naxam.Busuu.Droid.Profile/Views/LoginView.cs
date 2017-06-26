@@ -60,7 +60,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
 
         private void EditText_FocusChange(object sender, View.FocusChangeEventArgs e)
         {
-            //MyDialog MyDialog = new MyDialog(this);// testing a dialog
+            MyDialog MyDialog = new MyDialog(this);// testing a dialog
             LinearLayout parent = (LinearLayout)btnFB.Parent;
             if (edtEmail.IsFocused || edtPassword.IsFocused)
             {
