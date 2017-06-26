@@ -102,24 +102,13 @@
     <Reference Include="MvvmCross.Localization">
       <HintPath>..\packages\MvvmCross.Binding.5.0.2\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\user_avatar_placeholder.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\user_avatar_placeholder.imageset\user_avatar_placeholder.png" />
-    <ImageAsset Include="Assets.xcassets\flag_small_spanish.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\flag_small_spanish.imageset\profile_flag_es.png" />
-    <ImageAsset Include="Assets.xcassets\flag_small_english.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\flag_small_english.imageset\flag_small_english.png" />
-    <ImageAsset Include="Assets.xcassets\flag_small_chinese.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\flag_small_chinese.imageset\flag_small_chinese.png" />
-    <ImageAsset Include="Assets.xcassets\flag_small_arabic.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\flag_small_arabic.imageset\flag_small_arabic.png" />
-    <ImageAsset Include="Assets.xcassets\profile_flag_vn.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\profile_flag_vn.imageset\profile_flag_vn.png" />
-    <ImageAsset Include="Assets.xcassets\social_background_pattern_image.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\social_background_pattern_image.imageset\social_background_pattern_image.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -130,6 +119,7 @@
     <Folder Include="Assets.xcassets\flag_small_arabic.imageset\" />
     <Folder Include="Assets.xcassets\profile_flag_vn.imageset\" />
     <Folder Include="Assets.xcassets\social_background_pattern_image.imageset\" />
+    <Folder Include="Assets.xcassets\test.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

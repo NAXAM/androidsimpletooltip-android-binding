@@ -5,11 +5,13 @@ using MvvmCross.iOS.Views;
 using Naxam.Busuu.Social.ViewModels;
 using CoreGraphics;
 using CoreAnimation;
+using MvvmCross.Binding.iOS.Views;
+using MvvmCross.Binding.BindingContext;
 
 namespace Naxam.Busuu.iOS.Social
 {
 	[MvxFromStoryboard(StoryboardName = "Social")]
-    public partial class DiscoverView : MvxViewController<DiscoverViewModel>, IUICollectionViewDataSource, IUICollectionViewDelegate, IUICollectionViewDelegateFlowLayout
+    public partial class DiscoverView : MvxViewController<DiscoverViewModel>
     {
        
         public DiscoverView (IntPtr handle) : base (handle)
@@ -27,21 +29,17 @@ namespace Naxam.Busuu.iOS.Social
             DiscoverCollectionView.SetCollectionViewLayout(myFlow, true);
 			DiscoverCollectionView.BackgroundColor = null;
             DiscoverCollectionView.ContentInset = new UIEdgeInsets(viewCV_TB, viewCV_LR, viewCV_TB, viewCV_LR);
-            DiscoverCollectionView.WeakDataSource = this;
-            DiscoverCollectionView.WeakDelegate = this;
-        }
+          
+            MvxCollectionViewSource source = new MvxCollectionViewSource(DiscoverCollectionView, (NSString)"DiscoverCell");
+			DiscoverCollectionView.Source = source;
 
-		public UICollectionViewCell GetCell(UICollectionView collectionView, NSIndexPath indexPath)
-        {
-            var cell =  (UICollectionViewCell)collectionView.DequeueReusableCell("DiscoverCell", indexPath);
-            return cell;
-		}		
+            var setBinding = this.CreateBindingSet<DiscoverView, DiscoverViewModel>();
+            setBinding.Bind(source).To(vm => vm.Discovers);
+			setBinding.Apply();
 
-        public nint GetItemsCount(UICollectionView collectionView, nint section)
-        {
-            return ViewModel.Discovers.Count;
+            DiscoverCollectionView.ReloadData();
         }
-    }
+	}
 
 	public class CollectionViewLineLayout : UICollectionViewFlowLayout
 	{
@@ -52,8 +50,7 @@ namespace Naxam.Busuu.iOS.Social
 		{
             float ITEM_SIZE = (float)UIScreen.MainScreen.Bounds.Size.Width - 80 - (float)insetsLR;
 			ACTIVE_DISTANCE = ITEM_SIZE;
-          
-			ItemSize = new CGSize(ITEM_SIZE, ITEM_SIZE);		
+            ItemSize = new CGSize(ITEM_SIZE, ITEM_SIZE);		
 			SectionInset = new UIEdgeInsets(insetsTB, insetsLR / 2, insetsTB, insetsLR / 2);
             ScrollDirection = UICollectionViewScrollDirection.Horizontal;
 			MinimumLineSpacing = 40.0f;

@@ -9,20 +9,152 @@ namespace Naxam.Busuu.Social.Serveices
     {
         public Task<List<Discover>> GetAllDiscover()
         {
-            var list = new List<Discover>(){
-				new Discover( 0, "user_avatar_placeholder", "Nguyen Nhu Son", "Vietnam", "profile_flag_vn", "flag_small_english", "Hello Naxam!\nI am a new member.", false, "29/5/2017"),
-                new Discover( 1, "user_avatar_placeholder", "Kaiser", "Mexico", "flag_small_spanish", "flag_small_english", "Hello Naxam.", false, "21/6/2017"),
-                new Discover( 2, "user_avatar_placeholder", "Iyp", "China", "flag_small_english", "flag_small_english", "Hello Naxam.", true, "22/6/2017"),
-				new Discover( 3, "user_avatar_placeholder", "Juan Pablo Cervantes", "Colombia", "flag_small_spanish", "flag_small_english", "Hello Naxam.", false, "21/6/2017"),
-                new Discover( 4, "user_avatar_placeholder", "Wang", "China", "flag_small_chinese", "flag_small_english", "Hello Naxam.", true, "19/6/2017"),
-				new Discover( 5, "user_avatar_placeholder", "Mohamed", "Agypt", "flag_small_arabic", "flag_small_english", "Hello Naxam.", false, "21/6/2017"),
-			    new Discover( 6, "user_avatar_placeholder", "Mauricio Percara", "Argentina", "flag_small_spanish", "flag_small_english", "Hello Naxam.", false, "21/6/2017"),
-                new Discover( 7, "user_avatar_placeholder", "Leandra", "Swiss", "flag_small_german", "flag_small_english", "Hello Naxam.", true, "21/6/2017"),
-                new Discover( 8, "user_avatar_placeholder", "Talon", "Mexico", "flag_small_spanish", "flag_small_english", "Hello Naxam.", true, "21/6/2017"),
-				new Discover( 9, "user_avatar_placeholder", "Kathus", "Mexico", "flag_small_spanish", "flag_small_english", "Hello Naxam.", false, "21/6/2017"),
-				new Discover( 10, "user_avatar_placeholder", "Vladimir", "Mexico", "flag_small_spanish", "flag_small_english", "Hello Naxam.", false, "21/6/2017"),
-			};
-
+            var list = new List<Discover>()
+            {
+                new Discover()
+                {
+                    Id = 0,
+                    Avatar = "res:user_avatar_placeholder",
+                    Name = "Nguyen Nhu Son",
+                    Country = "Vietnam",
+                    ImageSpeakLanguage = "res:profile_flag_vn",
+                    ImageLearn = "res:flag_small_english",
+                    TextLearn = "ENGLISH",
+                    Speak = false,
+                    Write = "Hello Naxam!\nI am a new member.",
+                    PublicTime = "29/5/2017"
+                },
+				new Discover()
+				{
+					Id = 1,
+					Avatar = "res:user_avatar_placeholder",
+					Name = "Nguyen Nhu Son",
+					Country = "Vietnam",
+					ImageSpeakLanguage = "res:profile_flag_vn",
+					ImageLearn = "res:flag_small_english",
+					TextLearn = "ENGLISH",
+                    Speak = true,
+					Write = "Hello Naxam!\nI am a new member.",
+					PublicTime = "29/5/2017"
+                },
+				new Discover()
+                {
+                    Id = 2,
+                    Avatar = "res:user_avatar_placeholder",
+                    Name = "Anabela Rodrigues",
+                    Country = "Portugal",
+                    ImageSpeakLanguage = "res:flag_small_portuguese",
+                    ImageLearn = "res:flag_small_english",
+                    TextLearn = "ENGLISH",
+                    Speak = false,
+					Write = "Hello Naxam!",
+					PublicTime = "28/5/2017"
+				},
+				new Discover()
+				{
+					Id = 3,
+					Avatar = "res:user_avatar_placeholder",
+					Name = "Kaiser",
+					Country = "Mexico",
+					ImageSpeakLanguage = "res:flag_small_spanish",
+					ImageLearn = "res:flag_small_english",
+					TextLearn = "ENGLISH",
+					Speak = false,
+					Write = "Hello Naxam!",
+					PublicTime = "21/5/2017"
+				},
+				new Discover()
+				{
+					Id = 4,
+					Avatar = "res:user_avatar_placeholder",
+					Name = "Iyp",
+					Country = "China",
+					ImageSpeakLanguage = "res:flag_small_chinese",
+					ImageLearn = "res:flag_small_english",
+					TextLearn = "ENGLISH",
+					Speak = false,
+					Write = "Hello Naxam!",
+					PublicTime = "21/5/2017"
+				},
+				new Discover()
+				{
+					Id = 5,
+					Avatar = "res:user_avatar_placeholder",
+					Name = "Juan Pablo Cervantes",
+					Country = "Colombia",
+					ImageSpeakLanguage = "res:flag_small_spanish",
+					ImageLearn = "res:flag_small_english",
+					TextLearn = "ENGLISH",
+					Speak = false,
+					Write = "Hello Naxam!",
+					PublicTime = "21/5/2017"
+				},
+				new Discover()
+				{
+					Id = 6,
+					Avatar = "res:user_avatar_placeholder",
+					Name = "Mohamed",
+					Country = "Agypt",
+					ImageSpeakLanguage = "res:flag_small_arabic",
+					ImageLearn = "res:flag_small_english",
+					TextLearn = "ENGLISH",
+                    Speak = true,
+					Write = "Hello Naxam!",
+					PublicTime = "19/5/2017"
+				},
+			    new Discover()
+				{
+					Id = 7,
+					Avatar = "res:user_avatar_placeholder",
+					Name = "Mauricio Percara",
+					Country = "Argentina",
+					ImageSpeakLanguage = "res:flag_small_spanish",
+					ImageLearn = "res:flag_small_english",
+					TextLearn = "ENGLISH",
+					Speak = true,
+					Write = "Hello Naxam!",
+					PublicTime = "19/5/2017"
+				},
+				new Discover()
+				{
+					Id = 8,
+					Avatar = "res:user_avatar_placeholder",
+					Name = "Leandra",
+					Country = "Swiss",
+					ImageSpeakLanguage = "res:flag_small_german",
+					ImageLearn = "res:flag_small_english",
+					TextLearn = "ENGLISH",
+					Speak = true,
+					Write = "Hello Naxam!",
+					PublicTime = "19/5/2017"
+				},
+				new Discover()
+				{
+					Id = 9,
+					Avatar = "res:user_avatar_placeholder",
+					Name = "Nguyen Nhu Son",
+					Country = "Vietnam",
+					ImageSpeakLanguage = "res:profile_flag_vn",
+					ImageLearn = "res:flag_small_english",
+					TextLearn = "ENGLISH",
+					Speak = false,
+					Write = "Hello Naxam!\nI am a new member.",
+					PublicTime = "29/5/2017"
+				},
+				new Discover()
+				{
+					Id = 10,
+					Avatar = "res:user_avatar_placeholder",
+					Name = "Nguyen Nhu Son",
+					Country = "Vietnam",
+					ImageSpeakLanguage = "res:profile_flag_vn",
+					ImageLearn = "res:flag_small_english",
+					TextLearn = "ENGLISH",
+					Speak = true,
+					Write = "Hello Naxam!\nI am a new member.",
+					PublicTime = "29/5/2017"
+				},
+            };
             return Task.FromResult(list);
         }
     }
