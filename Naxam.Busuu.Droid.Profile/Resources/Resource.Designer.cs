@@ -1689,169 +1689,172 @@ namespace Naxam.Busuu.Droid.Profile
 			public static int choose_language_background_listview = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public static int circle_drawble_download = 2130837592;
+			public static int circle_drawable_continue = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public static int dotted = 2130837593;
+			public static int circle_drawble_download = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public static int flag_arabic = 2130837594;
+			public static int dotted = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public static int flag_chinese = 2130837595;
+			public static int flag_arabic = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public static int flag_english = 2130837596;
+			public static int flag_chinese = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public static int flag_french = 2130837597;
+			public static int flag_english = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public static int flag_german = 2130837598;
+			public static int flag_french = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public static int flag_italian = 2130837599;
+			public static int flag_german = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public static int flag_japanese = 2130837600;
+			public static int flag_italian = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public static int flag_polish = 2130837601;
+			public static int flag_japanese = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public static int flag_portuguese = 2130837602;
+			public static int flag_polish = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public static int flag_russian = 2130837603;
+			public static int flag_portuguese = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public static int flag_small_arabic = 2130837604;
+			public static int flag_russian = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public static int flag_small_chinese = 2130837605;
+			public static int flag_small_arabic = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public static int flag_small_english = 2130837606;
+			public static int flag_small_chinese = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public static int flag_small_french = 2130837607;
+			public static int flag_small_english = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public static int flag_small_german = 2130837608;
+			public static int flag_small_french = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public static int flag_small_indonesia = 2130837609;
+			public static int flag_small_german = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public static int flag_small_italian = 2130837610;
+			public static int flag_small_indonesia = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public static int flag_small_japanese = 2130837611;
+			public static int flag_small_italian = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public static int flag_small_polish = 2130837612;
+			public static int flag_small_japanese = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public static int flag_small_portuguese = 2130837613;
+			public static int flag_small_polish = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public static int flag_small_russian = 2130837614;
+			public static int flag_small_portuguese = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public static int flag_small_spanish = 2130837615;
+			public static int flag_small_russian = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public static int flag_small_turkish = 2130837616;
+			public static int flag_small_spanish = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public static int flag_spanish = 2130837617;
+			public static int flag_small_turkish = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public static int flag_turkish = 2130837618;
+			public static int flag_spanish = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public static int forgot_password_button_background = 2130837619;
+			public static int flag_turkish = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public static int forgot_password_button_background_disable = 2130837620;
+			public static int forgot_password_button_background = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public static int forgot_password_button_background_enable = 2130837621;
+			public static int forgot_password_button_background_disable = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public static int ic_expand_arrow = 2130837622;
+			public static int forgot_password_button_background_enable = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public static int ic_expand_arrow_20_20 = 2130837623;
+			public static int ic_expand_arrow = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public static int icdownload = 2130837624;
+			public static int ic_expand_arrow_20_20 = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public static int icon_google_drawble_transparent = 2130837625;
+			public static int icdownload = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public static int logo_facebook = 2130837626;
+			public static int icon_google_drawble_transparent = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public static int logo_facebook_40_40 = 2130837627;
+			public static int logo_facebook = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public static int logo_google = 2130837628;
+			public static int logo_facebook_40_40 = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public static int logo_google_40_40 = 2130837629;
+			public static int logo_google = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public static int notification_action_background = 2130837630;
+			public static int logo_google_40_40 = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public static int notification_bg = 2130837631;
+			public static int notification_action_background = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public static int notification_bg_low = 2130837632;
+			public static int notification_bg = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public static int notification_bg_low_normal = 2130837633;
+			public static int notification_bg_low = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public static int notification_bg_low_pressed = 2130837634;
+			public static int notification_bg_low_normal = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public static int notification_bg_normal = 2130837635;
+			public static int notification_bg_low_pressed = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public static int notification_bg_normal_pressed = 2130837636;
+			public static int notification_bg_normal = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public static int notification_icon_background = 2130837637;
-			
-			// aapt resource value: 0x7f02008d
-			public static int notification_template_icon_bg = 2130837645;
-			
-			// aapt resource value: 0x7f02008e
-			public static int notification_template_icon_low_bg = 2130837646;
+			public static int notification_bg_normal_pressed = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public static int notification_tile_bg = 2130837638;
+			public static int notification_icon_background = 2130837638;
+			
+			// aapt resource value: 0x7f02008e
+			public static int notification_template_icon_bg = 2130837646;
+			
+			// aapt resource value: 0x7f02008f
+			public static int notification_template_icon_low_bg = 2130837647;
 			
 			// aapt resource value: 0x7f020087
-			public static int notify_panel_notification_icon_bg = 2130837639;
+			public static int notification_tile_bg = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public static int scrollbar_handle_holo_dark = 2130837640;
+			public static int notify_panel_notification_icon_bg = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public static int scrollbar_handle_holo_light = 2130837641;
+			public static int scrollbar_handle_holo_dark = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public static int transparent = 2130837642;
+			public static int scrollbar_handle_holo_light = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public static int underline_background_focus = 2130837643;
+			public static int transparent = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public static int underline_background_normal = 2130837644;
+			public static int underline_background_focus = 2130837644;
+			
+			// aapt resource value: 0x7f02008d
+			public static int underline_background_normal = 2130837645;
 			
 			static Drawable()
 			{

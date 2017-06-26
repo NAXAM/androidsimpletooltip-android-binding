@@ -17,7 +17,8 @@ namespace Naxam.Busuu.Droid.Profile.Views
     [Activity(Label = "MachingSentenceView")]
     public class MachingSentenceView : MvxAppCompatActivity, View.IOnTouchListener
     {
-        TextView txt01Move, txt02Move, txt03Move, txt01, txt02, txt03, txt04, txt05, txt06;
+        Dictionary<string, string> MatchingSentence;
+        TextView txt01Move, txt02Move, txt03Move, txt01, txt02, txt03, txt04, txt05, txt06, txtGuide;
 
         float xMove01, yMove01;
         float xMove02, yMove02;
@@ -27,14 +28,14 @@ namespace Naxam.Busuu.Droid.Profile.Views
         float xTxt05, yTxt05;
         float xTxt06, yTxt06;
         //
+        Button btnContinue;
+        //
         bool firstTouchMove01, firstTouchMove02, firstTouchMove03, firstTouchTxt04, firstTouchTxt05, firstTouchTxt06;
 
         ViewGroup _root;
         Rect rectTxt04, rectTxt05, rectTxt06, rectMove01, rectMove02, rectMove03;
         private float _xDelta;
         private float _yDelta;
-
-      
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -45,6 +46,15 @@ namespace Naxam.Busuu.Droid.Profile.Views
         }
         private void Init()
         {
+            //
+            // bên trên: key
+            // bên dưới: value
+            //
+            MatchingSentence = new Dictionary<string, string>();
+            MatchingSentence.Add("Fine, Thanks", "Tôi ổn, cảm ơn");
+            MatchingSentence.Add("How's it going", "Bạn có khỏe không?");
+            MatchingSentence.Add("Nice to meet you", "Rất vui được gặp bạn");
+            //
             rectTxt04 = new Rect();
             rectTxt05 = new Rect();
             rectTxt06 = new Rect();
@@ -61,6 +71,13 @@ namespace Naxam.Busuu.Droid.Profile.Views
             firstTouchTxt06 = false;
 
             _root = (ViewGroup)FindViewById(Resource.Id.root);
+            //
+            txtGuide = (TextView)FindViewById(Resource.Id.txtGuide);
+            //
+            //
+            btnContinue = FindViewById<Button>(Resource.Id.btnContinue);
+            btnContinue.Visibility = ViewStates.Gone;
+            //
 
             txt01Move = (TextView)FindViewById(Resource.Id.txt01Move);
             txt02Move = (TextView)FindViewById(Resource.Id.txt02Move);
@@ -76,13 +93,40 @@ namespace Naxam.Busuu.Droid.Profile.Views
             txt04 = (TextView)FindViewById(Resource.Id.txt04);
             txt05 = (TextView)FindViewById(Resource.Id.txt05);
             txt06 = (TextView)FindViewById(Resource.Id.txt06);
+
+            string text1,text2, text3,value1,value2,value3;
+            Random random = new Random();
             //
 
+            text1 = MatchingSentence.Keys.ElementAt(random.Next(0, 66) % 3);
+            text2 = MatchingSentence.Keys.Where(d => d != text1).ElementAt(random.Next(0, 75) % 2);
+            text3 = MatchingSentence.Keys.Where(d => d != text1&&d!=text2).FirstOrDefault();
+
+            value1 = MatchingSentence.Values.ElementAt(random.Next(0, 44) % 3);
+            value2 = MatchingSentence.Values.Where(d => d != value1).ElementAt(random.Next(0, 99) % 2);
+            value3 = MatchingSentence.Values.Where(d => d != value1 && d != value2).FirstOrDefault();
+            //
+            txt01.Text = text1;
+            txt02.Text = text2;
+            txt03.Text = text3;
+            //
+            txt01Move.Text = text1;
+            txt02Move.Text = text2;
+            txt03Move.Text = text3;
+            //
+            txt04.Text = value1;
+            txt05.Text = value2;
+            txt06.Text = value3;
+            //
             txt01Move.SetOnTouchListener(this);
             txt02Move.SetOnTouchListener(this);
             txt03Move.SetOnTouchListener(this);
 
 
+        }
+        private bool finishLesson()
+        {
+            return hasCollision040506(rectMove01) && hasCollision040506(rectMove02) && hasCollision040506(rectMove03);
         }
         private TextView getShortestDistanceRect(Rect rect)
         {
@@ -279,9 +323,6 @@ namespace Naxam.Busuu.Droid.Profile.Views
             {
                 if (getShortestDistanceRect(rect).Id == Resource.Id.txt04)
                 {
-                    // đang va chạm với txt04
-                    //  xem hình chữ nhật txt04 có va chạm với Move01, Move02, Move03 và đồng thời không phải hình chữ nhật đang xét?
-                    // nếu đúng thì move hình chữ nhật đó về vị trí ban đầu
                     hasCollisionMoveRect(rectTxt04, view);
 
 
@@ -388,6 +429,12 @@ namespace Naxam.Busuu.Droid.Profile.Views
                                 moveWithCollision(rectMove03, view);
                             }
                         }
+                    }
+                    if (finishLesson())
+                    {
+                        txtGuide.Visibility = ViewStates.Gone;
+                        btnContinue.Visibility = ViewStates.Visible;
+                        Toast.MakeText(this, "Done nhé", ToastLength.Long).Show();
                     }
                     break;
 
