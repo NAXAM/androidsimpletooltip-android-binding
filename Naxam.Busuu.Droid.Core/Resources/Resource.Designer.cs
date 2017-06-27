@@ -592,6 +592,9 @@ namespace Naxam.Busuu.Droid.Core
 			// aapt resource value: 0x7f010024
 			public static int singleChoiceItemLayout = 2130772004;
 			
+			// aapt resource value: 0x7f0100eb
+			public static int source = 2130772203;
+			
 			// aapt resource value: 0x7f0100a2
 			public static int spinBars = 2130772130;
 			
@@ -4181,6 +4184,12 @@ namespace Naxam.Busuu.Droid.Core
 			
 			// aapt resource value: 7
 			public static int DrawerArrowToggle_thickness = 7;
+			
+			public static int[] Glide = new int[] {
+					2130772203};
+			
+			// aapt resource value: 0
+			public static int Glide_source = 0;
 			
 			public static int[] LinearLayoutCompat = new int[] {
 					16842927,

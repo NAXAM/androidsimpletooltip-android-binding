@@ -2571,11 +2571,11 @@ namespace Naxam.Busuu.Droid.Profile
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f060023
-			public static int ApplicationName = 2131099683;
-			
 			// aapt resource value: 0x7f060022
-			public static int Hello = 2131099682;
+			public static int ApplicationName = 2131099682;
+			
+			// aapt resource value: 0x7f060021
+			public static int Hello = 2131099681;
 			
 			// aapt resource value: 0x7f060000
 			public static int abc_action_bar_home_description = 2131099648;
@@ -2669,9 +2669,6 @@ namespace Naxam.Busuu.Droid.Profile
 			
 			// aapt resource value: 0x7f060012
 			public static int abc_toolbar_collapse_description = 2131099666;
-			
-			// aapt resource value: 0x7f060021
-			public static int library_name = 2131099681;
 			
 			// aapt resource value: 0x7f060013
 			public static int search_menu_title = 2131099667;

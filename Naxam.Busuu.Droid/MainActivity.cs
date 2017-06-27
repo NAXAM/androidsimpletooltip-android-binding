@@ -10,9 +10,11 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Naxam.Busuu.Droid.Profile.Views;
+using Naxam.Busuu.Droid.Learning;
 using Android.Support.V7.App;
 using Android.Support.V4.Content;
 using Android.Graphics;
+using Naxam.Busuu.Droid.Learning.Views;
 
 namespace Naxam.Busuu.Droid
 {
@@ -23,7 +25,7 @@ namespace Naxam.Busuu.Droid
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
-           StartActivity(new Intent(this, typeof(StartPageView)));
+            StartActivity(new Intent(this, typeof(HearConversationView)));
         }
     }
 }
