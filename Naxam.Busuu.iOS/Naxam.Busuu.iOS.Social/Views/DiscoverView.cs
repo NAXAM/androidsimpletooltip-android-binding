@@ -22,18 +22,14 @@ namespace Naxam.Busuu.iOS.Social
         {
             base.ViewDidLoad();
 
-			nfloat viewCV_TB = (UIScreen.MainScreen.Bounds.Size.Height - 20) / 6;
-            nfloat viewCV_LR = ((UIScreen.MainScreen.Bounds.Size.Width - 80) * 0.12f);
-
-            CollectionViewLineLayout myFlow = new CollectionViewLineLayout(viewCV_TB, viewCV_LR);
+            CollectionViewLineLayout myFlow = new CollectionViewLineLayout();
             DiscoverCollectionView.SetCollectionViewLayout(myFlow, true);
-			DiscoverCollectionView.BackgroundColor = null;
-            DiscoverCollectionView.ContentInset = new UIEdgeInsets(viewCV_TB, viewCV_LR, viewCV_TB, viewCV_LR);
-          
+		
             MvxCollectionViewSource source = new MvxCollectionViewSource(DiscoverCollectionView, (NSString)"DiscoverCell");
 			DiscoverCollectionView.Source = source;
+			DiscoverCollectionView.BackgroundColor = null;
 
-            var setBinding = this.CreateBindingSet<DiscoverView, DiscoverViewModel>();
+			var setBinding = this.CreateBindingSet<DiscoverView, DiscoverViewModel>();
             setBinding.Bind(source).To(vm => vm.Discovers);
 			setBinding.Apply();
 
@@ -46,14 +42,18 @@ namespace Naxam.Busuu.iOS.Social
         public const float ZOOM_FACTOR = 0.12f;
 		public float ACTIVE_DISTANCE;
 
-        public CollectionViewLineLayout(nfloat insetsTB, nfloat insetsLR)
+        public CollectionViewLineLayout()
 		{
-            float ITEM_SIZE = (float)UIScreen.MainScreen.Bounds.Size.Width - 80 - (float)insetsLR;
+            nfloat viewLR = UIScreen.MainScreen.Bounds.Size.Width * 0.8f;
+			nfloat insetsTB = UIScreen.MainScreen.Bounds.Size.Height / 6;
+            nfloat insetsLR = UIScreen.MainScreen.Bounds.Size.Width * 0.145f;
+
+            float ITEM_SIZE = (float)(viewLR - viewLR * ZOOM_FACTOR);
 			ACTIVE_DISTANCE = ITEM_SIZE;
-            ItemSize = new CGSize(ITEM_SIZE, ITEM_SIZE);		
-			SectionInset = new UIEdgeInsets(insetsTB, insetsLR / 2, insetsTB, insetsLR / 2);
+            ItemSize = new CGSize(ITEM_SIZE, ITEM_SIZE);
+            SectionInset = new UIEdgeInsets(insetsTB, insetsLR, insetsTB, insetsLR);
             ScrollDirection = UICollectionViewScrollDirection.Horizontal;
-			MinimumLineSpacing = 40.0f;
+            MinimumLineSpacing = UIScreen.MainScreen.Bounds.Size.Width * 0.1f;
 		}
 
 		public override bool ShouldInvalidateLayoutForBoundsChange(CGRect newBounds)
