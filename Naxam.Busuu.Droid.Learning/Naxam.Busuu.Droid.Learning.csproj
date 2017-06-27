@@ -123,10 +123,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\AnimationListener.cs" />
+    <Compile Include="Control\AnimatorListener.cs" />
+    <Compile Include="Control\AnimatorUpdateListener.cs" />
+    <Compile Include="Control\LessonHeader.cs" />
+    <Compile Include="Control\LessonHeaderTargetBinding.cs" />
+    <Compile Include="Control\NXExpandableListAdapter.cs" />
+    <Compile Include="Control\NXRecyclerView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Util.cs" />
     <Compile Include="Views\BuyPremiumView.cs" />
     <Compile Include="Views\ChangeLanguageView.cs" />
+    <Compile Include="Views\GridSpacingItemDecoration.cs" />
     <Compile Include="Views\LearnView.cs" />
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\PremiumArrayAdapter.cs" />
@@ -185,7 +194,9 @@
     <AndroidResource Include="Resources\Layout\buy_premium_list_item.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Layout\buy_premium_page.xml" />
+    <AndroidResource Include="Resources\Layout\buy_premium_page.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\premium_page.xml" />
@@ -349,7 +360,9 @@
     <AndroidResource Include="Resources\drawable\forgot_password_button_background_enable.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_expand_arrow_20_20.xml" />
+    <AndroidResource Include="Resources\drawable\ic_expand_arrow_20_20.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_indicator_selected.xml" />
@@ -370,7 +383,9 @@
     <AndroidResource Include="Resources\drawable\logo_facebook_40_40.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo_google_40_40.xml" />
+    <AndroidResource Include="Resources\drawable\logo_google_40_40.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\rounded_image.xml" />
@@ -386,6 +401,44 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\underline_background_normal.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_strike_line_white.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_circle_white.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\layout_exercise_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\layout_topic_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\layout_lesson_child.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_component_memorise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_strike_line_white_padding.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\layout_lesson_header.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
+      <Project>{e1334ff3-bc22-4f7c-b363-a01de69429f8}</Project>
+      <Name>Naxam.Busuu.Learning</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Attrs.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

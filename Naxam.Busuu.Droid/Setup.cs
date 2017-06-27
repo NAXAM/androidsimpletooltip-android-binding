@@ -19,6 +19,8 @@ using Naxam.Busuu.Core.Converter;
 using System.Collections;
 using Naxam.Busuu.Droid.Learning.Views;
 using Naxam.Busuu.Learning.ViewModel;
+using MvvmCross.Binding.Bindings.Target.Construction;
+using Naxam.Busuu.Droid.Learning.Control;
 
 namespace Naxam.Busuu.Droid
 {
@@ -27,7 +29,7 @@ namespace Naxam.Busuu.Droid
         public Setup(Context applicationContext) : base(applicationContext)
         {
         }
-       
+
         protected override void InitializeLastChance()
         {
             base.InitializeLastChance();
@@ -50,9 +52,9 @@ namespace Naxam.Busuu.Droid
             get
             {
                 var toReturn = base.ValueConverterAssemblies as IList;
-                toReturn.Add(typeof(IsMatchPatternBase64Converter).Assembly); 
-                return (IEnumerable<Assembly>)toReturn; 
-                 
+                toReturn.Add(typeof(IsMatchPatternBase64Converter).Assembly);
+                return (IEnumerable<Assembly>)toReturn;
+
             }
         }
         protected override IEnumerable<Assembly> GetViewModelAssemblies()
@@ -64,6 +66,23 @@ namespace Naxam.Busuu.Droid
             return list.ToArray();
         }
 
+        protected override IEnumerable<Assembly> AndroidViewAssemblies
+        {
+            get
+            {
+                return new List<Assembly>(base.AndroidViewAssemblies)
+                {
+                    typeof(MvvmCross.Binding.Droid.Views.MvxImageView).Assembly
+                };
+            }
+        }
+
+        protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
+        {
+            base.FillTargetFactories(registry);
+            registry.RegisterCustomBindingFactory<LessonHeaderBackground>("BackgroundColor", view => new LessonHeaderTargetBinding(view));
+        }
+
         protected override IEnumerable<Assembly> GetViewAssemblies()
         {
             var list = new List<Assembly>();
@@ -72,11 +91,6 @@ namespace Naxam.Busuu.Droid
             list.Add(typeof(LearnView).Assembly);
             return list.ToArray();
         }
-
-        protected override IEnumerable<Assembly> AndroidViewAssemblies
-    => new List<Assembly>(base.AndroidViewAssemblies)
-{
-    typeof(MvvmCross.Binding.Droid.Views.MvxImageView).Assembly
-};
+ 
     }
 }

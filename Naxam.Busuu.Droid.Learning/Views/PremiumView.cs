@@ -12,6 +12,7 @@ using Android.Widget;
 using Android.Util;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using Naxam.Busuu.Droid.Learning.Views;
+using MvvmCross.Binding.Droid.Views;
 
 namespace Naxam.Busuu.Droid.Learning.Views
 {
@@ -30,7 +31,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
            Resource.Drawable.subscription_image_c_4,
            Resource.Drawable.subscription_image_c_5,
            Resource.Drawable.vocab_trainer_icon,
-           //Resource.Drawable.certificate
+           Resource.Drawable.certificate
         };
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -43,8 +44,8 @@ namespace Naxam.Busuu.Droid.Learning.Views
             int height = displayMetrics.HeightPixels;
             int width = displayMetrics.WidthPixels;
 
-           // scPremium = FindViewById<ScrollView>(Resource.Id.sv_premium);
-            //lvPremium = FindViewById<ListView>(Resource.Id.lv_premium_value);
+           scPremium = FindViewById<ScrollView>(Resource.Id.sv_premium);
+           lvPremium = FindViewById<ListView>(Resource.Id.lv_premium_value);
 
             listPremiumItem = new List<PremiumObject>();
              adapter = new PremiumArrayAdapter(this, Resource.Layout.buy_premium_list_item, listPremiumItem);
@@ -77,8 +78,8 @@ namespace Naxam.Busuu.Droid.Learning.Views
             int height = displayMetrics.HeightPixels;
             int width = displayMetrics.WidthPixels;
 
-            // scPremium = FindViewById<ScrollView>(Resource.Id.sv_premium);
-           // lvPremium = FindViewById<ListView>(Resource.Id.lv_premium_value);
+            scPremium = FindViewById<ScrollView>(Resource.Id.sv_premium);
+            lvPremium = FindViewById<ListView>(Resource.Id.lv_premium_value);
 
             listPremiumItem = new List<PremiumObject>();
             adapter = new PremiumArrayAdapter(this, Resource.Layout.buy_premium_list_item, listPremiumItem);
@@ -93,6 +94,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
                 });
             }
             adapter.NotifyDataSetChanged();
+            MvxExpandableListView view;
 
             View item = lvPremium.Adapter.GetView(0, null, lvPremium);
             item.Measure(0, 0);

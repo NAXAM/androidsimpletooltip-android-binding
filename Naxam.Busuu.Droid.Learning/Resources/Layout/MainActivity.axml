@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
+  <LinearLayout 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -62,7 +60,19 @@
           app:MvxBind="Click GoPremiumCommand"
           android:text="GO"/>
     </FrameLayout>
-  </LinearLayout>
+    <MvxExpandableListView
+        android:id="@+id/expLessons"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:dividerHeight="0dp"
+          android:choiceMode="singleChoice"
+        android:groupIndicator="@android:color/transparent"
+        app:MvxGroupItemTemplate="@layout/layout_lesson_header"
+        app:MvxItemTemplate="@layout/layout_topic_item"
+        app:MvxBind="ItemsSource Lessons;" />
+ 
+  
+</LinearLayout>
   <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
       android:id="@+id/menu_bottom"
       android:layout_width="match_parent"

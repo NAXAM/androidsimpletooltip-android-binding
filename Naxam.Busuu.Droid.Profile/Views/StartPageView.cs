@@ -127,7 +127,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
                             }
                         }
                         updateBackgroud(isSwipeLeft, positionOffset);
-                        indicator.UpdateIndicator(isSwipeLeft, positionOffset);
+                       // indicator.UpdateIndicator(isSwipeLeft, positionOffset);
                     }
                 },
                 (state) =>

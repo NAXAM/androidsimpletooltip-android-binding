@@ -7,7 +7,6 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Support.V7.RecyclerView;
@@ -16,7 +15,6 @@ using static Android.Support.V7.Widget.GridLayoutManager;
 using Android.Support.V4.View;
 using Java.Util;
 using Android.Support.V4.Text;
-using Android.Graphics;
 using Android.Util;
 using Android.Content.Res;
 using Naxam.Busuu.Droid.Learning.Views;
@@ -24,7 +22,7 @@ using Naxam.Busuu.Droid.Learning.Views;
 namespace Naxam.Busuu.Droid.Learning.Views
 {
     [Activity(Label = "Languages", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize, ParentActivity = typeof(MainView))]
-    public class ChangeLanguageView : MvxAppCompatActivity
+    public partial class ChangeLanguageView : MvxAppCompatActivity
     {
         MvxRecyclerView LanguageListview;
         GridSpacingItemDecoration ItemDecoration;
@@ -76,54 +74,6 @@ namespace Naxam.Busuu.Droid.Learning.Views
         {
             float px = TypedValue.ApplyDimension(ComplexUnitType.Dip, dp, Resources.DisplayMetrics);
             return (int)Math.Round(px);
-        }
-        class GridSpacingItemDecoration : RecyclerView.ItemDecoration
-        {
-            private int spanCount;
-            private int spacing;
-            private bool includeEdge;
-            // private bool isRtl = TextUtilsCompat.GetLayoutDirectionFromLocale(Locale.Default) == ViewCompat.ScrollAxisHorizontal;
-
-            public GridSpacingItemDecoration(int spanCount, int spacing, bool includeEdge)
-            {
-                this.spanCount = spanCount;
-                this.spacing = spacing;
-
-                this.includeEdge = includeEdge;
-            }
-
-            public override void GetItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state)
-            {
-                int position = parent.GetChildAdapterPosition(view); // item position 
-
-                int column = (position - 1) % spanCount; // item column
-
-                if (position == 0)
-                {
-                    return;
-                }
-                else
-                {
-                    if (includeEdge)
-                    {
-                        outRect.Left = spacing - column * spacing / spanCount; // spacing - column * ((1f / spanCount) * spacing)
-                        outRect.Right = (column + 1) * spacing / spanCount; // (column + 1) * ((1f / spanCount) * spacing)
-
-                        outRect.Top = spacing;
-                        outRect.Bottom = spacing;
-                    }
-                    else
-                    {
-                        outRect.Right = column * spacing / spanCount; // column * ((1f / spanCount) * spacing)
-                        outRect.Left = spacing - (column + 1) * spacing / spanCount; // spacing - (column + 1) * ((1f /    spanCount) * spacing)
-                        outRect.Top = -48;
-                        outRect.Bottom = spacing;
-                    }
-                }
-
-            }
-
-
         }
         class LanguageSpanSizeLookup : SpanSizeLookup
         {
