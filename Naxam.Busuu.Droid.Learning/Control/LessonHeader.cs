@@ -72,9 +72,9 @@ namespace Naxam.Busuu.Droid.Learning.Control
             PaintDrawable paint = new PaintDrawable(BackgroundColor);
             paint.Shape = new RectShape();
             paint.SetCornerRadius(1000);
-            textView.SetBackgroundDrawable(paint);
+            textView.Background=paint;
             this.AddView(textView, 0);
-            ValueAnimator anim = ValueAnimator.OfInt(0, 100);
+            ValueAnimator anim = ValueAnimator.OfInt(0, 10);
 
             anim.AddUpdateListener(new AnimatorUpdateListener(
                 (d) =>
@@ -109,14 +109,14 @@ namespace Naxam.Busuu.Droid.Learning.Control
                     SetBackgroundColor(BackgroundColor); 
                     Color temp = BackgroundColor;
                     BackgroundColor = SecondColor;
+                    ColorStateList colorIcon;
                     if (!expand)
                     {
                         int[] colorsTxt = new int[] { new Color(255, 255, 255), new Color(255, 255, 255) };
                         listTxt = new ColorStateList(states, colorsTxt);
                         txtLesson.SetTextSize(ComplexUnitType.Dip, 26);
                         int[] colors = new int[] { Color.White, Color.White };
-                        ColorStateList myList = new ColorStateList(states, colors);
-                        //btnDownload.ImageTintList = myList;
+                        colorIcon = new ColorStateList(states, colors);
                     }
                     else
                     {
@@ -124,11 +124,18 @@ namespace Naxam.Busuu.Droid.Learning.Control
                         listTxt = new ColorStateList(states, colorsTxt);
                         txtLesson.SetTextSize(ComplexUnitType.Dip, 16);
                         int[] colors = new int[] { new Color(204, 204, 204), new Color(204, 204, 204), };
-                        ColorStateList myList = new ColorStateList(states, colors);
-                        // btnDownload.ImageTintList = myList;
-
+                        colorIcon = new ColorStateList(states, colors);
+                       
                     }
 
+                    if (Build.VERSION.SdkInt > BuildVersionCodes.Kitkat)
+                    {
+                        btnDownload.ImageTintList = colorIcon;
+                    }
+                    else
+                    {
+
+                    }
                     expand = !expand;
                     
                     txtLesson.SetTextColor(listTxt);
@@ -136,7 +143,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
                     SecondColor = temp;
                 }
             });
-            anim.SetDuration(100);
+            anim.SetDuration(250);
             anim.Start();
         }
 
@@ -146,10 +153,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
            // BackgroundColor = a.GetColor(Resource.Styleable.LessonHeader_BackgroundColor, Color.Red);
             SecondColor = Color.White;
            // a.Recycle(); 
-
         }
-
-       
 
         protected override void Dispose(bool disposing)
         {

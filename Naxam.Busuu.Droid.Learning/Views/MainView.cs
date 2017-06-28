@@ -16,6 +16,7 @@ using MvvmCross.Binding.Droid.Views;
 using Naxam.Busuu.Droid.Learning.Control;
 using MvvmCross.Binding.Droid.BindingContext;
 using Naxam.Busuu.Learning.Model;
+using System.Threading.Tasks;
 
 namespace Naxam.Busuu.Droid.Learning.Views
 {
@@ -41,13 +42,15 @@ namespace Naxam.Busuu.Droid.Learning.Views
 
         private void ExpLessons_GroupCollapse(object sender, ExpandableListView.GroupCollapseEventArgs e)
         {
-            expLessons.SetSelection(e.GroupPosition);
-            expLessons.SmoothScrollToPosition(e.GroupPosition);
+            //expLessons.SetSelection(e.GroupPosition);
+           // expLessons.SmoothScrollToPosition(e.GroupPosition);
+          //  expLessons.OverScrollMode = OverScrollMode.Always;
+           expLessons.SmoothScrollToPositionFromTop(e.GroupPosition, 0);
         }
 
-        private void ExpLessons_GroupExpand(object sender, ExpandableListView.GroupExpandEventArgs e)
-        {
-            expLessons.SmoothScrollToPosition(e.GroupPosition);
+        private async void ExpLessons_GroupExpand(object sender, ExpandableListView.GroupExpandEventArgs e)
+        { 
+            await Task.Delay(500);
             expLessons.SetSelection(e.GroupPosition);
         }
 
