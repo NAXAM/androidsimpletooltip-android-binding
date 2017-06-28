@@ -94,8 +94,8 @@ namespace Naxam.Busuu.Droid.Profile.Views
             key03 = MatchingSentence.Keys.Where(d => d != key01 && d != key02).FirstOrDefault();
             //
             val01 = MatchingSentence.Values.ElementAt(random.Next(0, 3));
-            val02 = MatchingSentence.Values.Where(d => d != key01).ElementAt(random.Next(0, 2));
-            val03 = MatchingSentence.Values.Where(d => d != key01 && d != key02).FirstOrDefault();
+            val02 = MatchingSentence.Values.Where(d => d != val01).ElementAt(random.Next(0, 2));
+            val03 = MatchingSentence.Values.Where(d => d != val01 && d != val02).FirstOrDefault();
             //
             // above: values
             // below: keys
@@ -116,6 +116,31 @@ namespace Naxam.Busuu.Droid.Profile.Views
             txt03Move.SetOnTouchListener(this);
 
            
+        }
+        private void ChangeColorByValue(Rect rect, TextView fixedTxtView)// remembering pass extactly
+        {
+            // getting a current textview collising with 04, 05, 06
+           TextView txtViewMove=  getTxtMoveCollision(rect);
+            if(MatchingSentence[fixedTxtView.Text] == txtViewMove.Text)
+            {
+                txtViewMove.SetBackgroundColor(Color.ParseColor("#74B825"));// true
+            }
+            else
+            {
+                
+                txtViewMove.SetBackgroundColor(Color.ParseColor("#EB4431"));// false
+            }
+
+           
+
+        }
+
+        private TextView getTxtMoveCollision(Rect rect)
+        {
+            if (rect.Intersect(rectMove01)) return txt01Move;
+            if (rect.Intersect(rectMove02)) return txt02Move;
+            if (rect.Intersect(rectMove03)) return txt03Move;
+            return null;
         }
         private bool finishLesson()
         {
@@ -185,7 +210,9 @@ namespace Naxam.Busuu.Droid.Profile.Views
             txt01Move.Enabled = false;
             txt02Move.Enabled = false;
             txt03Move.Enabled = false;
-
+            txt01Move.SetTextColor(Color.White);
+            txt02Move.SetTextColor(Color.White);
+            txt03Move.SetTextColor(Color.White);
         }
         private double getDistance(int x1, int y1, int x2, int y2)
         {
@@ -365,8 +392,6 @@ namespace Naxam.Busuu.Droid.Profile.Views
             }
 
         }
-
-
         public bool OnTouch(View view, MotionEvent motionEvent)
         {
             getCoordinates();
@@ -432,10 +457,14 @@ namespace Naxam.Busuu.Droid.Profile.Views
                     if (finishLesson())
                     {
                         disableView();
-                        // Checking đúng sai tại đây
+                        //
+                        ChangeColorByValue(rectTxt04, txt04);
+                        ChangeColorByValue(rectTxt05, txt05);
+                        ChangeColorByValue(rectTxt06, txt06);
+                        //
                         txtGuide.Visibility = ViewStates.Gone;
                         btnContinue.Visibility = ViewStates.Visible;
-                        Toast.MakeText(this, "Done nhé thảo đẹp trai!", ToastLength.Long).Show();
+                        //Toast.MakeText(this, "Done nhé thảo đẹp trai!", ToastLength.Long).Show();
                     }
                     break;
 

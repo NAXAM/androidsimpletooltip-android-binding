@@ -19,6 +19,7 @@
         android:id="@+id/txt01"
         android:layout_below="@id/txtGuide"
         android:textSize="20dp"
+        android:textColor="#000000"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
@@ -30,6 +31,7 @@
     <TextView
         android:id="@+id/txt02"
         android:background="@drawable/dotted"
+        android:textColor="#000000"
         android:textSize="20dp"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="24dp"
@@ -42,6 +44,7 @@
         android:layout_height="56dp" />
     <TextView
         android:id="@+id/txt03"
+        android:textColor="#000000"
         android:background="@drawable/dotted"
         android:textSize="20dp"
         android:layout_marginTop="16dp"
@@ -55,6 +58,7 @@
         android:layout_height="56dp" />
     <TextView
         android:id="@+id/txt01Move"
+        android:textColor="#000000"
         android:textSize="20dp"
         android:gravity="center"
         android:layout_gravity="center_horizontal"
@@ -70,6 +74,7 @@
         android:layout_alignStart="@+id/txt01" />
     <TextView
         android:id="@+id/txt02Move"
+        android:textColor="#000000"
         android:background="#FFFFFF"
         android:textSize="20dp"
         android:layout_marginTop="16dp"
@@ -83,6 +88,7 @@
         android:layout_height="56dp" />
     <TextView
         android:id="@+id/txt03Move"
+        android:textColor="#000000"
         android:background="#FFFFFF"
         android:textSize="20dp"
         android:layout_marginTop="16dp"
@@ -96,6 +102,7 @@
         android:layout_height="56dp" />
     <TextView
         android:id="@+id/txt04"
+        android:textColor="#000000"
         android:background="#D6DFE6"
         android:textSize="20dp"
         android:layout_marginTop="32dp"
@@ -111,6 +118,7 @@
         android:layout_alignParentStart="true" />
     <TextView
         android:id="@+id/txt05"
+        android:textColor="#000000"
         android:textSize="20dp"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="24dp"
@@ -124,6 +132,7 @@
         android:layout_height="56dp" />
     <TextView
         android:id="@+id/txt06"
+        android:textColor="#000000"
         android:textSize="20dp"
         android:background="#D6DFE6"
         android:layout_marginTop="16dp"
