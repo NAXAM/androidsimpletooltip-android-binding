@@ -46,14 +46,10 @@ namespace Naxam.Busuu.Droid.Profile.Views
         }
         private void Init()
         {
-            //
-            // bên trên: key
-            // bên dưới: value
-            //
             MatchingSentence = new Dictionary<string, string>();
-            MatchingSentence.Add("Fine, Thanks", "Tôi ổn, cảm ơn");
-            MatchingSentence.Add("How's it going", "Bạn có khỏe không?");
-            MatchingSentence.Add("Nice to meet you", "Rất vui được gặp bạn");
+            MatchingSentence.Add("Tôi ổn, cảm ơn", "Fine, Thanks");
+            MatchingSentence.Add("Bạn có khỏe không?", "How's it going");
+            MatchingSentence.Add("Rất vui được gặp bạn", "Nice to meet you");
             //
             rectTxt04 = new Rect();
             rectTxt05 = new Rect();
@@ -62,23 +58,19 @@ namespace Naxam.Busuu.Droid.Profile.Views
             rectMove02 = new Rect();
             rectMove03 = new Rect();
             //
-
             firstTouchMove01 = false;
             firstTouchMove02 = false;
             firstTouchMove03 = false;
             firstTouchTxt04 = false;
             firstTouchTxt05 = false;
             firstTouchTxt06 = false;
-
             _root = (ViewGroup)FindViewById(Resource.Id.root);
             //
             txtGuide = (TextView)FindViewById(Resource.Id.txtGuide);
             //
-            //
             btnContinue = FindViewById<Button>(Resource.Id.btnContinue);
             btnContinue.Visibility = ViewStates.Gone;
             //
-
             txt01Move = (TextView)FindViewById(Resource.Id.txt01Move);
             txt02Move = (TextView)FindViewById(Resource.Id.txt02Move);
             txt03Move = (TextView)FindViewById(Resource.Id.txt03Move);
@@ -94,35 +86,36 @@ namespace Naxam.Busuu.Droid.Profile.Views
             txt05 = (TextView)FindViewById(Resource.Id.txt05);
             txt06 = (TextView)FindViewById(Resource.Id.txt06);
 
-            string text1,text2, text3,value1,value2,value3;
+            string key01, key02, key03, val01, val02, val03;
             Random random = new Random();
             //
-
-            text1 = MatchingSentence.Keys.ElementAt(random.Next(0, 66) % 3);
-            text2 = MatchingSentence.Keys.Where(d => d != text1).ElementAt(random.Next(0, 75) % 2);
-            text3 = MatchingSentence.Keys.Where(d => d != text1&&d!=text2).FirstOrDefault();
-
-            value1 = MatchingSentence.Values.ElementAt(random.Next(0, 44) % 3);
-            value2 = MatchingSentence.Values.Where(d => d != value1).ElementAt(random.Next(0, 99) % 2);
-            value3 = MatchingSentence.Values.Where(d => d != value1 && d != value2).FirstOrDefault();
+            key01 = MatchingSentence.Keys.ElementAt(random.Next(0, 3));
+            key02 = MatchingSentence.Keys.Where(d => d != key01).ElementAt(random.Next(0,2));
+            key03 = MatchingSentence.Keys.Where(d => d != key01 && d != key02).FirstOrDefault();
             //
-            txt01.Text = text1;
-            txt02.Text = text2;
-            txt03.Text = text3;
+            val01 = MatchingSentence.Values.ElementAt(random.Next(0, 3));
+            val02 = MatchingSentence.Values.Where(d => d != key01).ElementAt(random.Next(0, 2));
+            val03 = MatchingSentence.Values.Where(d => d != key01 && d != key02).FirstOrDefault();
             //
-            txt01Move.Text = text1;
-            txt02Move.Text = text2;
-            txt03Move.Text = text3;
+            // above: values
+            // below: keys
             //
-            txt04.Text = value1;
-            txt05.Text = value2;
-            txt06.Text = value3;
+            txt01.Text = val01;
+            txt02.Text = val02;
+            txt03.Text = val03;
+            txt01Move.Text = val01;
+            txt02Move.Text = val02;
+            txt03Move.Text = val03;
+            //
+            txt04.Text = key01;
+            txt05.Text = key02;
+            txt06.Text = key03;
             //
             txt01Move.SetOnTouchListener(this);
             txt02Move.SetOnTouchListener(this);
             txt03Move.SetOnTouchListener(this);
 
-
+           
         }
         private bool finishLesson()
         {
@@ -187,7 +180,13 @@ namespace Naxam.Busuu.Droid.Profile.Views
             txt05.SetBackgroundResource(Resource.Color.colorNormalBtn);
             txt06.SetBackgroundResource(Resource.Color.colorNormalBtn);
         }
+        private void disableView()
+        {
+            txt01Move.Enabled = false;
+            txt02Move.Enabled = false;
+            txt03Move.Enabled = false;
 
+        }
         private double getDistance(int x1, int y1, int x2, int y2)
         {
             double dis;
@@ -432,9 +431,11 @@ namespace Naxam.Busuu.Droid.Profile.Views
                     }
                     if (finishLesson())
                     {
+                        disableView();
+                        // Checking đúng sai tại đây
                         txtGuide.Visibility = ViewStates.Gone;
                         btnContinue.Visibility = ViewStates.Visible;
-                        Toast.MakeText(this, "Done nhé", ToastLength.Long).Show();
+                        Toast.MakeText(this, "Done nhé thảo đẹp trai!", ToastLength.Long).Show();
                     }
                     break;
 
@@ -464,8 +465,6 @@ namespace Naxam.Busuu.Droid.Profile.Views
                         if (hasCollision040506(rectMove02) == true)
                         {
                             changeBackgroundColor(rectMove02);
-
-
                         }
 
 
