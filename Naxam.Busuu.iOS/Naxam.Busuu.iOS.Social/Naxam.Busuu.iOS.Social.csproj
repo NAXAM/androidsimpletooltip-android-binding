@@ -45,40 +45,40 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="MvvmCross.Platform">
-      <HintPath>..\..\packages\MvvmCross.Platform.5.0.2\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platform.5.0.5\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Platform.iOS">
-      <HintPath>..\..\packages\MvvmCross.Platform.5.0.2\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platform.5.0.5\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Core">
-      <HintPath>..\..\packages\MvvmCross.Core.5.0.2\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.5.0.5\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.iOS">
-      <HintPath>..\..\packages\MvvmCross.Core.5.0.2\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.5.0.5\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Binding">
-      <HintPath>..\..\packages\MvvmCross.Binding.5.0.2\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.5.0.5\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Binding.iOS">
-      <HintPath>..\..\packages\MvvmCross.Binding.5.0.2\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.5.0.5\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Localization">
-      <HintPath>..\..\packages\MvvmCross.Binding.5.0.2\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.5.0.5\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Plugins.File">
-      <HintPath>..\..\packages\MvvmCross.Plugin.File.5.0.2\lib\Xamarin.iOS10\MvvmCross.Plugins.File.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Plugin.File.5.0.5\lib\Xamarin.iOS10\MvvmCross.Plugins.File.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Plugins.File.iOS">
-      <HintPath>..\..\packages\MvvmCross.Plugin.File.5.0.2\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Plugin.File.5.0.5\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Immutable">
-      <HintPath>..\..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+      <HintPath>..\..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Plugins.DownloadCache">
-      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.5.0.2\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.5.0.5\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Plugins.DownloadCache.iOS">
-      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.5.0.2\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.iOS.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.5.0.5\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -109,20 +109,19 @@
     <InterfaceDefinition Include="Social.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\user_avatar_placeholder.png" />
     <BundleResource Include="Resources\flag_small_arabic.png" />
     <BundleResource Include="Resources\flag_small_chinese.png" />
     <BundleResource Include="Resources\flag_small_english.png" />
-    <BundleResource Include="Resources\profile_flag_es.png" />
     <BundleResource Include="Resources\profile_flag_vn.png" />
     <BundleResource Include="Resources\social_background_pattern_image.png" />
     <BundleResource Include="Resources\flag_small_german.png" />
     <BundleResource Include="Resources\flag_small_portuguese.png" />
     <BundleResource Include="Resources\flag_small_spanish.png" />
     <BundleResource Include="Resources\play_btn_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -17,9 +17,8 @@ namespace Naxam.Busuu.iOS.Social
         private readonly MvxImageViewLoader _loaderImgSpeak;
         private readonly MvxImageViewLoader _loaderImgLearn;
 
-        public DiscoverCell(IntPtr handle) : base(string.Empty, handle)
+        public DiscoverCell(IntPtr handle) : base(handle)
         {
-
             _loaderImageUser = new MvxImageViewLoader(() => this.ImageUser); 
             _loaderImgSpeak = new MvxImageViewLoader(() => this.ImgSpeak);
             _loaderImgLearn = new MvxImageViewLoader(() => this.ImageLan);
@@ -31,8 +30,10 @@ namespace Naxam.Busuu.iOS.Social
                 setBinding.Bind(NameUser).To(d => d.Name);
                 setBinding.Bind(Country).To(d => d.Country);
                 setBinding.Bind(_loaderImgSpeak).To(d => d.ImageSpeakLanguage);
-                setBinding.Bind(ViewSpeak).For(d => d.Hidden).To(d => d.Speak);
-                setBinding.Bind(WriteLabel).For(d => d.Hidden).To(d => d.Speak).WithConversion(new InverseValueConverter(), null);
+                setBinding.Bind(ViewSpeak).For(d => d.Hidden).To(d => d.Speak).WithConversion(new InverseValueConverter(), null);
+				setBinding.Bind(audioViewBottomConstraint).For(x => x.Active).To(d => d.Speak);
+				setBinding.Bind(audioViewTopConstraint).For(x => x.Active).To(d => d.Speak);
+                setBinding.Bind(WriteLabel).For(d => d.Hidden).To(d => d.Speak);
 				setBinding.Bind(WriteLabel).To(d => d.Write);
                 setBinding.Bind(_loaderImgLearn).To(d => d.ImageLearn);
                 setBinding.Bind(TextLan).To(d => d.TextLearn);
@@ -40,31 +41,36 @@ namespace Naxam.Busuu.iOS.Social
             });
         }
 
-        public override void LayoutSubviews()
+        public override void AwakeFromNib()
         {
-            base.LayoutSubviews();
+            base.AwakeFromNib();
 
 			Layer.ShadowRadius = 2;
-            Layer.ShadowOpacity = 0.3f;
-            Layer.ShadowOffset = new CGSize(2, 2);
-            this.ClipsToBounds = false;
+			Layer.ShadowOpacity = 0.3f;
+			Layer.ShadowOffset = new CGSize(2, 2);
+			this.ClipsToBounds = false;
 
-            ViewCell.Layer.CornerRadius = 5;
-            ViewCell.Layer.MasksToBounds = true;
-            ViewCell.ClipsToBounds = true;
+			ViewCell.Layer.CornerRadius = 5;
+			ViewCell.Layer.MasksToBounds = true;
+			ViewCell.ClipsToBounds = true;
 
-			var bbcolor = UIColor.FromRGB(234, 239, 243);
+			var bbcolor = UIColor.FromRGB(224, 230, 235);
 
-            ViewLan.Layer.BorderWidth = 1;
-            ViewLan.Layer.BorderColor = bbcolor.CGColor;
+			ViewLan.Layer.BorderWidth = 1;
+			ViewLan.Layer.BorderColor = bbcolor.CGColor;
 
-            ViewHome.Layer.BorderWidth = 1;
-            ViewHome.Layer.BorderColor = bbcolor.CGColor;
+			ViewHome.Layer.BorderWidth = 1;
+			ViewHome.Layer.BorderColor = bbcolor.CGColor;
 			ViewHome.Layer.CornerRadius = 2;
 			ViewHome.Layer.MasksToBounds = true;
 			ViewHome.ClipsToBounds = true;
 
-          }
+		}
+
+        public override void LayoutSubviews()
+        {
+            base.LayoutSubviews();
+        }
     }
 
 	public class InverseValueConverter : MvxValueConverter<bool, bool>
@@ -74,22 +80,4 @@ namespace Naxam.Busuu.iOS.Social
 			return !value;
 		}
 	}
-
- //   public class InverseValueConverter2 : MvxValueConverter<bool, nfloat>
-	//{
- //       protected override nfloat Convert(bool value, Type targetType, object parameter, CultureInfo cultureInfo)
-	//	{
- //           nfloat h;
- //           if (value == false)
- //           {
- //               h = 0;
- //           }
- //           else
- //           {
- //               h = 40;
- //           }
- //           return h;
-
-	//	}
-	//}
 }

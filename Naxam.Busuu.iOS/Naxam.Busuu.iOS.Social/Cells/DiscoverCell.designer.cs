@@ -13,6 +13,12 @@ namespace Naxam.Busuu.iOS.Social
 	partial class DiscoverCell
 	{
 		[Outlet]
+		UIKit.NSLayoutConstraint audioViewBottomConstraint { get; set; }
+
+		[Outlet]
+		UIKit.NSLayoutConstraint audioViewTopConstraint { get; set; }
+
+		[Outlet]
 		public UIKit.UILabel Country { get; private set; }
 
 		[Outlet]
@@ -50,6 +56,16 @@ namespace Naxam.Busuu.iOS.Social
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (audioViewTopConstraint != null) {
+				audioViewTopConstraint.Dispose ();
+				audioViewTopConstraint = null;
+			}
+
+			if (audioViewBottomConstraint != null) {
+				audioViewBottomConstraint.Dispose ();
+				audioViewBottomConstraint = null;
+			}
+
 			if (Country != null) {
 				Country.Dispose ();
 				Country = null;
@@ -73,6 +89,11 @@ namespace Naxam.Busuu.iOS.Social
 			if (NameUser != null) {
 				NameUser.Dispose ();
 				NameUser = null;
+			}
+
+			if (SliderSpeak != null) {
+				SliderSpeak.Dispose ();
+				SliderSpeak = null;
 			}
 
 			if (TextLan != null) {
@@ -103,11 +124,6 @@ namespace Naxam.Busuu.iOS.Social
 			if (WriteLabel != null) {
 				WriteLabel.Dispose ();
 				WriteLabel = null;
-			}
-
-			if (SliderSpeak != null) {
-				SliderSpeak.Dispose ();
-				SliderSpeak = null;
 			}
 		}
 	}

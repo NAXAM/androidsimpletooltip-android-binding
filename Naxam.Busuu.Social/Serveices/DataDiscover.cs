@@ -34,7 +34,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImageLearn = "res:flag_small_english",
 					TextLearn = "ENGLISH",
                     Speak = true,
-					Write = "Hello Naxam!\nI am a new member.",
+					Write = "Hello Naxam!\nI am a new member.\nI am a new member.\nI am a new member.",
 					PublicTime = "29/5/2017"
                 },
 				new Discover()
@@ -60,7 +60,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImageLearn = "res:flag_small_english",
 					TextLearn = "ENGLISH",
 					Speak = false,
-					Write = "Hello Naxam!",
+					Write = "Hello Naxam!\nI am a new member.\nI am a new member.\nI am a new member.",
 					PublicTime = "21/5/2017"
 				},
 				new Discover()
@@ -72,7 +72,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImageSpeakLanguage = "res:flag_small_chinese",
 					ImageLearn = "res:flag_small_english",
 					TextLearn = "ENGLISH",
-					Speak = false,
+                    Speak = true,
 					Write = "Hello Naxam!",
 					PublicTime = "21/5/2017"
 				},
