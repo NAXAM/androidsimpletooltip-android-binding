@@ -119,6 +119,7 @@
     <BundleResource Include="Resources\flag_small_portuguese.png" />
     <BundleResource Include="Resources\flag_small_spanish.png" />
     <BundleResource Include="Resources\play_btn_blue.png" />
+    <BundleResource Include="Resources\play_btn.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

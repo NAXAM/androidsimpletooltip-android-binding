@@ -26,16 +26,16 @@ namespace Naxam.Busuu.iOS.Social
             this.DelayBind(() =>
             {
                 var setBinding = this.CreateBindingSet<DiscoverCell, Discover>();
-                setBinding.Bind(_loaderImageUser).To(d => d.Avatar);
+                setBinding.Bind(_loaderImageUser).To(d => d.Avatar).WithConversion(new ImageUriValueConverter(), null);
                 setBinding.Bind(NameUser).To(d => d.Name);
                 setBinding.Bind(Country).To(d => d.Country);
-                setBinding.Bind(_loaderImgSpeak).To(d => d.ImageSpeakLanguage);
+                setBinding.Bind(_loaderImgSpeak).To(d => d.ImageSpeakLanguage).WithConversion(new ImageUriValueConverter(), null);
                 setBinding.Bind(ViewSpeak).For(d => d.Hidden).To(d => d.Speak).WithConversion(new InverseValueConverter(), null);
 				setBinding.Bind(audioViewBottomConstraint).For(x => x.Active).To(d => d.Speak);
 				setBinding.Bind(audioViewTopConstraint).For(x => x.Active).To(d => d.Speak);
                 setBinding.Bind(WriteLabel).For(d => d.Hidden).To(d => d.Speak);
 				setBinding.Bind(WriteLabel).To(d => d.Write);
-                setBinding.Bind(_loaderImgLearn).To(d => d.ImageLearn);
+                setBinding.Bind(_loaderImgLearn).To(d => d.ImageLearn).WithConversion(new ImageUriValueConverter(), null);
                 setBinding.Bind(TextLan).To(d => d.TextLearn);
                 setBinding.Apply();
             });
@@ -48,11 +48,9 @@ namespace Naxam.Busuu.iOS.Social
 			Layer.ShadowRadius = 2;
 			Layer.ShadowOpacity = 0.3f;
 			Layer.ShadowOffset = new CGSize(2, 2);
-			this.ClipsToBounds = false;
 
 			ViewCell.Layer.CornerRadius = 5;
 			ViewCell.Layer.MasksToBounds = true;
-			ViewCell.ClipsToBounds = true;
 
 			var bbcolor = UIColor.FromRGB(224, 230, 235);
 
@@ -63,8 +61,13 @@ namespace Naxam.Busuu.iOS.Social
 			ViewHome.Layer.BorderColor = bbcolor.CGColor;
 			ViewHome.Layer.CornerRadius = 2;
 			ViewHome.Layer.MasksToBounds = true;
-			ViewHome.ClipsToBounds = true;
 
+            ImageUser.Layer.CornerRadius = ImageUser.Frame.Width / 2;
+            ImgSpeak.Layer.CornerRadius = ImgSpeak.Frame.Width / 2;
+            ImageLan.Layer.CornerRadius = ImageLan.Frame.Width / 2;
+            ButtonPlay.Layer.CornerRadius = ButtonPlay.Frame.Width / 2;
+
+            ButtonPlay.ImageEdgeInsets = new UIEdgeInsets(8, 10, 8, 8);
 		}
 
         public override void LayoutSubviews()
@@ -78,6 +81,14 @@ namespace Naxam.Busuu.iOS.Social
         protected override bool Convert(bool value, Type targetType, object parameter, CultureInfo cultureInfo)
 		{
 			return !value;
+		}
+	}
+
+	public class ImageUriValueConverter : MvxValueConverter<string, string>
+	{
+		protected override string Convert(string value, Type targetType, object parameter, CultureInfo cultureInfo)
+		{
+			return "res:" + value;
 		}
 	}
 }

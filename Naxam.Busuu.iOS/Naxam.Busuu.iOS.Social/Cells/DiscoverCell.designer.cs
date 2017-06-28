@@ -19,51 +19,54 @@ namespace Naxam.Busuu.iOS.Social
 		UIKit.NSLayoutConstraint audioViewTopConstraint { get; set; }
 
 		[Outlet]
-		public UIKit.UILabel Country { get; private set; }
+		UIKit.UIButton ButtonPlay { get; set; }
+
+		[Outlet]
+		UIKit.UILabel Country { get; set; }
 
 		[Outlet]
 		UIKit.UIImageView ImageLan { get; set; }
 
 		[Outlet]
-		public UIKit.UIImageView ImageUser { get; private set; }
+		UIKit.UIImageView ImageUser { get; set; }
 
 		[Outlet]
-		public UIKit.UIImageView ImgSpeak { get; private set; }
+		UIKit.UIImageView ImgSpeak { get; set; }
 
 		[Outlet]
-		public UIKit.UILabel NameUser { get; private set; }
+		UIKit.UILabel NameUser { get; set; }
 
 		[Outlet]
 		UIKit.UISlider SliderSpeak { get; set; }
 
 		[Outlet]
-		public UIKit.UILabel TextLan { get; private set; }
+		UIKit.UILabel TextLan { get; set; }
 
 		[Outlet]
-		public UIKit.UIView ViewCell { get; private set; }
+		UIKit.UIView ViewCell { get; set; }
 
 		[Outlet]
-		public UIKit.UIView ViewHome { get; private set; }
+		UIKit.UIView ViewHome { get; set; }
 
 		[Outlet]
-		public UIKit.UIView ViewLan { get; private set; }
+		UIKit.UIView ViewLan { get; set; }
 
 		[Outlet]
-		public UIKit.UIView ViewSpeak { get; private set; }
+		UIKit.UIView ViewSpeak { get; set; }
 
 		[Outlet]
-		public UIKit.UILabel WriteLabel { get; private set; }
+		UIKit.UILabel WriteLabel { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (audioViewTopConstraint != null) {
-				audioViewTopConstraint.Dispose ();
-				audioViewTopConstraint = null;
-			}
-
 			if (audioViewBottomConstraint != null) {
 				audioViewBottomConstraint.Dispose ();
 				audioViewBottomConstraint = null;
+			}
+
+			if (audioViewTopConstraint != null) {
+				audioViewTopConstraint.Dispose ();
+				audioViewTopConstraint = null;
 			}
 
 			if (Country != null) {
@@ -89,6 +92,11 @@ namespace Naxam.Busuu.iOS.Social
 			if (NameUser != null) {
 				NameUser.Dispose ();
 				NameUser = null;
+			}
+
+			if (ButtonPlay != null) {
+				ButtonPlay.Dispose ();
+				ButtonPlay = null;
 			}
 
 			if (SliderSpeak != null) {

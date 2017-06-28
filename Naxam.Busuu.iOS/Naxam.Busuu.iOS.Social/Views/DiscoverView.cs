@@ -56,12 +56,12 @@ namespace Naxam.Busuu.iOS.Social
         public CollectionViewLineLayout()
 		{
             nfloat viewLR = UIScreen.MainScreen.Bounds.Size.Width * 0.8f;
-			nfloat insetsTB = UIScreen.MainScreen.Bounds.Size.Height / 6;
+            nfloat insetsTB = (UIScreen.MainScreen.Bounds.Size.Height - 84) / 6;
             nfloat insetsLR = UIScreen.MainScreen.Bounds.Size.Width * 0.145f;
 
             float ITEM_SIZE = (float)(viewLR - viewLR * ZOOM_FACTOR);
 			ACTIVE_DISTANCE = ITEM_SIZE;
-            ItemSize = new CGSize(ITEM_SIZE, ITEM_SIZE * 1.5f);
+            ItemSize = new CGSize(ITEM_SIZE, insetsTB * 4);
             SectionInset = new UIEdgeInsets(insetsTB, insetsLR, insetsTB, insetsLR);
             ScrollDirection = UICollectionViewScrollDirection.Horizontal;
             MinimumLineSpacing = UIScreen.MainScreen.Bounds.Size.Width * 0.1f;

@@ -14,11 +14,11 @@ namespace Naxam.Busuu.Social.Serveices
                 new Discover()
                 {
                     Id = 0,
-                    Avatar = "res:user_avatar_placeholder",
+                    Avatar = "user_avatar_placeholder.png",
                     Name = "Nguyen Nhu Son",
                     Country = "Vietnam",
-                    ImageSpeakLanguage = "res:profile_flag_vn",
-                    ImageLearn = "res:flag_small_english",
+                    ImageSpeakLanguage = "profile_flag_vn.png",
+                    ImageLearn = "flag_small_english.png",
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!\nI am a new member.",
@@ -27,11 +27,11 @@ namespace Naxam.Busuu.Social.Serveices
 				new Discover()
 				{
 					Id = 1,
-					Avatar = "res:user_avatar_placeholder",
+					Avatar = "user_avatar_placeholder.png",
 					Name = "Nguyen Nhu Son",
 					Country = "Vietnam",
-					ImageSpeakLanguage = "res:profile_flag_vn",
-					ImageLearn = "res:flag_small_english",
+					ImageSpeakLanguage = "profile_flag_vn.png",
+					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
                     Speak = true,
 					Write = "Hello Naxam!\nI am a new member.\nI am a new member.\nI am a new member.",
@@ -40,11 +40,11 @@ namespace Naxam.Busuu.Social.Serveices
 				new Discover()
                 {
                     Id = 2,
-                    Avatar = "res:user_avatar_placeholder",
+                    Avatar = "user_avatar_placeholder.png",
                     Name = "Anabela Rodrigues",
                     Country = "Portugal",
-                    ImageSpeakLanguage = "res:flag_small_portuguese",
-                    ImageLearn = "res:flag_small_english",
+                    ImageSpeakLanguage = "flag_small_portuguese.png",
+                    ImageLearn = "flag_small_english.png",
                     TextLearn = "ENGLISH",
                     Speak = false,
 					Write = "Hello Naxam!",
@@ -53,11 +53,11 @@ namespace Naxam.Busuu.Social.Serveices
 				new Discover()
 				{
 					Id = 3,
-					Avatar = "res:user_avatar_placeholder",
+					Avatar = "user_avatar_placeholder.png",
 					Name = "Kaiser",
 					Country = "Mexico",
-					ImageSpeakLanguage = "res:flag_small_spanish",
-					ImageLearn = "res:flag_small_english",
+					ImageSpeakLanguage = "flag_small_spanish.png",
+					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.\nI am a new member.\nI am a new member.",
@@ -66,11 +66,11 @@ namespace Naxam.Busuu.Social.Serveices
 				new Discover()
 				{
 					Id = 4,
-					Avatar = "res:user_avatar_placeholder",
+					Avatar = "user_avatar_placeholder.png",
 					Name = "Iyp",
 					Country = "China",
-					ImageSpeakLanguage = "res:flag_small_chinese",
-					ImageLearn = "res:flag_small_english",
+					ImageSpeakLanguage = "flag_small_chinese.png",
+					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
                     Speak = true,
 					Write = "Hello Naxam!",
@@ -79,11 +79,11 @@ namespace Naxam.Busuu.Social.Serveices
 				new Discover()
 				{
 					Id = 5,
-					Avatar = "res:user_avatar_placeholder",
+					Avatar = "user_avatar_placeholder.png",
 					Name = "Juan Pablo Cervantes",
 					Country = "Colombia",
-					ImageSpeakLanguage = "res:flag_small_spanish",
-					ImageLearn = "res:flag_small_english",
+					ImageSpeakLanguage = "flag_small_spanish.png",
+					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!",
@@ -92,11 +92,11 @@ namespace Naxam.Busuu.Social.Serveices
 				new Discover()
 				{
 					Id = 6,
-					Avatar = "res:user_avatar_placeholder",
+					Avatar = "user_avatar_placeholder.png",
 					Name = "Mohamed",
 					Country = "Agypt",
-					ImageSpeakLanguage = "res:flag_small_arabic",
-					ImageLearn = "res:flag_small_english",
+					ImageSpeakLanguage = "flag_small_arabic.png",
+					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
                     Speak = true,
 					Write = "Hello Naxam!",
@@ -105,11 +105,11 @@ namespace Naxam.Busuu.Social.Serveices
 			    new Discover()
                 {
                     Id = 7,
-                    Avatar = "res:user_avatar_placeholder",
+                    Avatar = "user_avatar_placeholder.png",
                     Name = "Mauricio Percara",
                     Country = "Argentina",
-                    ImageSpeakLanguage = "res:flag_small_spanish",
-                    ImageLearn = "res:flag_small_english",
+                    ImageSpeakLanguage = "flag_small_spanish.png",
+                    ImageLearn = "flag_small_english.png",
                     TextLearn = "ENGLISH",
                     Speak = false,
 					Write = "Hello Naxam!",
@@ -118,11 +118,11 @@ namespace Naxam.Busuu.Social.Serveices
 				new Discover()
 				{
 					Id = 8,
-					Avatar = "res:user_avatar_placeholder",
+					Avatar = "user_avatar_placeholder.png",
 					Name = "Leandra",
 					Country = "Swiss",
-					ImageSpeakLanguage = "res:flag_small_german",
-					ImageLearn = "res:flag_small_english",
+					ImageSpeakLanguage = "flag_small_german.png",
+					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Hello Naxam!",
@@ -131,11 +131,11 @@ namespace Naxam.Busuu.Social.Serveices
 				new Discover()
 				{
 					Id = 9,
-					Avatar = "res:user_avatar_placeholder",
+					Avatar = "user_avatar_placeholder.png",
 					Name = "Nguyen Nhu Son",
 					Country = "Vietnam",
-					ImageSpeakLanguage = "res:profile_flag_vn",
-					ImageLearn = "res:flag_small_english",
+					ImageSpeakLanguage = "profile_flag_vn.png",
+					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.",
@@ -144,11 +144,11 @@ namespace Naxam.Busuu.Social.Serveices
 				new Discover()
 				{
 					Id = 10,
-					Avatar = "res:user_avatar_placeholder",
+					Avatar = "user_avatar_placeholder.png",
 					Name = "Nguyen Nhu Son",
 					Country = "Vietnam",
-					ImageSpeakLanguage = "res:profile_flag_vn",
-					ImageLearn = "res:flag_small_english",
+					ImageSpeakLanguage = "profile_flag_vn.png",
+					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Hello Naxam!\nI am a new member.",
