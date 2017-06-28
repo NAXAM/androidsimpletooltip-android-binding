@@ -15,12 +15,20 @@ namespace Naxam.Busuu.iOS.Social
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UIKit.UICollectionView DiscoverCollectionView { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewBarItem { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
 			if (DiscoverCollectionView != null) {
 				DiscoverCollectionView.Dispose ();
 				DiscoverCollectionView = null;
+			}
+
+			if (ViewBarItem != null) {
+				ViewBarItem.Dispose ();
+				ViewBarItem = null;
 			}
 		}
 	}

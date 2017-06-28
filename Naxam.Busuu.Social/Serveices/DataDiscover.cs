@@ -103,15 +103,15 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "19/5/2017"
 				},
 			    new Discover()
-				{
-					Id = 7,
-					Avatar = "res:user_avatar_placeholder",
-					Name = "Mauricio Percara",
-					Country = "Argentina",
-					ImageSpeakLanguage = "res:flag_small_spanish",
-					ImageLearn = "res:flag_small_english",
-					TextLearn = "ENGLISH",
-					Speak = true,
+                {
+                    Id = 7,
+                    Avatar = "res:user_avatar_placeholder",
+                    Name = "Mauricio Percara",
+                    Country = "Argentina",
+                    ImageSpeakLanguage = "res:flag_small_spanish",
+                    ImageLearn = "res:flag_small_english",
+                    TextLearn = "ENGLISH",
+                    Speak = false,
 					Write = "Hello Naxam!",
 					PublicTime = "19/5/2017"
 				},

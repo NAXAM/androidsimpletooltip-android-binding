@@ -20,6 +20,17 @@ namespace Naxam.Busuu.iOS
         {
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
+
+            UINavigationBar.Appearance.BarStyle = UIBarStyle.Black;
+            UINavigationBar.Appearance.Translucent = false;
+			UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(57, 169, 246);
+			UINavigationBar.Appearance.BackgroundColor = UIColor.FromRGB(57, 169, 246);
+			UINavigationBar.Appearance.TintColor = UIColor.White;
+            //UIBarButtonItem myTextAttrib = new UIBarButtonItem();
+			//myTextAttrib. = UIFont.FromName("Open Sans", 18);
+			//myTextAttrib.TextColor = UIColor.White;
+			//UINavigationBar.Appearance.SetTitleTextAttributes(myTextAttrib);
+
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
 			var presenter = new MvxIosViewPresenter(this, Window);

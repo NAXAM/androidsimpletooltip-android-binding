@@ -22,7 +22,12 @@ namespace Naxam.Busuu.iOS.Social
         {
             base.ViewDidLoad();
 
-            CollectionViewLineLayout myFlow = new CollectionViewLineLayout();
+			ViewBarItem.Layer.ShadowRadius = 2;
+			ViewBarItem.Layer.ShadowOffset = new CGSize(2, 2);
+            ViewBarItem.Layer.ShadowOpacity = 0.3f;
+			ViewBarItem.ClipsToBounds = false;
+
+			CollectionViewLineLayout myFlow = new CollectionViewLineLayout();
             DiscoverCollectionView.SetCollectionViewLayout(myFlow, true);
 		
             MvxCollectionViewSource source = new MvxCollectionViewSource(DiscoverCollectionView, (NSString)"DiscoverCell");
@@ -35,6 +40,12 @@ namespace Naxam.Busuu.iOS.Social
 
             DiscoverCollectionView.ReloadData();
         }
+
+        public override void ViewDidLayoutSubviews()
+        {
+            base.ViewDidLayoutSubviews();
+
+		}
 	}
 
 	public class CollectionViewLineLayout : UICollectionViewFlowLayout
@@ -50,7 +61,7 @@ namespace Naxam.Busuu.iOS.Social
 
             float ITEM_SIZE = (float)(viewLR - viewLR * ZOOM_FACTOR);
 			ACTIVE_DISTANCE = ITEM_SIZE;
-            ItemSize = new CGSize(ITEM_SIZE, ITEM_SIZE);
+            ItemSize = new CGSize(ITEM_SIZE, ITEM_SIZE * 1.5f);
             SectionInset = new UIEdgeInsets(insetsTB, insetsLR, insetsTB, insetsLR);
             ScrollDirection = UICollectionViewScrollDirection.Horizontal;
             MinimumLineSpacing = UIScreen.MainScreen.Bounds.Size.Width * 0.1f;

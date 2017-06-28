@@ -28,6 +28,9 @@ namespace Naxam.Busuu.iOS.Social
 		public UIKit.UILabel NameUser { get; private set; }
 
 		[Outlet]
+		UIKit.UISlider SliderSpeak { get; set; }
+
+		[Outlet]
 		public UIKit.UILabel TextLan { get; private set; }
 
 		[Outlet]
@@ -40,7 +43,7 @@ namespace Naxam.Busuu.iOS.Social
 		public UIKit.UIView ViewLan { get; private set; }
 
 		[Outlet]
-        public UIKit.UIView ViewSpeak { get; set; }
+		public UIKit.UIView ViewSpeak { get; private set; }
 
 		[Outlet]
 		public UIKit.UILabel WriteLabel { get; private set; }
@@ -92,14 +95,19 @@ namespace Naxam.Busuu.iOS.Social
 				ViewLan = null;
 			}
 
+			if (ViewSpeak != null) {
+				ViewSpeak.Dispose ();
+				ViewSpeak = null;
+			}
+
 			if (WriteLabel != null) {
 				WriteLabel.Dispose ();
 				WriteLabel = null;
 			}
 
-			if (ViewSpeak != null) {
-				ViewSpeak.Dispose ();
-				ViewSpeak = null;
+			if (SliderSpeak != null) {
+				SliderSpeak.Dispose ();
+				SliderSpeak = null;
 			}
 		}
 	}

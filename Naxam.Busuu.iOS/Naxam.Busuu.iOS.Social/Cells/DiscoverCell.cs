@@ -19,6 +19,7 @@ namespace Naxam.Busuu.iOS.Social
 
         public DiscoverCell(IntPtr handle) : base(string.Empty, handle)
         {
+
             _loaderImageUser = new MvxImageViewLoader(() => this.ImageUser); 
             _loaderImgSpeak = new MvxImageViewLoader(() => this.ImgSpeak);
             _loaderImgLearn = new MvxImageViewLoader(() => this.ImageLan);
@@ -52,13 +53,18 @@ namespace Naxam.Busuu.iOS.Social
             ViewCell.Layer.MasksToBounds = true;
             ViewCell.ClipsToBounds = true;
 
-			var bbcolor = UIColor.FromRGB(242, 245, 248);
+			var bbcolor = UIColor.FromRGB(234, 239, 243);
+
+            ViewLan.Layer.BorderWidth = 1;
+            ViewLan.Layer.BorderColor = bbcolor.CGColor;
+
             ViewHome.Layer.BorderWidth = 1;
             ViewHome.Layer.BorderColor = bbcolor.CGColor;
 			ViewHome.Layer.CornerRadius = 2;
 			ViewHome.Layer.MasksToBounds = true;
-			ViewHome.ClipsToBounds = true;			
-        }
+			ViewHome.ClipsToBounds = true;
+
+          }
     }
 
 	public class InverseValueConverter : MvxValueConverter<bool, bool>
@@ -68,4 +74,22 @@ namespace Naxam.Busuu.iOS.Social
 			return !value;
 		}
 	}
+
+ //   public class InverseValueConverter2 : MvxValueConverter<bool, nfloat>
+	//{
+ //       protected override nfloat Convert(bool value, Type targetType, object parameter, CultureInfo cultureInfo)
+	//	{
+ //           nfloat h;
+ //           if (value == false)
+ //           {
+ //               h = 0;
+ //           }
+ //           else
+ //           {
+ //               h = 40;
+ //           }
+ //           return h;
+
+	//	}
+	//}
 }

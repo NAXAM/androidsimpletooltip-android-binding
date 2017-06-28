@@ -122,6 +122,7 @@
     <BundleResource Include="Resources\flag_small_german.png" />
     <BundleResource Include="Resources\flag_small_portuguese.png" />
     <BundleResource Include="Resources\flag_small_spanish.png" />
+    <BundleResource Include="Resources\play_btn_blue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

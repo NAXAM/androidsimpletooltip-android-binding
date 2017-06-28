@@ -109,6 +109,10 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0.png" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -120,6 +124,7 @@
     <Folder Include="Assets.xcassets\profile_flag_vn.imageset\" />
     <Folder Include="Assets.xcassets\social_background_pattern_image.imageset\" />
     <Folder Include="Assets.xcassets\test.imageset\" />
+    <Folder Include="Assets.xcassets\ic_filter.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
