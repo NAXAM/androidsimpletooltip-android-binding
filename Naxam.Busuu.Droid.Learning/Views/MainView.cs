@@ -39,6 +39,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
             expLessons.GroupExpand += ExpLessons_GroupExpand;
             expLessons.GroupCollapse += ExpLessons_GroupCollapse;
         }
+         
 
         private void ExpLessons_GroupCollapse(object sender, ExpandableListView.GroupCollapseEventArgs e)
         {

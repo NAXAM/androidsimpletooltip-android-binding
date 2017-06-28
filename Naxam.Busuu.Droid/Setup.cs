@@ -21,6 +21,10 @@ using Naxam.Busuu.Droid.Learning.Views;
 using Naxam.Busuu.Learning.ViewModel;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using Naxam.Busuu.Droid.Learning.Control;
+using Naxam.Busuu.Learning.ViewModel;
+using Naxam.Busuu.Droid.Learning.Views;
+using MvvmCross.Binding.Bindings.Target.Construction;
+using Naxam.Busuu.Droid.Core;
 
 namespace Naxam.Busuu.Droid
 {
@@ -32,9 +36,7 @@ namespace Naxam.Busuu.Droid
 
         protected override void InitializeLastChance()
         {
-            base.InitializeLastChance();
-            MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
-            MvvmCross.Plugins.DownloadCache.PluginLoader.Instance.EnsureLoaded();
+            base.InitializeLastChance(); 
         }
 
         protected override IMvxApplication CreateApp()
@@ -91,6 +93,6 @@ namespace Naxam.Busuu.Droid
             list.Add(typeof(LearnView).Assembly);
             return list.ToArray();
         }
- 
+
     }
 }

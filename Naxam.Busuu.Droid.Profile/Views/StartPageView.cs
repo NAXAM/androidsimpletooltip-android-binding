@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
+using Com.Bumptech.Glide;
 using Android.App;
-using Android.Content;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using MvvmCross.Droid.Views;
 using Android.Support.V4.View;
 using Android.Support.V4.App;
-using System.Diagnostics;
 using Naxam.Busuu.Droid.Profile.Models;
 using Android.Util;
 using MvvmCross.Droid.Support.V7.AppCompat;
@@ -64,9 +59,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
             imSecondBackground = FindViewById<ImageView>(Resource.Id.im_second_background);
             startLogo = FindViewById<LinearLayout>(Resource.Id.start_logo);
 
-
-            FrameLayout.LayoutParams param = new FrameLayout.LayoutParams(600, 200);
-            param.Gravity = GravityFlags.CenterHorizontal | GravityFlags.Bottom;
+            FrameLayout.LayoutParams param = (FrameLayout.LayoutParams)startLogo.LayoutParameters;
             param.BottomMargin = 2 * (int)screenHeight / 3;
             startLogo.LayoutParameters = param;
 
@@ -88,23 +81,14 @@ namespace Naxam.Busuu.Droid.Profile.Views
                 content = "22 hours of busuu Premium = 1 college semester of languege study"
             });
 
-
-            imMainBackground.SetBackgroundResource(listSourceBackground[oldPosition]);
-            imSecondBackground.SetBackgroundResource(listSourceBackground[oldPosition]);
+            Glide.With(this).Load(listSourceBackground[oldPosition]).CenterCrop().Into(imMainBackground);
+            Glide.With(this).Load(listSourceBackground[oldPosition]).CenterCrop().Into(imSecondBackground);
             imSecondBackground.Alpha = 0;
 
             viewPager = FindViewById<ViewPager>(Resource.Id.pager);
             pagerAdapter = new ScreenSlidePagerAdapter(SupportFragmentManager, list);
             viewPager.Adapter = pagerAdapter;
-
-            //indicator = new NXIndicator(this, pagerAdapter.Count, viewPager.CurrentItem);
-                
-            //FrameLayout.LayoutParams indicatorParam = new FrameLayout.LayoutParams(300, 20);
-            //indicatorParam.Gravity = GravityFlags.Bottom | GravityFlags.CenterHorizontal;
-           // indicatorParam.BottomMargin = 240;
-          //  indicator.LayoutParameters = indicatorParam;
-          //  AddContentView(indicator, indicatorParam);
-
+                        
             viewPager.SetOnPageChangeListener(new OnPageChangeListener(
                 (position, positionOffset, positionOffsetPixels) =>
                 {
@@ -115,19 +99,18 @@ namespace Naxam.Busuu.Droid.Profile.Views
                         {
                             if ((positionOffset - 0.5) > 0)
                             {
-                                imSecondBackground.SetBackgroundResource(listSourceBackground[oldPosition - 1]);
+                                Glide.With(this).Load(listSourceBackground[oldPosition - 1]).CenterCrop().Into(imSecondBackground);
                                 isTouched = true;
                                 isSwipeLeft = false;
                             }
                             if ((positionOffset - 0.5) < 0)
                             {
-                                imSecondBackground.SetBackgroundResource(listSourceBackground[oldPosition + 1]);
+                                Glide.With(this).Load(listSourceBackground[oldPosition + 1]).CenterCrop().Into(imSecondBackground);
                                 isTouched = true;
                                 isSwipeLeft = true;
                             }
                         }
                         updateBackgroud(isSwipeLeft, positionOffset);
-                       // indicator.UpdateIndicator(isSwipeLeft, positionOffset);
                     }
                 },
                 (state) =>
@@ -135,9 +118,9 @@ namespace Naxam.Busuu.Droid.Profile.Views
                     if (state == 0)
                     {
                         System.Diagnostics.Debug.WriteLine("End");
-                        imMainBackground.SetBackgroundResource(listSourceBackground[oldPosition]);
+                        Glide.With(this).Load(listSourceBackground[oldPosition]).CenterCrop().Into(imMainBackground);
                         imMainBackground.Alpha = 1;
-                        imSecondBackground.SetBackgroundResource(listSourceBackground[oldPosition]);
+                        Glide.With(this).Load(listSourceBackground[oldPosition]).CenterCrop().Into(imSecondBackground);
                         imSecondBackground.Alpha = 0;
                         isTouched = false;
                         oldPositionOffset = 0;
@@ -162,7 +145,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
                     if (isTouched == false) touchLocationX = e.GetX();
                     else
                     {
-                        if (Math.Abs(e.GetX() - touchLocationX)<50)
+                        if (Math.Abs(e.GetX() - touchLocationX) < 50)
                         {
                             isTouched = false;
                         }

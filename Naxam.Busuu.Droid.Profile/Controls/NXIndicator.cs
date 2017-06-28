@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Views.Animations;
-using Android.Transitions;
+using Com.Bumptech.Glide;
 
 namespace Naxam.Busuu.Droid.Profile.Controls
 {
@@ -47,7 +39,8 @@ namespace Naxam.Busuu.Droid.Profile.Controls
                 paramItem.Gravity = GravityFlags.Start | GravityFlags.Top;
                 paramItem.LeftMargin = i * INDICATOR_ITEM_SIZE + i * indicatorItemSpace;
                 indicatorItem.LayoutParameters = paramItem;
-                indicatorItem.SetBackgroundResource(Resource.Drawable.ic_indicator_unselected);
+                Glide.With(context).Load(Resource.Drawable.ic_indicator_unselected).Into(indicatorItem);
+                //indicatorItem.SetBackgroundResource(Resource.Drawable.ic_indicator_unselected);
                 this.AddView(indicatorItem);
             }
 
@@ -56,7 +49,8 @@ namespace Naxam.Busuu.Droid.Profile.Controls
             paramCurrentItem.Gravity = GravityFlags.Start | GravityFlags.Top;
             paramCurrentItem.LeftMargin = CurrentItem * INDICATOR_ITEM_SIZE + CurrentItem * indicatorItemSpace;
             indicatorCurrentItem.LayoutParameters = paramCurrentItem;
-            indicatorCurrentItem.SetBackgroundResource(Resource.Drawable.ic_indicator_selected);
+            Glide.With(context).Load(Resource.Drawable.ic_indicator_selected).Into(indicatorCurrentItem);
+            //indicatorCurrentItem.SetBackgroundResource(Resource.Drawable.ic_indicator_selected);
             this.AddView(indicatorCurrentItem);
         }
 
