@@ -28,7 +28,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
         protected override void OnViewModelSet()
         {
             base.OnViewModelSet();
-            SetContentView(Resource.Layout.MainActivity);
+            SetContentView(Resource.Layout.LearnActivity);
             menu = FindViewById<BottomNavigationViewEx>(Resource.Id.menu_bottom);
             menu.EnableShiftingMode(false);
             OnGroupClickListener GroupClick = new OnGroupClickListener(this);
@@ -37,22 +37,27 @@ namespace Naxam.Busuu.Droid.Learning.Views
             expLessons.SetOnGroupClickListener(GroupClick);
             expLessons.SetOnTouchListener(GroupClick);
             expLessons.GroupExpand += ExpLessons_GroupExpand;
-            expLessons.GroupCollapse += ExpLessons_GroupCollapse;
+            expLessons.GroupCollapse += ExpLessons_GroupCollapse; 
+            expLessons.Scroll += ExpLessons_Scroll;
         }
-         
+
+        private void ExpLessons_Scroll(object sender, AbsListView.ScrollEventArgs e)
+        {
+
+        }
 
         private void ExpLessons_GroupCollapse(object sender, ExpandableListView.GroupCollapseEventArgs e)
         {
             //expLessons.SetSelection(e.GroupPosition);
-           // expLessons.SmoothScrollToPosition(e.GroupPosition);
-          //  expLessons.OverScrollMode = OverScrollMode.Always;
-           expLessons.SmoothScrollToPositionFromTop(e.GroupPosition, 0);
+            // expLessons.SmoothScrollToPosition(e.GroupPosition);
+            //  expLessons.OverScrollMode = OverScrollMode.Always;
+            expLessons.SmoothScrollToPositionFromTop(e.GroupPosition, 0);
         }
 
-        private async void ExpLessons_GroupExpand(object sender, ExpandableListView.GroupExpandEventArgs e)
-        { 
-            await Task.Delay(500);
-            expLessons.SetSelection(e.GroupPosition);
+        private void ExpLessons_GroupExpand(object sender, ExpandableListView.GroupExpandEventArgs e)
+        {
+            expLessons.SmoothScrollToPositionFromTop(e.GroupPosition, 0); 
+            //expLessons.SetSelection(e.GroupPosition);
         }
 
         float x;
@@ -88,8 +93,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
             // parent.SmoothScrollToPosition(groupPosition);
             var view = (LessonHeaderBackground)clickedView;
             view.InitAnim(x, y);
-            System.Diagnostics.Debug.WriteLine("###" + x + "@@@" + y);
-
+            view.IsExpand = parent.IsGroupExpanded(groupPosition);
             return false;
         }
 

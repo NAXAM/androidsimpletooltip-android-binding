@@ -19,17 +19,19 @@ using Android.Content.Res;
 using System.Threading.Tasks;
 using Android.Gestures;
 using MvvmCross.Binding.Droid.Target;
+using Com.Github.Lzyzsd.Circleprogress;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class LessonHeaderBackground : FrameLayout 
-    { 
+    public class LessonHeaderBackground : FrameLayout
+    {
         public Color BackgroundColor { get; set; }
         Color SecondColor;
         Context context;
         bool expand, busy;
-        TextView txtLesson, textView,txtTitle;
+        TextView txtLesson, textView, txtTitle;
         ImageView btnDownload;
+        CircleProgress circleProgress;
         int[][] states = new int[][] {
                             new int[] { Android.Resource.Attribute.StateEnabled}, // enabled
                             new int[] {-Android.Resource.Attribute.StateEnabled}, // disabled
@@ -39,12 +41,15 @@ namespace Naxam.Busuu.Droid.Learning.Control
         protected LessonHeaderBackground(IntPtr javaReference, JniHandleOwnership transfer)
             : base(javaReference, transfer)
         {
+            SecondColor = Color.White;
+            circleProgress = FindViewById<CircleProgress>(Resource.Id.circle_progress);
         }
         public LessonHeaderBackground(Context context, IAttributeSet attrs) :
             base(context, attrs)
         {
             this.context = context;
             Initialize(attrs);
+
         }
 
         public LessonHeaderBackground(Context context, IAttributeSet attrs, int defStyle) :
@@ -56,7 +61,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
 
         ColorStateList listTxt;
 
-        public void InitAnim(float x,float y)
+        public void InitAnim(float x, float y)
         {
             if (busy)
                 return;
@@ -72,7 +77,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             PaintDrawable paint = new PaintDrawable(BackgroundColor);
             paint.Shape = new RectShape();
             paint.SetCornerRadius(1000);
-            textView.Background=paint;
+            textView.Background = paint;
             this.AddView(textView, 0);
             ValueAnimator anim = ValueAnimator.OfInt(0, 10);
 
@@ -106,7 +111,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
                 {
                     busy = false;
                     RemoveView(textView);
-                    SetBackgroundColor(BackgroundColor); 
+                    SetBackgroundColor(BackgroundColor);
                     Color temp = BackgroundColor;
                     BackgroundColor = SecondColor;
                     ColorStateList colorIcon;
@@ -125,7 +130,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
                         txtLesson.SetTextSize(ComplexUnitType.Dip, 16);
                         int[] colors = new int[] { new Color(204, 204, 204), new Color(204, 204, 204), };
                         colorIcon = new ColorStateList(states, colors);
-                       
+
                     }
 
                     if (Build.VERSION.SdkInt > BuildVersionCodes.Kitkat)
@@ -134,10 +139,10 @@ namespace Naxam.Busuu.Droid.Learning.Control
                     }
                     else
                     {
-
+                        btnDownload.SetImageResource(expand?Resource.Drawable.ic_download: Resource.Drawable.ic_download_white);
                     }
-                    expand = !expand;
-                    
+                    //expand = !expand;
+
                     txtLesson.SetTextColor(listTxt);
                     txtTitle.SetTextColor(listTxt);
                     SecondColor = temp;
@@ -145,16 +150,25 @@ namespace Naxam.Busuu.Droid.Learning.Control
             });
             anim.SetDuration(250);
             anim.Start();
-        }
-
+        } 
         private void Initialize(IAttributeSet attrs)
         {
-          //  TypedArray a = context.ObtainStyledAttributes(attrs, Resource.Styleable.LessonHeader);
-           // BackgroundColor = a.GetColor(Resource.Styleable.LessonHeader_BackgroundColor, Color.Red);
             SecondColor = Color.White;
-           // a.Recycle(); 
+           
         }
 
+        public bool IsExpand
+        {
+            set
+            {
+                expand = value;
+            }
+            get
+            {
+                return expand;
+            }
+        }
+       
         protected override void Dispose(bool disposing)
         {
             busy = false;
@@ -162,6 +176,6 @@ namespace Naxam.Busuu.Droid.Learning.Control
 
         }
 
- 
+
     }
 }

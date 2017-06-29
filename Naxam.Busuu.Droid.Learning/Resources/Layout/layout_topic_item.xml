@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
+<LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="#C4E4FD"
-  android:orientation="vertical">
+  android:layout_margin="0dp"
+  android:orientation="vertical"
+  app:MvxBind="BackgroundColor Color"
+  >
   <TextView
+    android:layout_marginTop="24dp"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:textColor="#777777"
         android:textSize="20sp"
       android:layout_gravity="center"
-      android:text="I am happy"
+      app:MvxBind="Text Toppic"
+    
         />
   <TextView
       android:layout_width="wrap_content"
@@ -21,8 +25,8 @@
       android:layout_gravity="center"
       android:textColor="#e13a4249"
       android:alpha="0.8"
-        android:textSize="14sp"
-      android:text="4 minutes"
+      android:textSize="14sp"
+       app:MvxBind="Text Time"
         />
   <Naxam.Busuu.Droid.Learning.Control.NXRecyclerView
         android:layout_width="wrap_content"

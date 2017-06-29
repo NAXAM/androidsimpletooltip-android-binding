@@ -54,7 +54,7 @@ namespace Naxam.Busuu.Learning.ViewModel
 
         private MvxObservableCollection<TopicModel> _topics;
 
-        public MvxObservableCollection<TopicModel> Topics
+        public MvxObservableCollection<TopicModel> Topicsx
         {
             get { return _topics; }
             set
@@ -70,11 +70,18 @@ namespace Naxam.Busuu.Learning.ViewModel
         public override void Appeared()
         {
             base.Appeared();
-            Topics = new MvxObservableCollection<TopicModel>();
+            string[] color = new string[]
+           {
+                "#58B0F8","#B02018"
+           };
+            Random random = new Random();
+            Topicsx = new MvxObservableCollection<TopicModel>();
             for (int i = 0; i < 10; i++)
             {
-                Topics.Add(new TopicModel
+                Topicsx.Add(new TopicModel
                 {
+                    Toppic = "Topic " + random.Next(1, 1000),
+                    Time = random.Next(1, 50),
                     Exercises = new MvxObservableCollection<ExerciseModel>
                     {
                         new ExerciseModel(),
@@ -83,22 +90,49 @@ namespace Naxam.Busuu.Learning.ViewModel
                     }
                 });
             }
-            string[] color = new string[]
+
+            string[] icons = new string[]
             {
-                "#58B0F8","#B02018"
+
             };
+
+
             Lessons = new MvxObservableCollection<LessonModel>();
             for (int i = 0; i < 10; i++)
             {
-                Lessons.Add(new LessonModel(Topics)
+                var lesson = new LessonModel(Topicsx)
                 {
                     Id = i,
-                    Name = "Lesson " + i,
-                    Title = " title " + i,
-                    Color = color[i % 2]
-                });
+                    Name = "Lesson " + random.Next(1, 50),
+                    Title = " title " + random.Next(1, 50),
+                    Color = color[i % 2],
+                    Percent = random.Next(1, 100),
+                    Icon = "http://www.jeremedia.ca/japan/domo1.jpg"
+                };
+                lesson.DownloadHandle += Lesson_DownloadHandle;
+                Lessons.Add(lesson);
             }
         }
+
+        private void Lesson_DownloadHandle(object sender, LessonModel e)
+        {
+
+        }
+
+        private IMvxCommand _DownloadCommand;
+
+        public IMvxCommand DownloadCommand
+        {
+            get { return _DownloadCommand = _DownloadCommand ?? new MvxCommand(RunDownloadCommand); }
+
+        }
+
+        void RunDownloadCommand()
+        {
+
+        }
+
+
 
     }
 }

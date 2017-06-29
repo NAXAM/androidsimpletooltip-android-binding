@@ -23,7 +23,7 @@
           android:background="@drawable/learn_border_image"
           android:layout_gravity="start|center_vertical"
           android:padding="2dp"
-          android:src="@drawable/flag_small_english"
+          android:src="@drawable/flag_english"
           app:MvxBind="Click ChangeLanguageCommand"
             />
       <TextView

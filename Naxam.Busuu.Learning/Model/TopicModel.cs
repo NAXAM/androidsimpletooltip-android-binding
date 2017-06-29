@@ -7,8 +7,24 @@ using System.Threading.Tasks;
 
 namespace Naxam.Busuu.Learning.Model
 {
-    public class TopicModel : MvxNotifyPropertyChanged
+    public class TopicModel : MvxNotifyPropertyChanged 
     {
+        private string _color;
+
+        public string Color
+        {
+            get { return _color; }
+            set
+            {
+                if (_color != value)
+                {
+                    _color = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+
         private string _toppic;
 
         public string Toppic
@@ -54,6 +70,20 @@ namespace Naxam.Busuu.Learning.Model
             }
         }
 
+        private int _id;
+
+        public int Id
+        {
+            get { return _id; }
+            set
+            {
+                if (_id != value)
+                {
+                    _id = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
 
     }
 }

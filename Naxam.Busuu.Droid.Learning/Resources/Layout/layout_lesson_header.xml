@@ -4,19 +4,29 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:layout_width="match_parent"
   android:background="#ffffff"
-  android:layout_height="96dp"
   app:MvxBind="BackgroundColor Color"
+  android:layout_height="96dp"
   >
-
-
 
   <ImageView
       android:layout_width="80dp"
       android:layout_height="80dp"
-      android:background="@drawable/background_circle_white"
       android:layout_marginLeft="16dp"
       android:layout_gravity="center_vertical"
+      android:scaleType="fitXY"
+      app:MvxBind="Source Icon"
         />
+
+  <com.github.lzyzsd.circleprogress.CircleProgress
+    android:id="@+id/circle_progress"
+    android:layout_marginLeft="16dp"
+    android:layout_gravity="center_vertical"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    app:MvxBind="Progress Percent;BorderColor Color;FinishColor Color"
+    app:circle_text_color="@android:color/transparent"
+    app:circle_unfinished_color="@android:color/transparent"
+    />
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -31,7 +41,6 @@
         android:textSize="16sp"
          app:MvxBind="Text Name"
           android:textColor="#3791CE"
-        android:text="Lesson 1"
             />
     <TextView
       android:id="@+id/txtTitle"
@@ -40,7 +49,6 @@
       android:textColor="#3791CE"
         android:textSize="18sp"
         app:MvxBind="Text Title"
-        android:text="Hello"
             />
   </LinearLayout>
   <ImageView
@@ -50,6 +58,6 @@
       android:layout_gravity="center_vertical|right"
       android:layout_marginRight="16dp"
       android:src="@drawable/ic_download"
-      android:tint="#CCCCCC"
+      app:MvxBind="Click DownloadCommand"
         />
 </Naxam.Busuu.Droid.Learning.Control.LessonHeaderBackground>

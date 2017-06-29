@@ -9,12 +9,9 @@ using System.Linq.Expressions;
 
 namespace Naxam.Busuu.Learning.Model
 {
-    public class LessonModel : MvxObservableCollection<TopicModel> 
+    public class LessonModel : MvxNotifyPropertyChanged
     {
-        public LessonModel(IList<TopicModel> collection) : base(collection)
-		{
-
-        }
+        
         private int _Id;
 
         public int Id
@@ -24,7 +21,8 @@ namespace Naxam.Busuu.Learning.Model
             {
                 if (_Id != value)
                 {
-                    _Id = value; 
+                    _Id = value;
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -36,14 +34,11 @@ namespace Naxam.Busuu.Learning.Model
             get { return _color; }
             set
             {
-                if (_color != value)
-                {
-                    _color = value; 
-                }
+                _color = value;
+                RaiseAllPropertiesChanged();
             }
         }
-
-
+        
         private string _name;
 
         public string Name
@@ -53,7 +48,8 @@ namespace Naxam.Busuu.Learning.Model
             {
                 if (_name != value)
                 {
-                    _name = value; 
+                    _name = value;
+                    RaisePropertyChanged();
                 }
             }
         }
@@ -67,25 +63,30 @@ namespace Naxam.Busuu.Learning.Model
             {
                 if (_title != value)
                 {
-                    _title = value; 
+                    _title = value;
+                    RaisePropertyChanged();
                 }
             }
         }
+        public int Percent { get; set; }
 
-        private int _percent;
+        public string Icon { get; set; } 
 
-        public int Percent
+        
+        private IList<TopicModel> _topics;
+
+        public IList<TopicModel> Topics
         {
-            get { return _percent; }
+            get { return _topics; }
             set
             {
-                if (_percent != value)
+                if (_topics != value)
                 {
-                    _percent = value; 
+                    _topics = value;
+                    RaisePropertyChanged();
                 }
             }
         }
- 
          
     }
 }

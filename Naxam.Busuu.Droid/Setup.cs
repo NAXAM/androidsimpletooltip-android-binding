@@ -25,7 +25,9 @@ using Naxam.Busuu.Learning.ViewModel;
 using Naxam.Busuu.Droid.Learning.Views;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using Naxam.Busuu.Droid.Core;
-
+using Naxam.Busuu.Droid.Learning.TargetBinding;
+using Com.Github.Lzyzsd.Circleprogress;
+using MvvmCross.Binding.Droid.Views;
 namespace Naxam.Busuu.Droid
 {
     public class Setup : MvxAndroidSetup
@@ -82,7 +84,12 @@ namespace Naxam.Busuu.Droid
         protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
         {
             base.FillTargetFactories(registry);
+            registry.RegisterCustomBindingFactory<View>("BorderColor", view => new BorderTargetBinding(view));
+            registry.RegisterCustomBindingFactory<CircleProgress>("Progress", view => new PercentTargetBinding(view));
+            registry.RegisterCustomBindingFactory<CircleProgress>("FinishColor", view => new FinishColorTargetBinding(view));
             registry.RegisterCustomBindingFactory<LessonHeaderBackground>("BackgroundColor", view => new LessonHeaderTargetBinding(view));
+            registry.RegisterCustomBindingFactory<View>("BackgroundColor", view => new BackgroundColorTargetBinding(view));
+            registry.RegisterCustomBindingFactory<ImageView>("Source", view => new ImageSourceTargetBinding(view));
         }
 
         protected override IEnumerable<Assembly> GetViewAssemblies()
