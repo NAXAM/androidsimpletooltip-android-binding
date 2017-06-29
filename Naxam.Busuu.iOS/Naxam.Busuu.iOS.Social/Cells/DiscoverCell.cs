@@ -67,12 +67,22 @@ namespace Naxam.Busuu.iOS.Social
             ImageLan.Layer.CornerRadius = ImageLan.Frame.Width / 2;
             ButtonPlay.Layer.CornerRadius = ButtonPlay.Frame.Width / 2;
 
-            ButtonPlay.ImageEdgeInsets = new UIEdgeInsets(8, 10, 8, 8);
+            ButtonPlay.ImageEdgeInsets = new UIEdgeInsets(9, 11, 9, 9);
+                    
+            var img = UIImage.FromBundle("play_icon_small");
+            SliderSpeak.SetThumbImage(img, UIControlState.Normal);
+            SliderSpeak.SetThumbImage(img, UIControlState.Selected);
+            SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);
 		}
 
         public override void LayoutSubviews()
         {
             base.LayoutSubviews();
+        }
+
+        partial void ButtonPlay_TouchUpInside(NSObject sender)
+        {
+
         }
     }
 

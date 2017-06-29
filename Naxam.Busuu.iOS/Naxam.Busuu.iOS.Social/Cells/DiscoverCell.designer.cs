@@ -56,6 +56,9 @@ namespace Naxam.Busuu.iOS.Social
 
 		[Outlet]
 		UIKit.UILabel WriteLabel { get; set; }
+
+		[Action ("ButtonPlay_TouchUpInside:")]
+		partial void ButtonPlay_TouchUpInside (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -67,6 +70,11 @@ namespace Naxam.Busuu.iOS.Social
 			if (audioViewTopConstraint != null) {
 				audioViewTopConstraint.Dispose ();
 				audioViewTopConstraint = null;
+			}
+
+			if (ButtonPlay != null) {
+				ButtonPlay.Dispose ();
+				ButtonPlay = null;
 			}
 
 			if (Country != null) {
@@ -92,11 +100,6 @@ namespace Naxam.Busuu.iOS.Social
 			if (NameUser != null) {
 				NameUser.Dispose ();
 				NameUser = null;
-			}
-
-			if (ButtonPlay != null) {
-				ButtonPlay.Dispose ();
-				ButtonPlay = null;
 			}
 
 			if (SliderSpeak != null) {

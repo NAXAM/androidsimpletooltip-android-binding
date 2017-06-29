@@ -76,7 +76,7 @@
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
-    <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
+    <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -112,9 +112,11 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0.png" />
     <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%402x.png" />
     <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%403x.png" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Layer 0%402x.png" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Layer 0%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -127,6 +129,7 @@
     <Folder Include="Assets.xcassets\social_background_pattern_image.imageset\" />
     <Folder Include="Assets.xcassets\test.imageset\" />
     <Folder Include="Assets.xcassets\ic_filter.imageset\" />
+    <Folder Include="Assets.xcassets\play_icon_small.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
