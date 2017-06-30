@@ -9,19 +9,12 @@ using System.CodeDom.Compiler;
 
 namespace Naxam.Busuu.iOS.Social
 {
-	[Register ("DiscoverView")]
-	partial class DiscoverView
+	[Register ("FriendsView")]
+	partial class FriendsView
 	{
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UIKit.UICollectionView DiscoverCollectionView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (DiscoverCollectionView != null) {
-				DiscoverCollectionView.Dispose ();
-				DiscoverCollectionView = null;
-			}
 		}
 	}
 }

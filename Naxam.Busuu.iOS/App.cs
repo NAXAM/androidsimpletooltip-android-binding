@@ -11,7 +11,7 @@ namespace Naxam.Busuu.iOS
 		public App()
 		{
 			Mvx.RegisterType<IDataDiscover, DataDiscover>();
-			Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<DiscoverViewModel>());
+            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<SocialViewModel>());
 		}
 	}
 }

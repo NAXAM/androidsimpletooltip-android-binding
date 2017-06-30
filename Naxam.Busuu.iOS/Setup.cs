@@ -24,7 +24,7 @@ namespace Naxam.Busuu.iOS
 		{
 			var assemblies = new List<Assembly>
 			{
-				typeof(DiscoverView).Assembly
+                typeof(SocialView).Assembly
 			};
 
 			assemblies.AddRange(base.GetViewAssemblies());
@@ -35,7 +35,7 @@ namespace Naxam.Busuu.iOS
 		{
 			var assemblies = new List<Assembly>
 			{
-				typeof(DiscoverViewModel).Assembly
+                typeof(SocialViewModel).Assembly
 			};
 
 			assemblies.AddRange(base.GetViewModelAssemblies());

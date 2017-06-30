@@ -98,6 +98,14 @@
     </Compile>
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Views\SocialView.cs" />
+    <Compile Include="Views\SocialView.designer.cs">
+      <DependentUpon>SocialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FriendsView.cs" />
+    <Compile Include="Views\FriendsView.designer.cs">
+      <DependentUpon>FriendsView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">

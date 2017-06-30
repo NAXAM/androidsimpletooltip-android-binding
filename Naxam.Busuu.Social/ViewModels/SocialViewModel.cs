@@ -6,13 +6,13 @@ using Naxam.Busuu.Social.Serveices;
 
 namespace Naxam.Busuu.Social.ViewModels
 {
-    public class DiscoverViewModel : MvxViewModel
+    public class SocialViewModel : MvxViewModel
     {
 		readonly IDataDiscover _datadiscover;
 
         private List<Discover> _discover;
 
-		public DiscoverViewModel(IDataDiscover datadiscover)
+        public SocialViewModel(IDataDiscover datadiscover)
 		{
             _datadiscover = datadiscover;
 		}

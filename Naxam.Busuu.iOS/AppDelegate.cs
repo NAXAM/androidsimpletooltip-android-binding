@@ -25,11 +25,7 @@ namespace Naxam.Busuu.iOS
             UINavigationBar.Appearance.Translucent = false;
 			UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(57, 169, 246);
 			UINavigationBar.Appearance.BackgroundColor = UIColor.FromRGB(57, 169, 246);
-			UINavigationBar.Appearance.TintColor = UIColor.White;
-            //UIBarButtonItem myTextAttrib = new UIBarButtonItem();
-			//myTextAttrib. = UIFont.FromName("Open Sans", 18);
-			//myTextAttrib.TextColor = UIColor.White;
-			//UINavigationBar.Appearance.SetTitleTextAttributes(myTextAttrib);
+			UINavigationBar.Appearance.TintColor = UIColor.White;         
 
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 

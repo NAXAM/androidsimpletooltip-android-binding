@@ -1,7 +1,6 @@
 using Foundation;
 using System;
 using UIKit;
-using ObjCRuntime;
 using MvvmCross.iOS.Views;
 using Naxam.Busuu.Social.ViewModels;
 using CoreGraphics;
@@ -12,11 +11,9 @@ using MvvmCross.Binding.BindingContext;
 namespace Naxam.Busuu.iOS.Social
 {
 	[MvxFromStoryboard(StoryboardName = "Social")]
-    public partial class DiscoverView : MvxViewController<DiscoverViewModel>
+    public partial class DiscoverView : MvxViewController
     {
-        private CGPoint oriPoint;
-        private bool IsAnimationViewBar = true;
-       
+        
         public DiscoverView (IntPtr handle) : base (handle)
         {
         }
@@ -25,11 +22,6 @@ namespace Naxam.Busuu.iOS.Social
         {
             base.ViewDidLoad();
 
-			ViewBarItem.Layer.ShadowRadius = 2;
-			ViewBarItem.Layer.ShadowOffset = new CGSize(2, 2);
-            ViewBarItem.Layer.ShadowOpacity = 0.3f;
-			ViewBarItem.ClipsToBounds = false;
-
 			CollectionViewLineLayout myFlow = new CollectionViewLineLayout();
             DiscoverCollectionView.SetCollectionViewLayout(myFlow, true);
 		
@@ -37,7 +29,7 @@ namespace Naxam.Busuu.iOS.Social
 			DiscoverCollectionView.Source = source;
 			DiscoverCollectionView.BackgroundColor = null;
 
-			var setBinding = this.CreateBindingSet<DiscoverView, DiscoverViewModel>();
+            var setBinding = this.CreateBindingSet<DiscoverView, SocialViewModel>();
             setBinding.Bind(source).To(vm => vm.Discovers);
 			setBinding.Apply();
 
@@ -49,58 +41,6 @@ namespace Naxam.Busuu.iOS.Social
             base.ViewDidLayoutSubviews();
 
 		}
-
-        partial void ButtonDiscover_TouchUpInside(NSObject sender)
-        {           
-			if (IsAnimationViewBar) return;
-
-			ButtonDiscover.SetTitleColor(UIColor.FromRGB(57, 169, 246), UIControlState.Normal);
-			ButtonFriends.SetTitleColor(UIColor.FromRGB(167, 176, 182), UIControlState.Normal);
-			ButtonDiscover.Enabled = false;
-			ButtonFriends.Enabled = true;
-
-			IsAnimationViewBar = true;
-			UIView.BeginAnimations("slideAnimation");
-			UIView.SetAnimationDuration(0.5);
-			UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
-			UIView.SetAnimationDelegate(this);
-			UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
-			ViewSelectForButton.Center = new CGPoint(ViewSelectForButton.Bounds.Width / 2, 43);
-			UIView.CommitAnimations();
-        }
-
-        partial void ButtonFriends_TouchUpInside(NSObject sender)
-        {			
-			if (!IsAnimationViewBar) return;
-
-			ButtonFriends.SetTitleColor(UIColor.FromRGB(57, 169, 246), UIControlState.Normal);
-			ButtonDiscover.SetTitleColor(UIColor.FromRGB(167, 176, 182), UIControlState.Normal);
-            ButtonDiscover.Enabled = true;
-            ButtonFriends.Enabled = false;
-
-			IsAnimationViewBar = false;
-			UIView.BeginAnimations("slideAnimation");
-			UIView.SetAnimationDuration(0.5);
-			UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
-			UIView.SetAnimationDelegate(this);
-			UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
-            ViewSelectForButton.Center = new CGPoint(ViewSelectForButton.Bounds.Width + ViewSelectForButton.Bounds.Width / 2 , 43);
-			UIView.CommitAnimations();
-        }
-
-		[Export("animationDidStop:finished:context:")]
-		void SlideStopped(NSString animationID, NSNumber finished, NSObject context)
-		{
-			if (!IsAnimationViewBar)
-			{
-				ViewSelectForButton.Center = new CGPoint(ViewSelectForButton.Bounds.Width + ViewSelectForButton.Bounds.Width / 2, 43);			
-			}
-			else
-			{
-				ViewSelectForButton.Center = new CGPoint(ViewSelectForButton.Bounds.Width / 2, 43);
-			}
-		}
-
 	}
 
 	public class CollectionViewLineLayout : UICollectionViewFlowLayout
