@@ -48,6 +48,5 @@ namespace Naxam.Busuu.Review.Models
 			}
 			set => mockData = value;
 		}
-
     }
 }

@@ -1,10 +1,12 @@
 ﻿using System;
-
+using FFImageLoading;
+using FFImageLoading.Work;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using Naxam.Busuu.Review.Models;
 using UIKit;
+
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
@@ -15,7 +17,6 @@ namespace Naxam.Busuu.iOS.Review.Views
 
         private readonly MvxImageViewLoader imgWordViewLoader;
         private readonly MvxImageViewLoader imgStrengthViewLoader;
-
         static ReviewTableViewCell()
         {
             Nib = UINib.FromName("ReviewTableViewCell", NSBundle.MainBundle);
@@ -31,7 +32,7 @@ namespace Naxam.Busuu.iOS.Review.Views
 			// Note: this .ctor should not contain any initialization logic.
             imgWordViewLoader = new MvxImageViewLoader(() => imgWord);
             imgStrengthViewLoader = new MvxImageViewLoader(() => imgStrength);
-			this.DelayBind(() =>
+            this.DelayBind(() =>
 			{
 				var set = this.CreateBindingSet<ReviewTableViewCell, ReviewAllModel>();
 				set.Bind(lbTitle).To(m => m.Title);
@@ -48,5 +49,14 @@ namespace Naxam.Busuu.iOS.Review.Views
             btnPlay.Layer.CornerRadius = btnPlay.Bounds.Height / 2;
             btnStar.Layer.CornerRadius = btnStar.Bounds.Height / 2;
         }
+
+		protected void UpdateContent()
+		{
+            ImageService.Instance.LoadUrl()
+						.ErrorPlaceholder("star_active.png", ImageSource.ApplicationBundle)
+						.LoadingPlaceholder("star_active.png", ImageSource.CompiledResource)
+						.Into(imgWord);
+		}
+
     }
 }
