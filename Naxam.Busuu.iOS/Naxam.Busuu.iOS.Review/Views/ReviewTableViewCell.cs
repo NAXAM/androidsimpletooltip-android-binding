@@ -46,17 +46,11 @@ namespace Naxam.Busuu.iOS.Review.Views
         public override void AwakeFromNib()
         {
             base.AwakeFromNib();
+            btnPlay.ClipsToBounds = true;
+            btnStar.ClipsToBounds = true;
             btnPlay.Layer.CornerRadius = btnPlay.Bounds.Height / 2;
             btnStar.Layer.CornerRadius = btnStar.Bounds.Height / 2;
         }
-
-		protected void UpdateContent()
-		{
-            ImageService.Instance.LoadUrl()
-						.ErrorPlaceholder("star_active.png", ImageSource.ApplicationBundle)
-						.LoadingPlaceholder("star_active.png", ImageSource.CompiledResource)
-						.Into(imgWord);
-		}
 
     }
 }
