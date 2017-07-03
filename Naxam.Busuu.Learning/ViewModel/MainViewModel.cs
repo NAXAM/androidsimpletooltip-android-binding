@@ -129,10 +129,7 @@ namespace Naxam.Busuu.Learning.ViewModel
 
         void RunDownloadCommand()
         {
-
+            
         }
-
-
-
     }
 }

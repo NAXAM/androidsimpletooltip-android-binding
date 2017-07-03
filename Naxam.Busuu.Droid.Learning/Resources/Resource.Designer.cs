@@ -3001,11 +3001,11 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080076
 			public static int tv_premium_describe = 2131230838;
 			
-			// aapt resource value: 0x7f080086
-			public static int txtLesson = 2131230854;
-			
 			// aapt resource value: 0x7f080087
-			public static int txtTitle = 2131230855;
+			public static int txtLessonName = 2131230855;
+			
+			// aapt resource value: 0x7f080086
+			public static int txtLessonNumber = 2131230854;
 			
 			// aapt resource value: 0x7f080009
 			public static int up = 2131230729;

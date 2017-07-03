@@ -28,12 +28,19 @@ namespace Naxam.Busuu.Droid.Learning.TargetBinding
         protected override void SetValueImpl(object target, object value)
         {
             ImageView view = (ImageView)target;
-          
+            GridLayoutManager grid = new GridLayoutManager(null, 1);
+           
             Glide.With(view.Context)
                 .Load(value.ToString())
                 .Transform(new CircleTransform(view.Context))
                 .Into(view);
         }
+
+        private void Lst_Scroll(object sender, AbsListView.ScrollEventArgs e)
+        {
+             
+        }
+
         public override MvxBindingMode DefaultMode => MvxBindingMode.OneTime;
     }
 }

@@ -90,6 +90,7 @@ namespace Naxam.Busuu.Droid
             registry.RegisterCustomBindingFactory<LessonHeaderBackground>("BackgroundColor", view => new LessonHeaderTargetBinding(view));
             registry.RegisterCustomBindingFactory<View>("BackgroundColor", view => new BackgroundColorTargetBinding(view));
             registry.RegisterCustomBindingFactory<ImageView>("Source", view => new ImageSourceTargetBinding(view));
+            registry.RegisterCustomBindingFactory<NXExpandableListView>("DownloadCommand", view => new DownloadCommandTargetBinding(view));
         }
 
         protected override IEnumerable<Assembly> GetViewAssemblies()

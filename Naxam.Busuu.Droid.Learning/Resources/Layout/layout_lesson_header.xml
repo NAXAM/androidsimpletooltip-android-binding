@@ -35,7 +35,7 @@
       android:orientation="vertical"
         >
     <TextView
-         android:id="@+id/txtLesson"
+         android:id="@+id/txtLessonNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
@@ -43,10 +43,10 @@
           android:textColor="#3791CE"
             />
     <TextView
-      android:id="@+id/txtTitle"
+        android:id="@+id/txtLessonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-      android:textColor="#3791CE"
+        android:textColor="#3791CE"
         android:textSize="18sp"
         app:MvxBind="Text Title"
             />
@@ -57,7 +57,6 @@
       android:layout_height="20dp"
       android:layout_gravity="center_vertical|right"
       android:layout_marginRight="16dp"
-      android:src="@drawable/ic_download"
-      app:MvxBind="Click DownloadCommand"
+      android:src="@drawable/ic_download" 
         />
 </Naxam.Busuu.Droid.Learning.Control.LessonHeaderBackground>

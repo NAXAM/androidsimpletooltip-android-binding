@@ -136,9 +136,11 @@
     <Compile Include="Control\AnimatorListener.cs" />
     <Compile Include="Control\AnimatorUpdateListener.cs" />
     <Compile Include="Control\LessonHeader.cs" />
+    <Compile Include="Control\NXExpandableListView.cs" />
     <Compile Include="TargetBinding\BackgroundColorTargetBinding.cs" />
     <Compile Include="TargetBinding\BorderTargetBinding.cs" />
     <Compile Include="TargetBinding\CircleTranform.cs" />
+    <Compile Include="TargetBinding\DownloadCommandTargetBinding.cs" />
     <Compile Include="TargetBinding\ImageSourceTargetBinding.cs" />
     <Compile Include="TargetBinding\LessonHeaderTargetBinding.cs" />
     <Compile Include="Control\NXExpandableListAdapter.cs" />

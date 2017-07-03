@@ -23,7 +23,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
     [Activity(Theme = "@style/AppTheme.NoActionBar")]
     public class MainView : MvxAppCompatActivity
     {
-        MvxExpandableListView expLessons;
+        NXExpandableListView expLessons;
         BottomNavigationViewEx menu;
         protected override void OnViewModelSet()
         {
@@ -33,16 +33,46 @@ namespace Naxam.Busuu.Droid.Learning.Views
             menu.EnableShiftingMode(false);
             OnGroupClickListener GroupClick = new OnGroupClickListener(this);
             menu.NavigationItemSelected += Menu_NavigationItemSelected;
-            expLessons = FindViewById<MvxExpandableListView>(Resource.Id.expLessons);
+            expLessons = FindViewById<NXExpandableListView>(Resource.Id.expLessons);
+            NXExpandableListAdapter adapter = new NXExpandableListAdapter(this, (IList<LessonModel>)expLessons.ItemsSource, (IMvxAndroidBindingContext)BindingContext)
+            {
+                ItemTemplateId = expLessons.ItemTemplateId,
+                GroupTemplateId = expLessons.GroupTemplateId
+            };
+            adapter.DownloadClick += (s, e) =>
+            {
+                if (expLessons == null)
+                    return;
+                if (expLessons.DownloadCommand.CanExecute(e))
+                {
+                    expLessons.DownloadCommand.Execute(e);
+                }
+            };
+            adapter.DoneAnim += (s, e) =>
+            {
+                if (!e)
+                {
+                    expLessons.ExpandGroup((int)s);
+                }
+                else
+                {
+                    expLessons.CollapseGroup((int)s);
+                }
+            };
+            expLessons.SetAdapter(adapter);
+
             expLessons.SetOnGroupClickListener(GroupClick);
             expLessons.SetOnTouchListener(GroupClick);
             expLessons.GroupExpand += ExpLessons_GroupExpand;
-            expLessons.GroupCollapse += ExpLessons_GroupCollapse; 
+            expLessons.GroupCollapse += ExpLessons_GroupCollapse;
+            expLessons.OffsetTopAndBottom(0);
             expLessons.Scroll += ExpLessons_Scroll;
         }
 
+
         private void ExpLessons_Scroll(object sender, AbsListView.ScrollEventArgs e)
         {
+
 
         }
 
@@ -51,12 +81,15 @@ namespace Naxam.Busuu.Droid.Learning.Views
             //expLessons.SetSelection(e.GroupPosition);
             // expLessons.SmoothScrollToPosition(e.GroupPosition);
             //  expLessons.OverScrollMode = OverScrollMode.Always;
-            expLessons.SmoothScrollToPositionFromTop(e.GroupPosition, 0);
+            expLessons.SmoothScrollToPositionFromTop(e.GroupPosition, 0, 500);
+
         }
+
+
 
         private void ExpLessons_GroupExpand(object sender, ExpandableListView.GroupExpandEventArgs e)
         {
-            expLessons.SmoothScrollToPositionFromTop(e.GroupPosition, 0); 
+            expLessons.SmoothScrollToPositionFromTop(e.GroupPosition, 0, 500);
             //expLessons.SetSelection(e.GroupPosition);
         }
 
@@ -92,8 +125,8 @@ namespace Naxam.Busuu.Droid.Learning.Views
             // parent.SetSelection(groupPosition);
             // parent.SmoothScrollToPosition(groupPosition);
             var view = (LessonHeaderBackground)clickedView;
-            view.InitAnim(x, y);
-            view.IsExpand = parent.IsGroupExpanded(groupPosition);
+            //  view.InitAnim(x, y);
+            //view.IsExpand = parent.IsGroupExpanded(groupPosition);
             return false;
         }
 

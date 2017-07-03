@@ -9,9 +9,15 @@ using System.Linq.Expressions;
 
 namespace Naxam.Busuu.Learning.Model
 {
-    public class LessonModel : MvxNotifyPropertyChanged
+    public class LessonModel : MvxObservableCollection<TopicModel>
     {
-        
+        public LessonModel(IList<TopicModel> collection) : base(collection)
+        {
+
+        }
+
+        public event EventHandler<LessonModel> DownloadHandle;
+
         private int _Id;
 
         public int Id
@@ -21,8 +27,7 @@ namespace Naxam.Busuu.Learning.Model
             {
                 if (_Id != value)
                 {
-                    _Id = value;
-                    RaisePropertyChanged();
+                    _Id = value; 
                 }
             }
         }
@@ -35,7 +40,7 @@ namespace Naxam.Busuu.Learning.Model
             set
             {
                 _color = value;
-                RaiseAllPropertiesChanged();
+                
             }
         }
         
@@ -48,8 +53,7 @@ namespace Naxam.Busuu.Learning.Model
             {
                 if (_name != value)
                 {
-                    _name = value;
-                    RaisePropertyChanged();
+                    _name = value; 
                 }
             }
         }
@@ -63,8 +67,7 @@ namespace Naxam.Busuu.Learning.Model
             {
                 if (_title != value)
                 {
-                    _title = value;
-                    RaisePropertyChanged();
+                    _title = value; 
                 }
             }
         }
@@ -73,20 +76,19 @@ namespace Naxam.Busuu.Learning.Model
         public string Icon { get; set; } 
 
         
-        private IList<TopicModel> _topics;
+        //private IList<TopicModel> _topics;
 
-        public IList<TopicModel> Topics
-        {
-            get { return _topics; }
-            set
-            {
-                if (_topics != value)
-                {
-                    _topics = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
+        //public IList<TopicModel> Topics
+        //{
+        //    get { return _topics; }
+        //    set
+        //    {
+        //        if (_topics != value)
+        //        {
+        //            _topics = value; 
+        //        }
+        //    }
+        //}
          
     }
 }
