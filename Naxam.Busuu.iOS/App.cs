@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using Naxam.Busuu.Review.ViewModels;

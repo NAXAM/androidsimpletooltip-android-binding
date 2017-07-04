@@ -14,30 +14,43 @@ namespace Naxam.Busuu.iOS
     {
         // class-level declarations
 
-        public override UIWindow Window
-        {
-            get;
-            set;
-        }
+        public override UIWindow Window { get; set; }
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
+<<<<<<< HEAD
 			
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
             var presenter = new MvxIosViewPresenter(this, Window);
+=======
+
+            UINavigationBar.Appearance.BarStyle = UIBarStyle.Black;
+            UINavigationBar.Appearance.Translucent = false;
+			UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(57, 169, 246);
+			UINavigationBar.Appearance.BackgroundColor = UIColor.FromRGB(57, 169, 246);
+			UINavigationBar.Appearance.TintColor = UIColor.White;         
+
+			Window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+			var presenter = new MvxIosViewPresenter(this, Window);
+>>>>>>> ios-sonnn
 
 			var setup = new Setup(this, presenter);
 			setup.Initialize();
 
 			var startup = Mvx.Resolve<IMvxAppStart>();
+<<<<<<< HEAD
 			startup.Start();
+=======
+            startup.Start();
+>>>>>>> ios-sonnn
 
 			Window.MakeKeyAndVisible();
 
-            return true;
+			return true;
         }
 
         public override void OnResignActivation(UIApplication application)

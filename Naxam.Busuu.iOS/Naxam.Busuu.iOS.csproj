@@ -27,6 +27,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>pdbonly</DebugType>
@@ -75,6 +76,7 @@
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -82,6 +84,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="MvvmCross.Platform">
+<<<<<<< HEAD
       <HintPath>..\packages\MvvmCross.Platform.5.0.3\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Platform.iOS">
@@ -95,17 +98,63 @@
     </Reference>
     <Reference Include="System.Collections.Immutable">
       <HintPath>..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+=======
+      <HintPath>..\packages\MvvmCross.Platform.5.0.5\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\packages\MvvmCross.Platform.5.0.5\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.5.0.5\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\packages\MvvmCross.Core.5.0.5\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.5.0.5\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\packages\MvvmCross.Binding.5.0.5\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.5.0.5\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+>>>>>>> ios-sonnn
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+<<<<<<< HEAD
     <ImageAsset Include="Assets.xcassets\graystar.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\graystar.imageset\star.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Assets.xcassets\graystar.imageset\" />
+=======
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%403x.png" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Layer 0%402x.png" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Layer 0%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\user_avatar_placeholder.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_spanish.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_english.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_chinese.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_arabic.imageset\" />
+    <Folder Include="Assets.xcassets\profile_flag_vn.imageset\" />
+    <Folder Include="Assets.xcassets\social_background_pattern_image.imageset\" />
+    <Folder Include="Assets.xcassets\test.imageset\" />
+    <Folder Include="Assets.xcassets\ic_filter.imageset\" />
+    <Folder Include="Assets.xcassets\play_icon_small.imageset\" />
+>>>>>>> ios-sonnn
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -119,10 +168,18 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+>>>>>>> ios-sonnn
     <Compile Include="Setup.cs" />
     <Compile Include="App.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ProjectReference Include="Naxam.Busuu.iOS.Review\Naxam.Busuu.iOS.Review.csproj">
       <Project>{1030A24B-B42C-4076-B166-F7E3A875E071}</Project>
       <Name>Naxam.Busuu.iOS.Review</Name>
@@ -130,6 +187,15 @@
     <ProjectReference Include="..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
       <Project>{BAAA7577-3BE2-423B-A051-61B47489B015}</Project>
       <Name>Naxam.Busuu.Review</Name>
+=======
+    <ProjectReference Include="..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
+      <Project>{6255CDA3-B742-4D16-AC6C-03E414EAC000}</Project>
+      <Name>Naxam.Busuu.Social</Name>
+    </ProjectReference>
+    <ProjectReference Include="Naxam.Busuu.iOS.Social\Naxam.Busuu.iOS.Social.csproj">
+      <Project>{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}</Project>
+      <Name>Naxam.Busuu.iOS.Social</Name>
+>>>>>>> ios-sonnn
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
