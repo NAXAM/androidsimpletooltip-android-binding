@@ -22,7 +22,7 @@ namespace Naxam.Busuu.Droid
         {
             base.OnCreate(savedInstanceState);
             //SetContentView(Resource.Layout.Main);
-            StartActivity(new Intent(this, typeof(FillSentenceAudioView)));
+            StartActivity(new Intent(this, typeof(MachingSentenceView)));
          
         }
     }
