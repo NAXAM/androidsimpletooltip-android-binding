@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +19,10 @@ using Android.Text.Method;
 
 namespace Naxam.Busuu.Droid.Profile.Views
 {
+    // Checking a result with strCorrection
+    // If true or false create a new corresponding spannable text
+    // Assigning to txtDisplay
+
     [Activity(Label = "FillSentenceAudioView")]
     public class FillSentenceAudioView : Activity
     {
@@ -93,7 +97,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
                 if (between.Length == 0) between = "  ";
                 string thisTag = "  " + tag + "  ";
                 stringBuilder.Append(thisTag);
-                stringBuilder.SetSpan(new TouchableSpan(this), stringBuilder.Length() - thisTag.Length, stringBuilder.Length(), SpanTypes.ExclusiveExclusive);
+                stringBuilder.SetSpan(new TouchableSpan(this, ref txtResult, ref txtDisplay, strCorrection), stringBuilder.Length() - thisTag.Length, stringBuilder.Length(), SpanTypes.ExclusiveExclusive);
             }
             txtResult.SetText(stringBuilder, TextView.BufferType.Normal);
             txtResult.MovementMethod = LinkMovementMethod.Instance;
@@ -102,12 +106,18 @@ namespace Naxam.Busuu.Droid.Profile.Views
 
     class TouchableSpan : ClickableSpan
     {
+        TextView txtDisplay;
+        TextView txtResult;
+        string strCorrection;
         private Context context;
         private bool mIsPressed;
 
-        public TouchableSpan(Context context)
+        public TouchableSpan(Context context, ref TextView txtResult, ref TextView txtDisplay, string  strCorrection)
         {
+            this.strCorrection = strCorrection;
             this.context = context;
+            this.txtResult = txtResult;
+            this.txtDisplay = txtDisplay;
         }
 
         public override void UpdateDrawState(TextPaint ds)
@@ -118,20 +128,37 @@ namespace Naxam.Busuu.Droid.Profile.Views
             ds.UnderlineText = false;
 
         }
+       
 
         public override void OnClick(View view)
         {
+
             mIsPressed = !mIsPressed;
             TextView tv = (TextView)view;
             SpannableString s = new SpannableString(tv.TextFormatted);
             int start = s.GetSpanStart(this);
             int end = s.GetSpanEnd(this);
-            string clickedTxt = s.SubSequence(start, end).ToString();
-            Toast.MakeText(context, "clicked: " + clickedTxt, ToastLength.Long).Show();
+            string clickedTxt = s.SubSequence(start, end).ToString().Replace(" ", "");
+
+            if (strCorrection == clickedTxt)
+            {
+                Toast.MakeText(context, "true: "+ clickedTxt , ToastLength.Long).Show();
+                // tạo spannable mới thay thế "___" bằng clickedTxt màu xanh
+            }
+            else
+            {
+                Toast.MakeText(context, "false: "+clickedTxt, ToastLength.Long).Show();
+                // tạo spannable mới thay thế "___" bằng clickedTxt màu đỏ gạch, và đáp án bằng màu xanh
+
+
+            }
+            txtResult.Enabled = false;
+            // gán text mới cho txtDisplay tại đây
+
+
         }
     }
 }
 
-   
 
-  
+
