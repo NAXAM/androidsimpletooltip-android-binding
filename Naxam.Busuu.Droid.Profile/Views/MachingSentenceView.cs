@@ -11,10 +11,7 @@ using Android.Views;
 using Android.Widget;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using Android.Graphics;
-// Adding shadow
-// Changing an opacity when touching rect to move //
-// Set current rect is always in a top 
-// Changing layout//
+
 namespace Naxam.Busuu.Droid.Profile.Views
 {
     [Activity(Label = "MachingSentenceView")]
