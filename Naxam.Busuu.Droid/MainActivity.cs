@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -23,7 +22,7 @@ namespace Naxam.Busuu.Droid
         {
             base.OnCreate(savedInstanceState);
             //SetContentView(Resource.Layout.Main);
-            StartActivity(new Intent(this, typeof(MachingSentenceView)));
+            StartActivity(new Intent(this, typeof(FillSentenceAudioView)));
          
         }
     }

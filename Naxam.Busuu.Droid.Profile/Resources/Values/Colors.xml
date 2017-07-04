@@ -11,4 +11,6 @@
   <color name="colorHintEditText">#A7B0B7</color>
   <color name="colorNormalBtn">#D6DFE6</color>
   <color name="colorHoverBtn">#A9B0B8</color>
+  <color name="colorEnable">#FFFFFF</color>
+  <color name="colorDiable">#CFEAFC</color>
 </resources>
