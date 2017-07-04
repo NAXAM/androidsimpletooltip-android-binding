@@ -20,12 +20,6 @@ namespace Naxam.Busuu.iOS
         {
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
-<<<<<<< HEAD
-			
-            Window = new UIWindow(UIScreen.MainScreen.Bounds);
-
-            var presenter = new MvxIosViewPresenter(this, Window);
-=======
 
             UINavigationBar.Appearance.BarStyle = UIBarStyle.Black;
             UINavigationBar.Appearance.Translucent = false;
@@ -36,17 +30,12 @@ namespace Naxam.Busuu.iOS
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
 			var presenter = new MvxIosViewPresenter(this, Window);
->>>>>>> ios-sonnn
 
 			var setup = new Setup(this, presenter);
 			setup.Initialize();
 
 			var startup = Mvx.Resolve<IMvxAppStart>();
-<<<<<<< HEAD
-			startup.Start();
-=======
             startup.Start();
->>>>>>> ios-sonnn
 
 			Window.MakeKeyAndVisible();
 

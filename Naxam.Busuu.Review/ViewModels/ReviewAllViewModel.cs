@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Review.Models;
 
@@ -6,8 +7,8 @@ namespace Naxam.Busuu.Review.ViewModels
 {
     public class ReviewAllViewModel : MvxViewModel
     {
-        private MvxObservableCollection<ReviewAllModel> _reviews;
-        public MvxObservableCollection<ReviewAllModel> Reviews
+        private List<ReviewAllModel> _reviews;
+        public List<ReviewAllModel> Reviews
         {
 			get { return _reviews; }
 			set
@@ -23,7 +24,7 @@ namespace Naxam.Busuu.Review.ViewModels
         //mock data
         public ReviewAllViewModel()
         {
-            Reviews = new MvxObservableCollection<ReviewAllModel>(ReviewAllModel.MockData);
+            Reviews = new List<ReviewAllModel>(ReviewAllModel.MockData);
         }
     }
 }

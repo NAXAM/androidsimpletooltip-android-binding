@@ -1,12 +1,12 @@
 ﻿using System;
 using CoreGraphics;
-using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using Naxam.Busuu.Review.ViewModels;
 using UIKit;
 using ObjCRuntime;
 using Foundation;
 using MvvmCross.Binding.iOS.Views;
+using MvvmCross.Binding.BindingContext;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {

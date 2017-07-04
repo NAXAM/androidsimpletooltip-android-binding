@@ -1,6 +1,4 @@
 ﻿using System;
-using FFImageLoading;
-using FFImageLoading.Work;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
