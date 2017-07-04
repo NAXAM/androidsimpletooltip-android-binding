@@ -12,9 +12,9 @@ using Android.Widget;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using Android.Graphics;
 // Adding shadow
-// Changing an opacity when touching rect to move 
+// Changing an opacity when touching rect to move //
 // Set current rect is always in a top 
-// Changing 
+// Changing layout//
 namespace Naxam.Busuu.Droid.Profile.Views
 {
     [Activity(Label = "MachingSentenceView")]
@@ -78,9 +78,9 @@ namespace Naxam.Busuu.Droid.Profile.Views
             txt02Move = (TextView)FindViewById(Resource.Id.txt02Move);
             txt03Move = (TextView)FindViewById(Resource.Id.txt03Move);
             //
-            txt01Move.BringToFront();
-            txt02Move.BringToFront();
-            txt03Move.BringToFront();
+            txt01Move.Elevation = 8;
+            txt02Move.Elevation = 8;
+            txt03Move.Elevation = 8;
             //
             txt03 = (TextView)FindViewById(Resource.Id.txt03);
             txt02 = (TextView)FindViewById(Resource.Id.txt02);
@@ -106,6 +106,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
             txt01.Text = val01;
             txt02.Text = val02;
             txt03.Text = val03;
+            //
             txt01Move.Text = val01;
             txt02Move.Text = val02;
             txt03Move.Text = val03;
@@ -411,6 +412,9 @@ namespace Naxam.Busuu.Droid.Profile.Views
                     break;
 
                 case MotionEventActions.Up:
+                    txt01Move.SetBackgroundColor(Color.White);
+                    txt02Move.SetBackgroundColor(Color.White);
+                    txt03Move.SetBackgroundColor(Color.White);
                     if (view.Id == Resource.Id.txt01Move)
                     {// touching move 1
                         if (hasCollision040506(rectMove01) == false)
@@ -474,6 +478,9 @@ namespace Naxam.Busuu.Droid.Profile.Views
                 case MotionEventActions.Move:
                     if (view.Id == Resource.Id.txt01Move)
                     {// touching move 1
+                        txt01Move.BringToFront();
+                         txt01Move.SetBackgroundColor(new Color(255, 255, 255, 178));
+
                         if (hasCollision040506(rectMove01) == false)
                         {
                             setDefaultBackground();
@@ -488,6 +495,8 @@ namespace Naxam.Busuu.Droid.Profile.Views
                     }
                     else if (view.Id == Resource.Id.txt02Move)
                     {// touching move 2
+                        txt02Move.BringToFront();
+                        txt02Move.SetBackgroundColor(new Color(255, 255, 255, 178));
                         if (hasCollision040506(rectMove02) == false)
                         {
                             setDefaultBackground();
@@ -503,6 +512,8 @@ namespace Naxam.Busuu.Droid.Profile.Views
                     }
                     else if (view.Id == Resource.Id.txt03Move)
                     { // touching mvoe3
+                        txt03Move.BringToFront();
+                        txt03Move.SetBackgroundColor(new Color(255, 255, 255, 178));
                         if (hasCollision040506(rectMove03) == false)
                         {
                             setDefaultBackground();
