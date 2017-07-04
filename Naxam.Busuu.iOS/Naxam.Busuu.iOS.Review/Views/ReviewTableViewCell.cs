@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Globalization;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
+using MvvmCross.Platform.Converters;
 using Naxam.Busuu.Review.Models;
 using UIKit;
 
@@ -10,20 +12,23 @@ namespace Naxam.Busuu.iOS.Review.Views
 {
     public partial class ReviewTableViewCell : MvxTableViewCell
     {
-        public static readonly NSString Key = new NSString("ReviewTableViewCell");
-        public static readonly UINib Nib;
+		public static readonly NSString Key = new NSString("ReviewTableViewCell");
+		public static readonly UINib Nib;
 
-        private readonly MvxImageViewLoader imgWordViewLoader;
-        private readonly MvxImageViewLoader imgStrengthViewLoader;
-        static ReviewTableViewCell()
-        {
-            Nib = UINib.FromName("ReviewTableViewCell", NSBundle.MainBundle);
-        }
+		static ReviewTableViewCell()
+		{
+			Nib = UINib.FromName("ReviewTableViewCell", NSBundle.MainBundle);
+		}
 
 		public static ReviewTableViewCell Create()
 		{
 			return (ReviewTableViewCell)Nib.Instantiate(null, null)[0];
 		}
+
+
+		private readonly MvxImageViewLoader imgWordViewLoader;
+        private readonly MvxImageViewLoader imgStrengthViewLoader;
+
 
         protected ReviewTableViewCell(IntPtr handle) : base(handle)
         {
@@ -35,8 +40,8 @@ namespace Naxam.Busuu.iOS.Review.Views
 				var set = this.CreateBindingSet<ReviewTableViewCell, ReviewAllModel>();
 				set.Bind(lbTitle).To(m => m.Title);
 				set.Bind(lbSubtitle).To(m => m.SubTitle);
-				set.Bind(imgWordViewLoader).To(m => m.ImgWord);
-                set.Bind(imgStrengthViewLoader).To(m=>m.ImgStrength);
+                set.Bind(imgWordViewLoader).To(m => m.ImgWord);
+                set.Bind(imgStrengthViewLoader).To(m=>m.StrengthLevel).WithConversion(new ImageStrengthValueConverter(),null);
 				set.Apply();
 			});
         }
@@ -44,11 +49,40 @@ namespace Naxam.Busuu.iOS.Review.Views
         public override void AwakeFromNib()
         {
             base.AwakeFromNib();
-            btnPlay.ClipsToBounds = true;
-            btnStar.ClipsToBounds = true;
             btnPlay.Layer.CornerRadius = btnPlay.Bounds.Height / 2;
             btnStar.Layer.CornerRadius = btnStar.Bounds.Height / 2;
         }
-
     }
+
+	public class ImageUriValueConverter : MvxValueConverter<string, string>
+	{
+		protected override string Convert(string value, Type targetType, object parameter, CultureInfo cultureInfo)
+		{
+			return "res:" + value;
+		}
+	}
+
+    public class ImageStrengthValueConverter: MvxValueConverter<int, string>
+    {
+        protected override string Convert(int value, Type targetType, object parameter, CultureInfo culture)
+        {
+            switch (value)
+            {
+                case 0:
+                    return "res:entity_strength_0";
+				case 1:
+					return "res:entity_strength_1";
+				case 2:
+					return "res:entity_strength_2";
+				case 3:
+					return "res:entity_strength_3";
+				case 4:
+					return "res:entity_strength_4";
+                default:
+                    return "res:entity_strength_0";
+
+            }
+        }
+    }
+
 }

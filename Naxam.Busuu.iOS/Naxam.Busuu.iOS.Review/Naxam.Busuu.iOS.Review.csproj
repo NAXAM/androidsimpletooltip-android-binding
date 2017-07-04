@@ -99,8 +99,7 @@
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Views\ReviewAllView.xib" />
-    <InterfaceDefinition Include="Views\ReviewTableViewCell.xib" />
+    <InterfaceDefinition Include="Review.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -117,9 +116,16 @@
     <ImageAsset Include="Resources\Assets.xcassets\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\play_btn.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\play_btn.imageset\play_btn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\star_active.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_0.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_0.imageset\entity_strength_0.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_1.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_1.imageset\entity_strength_1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_2.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_2.imageset\entity_strength_2.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_3.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_3.imageset\entity_strength_3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_4.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_4.imageset\entity_strength_4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

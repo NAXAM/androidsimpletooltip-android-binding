@@ -10,14 +10,15 @@ using MvvmCross.Binding.BindingContext;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
+    [MvxFromStoryboard(StoryboardName = "Review")]
     public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>
     {
-        CGPoint oriPoint;
-        bool IsDiscovery = true;
-
-        public ReviewAllView() : base("ReviewAllView", null)
+        public ReviewAllView(IntPtr handle): base(handle)
         {
         }
+
+        CGPoint oriPoint;
+        bool IsDiscovery = true;
 
         public override void ViewDidLoad()
         {

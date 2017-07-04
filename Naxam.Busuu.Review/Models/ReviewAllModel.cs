@@ -6,11 +6,10 @@ namespace Naxam.Busuu.Review.Models
 {
     public class ReviewAllModel:MvxNotifyPropertyChanged
     {
-        string _imgWord;
-		public string ImgWord{ get => _imgWord; set=>_imgWord = value;}
-        string _imgStrength;
-        public string ImgStrength { get => _imgStrength; set => _imgStrength = value; }
-		
+        public string ImgWord { get; set; }
+
+        public int StrengthLevel { get; set; }
+
 		public string Title{get;set;}
 
         public string SubTitle { get; set; }
@@ -19,7 +18,7 @@ namespace Naxam.Busuu.Review.Models
 
 		static string[] words = new[] { "hello", "I'm", "What's your name?", "Where are you from?" };
 
-        static string[] images = new[] { "a","b","c","d","e","f", "g", "h", "i", "j","k", "l", "m"};
+        static string[] strengths = new[] { "entity_strength_0", "entity_strength_1", "entity_strength_2", "entity_strength_3" };
 
 		private static List<ReviewAllModel> mockData;
 
@@ -33,13 +32,13 @@ namespace Naxam.Busuu.Review.Models
 					var items = new List<ReviewAllModel>();
 					for (int i = 0; i < 100; i++)
 					{
-						items.Add(new ReviewAllModel
-						{
-							Title = words[random.Next(0, words.Length - 1)],
-							SubTitle = words[random.Next(0, words.Length - 1)],
-							IsFavorite = i % 2 == 0 ? true : false,
-							ImgWord = string.Format("http://placekitten.com/{0}/{0}", random.Next(20) + 300),
-							ImgStrength = string.Format("http://placekitten.com/{0}/{0}", random.Next(20) + 300),
+                        items.Add(new ReviewAllModel
+                        {
+                            Title = words[random.Next(0, words.Length - 1)],
+                            SubTitle = words[random.Next(0, words.Length - 1)],
+                            StrengthLevel = random.Next(0, 4),
+                            IsFavorite = i % 2 == 0 ? true : false,
+                            ImgWord = string.Format("http://placekitten.com/{0}/{0}", random.Next(20) + 300)
 						});
 					}
 					mockData = items;
