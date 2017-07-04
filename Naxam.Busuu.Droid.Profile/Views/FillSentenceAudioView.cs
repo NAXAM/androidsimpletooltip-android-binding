@@ -97,7 +97,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
                 if (between.Length == 0) between = "  ";
                 string thisTag = "  " + tag + "  ";
                 stringBuilder.Append(thisTag);
-                stringBuilder.SetSpan(new TouchableSpan(this, ref txtResult, ref txtDisplay, strCorrection), stringBuilder.Length() - thisTag.Length, stringBuilder.Length(), SpanTypes.ExclusiveExclusive);
+                stringBuilder.SetSpan(new TouchableSpan(this, ref txtResult, ref txtDisplay, strCorrection, strDisplay), stringBuilder.Length() - thisTag.Length, stringBuilder.Length(), SpanTypes.ExclusiveExclusive);
             }
             txtResult.SetText(stringBuilder, TextView.BufferType.Normal);
             txtResult.MovementMethod = LinkMovementMethod.Instance;
@@ -106,15 +106,18 @@ namespace Naxam.Busuu.Droid.Profile.Views
 
     class TouchableSpan : ClickableSpan
     {
+        int start;
+        string strDisplay;
         TextView txtDisplay;
         TextView txtResult;
         string strCorrection;
         private Context context;
         private bool mIsPressed;
 
-        public TouchableSpan(Context context, ref TextView txtResult, ref TextView txtDisplay, string  strCorrection)
+        public TouchableSpan(Context context, ref TextView txtResult, ref TextView txtDisplay, string strCorrection, string strDisplay)
         {
             this.strCorrection = strCorrection;
+            this.strDisplay = strDisplay;
             this.context = context;
             this.txtResult = txtResult;
             this.txtDisplay = txtDisplay;
@@ -128,7 +131,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
             ds.UnderlineText = false;
 
         }
-       
+
 
         public override void OnClick(View view)
         {
@@ -136,21 +139,29 @@ namespace Naxam.Busuu.Droid.Profile.Views
             mIsPressed = !mIsPressed;
             TextView tv = (TextView)view;
             SpannableString s = new SpannableString(tv.TextFormatted);
-            int start = s.GetSpanStart(this);
-            int end = s.GetSpanEnd(this);
-            string clickedTxt = s.SubSequence(start, end).ToString().Replace(" ", "");
+            int sa = s.GetSpanStart(this);
+            int en = s.GetSpanEnd(this);
+            string clickedTxt = s.SubSequence(sa, en).ToString().Replace(" ", "");
 
             if (strCorrection == clickedTxt)
             {
-                Toast.MakeText(context, "true: "+ clickedTxt , ToastLength.Long).Show();
-                // tạo spannable mới thay thế "___" bằng clickedTxt màu xanh
+                Toast.MakeText(context, "true: " + clickedTxt, ToastLength.Long).Show();
+                start = strDisplay.IndexOf("___");
+                strDisplay = strDisplay.Replace("___", clickedTxt);
+                SpannableStringBuilder ssb = new SpannableStringBuilder(strDisplay);
+                ssb.SetSpan(new ForegroundColorSpan(Color.Green), start, start + clickedTxt.Length, SpanTypes.InclusiveInclusive);
+                txtDisplay.SetText(ssb, TextView.BufferType.Normal);
+
             }
             else
             {
-                Toast.MakeText(context, "false: "+clickedTxt, ToastLength.Long).Show();
-                // tạo spannable mới thay thế "___" bằng clickedTxt màu đỏ gạch, và đáp án bằng màu xanh
-
-
+                Toast.MakeText(context, "false: " + clickedTxt, ToastLength.Long).Show();
+                start = strDisplay.IndexOf("___");
+                strDisplay = strDisplay.Replace("___", clickedTxt+" "+strCorrection);
+                SpannableStringBuilder ssb = new SpannableStringBuilder(strDisplay);
+                ssb.SetSpan(new ForegroundColorSpan(Color.Green), start, start + clickedTxt.Length, SpanTypes.InclusiveInclusive);
+                ssb.SetSpan(new ForegroundColorSpan(Color.Red), start + clickedTxt.Length+1, start + clickedTxt.Length + 1+strCorrection.Length , SpanTypes.InclusiveInclusive);
+                txtDisplay.SetText(ssb, TextView.BufferType.Normal);
             }
             txtResult.Enabled = false;
             // gán text mới cho txtDisplay tại đây
