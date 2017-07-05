@@ -17,13 +17,14 @@ using Naxam.Busuu.Droid.Learning.Control;
 using MvvmCross.Binding.Droid.BindingContext;
 using Naxam.Busuu.Learning.Model;
 using System.Threading.Tasks;
+using MvvmCross.Core.ViewModels;
 
 namespace Naxam.Busuu.Droid.Learning.Views
 {
     [Activity(Theme = "@style/AppTheme.NoActionBar")]
     public class MainView : MvxAppCompatActivity
     {
-        NXExpandableListView expLessons;
+        NXMvxExpandableListView expLessons;
         BottomNavigationViewEx menu;
         protected override void OnViewModelSet()
         {
@@ -33,11 +34,10 @@ namespace Naxam.Busuu.Droid.Learning.Views
             menu.EnableShiftingMode(false);
             OnGroupClickListener GroupClick = new OnGroupClickListener(this);
             menu.NavigationItemSelected += Menu_NavigationItemSelected;
-            expLessons = FindViewById<NXExpandableListView>(Resource.Id.expLessons);
-            NXExpandableListAdapter adapter = new NXExpandableListAdapter(this, (IList<LessonModel>)expLessons.ItemsSource, (IMvxAndroidBindingContext)BindingContext)
-            {
-                ItemTemplateId = expLessons.ItemTemplateId,
-                GroupTemplateId = expLessons.GroupTemplateId
+            expLessons = FindViewById<NXMvxExpandableListView>(Resource.Id.expLessons);
+            NXMvxExpandableListAdapter adapter = new NXMvxExpandableListAdapter(this, (IList<LessonModel>)expLessons.ItemsSource, (IMvxAndroidBindingContext)BindingContext) {
+                GroupTemplateId = expLessons.GroupTemplateId,
+                ItemTemplateId = expLessons.ItemTemplateId
             };
             adapter.DownloadClick += (s, e) =>
             {
@@ -65,15 +65,55 @@ namespace Naxam.Busuu.Droid.Learning.Views
             expLessons.SetOnTouchListener(GroupClick);
             expLessons.GroupExpand += ExpLessons_GroupExpand;
             expLessons.GroupCollapse += ExpLessons_GroupCollapse;
-            expLessons.OffsetTopAndBottom(0);
-            expLessons.Scroll += ExpLessons_Scroll;
+            expLessons.OffsetTopAndBottom(0); 
         }
 
 
-        private void ExpLessons_Scroll(object sender, AbsListView.ScrollEventArgs e)
+        MvxObservableCollection<LessonModel> GetData()
         {
+            string[] color = new string[]
+          {
+                "#58B0F8","#B02018"
+          };
+            Random random = new Random();
+            var Topicsx = new MvxObservableCollection<TopicModel>();
+            for (int i = 0; i < 10; i++)
+            {
+                Topicsx.Add(new TopicModel
+                {
+                    Toppic = "Topic " + random.Next(1, 1000),
+                    Time = random.Next(1, 50),
+                    Exercises = new MvxObservableCollection<ExerciseModel>
+                    {
+                        new ExerciseModel(),
+                        new ExerciseModel(),
+                        new ExerciseModel(),
+                    }
+                });
+            }
+
+            string[] icons = new string[]
+            {
+
+            };
 
 
+            var Lessons = new MvxObservableCollection<LessonModel>();
+            for (int i = 0; i < 10; i++)
+            {
+                var lesson = new LessonModel(Topicsx)
+                {
+                    Id = i,
+                    LessonNumber = "Lesson " + random.Next(1, 50),
+                    LessonName = " title " + random.Next(1, 50),
+                    Color = color[i % 2],
+                    Percent = random.Next(1, 100),
+                    Icon = "http://www.jeremedia.ca/japan/domo1.jpg"
+                };
+                Lessons.Add(lesson);
+            }
+
+            return Lessons;
         }
 
         private void ExpLessons_GroupCollapse(object sender, ExpandableListView.GroupCollapseEventArgs e)

@@ -72,24 +72,10 @@ namespace Naxam.Busuu.Learning.ViewModel
             base.Appeared();
             string[] color = new string[]
            {
-                "#58B0F8","#B02018"
+                "#58B0F8","#B02018","#FEAB35"
            };
             Random random = new Random();
-            Topicsx = new MvxObservableCollection<TopicModel>();
-            for (int i = 0; i < 10; i++)
-            {
-                Topicsx.Add(new TopicModel
-                {
-                    Toppic = "Topic " + random.Next(1, 1000),
-                    Time = random.Next(1, 50),
-                    Exercises = new MvxObservableCollection<ExerciseModel>
-                    {
-                        new ExerciseModel(),
-                        new ExerciseModel(),
-                        new ExerciseModel(),
-                    }
-                });
-            }
+            
 
             string[] icons = new string[]
             {
@@ -100,18 +86,54 @@ namespace Naxam.Busuu.Learning.ViewModel
             Lessons = new MvxObservableCollection<LessonModel>();
             for (int i = 0; i < 10; i++)
             {
-                var lesson = new LessonModel(Topicsx)
+                var lesson = new LessonModel(GetTopic(color[i % 3]))
                 {
                     Id = i,
-                    Name = "Lesson " + random.Next(1, 50),
-                    Title = " title " + random.Next(1, 50),
-                    Color = color[i % 2],
+                    LessonNumber = "Lesson " + random.Next(1, 50),
+                    LessonName = " title " + random.Next(1, 50),
+                    Color = color[i % 3],
                     Percent = random.Next(1, 100),
                     Icon = "http://www.jeremedia.ca/japan/domo1.jpg"
-                };
-                lesson.DownloadHandle += Lesson_DownloadHandle;
+                }; 
                 Lessons.Add(lesson);
             }
+        }
+
+        private MvxObservableCollection<TopicModel> GetTopic(string color)
+        {
+            Random random = new Random();
+            Topicsx = new MvxObservableCollection<TopicModel>();
+            for (int i = 0; i < 6; i++)
+            {
+                Topicsx.Add(new TopicModel
+                {
+                    Toppic = "Topic " + random.Next(1, 1000),
+                    Time = random.Next(1, 50),
+                    Color = color,
+                    Exercises = new MvxObservableCollection<ExerciseModel>
+                    {
+                        new ExerciseModel{
+                            Type = ExerciseModel.ExerciseType.Discovery,
+                            IsDone = true,
+                            Color = color
+                        },
+                        new ExerciseModel{
+                            Type = ExerciseModel.ExerciseType.Vocabulary,
+                            Color = color
+                        },
+                        new ExerciseModel{
+                            Type = ExerciseModel.ExerciseType.Memorability,
+                            Color = color
+                        },
+                        new ExerciseModel{
+                            Type = ExerciseModel.ExerciseType.Practice,
+                            IsDone = true,
+                            Color = color
+                        },
+                    }
+                });
+            }
+            return Topicsx;
         }
 
         private void Lesson_DownloadHandle(object sender, LessonModel e)

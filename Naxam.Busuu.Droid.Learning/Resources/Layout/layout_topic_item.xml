@@ -6,19 +6,21 @@
   android:layout_height="match_parent"
   android:layout_margin="0dp"
   android:orientation="vertical"
-  app:MvxBind="BackgroundColor Color"
+  app:MvxBind="BackgroundColor Color,Converter = AlphaColor, ConverterParameter = 80"
   >
   <TextView
+    android:id="@+id/txtTopic"
     android:layout_marginTop="24dp"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textColor="#777777"
-        android:textSize="20sp"
-      android:layout_gravity="center"
-      app:MvxBind="Text Toppic"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#777777"
+    android:textSize="20sp"
+    android:layout_gravity="center"
+    app:MvxBind="Text Toppic"
     
         />
   <TextView
+    android:id="@+id/txtTime"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginBottom="12dp"
@@ -26,13 +28,14 @@
       android:textColor="#e13a4249"
       android:alpha="0.8"
       android:textSize="14sp"
-       app:MvxBind="Text Time"
+      app:MvxBind="Text Time"
         />
-  <Naxam.Busuu.Droid.Learning.Control.NXRecyclerView
+  <!--<Naxam.Busuu.Droid.Learning.Control.NXRecyclerView
+        android:id="@+id/recyclerExercise"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginBottom="24dp"
-        android:scrollbars="vertical"
+        android:scrollbars="none"
         android:gravity="center"
         android:layout_gravity="center"
         android:numColumns="auto_fit"
@@ -40,5 +43,16 @@
         android:orientation="horizontal"
         android:background="@drawable/background_strike_line_white_padding"
         app:MvxItemTemplate="@layout/layout_exercise_item"
-        app:MvxBind="ItemsSource Exercises" />
+        app:MvxBind="ItemsSource Exercises;" />-->
+  <Naxam.Busuu.Droid.Learning.Control.ExerciesView
+        android:id="@+id/exerciseView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" 
+        android:layout_marginBottom="24dp" 
+        android:gravity="center"
+        android:layout_gravity="center"  
+        android:orientation="horizontal"
+        android:background="@drawable/background_strike_line_white_padding"
+        app:MvxBind="ItemsSource Exercises;Color Color"
+    />
 </LinearLayout>

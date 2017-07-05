@@ -28,6 +28,8 @@ using Naxam.Busuu.Droid.Core;
 using Naxam.Busuu.Droid.Learning.TargetBinding;
 using Com.Github.Lzyzsd.Circleprogress;
 using MvvmCross.Binding.Droid.Views;
+using Naxam.Busuu.Droid.Learning.Converter;
+
 namespace Naxam.Busuu.Droid
 {
     public class Setup : MvxAndroidSetup
@@ -57,6 +59,7 @@ namespace Naxam.Busuu.Droid
             {
                 var toReturn = base.ValueConverterAssemblies as IList;
                 toReturn.Add(typeof(IsMatchPatternBase64Converter).Assembly);
+                toReturn.Add(typeof(AlphaColorConverter).Assembly);
                 return (IEnumerable<Assembly>)toReturn;
 
             }
@@ -84,13 +87,20 @@ namespace Naxam.Busuu.Droid
         protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
         {
             base.FillTargetFactories(registry);
-            registry.RegisterCustomBindingFactory<View>("BorderColor", view => new BorderTargetBinding(view));
+           
             registry.RegisterCustomBindingFactory<CircleProgress>("Progress", view => new PercentTargetBinding(view));
             registry.RegisterCustomBindingFactory<CircleProgress>("FinishColor", view => new FinishColorTargetBinding(view));
             registry.RegisterCustomBindingFactory<LessonHeaderBackground>("BackgroundColor", view => new LessonHeaderTargetBinding(view));
             registry.RegisterCustomBindingFactory<View>("BackgroundColor", view => new BackgroundColorTargetBinding(view));
+            registry.RegisterCustomBindingFactory<View>("BackgroundColor160", view => new BackgroundColor160TargetBinding(view));
+            registry.RegisterCustomBindingFactory<View>("Background", view => new BackgroundTargetBinding(view));
+            registry.RegisterCustomBindingFactory<View>("BorderColor", view => new BorderTargetBinding(view));
+            registry.RegisterCustomBindingFactory<NXMvxExpandableListView>("DownloadCommand", view => new DownloadCommandTargetBinding(view));
+            registry.RegisterCustomBindingFactory<ImageView>("TintColor", view => new TintColorTargetBinding(view));
+            registry.RegisterCustomBindingFactory<ImageView>("ImageResource", view => new ImageResourceTargetBinding(view));
             registry.RegisterCustomBindingFactory<ImageView>("Source", view => new ImageSourceTargetBinding(view));
-            registry.RegisterCustomBindingFactory<NXExpandableListView>("DownloadCommand", view => new DownloadCommandTargetBinding(view));
+            registry.RegisterCustomBindingFactory<ExerciesView>("ItemsSource", view => new ExerciesItemsSourceTargetBinding(view));
+            registry.RegisterCustomBindingFactory<ExerciesView>("Color", view => new ExerciesColorTargetBinding(view));
         }
 
         protected override IEnumerable<Assembly> GetViewAssemblies()

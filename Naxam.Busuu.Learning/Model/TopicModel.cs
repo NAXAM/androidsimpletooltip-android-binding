@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Naxam.Busuu.Learning.Model
 {
-    public class TopicModel : MvxNotifyPropertyChanged 
+    public class TopicModel : MvxNotifyPropertyChanged
     {
         private string _color;
 
@@ -18,7 +18,7 @@ namespace Naxam.Busuu.Learning.Model
             {
                 if (_color != value)
                 {
-                    _color = value;
+                    _color = value; 
                     RaisePropertyChanged();
                 }
             }
@@ -64,7 +64,7 @@ namespace Naxam.Busuu.Learning.Model
             {
                 if (_exercises != value)
                 {
-                    _exercises = value;
+                    _exercises = value; 
                     RaisePropertyChanged();
                 }
             }

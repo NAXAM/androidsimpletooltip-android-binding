@@ -18,11 +18,10 @@ using Android.Util;
 using Android.Graphics;
 using Android.Graphics.Drawables.Shapes;
 using MvvmCross.Binding.Droid.BindingContext;
-using Com.Github.Lzyzsd.Circleprogress;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class NXExpandableListAdapter : BaseExpandableListAdapter
+    public class NXMvxExpandableListAdapter : MvxExpandableListAdapter
     {
         Context context; IList<LessonModel> ItemSource;
         public event EventHandler<int> DownloadClick;
@@ -32,7 +31,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
                            // new int[] {-Android.Resource.Attribute.StateChecked}, // unchecked
                            // new int[] { Android.Resource.Attribute.StatePressed}  // pressed
                         };
-        public NXExpandableListAdapter(Context context, IList<LessonModel> ItemSource)
+        public NXMvxExpandableListAdapter(Context context, IList<LessonModel> ItemSource, IMvxAndroidBindingContext bindingContex) : base(context, bindingContex)
         {
             this.context = context;
             this.ItemSource = ItemSource;
@@ -49,36 +48,31 @@ namespace Naxam.Busuu.Droid.Learning.Control
             return ItemSource.ElementAt(groupPosition);
         }
 
+        public override View GetChildView(int groupPosition, int childPosition, bool isLastChild, View convertView, ViewGroup parent)
+        {
+            var view = base.GetChildView(groupPosition, childPosition, isLastChild, convertView, parent);
+            ExerciesView item = view.FindViewById<ExerciesView>(Resource.Id.exerciseView);
+            if (isLastChild)
+            {
+               
+                ((LinearLayout.LayoutParams)item.LayoutParameters).BottomMargin = (int)Util.Util.PxFromDp(view.Context, 56);
+            }
+            else
+            {
+                ((LinearLayout.LayoutParams)item.LayoutParameters).BottomMargin = (int)Util.Util.PxFromDp(view.Context, 24);
+            }
+            return view;
+        }
+
         public override View GetGroupView(int groupPosition, bool isExpanded, View convertView, ViewGroup parent)
         {
-            // LessonHeaderBackground LessonHeader = (LessonHeaderBackground)base.GetGroupView(groupPosition, isExpanded, convertView, parent);
-            if (convertView == null)
-            {
-                convertView = LayoutInflater.FromContext(context).Inflate(Resource.Layout.layout_lesson_header, null);
-            }
-            LessonHeaderBackground LessonHeader = (LessonHeaderBackground)convertView;
+            LessonHeaderBackground LessonHeader = (LessonHeaderBackground)base.GetGroupView(groupPosition, isExpanded, convertView, parent);
+
             TextView txtLessonName = LessonHeader.FindViewById<TextView>(Resource.Id.txtLessonName);
             TextView txtLessonNumber = LessonHeader.FindViewById<TextView>(Resource.Id.txtLessonNumber);
             ImageView btnDownload = LessonHeader.FindViewById<ImageView>(Resource.Id.btnDownload);
-            LessonModel lesson = ItemSource.ElementAt(groupPosition);
-            txtLessonNumber.Text = lesson.LessonNumber;
-            txtLessonName.Text = lesson.LessonName;
-            LessonHeader.BackgroundColor = Color.ParseColor(lesson.Color);
-            CircleProgress progress = LessonHeader.FindViewById<CircleProgress>(Resource.Id.circle_progress);
-            progress.Progress = lesson.Percent;
 
-            Color color = Color.ParseColor(lesson.Color);
-            var red = Color.GetRedComponent(color);
-            var blue = Color.GetBlueComponent(color);
-            var green = Color.GetGreenComponent(color);
-            progress.FinishedColor = Color.Argb(80, red, green, blue);
-
-            GradientDrawable drawable = new GradientDrawable();
-            drawable.SetShape(ShapeType.Rectangle);
-            drawable.SetStroke((int)Util.Util.PxFromDp(context, 1), Color.Argb(160, red, green, blue));
-            drawable.SetCornerRadius(Util.Util.PxFromDp(context, 1000));
-            progress.Background = drawable;
-
+            btnDownload.Clickable = true;
 
             btnDownload.Click += (s, e) =>
             {
@@ -121,10 +115,6 @@ namespace Naxam.Busuu.Droid.Learning.Control
         }
 
         bool busy;
-
-        public override int GroupCount => ItemSource.Count;
-
-        public override bool HasStableIds => false;
 
         public void InitAnim(LessonHeaderBackground view, PositionClick e, bool expand, int position)
         {
@@ -240,88 +230,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             backgroundAnim.SetDuration(100);
             backgroundAnim.Start();
         }
-
-        public override Java.Lang.Object GetChild(int groupPosition, int childPosition)
-        {
-            return null;
-        }
-
-        public override long GetChildId(int groupPosition, int childPosition)
-        {
-            return 0;
-        }
-
-        public override int GetChildrenCount(int groupPosition)
-        {
-            return ItemSource.ElementAt(groupPosition).Count;
-        }
-
-        public override View GetChildView(int groupPosition, int childPosition, bool isLastChild, View convertView, ViewGroup parent)
-        {
-            TopicModel topic = ItemSource.ElementAt(groupPosition).ElementAt(childPosition);
-            if (convertView == null)
-            {
-                convertView = LayoutInflater.FromContext(context).Inflate(Resource.Layout.layout_topic_item, null);
-            }
-            TextView txtTopic = convertView.FindViewById<TextView>(Resource.Id.txtTopic);
-            TextView txtTime = convertView.FindViewById<TextView>(Resource.Id.txtTime);
-            //NXRecyclerView recycerExercise = convertView.FindViewById<NXRecyclerView>(Resource.Id.recyclerExercise);
-            txtTopic.Text = topic.Toppic;
-            txtTime.Text = topic.Time + topic.Time > 1 ? "minutes" : "minute";
-            return convertView;
-
-        }
-
-        public override Java.Lang.Object GetGroup(int groupPosition)
-        {
-            return null;
-        }
-
-        public override long GetGroupId(int groupPosition)
-        {
-            return 0;
-        }
-
-        public override bool IsChildSelectable(int groupPosition, int childPosition)
-        {
-            return false;
-        }
-    }
-    public class ClickListener : Java.Lang.Object, View.IOnClickListener
-    {
-        public void OnClick(View v)
-        {
-            throw new NotImplementedException();
-        }
-    }
-    public class TouchClick : Java.Lang.Object, View.IOnTouchListener, View.IOnClickListener
-    {
-        public Action<PositionClick> Clicked;
-        PositionClick pos;
-        public TouchClick(Action<PositionClick> click)
-        {
-            Clicked = click;
-        }
-
-        public void OnClick(View v)
-        {
-            Clicked?.Invoke(pos);
-        }
-
-        public bool OnTouch(View v, MotionEvent e)
-        {
-            this.pos = new PositionClick
-            {
-                X = e.GetX(),
-                Y = e.GetY()
-            };
-            return false;
-        }
     }
 
-    public class PositionClick
-    {
-        public float X { get; set; }
-        public float Y { get; set; }
-    }
+
 }

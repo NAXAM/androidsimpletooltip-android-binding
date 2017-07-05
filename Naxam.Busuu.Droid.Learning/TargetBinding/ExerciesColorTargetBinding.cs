@@ -10,24 +10,25 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.Droid.Target;
-using MvvmCross.Core.ViewModels;
+using Android.Graphics;
 using Naxam.Busuu.Droid.Learning.Control;
 using MvvmCross.Binding;
 
 namespace Naxam.Busuu.Droid.Learning.TargetBinding
 {
-    public class DownloadCommandTargetBinding : MvxAndroidTargetBinding
+    public class ExerciesColorTargetBinding : MvxAndroidTargetBinding
     {
-        public DownloadCommandTargetBinding(object target) : base(target)
+        public ExerciesColorTargetBinding(object target) : base(target)
         {
         }
 
-        public override Type TargetType => typeof(NXMvxExpandableListView);
+        public override Type TargetType => typeof(ExerciesView);
 
         protected override void SetValueImpl(object target, object value)
         {
-            NXMvxExpandableListView view = (NXMvxExpandableListView)target;
-            view.DownloadCommand = (IMvxCommand)value;
+            ExerciesView view = (ExerciesView)target;
+            view.Color = Color.ParseColor(value.ToString());
+            view.Init();
         }
 
         public override MvxBindingMode DefaultMode => MvxBindingMode.OneWay;

@@ -12,6 +12,8 @@
       android:layout_width="80dp"
       android:layout_height="80dp"
       android:layout_marginLeft="16dp"
+      android:padding="16dp"
+      android:background="@drawable/background_circle_white"
       android:layout_gravity="center_vertical"
       android:scaleType="fitXY"
       app:MvxBind="Source Icon"
@@ -39,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-         app:MvxBind="Text Name"
+         app:MvxBind="Text LessonNumber"
           android:textColor="#3791CE"
             />
     <TextView
@@ -48,7 +50,7 @@
         android:layout_height="wrap_content"
         android:textColor="#3791CE"
         android:textSize="18sp"
-        app:MvxBind="Text Title"
+        app:MvxBind="Text LessonName"
             />
   </LinearLayout>
   <ImageView

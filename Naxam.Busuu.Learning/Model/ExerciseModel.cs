@@ -11,30 +11,57 @@ namespace Naxam.Busuu.Learning.Model
 
     public class ExerciseModel : MvxNotifyPropertyChanged
     {
+        //public enum ExerciseType
+        //{
+        //    HearConversation,
+        //    FillConversation,
+        //    FillSentence,
+        //    OrderWord,
+        //    Write,
+        //    Synonymous
+        //}
+
         public enum ExerciseType
         {
-            HearConversation,
-            FillConversation,
-            FillSentence,
-            OrderWord,
-            Write,
-            Synonymous
+            Vocabulary,
+            Memorability,
+            Discovery,
+            Evolution,
+            Practice,
+            Bubbles
         }
 
-        private bool _withAudio;
+        private ExerciseType _type;
 
-        public bool WithAudio
+        public ExerciseType Type
         {
-            get { return _withAudio; }
+            get { return _type; }
             set
             {
-                if (_withAudio != value)
+                if (_type != value)
                 {
-                    _withAudio = value;
+                    _type = value;
                     RaisePropertyChanged();
                 }
             }
         }
+
+        private string _color;
+
+        public string Color
+        {
+            get { return _color; }
+            set
+            {
+                if (_color != value)
+                {
+                    _color = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+
 
         private string _name;
 
@@ -46,6 +73,21 @@ namespace Naxam.Busuu.Learning.Model
                 if (_name != value)
                 {
                     _name = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        private bool _isDone;
+
+        public bool IsDone
+        {
+            get { return _isDone; }
+            set
+            {
+                if (_isDone != value)
+                {
+                    _isDone = value;
                     RaisePropertyChanged();
                 }
             }

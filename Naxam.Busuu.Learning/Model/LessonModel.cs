@@ -39,38 +39,39 @@ namespace Naxam.Busuu.Learning.Model
             get { return _color; }
             set
             {
-                _color = value;
-                
+                _color = value; 
             }
         }
-        
-        private string _name;
 
-        public string Name
+        private string _lessonNumber;
+
+        public string LessonNumber
         {
-            get { return _name; }
+            get { return _lessonNumber; }
             set
             {
-                if (_name != value)
+                if (_lessonNumber != value)
                 {
-                    _name = value; 
+                    _lessonNumber = value; 
                 }
             }
         }
 
-        private string _title;
+        private string _lessonName;
 
-        public string Title
+        public string LessonName
         {
-            get { return _title; }
+            get { return _lessonName; }
             set
             {
-                if (_title != value)
+                if (_lessonName != value)
                 {
-                    _title = value; 
+                    _lessonName = value; 
                 }
             }
         }
+
+
         public int Percent { get; set; }
 
         public string Icon { get; set; } 

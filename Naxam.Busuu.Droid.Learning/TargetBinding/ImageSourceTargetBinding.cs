@@ -27,8 +27,7 @@ namespace Naxam.Busuu.Droid.Learning.TargetBinding
 
         protected override void SetValueImpl(object target, object value)
         {
-            ImageView view = (ImageView)target;
-            GridLayoutManager grid = new GridLayoutManager(null, 1);
+            ImageView view = (ImageView)target; 
            
             Glide.With(view.Context)
                 .Load(value.ToString())

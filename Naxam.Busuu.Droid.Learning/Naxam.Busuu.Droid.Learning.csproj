@@ -135,12 +135,24 @@
     <Compile Include="Control\AnimationListener.cs" />
     <Compile Include="Control\AnimatorListener.cs" />
     <Compile Include="Control\AnimatorUpdateListener.cs" />
+    <Compile Include="Control\ExerciesView.cs" />
     <Compile Include="Control\LessonHeader.cs" />
+    <Compile Include="Control\NXMvxExpandableListView.cs" />
+    <Compile Include="Control\NXMvxExpandableListAdapter.cs" />
     <Compile Include="Control\NXExpandableListView.cs" />
+    <Compile Include="Converter\AlphaColorConverter.cs" />
+    <Compile Include="Converter\BoolToColorConverter.cs" />
+    <Compile Include="Converter\ExerciseTypeToDrawableConverter.cs" />
+    <Compile Include="Converter\ReverseBoolConverter.cs" />
+    <Compile Include="Converter\ReverseColorConverter.cs" />
     <Compile Include="TargetBinding\BackgroundColorTargetBinding.cs" />
+    <Compile Include="TargetBinding\BackgroundTargetBinding.cs" />
     <Compile Include="TargetBinding\BorderTargetBinding.cs" />
     <Compile Include="TargetBinding\CircleTranform.cs" />
     <Compile Include="TargetBinding\DownloadCommandTargetBinding.cs" />
+    <Compile Include="TargetBinding\ExerciesColorTargetBinding.cs" />
+    <Compile Include="TargetBinding\ExerciesItemsSourceTargetBinding.cs" />
+    <Compile Include="TargetBinding\ImageResourceTargetBinding.cs" />
     <Compile Include="TargetBinding\ImageSourceTargetBinding.cs" />
     <Compile Include="TargetBinding\LessonHeaderTargetBinding.cs" />
     <Compile Include="Control\NXExpandableListAdapter.cs" />
@@ -149,6 +161,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TargetBinding\FinishColorTargetBinding.cs" />
     <Compile Include="TargetBinding\PercentTargetBinding.cs" />
+    <Compile Include="TargetBinding\TintColorTargetBinding.cs" />
     <Compile Include="Util\Util.cs" />
     <Compile Include="Views\BuyPremiumView.cs" />
     <Compile Include="Views\ChangeLanguageView.cs" />
@@ -358,10 +371,14 @@
     <AndroidResource Include="Resources\drawable\background_circle_white.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Layout\layout_exercise_item.xml" />
+    <AndroidResource Include="Resources\Layout\layout_exercise_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Layout\layout_topic_item.xml" />
+    <AndroidResource Include="Resources\Layout\layout_topic_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_component_memorise.png" />
@@ -390,6 +407,36 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_download_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_book_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_book_side.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_book_tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_bubbles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_cloud_tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_dialogue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_recording.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_vocabulary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\selector_list_item.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
