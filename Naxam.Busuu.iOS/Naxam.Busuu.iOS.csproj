@@ -117,6 +117,9 @@
     <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Layer 0%402x.png" />
     <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Layer 0%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_back.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_back.imageset\Layer 0%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_back.imageset\Layer 0%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -130,6 +133,7 @@
     <Folder Include="Assets.xcassets\test.imageset\" />
     <Folder Include="Assets.xcassets\ic_filter.imageset\" />
     <Folder Include="Assets.xcassets\play_icon_small.imageset\" />
+    <Folder Include="Assets.xcassets\ic_back.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

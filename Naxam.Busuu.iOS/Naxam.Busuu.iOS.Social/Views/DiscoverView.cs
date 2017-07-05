@@ -28,14 +28,13 @@ namespace Naxam.Busuu.iOS.Social.Views
             DiscoverCollectionView.SetCollectionViewLayout(myFlow, true);
 		
             MvxCollectionViewSource dSource = new MvxCollectionViewSource(DiscoverCollectionView, (NSString)"DiscoverCell");
+
 			var setBinding = this.CreateBindingSet<DiscoverView, DiscoverViewModel>();
 			setBinding.Bind(dSource).To(vm => vm.DiscoverData);
 			setBinding.Apply();
 
             DiscoverCollectionView.Source = dSource;
-			DiscoverCollectionView.BackgroundColor = null;
-
-            DiscoverCollectionView.ReloadData();
+			DiscoverCollectionView.BackgroundColor = null;			
         }
 	}
 

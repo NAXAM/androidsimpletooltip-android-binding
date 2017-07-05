@@ -26,14 +26,13 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 			base.ViewDidLoad();
 
-            MvxSimpleTableViewSource fSource = new MvxSimpleTableViewSource(FriendsTableView, typeof(FriendsCell), "FriendsCell");
-            FriendsTableView.Source = fSource;			
+            var fSource = new MvxSimpleTableViewSource(FriendsTableView, typeof(FriendsCell), "FriendsCell");
 
-            var setBinding = this.CreateBindingSet<FriendsView, FriendsViewModel>();
-            setBinding.Bind(fSource).To(vm => vm.FriendsData);
+			var setBinding = this.CreateBindingSet<FriendsView, FriendsViewModel>();
+			setBinding.Bind(fSource).To(vm => vm.FriendsData);
 			setBinding.Apply();
 
-			FriendsTableView.ReloadData();
+            FriendsTableView.Source = fSource;			
         }
 	}
 }
