@@ -3,10 +3,13 @@
 using System;
 
 using Foundation;
-using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Views;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Social.ViewModels;
 using UIKit;
+using MvvmCross.Binding.iOS.Views;
+using Naxam.Busuu.iOS.Social.Cells;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
@@ -19,10 +22,18 @@ namespace Naxam.Busuu.iOS.Social.Views
 
         public override void ViewDidLoad()
         {
-			this.Request = new MvxViewModelRequest<FriendsViewModel>(null, null);
+	        Request = new MvxViewModelRequest<FriendsViewModel>(null, null);
 
 			base.ViewDidLoad();
-           
+
+            MvxSimpleTableViewSource fSource = new MvxSimpleTableViewSource(FriendsTableView, typeof(FriendsCell), "FriendsCell");
+            FriendsTableView.Source = fSource;			
+
+            var setBinding = this.CreateBindingSet<FriendsView, FriendsViewModel>();
+            setBinding.Bind(fSource).To(vm => vm.FriendsData);
+			setBinding.Apply();
+
+			FriendsTableView.ReloadData();
         }
 	}
 }

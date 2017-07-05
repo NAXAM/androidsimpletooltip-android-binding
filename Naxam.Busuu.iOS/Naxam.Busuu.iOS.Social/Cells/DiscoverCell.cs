@@ -8,9 +8,8 @@ using CoreGraphics;
 using MvvmCross.Platform.Converters;
 using System.Globalization;
 using AVFoundation;
-using AudioToolbox;
 
-namespace Naxam.Busuu.iOS.Social
+namespace Naxam.Busuu.iOS.Social.Cells
 {
     public partial class DiscoverCell : MvxCollectionViewCell
     {      
@@ -31,7 +30,7 @@ namespace Naxam.Busuu.iOS.Social
 
             this.DelayBind(() =>
             {
-                var setBinding = this.CreateBindingSet<DiscoverCell, Discover>();
+                var setBinding = this.CreateBindingSet<DiscoverCell, DiscoverModel>();
                 setBinding.Bind(_loaderImageUser).To(d => d.Avatar).WithConversion(new ImageUriValueConverter(), null);
                 setBinding.Bind(NameUser).To(d => d.Name);
                 setBinding.Bind(Country).To(d => d.Country);

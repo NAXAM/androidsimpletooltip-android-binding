@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Social.Models;
 
 namespace Naxam.Busuu.Social.Serveices
 {
-    public interface IDataDiscover
+    public interface IDataFriends
     {
-         Task<List<DiscoverModel>> GetAllDiscover();
+        Task<MvxObservableCollection<FriendsModel>> GetAllFriends();
     }
 }

@@ -68,7 +68,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 			IsAnimationViewBar = true;
 			UIView.BeginAnimations("slideAnimation");
-			UIView.SetAnimationDuration(0.5);
+			UIView.SetAnimationDuration(0.3);
 			UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
 			UIView.SetAnimationDelegate(this);
 			UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
@@ -98,7 +98,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 			IsAnimationViewBar = false;
 			UIView.BeginAnimations("slideAnimation");
-			UIView.SetAnimationDuration(0.5);
+			UIView.SetAnimationDuration(0.3);
 			UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
 			UIView.SetAnimationDelegate(this);
 			UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));

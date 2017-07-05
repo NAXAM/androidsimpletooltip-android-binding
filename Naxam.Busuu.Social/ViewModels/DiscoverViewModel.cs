@@ -10,14 +10,14 @@ namespace Naxam.Busuu.Social.ViewModels
     {
 		readonly IDataDiscover _datadiscover;
 
-		private List<Discover> _discover;
+		private List<DiscoverModel> _discover;
 
         public DiscoverViewModel(IDataDiscover datadiscover)
         {
             _datadiscover = datadiscover;
         }
 
-		public List<Discover> Discovers
+		public List<DiscoverModel> DiscoverData
 		{
 			get => _discover;
 			set => SetProperty(ref _discover, value);
@@ -25,7 +25,7 @@ namespace Naxam.Busuu.Social.ViewModels
 
         public async override void Start()
 		{
-            Discovers = await _datadiscover.GetAllDiscover();
+            DiscoverData = await _datadiscover.GetAllDiscover();
 			base.Start();
 		}
     }

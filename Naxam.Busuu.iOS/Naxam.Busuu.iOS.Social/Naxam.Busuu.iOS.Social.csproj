@@ -110,6 +110,10 @@
     <Compile Include="Views\SocialPageView.designer.cs">
       <DependentUpon>SocialPageView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cells\FriendsCell.cs" />
+    <Compile Include="Cells\FriendsCell.designer.cs">
+      <DependentUpon>FriendsCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">

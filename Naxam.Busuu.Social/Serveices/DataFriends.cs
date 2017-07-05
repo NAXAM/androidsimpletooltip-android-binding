@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Social.Models;
 
 namespace Naxam.Busuu.Social.Serveices
 {
-    public class DataDiscover : IDataDiscover
+    public class DataFriends : IDataFriends
     {
-        public Task<List<DiscoverModel>> GetAllDiscover()
-        {
-            var list = new List<DiscoverModel>()
+        public Task<MvxObservableCollection<FriendsModel>> GetAllFriends()
+        {          
+			var list = new MvxObservableCollection<FriendsModel>()
             {
-                new DiscoverModel()
+                new FriendsModel()
                 {
                     Id = 0,
                     Avatar = "user_avatar_placeholder.png",
@@ -22,9 +23,10 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!\nI am a new member.",
-                    PublicTime = "29/5/2017"
+                    PublicTime = "29/5/2017",
+                    Star = "5"                         
                 },
-				new DiscoverModel()
+				new FriendsModel()
 				{
 					Id = 1,
 					Avatar = "user_avatar_placeholder.png",
@@ -35,9 +37,10 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3",
-					PublicTime = "29/5/2017"
-                },
-				new DiscoverModel()
+					PublicTime = "29/5/2017",
+                    Star = "5"
+				},
+				new FriendsModel()
                 {
                     Id = 2,
                     Avatar = "user_avatar_placeholder.png",
@@ -48,9 +51,10 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = false,
 					Write = "Hello Naxam!",
-					PublicTime = "28/5/2017"
+					PublicTime = "28/5/2017",
+                    Star = "4.5"
 				},
-				new DiscoverModel()
+				new FriendsModel()
 				{
 					Id = 3,
 					Avatar = "user_avatar_placeholder.png",
@@ -61,9 +65,10 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.\nI am a new member.\nI am a new member.",
-					PublicTime = "21/5/2017"
+					PublicTime = "21/5/2017",
+                    Star = "4"
 				},
-				new DiscoverModel()
+				new FriendsModel()
 				{
 					Id = 4,
 					Avatar = "user_avatar_placeholder.png",
@@ -74,9 +79,10 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
-                    PublicTime = "21/5/2017"
+                    PublicTime = "21/5/2017",
+                    Star = "3.5"
 				},
-				new DiscoverModel()
+				new FriendsModel()
 				{
 					Id = 5,
 					Avatar = "user_avatar_placeholder.png",
@@ -87,9 +93,10 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!",
-					PublicTime = "21/5/2017"
+					PublicTime = "21/5/2017",
+                    Star = "3"
 				},
-                new DiscoverModel()
+                new FriendsModel()
 				{
 					Id = 6,
 					Avatar = "user_avatar_placeholder.png",
@@ -100,9 +107,10 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
-                    PublicTime = "19/5/2017"
+                    PublicTime = "19/5/2017",
+                    Star = "2.5"
 				},
-			    new DiscoverModel()
+			    new FriendsModel()
                 {
                     Id = 7,
                     Avatar = "user_avatar_placeholder.png",
@@ -113,9 +121,10 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = false,
 					Write = "Hello Naxam!",
-					PublicTime = "19/5/2017"
+					PublicTime = "19/5/2017",
+                    Star = "2"
 				},
-				new DiscoverModel()
+				new FriendsModel()
 				{
 					Id = 8,
 					Avatar = "user_avatar_placeholder.png",
@@ -126,9 +135,10 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = true,
                     Write = "Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3",
-                    PublicTime = "19/5/2017"
+                    PublicTime = "19/5/2017",
+                    Star = "0"
 				},
-				new DiscoverModel()
+				new FriendsModel()
 				{
 					Id = 9,
 					Avatar = "user_avatar_placeholder.png",
@@ -139,9 +149,10 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.",
-					PublicTime = "29/5/2017"
+					PublicTime = "29/5/2017",
+                    Star = "5"
 				},
-				new DiscoverModel()
+				new FriendsModel()
 				{
 					Id = 10,
 					Avatar = "user_avatar_placeholder.png",
@@ -152,7 +163,8 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
-                    PublicTime = "29/5/2017"
+                    PublicTime = "29/5/2017",
+                    Star = "4.5"
 				},
             };
             return Task.FromResult(list);

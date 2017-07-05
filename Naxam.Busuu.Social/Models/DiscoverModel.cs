@@ -2,7 +2,7 @@
 
 namespace Naxam.Busuu.Social.Models
 {
-    public class Discover
+    public class DiscoverModel
     {
         public uint Id { get; set; }
         public string Avatar { get; set; }
@@ -15,7 +15,7 @@ namespace Naxam.Busuu.Social.Models
 		public string Write { get; set; }
         public string PublicTime { get; set; }
 
-        public Discover()
+        public DiscoverModel()
         {
             
         }
