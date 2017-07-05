@@ -90,7 +90,7 @@ namespace Naxam.Busuu.Profile.ViewModel
 
         public LoginViewModel()
         {
-            ShowViewModel<MainViewModel>();
+           // ShowViewModel<MainViewModel>();
         }
         // Validating information here 
 

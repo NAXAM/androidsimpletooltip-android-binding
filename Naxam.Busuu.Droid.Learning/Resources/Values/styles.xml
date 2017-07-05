@@ -7,4 +7,10 @@
     <item name="android:textColorSecondary">@color/colorHintEditText</item>
     <item name="android:windowActionBar">false</item>
   </style>
+  <style name="StyleNextButton">
+    <item name="android:textColor">#ffffff</item>
+    <item name="android:layout_margin">16dp</item>
+    <item name="android:background">@drawable/background_circle_green</item>
+    <item name="android:textSize">18sp</item>
+  </style>
 </resources>

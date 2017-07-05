@@ -35,13 +35,23 @@ namespace Naxam.Busuu.Droid.Learning.Views
             OnGroupClickListener GroupClick = new OnGroupClickListener(this);
             menu.NavigationItemSelected += Menu_NavigationItemSelected;
             expLessons = FindViewById<NXMvxExpandableListView>(Resource.Id.expLessons);
-            NXMvxExpandableListAdapter adapter = new NXMvxExpandableListAdapter(this, (IList<LessonModel>)expLessons.ItemsSource, (IMvxAndroidBindingContext)BindingContext) {
+            NXMvxExpandableListAdapter adapter = new NXMvxExpandableListAdapter(this, (IList<LessonModel>)expLessons.ItemsSource, (IMvxAndroidBindingContext)BindingContext)
+            {
                 GroupTemplateId = expLessons.GroupTemplateId,
                 ItemTemplateId = expLessons.ItemTemplateId
             };
+            adapter.ExerciseClick += (s, e) =>
+            {
+                if (expLessons.ExerciseClickCommand == null)
+                    return;
+                if (expLessons.ExerciseClickCommand.CanExecute(e))
+                {
+                    expLessons.ExerciseClickCommand.Execute(e);
+                }
+            };
             adapter.DownloadClick += (s, e) =>
             {
-                if (expLessons == null)
+                if (expLessons.DownloadCommand == null)
                     return;
                 if (expLessons.DownloadCommand.CanExecute(e))
                 {
@@ -65,7 +75,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
             expLessons.SetOnTouchListener(GroupClick);
             expLessons.GroupExpand += ExpLessons_GroupExpand;
             expLessons.GroupCollapse += ExpLessons_GroupCollapse;
-            expLessons.OffsetTopAndBottom(0); 
+            expLessons.OffsetTopAndBottom(0);
         }
 
 

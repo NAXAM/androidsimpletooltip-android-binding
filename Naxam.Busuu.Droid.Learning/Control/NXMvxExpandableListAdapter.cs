@@ -18,6 +18,7 @@ using Android.Util;
 using Android.Graphics;
 using Android.Graphics.Drawables.Shapes;
 using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Core.ViewModels;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
@@ -25,6 +26,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
     {
         Context context; IList<LessonModel> ItemSource;
         public event EventHandler<int> DownloadClick;
+        public event EventHandler<ExerciseClickEventArg> ExerciseClick;
         int[][] states = new int[][] {
                             new int[] { Android.Resource.Attribute.StateEnabled}, // enabled
                             new int[] {-Android.Resource.Attribute.StateEnabled}, // disabled
@@ -52,9 +54,19 @@ namespace Naxam.Busuu.Droid.Learning.Control
         {
             var view = base.GetChildView(groupPosition, childPosition, isLastChild, convertView, parent);
             ExerciesView item = view.FindViewById<ExerciesView>(Resource.Id.exerciseView);
+            item.ExerciseClick += (s, e) =>
+            {
+                ExerciseClick?.Invoke(this, new ExerciseClickEventArg
+                {
+                    LessonIndex = groupPosition,
+                    TopicIndex = childPosition,
+                    Exercise = e.Exercise,
+                    ExerciseIndex = e.ExerciseIndex
+                });
+            };
             if (isLastChild)
             {
-               
+
                 ((LinearLayout.LayoutParams)item.LayoutParameters).BottomMargin = (int)Util.Util.PxFromDp(view.Context, 56);
             }
             else

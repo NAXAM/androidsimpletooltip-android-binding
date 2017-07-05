@@ -79,7 +79,9 @@ namespace Naxam.Busuu.Learning.ViewModel
 
             string[] icons = new string[]
             {
-
+                "http://app4e.net/busuu/lesson1.png",
+                "http://app4e.net/busuu/lesson2.png",
+                "http://app4e.net/busuu/lesson3.png",
             };
 
 
@@ -93,7 +95,7 @@ namespace Naxam.Busuu.Learning.ViewModel
                     LessonName = " title " + random.Next(1, 50),
                     Color = color[i % 3],
                     Percent = random.Next(1, 100),
-                    Icon = "http://www.jeremedia.ca/japan/domo1.jpg"
+                    Icon = icons[i % 3]
                 }; 
                 Lessons.Add(lesson);
             }
@@ -153,5 +155,20 @@ namespace Naxam.Busuu.Learning.ViewModel
         {
             
         }
+
+        private IMvxCommand _ExerciseClickCommand;
+
+        public IMvxCommand ExerciseClickCommand
+        {
+            get { return _ExerciseClickCommand = _ExerciseClickCommand ?? new MvxCommand<ExerciseClickEventArg>(RunExerciseClickCommand); }
+
+        }
+
+        void RunExerciseClickCommand(ExerciseClickEventArg e)
+        {
+
+        }
+
+
     }
 }

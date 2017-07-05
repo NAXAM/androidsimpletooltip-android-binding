@@ -28,7 +28,7 @@
       android:textColor="#e13a4249"
       android:alpha="0.8"
       android:textSize="14sp"
-      app:MvxBind="Text Time"
+      app:MvxBind="Text Time, Converter = MinuteToString"
         />
   <!--<Naxam.Busuu.Droid.Learning.Control.NXRecyclerView
         android:id="@+id/recyclerExercise"
@@ -47,12 +47,13 @@
   <Naxam.Busuu.Droid.Learning.Control.ExerciesView
         android:id="@+id/exerciseView"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent" 
-        android:layout_marginBottom="24dp" 
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
         android:gravity="center"
-        android:layout_gravity="center"  
+        android:layout_gravity="center"
         android:orientation="horizontal"
         android:background="@drawable/background_strike_line_white_padding"
-        app:MvxBind="ItemsSource Exercises;Color Color"
+        app:MvxBind="ItemsSource Exercises;Color Color;"
     />
 </LinearLayout>

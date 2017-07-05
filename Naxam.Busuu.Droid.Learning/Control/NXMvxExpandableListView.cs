@@ -37,6 +37,6 @@ namespace Naxam.Busuu.Droid.Learning.Control
 
 
         public IMvxCommand DownloadCommand { set; get; }
-
+        public IMvxCommand ExerciseClickCommand { set; get; }
     }
 }

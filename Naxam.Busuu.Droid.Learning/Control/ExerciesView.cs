@@ -19,11 +19,12 @@ using Android.Graphics.Drawables.Shapes;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
+
     public class ExerciesView : LinearLayout
     {
         public Color Color;
         public IList<ExerciseModel> ItemsSource { get; set; }
-
+        public event EventHandler<ExerciseClickEventArg> ExerciseClick;
         public ExerciesView(Context context) : base(context)
         {
 
@@ -62,12 +63,12 @@ namespace Naxam.Busuu.Droid.Learning.Control
         public void Init()
         {
             RemoveAllViews();
-            if (Color == new Color(0,0,0,0) || ItemsSource == null)
+            if (Color == new Color(0, 0, 0, 0) || ItemsSource == null)
                 return;
             for (int i = 0; i < ItemsSource.Count; i++)
             {
 
-                View temp = LayoutInflater.FromContext(Context).Inflate(Resource.Layout.layout_exercise_item, null);
+                var temp = LayoutInflater.FromContext(Context).Inflate(Resource.Layout.layout_exercise_item, null);
                 ImageView imgExercise = temp.FindViewById<ImageView>(Resource.Id.imgExercise);
                 ImageView imgLock = temp.FindViewById<ImageView>(Resource.Id.imgLock);
                 imgExercise.SetImageResource(GetSource(ItemsSource.ElementAt(i).Type));
@@ -84,7 +85,16 @@ namespace Naxam.Busuu.Droid.Learning.Control
                 var param = new LinearLayout.LayoutParams(LayoutParams.WrapContent, LayoutParams.WrapContent);
                 if (i > 0)
                     param.LeftMargin = (int)Util.Util.PxFromDp(Context, 16);
-
+                ExerciseModel tempEx = ItemsSource.ElementAt(i);
+                var tempIndex = i;
+                temp.Click += (s, e) =>
+                {
+                    ExerciseClick?.Invoke(this, new ExerciseClickEventArg
+                    {
+                        Exercise = tempEx,
+                        ExerciseIndex = tempIndex
+                    });
+                };
                 AddView(temp, param);
 
             }
