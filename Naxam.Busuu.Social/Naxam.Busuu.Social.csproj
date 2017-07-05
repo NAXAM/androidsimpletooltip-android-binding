@@ -38,6 +38,8 @@
     <Compile Include="Serveices\IDataDiscover.cs" />
     <Compile Include="Serveices\DataDiscover.cs" />
     <Compile Include="ViewModels\SocialViewModel.cs" />
+    <Compile Include="ViewModels\DiscoverViewModel.cs" />
+    <Compile Include="ViewModels\FriendsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

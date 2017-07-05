@@ -34,7 +34,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
                     Speak = true,
-					Write = "Hello Naxam!\nI am a new member.\nI am a new member.\nI am a new member.",
+                    Write = "Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3",
 					PublicTime = "29/5/2017"
                 },
 				new Discover()
@@ -73,8 +73,8 @@ namespace Naxam.Busuu.Social.Serveices
 					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
                     Speak = true,
-					Write = "Hello Naxam!",
-					PublicTime = "21/5/2017"
+                    Write = "Nokia-tune-Nokia-tune.mp3",
+                    PublicTime = "21/5/2017"
 				},
 				new Discover()
 				{
@@ -99,8 +99,8 @@ namespace Naxam.Busuu.Social.Serveices
 					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
                     Speak = true,
-					Write = "Hello Naxam!",
-					PublicTime = "19/5/2017"
+                    Write = "Nokia-tune-Nokia-tune.mp3",
+                    PublicTime = "19/5/2017"
 				},
 			    new Discover()
                 {
@@ -125,8 +125,8 @@ namespace Naxam.Busuu.Social.Serveices
 					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
 					Speak = true,
-					Write = "Hello Naxam!",
-					PublicTime = "19/5/2017"
+                    Write = "Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3",
+                    PublicTime = "19/5/2017"
 				},
 				new Discover()
 				{
@@ -151,8 +151,8 @@ namespace Naxam.Busuu.Social.Serveices
 					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
 					Speak = true,
-					Write = "Hello Naxam!\nI am a new member.",
-					PublicTime = "29/5/2017"
+                    Write = "Nokia-tune-Nokia-tune.mp3",
+                    PublicTime = "29/5/2017"
 				},
             };
             return Task.FromResult(list);

@@ -3,16 +3,26 @@
 using System;
 
 using Foundation;
+using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Views;
+using Naxam.Busuu.Social.ViewModels;
 using UIKit;
 
-namespace Naxam.Busuu.iOS.Social
+namespace Naxam.Busuu.iOS.Social.Views
 {
 	[MvxFromStoryboard(StoryboardName = "Social")]
-	public partial class FriendsView : MvxViewController
+    public partial class FriendsView : MvxViewController<FriendsViewModel>
 	{
 		public FriendsView (IntPtr handle) : base (handle)
 		{
 		}
+
+        public override void ViewDidLoad()
+        {
+			this.Request = new MvxViewModelRequest<FriendsViewModel>(null, null);
+
+			base.ViewDidLoad();
+           
+        }
 	}
 }

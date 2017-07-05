@@ -106,6 +106,10 @@
     <Compile Include="Views\FriendsView.designer.cs">
       <DependentUpon>FriendsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SocialPageView.cs" />
+    <Compile Include="Views\SocialPageView.designer.cs">
+      <DependentUpon>SocialPageView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
@@ -126,8 +130,10 @@
     <BundleResource Include="Resources\flag_small_german.png" />
     <BundleResource Include="Resources\flag_small_portuguese.png" />
     <BundleResource Include="Resources\flag_small_spanish.png" />
-    <BundleResource Include="Resources\play_btn_blue.png" />
     <BundleResource Include="Resources\play_btn.png" />
+    <BundleResource Include="Resources\pause_btn.png" />
+    <BundleResource Include="Resources\Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3" />
+    <BundleResource Include="Resources\Nokia-tune-Nokia-tune.mp3" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

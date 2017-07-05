@@ -9,8 +9,8 @@ using System.CodeDom.Compiler;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
-	[Register ("FriendsView")]
-	partial class FriendsView
+	[Register ("SocialPageView")]
+	partial class SocialPageView
 	{
 		
 		void ReleaseDesignerOutlets ()

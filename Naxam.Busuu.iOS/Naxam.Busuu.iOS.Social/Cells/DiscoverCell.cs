@@ -7,15 +7,21 @@ using Naxam.Busuu.Social.Models;
 using CoreGraphics;
 using MvvmCross.Platform.Converters;
 using System.Globalization;
+using AVFoundation;
+using AudioToolbox;
 
 namespace Naxam.Busuu.iOS.Social
 {
     public partial class DiscoverCell : MvxCollectionViewCell
-    {
-       
+    {      
         private readonly MvxImageViewLoader _loaderImageUser;
         private readonly MvxImageViewLoader _loaderImgSpeak;
         private readonly MvxImageViewLoader _loaderImgLearn;
+
+        private AVAudioPlayer SpeakMusicPlayer;
+        private NSTimer update_timer;
+
+		//UIImage playBtnBg, pauseBtnBg;
 
         public DiscoverCell(IntPtr handle) : base(handle)
         {
@@ -37,8 +43,8 @@ namespace Naxam.Busuu.iOS.Social
 				setBinding.Bind(WriteLabel).To(d => d.Write);
                 setBinding.Bind(_loaderImgLearn).To(d => d.ImageLearn).WithConversion(new ImageUriValueConverter(), null);
                 setBinding.Bind(TextLan).To(d => d.TextLearn);
-                setBinding.Apply();
-            });
+                setBinding.Apply();				
+			});
         }
 
         public override void AwakeFromNib()
@@ -49,15 +55,15 @@ namespace Naxam.Busuu.iOS.Social
 			Layer.ShadowOpacity = 0.3f;
 			Layer.ShadowOffset = new CGSize(2, 2);
 
-			ViewCell.Layer.CornerRadius = 5;
+			ViewCell.Layer.CornerRadius = 2;
 			ViewCell.Layer.MasksToBounds = true;
 
 			var bbcolor = UIColor.FromRGB(224, 230, 235);
 
-			ViewLan.Layer.BorderWidth = 1;
+            ViewLan.Layer.BorderWidth = 0.5f;
 			ViewLan.Layer.BorderColor = bbcolor.CGColor;
 
-			ViewHome.Layer.BorderWidth = 1;
+			ViewHome.Layer.BorderWidth = 0.5f;
 			ViewHome.Layer.BorderColor = bbcolor.CGColor;
 			ViewHome.Layer.CornerRadius = 2;
 			ViewHome.Layer.MasksToBounds = true;
@@ -73,17 +79,99 @@ namespace Naxam.Busuu.iOS.Social
             SliderSpeak.SetThumbImage(img, UIControlState.Normal);
             SliderSpeak.SetThumbImage(img, UIControlState.Selected);
             SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);
+
+			//playBtnBg = UIImage.FromFile("play_btn.png");
+            //pauseBtnBg = UIImage.FromFile("pause_btn.png");			
 		}
 
         public override void LayoutSubviews()
         {
             base.LayoutSubviews();
+
+            string[] arrPathfile = WriteLabel.Text.Split('.');
+            if (arrPathfile.Length == 2)
+            {
+                var fileUrl = NSBundle.MainBundle.PathForResource(arrPathfile[0], arrPathfile[1]);
+                if (fileUrl != null)
+                {
+                    Uri songURL = new NSUrl(fileUrl);
+                    SpeakMusicPlayer = AVAudioPlayer.FromUrl(songURL);
+                    SpeakMusicPlayer.Volume = 1;
+                    SpeakMusicPlayer.NumberOfLoops = 0;
+                    SpeakMusicPlayer.FinishedPlaying += delegate
+                    {
+						UpdateViewForPlayerInfo();
+						UpdateViewForPlayerState();
+                    };
+
+                    UpdateViewForPlayerInfo();
+                    UpdateViewForPlayerState();
+                }
+            }
         }
 
         partial void ButtonPlay_TouchUpInside(NSObject sender)
         {
-
+            if (SpeakMusicPlayer.Playing)
+            {
+                PausePlayback();               
+            }
+            else
+            {
+                StartPlayback();	            
+            }
         }
+
+        void UpdateCurrentTime()
+		{
+            if (SpeakMusicPlayer.Playing)
+            {
+                //lblTime.Text = String.Format("{0:00}:{1:00}", (int)(SpeakMusicPlayer.CurrentTime / 60), (int)(SpeakMusicPlayer.CurrentTime % 60));
+                SliderSpeak.Value = (float)SpeakMusicPlayer.CurrentTime;
+            }
+            else
+            {
+                //ButtonPlay.SetImage(playBtnBg, UIControlState.Normal);
+            }
+		}
+
+		void UpdateViewForPlayerState()
+		{		
+			if (SpeakMusicPlayer.Playing)
+			{
+                update_timer = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.01), delegate
+				{
+					UpdateCurrentTime();
+				});
+			}
+			else
+			{
+                if (update_timer != null)
+                {
+                    update_timer.Invalidate();
+                    update_timer = null;
+                }
+			}
+		}
+
+		void UpdateViewForPlayerInfo()
+		{
+			SliderSpeak.Value = 0;
+			SliderSpeak.MaxValue = (float)SpeakMusicPlayer.Duration;
+            lblTime.Text = String.Format("{0:00}:{1:00}", (int)SpeakMusicPlayer.Duration / 60, (int)SpeakMusicPlayer.Duration % 60);
+		}
+
+		void PausePlayback()
+		{          
+            SpeakMusicPlayer.Pause();
+			UpdateViewForPlayerState();
+		}
+
+		void StartPlayback()
+		{           
+            SpeakMusicPlayer.Play();
+            UpdateViewForPlayerState();
+		}
     }
 
 	public class InverseValueConverter : MvxValueConverter<bool, bool>

@@ -7,20 +7,22 @@ using CoreGraphics;
 using CoreAnimation;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Binding.BindingContext;
+using MvvmCross.Core.ViewModels;
 
-namespace Naxam.Busuu.iOS.Social
+namespace Naxam.Busuu.iOS.Social.Views
 {
 	[MvxFromStoryboard(StoryboardName = "Social")]
-    public partial class DiscoverView : MvxViewController
-    {
-        
+    public partial class DiscoverView : MvxViewController<DiscoverViewModel>
+    {            
         public DiscoverView (IntPtr handle) : base (handle)
         {
         }
 
         public override void ViewDidLoad()
         {
-            base.ViewDidLoad();
+			this.Request = new MvxViewModelRequest<DiscoverViewModel>(null, null);
+
+			base.ViewDidLoad();
 
 			CollectionViewLineLayout myFlow = new CollectionViewLineLayout();
             DiscoverCollectionView.SetCollectionViewLayout(myFlow, true);
@@ -29,18 +31,12 @@ namespace Naxam.Busuu.iOS.Social
 			DiscoverCollectionView.Source = source;
 			DiscoverCollectionView.BackgroundColor = null;
 
-            var setBinding = this.CreateBindingSet<DiscoverView, SocialViewModel>();
+            var setBinding = this.CreateBindingSet<DiscoverView, DiscoverViewModel>();
             setBinding.Bind(source).To(vm => vm.Discovers);
 			setBinding.Apply();
 
             DiscoverCollectionView.ReloadData();
         }
-
-        public override void ViewDidLayoutSubviews()
-        {
-            base.ViewDidLayoutSubviews();
-
-		}
 	}
 
 	public class CollectionViewLineLayout : UICollectionViewFlowLayout

@@ -4,7 +4,7 @@ using System.Reflection;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.iOS.Views.Presenters;
-using Naxam.Busuu.iOS.Social;
+using Naxam.Busuu.iOS.Social.Views;
 using Naxam.Busuu.Social.ViewModels;
 
 namespace Naxam.Busuu.iOS

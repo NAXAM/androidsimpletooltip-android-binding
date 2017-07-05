@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace Naxam.Busuu.iOS.Social
+namespace Naxam.Busuu.iOS.Social.Views
 {
 	[Register ("SocialView")]
 	partial class SocialView
@@ -19,41 +19,54 @@ namespace Naxam.Busuu.iOS.Social
 		UIKit.UIButton ButtonFriends { get; set; }
 
 		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIKit.UIView SocialContainerView { get; set; }
+
+		[Outlet]
 		UIKit.UIView ViewBarItem { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewContainer { get; set; }
 
 		[Outlet]
 		UIKit.UIView ViewSelectForButton { get; set; }
 
-		[Action("ButtonDiscover_TouchUpInside:")]
-		partial void ButtonDiscover_TouchUpInside(Foundation.NSObject sender);
+		[Action ("ButtonDiscover_TouchUpInside:")]
+		partial void ButtonDiscover_TouchUpInside (Foundation.NSObject sender);
 
-		[Action("ButtonFriends_TouchUpInside:")]
-		partial void ButtonFriends_TouchUpInside(Foundation.NSObject sender);
-
+		[Action ("ButtonFriends_TouchUpInside:")]
+		partial void ButtonFriends_TouchUpInside (Foundation.NSObject sender);
+		
 		void ReleaseDesignerOutlets ()
 		{
-			if (ButtonDiscover != null)
-			{
-				ButtonDiscover.Dispose();
+			if (ButtonDiscover != null) {
+				ButtonDiscover.Dispose ();
 				ButtonDiscover = null;
 			}
 
-			if (ButtonFriends != null)
-			{
-				ButtonFriends.Dispose();
+			if (ButtonFriends != null) {
+				ButtonFriends.Dispose ();
 				ButtonFriends = null;
 			}
 
-			if (ViewBarItem != null)
-			{
-				ViewBarItem.Dispose();
+			if (ViewBarItem != null) {
+				ViewBarItem.Dispose ();
 				ViewBarItem = null;
 			}
 
-			if (ViewSelectForButton != null)
-			{
-				ViewSelectForButton.Dispose();
+			if (ViewSelectForButton != null) {
+				ViewSelectForButton.Dispose ();
 				ViewSelectForButton = null;
+			}
+
+			if (SocialContainerView != null) {
+				SocialContainerView.Dispose ();
+				SocialContainerView = null;
+			}
+
+			if (ViewContainer != null) {
+				ViewContainer.Dispose ();
+				ViewContainer = null;
 			}
 		}
 	}

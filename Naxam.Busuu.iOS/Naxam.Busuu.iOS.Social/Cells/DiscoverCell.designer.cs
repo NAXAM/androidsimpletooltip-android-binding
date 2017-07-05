@@ -9,133 +9,141 @@ using System.CodeDom.Compiler;
 
 namespace Naxam.Busuu.iOS.Social
 {
-	[Register ("DiscoverCell")]
-	partial class DiscoverCell
-	{
-		[Outlet]
-		UIKit.NSLayoutConstraint audioViewBottomConstraint { get; set; }
+    [Register ("DiscoverCell")]
+    partial class DiscoverCell
+    {
+        [Outlet]
+        UIKit.NSLayoutConstraint audioViewBottomConstraint { get; set; }
 
-		[Outlet]
-		UIKit.NSLayoutConstraint audioViewTopConstraint { get; set; }
+        [Outlet]
+        UIKit.NSLayoutConstraint audioViewTopConstraint { get; set; }
 
-		[Outlet]
-		UIKit.UIButton ButtonPlay { get; set; }
+        [Outlet]
+        UIKit.UIButton ButtonPlay { get; set; }
 
-		[Outlet]
-		UIKit.UILabel Country { get; set; }
+        [Outlet]
+        UIKit.UILabel Country { get; set; }
 
-		[Outlet]
-		UIKit.UIImageView ImageLan { get; set; }
+        [Outlet]
+        UIKit.UIImageView ImageLan { get; set; }
 
-		[Outlet]
-		UIKit.UIImageView ImageUser { get; set; }
+        [Outlet]
+        UIKit.UIImageView ImageUser { get; set; }
 
-		[Outlet]
-		UIKit.UIImageView ImgSpeak { get; set; }
+        [Outlet]
+        UIKit.UIImageView ImgSpeak { get; set; }
 
-		[Outlet]
-		UIKit.UILabel NameUser { get; set; }
+        [Outlet]
+        UIKit.UILabel lblTime { get; set; }
 
-		[Outlet]
-		UIKit.UISlider SliderSpeak { get; set; }
+        [Outlet]
+        UIKit.UILabel NameUser { get; set; }
 
-		[Outlet]
-		UIKit.UILabel TextLan { get; set; }
+        [Outlet]
+        UIKit.UISlider SliderSpeak { get; set; }
 
-		[Outlet]
-		UIKit.UIView ViewCell { get; set; }
+        [Outlet]
+        UIKit.UILabel TextLan { get; set; }
 
-		[Outlet]
-		UIKit.UIView ViewHome { get; set; }
+        [Outlet]
+        UIKit.UIView ViewCell { get; set; }
 
-		[Outlet]
-		UIKit.UIView ViewLan { get; set; }
+        [Outlet]
+        UIKit.UIView ViewHome { get; set; }
 
-		[Outlet]
-		UIKit.UIView ViewSpeak { get; set; }
+        [Outlet]
+        UIKit.UIView ViewLan { get; set; }
 
-		[Outlet]
-		UIKit.UILabel WriteLabel { get; set; }
+        [Outlet]
+        UIKit.UIView ViewSpeak { get; set; }
 
-		[Action ("ButtonPlay_TouchUpInside:")]
-		partial void ButtonPlay_TouchUpInside (Foundation.NSObject sender);
-		
-		void ReleaseDesignerOutlets ()
-		{
-			if (audioViewBottomConstraint != null) {
-				audioViewBottomConstraint.Dispose ();
-				audioViewBottomConstraint = null;
-			}
+        [Outlet]
+        UIKit.UILabel WriteLabel { get; set; }
 
-			if (audioViewTopConstraint != null) {
-				audioViewTopConstraint.Dispose ();
-				audioViewTopConstraint = null;
-			}
+        [Action ("ButtonPlay_TouchUpInside:")]
+        partial void ButtonPlay_TouchUpInside (Foundation.NSObject sender);
+        
+        void ReleaseDesignerOutlets ()
+        {
+            if (audioViewBottomConstraint != null) {
+                audioViewBottomConstraint.Dispose ();
+                audioViewBottomConstraint = null;
+            }
 
-			if (ButtonPlay != null) {
-				ButtonPlay.Dispose ();
-				ButtonPlay = null;
-			}
+            if (audioViewTopConstraint != null) {
+                audioViewTopConstraint.Dispose ();
+                audioViewTopConstraint = null;
+            }
 
-			if (Country != null) {
-				Country.Dispose ();
-				Country = null;
-			}
+            if (ButtonPlay != null) {
+                ButtonPlay.Dispose ();
+                ButtonPlay = null;
+            }
 
-			if (ImageLan != null) {
-				ImageLan.Dispose ();
-				ImageLan = null;
-			}
+            if (Country != null) {
+                Country.Dispose ();
+                Country = null;
+            }
 
-			if (ImageUser != null) {
-				ImageUser.Dispose ();
-				ImageUser = null;
-			}
+            if (ImageLan != null) {
+                ImageLan.Dispose ();
+                ImageLan = null;
+            }
 
-			if (ImgSpeak != null) {
-				ImgSpeak.Dispose ();
-				ImgSpeak = null;
-			}
+            if (ImageUser != null) {
+                ImageUser.Dispose ();
+                ImageUser = null;
+            }
 
-			if (NameUser != null) {
-				NameUser.Dispose ();
-				NameUser = null;
-			}
+            if (ImgSpeak != null) {
+                ImgSpeak.Dispose ();
+                ImgSpeak = null;
+            }
 
-			if (SliderSpeak != null) {
-				SliderSpeak.Dispose ();
-				SliderSpeak = null;
-			}
+            if (NameUser != null) {
+                NameUser.Dispose ();
+                NameUser = null;
+            }
 
-			if (TextLan != null) {
-				TextLan.Dispose ();
-				TextLan = null;
-			}
+            if (SliderSpeak != null) {
+                SliderSpeak.Dispose ();
+                SliderSpeak = null;
+            }
 
-			if (ViewCell != null) {
-				ViewCell.Dispose ();
-				ViewCell = null;
-			}
+            if (TextLan != null) {
+                TextLan.Dispose ();
+                TextLan = null;
+            }
 
-			if (ViewHome != null) {
-				ViewHome.Dispose ();
-				ViewHome = null;
-			}
+            if (ViewCell != null) {
+                ViewCell.Dispose ();
+                ViewCell = null;
+            }
 
-			if (ViewLan != null) {
-				ViewLan.Dispose ();
-				ViewLan = null;
-			}
+            if (ViewHome != null) {
+                ViewHome.Dispose ();
+                ViewHome = null;
+            }
 
-			if (ViewSpeak != null) {
-				ViewSpeak.Dispose ();
-				ViewSpeak = null;
-			}
+            if (ViewLan != null) {
+                ViewLan.Dispose ();
+                ViewLan = null;
+            }
 
-			if (WriteLabel != null) {
-				WriteLabel.Dispose ();
-				WriteLabel = null;
-			}
-		}
-	}
+            if (ViewSpeak != null) {
+                ViewSpeak.Dispose ();
+                ViewSpeak = null;
+            }
+
+            if (WriteLabel != null) {
+                WriteLabel.Dispose ();
+                WriteLabel = null;
+            }
+
+            if (lblTime != null) {
+                lblTime.Dispose ();
+                lblTime = null;
+            }
+        }
+    }
 }
