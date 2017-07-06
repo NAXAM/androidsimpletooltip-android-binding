@@ -11,15 +11,25 @@ using Android.Views;
 using Android.Widget;
 using Android.Views.Animations;
 using Naxam.Busuu.Droid.Learning.Control;
+using MvvmCross.Droid.Views;
+using MvvmCross.Droid.Support.V7.AppCompat;
+using Naxam.Busuu.Learning.Model;
 
 namespace Naxam.Busuu.Droid.Learning.Views
 {
     [Activity]
-    public class TrueFalseHearQuestionView : Activity
+    public class TrueFalseHearQuestionView : MvxAppCompatActivity
     {
         private Button btWrong;
         private Button btRight;
         private Button btContinue;
+
+        TrueFalseHearQuestionModel model = new TrueFalseHearQuestionModel()
+        {
+            mp3Link = "",
+            sentence = "What is your name",
+            trueAnswer = true
+        };
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -45,14 +55,14 @@ namespace Naxam.Busuu.Droid.Learning.Views
             btContinue.Visibility = ViewStates.Visible;
             Random random = new Random();
             int i = random.Next(0, 2);
-            if (i == 1)
+            if ((((Button)sender).Text.Equals("TRUE")&&model.trueAnswer==false)|| (((Button)sender).Text.Equals("FALSE") && model.trueAnswer == true))
             {
                 ((Button)sender).SetBackgroundResource(Resource.Drawable.ic_wrong);
                 ((Button)sender).Text = "";
-                //btRight.Enabled = false;
-                //btWrong.Enabled = false;
+                btRight.Enabled = false;
+                btWrong.Enabled = false;
                 TranslateAnimation translate = new TranslateAnimation(0, 10, 0, 0);
-                translate.Duration = 250;
+                translate.Duration = 50;
                 translate.FillAfter = true;
                 ((Button)sender).StartAnimation(translate);
                 translate.SetAnimationListener(new AnimationListener()
@@ -60,25 +70,28 @@ namespace Naxam.Busuu.Droid.Learning.Views
                     AnimationEnd = (a) =>
                     {
                         TranslateAnimation translate2 = new TranslateAnimation(0, -10, 0, 0);
-                        translate2.Duration = 250;
+                        translate2.Duration = 50;
                         translate2.FillAfter = true;
                         ((Button)sender).StartAnimation(translate2);
                         translate2.SetAnimationListener(new AnimationListener()
                         {
                             AnimationEnd = (b) =>
                             {
-                                ((Button)sender).StartAnimation(translate);
+                                TranslateAnimation translate3 = new TranslateAnimation(0, 10, 0, 0);
+                                translate3.Duration = 50;
+                                translate3.FillAfter = true;
+                                ((Button)sender).StartAnimation(translate3);
                             }
                         });
                     }
                 });
             }
-            else
+            else if ((((Button)sender).Text.Equals("TRUE") && model.trueAnswer == true) || (((Button)sender).Text.Equals("FALSE") && model.trueAnswer == false))
             {
                 ((Button)sender).SetBackgroundResource(Resource.Drawable.ic_right);
                 ((Button)sender).Text = "";
-                //btRight.Enabled = false;
-                //btWrong.Enabled = false;
+                btRight.Enabled = false;
+                btWrong.Enabled = false;
             }
         }
     }

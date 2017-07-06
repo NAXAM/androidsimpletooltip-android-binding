@@ -22,12 +22,13 @@
       <Naxam.Busuu.Droid.Learning.Control.NXPlayButton
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"/>
 
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="My name is Peter" />
+          app:MvxBind="Text question.sentence"/>
     </LinearLayout>
   </FrameLayout>
 
@@ -56,7 +57,10 @@
           android:id="@+id/bt_wrong"
           android:layout_width="104dp"
           android:layout_height="104dp"
-          android:layout_marginRight="56dp"          
+          android:layout_marginRight="56dp"  
+          android:layout_marginLeft="16dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginBottom="16dp"
           android:background="@drawable/corner_button_white"          
           android:text="TRUE"/>
 
@@ -65,7 +69,8 @@
           android:layout_width="104dp"
           android:layout_height="104dp"
           android:background="@drawable/corner_button_white"
-          android:text="FALSE"/>
+          android:text="FALSE"
+          android:layout_margin="16dp"/>
     </LinearLayout>
 
     <Button
@@ -75,6 +80,7 @@
         android:layout_gravity="bottom"
         android:layout_margin="16dp"
         android:background="@drawable/corner_button_green"
-        android:text="CONTINUE"/>
+        android:text="CONTINUE"
+        android:textColor="#ffffff"/>
   </FrameLayout>
 </LinearLayout>

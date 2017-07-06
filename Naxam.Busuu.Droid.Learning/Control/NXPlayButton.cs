@@ -83,7 +83,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
         {
 
 
-            RotateAnimation rotate = new RotateAnimation(0, 180, Dimension.RelativeToSelf, 0.5f, Dimension.RelativeToSelf, 0.5f);
+            RotateAnimation rotate = new RotateAnimation(0, isPlay ? 180 : -180, Dimension.RelativeToSelf, 0.5f, Dimension.RelativeToSelf, 0.5f);
             rotate.Duration = 250;
             rotate.FillAfter = true;
             StartAnimation(rotate);

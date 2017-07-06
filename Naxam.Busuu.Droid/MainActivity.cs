@@ -23,7 +23,7 @@ namespace Naxam.Busuu.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState); 
-            StartActivity(new Intent(this, typeof(TrueFalseHearQuestionView)));
+            StartActivity(new Intent(this, typeof(VocabularyQuestionView)));
              
         }
     }
