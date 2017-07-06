@@ -1306,44 +1306,44 @@ namespace Naxam.Busuu.Droid.Learning
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0c0050
-			public static int abc_background_cache_hint_selector_material_dark = 2131492944;
-			
-			// aapt resource value: 0x7f0c0051
-			public static int abc_background_cache_hint_selector_material_light = 2131492945;
-			
-			// aapt resource value: 0x7f0c0052
-			public static int abc_btn_colored_borderless_text_material = 2131492946;
-			
-			// aapt resource value: 0x7f0c0053
-			public static int abc_btn_colored_text_material = 2131492947;
-			
 			// aapt resource value: 0x7f0c0054
-			public static int abc_color_highlight_material = 2131492948;
+			public static int abc_background_cache_hint_selector_material_dark = 2131492948;
 			
 			// aapt resource value: 0x7f0c0055
-			public static int abc_hint_foreground_material_dark = 2131492949;
+			public static int abc_background_cache_hint_selector_material_light = 2131492949;
 			
 			// aapt resource value: 0x7f0c0056
-			public static int abc_hint_foreground_material_light = 2131492950;
+			public static int abc_btn_colored_borderless_text_material = 2131492950;
+			
+			// aapt resource value: 0x7f0c0057
+			public static int abc_btn_colored_text_material = 2131492951;
+			
+			// aapt resource value: 0x7f0c0058
+			public static int abc_color_highlight_material = 2131492952;
+			
+			// aapt resource value: 0x7f0c0059
+			public static int abc_hint_foreground_material_dark = 2131492953;
+			
+			// aapt resource value: 0x7f0c005a
+			public static int abc_hint_foreground_material_light = 2131492954;
 			
 			// aapt resource value: 0x7f0c0001
 			public static int abc_input_method_navigation_guard = 2131492865;
 			
-			// aapt resource value: 0x7f0c0057
-			public static int abc_primary_text_disable_only_material_dark = 2131492951;
-			
-			// aapt resource value: 0x7f0c0058
-			public static int abc_primary_text_disable_only_material_light = 2131492952;
-			
-			// aapt resource value: 0x7f0c0059
-			public static int abc_primary_text_material_dark = 2131492953;
-			
-			// aapt resource value: 0x7f0c005a
-			public static int abc_primary_text_material_light = 2131492954;
-			
 			// aapt resource value: 0x7f0c005b
-			public static int abc_search_url_text = 2131492955;
+			public static int abc_primary_text_disable_only_material_dark = 2131492955;
+			
+			// aapt resource value: 0x7f0c005c
+			public static int abc_primary_text_disable_only_material_light = 2131492956;
+			
+			// aapt resource value: 0x7f0c005d
+			public static int abc_primary_text_material_dark = 2131492957;
+			
+			// aapt resource value: 0x7f0c005e
+			public static int abc_primary_text_material_light = 2131492958;
+			
+			// aapt resource value: 0x7f0c005f
+			public static int abc_search_url_text = 2131492959;
 			
 			// aapt resource value: 0x7f0c0002
 			public static int abc_search_url_text_normal = 2131492866;
@@ -1354,32 +1354,32 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f0c0004
 			public static int abc_search_url_text_selected = 2131492868;
 			
-			// aapt resource value: 0x7f0c005c
-			public static int abc_secondary_text_material_dark = 2131492956;
-			
-			// aapt resource value: 0x7f0c005d
-			public static int abc_secondary_text_material_light = 2131492957;
-			
-			// aapt resource value: 0x7f0c005e
-			public static int abc_tint_btn_checkable = 2131492958;
-			
-			// aapt resource value: 0x7f0c005f
-			public static int abc_tint_default = 2131492959;
-			
 			// aapt resource value: 0x7f0c0060
-			public static int abc_tint_edittext = 2131492960;
+			public static int abc_secondary_text_material_dark = 2131492960;
 			
 			// aapt resource value: 0x7f0c0061
-			public static int abc_tint_seek_thumb = 2131492961;
+			public static int abc_secondary_text_material_light = 2131492961;
 			
 			// aapt resource value: 0x7f0c0062
-			public static int abc_tint_spinner = 2131492962;
+			public static int abc_tint_btn_checkable = 2131492962;
 			
 			// aapt resource value: 0x7f0c0063
-			public static int abc_tint_switch_thumb = 2131492963;
+			public static int abc_tint_default = 2131492963;
 			
 			// aapt resource value: 0x7f0c0064
-			public static int abc_tint_switch_track = 2131492964;
+			public static int abc_tint_edittext = 2131492964;
+			
+			// aapt resource value: 0x7f0c0065
+			public static int abc_tint_seek_thumb = 2131492965;
+			
+			// aapt resource value: 0x7f0c0066
+			public static int abc_tint_spinner = 2131492966;
+			
+			// aapt resource value: 0x7f0c0067
+			public static int abc_tint_switch_thumb = 2131492967;
+			
+			// aapt resource value: 0x7f0c0068
+			public static int abc_tint_switch_track = 2131492968;
 			
 			// aapt resource value: 0x7f0c0005
 			public static int accent_material_dark = 2131492869;
@@ -1441,6 +1441,18 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f0c0047
 			public static int colorPrimaryDark = 2131492935;
 			
+			// aapt resource value: 0x7f0c0051
+			public static int colorQuestion = 2131492945;
+			
+			// aapt resource value: 0x7f0c0053
+			public static int colorTextCorrect = 2131492947;
+			
+			// aapt resource value: 0x7f0c0052
+			public static int colorTextIncorrect = 2131492946;
+			
+			// aapt resource value: 0x7f0c0050
+			public static int colorTextInput = 2131492944;
+			
 			// aapt resource value: 0x7f0c004c
 			public static int colorTextPrimary = 2131492940;
 			
@@ -1453,8 +1465,8 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f0c003b
 			public static int design_bottom_navigation_shadow_color = 2131492923;
 			
-			// aapt resource value: 0x7f0c0065
-			public static int design_error = 2131492965;
+			// aapt resource value: 0x7f0c0069
+			public static int design_error = 2131492969;
 			
 			// aapt resource value: 0x7f0c003c
 			public static int design_fab_shadow_end_color = 2131492924;
@@ -1486,8 +1498,8 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f0c0045
 			public static int design_textinput_error_color_light = 2131492933;
 			
-			// aapt resource value: 0x7f0c0066
-			public static int design_tint_password_toggle = 2131492966;
+			// aapt resource value: 0x7f0c006a
+			public static int design_tint_password_toggle = 2131492970;
 			
 			// aapt resource value: 0x7f0c0013
 			public static int dim_foreground_disabled_material_dark = 2131492883;
@@ -1609,11 +1621,11 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f0c0038
 			public static int switch_thumb_disabled_material_light = 2131492920;
 			
-			// aapt resource value: 0x7f0c0067
-			public static int switch_thumb_material_dark = 2131492967;
+			// aapt resource value: 0x7f0c006b
+			public static int switch_thumb_material_dark = 2131492971;
 			
-			// aapt resource value: 0x7f0c0068
-			public static int switch_thumb_material_light = 2131492968;
+			// aapt resource value: 0x7f0c006c
+			public static int switch_thumb_material_light = 2131492972;
 			
 			// aapt resource value: 0x7f0c0039
 			public static int switch_thumb_normal_material_dark = 2131492921;
@@ -2626,8 +2638,8 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080010
 			public static int MvxBindingTagUnique = 2131230736;
 			
-			// aapt resource value: 0x7f0800a3
-			public static int action0 = 2131230883;
+			// aapt resource value: 0x7f0800a6
+			public static int action0 = 2131230886;
 			
 			// aapt resource value: 0x7f080073
 			public static int action_bar = 2131230835;
@@ -2650,17 +2662,17 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080050
 			public static int action_bar_title = 2131230800;
 			
-			// aapt resource value: 0x7f0800a0
-			public static int action_container = 2131230880;
+			// aapt resource value: 0x7f0800a3
+			public static int action_container = 2131230883;
 			
 			// aapt resource value: 0x7f080074
 			public static int action_context_bar = 2131230836;
 			
-			// aapt resource value: 0x7f0800a7
-			public static int action_divider = 2131230887;
+			// aapt resource value: 0x7f0800aa
+			public static int action_divider = 2131230890;
 			
-			// aapt resource value: 0x7f0800a1
-			public static int action_image = 2131230881;
+			// aapt resource value: 0x7f0800a4
+			public static int action_image = 2131230884;
 			
 			// aapt resource value: 0x7f080003
 			public static int action_menu_divider = 2131230723;
@@ -2677,11 +2689,11 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080052
 			public static int action_mode_close_button = 2131230802;
 			
-			// aapt resource value: 0x7f0800a2
-			public static int action_text = 2131230882;
+			// aapt resource value: 0x7f0800a5
+			public static int action_text = 2131230885;
 			
-			// aapt resource value: 0x7f0800b0
-			public static int actions = 2131230896;
+			// aapt resource value: 0x7f0800b3
+			public static int actions = 2131230899;
 			
 			// aapt resource value: 0x7f080053
 			public static int activity_chooser_view_content = 2131230803;
@@ -2695,8 +2707,8 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f08003f
 			public static int all = 2131230783;
 			
-			// aapt resource value: 0x7f0800b9
-			public static int alterView = 2131230905;
+			// aapt resource value: 0x7f0800bc
+			public static int alterView = 2131230908;
 			
 			// aapt resource value: 0x7f080025
 			public static int always = 2131230757;
@@ -2713,17 +2725,17 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f08002a
 			public static int bottom = 2131230762;
 			
-			// aapt resource value: 0x7f080097
-			public static int btnDownload = 2131230871;
+			// aapt resource value: 0x7f08009c
+			public static int btnDownload = 2131230876;
 			
-			// aapt resource value: 0x7f08009f
-			public static int btnNext = 2131230879;
+			// aapt resource value: 0x7f080096
+			public static int btnNext = 2131230870;
 			
 			// aapt resource value: 0x7f08005a
 			public static int buttonPanel = 2131230810;
 			
-			// aapt resource value: 0x7f0800a4
-			public static int cancel_action = 2131230884;
+			// aapt resource value: 0x7f0800a7
+			public static int cancel_action = 2131230887;
 			
 			// aapt resource value: 0x7f080032
 			public static int center = 2131230770;
@@ -2737,11 +2749,11 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f08006a
 			public static int checkbox = 2131230826;
 			
-			// aapt resource value: 0x7f0800ac
-			public static int chronometer = 2131230892;
+			// aapt resource value: 0x7f0800af
+			public static int chronometer = 2131230895;
 			
-			// aapt resource value: 0x7f080094
-			public static int circle_progress = 2131230868;
+			// aapt resource value: 0x7f080099
+			public static int circle_progress = 2131230873;
 			
 			// aapt resource value: 0x7f08003b
 			public static int clip_horizontal = 2131230779;
@@ -2797,8 +2809,8 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080023
 			public static int end = 2131230755;
 			
-			// aapt resource value: 0x7f0800b6
-			public static int end_padder = 2131230902;
+			// aapt resource value: 0x7f0800b9
+			public static int end_padder = 2131230905;
 			
 			// aapt resource value: 0x7f08002c
 			public static int enterAlways = 2131230764;
@@ -2806,14 +2818,14 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f08002d
 			public static int enterAlwaysCollapsed = 2131230765;
 			
-			// aapt resource value: 0x7f08009a
-			public static int exerciseView = 2131230874;
+			// aapt resource value: 0x7f08009f
+			public static int exerciseView = 2131230879;
 			
 			// aapt resource value: 0x7f08002e
 			public static int exitUntilCollapsed = 2131230766;
 			
-			// aapt resource value: 0x7f08009b
-			public static int expLessons = 2131230875;
+			// aapt resource value: 0x7f0800a0
+			public static int expLessons = 2131230880;
 			
 			// aapt resource value: 0x7f080054
 			public static int expand_activities_button = 2131230804;
@@ -2833,8 +2845,8 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080041
 			public static int @fixed = 2131230785;
 			
-			// aapt resource value: 0x7f08009e
-			public static int flexAnswer = 2131230878;
+			// aapt resource value: 0x7f080095
+			public static int flexAnswer = 2131230869;
 			
 			// aapt resource value: 0x7f08004a
 			public static int flex_end = 2131230794;
@@ -2851,8 +2863,8 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080058
 			public static int icon = 2131230808;
 			
-			// aapt resource value: 0x7f0800b1
-			public static int icon_group = 2131230897;
+			// aapt resource value: 0x7f0800b4
+			public static int icon_group = 2131230900;
 			
 			// aapt resource value: 0x7f080027
 			public static int ifRoom = 2131230759;
@@ -2863,14 +2875,17 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080055
 			public static int image = 2131230805;
 			
+			// aapt resource value: 0x7f080097
+			public static int imgExercise = 2131230871;
+			
 			// aapt resource value: 0x7f080092
-			public static int imgExercise = 2131230866;
+			public static int imgImage = 2131230866;
 			
-			// aapt resource value: 0x7f080093
-			public static int imgLock = 2131230867;
+			// aapt resource value: 0x7f080098
+			public static int imgLock = 2131230872;
 			
-			// aapt resource value: 0x7f0800ad
-			public static int info = 2131230893;
+			// aapt resource value: 0x7f0800b0
+			public static int info = 2131230896;
 			
 			// aapt resource value: 0x7f080000
 			public static int item_touch_helper_previous_elevation = 2131230720;
@@ -2881,11 +2896,11 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080036
 			public static int left = 2131230774;
 			
-			// aapt resource value: 0x7f0800b2
-			public static int line1 = 2131230898;
+			// aapt resource value: 0x7f0800b5
+			public static int line1 = 2131230901;
 			
-			// aapt resource value: 0x7f0800b4
-			public static int line3 = 2131230900;
+			// aapt resource value: 0x7f0800b7
+			public static int line3 = 2131230903;
 			
 			// aapt resource value: 0x7f080011
 			public static int listMode = 2131230737;
@@ -2893,32 +2908,32 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080057
 			public static int list_item = 2131230807;
 			
-			// aapt resource value: 0x7f0800b8
-			public static int lv_premium_value = 2131230904;
-			
 			// aapt resource value: 0x7f0800bb
-			public static int masked = 2131230907;
-			
-			// aapt resource value: 0x7f0800a6
-			public static int media_actions = 2131230886;
-			
-			// aapt resource value: 0x7f08009c
-			public static int menu_bottom = 2131230876;
-			
-			// aapt resource value: 0x7f0800bc
-			public static int menu_learn = 2131230908;
-			
-			// aapt resource value: 0x7f0800bf
-			public static int menu_notification = 2131230911;
-			
-			// aapt resource value: 0x7f0800c0
-			public static int menu_profile = 2131230912;
-			
-			// aapt resource value: 0x7f0800bd
-			public static int menu_review = 2131230909;
+			public static int lv_premium_value = 2131230907;
 			
 			// aapt resource value: 0x7f0800be
-			public static int menu_social = 2131230910;
+			public static int masked = 2131230910;
+			
+			// aapt resource value: 0x7f0800a9
+			public static int media_actions = 2131230889;
+			
+			// aapt resource value: 0x7f0800a1
+			public static int menu_bottom = 2131230881;
+			
+			// aapt resource value: 0x7f0800bf
+			public static int menu_learn = 2131230911;
+			
+			// aapt resource value: 0x7f0800c2
+			public static int menu_notification = 2131230914;
+			
+			// aapt resource value: 0x7f0800c3
+			public static int menu_profile = 2131230915;
+			
+			// aapt resource value: 0x7f0800c0
+			public static int menu_review = 2131230912;
+			
+			// aapt resource value: 0x7f0800c1
+			public static int menu_social = 2131230913;
 			
 			// aapt resource value: 0x7f080024
 			public static int middle = 2131230756;
@@ -2941,14 +2956,14 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080012
 			public static int normal = 2131230738;
 			
-			// aapt resource value: 0x7f0800af
-			public static int notification_background = 2131230895;
+			// aapt resource value: 0x7f0800b2
+			public static int notification_background = 2131230898;
 			
-			// aapt resource value: 0x7f0800a9
-			public static int notification_main_column = 2131230889;
+			// aapt resource value: 0x7f0800ac
+			public static int notification_main_column = 2131230892;
 			
-			// aapt resource value: 0x7f0800a8
-			public static int notification_main_column_container = 2131230888;
+			// aapt resource value: 0x7f0800ab
+			public static int notification_main_column_container = 2131230891;
 			
 			// aapt resource value: 0x7f080047
 			public static int nowrap = 2131230791;
@@ -2974,11 +2989,11 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080037
 			public static int right = 2131230775;
 			
-			// aapt resource value: 0x7f0800ae
-			public static int right_icon = 2131230894;
+			// aapt resource value: 0x7f0800b1
+			public static int right_icon = 2131230897;
 			
-			// aapt resource value: 0x7f0800aa
-			public static int right_side = 2131230890;
+			// aapt resource value: 0x7f0800ad
+			public static int right_side = 2131230893;
 			
 			// aapt resource value: 0x7f080045
 			public static int row = 2131230789;
@@ -3085,8 +3100,8 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080038
 			public static int start = 2131230776;
 			
-			// aapt resource value: 0x7f0800a5
-			public static int status_bar_latest_event_content = 2131230885;
+			// aapt resource value: 0x7f0800a8
+			public static int status_bar_latest_event_content = 2131230888;
 			
 			// aapt resource value: 0x7f08004f
 			public static int stretch = 2131230799;
@@ -3097,17 +3112,17 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f08007e
 			public static int submit_area = 2131230846;
 			
-			// aapt resource value: 0x7f0800b7
-			public static int sv_premium = 2131230903;
+			// aapt resource value: 0x7f0800ba
+			public static int sv_premium = 2131230906;
 			
 			// aapt resource value: 0x7f080013
 			public static int tabMode = 2131230739;
 			
-			// aapt resource value: 0x7f0800b5
-			public static int text = 2131230901;
+			// aapt resource value: 0x7f0800b8
+			public static int text = 2131230904;
 			
-			// aapt resource value: 0x7f0800b3
-			public static int text2 = 2131230899;
+			// aapt resource value: 0x7f0800b6
+			public static int text2 = 2131230902;
 			
 			// aapt resource value: 0x7f080061
 			public static int textSpacerNoButtons = 2131230817;
@@ -3124,8 +3139,8 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f08000d
 			public static int textinput_error = 2131230733;
 			
-			// aapt resource value: 0x7f0800ab
-			public static int time = 2131230891;
+			// aapt resource value: 0x7f0800ae
+			public static int time = 2131230894;
 			
 			// aapt resource value: 0x7f080059
 			public static int title = 2131230809;
@@ -3157,20 +3172,26 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f080083
 			public static int tv_premium_describe = 2131230851;
 			
-			// aapt resource value: 0x7f080096
-			public static int txtLessonName = 2131230870;
+			// aapt resource value: 0x7f080094
+			public static int txtInput = 2131230868;
 			
-			// aapt resource value: 0x7f080095
-			public static int txtLessonNumber = 2131230869;
+			// aapt resource value: 0x7f08009b
+			public static int txtLessonName = 2131230875;
 			
-			// aapt resource value: 0x7f080099
-			public static int txtTime = 2131230873;
+			// aapt resource value: 0x7f08009a
+			public static int txtLessonNumber = 2131230874;
+			
+			// aapt resource value: 0x7f080093
+			public static int txtQuestion = 2131230867;
+			
+			// aapt resource value: 0x7f08009e
+			public static int txtTime = 2131230878;
+			
+			// aapt resource value: 0x7f0800a2
+			public static int txtTitle = 2131230882;
 			
 			// aapt resource value: 0x7f08009d
-			public static int txtTitle = 2131230877;
-			
-			// aapt resource value: 0x7f080098
-			public static int txtTopic = 2131230872;
+			public static int txtTopic = 2131230877;
 			
 			// aapt resource value: 0x7f080009
 			public static int up = 2131230729;
@@ -3181,8 +3202,8 @@ namespace Naxam.Busuu.Droid.Learning
 			// aapt resource value: 0x7f08000e
 			public static int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f0800ba
-			public static int visible = 2131230906;
+			// aapt resource value: 0x7f0800bd
+			public static int visible = 2131230909;
 			
 			// aapt resource value: 0x7f080029
 			public static int withText = 2131230761;
@@ -3385,85 +3406,91 @@ namespace Naxam.Busuu.Droid.Learning
 			public static int design_text_input_password_icon = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public static int layout_exercise_item = 2130903085;
+			public static int landscape_fill_sentence_image_layout = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public static int layout_lesson_header = 2130903086;
+			public static int layout_exercise_item = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public static int layout_topic_item = 2130903087;
+			public static int layout_lesson_header = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public static int LearnActivity = 2130903088;
+			public static int layout_topic_item = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public static int llternative_way_layout = 2130903089;
+			public static int LearnActivity = 2130903089;
 			
 			// aapt resource value: 0x7f030032
 			public static int MainActivity = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public static int notification_action = 2130903091;
+			public static int memo_select_word_layout = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public static int notification_action_tombstone = 2130903092;
+			public static int notification_action = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public static int notification_media_action = 2130903093;
+			public static int notification_action_tombstone = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public static int notification_media_cancel_action = 2130903094;
+			public static int notification_media_action = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public static int notification_template_big_media = 2130903095;
+			public static int notification_media_cancel_action = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public static int notification_template_big_media_custom = 2130903096;
+			public static int notification_template_big_media = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public static int notification_template_big_media_narrow = 2130903097;
+			public static int notification_template_big_media_custom = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public static int notification_template_big_media_narrow_custom = 2130903098;
+			public static int notification_template_big_media_narrow = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public static int notification_template_custom_big = 2130903099;
+			public static int notification_template_big_media_narrow_custom = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public static int notification_template_icon_group = 2130903100;
+			public static int notification_template_custom_big = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public static int notification_template_lines_media = 2130903101;
+			public static int notification_template_icon_group = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public static int notification_template_media = 2130903102;
+			public static int notification_template_lines_media = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public static int notification_template_media_custom = 2130903103;
+			public static int notification_template_media = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public static int notification_template_part_chronometer = 2130903104;
+			public static int notification_template_media_custom = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public static int notification_template_part_time = 2130903105;
+			public static int notification_template_part_chronometer = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public static int premium_page = 2130903106;
+			public static int notification_template_part_time = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public static int select_dialog_item_material = 2130903107;
+			public static int portrait_fill_sentence_image_layout = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public static int select_dialog_multichoice_material = 2130903108;
+			public static int premium_page = 2130903108;
 			
 			// aapt resource value: 0x7f030045
-			public static int select_dialog_singlechoice_material = 2130903109;
+			public static int select_dialog_item_material = 2130903109;
 			
 			// aapt resource value: 0x7f030046
-			public static int support_simple_spinner_dropdown_item = 2130903110;
+			public static int select_dialog_multichoice_material = 2130903110;
 			
 			// aapt resource value: 0x7f030047
-			public static int test_layout = 2130903111;
+			public static int select_dialog_singlechoice_material = 2130903111;
+			
+			// aapt resource value: 0x7f030048
+			public static int support_simple_spinner_dropdown_item = 2130903112;
+			
+			// aapt resource value: 0x7f030049
+			public static int test_layout = 2130903113;
 			
 			static Layout()
 			{
@@ -4202,6 +4229,12 @@ namespace Naxam.Busuu.Droid.Learning
 			
 			// aapt resource value: 0x7f0a017b
 			public static int StyleNextButton = 2131362171;
+			
+			// aapt resource value: 0x7f0a017d
+			public static int StyleTextInput = 2131362173;
+			
+			// aapt resource value: 0x7f0a017c
+			public static int StyleTextQuestion = 2131362172;
 			
 			// aapt resource value: 0x7f0a00ce
 			public static int TextAppearance_AppCompat = 2131361998;

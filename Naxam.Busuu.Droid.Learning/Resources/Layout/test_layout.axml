@@ -5,7 +5,7 @@
     android:layout_height="match_parent" >
 
 
-  <Naxam.Busuu.Droid.Learning.Control.AlternativeWayView
+  <Naxam.Busuu.Droid.Learning.Control.MemoSelectWord
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/alterView"

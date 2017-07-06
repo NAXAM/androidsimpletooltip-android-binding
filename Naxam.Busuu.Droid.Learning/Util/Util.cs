@@ -10,6 +10,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Util;
+using Android.Graphics.Drawables;
+using Android.Graphics;
+using Android.Graphics.Drawables.Shapes;
 
 namespace Naxam.Busuu.Droid.Learning.Util
 {
@@ -23,6 +26,19 @@ namespace Naxam.Busuu.Droid.Learning.Util
         public static float PxFromDp(Context context, float dp)
         {
             return dp * context.Resources.DisplayMetrics.Density;
+        }
+    }
+
+    public class BackgroundUtil
+    {
+        public static Drawable BackgroundRound(Context context, int radius,Color color)
+        {
+            PaintDrawable background = new PaintDrawable(color);
+            background.Shape = new RectShape();
+            int radiusPX = (int)Util.PxFromDp(context, radius);
+            background.SetCornerRadius(radiusPX);
+            
+            return background;
         }
     }
 }

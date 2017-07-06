@@ -8,13 +8,11 @@
 
   <TextView
       android:id="@+id/txtTitle"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textAlignment="center"
-      android:layout_gravity="center"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" 
+      style="@style/StyleTextQuestion"
       android:layout_margin="18dp"
-      android:text="Chọn các từ có nghĩa là 'Đàn Bà'"
-      android:textColor="#38A9F6" />
+      android:text="Chọn các từ có nghĩa là 'Đàn Bà'"  />
 
   <com.google.android.flexbox.FlexboxLayout
       android:id="@+id/flexAnswer"

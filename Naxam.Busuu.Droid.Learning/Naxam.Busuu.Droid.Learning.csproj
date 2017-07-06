@@ -135,12 +135,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\AlternativeWayView.cs" />
+    <Compile Include="Control\MemoSelectWord.cs" />
     <Compile Include="Control\AnimationListener.cs" />
     <Compile Include="Control\AnimatorListener.cs" />
     <Compile Include="Control\AnimatorUpdateListener.cs" />
     <Compile Include="Control\ExerciesView.cs" />
     <Compile Include="Control\LessonHeader.cs" />
+    <Compile Include="Control\MemoFillSentenceImage.cs" />
     <Compile Include="Control\NXMvxExpandableListView.cs" />
     <Compile Include="Control\NXMvxExpandableListAdapter.cs" />
     <Compile Include="Control\NXExpandableListView.cs" />
@@ -461,12 +462,18 @@
     <AndroidResource Include="Resources\drawable\background_round_4dp_red.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Layout\llternative_way_layout.xml">
+    <AndroidResource Include="Resources\Layout\memo_select_word_layout.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\background_round_4dp_blue.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\landscape_fill_sentence_image_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\portrait_fill_sentence_image_layout.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

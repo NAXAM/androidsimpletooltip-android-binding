@@ -54,21 +54,23 @@ namespace Naxam.Busuu.Learning.Model
             }
         }
 
+        private IList<string> _input;
 
-        private string _question;
-
-        public string Question
+        public IList<string> Input
         {
-            get { return _question; }
+            get { return _input; }
             set
             {
-                if (_question != value)
+                if (_input != value)
                 {
-                    _question = value;
+                    _input = value;
                     RaisePropertyChanged();
                 }
             }
         }
+
+
+  
 
         private IList<AnswerModel> _answers;
 
