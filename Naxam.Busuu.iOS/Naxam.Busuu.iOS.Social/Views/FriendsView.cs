@@ -8,8 +8,7 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Social.ViewModels;
 using UIKit;
-using MvvmCross.Binding.iOS.Views;
-using Naxam.Busuu.iOS.Social.Cells;
+using Naxam.Busuu.iOS.Social.Common;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
@@ -25,13 +24,15 @@ namespace Naxam.Busuu.iOS.Social.Views
 	        Request = new MvxViewModelRequest<FriendsViewModel>(null, null);
 
 			base.ViewDidLoad();
-
-            var fSource = new MvxSimpleTableViewSource(FriendsTableView, typeof(FriendsCell), "FriendsCell");
+			
+			var fSource = new FriendsTableViewSource(FriendsTableView);
 
 			var setBinding = this.CreateBindingSet<FriendsView, FriendsViewModel>();
 			setBinding.Bind(fSource).To(vm => vm.FriendsData);
 			setBinding.Apply();
 
+			FriendsTableView.RowHeight = UITableView.AutomaticDimension;
+			FriendsTableView.EstimatedRowHeight = 40f;
             FriendsTableView.Source = fSource;			
         }
 	}

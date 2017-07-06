@@ -85,6 +85,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
     <Folder Include="Cells\" />
+    <Folder Include="Common\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +114,11 @@
     <Compile Include="Cells\FriendsCell.cs" />
     <Compile Include="Cells\FriendsCell.designer.cs">
       <DependentUpon>FriendsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FriendsTableViewSource.cs" />
+    <Compile Include="Views\FilterView.cs" />
+    <Compile Include="Views\FilterView.designer.cs">
+      <DependentUpon>FilterView.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

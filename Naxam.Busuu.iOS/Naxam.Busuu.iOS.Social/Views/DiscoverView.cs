@@ -33,8 +33,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 			setBinding.Bind(dSource).To(vm => vm.DiscoverData);
 			setBinding.Apply();
 
-            DiscoverCollectionView.Source = dSource;
-			DiscoverCollectionView.BackgroundColor = null;			
+            DiscoverCollectionView.Source = dSource;					
         }
 	}
 

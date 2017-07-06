@@ -24,13 +24,45 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			this.DelayBind(() =>
 			{
                 var setBinding = this.CreateBindingSet<FriendsCell, FriendsModel>();
-				setBinding.Bind(_loaderImageUser).To(d => d.Avatar).WithConversion(new ImageUriValueConverter(), null);
-                setBinding.Bind(lblUserName).To(d => d.Star);
-				setBinding.Bind(lblCountry).To(d => d.Country);
-                setBinding.Bind(_loaderImgLearn).To(d => d.ImageLearn).WithConversion(new ImageUriValueConverter(), null);
-                setBinding.Bind(textLan).To(d => d.TextLearn);
+				setBinding.Bind(_loaderImageUser).To(f => f.Avatar).WithConversion(new ImageUriValueConverter(), null);
+                setBinding.Bind(lblUserName).To(f => f.Name);
+				setBinding.Bind(lblCountry).To(f => f.Country);
+                setBinding.Bind(_loaderImgLearn).To(f => f.ImageLearn).WithConversion(new ImageUriValueConverter(), null);
+                setBinding.Bind(textLan).To(f => f.TextLearn);
+                setBinding.Bind(lblTimePublic).To(f => f.PublicTime);
+                setBinding.Bind(ViewAudioPlayer).For(f => f.Hidden).To(f => f.Speak).WithConversion(new InverseValueConverter(), null);
+				setBinding.Bind(audioViewBottomConstraint).For(f => f.Active).To(f => f.Speak);
+				setBinding.Bind(audioViewTopConstraint).For(f => f.Active).To(f => f.Speak);
+                setBinding.Bind(WriteText).For(d => d.Hidden).To(d => d.Speak);
+                setBinding.Bind(WriteText).To(d => d.Write);
 				setBinding.Apply();
 			});
-		}	
+		}
+
+		public override void AwakeFromNib()
+		{
+			base.AwakeFromNib();			
+
+			imgUserAvatar.Layer.CornerRadius = imgUserAvatar.Frame.Width / 2;
+            imgLan.Layer.CornerRadius = imgLan.Frame.Width / 2;
+            ButtonAudioPlay.Layer.CornerRadius = ButtonAudioPlay.Frame.Width / 2;
+
+			ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 12, 10, 10);
+
+			var img = UIImage.FromBundle("play_icon_small");
+			SliderSpeak.SetThumbImage(img, UIControlState.Normal);
+			SliderSpeak.SetThumbImage(img, UIControlState.Selected);
+			SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);		           
+		}
+
+        partial void ButtonAudioPlay_TouchUpInside(NSObject sender)
+        {
+
+        }
+
+        partial void ButtonRate_TouchUpInside(NSObject sender)
+        {
+
+        }
 	}
 }
