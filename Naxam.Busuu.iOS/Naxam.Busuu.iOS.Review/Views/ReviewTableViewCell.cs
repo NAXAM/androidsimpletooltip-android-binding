@@ -12,35 +12,25 @@ namespace Naxam.Busuu.iOS.Review.Views
 {
     public partial class ReviewTableViewCell : MvxTableViewCell
     {
-		public static readonly NSString Key = new NSString("ReviewTableViewCell");
-		public static readonly UINib Nib;
-
-		static ReviewTableViewCell()
-		{
-			Nib = UINib.FromName("ReviewTableViewCell", NSBundle.MainBundle);
-		}
-
-		public static ReviewTableViewCell Create()
-		{
-			return (ReviewTableViewCell)Nib.Instantiate(null, null)[0];
-		}
-
 
 		private readonly MvxImageViewLoader imgWordViewLoader;
         private readonly MvxImageViewLoader imgStrengthViewLoader;
-
 
         protected ReviewTableViewCell(IntPtr handle) : base(handle)
         {
 			// Note: this .ctor should not contain any initialization logic.
             imgWordViewLoader = new MvxImageViewLoader(() => imgWord);
             imgStrengthViewLoader = new MvxImageViewLoader(() => imgStrength);
+
             this.DelayBind(() =>
 			{
 				var set = this.CreateBindingSet<ReviewTableViewCell, ReviewAllModel>();
 				set.Bind(lbTitle).To(m => m.Title);
 				set.Bind(lbSubtitle).To(m => m.SubTitle);
                 set.Bind(imgWordViewLoader).To(m => m.ImgWord);
+                //set.Bind(btnPlay).For(v=>v).To(m => m.IsFavorite).WithConversion(new FavoriteImageValueConverter(),null);
+                set.Bind(btnStar).To(vm=>vm.FlipSelected);
+                set.Bind(btnPlay).For("Image").To(m => m.Title);
                 set.Bind(imgStrengthViewLoader).To(m=>m.StrengthLevel).WithConversion(new ImageStrengthValueConverter(),null);
 				set.Apply();
 			});
@@ -49,8 +39,31 @@ namespace Naxam.Busuu.iOS.Review.Views
         public override void AwakeFromNib()
         {
             base.AwakeFromNib();
+            imgWord.Layer.CornerRadius = 4;
             btnPlay.Layer.CornerRadius = btnPlay.Bounds.Height / 2;
             btnStar.Layer.CornerRadius = btnStar.Bounds.Height / 2;
+        }
+    }
+
+	class ButtonConverter : MvxValueConverter<bool, UIColor>
+	{
+		UIColor selectedColour = UIColor.FromRGB(128, 128, 128);
+		UIColor unSelectedColour = UIColor.GroupTableViewBackgroundColor;
+		protected override UIColor Convert(bool value, Type targetType, object parameter, CultureInfo culture)
+		{
+			return value ? selectedColour : unSelectedColour;
+		}
+		protected override bool ConvertBack(UIColor value, Type targetType, object parameter, CultureInfo culture)
+		{
+			return value == selectedColour;
+		}
+	}
+
+    public class FavoriteImageValueConverter:MvxValueConverter<bool, string>
+    {
+        protected override string Convert(bool value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return value ? "res:star_active" : "res:star";
         }
     }
 

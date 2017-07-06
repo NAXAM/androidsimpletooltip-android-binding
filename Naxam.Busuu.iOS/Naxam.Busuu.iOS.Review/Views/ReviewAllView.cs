@@ -26,7 +26,7 @@ namespace Naxam.Busuu.iOS.Review.Views
             // Perform any additional setup after loading the view, typically from a nib.
             NavigationItem.TitleView = uiViewButton;
             ReviewTableView.RowHeight = 60;
-            var source = new MvxSimpleTableViewSource(ReviewTableView, ReviewTableViewCell.Key, "reviewCell");
+            var source = new MvxStandardTableViewSource(ReviewTableView,(NSString)"reviewCell");
             ReviewTableView.Source = source;
 
             var set = this.CreateBindingSet<ReviewAllView, ReviewAllViewModel>();

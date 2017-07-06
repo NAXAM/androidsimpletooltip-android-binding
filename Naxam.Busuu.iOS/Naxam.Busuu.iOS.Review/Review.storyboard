@@ -91,16 +91,22 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kwP-wT-G0f" id="rKu-93-BZX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92c-iD-fbb">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="92c-iD-fbb">
                                                     <rect key="frame" x="8" y="10" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="LQ9-Ln-GUa"/>
+                                                        <constraint firstAttribute="width" constant="40" id="sJC-Ok-dkd"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Trv-8H-Hvn">
-                                                    <rect key="frame" x="24" y="38" width="28" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Trv-8H-Hvn">
+                                                    <rect key="frame" x="22" y="35.5" width="28" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="R4k-qD-9z3"/>
+                                                        <constraint firstAttribute="width" constant="28" id="yHh-C0-MLS"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvQ-YT-cG3">
                                                     <rect key="frame" x="56" y="26" width="200" height="15"/>
@@ -109,19 +115,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-Hn-Gfa">
-                                                    <rect key="frame" x="313" y="18" width="24" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="star">
-                                                        <string key="title" base64-UTF8="YES">
-CQk
-</string>
-                                                    </state>
-                                                </button>
                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdF-Sq-2en">
-                                                    <rect key="frame" x="345" y="18" width="24" height="24"/>
+                                                    <rect key="frame" x="311" y="18" width="58" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button" image="play_btn"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWs-Fs-70M">
                                                     <rect key="frame" x="56" y="10" width="200" height="16"/>
@@ -130,7 +130,22 @@ CQk
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-Hn-Gfa">
+                                                    <rect key="frame" x="279" y="18" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="star">
+                                                        <string key="title" base64-UTF8="YES">
+CQk
+</string>
+                                                    </state>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="92c-iD-fbb" firstAttribute="centerY" secondItem="rKu-93-BZX" secondAttribute="centerY" id="2Gg-DO-Eei"/>
+                                                <constraint firstItem="92c-iD-fbb" firstAttribute="leading" secondItem="rKu-93-BZX" secondAttribute="leading" constant="8" id="UGp-ae-4t3"/>
+                                                <constraint firstItem="Trv-8H-Hvn" firstAttribute="leading" secondItem="rKu-93-BZX" secondAttribute="leading" constant="22" id="cSd-6S-KLg"/>
+                                                <constraint firstAttribute="bottom" secondItem="Trv-8H-Hvn" secondAttribute="bottom" constant="8" id="gDr-l5-bGF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="btnPlay" destination="rdF-Sq-2en" id="Ryy-NQ-4P6"/>
@@ -165,7 +180,6 @@ CQk
         </scene>
     </scenes>
     <resources>
-        <image name="play_btn" width="16" height="16"/>
-        <image name="star" width="16" height="16"/>
+        <image name="star" width="176" height="124"/>
     </resources>
 </document>

@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Views\FavoriteButtonTargetBinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Review.storyboard" />
@@ -126,6 +127,8 @@
     <ImageAsset Include="Resources\Assets.xcassets\entity_strength_3.imageset\entity_strength_3.png" />
     <ImageAsset Include="Resources\Assets.xcassets\entity_strength_4.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\entity_strength_4.imageset\entity_strength_4.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\star_active.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\star_active.imageset\star_active.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

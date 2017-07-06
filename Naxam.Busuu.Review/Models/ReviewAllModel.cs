@@ -6,15 +6,81 @@ namespace Naxam.Busuu.Review.Models
 {
     public class ReviewAllModel:MvxNotifyPropertyChanged
     {
-        public string ImgWord { get; set; }
+        string _imgWord;
+        public string ImgWord 
+        {
+			get { return _imgWord; }
+			set
+			{
+				if (_imgWord != value)
+				{
+					_imgWord = value;
+					RaisePropertyChanged();
+				}
+			}
+        }
 
-        public int StrengthLevel { get; set; }
+        int _strengthlevel;
+		public int StrengthLevel
+		{
+			get { return _strengthlevel; }
+			set
+			{
+				if (_strengthlevel != value)
+				{
+					_strengthlevel = value;
+					RaisePropertyChanged();
+				}
+			}
+		}
 
-		public string Title{get;set;}
+        string _title;
+		public string Title
+		{
+			get { return _title; }
+			set
+			{
+				if (_title != value)
+				{
+					_title = value;
+					RaisePropertyChanged();
+				}
+			}
+		}
 
-        public string SubTitle { get; set; }
+        string _subTitle;
+		public string SubTitle
+		{
+			get { return _subTitle; }
+			set
+			{
+				if (_subTitle != value)
+				{
+					_subTitle = value;
+					RaisePropertyChanged();
+				}
+			}
+		}
 
-        public bool IsFavorite { get; set; }
+        bool _isFavorite;
+		public bool IsFavorite
+		{
+			get { return _isFavorite; }
+			set
+			{
+				if (_isFavorite != value)
+				{
+					_isFavorite = value;
+					RaisePropertyChanged();
+				}
+			}
+		}
+
+        MvxCommand _flipSelected;
+		public MvxCommand FlipSelected
+		{
+			get { return new MvxCommand(() => this.IsFavorite = !this.IsFavorite); }
+		}
 
 		static string[] words = new[] { "hello", "I'm", "What's your name?", "Where are you from?" };
 
