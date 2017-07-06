@@ -145,6 +145,7 @@
     <Compile Include="Control\NXMvxExpandableListView.cs" />
     <Compile Include="Control\NXMvxExpandableListAdapter.cs" />
     <Compile Include="Control\NXExpandableListView.cs" />
+    <Compile Include="Control\NXPlayButton.cs" />
     <Compile Include="Converter\AlphaColorConverter.cs" />
     <Compile Include="Converter\BoolToColorConverter.cs" />
     <Compile Include="Converter\ExerciseTypeToDrawableConverter.cs" />
@@ -178,6 +179,8 @@
     <Compile Include="Views\PremiumArrayAdapter.cs" />
     <Compile Include="Views\PremiumView.cs" />
     <Compile Include="Views\TestView.cs" />
+    <Compile Include="Views\TrueFalseHearQuestionView.cs" />
+    <Compile Include="Views\VocabularyQuestionView.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\fonts\awesome.ttf" />
@@ -265,9 +268,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\corner_button.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\cornerbutton.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\gradient_bottom_background.xml" />
@@ -474,6 +474,41 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\portrait_fill_sentence_image_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_play_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\hear_true_false_question.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\corner_button_red.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\corner_button_green.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\corner_button_white.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_wrong.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_right.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tall_short_couble.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\vocabulary_question.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\landscape_vocabulary_question.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

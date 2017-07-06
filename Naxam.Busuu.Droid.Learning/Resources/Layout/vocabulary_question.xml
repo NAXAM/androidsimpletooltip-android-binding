@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+      <ImageView
+          android:id="@+id/im_vocabulary_description"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:background="@drawable/tall_short_couble" />
+
+      <TextView
+          android:id="@+id/tv_vocabulary_question"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:layout_marginTop="32dp"
+          android:layout_marginBottom="32dp"
+          android:textAlignment="center"
+          android:textColor="#38A9F6"
+          android:textSize="20dp"
+          android:gravity="center"/>
+      <LinearLayout
+        android:id="@+id/vocabulary_question_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+      <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+    </LinearLayout>    
+  </ScrollView>
+  <Button
+        android:id="@+id/bt_vocabulary_continue"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/corner_button_green"
+        android:text="CONTINUE"
+        android:textColor="#ffffff"
+        android:layout_gravity="bottom"
+        android:visibility="invisible"
+        android:layout_margin="16dp"/>
+</FrameLayout>

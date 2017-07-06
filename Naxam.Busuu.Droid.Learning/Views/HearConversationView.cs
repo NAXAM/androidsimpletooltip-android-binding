@@ -42,27 +42,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
             btPLay.Click += BtPLay_Click;
         }
 
-        public class AnimationListener : Java.Lang.Object, Animation.IAnimationListener
-        {
-            public Action<Animation> AnimationEnd;
-            public Action<Animation> AnimationRepeat;
-            public Action<Animation> AnimationStart;
-
-            public void OnAnimationEnd(Animation animation)
-            {
-                AnimationEnd?.Invoke(animation);
-            }
-
-            public void OnAnimationRepeat(Animation animation)
-            {
-                AnimationRepeat?.Invoke(animation);
-            }
-
-            public void OnAnimationStart(Animation animation)
-            {
-                AnimationStart?.Invoke(animation);
-            }
-        }
+        
 
         private void BtPLay_Click(object sender, EventArgs e)
         {
