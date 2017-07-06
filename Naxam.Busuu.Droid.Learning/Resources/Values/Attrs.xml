@@ -7,7 +7,7 @@
   <declare-styleable name="View">
     <attr name="BorderColor" format="color"/>
   </declare-styleable>
-  <declare-styleable name="CircleProgress">
+  <!--<declare-styleable name="CircleProgress">
     <attr name="BorderColor" format="color"/>
     <attr name="circle_progress" format="integer"/>
     <attr name="circle_max" format="integer"/>
@@ -17,5 +17,5 @@
     <attr name="circle_text_color" format="color"/>
     <attr name="circle_prefix_text" format="string"/>
     <attr name="circle_suffix_text" format="string"/>
-  </declare-styleable>
+  </declare-styleable>-->
 </resources>
