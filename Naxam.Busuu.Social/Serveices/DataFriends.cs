@@ -24,7 +24,7 @@ namespace Naxam.Busuu.Social.Serveices
                     Speak = false,
                     Write = "Hello Naxam!\nI am a new member.",
                     PublicTime = "29/5/2017",
-                    Star = "5"                         
+                    Star = 5                         
                 },
 				new FriendsModel()
 				{
@@ -38,7 +38,7 @@ namespace Naxam.Busuu.Social.Serveices
                     Speak = true,
                     Write = "Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3",
 					PublicTime = "29/5/2017",
-                    Star = "5"
+                    Star = 4.5
 				},
 				new FriendsModel()
                 {
@@ -52,7 +52,7 @@ namespace Naxam.Busuu.Social.Serveices
                     Speak = false,
 					Write = "Hello Naxam!",
 					PublicTime = "28/5/2017",
-                    Star = "4.5"
+                    Star = 4.5
 				},
 				new FriendsModel()
 				{
@@ -66,7 +66,7 @@ namespace Naxam.Busuu.Social.Serveices
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.\nI am a new member.\nI am a new member.",
 					PublicTime = "21/5/2017",
-                    Star = "4"
+                    Star = 4
 				},
 				new FriendsModel()
 				{
@@ -80,7 +80,7 @@ namespace Naxam.Busuu.Social.Serveices
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
                     PublicTime = "21/5/2017",
-                    Star = "3.5"
+                    Star = 3.5
 				},
 				new FriendsModel()
 				{
@@ -94,7 +94,7 @@ namespace Naxam.Busuu.Social.Serveices
 					Speak = false,
 					Write = "Hello Naxam!",
 					PublicTime = "21/5/2017",
-                    Star = "3"
+                    Star = 3
 				},
                 new FriendsModel()
 				{
@@ -108,7 +108,7 @@ namespace Naxam.Busuu.Social.Serveices
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
                     PublicTime = "19/5/2017",
-                    Star = "2.5"
+                    Star = 2.5
 				},
 			    new FriendsModel()
                 {
@@ -122,7 +122,7 @@ namespace Naxam.Busuu.Social.Serveices
                     Speak = false,
 					Write = "Hello Naxam!",
 					PublicTime = "19/5/2017",
-                    Star = "2"
+                    Star = 2
 				},
 				new FriendsModel()
 				{
@@ -136,7 +136,7 @@ namespace Naxam.Busuu.Social.Serveices
 					Speak = true,
                     Write = "Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3",
                     PublicTime = "19/5/2017",
-                    Star = "0"
+                    Star = 0
 				},
 				new FriendsModel()
 				{
@@ -150,7 +150,7 @@ namespace Naxam.Busuu.Social.Serveices
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.",
 					PublicTime = "29/5/2017",
-                    Star = "5"
+                    Star = 5
 				},
 				new FriendsModel()
 				{
@@ -164,7 +164,7 @@ namespace Naxam.Busuu.Social.Serveices
 					Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
                     PublicTime = "29/5/2017",
-                    Star = "4.5"
+                    Star = 4.5
 				},
             };
             return Task.FromResult(list);

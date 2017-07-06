@@ -9,120 +9,136 @@ using System.CodeDom.Compiler;
 
 namespace Naxam.Busuu.iOS.Social.Cells
 {
-    [Register ("FriendsCell")]
-    partial class FriendsCell
-    {
-        [Outlet]
-        UIKit.NSLayoutConstraint audioViewBottomConstraint { get; set; }
+	[Register ("FriendsCell")]
+	partial class FriendsCell
+	{
+		[Outlet]
+		UIKit.NSLayoutConstraint audioViewBottomConstraint { get; set; }
 
-        [Outlet]
-        UIKit.NSLayoutConstraint audioViewTopConstraint { get; set; }
+		[Outlet]
+		UIKit.NSLayoutConstraint audioViewTopConstraint { get; set; }
 
-        [Outlet]
-        UIKit.UIButton ButtonAudioPlay { get; set; }
+		[Outlet]
+		UIKit.UIButton ButtonAudioPlay { get; set; }
 
-        [Outlet]
-        UIKit.UIImageView imgLan { get; set; }
+		[Outlet]
+		UIKit.UIImageView imgLan { get; set; }
 
-        [Outlet]
-        UIKit.UIImageView imgUserAvatar { get; set; }
+		[Outlet]
+		UIKit.UIImageView imgUserAvatar { get; set; }
 
-        [Outlet]
-        UIKit.UILabel lblCountry { get; set; }
+		[Outlet]
+		UIKit.UILabel lblCountry { get; set; }
 
-        [Outlet]
-        UIKit.UILabel lblTime { get; set; }
+		[Outlet]
+		UIKit.UILabel lblRate { get; set; }
 
-        [Outlet]
-        UIKit.UILabel lblTimePublic { get; set; }
+		[Outlet]
+		UIKit.UILabel lblTime { get; set; }
 
-        [Outlet]
-        UIKit.UILabel lblUserName { get; set; }
+		[Outlet]
+		UIKit.UILabel lblTimePublic { get; set; }
 
-        [Outlet]
-        UIKit.UISlider SliderSpeak { get; set; }
+		[Outlet]
+		UIKit.UILabel lblUserName { get; set; }
 
-        [Outlet]
-        UIKit.UILabel textLan { get; set; }
+		[Outlet]
+		UIKit.UISlider SliderSpeak { get; set; }
 
-        [Outlet]
-        UIKit.UIView ViewAudioPlayer { get; set; }
+		[Outlet]
+		UIKit.UILabel textLan { get; set; }
 
-        [Outlet]
-        UIKit.UILabel WriteText { get; set; }
-       
-        [Action ("ButtonAudioPlay_TouchUpInside:")]
-        partial void ButtonAudioPlay_TouchUpInside (Foundation.NSObject sender);
+		[Outlet]
+		UIKit.UIView ViewAudioPlayer { get; set; }
 
-        [Action ("ButtonRate_TouchUpInside:")]
-        partial void ButtonRate_TouchUpInside (Foundation.NSObject sender);
-        
-        void ReleaseDesignerOutlets ()
-        {
-            if (imgLan != null) {
-                imgLan.Dispose ();
-                imgLan = null;
-            }
+		[Outlet]
+		UIKit.UIView ViewRate { get; set; }
 
-            if (imgUserAvatar != null) {
-                imgUserAvatar.Dispose ();
-                imgUserAvatar = null;
-            }
+		[Outlet]
+		UIKit.UILabel WriteText { get; set; }
 
-            if (lblCountry != null) {
-                lblCountry.Dispose ();
-                lblCountry = null;
-            }
+		[Action ("ButtonAudioPlay_TouchUpInside:")]
+		partial void ButtonAudioPlay_TouchUpInside (Foundation.NSObject sender);
 
-            if (lblUserName != null) {
-                lblUserName.Dispose ();
-                lblUserName = null;
-            }
+		[Action ("ButtonRate_TouchUpInside:")]
+		partial void ButtonRate_TouchUpInside (Foundation.NSObject sender);
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (audioViewBottomConstraint != null) {
+				audioViewBottomConstraint.Dispose ();
+				audioViewBottomConstraint = null;
+			}
 
-            if (textLan != null) {
-                textLan.Dispose ();
-                textLan = null;
-            }
+			if (audioViewTopConstraint != null) {
+				audioViewTopConstraint.Dispose ();
+				audioViewTopConstraint = null;
+			}
 
-            if (lblTimePublic != null) {
-                lblTimePublic.Dispose ();
-                lblTimePublic = null;
-            }
+			if (ButtonAudioPlay != null) {
+				ButtonAudioPlay.Dispose ();
+				ButtonAudioPlay = null;
+			}
 
-            if (ButtonAudioPlay != null) {
-                ButtonAudioPlay.Dispose ();
-                ButtonAudioPlay = null;
-            }
+			if (imgLan != null) {
+				imgLan.Dispose ();
+				imgLan = null;
+			}
 
-            if (SliderSpeak != null) {
-                SliderSpeak.Dispose ();
-                SliderSpeak = null;
-            }
+			if (imgUserAvatar != null) {
+				imgUserAvatar.Dispose ();
+				imgUserAvatar = null;
+			}
 
-            if (lblTime != null) {
-                lblTime.Dispose ();
-                lblTime = null;
-            }
+			if (lblCountry != null) {
+				lblCountry.Dispose ();
+				lblCountry = null;
+			}
 
-            if (WriteText != null) {
-                WriteText.Dispose ();
-                WriteText = null;
-            }
+			if (lblTime != null) {
+				lblTime.Dispose ();
+				lblTime = null;
+			}
 
-            if (audioViewTopConstraint != null) {
-                audioViewTopConstraint.Dispose ();
-                audioViewTopConstraint = null;
-            }
+			if (lblTimePublic != null) {
+				lblTimePublic.Dispose ();
+				lblTimePublic = null;
+			}
 
-            if (audioViewBottomConstraint != null) {
-                audioViewBottomConstraint.Dispose ();
-                audioViewBottomConstraint = null;
-            }
+			if (lblUserName != null) {
+				lblUserName.Dispose ();
+				lblUserName = null;
+			}
 
-            if (ViewAudioPlayer != null) {
-                ViewAudioPlayer.Dispose ();
-                ViewAudioPlayer = null;
-            }
-        }
-    }
+			if (SliderSpeak != null) {
+				SliderSpeak.Dispose ();
+				SliderSpeak = null;
+			}
+
+			if (textLan != null) {
+				textLan.Dispose ();
+				textLan = null;
+			}
+
+			if (ViewAudioPlayer != null) {
+				ViewAudioPlayer.Dispose ();
+				ViewAudioPlayer = null;
+			}
+
+			if (ViewRate != null) {
+				ViewRate.Dispose ();
+				ViewRate = null;
+			}
+
+			if (WriteText != null) {
+				WriteText.Dispose ();
+				WriteText = null;
+			}
+
+			if (lblRate != null) {
+				lblRate.Dispose ();
+				lblRate = null;
+			}
+		}
+	}
 }

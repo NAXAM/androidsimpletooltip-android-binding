@@ -2,58 +2,82 @@
 
 using System;
 using System.Globalization;
+using CoreGraphics;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Platform.Converters;
 using Naxam.Busuu.Social.Models;
+using PatridgeDev;
 using UIKit;
 
 namespace Naxam.Busuu.iOS.Social.Cells
 {
-	public partial class FriendsCell : MvxTableViewCell
-	{
+    public partial class FriendsCell : MvxTableViewCell
+    {
+        private PDRatingView ratingView;
         private readonly MvxImageViewLoader _loaderImageUser;
-		private readonly MvxImageViewLoader _loaderImgLearn;
+        private readonly MvxImageViewLoader _loaderImgLearn;
 
-		public FriendsCell (IntPtr handle) : base (handle)
-		{
-            _loaderImageUser = new MvxImageViewLoader(() => this.imgUserAvatar);
-			_loaderImgLearn = new MvxImageViewLoader(() => this.imgLan);
+        public FriendsCell(IntPtr handle) : base(handle)
+        {
+			_loaderImageUser = new MvxImageViewLoader(() => this.imgUserAvatar);
+            _loaderImgLearn = new MvxImageViewLoader(() => this.imgLan);
 
-			this.DelayBind(() =>
-			{
+            this.DelayBind(() =>
+            {
                 var setBinding = this.CreateBindingSet<FriendsCell, FriendsModel>();
-				setBinding.Bind(_loaderImageUser).To(f => f.Avatar).WithConversion(new ImageUriValueConverter(), null);
+                setBinding.Bind(_loaderImageUser).To(f => f.Avatar).WithConversion(new ImageUriValueConverter(), null);
                 setBinding.Bind(lblUserName).To(f => f.Name);
-				setBinding.Bind(lblCountry).To(f => f.Country);
+                setBinding.Bind(lblCountry).To(f => f.Country);
                 setBinding.Bind(_loaderImgLearn).To(f => f.ImageLearn).WithConversion(new ImageUriValueConverter(), null);
                 setBinding.Bind(textLan).To(f => f.TextLearn);
                 setBinding.Bind(lblTimePublic).To(f => f.PublicTime);
                 setBinding.Bind(ViewAudioPlayer).For(f => f.Hidden).To(f => f.Speak).WithConversion(new InverseValueConverter(), null);
-				setBinding.Bind(audioViewBottomConstraint).For(f => f.Active).To(f => f.Speak);
-				setBinding.Bind(audioViewTopConstraint).For(f => f.Active).To(f => f.Speak);
-                setBinding.Bind(WriteText).For(d => d.Hidden).To(d => d.Speak);
-                setBinding.Bind(WriteText).To(d => d.Write);
-				setBinding.Apply();
-			});
-		}
+                setBinding.Bind(audioViewBottomConstraint).For(f => f.Active).To(f => f.Speak);
+                setBinding.Bind(audioViewTopConstraint).For(f => f.Active).To(f => f.Speak);
+                setBinding.Bind(WriteText).For(f => f.Hidden).To(f => f.Speak);
+                setBinding.Bind(WriteText).To(f => f.Write);
+                setBinding.Bind(lblRate).To(f => f.Star).WithConversion(new TextRateValueConverter(), null);
+                setBinding.Apply();
+            });
+        }
 
-		public override void AwakeFromNib()
-		{
-			base.AwakeFromNib();			
+        public override void AwakeFromNib()
+        {
+            base.AwakeFromNib();
 
-			imgUserAvatar.Layer.CornerRadius = imgUserAvatar.Frame.Width / 2;
+            imgUserAvatar.Layer.CornerRadius = imgUserAvatar.Frame.Width / 2;
             imgLan.Layer.CornerRadius = imgLan.Frame.Width / 2;
             ButtonAudioPlay.Layer.CornerRadius = ButtonAudioPlay.Frame.Width / 2;
 
-			ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 12, 10, 10);
+            ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 12, 10, 10);
 
-			var img = UIImage.FromBundle("play_icon_small");
-			SliderSpeak.SetThumbImage(img, UIControlState.Normal);
-			SliderSpeak.SetThumbImage(img, UIControlState.Selected);
-			SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);		           
-		}
+            var img = UIImage.FromBundle("play_icon_small");
+            SliderSpeak.SetThumbImage(img, UIControlState.Normal);
+            SliderSpeak.SetThumbImage(img, UIControlState.Selected);
+            SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);
+
+			var ratingConfig = new RatingConfig(UIImage.FromBundle("Stars" + "/grey_star"),
+									UIImage.FromBundle("Stars" + "/yellow_star_d"),
+									UIImage.FromBundle("Stars" + "/yellow_star_d"));
+            
+            ratingConfig.ItemPadding = 1;
+			var ratingFrame = new CGRect(CGPoint.Empty, new CGSize(100, 24));
+
+			ratingView = new PDRatingView(ratingFrame, ratingConfig);
+
+			ViewRate.Add(ratingView);
+        }
+
+        public override void LayoutSubviews()
+        {
+            base.LayoutSubviews();
+
+			decimal rating = Convert.ToDecimal(lblRate.Text.Replace("(", "").Replace(")", ""));
+
+			ratingView.AverageRating = rating;
+        }
 
         partial void ButtonAudioPlay_TouchUpInside(NSObject sender)
         {
@@ -64,5 +88,13 @@ namespace Naxam.Busuu.iOS.Social.Cells
         {
 
         }
-	}
+
+        public class TextRateValueConverter : MvxValueConverter<double, string>
+		{
+            protected override string Convert(double value, Type targetType, object parameter, CultureInfo cultureInfo)
+			{
+                return "(" + value + ")";
+			}
+		}
+    }
 }
