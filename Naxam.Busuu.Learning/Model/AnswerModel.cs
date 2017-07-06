@@ -39,6 +39,22 @@ namespace Naxam.Busuu.Learning.Model
             }
         }
 
+        private int _position;
+
+        public int Position
+        {
+            get { return _position; }
+            set
+            {
+                if (_position != value)
+                {
+                    _position = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+
 
     }
 }

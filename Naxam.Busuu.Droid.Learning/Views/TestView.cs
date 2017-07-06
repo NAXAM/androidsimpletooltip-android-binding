@@ -22,32 +22,36 @@ namespace Naxam.Busuu.Droid.Learning.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.test_layout);
-            MemoSelectWord alterView = FindViewById<MemoSelectWord>(Resource.Id.alterView);
-           // alterView.OrientationScreen = 1;
+            MemoFillSentenceImage alterView = FindViewById<MemoFillSentenceImage>(Resource.Id.alterView);
+            alterView.OrientationScreen = 1;
             alterView.Item = new Busuu.Learning.Model.UnitModel {
                 Title = "Ai là đàn bà",
+                
                 Input = new List<string>
                 {
-                    "Tôi Là Ai       Em Là Ai"
+                    "Tôi Là %% Ai Em Là Ai kaka Em là ai kệ em %% %%"
                 },
                 Images = new List<string> {
-                    "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg",
+                    //"http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg",
                 },
                 Answers = new List<AnswerModel>
                 {
                     new AnswerModel
                     {
                         Text = "thảo",
-                        Value = true
+                        Value = true 
                     },
                      new AnswerModel
                     {
                         Text = "nghĩa",
-                        Value = true
+                        Value = true,
+                        Position = 1
                     },
                       new AnswerModel
                     {
-                        Text = "hà"
+                        Text = "hà",
+                        Position = 2,
+                        Value = true
                     },
                        new AnswerModel
                     {

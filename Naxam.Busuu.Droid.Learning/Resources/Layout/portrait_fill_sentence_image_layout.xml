@@ -11,17 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imgImage"
+        android:layout_marginBottom="24dp"
         />
 
     <TextView
         android:id="@+id/txtQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        style="@style/StyleTextQuestion"
-        android:text="Chạm Vào (các từ) dúng để hoàn thành câu"
+        style="@style/StyleTextQuestion" 
         />
     <TextView
         android:id="@+id/txtInput"
@@ -30,13 +30,13 @@
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        style="@style/StyleTextInput"
-        android:text="My ____ has four brother"
+        style="@style/StyleTextInput" 
         />
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/flexAnswer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_weight="1"
