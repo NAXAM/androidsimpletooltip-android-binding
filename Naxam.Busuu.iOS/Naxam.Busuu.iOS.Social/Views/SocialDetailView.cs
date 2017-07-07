@@ -10,6 +10,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Views;
 using MvvmCross.Platform.Converters;
 using Naxam.Busuu.Social.ViewModels;
+using PatridgeDev;
 using UIKit;
 
 namespace Naxam.Busuu.iOS.Social.Views
@@ -18,6 +19,7 @@ namespace Naxam.Busuu.iOS.Social.Views
     public partial class SocialDetailView : MvxViewController<SocialDetailViewModel>
 	{
         private int sdvid = 1;
+		private PDRatingView ratingView;
         private readonly MvxImageViewLoader _loaderImageUser;
         private readonly MvxImageViewLoader _loaderImgQuestion;
 
@@ -44,7 +46,28 @@ namespace Naxam.Busuu.iOS.Social.Views
 			setBinding.Bind(audioViewTopConstraint).For(x => x.Active).To(d => d.SocialDetailData[sdvid].Speak);
 			setBinding.Bind(WriteText).For(d => d.Hidden).To(d => d.SocialDetailData[sdvid].Speak);
 			setBinding.Bind(WriteText).To(d => d.SocialDetailData[sdvid].Write);
+            setBinding.Bind(lblRate).To(d => d.SocialDetailData[sdvid].Star).WithConversion(new TextRateValueConverter(), null);
 			setBinding.Apply();
+
+			var img = UIImage.FromBundle("play_icon_small");
+			SliderSpeak.SetThumbImage(img, UIControlState.Normal);
+			SliderSpeak.SetThumbImage(img, UIControlState.Selected);
+			SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);
+
+			var ratingConfig = new RatingConfig(UIImage.FromBundle("Stars" + "/grey_star"),
+									UIImage.FromBundle("Stars" + "/yellow_star_d"),
+									UIImage.FromBundle("Stars" + "/yellow_star_d"));
+
+			ratingConfig.ItemPadding = 1;
+			var ratingFrame = new CGRect(CGPoint.Empty, new CGSize(100, 24));
+
+			ratingView = new PDRatingView(ratingFrame, ratingConfig);
+
+			ViewRate.Add(ratingView);
+
+			decimal rating = Convert.ToDecimal(lblRate.Text.Replace("(", "").Replace(")", ""));
+
+			ratingView.AverageRating = rating;
 		}
 
         public override void ViewDidAppear(bool animated)
@@ -90,6 +113,14 @@ namespace Naxam.Busuu.iOS.Social.Views
 			protected override string Convert(string value, Type targetType, object parameter, CultureInfo cultureInfo)
 			{
 				return "res:" + value;
+			}
+		}
+
+		public class TextRateValueConverter : MvxValueConverter<double, string>
+		{
+			protected override string Convert(double value, Type targetType, object parameter, CultureInfo cultureInfo)
+			{
+				return "(" + value + ")";
 			}
 		}
 	}
