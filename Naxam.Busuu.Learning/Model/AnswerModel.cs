@@ -54,6 +54,21 @@ namespace Naxam.Busuu.Learning.Model
             }
         }
 
+        private string _image;
+
+        public string Image
+        {
+            get { return _image; }
+            set
+            {
+                if (_image != value)
+                {
+                    _image = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
 
 
     }
