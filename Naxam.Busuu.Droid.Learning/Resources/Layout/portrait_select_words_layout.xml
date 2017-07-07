@@ -5,9 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
+  <FrameLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/frameHeader"
+    >
+    <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/imgImage"
+      android:layout_marginBottom="24dp"
+        />
+    <Naxam.Busuu.Droid.Learning.Control.NXPlayButton
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+      android:layout_gravity="bottom|center_horizontal"
+      android:id="@+id/btnPlay"
+    />
+  </FrameLayout>
   <TextView
-      android:id="@+id/txtTitle"
+      android:id="@+id/txtQuestion"
       android:layout_width="match_parent"
       android:layout_height="wrap_content" 
       style="@style/StyleTextQuestion"

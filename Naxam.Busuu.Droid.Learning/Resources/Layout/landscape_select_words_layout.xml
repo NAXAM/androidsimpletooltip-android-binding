@@ -41,15 +41,6 @@
           android:layout_marginTop="32dp"
           android:text="Chạm Vào (các từ) dúng để hoàn thành câu" />
 
-      <TextView
-          android:id="@+id/txtInput"
-          style="@style/StyleTextInput"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginLeft="16dp"
-          android:layout_marginRight="16dp"
-          android:layout_marginTop="8dp"  />
-
       <com.google.android.flexbox.FlexboxLayout
           android:id="@+id/flexAnswer"
           android:layout_width="match_parent"

@@ -23,7 +23,7 @@ using System.Text.RegularExpressions;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class MemoFillSentenceImage : LinearLayout
+    public class MemoFillSentence : LinearLayout
     {
         private event EventHandler<AnswerModel> AnswerClick;
         public int OrientationScreen;
@@ -33,23 +33,23 @@ namespace Naxam.Busuu.Droid.Learning.Control
         List<AnswerModel> listCorrect;
         Dictionary<TextView, AnswerModel> listChoice;
         int CountCorrect;
-        public MemoFillSentenceImage(Context context) : base(context)
+        public MemoFillSentence(Context context) : base(context)
         {
         }
 
-        public MemoFillSentenceImage(Context context, IAttributeSet attrs) : base(context, attrs)
+        public MemoFillSentence(Context context, IAttributeSet attrs) : base(context, attrs)
         {
         }
 
-        public MemoFillSentenceImage(Context context, IAttributeSet attrs, int defStyleAttr) : base(context, attrs, defStyleAttr)
+        public MemoFillSentence(Context context, IAttributeSet attrs, int defStyleAttr) : base(context, attrs, defStyleAttr)
         {
         }
 
-        public MemoFillSentenceImage(Context context, IAttributeSet attrs, int defStyleAttr, int defStyleRes) : base(context, attrs, defStyleAttr, defStyleRes)
+        public MemoFillSentence(Context context, IAttributeSet attrs, int defStyleAttr, int defStyleRes) : base(context, attrs, defStyleAttr, defStyleRes)
         {
         }
 
-        protected MemoFillSentenceImage(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
+        protected MemoFillSentence(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
         {
         }
 
@@ -67,19 +67,55 @@ namespace Naxam.Busuu.Droid.Learning.Control
             RemoveAllViews();
             listString = new List<string>();
             listIndex = new List<int>();
+            int imageCount = Item.Images.Count;
             listChoice = new Dictionary<TextView, AnswerModel>();
             listCorrect = Item.Answers.Where(d => d.Value).OrderBy(d => d.Position).ToList();
             CountCorrect = Item.Answers.Where(d => d.Value).ToList().Count;
-            View view = LayoutInflater.FromContext(Context).Inflate(OrientationScreen == 0 ? Resource.Layout.landscape_fill_sentence_image_layout : Resource.Layout.portrait_fill_sentence_image_layout, null);
+            View view = LayoutInflater.FromContext(Context).Inflate(OrientationScreen == 2 && imageCount > 0 ? Resource.Layout.landscape_fill_sentence_image_layout : Resource.Layout.portrait_fill_sentence_image_layout, null);
             ImageView imgImage = view.FindViewById<ImageView>(Resource.Id.imgImage);
             TextView txtQuestion = view.FindViewById<TextView>(Resource.Id.txtQuestion);
             TextView txtInput = view.FindViewById<TextView>(Resource.Id.txtInput);
             FlexboxLayout flexAnswer = view.FindViewById<FlexboxLayout>(Resource.Id.flexAnswer);
             Button btnNext = view.FindViewById<Button>(Resource.Id.btnNext);
+            NXPlayButton btnPlay = view.FindViewById<NXPlayButton>(Resource.Id.btnPlay);
             listString = Regex.Split(Item.Input[0], "%%").ToList();
-
-            if (Item.Images.Count > 0)
+            if (Item.Audios.Count > 0)
             {
+
+            }
+            else
+            {
+                btnPlay.Visibility = ViewStates.Gone;
+            }
+            int measuredWidth = 0;
+            int measuredHeight = 0;
+            IWindowManager windowManager = Context.GetSystemService(Context.WindowService).JavaCast<IWindowManager>();
+
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.HoneycombMr2)
+            {
+                Point size = new Point();
+                windowManager.DefaultDisplay.GetSize(size);
+                measuredWidth = size.X;
+                measuredHeight = size.Y;
+            }
+            else
+            {
+                Display d = windowManager.DefaultDisplay;
+                measuredWidth = d.Width;
+                measuredHeight = d.Height;
+            }
+            if (imageCount > 0)
+            {
+                if (OrientationScreen == 2)
+                {
+                    imgImage.LayoutParameters.Width = (int)measuredWidth / 2;
+                    imgImage.LayoutParameters.Height = (int)measuredWidth * 9 / 32;
+                }
+                if (OrientationScreen == 1)
+                {
+                    imgImage.LayoutParameters.Width = (int)measuredWidth;
+                    imgImage.LayoutParameters.Height = (int)measuredWidth * 9 / 16;
+                }
                 Glide.With(Context).Load(Item.Images[0]).Into(imgImage);
             }
             else
@@ -88,6 +124,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             }
 
             txtQuestion.Text = Item.Title;
+            input = "";
             for (int i = 0; i < listString.Count; i++)
             {
                 if (i < listString.Count - 1)
@@ -246,9 +283,6 @@ namespace Naxam.Busuu.Droid.Learning.Control
             AddView(view, new LinearLayout.LayoutParams(-1, -1));
         }
 
-        private void FillText()
-        {
 
-        }
     }
 }

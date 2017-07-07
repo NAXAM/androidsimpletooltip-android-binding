@@ -18,9 +18,12 @@ namespace Naxam.Busuu.Droid.Learning.Control
     public class NXPlayButton : FrameLayout
     {
         private ImageView imIcon;
-        private bool isPlay = false;
+        private bool isPlay;
+        public bool IsPlay { get { return isPlay; } }
         private int widthControl = 0;
         private int heightControl = 0;
+        public event EventHandler<bool> PlayPause;
+
 
         public NXPlayButton(Context context) : base(context)
         {
@@ -64,16 +67,26 @@ namespace Naxam.Busuu.Droid.Learning.Control
             if (ChildCount == 1)
                 return;
             imIcon = new ImageView(Context);
-
+            int pxfromdp = (int)Util.Util.PxFromDp(Context, 8);
             FrameLayout.LayoutParams param = new FrameLayout.LayoutParams(-2, -2);
+            param.BottomMargin = pxfromdp / 2;
+            param.TopMargin = pxfromdp / 2;
+            param.LeftMargin = pxfromdp / 2;
+            param.RightMargin = pxfromdp / 2;
             param.Gravity = GravityFlags.Center;
             imIcon.LayoutParameters = param;
-            imIcon.SetPadding(20, 20, 20, 20);
+            
+            imIcon.SetPadding(pxfromdp, pxfromdp, pxfromdp, pxfromdp);
             imIcon.SetImageResource(Resource.Drawable.ic_play_arrow);
             imIcon.SetBackgroundResource(Resource.Drawable.corner_button);
+            if (Android.OS.Build.VERSION.SdkInt > BuildVersionCodes.Kitkat)
+            {
+                imIcon.Elevation = Util.Util.PxFromDp(Context, 4);
+            }
             AddView(imIcon);
             imIcon.Click += (s, e) =>
             {
+                PlayPause?.Invoke(imIcon, !isPlay);
                 OnClick();
             };
         }

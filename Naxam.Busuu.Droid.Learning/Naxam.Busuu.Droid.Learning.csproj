@@ -141,7 +141,7 @@
     <Compile Include="Control\AnimatorUpdateListener.cs" />
     <Compile Include="Control\ExerciesView.cs" />
     <Compile Include="Control\LessonHeader.cs" />
-    <Compile Include="Control\MemoFillSentenceImage.cs" />
+    <Compile Include="Control\MemoFillSentence.cs" />
     <Compile Include="Control\NXMvxExpandableListView.cs" />
     <Compile Include="Control\NXMvxExpandableListAdapter.cs" />
     <Compile Include="Control\NXExpandableListView.cs" />
@@ -462,7 +462,7 @@
     <AndroidResource Include="Resources\drawable\background_round_4dp_red.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Layout\memo_select_word_layout.xml">
+    <AndroidResource Include="Resources\Layout\portrait_select_words_layout.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -509,6 +509,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\landscape_vocabulary_question.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\landscape_select_words_layout.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
