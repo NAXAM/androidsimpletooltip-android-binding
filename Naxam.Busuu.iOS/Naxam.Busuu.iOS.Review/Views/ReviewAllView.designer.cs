@@ -13,10 +13,10 @@ namespace Naxam.Busuu.iOS.Review.Views
 	partial class ReviewAllView
 	{
 		[Outlet]
-		UIKit.UIButton btnDiscovery { get; set; }
+		UIKit.UIButton btnAll { get; set; }
 
 		[Outlet]
-		UIKit.UIButton btnFriends { get; set; }
+		UIKit.UIButton btnFavorite { get; set; }
 
 		[Outlet]
 		UIKit.UILabel lbButtonClicked { get; set; }
@@ -33,22 +33,22 @@ namespace Naxam.Busuu.iOS.Review.Views
 		[Outlet]
 		UIKit.UIView uiViewSlide { get; set; }
 
-		[Action ("btnDiscovery_TouchUpInside:")]
-		partial void btnDiscovery_TouchUpInside (Foundation.NSObject sender);
+		[Action ("btnAll_TouchUpInside:")]
+		partial void btnAll_TouchUpInside (Foundation.NSObject sender);
 
-		[Action ("btnFriends_TouchUpInside:")]
-		partial void btnFriends_TouchUpInside (Foundation.NSObject sender);
+		[Action ("btnFavorite_TouchUpInside:")]
+		partial void btnFavorite_TouchUpInside (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (btnDiscovery != null) {
-				btnDiscovery.Dispose ();
-				btnDiscovery = null;
+			if (btnAll != null) {
+				btnAll.Dispose ();
+				btnAll = null;
 			}
 
-			if (btnFriends != null) {
-				btnFriends.Dispose ();
-				btnFriends = null;
+			if (btnFavorite != null) {
+				btnFavorite.Dispose ();
+				btnFavorite = null;
 			}
 
 			if (lbButtonClicked != null) {

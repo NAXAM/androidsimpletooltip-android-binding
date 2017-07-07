@@ -1,6 +1,7 @@
-using System;
+﻿using System;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using Naxam.Busuu.Review.Services;
 using Naxam.Busuu.Review.ViewModels;
 
 namespace Naxam.Busuu.iOS
@@ -9,6 +10,7 @@ namespace Naxam.Busuu.iOS
 	{
 		public App()
 		{
+            Mvx.RegisterType<IReviewService, ReviewService>();
 			Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<ReviewAllViewModel>());
 		}
 	}

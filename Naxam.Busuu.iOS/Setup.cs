@@ -6,6 +6,7 @@ using MvvmCross.iOS.Platform;
 using MvvmCross.iOS.Views.Presenters;
 using Naxam.Busuu.iOS.Review.Views;
 using Naxam.Busuu.Review.ViewModels;
+using UIKit;
 
 namespace Naxam.Busuu.iOS
 {
@@ -40,6 +41,16 @@ namespace Naxam.Busuu.iOS
 
 			assemblies.AddRange(base.GetViewModelAssemblies());
 			return assemblies;
+        }
+
+        protected override void FillBindingNames(MvvmCross.Binding.BindingContext.IMvxBindingNameRegistry obj)
+        {
+            base.FillBindingNames(obj);
+        }
+
+        protected override void FillTargetFactories(MvvmCross.Binding.Bindings.Target.Construction.IMvxTargetBindingFactoryRegistry registry)
+        {
+            
         }
     }
 }

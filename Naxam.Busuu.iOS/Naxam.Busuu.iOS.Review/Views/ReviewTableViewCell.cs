@@ -24,13 +24,11 @@ namespace Naxam.Busuu.iOS.Review.Views
 
             this.DelayBind(() =>
 			{
-				var set = this.CreateBindingSet<ReviewTableViewCell, ReviewAllModel>();
+				var set = this.CreateBindingSet<ReviewTableViewCell, ReviewModel>();
 				set.Bind(lbTitle).To(m => m.Title);
 				set.Bind(lbSubtitle).To(m => m.SubTitle);
-                set.Bind(imgWordViewLoader).To(m => m.ImgWord);
-                //set.Bind(btnPlay).For(v=>v).To(m => m.IsFavorite).WithConversion(new FavoriteImageValueConverter(),null);
+                set.Bind(imgWordViewLoader).To(m => m.IsFavorite).WithConversion(new FavoriteImageValueConverter(),null);
                 set.Bind(btnStar).To(vm=>vm.FlipSelected);
-                set.Bind(btnPlay).For("Image").To(m => m.Title);
                 set.Bind(imgStrengthViewLoader).To(m=>m.StrengthLevel).WithConversion(new ImageStrengthValueConverter(),null);
 				set.Apply();
 			});

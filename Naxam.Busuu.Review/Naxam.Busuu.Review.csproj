@@ -29,8 +29,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\ReviewAllViewModel.cs" />
-    <Compile Include="Models\ReviewAllModel.cs" />
+    <Compile Include="ViewModels\ReviewViewModel.cs" />
+    <Compile Include="Models\ReviewModel.cs" />
+    <Compile Include="Services\ReviewService.cs" />
+    <Compile Include="Services\IReviewService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
