@@ -3,11 +3,15 @@
 using System;
 
 using Foundation;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Views;
+using Naxam.Busuu.Social.ViewModels;
 using UIKit;
 
 namespace Naxam.Busuu.iOS.Social
 {
-	public partial class FilterView : UIViewController
+	[MvxFromStoryboard(StoryboardName = "Social")]
+    public partial class FilterView : MvxViewController<FilterViewModel>
 	{
 		public FilterView (IntPtr handle) : base (handle)
 		{
@@ -15,6 +19,8 @@ namespace Naxam.Busuu.iOS.Social
 
         public override void ViewDidLoad()
         {
+            this.Request = new MvxViewModelRequest<FilterViewModel>(null, null);
+
             base.ViewDidLoad();
 
 			//this.NavigationController.NavigationBar.Layer.ShadowRadius = 2;

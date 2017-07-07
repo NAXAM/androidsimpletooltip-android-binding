@@ -9,65 +9,73 @@ using System.CodeDom.Compiler;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
-	[Register ("SocialView")]
-	partial class SocialView
-	{
-		[Outlet]
-		UIKit.UIButton ButtonDiscover { get; set; }
+    [Register ("SocialView")]
+    partial class SocialView
+    {
+        [Outlet]
+        UIKit.UIBarButtonItem BarFilterButtonItem { get; set; }
 
-		[Outlet]
-		UIKit.UIButton ButtonFriends { get; set; }
+        [Outlet]
+        UIKit.UIButton ButtonDiscover { get; set; }
 
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UIKit.UIView SocialContainerView { get; set; }
+        [Outlet]
+        UIKit.UIButton ButtonFriends { get; set; }
 
-		[Outlet]
-		UIKit.UIView ViewBarItem { get; set; }
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView SocialContainerView { get; set; }
 
-		[Outlet]
-		UIKit.UIView ViewContainer { get; set; }
+        [Outlet]
+        UIKit.UIView ViewBarItem { get; set; }
 
-		[Outlet]
-		UIKit.UIView ViewSelectForButton { get; set; }
+        [Outlet]
+        UIKit.UIView ViewContainer { get; set; }
 
-		[Action ("ButtonDiscover_TouchUpInside:")]
-		partial void ButtonDiscover_TouchUpInside (Foundation.NSObject sender);
+        [Outlet]
+        UIKit.UIView ViewSelectForButton { get; set; }
 
-		[Action ("ButtonFriends_TouchUpInside:")]
-		partial void ButtonFriends_TouchUpInside (Foundation.NSObject sender);
-		
-		void ReleaseDesignerOutlets ()
-		{
-			if (ButtonDiscover != null) {
-				ButtonDiscover.Dispose ();
-				ButtonDiscover = null;
-			}
+        [Action ("ButtonDiscover_TouchUpInside:")]
+        partial void ButtonDiscover_TouchUpInside (Foundation.NSObject sender);
 
-			if (ButtonFriends != null) {
-				ButtonFriends.Dispose ();
-				ButtonFriends = null;
-			}
+        [Action ("ButtonFriends_TouchUpInside:")]
+        partial void ButtonFriends_TouchUpInside (Foundation.NSObject sender);
+        
+        void ReleaseDesignerOutlets ()
+        {
+            if (ButtonDiscover != null) {
+                ButtonDiscover.Dispose ();
+                ButtonDiscover = null;
+            }
 
-			if (ViewBarItem != null) {
-				ViewBarItem.Dispose ();
-				ViewBarItem = null;
-			}
+            if (ButtonFriends != null) {
+                ButtonFriends.Dispose ();
+                ButtonFriends = null;
+            }
 
-			if (ViewSelectForButton != null) {
-				ViewSelectForButton.Dispose ();
-				ViewSelectForButton = null;
-			}
+            if (SocialContainerView != null) {
+                SocialContainerView.Dispose ();
+                SocialContainerView = null;
+            }
 
-			if (SocialContainerView != null) {
-				SocialContainerView.Dispose ();
-				SocialContainerView = null;
-			}
+            if (ViewBarItem != null) {
+                ViewBarItem.Dispose ();
+                ViewBarItem = null;
+            }
 
-			if (ViewContainer != null) {
-				ViewContainer.Dispose ();
-				ViewContainer = null;
-			}
-		}
-	}
+            if (ViewContainer != null) {
+                ViewContainer.Dispose ();
+                ViewContainer = null;
+            }
+
+            if (ViewSelectForButton != null) {
+                ViewSelectForButton.Dispose ();
+                ViewSelectForButton = null;
+            }
+
+            if (BarFilterButtonItem != null) {
+                BarFilterButtonItem.Dispose ();
+                BarFilterButtonItem = null;
+            }
+        }
+    }
 }

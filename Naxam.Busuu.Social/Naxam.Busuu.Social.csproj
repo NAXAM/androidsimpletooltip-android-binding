@@ -43,6 +43,11 @@
     <Compile Include="Models\FriendsModel.cs" />
     <Compile Include="Serveices\IDataFriends.cs" />
     <Compile Include="Serveices\DataFriends.cs" />
+    <Compile Include="ViewModels\SocialDetailViewModel.cs" />
+    <Compile Include="ViewModels\FilterViewModel.cs" />
+    <Compile Include="Models\SocialDetailModel.cs" />
+    <Compile Include="Serveices\IDataSocialDetail.cs" />
+    <Compile Include="Serveices\DataSocialDetail.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

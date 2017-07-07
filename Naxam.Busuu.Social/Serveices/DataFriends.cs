@@ -14,7 +14,7 @@ namespace Naxam.Busuu.Social.Serveices
             {
                 new FriendsModel()
                 {
-                    Id = 0,
+                    Id = 11,
                     Avatar = "user_avatar_placeholder.png",
                     Name = "Nguyen Nhu Son",
                     Country = "Vietnam",
@@ -28,7 +28,7 @@ namespace Naxam.Busuu.Social.Serveices
                 },
 				new FriendsModel()
 				{
-					Id = 1,
+					Id = 12,
 					Avatar = "user_avatar_placeholder.png",
 					Name = "Nguyen Nhu Son",
 					Country = "Vietnam",
@@ -42,7 +42,7 @@ namespace Naxam.Busuu.Social.Serveices
 				},
 				new FriendsModel()
                 {
-                    Id = 2,
+                    Id = 13,
                     Avatar = "user_avatar_placeholder.png",
                     Name = "Anabela Rodrigues",
                     Country = "Portugal",
@@ -56,7 +56,7 @@ namespace Naxam.Busuu.Social.Serveices
 				},
 				new FriendsModel()
 				{
-					Id = 3,
+					Id = 14,
 					Avatar = "user_avatar_placeholder.png",
 					Name = "Kaiser",
 					Country = "Mexico",
@@ -70,7 +70,7 @@ namespace Naxam.Busuu.Social.Serveices
 				},
 				new FriendsModel()
 				{
-					Id = 4,
+					Id = 15,
 					Avatar = "user_avatar_placeholder.png",
 					Name = "Iyp",
 					Country = "China",
@@ -84,7 +84,7 @@ namespace Naxam.Busuu.Social.Serveices
 				},
 				new FriendsModel()
 				{
-					Id = 5,
+					Id = 16,
 					Avatar = "user_avatar_placeholder.png",
 					Name = "Juan Pablo Cervantes",
 					Country = "Colombia",
@@ -98,7 +98,7 @@ namespace Naxam.Busuu.Social.Serveices
 				},
                 new FriendsModel()
 				{
-					Id = 6,
+					Id = 17,
 					Avatar = "user_avatar_placeholder.png",
 					Name = "Mohamed",
 					Country = "Agypt",
@@ -112,7 +112,7 @@ namespace Naxam.Busuu.Social.Serveices
 				},
 			    new FriendsModel()
                 {
-                    Id = 7,
+                    Id = 18,
                     Avatar = "user_avatar_placeholder.png",
                     Name = "Mauricio Percara",
                     Country = "Argentina",
@@ -126,7 +126,7 @@ namespace Naxam.Busuu.Social.Serveices
 				},
 				new FriendsModel()
 				{
-					Id = 8,
+					Id = 19,
 					Avatar = "user_avatar_placeholder.png",
 					Name = "Leandra",
 					Country = "Swiss",
@@ -140,7 +140,7 @@ namespace Naxam.Busuu.Social.Serveices
 				},
 				new FriendsModel()
 				{
-					Id = 9,
+					Id = 20,
 					Avatar = "user_avatar_placeholder.png",
 					Name = "Nguyen Nhu Son",
 					Country = "Vietnam",
@@ -154,7 +154,7 @@ namespace Naxam.Busuu.Social.Serveices
 				},
 				new FriendsModel()
 				{
-					Id = 10,
+					Id = 21,
 					Avatar = "user_avatar_placeholder.png",
 					Name = "Nguyen Nhu Son",
 					Country = "Vietnam",
@@ -165,7 +165,7 @@ namespace Naxam.Busuu.Social.Serveices
                     Write = "Nokia-tune-Nokia-tune.mp3",
                     PublicTime = "29/5/2017",
                     Star = 4.5
-				},
+				}
             };
             return Task.FromResult(list);
         }

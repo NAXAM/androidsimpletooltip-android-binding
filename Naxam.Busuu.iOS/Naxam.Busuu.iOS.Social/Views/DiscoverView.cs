@@ -8,6 +8,7 @@ using CoreAnimation;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Core.ViewModels;
+using Naxam.Busuu.iOS.Social.Cells;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
@@ -30,8 +31,8 @@ namespace Naxam.Busuu.iOS.Social.Views
             MvxCollectionViewSource dSource = new MvxCollectionViewSource(DiscoverCollectionView, (NSString)"DiscoverCell");
 
 			var setBinding = this.CreateBindingSet<DiscoverView, DiscoverViewModel>();
-			setBinding.Bind(dSource).To(vm => vm.DiscoverData);
-			setBinding.Apply();
+            setBinding.Bind(dSource).To(vm => vm.DiscoverData);
+            setBinding.Apply();
 
             DiscoverCollectionView.Source = dSource;					
         }

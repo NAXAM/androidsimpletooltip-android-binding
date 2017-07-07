@@ -11,6 +11,11 @@ namespace Naxam.Busuu.Social.ViewModels
 
         private MvxObservableCollection<FriendsModel> _friends;
 
+		public IMvxCommand PopModalCommand
+		{
+            get { return new MvxCommand(() => ShowViewModel<SocialDetailViewModel>()); }
+		}
+
         public FriendsViewModel(IDataFriends datafriends)
 		{
             _datafriends = datafriends;
@@ -18,8 +23,15 @@ namespace Naxam.Busuu.Social.ViewModels
 
 		public MvxObservableCollection<FriendsModel> FriendsData
 		{
-			get => _friends;
-			set => SetProperty(ref _friends, value);
+			get { return _friends; }
+			set
+			{
+				if (_friends != value)
+				{
+					_friends = value;
+					RaisePropertyChanged(() => FriendsData);
+				}
+			}
 		}
 
 		public async override void Start()

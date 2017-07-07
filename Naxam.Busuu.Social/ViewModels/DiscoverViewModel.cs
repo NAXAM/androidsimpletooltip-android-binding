@@ -12,6 +12,11 @@ namespace Naxam.Busuu.Social.ViewModels
 
 		private List<DiscoverModel> _discover;
 
+		public IMvxCommand PopModalCommand
+		{
+			get { return new MvxCommand(() => ShowViewModel<SocialDetailViewModel>()); }
+		}
+
         public DiscoverViewModel(IDataDiscover datadiscover)
         {
             _datadiscover = datadiscover;

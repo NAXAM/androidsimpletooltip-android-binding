@@ -8,6 +8,7 @@ using CoreGraphics;
 using MvvmCross.Platform.Converters;
 using System.Globalization;
 using AVFoundation;
+using Naxam.Busuu.Social.ViewModels;
 
 namespace Naxam.Busuu.iOS.Social.Cells
 {
@@ -43,6 +44,11 @@ namespace Naxam.Busuu.iOS.Social.Cells
                 setBinding.Bind(_loaderImgLearn).To(d => d.ImageLearn).WithConversion(new ImageUriValueConverter(), null);
                 setBinding.Bind(TextLan).To(d => d.TextLearn);
                 setBinding.Apply();				
+
+                //var setBinding2 = this.CreateBindingSet<DiscoverCell, DiscoverViewModel>();
+                //setBinding2.Bind(ButtonVIEW).To(vm => vm.PopModalCommand);
+                //setBinding2.Bind(ButtonVIEW).For("Clicked").To(vm => vm.PopModalCommand);
+                //setBinding2.Apply();
 			});
         }
 
@@ -121,7 +127,7 @@ namespace Naxam.Busuu.iOS.Social.Cells
             }
         }
 
-        void UpdateCurrentTime()
+        private void UpdateCurrentTime()
 		{
             if (SpeakMusicPlayer.Playing)
             {
@@ -134,7 +140,7 @@ namespace Naxam.Busuu.iOS.Social.Cells
             }
 		}
 
-		void UpdateViewForPlayerState()
+        private void UpdateViewForPlayerState()
 		{		
 			if (SpeakMusicPlayer.Playing)
 			{
@@ -153,20 +159,20 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			}
 		}
 
-		void UpdateViewForPlayerInfo()
+        private void UpdateViewForPlayerInfo()
 		{
 			SliderSpeak.Value = 0;
 			SliderSpeak.MaxValue = (float)SpeakMusicPlayer.Duration;
             lblTime.Text = String.Format("{0:00}:{1:00}", (int)SpeakMusicPlayer.Duration / 60, (int)SpeakMusicPlayer.Duration % 60);
 		}
 
-		void PausePlayback()
+        private void PausePlayback()
 		{          
             SpeakMusicPlayer.Pause();
 			UpdateViewForPlayerState();
 		}
 
-		void StartPlayback()
+        private void StartPlayback()
 		{           
             SpeakMusicPlayer.Play();
             UpdateViewForPlayerState();

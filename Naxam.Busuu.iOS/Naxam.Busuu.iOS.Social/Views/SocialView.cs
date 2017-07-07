@@ -9,6 +9,7 @@ using UIKit;
 using ObjCRuntime;
 using CoreGraphics;
 using Naxam.Busuu.Social.ViewModels;
+using MvvmCross.Binding.BindingContext;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
@@ -43,7 +44,11 @@ namespace Naxam.Busuu.iOS.Social.Views
             friView.View.Frame = ViewContainer.Bounds;
 			//AddChildViewController(dvView);
             ViewContainer.AddSubview(dvView.View);
-            //dvView.DidMoveToParentViewController(this);
+			//dvView.DidMoveToParentViewController(this);
+
+            var setBinding = this.CreateBindingSet<SocialView, SocialViewModel>();
+            setBinding.Bind(BarFilterButtonItem).To(vm => vm.PopModalCommand);
+			setBinding.Apply();
 		}
 
 		partial void ButtonDiscover_TouchUpInside(NSObject sender)
