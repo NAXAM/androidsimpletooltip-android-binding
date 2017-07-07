@@ -209,7 +209,7 @@ CQk
                         <outlet property="btnAll" destination="43Q-Ve-rJE" id="sqs-DG-0Da"/>
                         <outlet property="btnFavorite" destination="fYz-nW-v0T" id="qbr-nj-kmm"/>
                         <outlet property="lbButtonClicked" destination="ov7-lj-BM3" id="i66-SF-kib"/>
-                        <outlet property="searchBar" destination="giU-rH-dFk" id="vPH-m3-dWo"/>
+                        <outlet property="searchBar" destination="giU-rH-dFk" id="Jy7-po-DyW"/>
                         <outlet property="uiViewButton" destination="aFf-ck-X1y" id="NSh-LM-3ps"/>
                         <outlet property="uiViewSlide" destination="U7R-s2-Kfs" id="Tcg-13-BmT"/>
                     </connections>

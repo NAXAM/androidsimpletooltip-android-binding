@@ -41,6 +41,11 @@ namespace Naxam.Busuu.iOS.Review.Views
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (searchBar != null) {
+				searchBar.Dispose ();
+				searchBar = null;
+			}
+
 			if (btnAll != null) {
 				btnAll.Dispose ();
 				btnAll = null;
@@ -59,11 +64,6 @@ namespace Naxam.Busuu.iOS.Review.Views
 			if (ReviewTableView != null) {
 				ReviewTableView.Dispose ();
 				ReviewTableView = null;
-			}
-
-			if (searchBar != null) {
-				searchBar.Dispose ();
-				searchBar = null;
 			}
 
 			if (uiViewButton != null) {
