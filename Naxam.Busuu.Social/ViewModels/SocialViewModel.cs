@@ -12,9 +12,14 @@ namespace Naxam.Busuu.Social.ViewModels
 		{          
 		}
 
-		public IMvxCommand PopModalCommand
+		public IMvxCommand GoToFilterViewCommand
 		{
             get { return new MvxCommand(() => ShowViewModel<FilterViewModel>()); }
+		}
+
+		public IMvxCommand GoToSocialDetailViewCommand
+		{
+            get { return new MvxCommand(() => ShowViewModel<SocialDetailViewModel>()); }
 		}
     }
 }

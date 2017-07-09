@@ -23,9 +23,9 @@ namespace Naxam.Busuu.iOS.Social
 
             base.ViewDidLoad();
 
-			//this.NavigationController.NavigationBar.Layer.ShadowRadius = 2;
-			//this.NavigationController.NavigationBar.Layer.ShadowOpacity = 0.2f;
-			//this.NavigationController.NavigationBar.Layer.ShadowOffset = new CoreGraphics.CGSize(2, 2);
+            ViewShadow.Layer.ShadowRadius = 2;
+			ViewShadow.Layer.ShadowOpacity = 0.3f;
+			ViewShadow.Layer.ShadowOffset = new CoreGraphics.CGSize(2, 2);
 		}
 	}
 }

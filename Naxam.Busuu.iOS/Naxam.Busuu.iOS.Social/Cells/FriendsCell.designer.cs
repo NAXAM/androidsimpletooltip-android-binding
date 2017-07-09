@@ -52,6 +52,9 @@ namespace Naxam.Busuu.iOS.Social.Cells
 		UIKit.UIView ViewAudioPlayer { get; set; }
 
 		[Outlet]
+		UIKit.UIView ViewBackGroud { get; set; }
+
+		[Outlet]
 		UIKit.UIView ViewRate { get; set; }
 
 		[Outlet]
@@ -95,6 +98,11 @@ namespace Naxam.Busuu.iOS.Social.Cells
 				lblCountry = null;
 			}
 
+			if (lblRate != null) {
+				lblRate.Dispose ();
+				lblRate = null;
+			}
+
 			if (lblTime != null) {
 				lblTime.Dispose ();
 				lblTime = null;
@@ -135,9 +143,9 @@ namespace Naxam.Busuu.iOS.Social.Cells
 				WriteText = null;
 			}
 
-			if (lblRate != null) {
-				lblRate.Dispose ();
-				lblRate = null;
+			if (ViewBackGroud != null) {
+				ViewBackGroud.Dispose ();
+				ViewBackGroud = null;
 			}
 		}
 	}

@@ -127,6 +127,7 @@
     <Compile Include="Views\SocialDetailView.designer.cs">
       <DependentUpon>SocialDetailView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\MyMvxConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">

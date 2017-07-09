@@ -12,9 +12,15 @@ namespace Naxam.Busuu.iOS.Social
 	[Register ("FilterView")]
 	partial class FilterView
 	{
+		[Outlet]
+		UIKit.UIView ViewShadow { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (ViewShadow != null) {
+				ViewShadow.Dispose ();
+				ViewShadow = null;
+			}
 		}
 	}
 }

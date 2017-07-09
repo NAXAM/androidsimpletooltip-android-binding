@@ -8,6 +8,7 @@ using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Platform.Converters;
+using Naxam.Busuu.iOS.Social.Common;
 using Naxam.Busuu.Social.Models;
 using PatridgeDev;
 using UIKit;
@@ -33,18 +34,18 @@ namespace Naxam.Busuu.iOS.Social.Cells
             this.DelayBind(() =>
             {
                 var setBinding = this.CreateBindingSet<FriendsCell, FriendsModel>();
-                setBinding.Bind(_loaderImageUser).To(f => f.Avatar).WithConversion(new ImageUriValueConverter(), null);
+                setBinding.Bind(_loaderImageUser).To(f => f.Avatar).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
                 setBinding.Bind(lblUserName).To(f => f.Name);
                 setBinding.Bind(lblCountry).To(f => f.Country);
-                setBinding.Bind(_loaderImgLearn).To(f => f.ImageLearn).WithConversion(new ImageUriValueConverter(), null);
+                setBinding.Bind(_loaderImgLearn).To(f => f.ImageLearn).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
                 setBinding.Bind(textLan).To(f => f.TextLearn);
                 setBinding.Bind(lblTimePublic).To(f => f.PublicTime);
-                setBinding.Bind(ViewAudioPlayer).For(f => f.Hidden).To(f => f.Speak).WithConversion(new InverseValueConverter(), null);
+                setBinding.Bind(ViewAudioPlayer).For(f => f.Hidden).To(f => f.Speak).WithConversion(new MyMvxConverter.InverseValueConverter(), null);
                 setBinding.Bind(audioViewBottomConstraint).For(f => f.Active).To(f => f.Speak);
                 setBinding.Bind(audioViewTopConstraint).For(f => f.Active).To(f => f.Speak);
                 setBinding.Bind(WriteText).For(f => f.Hidden).To(f => f.Speak);
                 setBinding.Bind(WriteText).To(f => f.Write);
-                setBinding.Bind(lblRate).To(f => f.Star).WithConversion(new TextRateValueConverter(), null);
+                setBinding.Bind(lblRate).To(f => f.Star).WithConversion(new MyMvxConverter.TextRateValueConverter(), null);
                 setBinding.Apply();
             });
         }
@@ -66,6 +67,10 @@ namespace Naxam.Busuu.iOS.Social.Cells
             SliderSpeak.SetThumbImage(img, UIControlState.Selected);
             SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);
 
+			ViewBackGroud.Layer.ShadowRadius = 2;
+			ViewBackGroud.Layer.ShadowOpacity = 0.3f;
+			ViewBackGroud.Layer.ShadowOffset = new CGSize(2, 2);
+
 			var ratingConfig = new RatingConfig(UIImage.FromBundle("Stars" + "/grey_star"),
 									UIImage.FromBundle("Stars" + "/yellow_star_d"),
 									UIImage.FromBundle("Stars" + "/yellow_star_d"));
@@ -76,6 +81,7 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			ratingView = new PDRatingView(ratingFrame, ratingConfig);
 
 			ViewRate.Add(ratingView);
+            ViewRate.SendSubviewToBack(ratingView);
 
 			//playBtnBg = UIImage.FromFile("play_btn.png");
 			//pauseBtnBg = UIImage.FromFile("pause_btn.png");
@@ -177,14 +183,6 @@ namespace Naxam.Busuu.iOS.Social.Cells
 		{
 			SpeakMusicPlayer.Play();
 			UpdateViewForPlayerState();
-		}
-
-        public class TextRateValueConverter : MvxValueConverter<double, string>
-		{
-            protected override string Convert(double value, Type targetType, object parameter, CultureInfo cultureInfo)
-			{
-                return "(" + value + ")";
-			}
 		}
     }
 }

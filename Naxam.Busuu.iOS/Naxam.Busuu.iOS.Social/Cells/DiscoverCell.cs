@@ -8,7 +8,7 @@ using CoreGraphics;
 using MvvmCross.Platform.Converters;
 using System.Globalization;
 using AVFoundation;
-using Naxam.Busuu.Social.ViewModels;
+using Naxam.Busuu.iOS.Social.Common;
 
 namespace Naxam.Busuu.iOS.Social.Cells
 {
@@ -32,24 +32,19 @@ namespace Naxam.Busuu.iOS.Social.Cells
             this.DelayBind(() =>
             {
                 var setBinding = this.CreateBindingSet<DiscoverCell, DiscoverModel>();
-                setBinding.Bind(_loaderImageUser).To(d => d.Avatar).WithConversion(new ImageUriValueConverter(), null);
+                setBinding.Bind(_loaderImageUser).To(d => d.Avatar).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
                 setBinding.Bind(NameUser).To(d => d.Name);
                 setBinding.Bind(Country).To(d => d.Country);
-                setBinding.Bind(_loaderImgSpeak).To(d => d.ImageSpeakLanguage).WithConversion(new ImageUriValueConverter(), null);
-                setBinding.Bind(ViewSpeak).For(d => d.Hidden).To(d => d.Speak).WithConversion(new InverseValueConverter(), null);
+                setBinding.Bind(_loaderImgSpeak).To(d => d.ImageSpeakLanguage).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
+                setBinding.Bind(ViewSpeak).For(d => d.Hidden).To(d => d.Speak).WithConversion(new MyMvxConverter.InverseValueConverter(), null);
 				setBinding.Bind(audioViewBottomConstraint).For(x => x.Active).To(d => d.Speak);
 				setBinding.Bind(audioViewTopConstraint).For(x => x.Active).To(d => d.Speak);
                 setBinding.Bind(WriteLabel).For(d => d.Hidden).To(d => d.Speak);
 				setBinding.Bind(WriteLabel).To(d => d.Write);
-                setBinding.Bind(_loaderImgLearn).To(d => d.ImageLearn).WithConversion(new ImageUriValueConverter(), null);
+                setBinding.Bind(_loaderImgLearn).To(d => d.ImageLearn).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
                 setBinding.Bind(TextLan).To(d => d.TextLearn);
-                setBinding.Apply();				
-
-                //var setBinding2 = this.CreateBindingSet<DiscoverCell, DiscoverViewModel>();
-                //setBinding2.Bind(ButtonVIEW).To(vm => vm.PopModalCommand);
-                //setBinding2.Bind(ButtonVIEW).For("Clicked").To(vm => vm.PopModalCommand);
-                //setBinding2.Apply();
-			});
+				setBinding.Apply();				
+			});		
         }
 
         public override void AwakeFromNib()
@@ -178,20 +173,4 @@ namespace Naxam.Busuu.iOS.Social.Cells
             UpdateViewForPlayerState();
 		}
     }
-
-	public class InverseValueConverter : MvxValueConverter<bool, bool>
-	{
-        protected override bool Convert(bool value, Type targetType, object parameter, CultureInfo cultureInfo)
-		{
-			return !value;
-		}
-	}
-
-	public class ImageUriValueConverter : MvxValueConverter<string, string>
-	{
-		protected override string Convert(string value, Type targetType, object parameter, CultureInfo cultureInfo)
-		{
-			return "res:" + value;
-		}
-	}
 }

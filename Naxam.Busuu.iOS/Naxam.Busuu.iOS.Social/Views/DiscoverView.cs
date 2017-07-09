@@ -8,7 +8,6 @@ using CoreAnimation;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Core.ViewModels;
-using Naxam.Busuu.iOS.Social.Cells;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
@@ -100,6 +99,5 @@ namespace Naxam.Busuu.iOS.Social.Views
 			}
 			return new CGPoint(proposedContentOffset.X + offSetAdjustment, proposedContentOffset.Y);
 		}
-
 	}
 }
