@@ -64,6 +64,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 		UIKit.UIView ViewRate { get; set; }
 
 		[Outlet]
+		UIKit.UIView ViewShadow { get; set; }
+
+		[Outlet]
 		UIKit.UILabel WriteText { get; set; }
 		
 		void ReleaseDesignerOutlets ()
@@ -133,6 +136,11 @@ namespace Naxam.Busuu.iOS.Social.Views
 				ViewAudioPlayer = null;
 			}
 
+			if (ViewBackGroud != null) {
+				ViewBackGroud.Dispose ();
+				ViewBackGroud = null;
+			}
+
 			if (ViewDetail != null) {
 				ViewDetail.Dispose ();
 				ViewDetail = null;
@@ -153,9 +161,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 				WriteText = null;
 			}
 
-			if (ViewBackGroud != null) {
-				ViewBackGroud.Dispose ();
-				ViewBackGroud = null;
+			if (ViewShadow != null) {
+				ViewShadow.Dispose ();
+				ViewShadow = null;
 			}
 		}
 	}

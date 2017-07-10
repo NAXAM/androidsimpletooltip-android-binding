@@ -1,5 +1,4 @@
-﻿using System;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Social.Models;
 using Naxam.Busuu.Social.Serveices;
 
@@ -7,32 +6,30 @@ namespace Naxam.Busuu.Social.ViewModels
 {
     public class SocialDetailViewModel : MvxViewModel
     {
-		readonly IDataSocialDetail _datasocialdetail;
+		readonly IDataSocial _datasocialdetail;
 
-		private MvxObservableCollection<SocialDetailModel> _socialdetail;        	
+        private SocialModel _discoverdetail;
 
-        public SocialDetailViewModel(IDataSocialDetail datasocialdetail)
+        public SocialDetailViewModel(IDataSocial datasocialdetail)
 		{
 			_datasocialdetail = datasocialdetail;
 		}
 
-		public MvxObservableCollection<SocialDetailModel> SocialDetailData
+		public SocialModel SocialDetailData
 		{
-			get { return _socialdetail; }
+			get { return _discoverdetail; }
 			set
 			{
-				if (_socialdetail != value)
+				if (_discoverdetail != value)
 				{
-					_socialdetail = value;
+					_discoverdetail = value;
 					RaisePropertyChanged(() => SocialDetailData);
 				}
 			}
 		}
-
-		public async override void Start()
-		{
-            SocialDetailData = await _datasocialdetail.GetAllSocialDetail();
-			base.Start();
-		}
+               
+        public async void Init(int id){
+            SocialDetailData = await _datasocialdetail.GetSocialById(id);
+        }		
     }
 }

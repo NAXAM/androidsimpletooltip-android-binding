@@ -428,7 +428,7 @@
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
                                                             <connections>
-                                                                <segue destination="EBJ-Wp-W7w" kind="push" id="L5a-Sc-TvD"/>
+                                                                <action selector="btnView_TouchUpInside:" destination="zxR-6e-YHe" eventType="touchUpInside" id="fsr-7N-gl7"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -461,7 +461,6 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="ButtonPlay" destination="WQ1-aG-ID3" id="JAm-SX-JWP"/>
-                                            <outlet property="ButtonVIEW" destination="4e4-4c-haI" id="nlV-bb-hS2"/>
                                             <outlet property="Country" destination="guO-58-A01" id="SUl-cL-x6E"/>
                                             <outlet property="ImageLan" destination="GCi-SR-oew" id="Glf-Iy-Zdc"/>
                                             <outlet property="ImageUser" destination="1x1-Rj-Jdz" id="Bmh-XA-jnd"/>
@@ -697,11 +696,21 @@
                                     <constraint firstItem="fLR-h5-BT2" firstAttribute="bottom" secondItem="Ome-Op-9hd" secondAttribute="bottom" id="zgg-Pb-5E1"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lvg-dC-9gs" userLabel="ViewShadow">
+                                <rect key="frame" x="0.0" y="10" width="375" height="10"/>
+                                <color key="backgroundColor" red="0.21848800778388977" green="0.65333598852157593" blue="0.94426697492599487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="WY3-Fr-UN0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705882352937" green="0.92941176470588238" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Lvg-dC-9gs" firstAttribute="top" secondItem="QfU-S9-xJl" secondAttribute="bottom" constant="-10" id="6m2-8n-tbx"/>
+                            <constraint firstItem="Lvg-dC-9gs" firstAttribute="leading" secondItem="Pz6-db-cPs" secondAttribute="leading" id="WFO-Fj-aFW"/>
                             <constraint firstAttribute="trailing" secondItem="zD8-5t-7lp" secondAttribute="trailing" id="YkR-E0-gBH"/>
                             <constraint firstItem="zD8-5t-7lp" firstAttribute="top" secondItem="QfU-S9-xJl" secondAttribute="bottom" id="cl9-4h-EdU"/>
+                            <constraint firstAttribute="trailing" secondItem="Lvg-dC-9gs" secondAttribute="trailing" id="ksq-8i-zGX"/>
                             <constraint firstItem="zD8-5t-7lp" firstAttribute="leading" secondItem="Pz6-db-cPs" secondAttribute="leading" id="mSW-nE-wLx"/>
                         </constraints>
                     </view>
@@ -714,6 +723,7 @@
                         <outlet property="ViewDetail" destination="zD8-5t-7lp" id="NLT-9K-2AD"/>
                         <outlet property="ViewQuestion" destination="Y1o-v3-GrE" id="21b-TC-GQ1"/>
                         <outlet property="ViewRate" destination="i0Q-5X-7tx" id="98i-5R-NW3"/>
+                        <outlet property="ViewShadow" destination="Lvg-dC-9gs" id="sNc-ZE-kCw"/>
                         <outlet property="WriteText" destination="VOa-OU-paG" id="vFy-Lt-ZYE"/>
                         <outlet property="audioViewBottomConstraint" destination="hMb-fl-j0i" id="wZe-u2-f37"/>
                         <outlet property="audioViewTopConstraint" destination="V16-yW-8ha" id="3Hn-c5-Y0L"/>
@@ -879,7 +889,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="ButtonRate_TouchUpInside:" destination="yEf-bD-iZo" eventType="touchUpInside" id="FqI-M1-sdo"/>
-                                                        <segue destination="EBJ-Wp-W7w" kind="push" id="ZuX-XD-uYB"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dt-D8-KAf" userLabel="lblRate">
@@ -1001,7 +1010,4 @@
         <image name="play_btn.png" width="60" height="81"/>
         <image name="social_background_pattern_image" width="16" height="16"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="L5a-Sc-TvD"/>
-    </inferredMetricsTieBreakers>
 </document>

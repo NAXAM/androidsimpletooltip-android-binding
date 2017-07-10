@@ -1,5 +1,4 @@
-﻿using System;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Social.Models;
 using Naxam.Busuu.Social.Serveices;
 
@@ -7,21 +6,16 @@ namespace Naxam.Busuu.Social.ViewModels
 {
     public class FriendsViewModel : MvxViewModel
     {
-        readonly IDataFriends _datafriends;
+        readonly IDataSocial _datafriends;
 
-        private MvxObservableCollection<FriendsModel> _friends;
+        private MvxObservableCollection<SocialModel> _friends;
 
-		public IMvxCommand PopModalCommand
+		public FriendsViewModel(IDataSocial datafriens)
 		{
-            get { return new MvxCommand(() => ShowViewModel<SocialDetailViewModel>()); }
+			_datafriends = datafriens;
 		}
 
-        public FriendsViewModel(IDataFriends datafriends)
-		{
-            _datafriends = datafriends;
-		}
-
-		public MvxObservableCollection<FriendsModel> FriendsData
+        public MvxObservableCollection<SocialModel> FriendsData
 		{
 			get { return _friends; }
 			set
@@ -34,10 +28,24 @@ namespace Naxam.Busuu.Social.ViewModels
 			}
 		}
 
-		public async override void Start()
+        public async override void Start()
 		{
-            FriendsData = await _datafriends.GetAllFriends();
+            FriendsData = new MvxObservableCollection<SocialModel>(await _datafriends.GetFriendSocial());		
 			base.Start();
+		}
+
+		IMvxCommand _ViewFriendsCommand;
+		public IMvxCommand ViewFriendsCommand
+		{
+			get
+			{
+				return (_ViewFriendsCommand = _ViewFriendsCommand ?? new MvxCommand<SocialModel>(ExecuteViewFriendsCommand));
+			}
+		}
+
+		void ExecuteViewFriendsCommand(SocialModel item)
+		{
+			ShowViewModel<SocialDetailViewModel>(item.Id);
 		}
     }
 }

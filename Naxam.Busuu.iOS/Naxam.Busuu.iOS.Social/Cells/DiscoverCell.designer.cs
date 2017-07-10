@@ -22,9 +22,6 @@ namespace Naxam.Busuu.iOS.Social.Cells
 		UIKit.UIButton ButtonPlay { get; set; }
 
 		[Outlet]
-		UIKit.UIButton ButtonVIEW { get; set; }
-
-		[Outlet]
 		UIKit.UILabel Country { get; set; }
 
 		[Outlet]
@@ -62,6 +59,9 @@ namespace Naxam.Busuu.iOS.Social.Cells
 
 		[Outlet]
 		UIKit.UILabel WriteLabel { get; set; }
+
+		[Action ("btnView_TouchUpInside:")]
+		partial void btnView_TouchUpInside (Foundation.NSObject sender);
 
 		[Action ("ButtonPlay_TouchUpInside:")]
 		partial void ButtonPlay_TouchUpInside (Foundation.NSObject sender);
@@ -146,11 +146,6 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			if (WriteLabel != null) {
 				WriteLabel.Dispose ();
 				WriteLabel = null;
-			}
-
-			if (ButtonVIEW != null) {
-				ButtonVIEW.Dispose ();
-				ButtonVIEW = null;
 			}
 		}
 	}

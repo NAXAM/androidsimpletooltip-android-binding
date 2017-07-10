@@ -1,17 +1,18 @@
-﻿using System;
-using System.Threading.Tasks;
-using MvvmCross.Core.ViewModels;
+﻿using System.Threading.Tasks;
+using System.Linq;
 using Naxam.Busuu.Social.Models;
+using System.Collections.Generic;
+using System;
 
 namespace Naxam.Busuu.Social.Serveices
 {
-    public class DataSocialDetail : IDataSocialDetail
+    public class DataSocial : IDataSocial
     {
-        public Task<MvxObservableCollection<SocialDetailModel>> GetAllSocialDetail()
+        public async Task<SocialModel[]> GetAllSocial()
         {
-            var list = new MvxObservableCollection<SocialDetailModel>()
+            var list = new List<SocialModel>()
 			{
-				new SocialDetailModel()
+				new SocialModel()
                 {
                     Id = 0,
                     Avatar = "user_avatar_placeholder.png",
@@ -28,7 +29,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
                 {
                     Id = 1,
                     Avatar = "user_avatar_placeholder.png",
@@ -45,7 +46,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
                 {
                     Id = 2,
                     Avatar = "user_avatar_placeholder.png",
@@ -62,7 +63,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
                 {
                     Id = 3,
                     Avatar = "user_avatar_placeholder.png",
@@ -79,7 +80,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
                 {
                     Id = 4,
                     Avatar = "user_avatar_placeholder.png",
@@ -96,7 +97,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
                 {
                     Id = 5,
                     Avatar = "user_avatar_placeholder.png",
@@ -113,7 +114,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
                 {
                     Id = 6,
                     Avatar = "user_avatar_placeholder.png",
@@ -130,7 +131,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
                 {
                     Id = 7,
                     Avatar = "user_avatar_placeholder.png",
@@ -147,7 +148,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
                 {
                     Id = 8,
                     Avatar = "user_avatar_placeholder.png",
@@ -164,7 +165,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
                 {
                     Id = 9,
                     Avatar = "user_avatar_placeholder.png",
@@ -181,7 +182,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
                 {
                     Id = 10,
                     Avatar = "user_avatar_placeholder.png",
@@ -198,7 +199,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
 				{
 					Id = 11,
 					Avatar = "user_avatar_placeholder.png",
@@ -215,7 +216,7 @@ namespace Naxam.Busuu.Social.Serveices
                     ImgQuestion = "Naxam_logo_socialdetail.png",
                     TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
 				{
 					Id = 12,
 					Avatar = "user_avatar_placeholder.png",
@@ -232,7 +233,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
 				{
 					Id = 13,
 					Avatar = "user_avatar_placeholder.png",
@@ -249,7 +250,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
 				{
 					Id = 14,
 					Avatar = "user_avatar_placeholder.png",
@@ -266,7 +267,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
 				{
 					Id = 15,
 					Avatar = "user_avatar_placeholder.png",
@@ -283,7 +284,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
 				{
 					Id = 16,
 					Avatar = "user_avatar_placeholder.png",
@@ -300,7 +301,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
 				{
 					Id = 17,
 					Avatar = "user_avatar_placeholder.png",
@@ -317,7 +318,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
 				{
 					Id = 18,
 					Avatar = "user_avatar_placeholder.png",
@@ -334,7 +335,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
 				{
 					Id = 19,
 					Avatar = "user_avatar_placeholder.png",
@@ -351,7 +352,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-			    new SocialDetailModel()
+			    new SocialModel()
 				{
 					Id = 20,
 					Avatar = "user_avatar_placeholder.png",
@@ -368,7 +369,7 @@ namespace Naxam.Busuu.Social.Serveices
 					ImgQuestion = "Naxam_logo_socialdetail.png",
 					TextQuestion = "Say hello Naxam!"
 				},
-				new SocialDetailModel()
+				new SocialModel()
 				{
 					Id = 21,
 					Avatar = "user_avatar_placeholder.png",
@@ -386,7 +387,22 @@ namespace Naxam.Busuu.Social.Serveices
 					TextQuestion = "Say hello Naxam!"
 				}
 			};
-            return Task.FromResult(list);
+            return list.ToArray();
+        }
+
+        public async Task<SocialModel[]> GetDiscoverSocial()
+        {
+            return (await GetAllSocial()).Where(d => !d.Friends).ToArray();
+        }
+
+        public async Task<SocialModel[]> GetFriendSocial()
+        {
+           return (await GetAllSocial()).Where(d => d.Friends).ToArray();
+        }
+
+        public async Task<SocialModel> GetSocialById(int id)
+        {
+            return (await GetAllSocial()).Where(d => d.Id == id).FirstOrDefault();
         }
     }
 }

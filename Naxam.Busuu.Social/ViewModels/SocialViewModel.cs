@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using MvvmCross.Core.ViewModels;
-using Naxam.Busuu.Social.Models;
-using Naxam.Busuu.Social.Serveices;
+﻿using MvvmCross.Core.ViewModels;
 
 namespace Naxam.Busuu.Social.ViewModels
 {
     public class SocialViewModel : MvxViewModel
-    {		
-        public SocialViewModel()
-		{          
-		}
-
+    {
 		public IMvxCommand GoToFilterViewCommand
 		{
             get { return new MvxCommand(() => ShowViewModel<FilterViewModel>()); }

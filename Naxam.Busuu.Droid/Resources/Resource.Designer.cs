@@ -2288,7 +2288,6 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.String.abc_shareactionprovider_share_with = global::Naxam.Busuu.Droid.Resource.String.abc_shareactionprovider_share_with;
 			global::Naxam.Busuu.Droid.Profile.Resource.String.abc_shareactionprovider_share_with_application = global::Naxam.Busuu.Droid.Resource.String.abc_shareactionprovider_share_with_application;
 			global::Naxam.Busuu.Droid.Profile.Resource.String.abc_toolbar_collapse_description = global::Naxam.Busuu.Droid.Resource.String.abc_toolbar_collapse_description;
-			global::Naxam.Busuu.Droid.Profile.Resource.String.library_name = global::Naxam.Busuu.Droid.Resource.String.library_name;
 			global::Naxam.Busuu.Droid.Profile.Resource.String.search_menu_title = global::Naxam.Busuu.Droid.Resource.String.search_menu_title;
 			global::Naxam.Busuu.Droid.Profile.Resource.String.status_bar_notification_info_overflow = global::Naxam.Busuu.Droid.Resource.String.status_bar_notification_info_overflow;
 			global::Naxam.Busuu.Droid.Profile.Resource.Style.AlertDialog_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.AlertDialog_AppCompat;
@@ -5547,9 +5546,6 @@ namespace Naxam.Busuu.Droid
 			
 			// aapt resource value: 0x7f060012
 			public const int abc_toolbar_collapse_description = 2131099666;
-			
-			// aapt resource value: 0x7f060023
-			public const int library_name = 2131099683;
 			
 			// aapt resource value: 0x7f060013
 			public const int search_menu_title = 2131099667;

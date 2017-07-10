@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Social.Models;
 using Naxam.Busuu.Social.Serveices;
@@ -8,30 +7,44 @@ namespace Naxam.Busuu.Social.ViewModels
 {
     public class DiscoverViewModel : MvxViewModel
     {
-		readonly IDataDiscover _datadiscover;
+		readonly IDataSocial _datadiscover;
 
-		private List<DiscoverModel> _discover;
+        private MvxObservableCollection<SocialModel> _discovers;
 
-		public IMvxCommand PopModalCommand
+		public DiscoverViewModel(IDataSocial datadiscover)
 		{
-			get { return new MvxCommand(() => ShowViewModel<SocialDetailViewModel>()); }
+			_datadiscover = datadiscover;
 		}
 
-        public DiscoverViewModel(IDataDiscover datadiscover)
-        {
-            _datadiscover = datadiscover;
-        }
-
-		public List<DiscoverModel> DiscoverData
+        public MvxObservableCollection<SocialModel> DiscoverData
 		{
-			get => _discover;
-			set => SetProperty(ref _discover, value);
+			get { return _discovers; }
+			set
+			{
+				if (_discovers != value)
+				{
+					_discovers = value;
+					RaisePropertyChanged(() => DiscoverData);
+				}
+			}
 		}
 
         public async override void Start()
 		{
-            DiscoverData = await _datadiscover.GetAllDiscover();
-			base.Start();
-		}
+            DiscoverData = new MvxObservableCollection<SocialModel>(await _datadiscover.GetDiscoverSocial());
+            base.Start();
+		}	
+
+        IMvxCommand _ViewDisoverCommand;
+        public IMvxCommand ViewDisoverCommand
+        {
+            get {
+                return (_ViewDisoverCommand = _ViewDisoverCommand ?? new MvxCommand<SocialModel>(ExecuteViewDiscoverCommand));
+            }
+        }
+
+        void ExecuteViewDiscoverCommand(SocialModel item) {
+            ShowViewModel<SocialDetailViewModel>(item.Id);
+        }
     }
 }

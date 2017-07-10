@@ -2,7 +2,6 @@
 
 using System;
 
-using Foundation;
 using MvvmCross.iOS.Views;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Core.ViewModels;
@@ -29,11 +28,14 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 			var setBinding = this.CreateBindingSet<FriendsView, FriendsViewModel>();
 			setBinding.Bind(fSource).To(vm => vm.FriendsData);
+            setBinding.Bind(fSource).For(nameof(FriendsTableViewSource.ViewFriendsCommand)).To(vm => vm.ViewFriendsCommand);
 			setBinding.Apply();
 
 			FriendsTableView.RowHeight = UITableView.AutomaticDimension;
 			FriendsTableView.EstimatedRowHeight = 40f;
             FriendsTableView.Source = fSource;			
         }
+
+
 	}
 }

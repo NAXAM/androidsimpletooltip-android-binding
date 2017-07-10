@@ -5,23 +5,23 @@ using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Binding.BindingContext;
 using Naxam.Busuu.Social.Models;
 using CoreGraphics;
-using MvvmCross.Platform.Converters;
-using System.Globalization;
 using AVFoundation;
 using Naxam.Busuu.iOS.Social.Common;
 
 namespace Naxam.Busuu.iOS.Social.Cells
 {
     public partial class DiscoverCell : MvxCollectionViewCell
-    {      
-        private readonly MvxImageViewLoader _loaderImageUser;
-        private readonly MvxImageViewLoader _loaderImgSpeak;
-        private readonly MvxImageViewLoader _loaderImgLearn;
+	{
+        public event EventHandler<SocialModel> ViewDiscoverHandler;
 
-        private AVAudioPlayer SpeakMusicPlayer;
-        private NSTimer update_timer;
+        readonly MvxImageViewLoader _loaderImageUser;
+        readonly MvxImageViewLoader _loaderImgSpeak;
+        readonly MvxImageViewLoader _loaderImgLearn;
 
-		//UIImage playBtnBg, pauseBtnBg;
+        AVAudioPlayer SpeakMusicPlayer;
+        NSTimer update_timer;
+
+        //UIImage playBtnBg, pauseBtnBg;
 
         public DiscoverCell(IntPtr handle) : base(handle)
         {
@@ -31,7 +31,7 @@ namespace Naxam.Busuu.iOS.Social.Cells
 
             this.DelayBind(() =>
             {
-                var setBinding = this.CreateBindingSet<DiscoverCell, DiscoverModel>();
+                var setBinding = this.CreateBindingSet<DiscoverCell, SocialModel>();
                 setBinding.Bind(_loaderImageUser).To(d => d.Avatar).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
                 setBinding.Bind(NameUser).To(d => d.Name);
                 setBinding.Bind(Country).To(d => d.Country);
@@ -43,7 +43,7 @@ namespace Naxam.Busuu.iOS.Social.Cells
 				setBinding.Bind(WriteLabel).To(d => d.Write);
                 setBinding.Bind(_loaderImgLearn).To(d => d.ImageLearn).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
                 setBinding.Bind(TextLan).To(d => d.TextLearn);
-				setBinding.Apply();				
+				setBinding.Apply();
 			});		
         }
 
@@ -80,7 +80,7 @@ namespace Naxam.Busuu.iOS.Social.Cells
             SliderSpeak.SetThumbImage(img, UIControlState.Selected);
             SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);
 
-			//playBtnBg = UIImage.FromFile("play_btn.png");
+            //playBtnBg = UIImage.FromFile("play_btn.png");
             //pauseBtnBg = UIImage.FromFile("pause_btn.png");			
 		}
 
@@ -110,6 +110,11 @@ namespace Naxam.Busuu.iOS.Social.Cells
             }
         }
 
+        partial void btnView_TouchUpInside(NSObject sender)
+        {
+			ViewDiscoverHandler?.Invoke(this, (SocialModel)DataContext);
+        }
+
         partial void ButtonPlay_TouchUpInside(NSObject sender)
         {
             if (SpeakMusicPlayer.Playing)
@@ -122,7 +127,7 @@ namespace Naxam.Busuu.iOS.Social.Cells
             }
         }
 
-        private void UpdateCurrentTime()
+        void UpdateCurrentTime()
 		{
             if (SpeakMusicPlayer.Playing)
             {
@@ -135,7 +140,7 @@ namespace Naxam.Busuu.iOS.Social.Cells
             }
 		}
 
-        private void UpdateViewForPlayerState()
+        void UpdateViewForPlayerState()
 		{		
 			if (SpeakMusicPlayer.Playing)
 			{
@@ -154,20 +159,20 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			}
 		}
 
-        private void UpdateViewForPlayerInfo()
+        void UpdateViewForPlayerInfo()
 		{
 			SliderSpeak.Value = 0;
 			SliderSpeak.MaxValue = (float)SpeakMusicPlayer.Duration;
             lblTime.Text = String.Format("{0:00}:{1:00}", (int)SpeakMusicPlayer.Duration / 60, (int)SpeakMusicPlayer.Duration % 60);
 		}
 
-        private void PausePlayback()
+        void PausePlayback()
 		{          
             SpeakMusicPlayer.Pause();
 			UpdateViewForPlayerState();
 		}
 
-        private void StartPlayback()
+        void StartPlayback()
 		{           
             SpeakMusicPlayer.Play();
             UpdateViewForPlayerState();
