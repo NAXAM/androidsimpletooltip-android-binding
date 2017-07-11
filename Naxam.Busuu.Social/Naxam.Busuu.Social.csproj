@@ -42,6 +42,7 @@
     <Compile Include="Models\SocialModel.cs" />
     <Compile Include="Serveices\IDataSocial.cs" />
     <Compile Include="Serveices\DataSocial.cs" />
+    <Compile Include="ViewModels\CommentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

@@ -4,14 +4,9 @@ namespace Naxam.Busuu.Social.ViewModels
 {
     public class SocialViewModel : MvxViewModel
     {
-		public IMvxCommand GoToFilterViewCommand
+		public IMvxCommand FilterViewCommand
 		{
             get { return new MvxCommand(() => ShowViewModel<FilterViewModel>()); }
-		}
-
-		public IMvxCommand GoToSocialDetailViewCommand
-		{
-            get { return new MvxCommand(() => ShowViewModel<SocialDetailViewModel>()); }
-		}
+		}		
     }
 }

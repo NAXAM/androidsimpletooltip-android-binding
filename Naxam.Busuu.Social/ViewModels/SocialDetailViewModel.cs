@@ -8,28 +8,36 @@ namespace Naxam.Busuu.Social.ViewModels
     {
 		readonly IDataSocial _datasocialdetail;
 
-        private SocialModel _discoverdetail;
-
         public SocialDetailViewModel(IDataSocial datasocialdetail)
 		{
 			_datasocialdetail = datasocialdetail;
 		}
 
+		public IMvxCommand CommentViewCommand
+		{
+            get { return new MvxCommand(() => ShowViewModel<CommentViewModel>(idDetai)); }
+		}
+
 		public SocialModel SocialDetailData
 		{
-			get { return _discoverdetail; }
+			get { return _socialdetail; }
 			set
 			{
-				if (_discoverdetail != value)
+				if (_socialdetail != value)
 				{
-					_discoverdetail = value;
+					_socialdetail = value;
 					RaisePropertyChanged(() => SocialDetailData);
 				}
 			}
 		}
                
         public async void Init(int id){
+            idDetai = id;
             SocialDetailData = await _datasocialdetail.GetSocialById(id);
-        }		
+        }
+
+		SocialModel _socialdetail;
+
+        int idDetai;
     }
 }

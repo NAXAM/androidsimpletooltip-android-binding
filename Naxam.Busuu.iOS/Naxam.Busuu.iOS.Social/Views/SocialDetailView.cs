@@ -47,6 +47,7 @@ namespace Naxam.Busuu.iOS.Social.Views
             setBinding.Bind(WriteText).To(d => d.SocialDetailData.Write);
             setBinding.Bind(lblTimePublic).To(d => d.SocialDetailData.PublicTime);
             setBinding.Bind(lblRate).To(d => d.SocialDetailData.Star).WithConversion(new MyMvxConverter.TextRateValueConverter(), null);
+            setBinding.Bind(btnFeedBack).To(d => d.CommentViewCommand);
             setBinding.Apply();
 
             var imgstar = UIImage.FromBundle("play_icon_small");
@@ -54,12 +55,12 @@ namespace Naxam.Busuu.iOS.Social.Views
             SliderSpeak.SetThumbImage(imgstar, UIControlState.Selected);
             SliderSpeak.SetThumbImage(imgstar, UIControlState.Highlighted);
 
-            var ratingConfig = new RatingConfig(UIImage.FromBundle("Stars" + "/grey_star"),
+            var ratingConfig = new RatingConfig(UIImage.FromBundle("Stars" + "/grey_star2"),
                                     UIImage.FromBundle("Stars" + "/yellow_star_d"),
                                     UIImage.FromBundle("Stars" + "/yellow_star_d"));
 
             ratingConfig.ItemPadding = 1;
-            var ratingFrame = new CGRect(CGPoint.Empty, new CGSize(100, 24));
+            var ratingFrame = new CGRect(CGPoint.Empty, new CGSize(95, 20));
 
             ratingView = new PDRatingView(ratingFrame, ratingConfig);
 
@@ -79,10 +80,14 @@ namespace Naxam.Busuu.iOS.Social.Views
 
             var bbcolor = UIColor.FromRGB(217, 217, 217);
 
-            ViewQuestion.Layer.BorderWidth = 0.5f;
+            ViewQuestion.Layer.BorderWidth = 1;
             ViewQuestion.Layer.BorderColor = bbcolor.CGColor;
             ViewQuestion.Layer.CornerRadius = 2;
             ViewQuestion.Layer.MasksToBounds = true;
+
+            btnAddFriends.Layer.BorderWidth = 0.5f;
+            btnAddFriends.Layer.BorderColor = bbcolor.CGColor;
+			btnAddFriends.ImageEdgeInsets = new UIEdgeInsets(4, 8, 4, 8);
 
             ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 12, 10, 10);
 

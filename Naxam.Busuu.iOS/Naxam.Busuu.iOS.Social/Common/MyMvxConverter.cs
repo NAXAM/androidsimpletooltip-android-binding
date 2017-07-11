@@ -29,5 +29,22 @@ namespace Naxam.Busuu.iOS.Social.Common
 				return "(" + value + ")";
 			}
 		}
+
+		public class TextHowDidValueConverter : MvxValueConverter<string, string>
+		{
+			protected override string Convert(string value, Type targetType, object parameter, CultureInfo cultureInfo)
+			{
+				return "How did " + value + " do?";
+			}
+		}
+
+        // Lười quá đành phải làm thế  ahuhu T.T
+        public class ImageForFriendsValueConverter : MvxValueConverter<string, string>
+		{
+			protected override string Convert(string value, Type targetType, object parameter, CultureInfo cultureInfo)
+			{
+				return "res:list_flagcut_enc.png";
+			}
+		}
     }
 }

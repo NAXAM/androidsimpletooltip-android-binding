@@ -128,6 +128,10 @@
       <DependentUpon>SocialDetailView.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\MyMvxConverter.cs" />
+    <Compile Include="Views\CommentView.cs" />
+    <Compile Include="Views\CommentView.designer.cs">
+      <DependentUpon>CommentView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
@@ -154,10 +158,16 @@
     <BundleResource Include="Resources\Nokia-tune-Nokia-tune.mp3" />
     <BundleResource Include="Resources\Stars\yellow_star_d.png" />
     <BundleResource Include="Resources\Stars\grey_star.png" />
-    <BundleResource Include="Resources\Naxam_logo_socialdetail.png" />
     <BundleResource Include="Resources\friendship_request_sent.png" />
     <BundleResource Include="Resources\dots_menu.png" />
     <BundleResource Include="Resources\add_friend_icon.png" />
+    <BundleResource Include="Resources\list_flagcut_enc.png" />
+    <BundleResource Include="Resources\BackgroundDetail05.jpg" />
+    <BundleResource Include="Resources\ImageMeoNo.jpg" />
+    <BundleResource Include="Resources\conversation_speaking_button.png" />
+    <BundleResource Include="Resources\Stars\grey_star2.png" />
+    <BundleResource Include="Resources\conversation_speaking_button_Blue.png" />
+    <BundleResource Include="Resources\conversation_speaking_button_red.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -47,7 +47,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 			dvView.DidMoveToParentViewController(this);
 
             var setBinding = this.CreateBindingSet<SocialView, SocialViewModel>();
-            setBinding.Bind(BarFilterButtonItem).To(vm => vm.GoToFilterViewCommand);
+            setBinding.Bind(BarFilterButtonItem).To(vm => vm.FilterViewCommand);
 			setBinding.Apply();
 		}
 

@@ -58,6 +58,9 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			ViewCell.Layer.CornerRadius = 2;
 			ViewCell.Layer.MasksToBounds = true;
 
+            ViewSpeak.Layer.CornerRadius = 2;
+			ViewSpeak.Layer.MasksToBounds = true;
+
 			var bbcolor = UIColor.FromRGB(224, 230, 235);
 
             ViewLan.Layer.BorderWidth = 0.5f;

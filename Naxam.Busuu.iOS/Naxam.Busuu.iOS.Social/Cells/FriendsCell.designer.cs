@@ -46,9 +46,6 @@ namespace Naxam.Busuu.iOS.Social.Cells
 		UIKit.UISlider SliderSpeak { get; set; }
 
 		[Outlet]
-		UIKit.UILabel textLan { get; set; }
-
-		[Outlet]
 		UIKit.UIView ViewAudioPlayer { get; set; }
 
 		[Outlet]
@@ -123,14 +120,14 @@ namespace Naxam.Busuu.iOS.Social.Cells
 				SliderSpeak = null;
 			}
 
-			if (textLan != null) {
-				textLan.Dispose ();
-				textLan = null;
-			}
-
 			if (ViewAudioPlayer != null) {
 				ViewAudioPlayer.Dispose ();
 				ViewAudioPlayer = null;
+			}
+
+			if (ViewBackGroud != null) {
+				ViewBackGroud.Dispose ();
+				ViewBackGroud = null;
 			}
 
 			if (ViewRate != null) {
@@ -141,11 +138,6 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			if (WriteText != null) {
 				WriteText.Dispose ();
 				WriteText = null;
-			}
-
-			if (ViewBackGroud != null) {
-				ViewBackGroud.Dispose ();
-				ViewBackGroud = null;
 			}
 		}
 	}

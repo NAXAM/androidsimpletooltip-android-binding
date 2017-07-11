@@ -19,6 +19,12 @@ namespace Naxam.Busuu.iOS.Social.Views
 		UIKit.NSLayoutConstraint audioViewTopConstraint { get; set; }
 
 		[Outlet]
+		UIKit.UIButton btnAddFriends { get; set; }
+
+		[Outlet]
+		UIKit.UIButton btnFeedBack { get; set; }
+
+		[Outlet]
 		UIKit.UIButton ButtonAudioPlay { get; set; }
 
 		[Outlet]
@@ -68,6 +74,12 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 		[Outlet]
 		UIKit.UILabel WriteText { get; set; }
+
+		[Action ("btnAddFriends_TouchUpInside:")]
+		partial void btnAddFriends_TouchUpInside (Foundation.NSObject sender);
+
+		[Action ("btnReport_TouchUpInside:")]
+		partial void btnReport_TouchUpInside (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -79,6 +91,11 @@ namespace Naxam.Busuu.iOS.Social.Views
 			if (audioViewTopConstraint != null) {
 				audioViewTopConstraint.Dispose ();
 				audioViewTopConstraint = null;
+			}
+
+			if (btnFeedBack != null) {
+				btnFeedBack.Dispose ();
+				btnFeedBack = null;
 			}
 
 			if (ButtonAudioPlay != null) {
@@ -156,14 +173,19 @@ namespace Naxam.Busuu.iOS.Social.Views
 				ViewRate = null;
 			}
 
+			if (ViewShadow != null) {
+				ViewShadow.Dispose ();
+				ViewShadow = null;
+			}
+
 			if (WriteText != null) {
 				WriteText.Dispose ();
 				WriteText = null;
 			}
 
-			if (ViewShadow != null) {
-				ViewShadow.Dispose ();
-				ViewShadow = null;
+			if (btnAddFriends != null) {
+				btnAddFriends.Dispose ();
+				btnAddFriends = null;
 			}
 		}
 	}

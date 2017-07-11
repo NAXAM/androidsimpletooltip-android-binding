@@ -26,7 +26,7 @@ namespace Naxam.Busuu.Social.Serveices
                     PublicTime = "29/5/2017",
                     Star = 5,
                     Friends = false,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -43,7 +43,7 @@ namespace Naxam.Busuu.Social.Serveices
                     PublicTime = "29/5/2017",
                     Star = 4.5,
                     Friends = false,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -60,7 +60,7 @@ namespace Naxam.Busuu.Social.Serveices
                     PublicTime = "28/5/2017",
                     Star = 4.5,
                     Friends = false,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -77,7 +77,7 @@ namespace Naxam.Busuu.Social.Serveices
                     PublicTime = "21/5/2017",
                     Star = 4,
                     Friends = false,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -94,7 +94,7 @@ namespace Naxam.Busuu.Social.Serveices
                     PublicTime = "21/5/2017",
                     Star = 3.5,
                     Friends = false,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -111,7 +111,7 @@ namespace Naxam.Busuu.Social.Serveices
                     PublicTime = "21/5/2017",
                     Star = 3,
                     Friends = false,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -128,7 +128,7 @@ namespace Naxam.Busuu.Social.Serveices
                     PublicTime = "19/5/2017",
                     Star = 2.5,
                     Friends = false,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -145,7 +145,7 @@ namespace Naxam.Busuu.Social.Serveices
                     PublicTime = "19/5/2017",
                     Star = 2,
                     Friends = false,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -162,7 +162,7 @@ namespace Naxam.Busuu.Social.Serveices
                     PublicTime = "19/5/2017",
                     Star = 0,
                     Friends = false,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -179,7 +179,7 @@ namespace Naxam.Busuu.Social.Serveices
                     PublicTime = "29/5/2017",
                     Star = 5,
                     Friends = false,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -196,7 +196,7 @@ namespace Naxam.Busuu.Social.Serveices
                     PublicTime = "29/5/2017",
                     Star = 4.5,
                     Friends = false,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -213,7 +213,7 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "29/5/2017",
 					Star = 5,
                     Friends = true,
-                    ImgQuestion = "Naxam_logo_socialdetail.png",
+                    ImgQuestion = "ImageMeoNo.jpg",
                     TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -230,7 +230,7 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "29/5/2017",
 					Star = 4.5,
 					Friends = true,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -247,7 +247,7 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "28/5/2017",
 					Star = 4.5,
 					Friends = true,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -264,7 +264,7 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "21/5/2017",
 					Star = 4,
 					Friends = true,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -281,7 +281,7 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "21/5/2017",
 					Star = 3.5,
 					Friends = true,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -298,7 +298,7 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "21/5/2017",
 					Star = 3,
 					Friends = true,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -315,7 +315,7 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "19/5/2017",
 					Star = 2.5,
 					Friends = true,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -332,7 +332,7 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "19/5/2017",
 					Star = 2,
 					Friends = true,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -349,7 +349,7 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "19/5/2017",
 					Star = 0,
 					Friends = true,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 			    new SocialModel()
@@ -366,7 +366,7 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "29/5/2017",
 					Star = 5,
 					Friends = true,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
@@ -383,7 +383,7 @@ namespace Naxam.Busuu.Social.Serveices
 					PublicTime = "29/5/2017",
 					Star = 4.5,
 					Friends = true,
-					ImgQuestion = "Naxam_logo_socialdetail.png",
+					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				}
 			};
