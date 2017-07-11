@@ -52,6 +52,8 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 			ratingView = new PDRatingView(ratingFrame, ratingConfig);
 
+            ratingView.RatingChosen += RatingView_RatingChosen;
+
             ViewStar.Add(ratingView);
             ViewStar.SendSubviewToBack(ratingView);
 
@@ -82,7 +84,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 			ViewBossQuestion.Layer.MasksToBounds = true;
 
             btnSay.Layer.CornerRadius = btnSay.Frame.Width / 2;
-			btnSay.Layer.MasksToBounds = true;
+            btnSay.Layer.MasksToBounds = false;
 			btnSay.ImageEdgeInsets = new UIEdgeInsets(26, 30, 26, 30);
 			btnSay.Layer.ShadowRadius = 2;
 			btnSay.Layer.ShadowOpacity = 0.3f;
@@ -91,10 +93,11 @@ namespace Naxam.Busuu.iOS.Social.Views
             var img2 = UIImage.FromBundle("conversation_speaking_button_red.png");
             btnSay.SetImage(img2, UIControlState.Selected);
             btnSay.SetImage(img2, UIControlState.Highlighted);
-
-            imgCircle.Layer.ShadowRadius = 3;
-			imgCircle.Layer.ShadowOpacity = 0.3f;
-			imgCircle.Layer.ShadowOffset = new CGSize(3, 3);
         }
-	}
+
+        void RatingView_RatingChosen(object sender, RatingChosenEventArgs e)
+        {
+
+        }
+    }
 }
