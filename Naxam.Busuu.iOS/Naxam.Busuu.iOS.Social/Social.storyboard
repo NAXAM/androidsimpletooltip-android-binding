@@ -93,11 +93,8 @@
                             <constraint firstAttribute="trailing" secondItem="0NJ-sM-lBG" secondAttribute="trailing" id="yDz-7F-Nop"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Social" id="nvR-Qj-IIb">
-                        <barButtonItem key="rightBarButtonItem" image="ic_filter" id="PjT-BV-f9v"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Social" id="nvR-Qj-IIb"/>
                     <connections>
-                        <outlet property="BarFilterButtonItem" destination="PjT-BV-f9v" id="5U2-RT-VgN"/>
                         <outlet property="ButtonDiscover" destination="SU2-0w-bLx" id="XRZ-ZI-Dlp"/>
                         <outlet property="ButtonFriends" destination="ulA-RS-flz" id="tlR-yC-eMN"/>
                         <outlet property="ViewBarItem" destination="MGW-vg-I9F" id="ojt-wb-n0A"/>
@@ -556,10 +553,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q78-Hn-Wcn" userLabel="btnAddFriends">
-                                        <rect key="frame" x="305" y="14" width="32" height="24"/>
+                                        <rect key="frame" x="297" y="14" width="40" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="JRX-up-Zkv"/>
-                                            <constraint firstAttribute="width" constant="32" id="V9R-9M-S0w"/>
+                                            <constraint firstAttribute="width" constant="40" id="V9R-9M-S0w"/>
                                         </constraints>
                                         <state key="normal" image="add_friend_icon.png"/>
                                         <connections>
@@ -1300,7 +1297,6 @@
         <image name="conversation_speaking_button_Blue.png" width="56" height="80"/>
         <image name="dots_menu.png" width="36" height="10"/>
         <image name="flag_small_english.png" width="144" height="144"/>
-        <image name="ic_filter" width="16" height="16"/>
         <image name="ic_send_light" width="16" height="16"/>
         <image name="play_btn" width="16" height="16"/>
         <image name="play_btn.png" width="60" height="81"/>

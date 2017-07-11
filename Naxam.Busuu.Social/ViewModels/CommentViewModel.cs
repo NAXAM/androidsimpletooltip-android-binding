@@ -26,9 +26,9 @@ namespace Naxam.Busuu.Social.ViewModels
 			}
 		}
 
-		public async void Init(int id)
+		public void Init(int id)
 		{			
-			CommentData = await _datacomment.GetSocialById(1);
+            CommentData = _datacomment.GetSocialById(id);
 		}
 
         SocialModel _Comment;

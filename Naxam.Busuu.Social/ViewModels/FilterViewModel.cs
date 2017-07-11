@@ -1,12 +1,9 @@
-﻿using System;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 
 namespace Naxam.Busuu.Social.ViewModels
 {
     public class FilterViewModel : MvxViewModel
     {
-        public FilterViewModel()
-        {
-        }
+       
     }
 }

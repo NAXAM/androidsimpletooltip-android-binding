@@ -52,10 +52,10 @@ namespace Naxam.Busuu.iOS.Social.Cells
             base.AwakeFromNib();
 
             imgUserAvatar.Layer.CornerRadius = imgUserAvatar.Frame.Width / 2;
-            ButtonAudioPlay.Layer.CornerRadius = ButtonAudioPlay.Frame.Width / 2;
-            ViewAudioPlayer.Layer.CornerRadius = 2;
-			ViewAudioPlayer.Layer.MasksToBounds = true;
 
+			ViewAudioPlayer.Layer.CornerRadius = 2;
+
+			ButtonAudioPlay.Layer.CornerRadius = ButtonAudioPlay.Frame.Width / 2;          
             ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 12, 10, 10);
 
             var img = UIImage.FromBundle("play_icon_small");

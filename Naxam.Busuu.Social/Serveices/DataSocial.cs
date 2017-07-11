@@ -1,14 +1,12 @@
-﻿using System.Threading.Tasks;
-using System.Linq;
+﻿using System.Linq;
 using Naxam.Busuu.Social.Models;
 using System.Collections.Generic;
-using System;
 
 namespace Naxam.Busuu.Social.Serveices
 {
     public class DataSocial : IDataSocial
     {
-        public async Task<SocialModel[]> GetAllSocial()
+        public SocialModel[] GetAllSocial()
         {
             var list = new List<SocialModel>()
 			{
@@ -390,19 +388,19 @@ namespace Naxam.Busuu.Social.Serveices
             return list.ToArray();
         }
 
-        public async Task<SocialModel[]> GetDiscoverSocial()
+        public SocialModel[] GetDiscoverSocial()
         {
-            return (await GetAllSocial()).Where(d => !d.Friends).ToArray();
+            return GetAllSocial().Where(d => !d.Friends).ToArray();
         }
 
-        public async Task<SocialModel[]> GetFriendSocial()
+        public SocialModel[] GetFriendSocial()
         {
-           return (await GetAllSocial()).Where(d => d.Friends).ToArray();
+           return GetAllSocial().Where(d => d.Friends).ToArray();
         }
 
-        public async Task<SocialModel> GetSocialById(int id)
+        public SocialModel GetSocialById(int id)
         {
-            return (await GetAllSocial()).Where(d => d.Id == id).FirstOrDefault();
+            return GetAllSocial().Where(d => d.Id == id).FirstOrDefault();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Naxam.Busuu.Social.ViewModels
 
 		public IMvxCommand CommentViewCommand
 		{
-            get { return new MvxCommand(() => ShowViewModel<CommentViewModel>(idDetai)); }
+            get { return new MvxCommand(() => ShowViewModel<CommentViewModel>(new { idDetai })); }
 		}
 
 		public SocialModel SocialDetailData
@@ -31,9 +31,10 @@ namespace Naxam.Busuu.Social.ViewModels
 			}
 		}
                
-        public async void Init(int id){
-            idDetai = id;
-            SocialDetailData = await _datasocialdetail.GetSocialById(id);
+        public void Init(int ID)
+        {
+            idDetai = ID;
+            SocialDetailData = _datasocialdetail.GetSocialById(ID);
         }
 
 		SocialModel _socialdetail;

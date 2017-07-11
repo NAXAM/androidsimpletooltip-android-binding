@@ -54,12 +54,10 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			Layer.ShadowRadius = 2;
 			Layer.ShadowOpacity = 0.3f;
 			Layer.ShadowOffset = new CGSize(2, 2);
-
+           
 			ViewCell.Layer.CornerRadius = 2;
-			ViewCell.Layer.MasksToBounds = true;
 
             ViewSpeak.Layer.CornerRadius = 2;
-			ViewSpeak.Layer.MasksToBounds = true;
 
 			var bbcolor = UIColor.FromRGB(224, 230, 235);
 
@@ -69,13 +67,12 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			ViewHome.Layer.BorderWidth = 0.5f;
 			ViewHome.Layer.BorderColor = bbcolor.CGColor;
 			ViewHome.Layer.CornerRadius = 2;
-			ViewHome.Layer.MasksToBounds = true;
 
             ImageUser.Layer.CornerRadius = ImageUser.Frame.Width / 2;
             ImgSpeak.Layer.CornerRadius = ImgSpeak.Frame.Width / 2;
             ImageLan.Layer.CornerRadius = ImageLan.Frame.Width / 2;
-            ButtonPlay.Layer.CornerRadius = ButtonPlay.Frame.Width / 2;
 
+            ButtonPlay.Layer.CornerRadius = ButtonPlay.Frame.Width / 2;
             ButtonPlay.ImageEdgeInsets = new UIEdgeInsets(9, 11, 9, 9);
                     
             var img = UIImage.FromBundle("play_icon_small");
@@ -101,16 +98,18 @@ namespace Naxam.Busuu.iOS.Social.Cells
                     SpeakMusicPlayer = AVAudioPlayer.FromUrl(songURL);
                     SpeakMusicPlayer.Volume = 1;
                     SpeakMusicPlayer.NumberOfLoops = 0;
-                    SpeakMusicPlayer.FinishedPlaying += delegate
-                    {
-						UpdateViewForPlayerInfo();
-						UpdateViewForPlayerState();
-                    };
-
+                    SpeakMusicPlayer.FinishedPlaying -= SpeakMusicPlayer_FinishedPlaying;
+					SpeakMusicPlayer.FinishedPlaying += SpeakMusicPlayer_FinishedPlaying;                 
                     UpdateViewForPlayerInfo();
                     UpdateViewForPlayerState();
                 }
             }
+        }
+
+        void SpeakMusicPlayer_FinishedPlaying(object sender, AVStatusEventArgs e)
+        {
+			UpdateViewForPlayerInfo();
+			UpdateViewForPlayerState();
         }
 
         partial void btnView_TouchUpInside(NSObject sender)
@@ -134,6 +133,8 @@ namespace Naxam.Busuu.iOS.Social.Cells
 		{
             if (SpeakMusicPlayer.Playing)
             {
+				//ButtonPlay.ImageEdgeInsets = new UIEdgeInsets(9, 9, 9, 9);
+				//ButtonPlay.SetImage(pauseBtnBg, UIControlState.Normal);
                 //lblTime.Text = String.Format("{0:00}:{1:00}", (int)(SpeakMusicPlayer.CurrentTime / 60), (int)(SpeakMusicPlayer.CurrentTime % 60));
                 SliderSpeak.Value = (float)SpeakMusicPlayer.CurrentTime;
             }
@@ -147,6 +148,8 @@ namespace Naxam.Busuu.iOS.Social.Cells
 		{		
 			if (SpeakMusicPlayer.Playing)
 			{
+				//ButtonPlay.ImageEdgeInsets = new UIEdgeInsets(9, 9, 9, 9);
+				//ButtonPlay.SetImage(pauseBtnBg, UIControlState.Normal);
                 update_timer = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.01), delegate
 				{
 					UpdateCurrentTime();
@@ -154,6 +157,8 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			}
 			else
 			{
+				//ButtonPlay.ImageEdgeInsets = new UIEdgeInsets(9, 11, 9, 9);
+				//ButtonPlay.SetImage(playBtnBg, UIControlState.Normal);
                 if (update_timer != null)
                 {
                     update_timer.Invalidate();

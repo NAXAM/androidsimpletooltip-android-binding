@@ -64,33 +64,31 @@ namespace Naxam.Busuu.iOS.Social.Views
 
             ratingView = new PDRatingView(ratingFrame, ratingConfig);
 
+			decimal rating = Convert.ToDecimal(lblRate.Text.Replace("(", "").Replace(")", ""));
+
+			ratingView.AverageRating = rating;
+
             ViewRate.Add(ratingView);
             ViewRate.SendSubviewToBack(ratingView);
-
-            decimal rating = Convert.ToDecimal(lblRate.Text.Replace("(", "").Replace(")", ""));
-
-            ratingView.AverageRating = rating;
-
+           
             imgUserAvatar.Layer.CornerRadius = imgUserAvatar.Frame.Width / 2;
             ButtonAudioPlay.Layer.CornerRadius = ButtonAudioPlay.Frame.Width / 2;
-            ViewAudioPlayer.Layer.CornerRadius = 2;
-            ViewAudioPlayer.Layer.MasksToBounds = true;
+			ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 12, 10, 10);
+
+			ViewAudioPlayer.Layer.CornerRadius = 2;        
             imgQuestion.Layer.CornerRadius = 2;
-            imgQuestion.Layer.MasksToBounds = true;
 
             var bbcolor = UIColor.FromRGB(217, 217, 217);
 
             ViewQuestion.Layer.BorderWidth = 0.75f;
             ViewQuestion.Layer.BorderColor = bbcolor.CGColor;
             ViewQuestion.Layer.CornerRadius = 2;
-            ViewQuestion.Layer.MasksToBounds = true;
 
-            btnAddFriends.Layer.BorderWidth = 0.5f;
+            btnAddFriends.Layer.BorderWidth = 0.75f;
             btnAddFriends.Layer.BorderColor = bbcolor.CGColor;
-			btnAddFriends.ImageEdgeInsets = new UIEdgeInsets(4, 8, 4, 8);
-
-            ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 12, 10, 10);
-
+			btnAddFriends.ImageEdgeInsets = new UIEdgeInsets(4, 12, 4, 12);
+            btnAddFriends.Layer.CornerRadius = btnAddFriends.Frame.Height / 2;
+         
             var img = UIImage.FromBundle("play_icon_small");
             SliderSpeak.SetThumbImage(img, UIControlState.Normal);
             SliderSpeak.SetThumbImage(img, UIControlState.Selected);

@@ -1,5 +1,4 @@
-﻿using System.Windows.Input;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Social.Models;
 using Naxam.Busuu.Social.Serveices;
 
@@ -9,7 +8,7 @@ namespace Naxam.Busuu.Social.ViewModels
     {
 		readonly IDataSocial _datadiscover;
 
-        private MvxObservableCollection<SocialModel> _discovers;
+        MvxObservableCollection<SocialModel> _discovers;
 
 		public DiscoverViewModel(IDataSocial datadiscover)
 		{
@@ -29,9 +28,9 @@ namespace Naxam.Busuu.Social.ViewModels
 			}
 		}
 
-        public async override void Start()
+        public override void Start()
 		{
-            DiscoverData = new MvxObservableCollection<SocialModel>(await _datadiscover.GetDiscoverSocial());
+            DiscoverData = new MvxObservableCollection<SocialModel>(_datadiscover.GetDiscoverSocial());
             base.Start();
 		}	
 
@@ -44,7 +43,7 @@ namespace Naxam.Busuu.Social.ViewModels
         }
 
         void ExecuteViewDiscoverCommand(SocialModel item) {
-            ShowViewModel<SocialDetailViewModel>(item.Id);
+            ShowViewModel<SocialDetailViewModel>(new { item.Id });
         }
     }
 }

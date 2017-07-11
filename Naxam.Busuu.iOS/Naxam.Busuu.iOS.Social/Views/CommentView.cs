@@ -54,12 +54,13 @@ namespace Naxam.Busuu.iOS.Social.Views
 
             ratingView.RatingChosen += RatingView_RatingChosen;
 
+			decimal rating = 0;
+			ratingView.AverageRating = rating;
+
             ViewStar.Add(ratingView);
             ViewStar.SendSubviewToBack(ratingView);
-
-            decimal rating = 4;
-
-			ratingView.AverageRating = rating;
+		
+            ViewBossQuestion.Layer.CornerRadius = 2;
 
 			var bbcolor = UIColor.FromRGB(217, 217, 217);
 
@@ -68,9 +69,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 
             ViewAudioPlayer.Layer.BorderWidth = 0.75f;
             ViewAudioPlayer.Layer.BorderColor = bbcolor.CGColor;
-
 			ViewAudioPlayer.Layer.CornerRadius = 2;
-			ViewAudioPlayer.Layer.MasksToBounds = true;
 
             btnAudioPlay.Layer.CornerRadius = btnAudioPlay.Frame.Width / 2;
 			btnAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 12, 10, 10);
@@ -80,19 +79,15 @@ namespace Naxam.Busuu.iOS.Social.Views
 			SliderSpeak.SetThumbImage(img, UIControlState.Selected);
 			SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);
 
-			ViewBossQuestion.Layer.CornerRadius = 2;
-			ViewBossQuestion.Layer.MasksToBounds = true;
-
+			var img2 = UIImage.FromBundle("conversation_speaking_button_red.png");
+			btnSay.SetImage(img2, UIControlState.Selected);
+			btnSay.SetImage(img2, UIControlState.Highlighted);
             btnSay.Layer.CornerRadius = btnSay.Frame.Width / 2;
             btnSay.Layer.MasksToBounds = false;
 			btnSay.ImageEdgeInsets = new UIEdgeInsets(26, 30, 26, 30);
 			btnSay.Layer.ShadowRadius = 2;
 			btnSay.Layer.ShadowOpacity = 0.3f;
 			btnSay.Layer.ShadowOffset = new CGSize(2, 2);
-
-            var img2 = UIImage.FromBundle("conversation_speaking_button_red.png");
-            btnSay.SetImage(img2, UIControlState.Selected);
-            btnSay.SetImage(img2, UIControlState.Highlighted);
         }
 
         void RatingView_RatingChosen(object sender, RatingChosenEventArgs e)

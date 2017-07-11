@@ -13,9 +13,6 @@ namespace Naxam.Busuu.iOS.Social.Views
     partial class SocialView
     {
         [Outlet]
-        UIKit.UIBarButtonItem BarFilterButtonItem { get; set; }
-
-        [Outlet]
         UIKit.UIButton ButtonDiscover { get; set; }
 
         [Outlet]
@@ -70,11 +67,6 @@ namespace Naxam.Busuu.iOS.Social.Views
             if (ViewSelectForButton != null) {
                 ViewSelectForButton.Dispose ();
                 ViewSelectForButton = null;
-            }
-
-            if (BarFilterButtonItem != null) {
-                BarFilterButtonItem.Dispose ();
-                BarFilterButtonItem = null;
             }
         }
     }

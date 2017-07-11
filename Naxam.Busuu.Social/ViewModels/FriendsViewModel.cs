@@ -8,7 +8,7 @@ namespace Naxam.Busuu.Social.ViewModels
     {
         readonly IDataSocial _datafriends;
 
-        private MvxObservableCollection<SocialModel> _friends;
+        MvxObservableCollection<SocialModel> _friends;
 
 		public FriendsViewModel(IDataSocial datafriens)
 		{
@@ -28,9 +28,9 @@ namespace Naxam.Busuu.Social.ViewModels
 			}
 		}
 
-        public async override void Start()
+        public override void Start()
 		{
-            FriendsData = new MvxObservableCollection<SocialModel>(await _datafriends.GetFriendSocial());		
+            FriendsData = new MvxObservableCollection<SocialModel>(_datafriends.GetFriendSocial());		
 			base.Start();
 		}
 
@@ -45,7 +45,7 @@ namespace Naxam.Busuu.Social.ViewModels
 
 		void ExecuteViewFriendsCommand(SocialModel item)
 		{
-			ShowViewModel<SocialDetailViewModel>(item.Id);
+            ShowViewModel<SocialDetailViewModel>(new { ID = item.Id });
 		}
     }
 }
