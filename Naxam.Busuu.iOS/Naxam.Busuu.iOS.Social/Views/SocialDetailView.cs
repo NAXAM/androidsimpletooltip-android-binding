@@ -80,7 +80,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 
             var bbcolor = UIColor.FromRGB(217, 217, 217);
 
-            ViewQuestion.Layer.BorderWidth = 1;
+            ViewQuestion.Layer.BorderWidth = 0.75f;
             ViewQuestion.Layer.BorderColor = bbcolor.CGColor;
             ViewQuestion.Layer.CornerRadius = 2;
             ViewQuestion.Layer.MasksToBounds = true;
@@ -98,7 +98,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 
             ViewBackGroud.Layer.ShadowRadius = 1;
             ViewBackGroud.Layer.ShadowOpacity = 0.3f;
-            ViewBackGroud.Layer.ShadowOffset = new CGSize(1, 1);
+            ViewBackGroud.Layer.ShadowOffset = new CGSize(1, 1);		
         }
     }
 }

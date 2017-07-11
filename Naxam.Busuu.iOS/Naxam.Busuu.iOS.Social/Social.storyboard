@@ -1115,6 +1115,13 @@
                                                                 <color key="textColor" red="0.45377987623214722" green="0.48991298675537109" blue="0.51497465372085571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="mNt-Sk-khO" userLabel="imgCircle">
+                                                                <rect key="frame" x="131.5" y="121.5" width="79" height="79"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="79" id="KcI-aR-cwL"/>
+                                                                    <constraint firstAttribute="width" constant="79" id="hfk-13-nF1"/>
+                                                                </constraints>
+                                                            </imageView>
                                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h99-9W-u7g" userLabel="btnSay">
                                                                 <rect key="frame" x="131" y="121" width="80" height="80"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1129,7 +1136,9 @@
                                                             <constraint firstItem="h99-9W-u7g" firstAttribute="top" secondItem="4dI-H8-pHo" secondAttribute="bottom" constant="40" id="3Gw-BC-dnf"/>
                                                             <constraint firstItem="h1u-1I-nzB" firstAttribute="leading" secondItem="K61-z7-NrV" secondAttribute="leading" id="6sm-w7-hYx"/>
                                                             <constraint firstAttribute="trailing" secondItem="h1u-1I-nzB" secondAttribute="trailing" id="Ndz-my-ui3"/>
+                                                            <constraint firstItem="mNt-Sk-khO" firstAttribute="centerY" secondItem="h99-9W-u7g" secondAttribute="centerY" id="U3N-FP-4WH"/>
                                                             <constraint firstItem="h1u-1I-nzB" firstAttribute="top" secondItem="K61-z7-NrV" secondAttribute="top" id="eKk-oa-5aC"/>
+                                                            <constraint firstItem="mNt-Sk-khO" firstAttribute="centerX" secondItem="h99-9W-u7g" secondAttribute="centerX" id="fhc-Ym-BLC"/>
                                                             <constraint firstItem="4dI-H8-pHo" firstAttribute="top" secondItem="h1u-1I-nzB" secondAttribute="bottom" constant="16" id="zE6-Sk-pB6"/>
                                                         </constraints>
                                                     </view>
@@ -1284,6 +1293,7 @@
                         <outlet property="btnAudioPlay" destination="MGT-gJ-X3F" id="k5V-FZ-SnK"/>
                         <outlet property="btnSay" destination="h99-9W-u7g" id="ft2-8Z-JXh"/>
                         <outlet property="fieldCorrect" destination="2MZ-Nj-YHA" id="GNH-pw-3mO"/>
+                        <outlet property="imgCircle" destination="mNt-Sk-khO" id="fFI-9Q-1lx"/>
                         <outlet property="imgQuestion" destination="PIJ-dT-Agb" id="ov8-J5-o9r"/>
                         <outlet property="lblTime" destination="TMs-Nb-AuB" id="q6E-zp-3Af"/>
                         <outlet property="textHowDid" destination="Oqo-aU-ax8" id="G24-TI-lk9"/>
@@ -1296,6 +1306,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Circle.png" width="80" height="80"/>
         <image name="add_friend_icon.png" width="32" height="32"/>
         <image name="conversation_speaking_button_Blue.png" width="56" height="80"/>
         <image name="dots_menu.png" width="36" height="10"/>

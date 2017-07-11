@@ -168,6 +168,7 @@
     <BundleResource Include="Resources\Stars\grey_star2.png" />
     <BundleResource Include="Resources\conversation_speaking_button_Blue.png" />
     <BundleResource Include="Resources\conversation_speaking_button_red.png" />
+    <BundleResource Include="Resources\Circle.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

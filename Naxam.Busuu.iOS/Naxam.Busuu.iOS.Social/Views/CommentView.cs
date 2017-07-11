@@ -61,10 +61,10 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 			var bbcolor = UIColor.FromRGB(217, 217, 217);
 
-			ViewQuestion.Layer.BorderWidth = 1;
+            ViewQuestion.Layer.BorderWidth = 0.75f;
 			ViewQuestion.Layer.BorderColor = bbcolor.CGColor;
 
-            ViewAudioPlayer.Layer.BorderWidth = 1;
+            ViewAudioPlayer.Layer.BorderWidth = 0.75f;
             ViewAudioPlayer.Layer.BorderColor = bbcolor.CGColor;
 
 			ViewAudioPlayer.Layer.CornerRadius = 2;
@@ -91,6 +91,10 @@ namespace Naxam.Busuu.iOS.Social.Views
             var img2 = UIImage.FromBundle("conversation_speaking_button_red.png");
             btnSay.SetImage(img2, UIControlState.Selected);
             btnSay.SetImage(img2, UIControlState.Highlighted);
+
+            imgCircle.Layer.ShadowRadius = 3;
+			imgCircle.Layer.ShadowOpacity = 0.3f;
+			imgCircle.Layer.ShadowOffset = new CGSize(3, 3);
         }
 	}
 }

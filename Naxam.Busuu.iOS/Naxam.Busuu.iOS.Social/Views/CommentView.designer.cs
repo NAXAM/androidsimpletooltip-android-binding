@@ -28,6 +28,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 		UIKit.UITextField fieldCorrect { get; set; }
 
 		[Outlet]
+		UIKit.UIImageView imgCircle { get; set; }
+
+		[Outlet]
 		UIKit.UIImageView imgQuestion { get; set; }
 
 		[Outlet]
@@ -75,6 +78,11 @@ namespace Naxam.Busuu.iOS.Social.Views
 				audioViewTopConstraint = null;
 			}
 
+			if (btnAudioPlay != null) {
+				btnAudioPlay.Dispose ();
+				btnAudioPlay = null;
+			}
+
 			if (btnSay != null) {
 				btnSay.Dispose ();
 				btnSay = null;
@@ -90,6 +98,16 @@ namespace Naxam.Busuu.iOS.Social.Views
 				imgQuestion = null;
 			}
 
+			if (lblTime != null) {
+				lblTime.Dispose ();
+				lblTime = null;
+			}
+
+			if (SliderSpeak != null) {
+				SliderSpeak.Dispose ();
+				SliderSpeak = null;
+			}
+
 			if (textHowDid != null) {
 				textHowDid.Dispose ();
 				textHowDid = null;
@@ -98,6 +116,11 @@ namespace Naxam.Busuu.iOS.Social.Views
 			if (textQuestion != null) {
 				textQuestion.Dispose ();
 				textQuestion = null;
+			}
+
+			if (ViewAudioPlayer != null) {
+				ViewAudioPlayer.Dispose ();
+				ViewAudioPlayer = null;
 			}
 
 			if (ViewBossQuestion != null) {
@@ -120,24 +143,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 				ViewQuestion = null;
 			}
 
-			if (SliderSpeak != null) {
-				SliderSpeak.Dispose ();
-				SliderSpeak = null;
-			}
-
-			if (lblTime != null) {
-				lblTime.Dispose ();
-				lblTime = null;
-			}
-
 			if (ViewShadow != null) {
 				ViewShadow.Dispose ();
 				ViewShadow = null;
-			}
-
-			if (btnAudioPlay != null) {
-				btnAudioPlay.Dispose ();
-				btnAudioPlay = null;
 			}
 
 			if (ViewStar != null) {
@@ -145,9 +153,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 				ViewStar = null;
 			}
 
-			if (ViewAudioPlayer != null) {
-				ViewAudioPlayer.Dispose ();
-				ViewAudioPlayer = null;
+			if (imgCircle != null) {
+				imgCircle.Dispose ();
+				imgCircle = null;
 			}
 		}
 	}
