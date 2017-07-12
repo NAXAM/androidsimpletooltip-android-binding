@@ -1,4 +1,3 @@
-﻿using System;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using Naxam.Busuu.Review.Services;
@@ -11,7 +10,9 @@ namespace Naxam.Busuu.iOS
 		public App()
 		{
             Mvx.RegisterType<IReviewService, ReviewService>();
+            Mvx.RegisterType<IDataSocial, DataSocial>();
 			Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<ReviewAllViewModel>());
+            //Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<SocialViewModel>());
 		}
 	}
 }

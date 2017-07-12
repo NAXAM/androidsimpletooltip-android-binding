@@ -7,19 +7,19 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace Naxam.Busuu.iOS.Social.Views
+namespace Naxam.Busuu.iOS.Social
 {
-	[Register ("FriendsView")]
-	partial class FriendsView
+	[Register ("FilterView")]
+	partial class FilterView
 	{
 		[Outlet]
-		UIKit.UITableView FriendsTableView { get; set; }
+		UIKit.UIView ViewShadow { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (FriendsTableView != null) {
-				FriendsTableView.Dispose ();
-				FriendsTableView = null;
+			if (ViewShadow != null) {
+				ViewShadow.Dispose ();
+				ViewShadow = null;
 			}
 		}
 	}

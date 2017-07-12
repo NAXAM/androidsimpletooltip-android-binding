@@ -7,14 +7,18 @@ using MvvmCross.iOS.Views;
 using UIKit;
 using ObjCRuntime;
 using CoreGraphics;
+using Naxam.Busuu.Social.ViewModels;
+using MvvmCross.Binding.BindingContext;
 
-namespace Naxam.Busuu.iOS.Social
+namespace Naxam.Busuu.iOS.Social.Views
 {
     [MvxFromStoryboard(StoryboardName = "Social")]
-    public partial class SocialView : MvxViewController
+    public partial class SocialView : MvxViewController<SocialViewModel>
 	{
-
-		private bool IsAnimationViewBar = true;
+        private bool IsAnimationViewBar = true;
+        private MvxViewController dvView = (MvxViewController)UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("DiscoverView");
+        private MvxViewController friView = (MvxViewController)UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("FriendsView");
+        //private SocialPageView socialPageView;
 
 		public SocialView (IntPtr handle) : base (handle)
 		{
@@ -27,10 +31,24 @@ namespace Naxam.Busuu.iOS.Social
 			ViewBarItem.Layer.ShadowRadius = 2;
 			ViewBarItem.Layer.ShadowOffset = new CGSize(2, 2);
 			ViewBarItem.Layer.ShadowOpacity = 0.3f;
-			ViewBarItem.ClipsToBounds = false;	
 
-            //UIViewController dv = UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("DiscoverView");
-            //AddChildViewController(dv);
+			dvView.View.Frame = ViewContainer.Bounds;
+			friView.View.Frame = ViewContainer.Bounds;
+
+            //socialPageView = this.Storyboard.InstantiateViewController("SocialPageView") as SocialPageView;
+			//socialPageView.DataSource = new PageViewControllerDataSource();
+
+			//MvxViewController dv = (MvxViewController)UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("DiscoverView");
+            //socialPageView.SetViewControllers(new UIViewController[] { dv }, UIPageViewControllerNavigationDirection.Forward, true, null);
+            //socialPageView.View.Frame = new CGRect(0, 0, ViewContainer.Frame.Size.Width, ViewContainer.Frame.Size.Height);
+
+			AddChildViewController(dvView);
+            ViewContainer.AddSubview(dvView.View);
+			dvView.DidMoveToParentViewController(this);
+
+            var setBinding = this.CreateBindingSet<SocialView, SocialViewModel>();
+            setBinding.Bind(BarFilterButtonItem).To(vm => vm.GoToFilterViewCommand);
+			setBinding.Apply();
 		}
 
 		partial void ButtonDiscover_TouchUpInside(NSObject sender)
@@ -42,9 +60,19 @@ namespace Naxam.Busuu.iOS.Social
 			ButtonDiscover.Enabled = false;
 			ButtonFriends.Enabled = true;
 
+			//MvxViewController dv = (MvxViewController)UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("DiscoverView");
+			//socialPageView.SetViewControllers(new UIViewController[] { dv }, UIPageViewControllerNavigationDirection.Forward, false, null);
+			
+            WillMoveToParentViewController(friView);			
+            ViewContainer.WillRemoveSubview(friView.View);
+			friView.RemoveFromParentViewController();
+			AddChildViewController(dvView);
+			ViewContainer.AddSubview(dvView.View);
+			dvView.DidMoveToParentViewController(this);
+
 			IsAnimationViewBar = true;
 			UIView.BeginAnimations("slideAnimation");
-			UIView.SetAnimationDuration(0.5);
+			UIView.SetAnimationDuration(0.3);
 			UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
 			UIView.SetAnimationDelegate(this);
 			UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
@@ -61,9 +89,19 @@ namespace Naxam.Busuu.iOS.Social
 			ButtonDiscover.Enabled = true;
 			ButtonFriends.Enabled = false;
 
+            //MvxViewController dv = (MvxViewController)UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("FriendsView");
+            //socialPageView.SetViewControllers(new UIViewController[] { dv }, UIPageViewControllerNavigationDirection.Forward, false, null);
+           
+            WillMoveToParentViewController(dvView);
+            ViewContainer.WillRemoveSubview(dvView.View);
+            dvView.RemoveFromParentViewController();
+            AddChildViewController(friView);
+			ViewContainer.AddSubview(friView.View);
+            friView.DidMoveToParentViewController(this);
+
 			IsAnimationViewBar = false;
 			UIView.BeginAnimations("slideAnimation");
-			UIView.SetAnimationDuration(0.5);
+			UIView.SetAnimationDuration(0.3);
 			UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
 			UIView.SetAnimationDelegate(this);
 			UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
@@ -83,6 +121,35 @@ namespace Naxam.Busuu.iOS.Social
 				ViewSelectForButton.Center = new CGPoint(ViewSelectForButton.Bounds.Width / 2, 43);
 			}
 		}
-
 	}
+
+ //   public class PageViewControllerDataSource : UIPageViewControllerDataSource
+	//{       
+	//	public PageViewControllerDataSource()
+	//	{
+			
+	//	}
+
+	//	public override UIViewController GetPreviousViewController(UIPageViewController pageViewController, UIViewController referenceViewController)
+	//	{
+	//		if (referenceViewController is DiscoverView) return null;
+ //           return (MvxViewController)UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("DiscoverView");
+	//	}
+
+	//	public override UIViewController GetNextViewController(UIPageViewController pageViewController, UIViewController referenceViewController)
+	//	{
+	//		if (referenceViewController is FriendsView) return null;
+	//		return (MvxViewController)UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("FriendsView");
+	//	}
+
+	//	public override nint GetPresentationCount(UIPageViewController pageViewController)
+	//	{
+	//		return 2;
+	//	}
+
+	//	public override nint GetPresentationIndex(UIPageViewController pageViewController)
+	//	{
+	//		return 0;
+	//	}
+	//}
 }

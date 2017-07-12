@@ -1,32 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using MvvmCross.Core.ViewModels;
-using Naxam.Busuu.Social.Models;
-using Naxam.Busuu.Social.Serveices;
+﻿using MvvmCross.Core.ViewModels;
 
 namespace Naxam.Busuu.Social.ViewModels
 {
     public class SocialViewModel : MvxViewModel
     {
-		readonly IDataDiscover _datadiscover;
-
-        private List<Discover> _discover;
-
-        public SocialViewModel(IDataDiscover datadiscover)
+		public IMvxCommand GoToFilterViewCommand
 		{
-            _datadiscover = datadiscover;
+            get { return new MvxCommand(() => ShowViewModel<FilterViewModel>()); }
 		}
 
-        public List<Discover> Discovers
-        {
-            get => _discover;
-            set => SetProperty(ref _discover, value);
-        }
-
-        public async override void Start()
+		public IMvxCommand GoToSocialDetailViewCommand
 		{
-           Discovers = await _datadiscover.GetAllDiscover();
-           base.Start();
+            get { return new MvxCommand(() => ShowViewModel<SocialDetailViewModel>()); }
 		}
     }
 }

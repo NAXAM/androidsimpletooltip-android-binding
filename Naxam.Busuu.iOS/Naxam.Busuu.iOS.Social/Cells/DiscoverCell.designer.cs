@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace Naxam.Busuu.iOS.Social
+namespace Naxam.Busuu.iOS.Social.Cells
 {
 	[Register ("DiscoverCell")]
 	partial class DiscoverCell
@@ -34,6 +34,9 @@ namespace Naxam.Busuu.iOS.Social
 		UIKit.UIImageView ImgSpeak { get; set; }
 
 		[Outlet]
+		UIKit.UILabel lblTime { get; set; }
+
+		[Outlet]
 		UIKit.UILabel NameUser { get; set; }
 
 		[Outlet]
@@ -56,6 +59,9 @@ namespace Naxam.Busuu.iOS.Social
 
 		[Outlet]
 		UIKit.UILabel WriteLabel { get; set; }
+
+		[Action ("btnView_TouchUpInside:")]
+		partial void btnView_TouchUpInside (Foundation.NSObject sender);
 
 		[Action ("ButtonPlay_TouchUpInside:")]
 		partial void ButtonPlay_TouchUpInside (Foundation.NSObject sender);
@@ -95,6 +101,11 @@ namespace Naxam.Busuu.iOS.Social
 			if (ImgSpeak != null) {
 				ImgSpeak.Dispose ();
 				ImgSpeak = null;
+			}
+
+			if (lblTime != null) {
+				lblTime.Dispose ();
+				lblTime = null;
 			}
 
 			if (NameUser != null) {

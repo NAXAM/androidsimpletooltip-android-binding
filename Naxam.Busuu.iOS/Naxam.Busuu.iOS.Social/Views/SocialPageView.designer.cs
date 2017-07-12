@@ -9,18 +9,12 @@ using System.CodeDom.Compiler;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
-	[Register ("FriendsView")]
-	partial class FriendsView
+	[Register ("SocialPageView")]
+	partial class SocialPageView
 	{
-		[Outlet]
-		UIKit.UITableView FriendsTableView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (FriendsTableView != null) {
-				FriendsTableView.Dispose ();
-				FriendsTableView = null;
-			}
 		}
 	}
 }

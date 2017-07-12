@@ -7,6 +7,8 @@ using MvvmCross.iOS.Views.Presenters;
 using Naxam.Busuu.iOS.Review.Views;
 using Naxam.Busuu.Review.ViewModels;
 using UIKit;
+using Naxam.Busuu.iOS.Social.Views;
+using Naxam.Busuu.Social.ViewModels;
 
 namespace Naxam.Busuu.iOS
 {
@@ -25,7 +27,8 @@ namespace Naxam.Busuu.iOS
         {
             var assemblies = new List<Assembly>
             {
-                typeof(ReviewAllView).Assembly
+                typeof(ReviewAllView).Assembly,
+                typeof(SocialView).Assembly,
             };
 
             assemblies.AddRange(base.GetViewAssemblies());
@@ -36,7 +39,8 @@ namespace Naxam.Busuu.iOS
         {
 			var assemblies = new List<Assembly>
 			{
-                typeof(ReviewAllViewModel).Assembly
+                typeof(ReviewAllViewModel).Assembly,
+                typeof(SocialViewModel).Assembly,
 			};
 
 			assemblies.AddRange(base.GetViewModelAssemblies());
