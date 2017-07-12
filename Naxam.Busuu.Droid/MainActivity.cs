@@ -12,6 +12,7 @@ using Naxam.Busuu.Droid.Profile.Views;
 using Android.Support.V7.App;
 using Android.Support.V4.Content;
 using Android.Graphics;
+using Naxam.Busuu.Droid.Learning;
 
 namespace Naxam.Busuu.Droid
 {
@@ -22,7 +23,7 @@ namespace Naxam.Busuu.Droid
         {
             base.OnCreate(savedInstanceState);
             //SetContentView(Resource.Layout.Main);
-            StartActivity(new Intent(this, typeof(MachingSentenceView)));
+            StartActivity(new Intent(this, typeof(HearAndRepeatView)));
          
         }
     }

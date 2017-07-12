@@ -170,6 +170,10 @@
       <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
       <Name>Naxam.Busuu.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Droid.Learning\Naxam.Busuu.Droid.Learning.csproj">
+      <Project>{DD07F5A3-ACA2-4CDF-B4BA-591A395175F9}</Project>
+      <Name>Naxam.Busuu.Droid.Learning</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Droid.Profile\Naxam.Busuu.Droid.Profile.csproj">
       <Project>{dfd37792-d1a1-463e-ba9f-8dd045e61178}</Project>
       <Name>Naxam.Busuu.Droid.Profile</Name>
