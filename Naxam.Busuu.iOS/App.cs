@@ -9,6 +9,7 @@ namespace Naxam.Busuu.iOS
 	{
 		public App()
 		{
+            RegisterAppStart<SocialViewModel>();
 			Mvx.RegisterType<IDataSocial, DataSocial>();
             Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<SocialViewModel>());
 		}

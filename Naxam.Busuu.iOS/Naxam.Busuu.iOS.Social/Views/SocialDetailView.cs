@@ -2,7 +2,6 @@ using System;
 using CoreGraphics;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
-using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Views;
 using Naxam.Busuu.Social.ViewModels;
 using PatridgeDev;
@@ -26,13 +25,11 @@ namespace Naxam.Busuu.iOS.Social.Views
 
         public override void ViewDidLoad()
         {
-            this.Request = new MvxViewModelRequest<SocialDetailViewModel>(null, null);
-
             base.ViewDidLoad();
 
 			ViewShadow.Layer.ShadowRadius = 2;
-			ViewShadow.Layer.ShadowOpacity = 0.3f;
-			ViewShadow.Layer.ShadowOffset = new CGSize(2, 2);
+			ViewShadow.Layer.ShadowOpacity = 0.25f;
+			ViewShadow.Layer.ShadowOffset = new CGSize(0, 2);
 
             var setBinding = this.CreateBindingSet<SocialDetailView, SocialDetailViewModel>();
             setBinding.Bind(_loaderImageUser).To(d => d.SocialDetailData.Avatar).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
@@ -64,9 +61,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 
             ratingView = new PDRatingView(ratingFrame, ratingConfig);
 
-			decimal rating = Convert.ToDecimal(lblRate.Text.Replace("(", "").Replace(")", ""));
-
-			ratingView.AverageRating = rating;
+            this.CreateBinding(ratingView).For(vm => vm.AverageRating).To<SocialDetailViewModel>(vm => vm.SocialDetailData.Star).Apply();
 
             ViewRate.Add(ratingView);
             ViewRate.SendSubviewToBack(ratingView);
@@ -95,8 +90,8 @@ namespace Naxam.Busuu.iOS.Social.Views
             SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);
 
             ViewBackGroud.Layer.ShadowRadius = 1;
-            ViewBackGroud.Layer.ShadowOpacity = 0.3f;
-            ViewBackGroud.Layer.ShadowOffset = new CGSize(1, 1);		
+            ViewBackGroud.Layer.ShadowOpacity = 0.25f;
+            ViewBackGroud.Layer.ShadowOffset = new CGSize(0, 1);		
         }
     }
 }

@@ -28,12 +28,12 @@ namespace Naxam.Busuu.iOS.Social.Views
 		{
 			base.ViewDidLoad();
 
-            var filter = new UIBarButtonItem(UIImage.FromBundle("ic_filter"), UIBarButtonItemStyle.Plain, (sender, args) => { });
-			NavigationItem.RightBarButtonItem = filter;
+            var btnfilter = new UIBarButtonItem(UIImage.FromBundle("ic_filter"), UIBarButtonItemStyle.Plain, (sender, args) => { });
+			NavigationItem.RightBarButtonItem = btnfilter;
 
 			ViewBarItem.Layer.ShadowRadius = 2;
-			ViewBarItem.Layer.ShadowOffset = new CGSize(2, 2);
-			ViewBarItem.Layer.ShadowOpacity = 0.3f;
+			ViewBarItem.Layer.ShadowOffset = new CGSize(0, 2);
+			ViewBarItem.Layer.ShadowOpacity = 0.25f;
 
 			dvView.View.Frame = ViewContainer.Bounds;
 			friView.View.Frame = ViewContainer.Bounds;
@@ -50,7 +50,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 			dvView.DidMoveToParentViewController(this);
 
             var setBinding = this.CreateBindingSet<SocialView, SocialViewModel>();
-            setBinding.Bind(filter).For("Clicked").To(vm => vm.FilterViewCommand);
+            setBinding.Bind(btnfilter).For("Clicked").To(vm => vm.FilterViewCommand);
 			setBinding.Apply();
 		}
 

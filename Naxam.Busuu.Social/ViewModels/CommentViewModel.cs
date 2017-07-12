@@ -13,6 +13,8 @@ namespace Naxam.Busuu.Social.ViewModels
 			_datacomment = datacomment;
 		}
 
+		SocialModel _Comment;
+
 		public SocialModel CommentData
 		{
 			get { return _Comment; }
@@ -26,11 +28,9 @@ namespace Naxam.Busuu.Social.ViewModels
 			}
 		}
 
-		public void Init(int id)
+        public void Init(SocialModel item)
 		{			
-            CommentData = _datacomment.GetSocialById(id);
+            CommentData = _datacomment.GetSocialById(item.Id);
 		}
-
-        SocialModel _Comment;
     }
 }

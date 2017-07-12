@@ -30,7 +30,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 			setBinding.Apply();
 
 			FriendsTableView.RowHeight = UITableView.AutomaticDimension;
-			FriendsTableView.EstimatedRowHeight = 40f;
+			FriendsTableView.EstimatedRowHeight = 210f;
             FriendsTableView.Source = fSource;			
         }
 

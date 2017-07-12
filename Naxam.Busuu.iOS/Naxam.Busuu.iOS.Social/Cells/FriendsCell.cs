@@ -64,8 +64,8 @@ namespace Naxam.Busuu.iOS.Social.Cells
             SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);
 
 			ViewBackGroud.Layer.ShadowRadius = 1;
-			ViewBackGroud.Layer.ShadowOpacity = 0.3f;
-			ViewBackGroud.Layer.ShadowOffset = new CGSize(1, 1);
+			ViewBackGroud.Layer.ShadowOpacity = 0.25f;
+			ViewBackGroud.Layer.ShadowOffset = new CGSize(0, 1);
 
 			var ratingConfig = new RatingConfig(UIImage.FromBundle("Stars" + "/grey_star2"),
 									UIImage.FromBundle("Stars" + "/yellow_star_d"),

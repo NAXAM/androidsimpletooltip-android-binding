@@ -52,8 +52,8 @@ namespace Naxam.Busuu.iOS.Social.Cells
             base.AwakeFromNib();
 
 			Layer.ShadowRadius = 2;
-			Layer.ShadowOpacity = 0.3f;
-			Layer.ShadowOffset = new CGSize(2, 2);
+            Layer.ShadowOpacity = 0.25f;
+			Layer.ShadowOffset = new CGSize(0, 2);
            
 			ViewCell.Layer.CornerRadius = 2;
 

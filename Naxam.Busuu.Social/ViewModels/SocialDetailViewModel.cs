@@ -1,4 +1,6 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using System;
+using System.Threading.Tasks;
+using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Social.Models;
 using Naxam.Busuu.Social.Serveices;
 
@@ -15,7 +17,7 @@ namespace Naxam.Busuu.Social.ViewModels
 
 		public IMvxCommand CommentViewCommand
 		{
-            get { return new MvxCommand(() => ShowViewModel<CommentViewModel>(new { idDetai })); }
+            get { return new MvxCommand(() => ShowViewModel<CommentViewModel>( new SocialModel{ Id = SocialDetailData.Id })); }
 		}
 
 		public SocialModel SocialDetailData
@@ -30,15 +32,12 @@ namespace Naxam.Busuu.Social.ViewModels
 				}
 			}
 		}
-               
-        public void Init(int ID)
+
+        public void Init(SocialModel item)
         {
-            idDetai = ID;
-            SocialDetailData = _datasocialdetail.GetSocialById(ID);
+            SocialDetailData = _datasocialdetail.GetSocialById(item.Id);
         }
 
-		SocialModel _socialdetail;
-
-        int idDetai;
+        SocialModel _socialdetail;
     }
 }

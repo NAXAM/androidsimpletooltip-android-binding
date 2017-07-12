@@ -12,7 +12,7 @@ using UIKit;
 namespace Naxam.Busuu.iOS.Social.Views
 {
     [MvxFromStoryboard(StoryboardName = "Social")]
-	public partial class CommentView : MvxViewController<CommentViewModel>
+    public partial class CommentView : MvxViewController<CommentViewModel>
 	{
 		PDRatingView ratingView;
 		readonly MvxImageViewLoader _loaderImgQuestion;
@@ -23,14 +23,12 @@ namespace Naxam.Busuu.iOS.Social.Views
 		}
 
         public override void ViewDidLoad()
-        {
-            this.Request = new MvxViewModelRequest<CommentViewModel>(null, null);
-
+        {           
             base.ViewDidLoad();
 
 			ViewShadow.Layer.ShadowRadius = 2;
-			ViewShadow.Layer.ShadowOpacity = 0.3f;
-			ViewShadow.Layer.ShadowOffset = new CGSize(2, 2);
+			ViewShadow.Layer.ShadowOpacity = 0.25f;
+			ViewShadow.Layer.ShadowOffset = new CGSize(0, 2);
 
 			var setBinding = this.CreateBindingSet<CommentView, CommentViewModel>();
 			setBinding.Bind(_loaderImgQuestion).To(d => d.CommentData.ImgQuestion).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
@@ -85,9 +83,9 @@ namespace Naxam.Busuu.iOS.Social.Views
             btnSay.Layer.CornerRadius = btnSay.Frame.Width / 2;
             btnSay.Layer.MasksToBounds = false;
 			btnSay.ImageEdgeInsets = new UIEdgeInsets(26, 30, 26, 30);
-			btnSay.Layer.ShadowRadius = 2;
-			btnSay.Layer.ShadowOpacity = 0.3f;
-			btnSay.Layer.ShadowOffset = new CGSize(2, 2);
+			btnSay.Layer.ShadowRadius = 1;
+			btnSay.Layer.ShadowOpacity = 0.25f;
+			btnSay.Layer.ShadowOffset = new CGSize(0, 1);
         }
 
         void RatingView_RatingChosen(object sender, RatingChosenEventArgs e)

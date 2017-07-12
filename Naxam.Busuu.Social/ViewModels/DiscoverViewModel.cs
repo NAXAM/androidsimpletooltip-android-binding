@@ -42,8 +42,12 @@ namespace Naxam.Busuu.Social.ViewModels
             }
         }
 
-        void ExecuteViewDiscoverCommand(SocialModel item) {
-            ShowViewModel<SocialDetailViewModel>(new { item.Id });
+        void ExecuteViewDiscoverCommand(SocialModel item)
+        {
+			ShowViewModel<SocialDetailViewModel>(new SocialModel
+			{
+                Id = item.Id
+			});
         }
-    }
+    }	
 }

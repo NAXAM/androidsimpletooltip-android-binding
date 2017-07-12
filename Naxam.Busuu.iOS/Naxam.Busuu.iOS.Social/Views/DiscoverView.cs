@@ -18,6 +18,7 @@ namespace Naxam.Busuu.iOS.Social.Views
     [MvxFromStoryboard(StoryboardName = "Social")]
     public partial class DiscoverView : MvxViewController<DiscoverViewModel>
     {
+
         public DiscoverView(IntPtr handle) : base(handle)
         {
         }

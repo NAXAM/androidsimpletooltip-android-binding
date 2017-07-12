@@ -13,10 +13,34 @@ namespace Naxam.Busuu.iOS.Social
 	partial class FilterView
 	{
 		[Outlet]
+		UIKit.UISwitch SwitchLanguage { get; set; }
+
+		[Outlet]
+		UIKit.UISwitch SwitchSpeak { get; set; }
+
+		[Outlet]
+		UIKit.UISwitch SwitchWrite { get; set; }
+
+		[Outlet]
 		UIKit.UIView ViewShadow { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (SwitchLanguage != null) {
+				SwitchLanguage.Dispose ();
+				SwitchLanguage = null;
+			}
+
+			if (SwitchSpeak != null) {
+				SwitchSpeak.Dispose ();
+				SwitchSpeak = null;
+			}
+
+			if (SwitchWrite != null) {
+				SwitchWrite.Dispose ();
+				SwitchWrite = null;
+			}
+
 			if (ViewShadow != null) {
 				ViewShadow.Dispose ();
 				ViewShadow = null;
