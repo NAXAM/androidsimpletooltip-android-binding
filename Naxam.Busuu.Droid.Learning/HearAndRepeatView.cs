@@ -69,7 +69,6 @@ namespace Naxam.Busuu.Droid.Learning
             };
 
 
-            imgPlayBtn = FindViewById<ImageView>(Resource.Id.imgPlayBtn);
             hiddenCircle = (ImageView)FindViewById(Resource.Id.hiddenCircle);
             imgMic = (ImageView)FindViewById(Resource.Id.imgMic);
             txtGuide = (TextView)FindViewById(Resource.Id.txtGuide);

@@ -1668,43 +1668,46 @@ namespace Naxam.Busuu.Droid.Learning
 			public static int ic_play_btn = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public static int notification_action_background = 2130837592;
+			public static int ic_yellow_star = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public static int notification_bg = 2130837593;
+			public static int notification_action_background = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public static int notification_bg_low = 2130837594;
+			public static int notification_bg = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public static int notification_bg_low_normal = 2130837595;
+			public static int notification_bg_low = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public static int notification_bg_low_pressed = 2130837596;
+			public static int notification_bg_low_normal = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public static int notification_bg_normal = 2130837597;
+			public static int notification_bg_low_pressed = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public static int notification_bg_normal_pressed = 2130837598;
+			public static int notification_bg_normal = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public static int notification_icon_background = 2130837599;
-			
-			// aapt resource value: 0x7f020063
-			public static int notification_template_icon_bg = 2130837603;
-			
-			// aapt resource value: 0x7f020064
-			public static int notification_template_icon_low_bg = 2130837604;
+			public static int notification_bg_normal_pressed = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public static int notification_tile_bg = 2130837600;
+			public static int notification_icon_background = 2130837600;
+			
+			// aapt resource value: 0x7f020064
+			public static int notification_template_icon_bg = 2130837604;
+			
+			// aapt resource value: 0x7f020065
+			public static int notification_template_icon_low_bg = 2130837605;
 			
 			// aapt resource value: 0x7f020061
-			public static int notify_panel_notification_icon_bg = 2130837601;
+			public static int notification_tile_bg = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public static int star_white = 2130837602;
+			public static int notify_panel_notification_icon_bg = 2130837602;
+			
+			// aapt resource value: 0x7f020063
+			public static int star_white = 2130837603;
 			
 			static Drawable()
 			{
@@ -1874,6 +1877,9 @@ namespace Naxam.Busuu.Droid.Learning
 			
 			// aapt resource value: 0x7f0a0058
 			public static int imgPlayBtn = 2131361880;
+			
+			// aapt resource value: 0x7f0a0073
+			public static int imgStar = 2131361907;
 			
 			// aapt resource value: 0x7f0a0069
 			public static int info = 2131361897;
