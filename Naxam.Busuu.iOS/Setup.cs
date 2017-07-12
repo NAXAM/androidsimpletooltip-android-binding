@@ -27,8 +27,7 @@ namespace Naxam.Busuu.iOS
         {
             var assemblies = new List<Assembly>
             {
-                typeof(ReviewAllView).Assembly,
-                typeof(SocialView).Assembly,
+                typeof(ReviewAllView).Assembly
             };
 
             assemblies.AddRange(base.GetViewAssemblies());

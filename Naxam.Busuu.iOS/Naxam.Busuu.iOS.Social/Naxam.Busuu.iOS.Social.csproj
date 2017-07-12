@@ -89,9 +89,9 @@
     <Folder Include="Cells\" />
     <Folder Include="Common\" />
     <Folder Include="Controls\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\DiscoverView.cs" />
     <Compile Include="Views\DiscoverView.designer.cs">
       <DependentUpon>DiscoverView.cs</DependentUpon>
@@ -128,6 +128,7 @@
       <DependentUpon>SocialDetailView.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\MyMvxConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">

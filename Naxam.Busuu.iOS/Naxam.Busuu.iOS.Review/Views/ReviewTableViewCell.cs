@@ -27,7 +27,7 @@ namespace Naxam.Busuu.iOS.Review.Views
 				var set = this.CreateBindingSet<ReviewTableViewCell, ReviewModel>();
 				set.Bind(lbTitle).To(m => m.Title);
 				set.Bind(lbSubtitle).To(m => m.SubTitle);
-                set.Bind(imgWordViewLoader).To(m => m.IsFavorite).WithConversion(new FavoriteImageValueConverter(),null);
+                set.Bind(imgWordViewLoader).To(m => m.ImgWord); 
                 set.Bind(btnStar).To(vm=>vm.FlipSelected);
                 set.Bind(imgStrengthViewLoader).To(m=>m.StrengthLevel).WithConversion(new ImageStrengthValueConverter(),null);
 				set.Apply();

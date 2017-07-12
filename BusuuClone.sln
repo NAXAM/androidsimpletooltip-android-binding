@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.Busuu.Review", "Naxam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.Busuu.iOS.Review", "Naxam.Busuu.iOS\Naxam.Busuu.iOS.Review\Naxam.Busuu.iOS.Review.csproj", "{1030A24B-B42C-4076-B166-F7E3A875E071}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.Busuu.iOS.Social", "Naxam.Busuu.iOS\Naxam.Busuu.iOS.Social\Naxam.Busuu.iOS.Social.csproj", "{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -231,6 +233,18 @@ Global
 		{1030A24B-B42C-4076-B166-F7E3A875E071}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{1030A24B-B42C-4076-B166-F7E3A875E071}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{1030A24B-B42C-4076-B166-F7E3A875E071}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Release|iPhone.Build.0 = Release|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -251,5 +265,6 @@ Global
 		{701B6C86-B033-45D2-89EE-0E11499DCA7E} = {836A7A08-4642-4269-8938-13D3E8CA6261}
 		{BAAA7577-3BE2-423B-A051-61B47489B015} = {146E0FA9-4039-458A-B596-760339ADBBFC}
 		{1030A24B-B42C-4076-B166-F7E3A875E071} = {836A7A08-4642-4269-8938-13D3E8CA6261}
+		{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA} = {836A7A08-4642-4269-8938-13D3E8CA6261}
 	EndGlobalSection
 EndGlobal
