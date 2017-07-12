@@ -145,6 +145,9 @@
 CQk
 </string>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="btnStar_TouchUpInside:" destination="kwP-wT-G0f" eventType="touchUpInside" id="1Z9-Nd-wjQ"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdF-Sq-2en">
                                                     <rect key="frame" x="336" y="18" width="24" height="24"/>

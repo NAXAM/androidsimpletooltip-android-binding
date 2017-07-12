@@ -97,7 +97,6 @@
     </Compile>
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
-    <Compile Include="Views\FavoriteButtonTargetBinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Review.storyboard" />

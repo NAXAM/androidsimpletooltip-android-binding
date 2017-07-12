@@ -9,58 +9,61 @@ using System.CodeDom.Compiler;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
-    [Register ("ReviewTableViewCell")]
-    partial class ReviewTableViewCell
-    {
-        [Outlet]
-        UIKit.UIButton btnPlay { get; set; }
+	[Register ("ReviewTableViewCell")]
+	partial class ReviewTableViewCell
+	{
+		[Outlet]
+		UIKit.UIButton btnPlay { get; set; }
 
-        [Outlet]
-        UIKit.UIButton btnStar { get; set; }
+		[Outlet]
+		UIKit.UIButton btnStar { get; set; }
 
-        [Outlet]
-        UIKit.UIImageView imgStrength { get; set; }
+		[Outlet]
+		UIKit.UIImageView imgStrength { get; set; }
 
-        [Outlet]
-        UIKit.UIImageView imgWord { get; set; }
+		[Outlet]
+		UIKit.UIImageView imgWord { get; set; }
 
-        [Outlet]
-        UIKit.UILabel lbSubtitle { get; set; }
+		[Outlet]
+		UIKit.UILabel lbSubtitle { get; set; }
 
-        [Outlet]
-        UIKit.UILabel lbTitle { get; set; }
-        
-        void ReleaseDesignerOutlets ()
-        {
-            if (btnPlay != null) {
-                btnPlay.Dispose ();
-                btnPlay = null;
-            }
+		[Outlet]
+		UIKit.UILabel lbTitle { get; set; }
 
-            if (imgStrength != null) {
-                imgStrength.Dispose ();
-                imgStrength = null;
-            }
+		[Action ("btnStar_TouchUpInside:")]
+		partial void btnStar_TouchUpInside (Foundation.NSObject sender);
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (btnPlay != null) {
+				btnPlay.Dispose ();
+				btnPlay = null;
+			}
 
-            if (btnStar != null) {
-                btnStar.Dispose ();
-                btnStar = null;
-            }
+			if (btnStar != null) {
+				btnStar.Dispose ();
+				btnStar = null;
+			}
 
-            if (imgWord != null) {
-                imgWord.Dispose ();
-                imgWord = null;
-            }
+			if (imgStrength != null) {
+				imgStrength.Dispose ();
+				imgStrength = null;
+			}
 
-            if (lbSubtitle != null) {
-                lbSubtitle.Dispose ();
-                lbSubtitle = null;
-            }
+			if (imgWord != null) {
+				imgWord.Dispose ();
+				imgWord = null;
+			}
 
-            if (lbTitle != null) {
-                lbTitle.Dispose ();
-                lbTitle = null;
-            }
-        }
-    }
+			if (lbSubtitle != null) {
+				lbSubtitle.Dispose ();
+				lbSubtitle = null;
+			}
+
+			if (lbTitle != null) {
+				lbTitle.Dispose ();
+				lbTitle = null;
+			}
+		}
+	}
 }

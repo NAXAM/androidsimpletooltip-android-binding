@@ -17,10 +17,10 @@ namespace Naxam.Busuu.Review.Services
 			{
 				items.Add(new ReviewModel
 				{
-					Title = words[random.Next(0, words.Length - 1)],
+					Title = words[random.Next(0, words.Length - 1)] + " " + i,
 					SubTitle = words[random.Next(0, words.Length - 1)],
 					StrengthLevel = random.Next(0, 4),
-					IsFavorite = i % 2 == 0 ? true : false,
+					IsFavorite = false,
 					ImgWord = string.Format("http://placekitten.com/{0}/{0}", random.Next(20) + 300)
 				});
 			}

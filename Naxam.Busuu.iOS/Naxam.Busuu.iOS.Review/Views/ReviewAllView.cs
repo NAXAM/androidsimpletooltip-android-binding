@@ -8,6 +8,9 @@ using Foundation;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Binding.BindingContext;
 using Naxam.Busuu.Review.Models;
+using System.ComponentModel;
+using MvvmCross.Core.ViewModels;
+using System.Runtime.CompilerServices;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
@@ -30,11 +33,12 @@ namespace Naxam.Busuu.iOS.Review.Views
             this.NavigationItem.TitleView = uiViewButton;
             ReviewTableView.RowHeight = 60;
 
-            source = new MvxStandardTableViewSource(ReviewTableView,(NSString)"reviewCell");
+            source = new ReviewTableViewSource(ReviewTableView,(NSString)"reviewCell");
             ReviewTableView.Source = source;
 
             setBinding = this.CreateBindingSet<ReviewAllView, ReviewAllViewModel>();
             setBinding.Bind(source).To(vm => vm.Reviews);
+            setBinding.Bind(source).For(nameof(ReviewTableViewSource.FavoriteCommand)).To(vm=>vm.FavoriteCommand);
             setBinding.Bind(searchBar).To(vm => vm.SearchTerm).TwoWay();
             setBinding.Apply();
             ReviewTableView.ReloadData();
@@ -138,6 +142,67 @@ namespace Naxam.Busuu.iOS.Review.Views
             setBinding.Apply();
             ReviewTableView.ReloadData();
         }
+    }
+
+    public class ReviewTableViewSource : MvxStandardTableViewSource, INotifyPropertyChanged
+    {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        IMvxCommand _favoriteCommand;
+		public IMvxCommand FavoriteCommand
+		{
+			get
+			{
+				return _favoriteCommand;
+			}
+
+			set
+			{
+				SetProperty(ref _favoriteCommand, value);
+			}
+		}
+
+        public ReviewTableViewSource(UITableView tableview, NSString cellId): base(tableview,cellId)
+        {
+            
+        }
+
+        public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
+        {
+            var cell = (ReviewTableViewCell)base.GetCell(tableView, indexPath);
+
+            cell.FavoriteHandler -= HandleEventHandler;
+            cell.FavoriteHandler += HandleEventHandler;
+
+			return cell;
+        }
+
+        void HandleEventHandler(object sender, ReviewModel e)
+        {
+			if (FavoriteCommand?.CanExecute(e) != true) return;
+
+			FavoriteCommand.Execute(e);
+
+            var cell = sender as ReviewTableViewCell;
+            if (!cell.IsFavorite)
+			{
+				cell.BtnStar.SetImage(UIImage.FromBundle("rounded_golden_star"), UIControlState.Normal);
+			}
+			else
+			{
+				cell.BtnStar.SetImage(UIImage.FromBundle("rounded_grey_star"), UIControlState.Normal);
+			}
+			cell.IsFavorite = !cell.IsFavorite;
+        }
+
+        void SetProperty<T>(ref T backingField, T value, [CallerMemberName] string propertyName = null)
+		{
+			if (Equals(backingField, value)) return;
+
+			backingField = value;
+
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+		}
     }
 }
 

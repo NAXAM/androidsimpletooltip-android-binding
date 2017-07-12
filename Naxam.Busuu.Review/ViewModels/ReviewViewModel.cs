@@ -92,5 +92,27 @@ namespace Naxam.Busuu.Review.ViewModels
 				RaisePropertyChanged(() => Filterediews);
 			}
 		}
+
+        IMvxCommand _favoriteCommand;
+		public IMvxCommand FavoriteCommand
+		{
+			get
+			{
+                return (_favoriteCommand = _favoriteCommand ?? new MvxCommand<ReviewModel>(ExecuteFavoriteCommand));
+			}
+		}
+
+        private void ExecuteFavoriteCommand(ReviewModel item)
+        {
+            item.IsFavorite = !item.IsFavorite; 
+            var itemToRemove = FavoriteReviews.SingleOrDefault(m => m.Title == item.Title);
+            if (itemToRemove != null)
+            {
+                FavoriteReviews.Remove((item));
+            }else
+            {
+                FavoriteReviews.Add(item);
+            }
+        }
     }
 }

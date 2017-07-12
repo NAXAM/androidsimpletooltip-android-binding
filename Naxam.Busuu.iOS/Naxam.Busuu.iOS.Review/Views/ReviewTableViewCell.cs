@@ -12,9 +12,17 @@ namespace Naxam.Busuu.iOS.Review.Views
 {
     public partial class ReviewTableViewCell : MvxTableViewCell
     {
+        public event EventHandler<ReviewModel> FavoriteHandler;
 
 		private readonly MvxImageViewLoader imgWordViewLoader;
         private readonly MvxImageViewLoader imgStrengthViewLoader;
+        public bool IsFavorite = false;
+
+        public UIButton BtnStar
+        {
+            get => btnStar;
+            set => value = btnStar;
+        }
 
         protected ReviewTableViewCell(IntPtr handle) : base(handle)
         {
@@ -28,18 +36,20 @@ namespace Naxam.Busuu.iOS.Review.Views
 				set.Bind(lbTitle).To(m => m.Title);
 				set.Bind(lbSubtitle).To(m => m.SubTitle);
                 set.Bind(imgWordViewLoader).To(m => m.ImgWord); 
-                set.Bind(btnStar).To(vm=>vm.FlipSelected);
                 set.Bind(imgStrengthViewLoader).To(m=>m.StrengthLevel).WithConversion(new ImageStrengthValueConverter(),null);
 				set.Apply();
 			});
+        }
+
+        partial void btnStar_TouchUpInside(NSObject sender)
+        {
+            FavoriteHandler?.Invoke(this, (ReviewModel)DataContext);
         }
 
         public override void AwakeFromNib()
         {
             base.AwakeFromNib();
             imgWord.Layer.CornerRadius = 4;
-            btnPlay.Layer.CornerRadius = btnPlay.Bounds.Height / 2;
-            btnStar.Layer.CornerRadius = btnStar.Bounds.Height / 2;
         }
     }
 
