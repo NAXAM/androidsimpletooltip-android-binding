@@ -61,7 +61,7 @@ namespace Naxam.Busuu.iOS.Review.Views
     {
         protected override string Convert(bool value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value ? "res:star_active" : "res:star";
+            return value ? "res:rounded_golden_star" : "res:rounded_grey_star";
         }
     }
 
@@ -73,6 +73,8 @@ namespace Naxam.Busuu.iOS.Review.Views
 		}
 	}
 
+
+
     public class ImageStrengthValueConverter: MvxValueConverter<int, string>
     {
         protected override string Convert(int value, Type targetType, object parameter, CultureInfo culture)
@@ -80,17 +82,17 @@ namespace Naxam.Busuu.iOS.Review.Views
             switch (value)
             {
                 case 0:
-                    return "res:entity_strength_0";
+                    return "res:strength_0";
 				case 1:
-					return "res:entity_strength_1";
+					return "res:strength_1";
 				case 2:
-					return "res:entity_strength_2";
+					return "res:strength_2";
 				case 3:
-					return "res:entity_strength_3";
+					return "res:strength_3";
 				case 4:
-					return "res:entity_strength_4";
+					return "res:strength_4";
                 default:
-                    return "res:entity_strength_0";
+                    return "res:strength_0";
 
             }
         }

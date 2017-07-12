@@ -129,6 +129,27 @@
     <ImageAsset Include="Resources\Assets.xcassets\entity_strength_4.imageset\entity_strength_4.png" />
     <ImageAsset Include="Resources\Assets.xcassets\star_active.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\star_active.imageset\star_active.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_golden_star.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_golden_star.imageset\rounded_golden_star.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_golden_star.imageset\rounded_golden_star%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_grey_star.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_grey_star.imageset\rounded_grey_star.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_grey_star.imageset\rounded_grey_star%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_0.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_0.imageset\strength_0.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_0.imageset\strength_0%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_1.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_1.imageset\strength_1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_1.imageset\strength_1%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_2.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_2.imageset\strength_2.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_2.imageset\strength_2%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_3.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_3.imageset\strength_3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_3.imageset\strength_3%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\strength_4.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\strength_4%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
