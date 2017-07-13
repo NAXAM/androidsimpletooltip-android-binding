@@ -102,6 +102,8 @@
     <Compile Include="PreparePronounceView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transformers\BaseTransformer.cs" />
+    <Compile Include="Transformers\ForegroundToBackgroundTransformer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

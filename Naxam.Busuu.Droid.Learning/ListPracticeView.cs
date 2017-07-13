@@ -13,6 +13,7 @@ using Android.Support.V4.App;
 using Android.Support.V4.View;
 using Android.Support.V7.App;
 using Naxam.Busuu.Droid.Learning.Adapters;
+using Naxam.Busuu.Droid.Learning.Transformers;
 
 namespace Naxam.Busuu.Droid.Learning
 {
@@ -28,6 +29,7 @@ namespace Naxam.Busuu.Droid.Learning
             Android.Support.V4.App.FragmentManager manager = SupportFragmentManager;
             MyPagerAdapter adapter = new MyPagerAdapter(manager);
             pager.Adapter=adapter;
+            pager.SetPageTransformer(true, new ForegroundToBackgroundTransformer());
 
         }
     }
