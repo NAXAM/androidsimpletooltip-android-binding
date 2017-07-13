@@ -9,10 +9,13 @@ using ObjCRuntime;
 using CoreGraphics;
 using Naxam.Busuu.Social.ViewModels;
 using MvvmCross.Binding.BindingContext;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Views.Presenters.Attributes;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
     [MvxFromStoryboard(StoryboardName = "Social")]
+    [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "social_tab_icon", TabName = "Social", TabSelectedIconName = "social_tab_icon_selected")]
     public partial class SocialView : MvxViewController<SocialViewModel>
 	{
         private bool IsAnimationViewBar = true;

@@ -4,7 +4,6 @@ using CoreGraphics;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
-using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Views;
 using Naxam.Busuu.iOS.Social.Common;
 using Naxam.Busuu.Social.ViewModels;

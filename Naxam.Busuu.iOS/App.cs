@@ -1,5 +1,6 @@
 ﻿using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using Naxam.Busuu.Core.ViewModels;
 using Naxam.Busuu.Social.Serveices;
 using Naxam.Busuu.Social.ViewModels;
 
@@ -9,9 +10,8 @@ namespace Naxam.Busuu.iOS
 	{
 		public App()
 		{
-            RegisterAppStart<SocialViewModel>();
-			Mvx.RegisterType<IDataSocial, DataSocial>();
-            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<SocialViewModel>());
+            Mvx.RegisterType<IDataSocial, DataSocial>();
+            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainTabBarViewModel>());
 		}
 	}
 }
