@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Android.Support.V4.App;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -17,7 +17,7 @@ using Android.Graphics;
 namespace Naxam.Busuu.Droid.Learning
 {
     [Activity(Label = "HearAndRepeat")]
-    public class HearAndRepeatView : Activity
+    public class HearAndRepeatView : Android.Support.V4.App.Fragment
     {
         ImageView imgMic, hiddenCircle, imgPlayBtn;
         GradientDrawable clikedShape;
@@ -25,22 +25,26 @@ namespace Naxam.Busuu.Droid.Learning
         Android.Views.Animations.Animation zoominBtn, zoomout;
         TextView txtGuide;
         bool isClick;
-        protected override void OnCreate(Bundle savedInstanceState)
+
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.HearAndRepeat);
-            init();
+            View view = inflater.Inflate(Resource.Layout.HearAndRepeat, container, false);
+            init(view);
+            return view;
+            
 
         }
-        private void init()
+     
+        private void init(View view)
         {
+            Context context = view.Context;
             //
-            imgPlayBtn = FindViewById<ImageView>(Resource.Id.imgPlayBtn);
-            Animation RotateAnim = AnimationUtils.LoadAnimation(this,
+            imgPlayBtn = view.FindViewById<ImageView>(Resource.Id.imgPlayBtn);
+            Animation RotateAnim = AnimationUtils.LoadAnimation(context,
                Resource.Animation.roteanim);
-            Animation RotateAnimBack = AnimationUtils.LoadAnimation(this,
+            Animation RotateAnimBack = AnimationUtils.LoadAnimation(context,
               Resource.Animation.roteanimback);
-            Animation zoomIn = AnimationUtils.LoadAnimation(this,
+            Animation zoomIn = AnimationUtils.LoadAnimation(context,
                    Resource.Animation.zoom_in);
             //
             imgPlayBtn.Click += (s, e) =>
@@ -69,12 +73,12 @@ namespace Naxam.Busuu.Droid.Learning
             };
 
 
-            hiddenCircle = (ImageView)FindViewById(Resource.Id.hiddenCircle);
-            imgMic = (ImageView)FindViewById(Resource.Id.imgMic);
-            txtGuide = (TextView)FindViewById(Resource.Id.txtGuide);
+            hiddenCircle = (ImageView)view.FindViewById(Resource.Id.hiddenCircle);
+            imgMic = (ImageView)view.FindViewById(Resource.Id.imgMic);
+            txtGuide = (TextView)view.FindViewById(Resource.Id.txtGuide);
             // setting an animation
-            zoominBtn = AnimationUtils.LoadAnimation(this, Resource.Animation.zoom_in_btn);
-            zoomout = AnimationUtils.LoadAnimation(this, Resource.Animation.zoom_out_btn);
+            zoominBtn = AnimationUtils.LoadAnimation(context, Resource.Animation.zoom_in_btn);
+            zoomout = AnimationUtils.LoadAnimation(context, Resource.Animation.zoom_out_btn);
             //
             zoomINListen();
             clikedShape = new GradientDrawable();

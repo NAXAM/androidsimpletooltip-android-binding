@@ -15,29 +15,36 @@ using Android.Views.Animations;
 namespace Naxam.Busuu.Droid.Learning
 {
     [Activity(Label = "PreparePronounceView")]
-    public class PreparePronounceView : Activity
+    public class PreparePronounceView : Android.Support.V4.App.Fragment
     {
         private bool isClickStar;
         ImageView imgPlayBtn, imgStarBtn;
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.PreparePronounce);
-            init();
-        }
-        private void init()
-        {
 
-            imgStarBtn = FindViewById<ImageView>(Resource.Id.imgStar);
-            imgPlayBtn = FindViewById<ImageView>(Resource.Id.imgPlayBtn);
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        {
+            View view = inflater.Inflate(Resource.Layout.PreparePronounce, container, false);
+            return view;
+        }
+
+        public override void OnViewCreated(View view, Bundle savedInstanceState)
+        {
+            init(view);
+        }
+       
+        private void init(View view)
+        {
+            Context context = view.Context;
+
+            imgStarBtn = view.FindViewById<ImageView>(Resource.Id.imgStar);
+            imgPlayBtn = view.FindViewById<ImageView>(Resource.Id.imgPlayBtn);
             //
             imgStarBtn.SetBackgroundResource(Resource.Drawable.star_white);
             //
-            Android.Views.Animations.Animation RotateAnim = AnimationUtils.LoadAnimation(this,
+            Android.Views.Animations.Animation RotateAnim = AnimationUtils.LoadAnimation(context,
                Resource.Animation.roteanim);
-            Android.Views.Animations.Animation RotateAnimBack = AnimationUtils.LoadAnimation(this,
+            Android.Views.Animations.Animation RotateAnimBack = AnimationUtils.LoadAnimation(context,
               Resource.Animation.roteanimback);
-            Android.Views.Animations.Animation zoomIn = AnimationUtils.LoadAnimation(this,
+            Android.Views.Animations.Animation zoomIn = AnimationUtils.LoadAnimation(context,
                    Resource.Animation.zoom_in);
             //
             imgPlayBtn.Click += (s, e) =>

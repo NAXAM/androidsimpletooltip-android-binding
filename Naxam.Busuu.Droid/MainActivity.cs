@@ -22,8 +22,7 @@ namespace Naxam.Busuu.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            //SetContentView(Resource.Layout.Main);
-            StartActivity(new Intent(this, typeof(HearAndRepeatView)));
+            StartActivity(new Intent(this, typeof(ListPracticeView)));
          
         }
     }

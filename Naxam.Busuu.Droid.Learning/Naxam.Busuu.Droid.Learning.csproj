@@ -96,7 +96,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\MyPagerAdapter.cs" />
     <Compile Include="HearAndRepeatView.cs" />
+    <Compile Include="ListPracticeView.cs" />
     <Compile Include="PreparePronounceView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +116,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout-land\HearAndRepeat.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\ListPractice.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
