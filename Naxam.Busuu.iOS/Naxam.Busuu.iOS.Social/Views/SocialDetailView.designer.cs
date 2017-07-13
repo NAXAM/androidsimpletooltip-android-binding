@@ -80,6 +80,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 		[Action ("btnReport_TouchUpInside:")]
 		partial void btnReport_TouchUpInside (Foundation.NSObject sender);
+
+		[Action ("ButtonAudioPlay_TouchUpInside:")]
+		partial void ButtonAudioPlay_TouchUpInside (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -91,6 +94,11 @@ namespace Naxam.Busuu.iOS.Social.Views
 			if (audioViewTopConstraint != null) {
 				audioViewTopConstraint.Dispose ();
 				audioViewTopConstraint = null;
+			}
+
+			if (btnAddFriends != null) {
+				btnAddFriends.Dispose ();
+				btnAddFriends = null;
 			}
 
 			if (btnFeedBack != null) {
@@ -181,11 +189,6 @@ namespace Naxam.Busuu.iOS.Social.Views
 			if (WriteText != null) {
 				WriteText.Dispose ();
 				WriteText = null;
-			}
-
-			if (btnAddFriends != null) {
-				btnAddFriends.Dispose ();
-				btnAddFriends = null;
 			}
 		}
 	}

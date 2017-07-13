@@ -25,7 +25,10 @@ namespace Naxam.Busuu.iOS
             UINavigationBar.Appearance.Translucent = false;
 			UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(57, 169, 246);
 			UINavigationBar.Appearance.BackgroundColor = UIColor.FromRGB(57, 169, 246);
-			UINavigationBar.Appearance.TintColor = UIColor.White;         
+			UINavigationBar.Appearance.TintColor = UIColor.White;
+
+            Xamarin.IQKeyboardManager.SharedManager.Enable = true;
+            Xamarin.IQKeyboardManager.SharedManager.ShouldResignOnTouchOutside = true;
 
 			Window = new UIWindow(UIScreen.MainScreen.Bounds);
 

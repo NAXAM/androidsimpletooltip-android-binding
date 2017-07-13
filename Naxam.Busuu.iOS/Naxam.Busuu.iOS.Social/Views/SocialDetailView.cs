@@ -7,6 +7,8 @@ using Naxam.Busuu.Social.ViewModels;
 using PatridgeDev;
 using UIKit;
 using Naxam.Busuu.iOS.Social.Common;
+using AVFoundation;
+using Foundation;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
@@ -17,7 +19,12 @@ namespace Naxam.Busuu.iOS.Social.Views
         readonly MvxImageViewLoader _loaderImageUser;
         readonly MvxImageViewLoader _loaderImgQuestion;
 
-        public SocialDetailView(IntPtr handle) : base(handle)
+		AVAudioPlayer SpeakMusicPlayer;
+		NSTimer update_timer;
+
+		UIImage playBtnBg, pauseBtnBg;
+
+		public SocialDetailView(IntPtr handle) : base(handle)
         {
             _loaderImageUser = new MvxImageViewLoader(() => this.imgUserAvatar);
             _loaderImgQuestion = new MvxImageViewLoader(() => this.imgQuestion);
@@ -65,6 +72,29 @@ namespace Naxam.Busuu.iOS.Social.Views
 
             ViewRate.Add(ratingView);
             ViewRate.SendSubviewToBack(ratingView);
+
+			playBtnBg = UIImage.FromFile("play_btn.png");
+			pauseBtnBg = UIImage.FromFile("pause_btn.png");
+
+            if (WriteText.Hidden)
+            {
+				string[] arrPathfile = WriteText.Text.Split('.');
+				if (arrPathfile.Length == 2)
+				{
+					var fileUrl = NSBundle.MainBundle.PathForResource(arrPathfile[0], arrPathfile[1]);
+					if (fileUrl != null)
+					{
+						Uri songURL = new NSUrl(fileUrl);
+						SpeakMusicPlayer = AVAudioPlayer.FromUrl(songURL);
+						SpeakMusicPlayer.Volume = 1;
+						SpeakMusicPlayer.NumberOfLoops = 0;
+						SpeakMusicPlayer.FinishedPlaying -= SpeakMusicPlayer_FinishedPlaying;
+						SpeakMusicPlayer.FinishedPlaying += SpeakMusicPlayer_FinishedPlaying;
+						UpdateViewForPlayerInfo();
+						UpdateViewForPlayerState();
+					}
+				}				
+            }			
            
             imgUserAvatar.Layer.CornerRadius = imgUserAvatar.Frame.Width / 2;
             ButtonAudioPlay.Layer.CornerRadius = ButtonAudioPlay.Frame.Width / 2;
@@ -93,5 +123,85 @@ namespace Naxam.Busuu.iOS.Social.Views
             ViewBackGroud.Layer.ShadowOpacity = 0.25f;
             ViewBackGroud.Layer.ShadowOffset = new CGSize(0, 1);		
         }
+
+        partial void ButtonAudioPlay_TouchUpInside(NSObject sender)
+        {
+			if (SpeakMusicPlayer.Playing)
+			{
+				PausePlayback();
+			}
+			else
+			{
+				StartPlayback();
+			}
+        }
+
+		void SpeakMusicPlayer_FinishedPlaying(object sender, AVStatusEventArgs e)
+		{
+			UpdateViewForPlayerInfo();
+			UpdateViewForPlayerState();
+		}
+
+		void UpdateCurrentTime()
+		{
+			if (SpeakMusicPlayer.Playing)
+			{
+				ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 10, 10, 10);
+				ButtonAudioPlay.SetImage(pauseBtnBg, UIControlState.Normal);
+				var min = (int)((SpeakMusicPlayer.Duration - SpeakMusicPlayer.CurrentTime) / 60);
+				var sec = (int)((SpeakMusicPlayer.Duration - SpeakMusicPlayer.CurrentTime) % 60);
+				lblTime.Text = String.Format("{0:D2}:{1:D2}", min, sec);
+				SliderSpeak.Value = (float)SpeakMusicPlayer.CurrentTime;
+			}
+			else
+			{
+				ButtonAudioPlay.SetImage(playBtnBg, UIControlState.Normal);
+			}
+		}
+
+		void UpdateViewForPlayerState()
+		{
+			if (SpeakMusicPlayer.Playing)
+			{
+				ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 10, 10, 10);
+				ButtonAudioPlay.SetImage(pauseBtnBg, UIControlState.Normal);
+				InvokeOnMainThread(() =>
+				{
+					update_timer = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.01), delegate
+			   {
+				   UpdateCurrentTime();
+			   });
+				});
+			}
+			else
+			{
+				ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 12, 10, 10);
+				ButtonAudioPlay.SetImage(playBtnBg, UIControlState.Normal);
+				if (update_timer != null)
+				{
+					update_timer.Invalidate();
+					update_timer = null;
+				}
+			}
+		}
+
+		void UpdateViewForPlayerInfo()
+		{
+			SliderSpeak.Value = 0;
+			SliderSpeak.MaxValue = (float)SpeakMusicPlayer.Duration;
+			lblTime.Text = String.Format("{0:00}:{1:00}", (int)SpeakMusicPlayer.Duration / 60, (int)SpeakMusicPlayer.Duration % 60);
+		}
+
+		void PausePlayback()
+		{
+			SpeakMusicPlayer.Pause();
+			UpdateViewForPlayerState();
+		}
+
+		void StartPlayback()
+		{
+			SpeakMusicPlayer.Play();
+			UpdateViewForPlayerState();
+		}
     }
 }

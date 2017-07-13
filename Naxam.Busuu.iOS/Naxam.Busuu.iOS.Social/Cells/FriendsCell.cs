@@ -21,8 +21,9 @@ namespace Naxam.Busuu.iOS.Social.Cells
 
 		AVAudioPlayer SpeakMusicPlayer;
 		NSTimer update_timer;
+		string fileUrl;
 
-		//UIImage playBtnBg, pauseBtnBg;
+		UIImage playBtnBg, pauseBtnBg;
 
 		public FriendsCell(IntPtr handle) : base(handle)
         {
@@ -43,8 +44,12 @@ namespace Naxam.Busuu.iOS.Social.Cells
                 setBinding.Bind(WriteText).For(f => f.Hidden).To(f => f.Speak);
                 setBinding.Bind(WriteText).To(f => f.Write);
                 setBinding.Bind(lblRate).To(f => f.Star).WithConversion(new MyMvxConverter.TextRateValueConverter(), null);
+                setBinding.Bind(ratingView).For(vm => vm.AverageRating).To(vm => vm.Star).Apply();
                 setBinding.Apply();
             });
+
+			playBtnBg = UIImage.FromFile("play_btn.png");
+			pauseBtnBg = UIImage.FromFile("pause_btn.png");
         }
 
         public override void AwakeFromNib()
@@ -73,45 +78,46 @@ namespace Naxam.Busuu.iOS.Social.Cells
             
             ratingConfig.ItemPadding = 1;
 			var ratingFrame = new CGRect(CGPoint.Empty, new CGSize(95, 20));
-
+           
 			ratingView = new PDRatingView(ratingFrame, ratingConfig);
 
 			ViewRate.Add(ratingView);
-            ViewRate.SendSubviewToBack(ratingView);
-
-			//playBtnBg = UIImage.FromFile("play_btn.png");
-			//pauseBtnBg = UIImage.FromFile("pause_btn.png");
+            ViewRate.SendSubviewToBack(ratingView);		
 		}
 
         public override void LayoutSubviews()
         {
             base.LayoutSubviews();
 
-			decimal rating = Convert.ToDecimal(lblRate.Text.Replace("(", "").Replace(")", ""));
-
-			ratingView.AverageRating = rating;
-
-            string[] arrPathfile = WriteText.Text.Split('.');
+			string[] arrPathfile = WriteText.Text.Split('.');
 			if (arrPathfile.Length == 2)
 			{
-				var fileUrl = NSBundle.MainBundle.PathForResource(arrPathfile[0], arrPathfile[1]);
-				if (fileUrl != null)
+				var fileUrl2 = NSBundle.MainBundle.PathForResource(arrPathfile[0], arrPathfile[1]);
+				if ((fileUrl2 != null) && (fileUrl != fileUrl2))
 				{
+					fileUrl = fileUrl2;
 					Uri songURL = new NSUrl(fileUrl);
 					SpeakMusicPlayer = AVAudioPlayer.FromUrl(songURL);
 					SpeakMusicPlayer.Volume = 1;
 					SpeakMusicPlayer.NumberOfLoops = 0;
-					SpeakMusicPlayer.FinishedPlaying += delegate
-					{
-						UpdateViewForPlayerInfo();
-						UpdateViewForPlayerState();
-					};
-
+					SpeakMusicPlayer.FinishedPlaying -= SpeakMusicPlayer_FinishedPlaying;
+					SpeakMusicPlayer.FinishedPlaying += SpeakMusicPlayer_FinishedPlaying;
 					UpdateViewForPlayerInfo();
 					UpdateViewForPlayerState();
 				}
 			}
+			else
+			{
+				if (SpeakMusicPlayer != null)
+					SpeakMusicPlayer.Pause();
+			}
         }
+
+		void SpeakMusicPlayer_FinishedPlaying(object sender, AVStatusEventArgs e)
+		{
+			UpdateViewForPlayerInfo();
+			UpdateViewForPlayerState();
+		}
 
 		partial void ButtonRate_TouchUpInside(NSObject sender)
 		{
@@ -130,30 +136,41 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			}
         }
 
-        void UpdateCurrentTime()
+		void UpdateCurrentTime()
 		{
 			if (SpeakMusicPlayer.Playing)
 			{
-				//lblTime.Text = String.Format("{0:00}:{1:00}", (int)(SpeakMusicPlayer.CurrentTime / 60), (int)(SpeakMusicPlayer.CurrentTime % 60));
+                ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 10, 10, 10);
+				ButtonAudioPlay.SetImage(pauseBtnBg, UIControlState.Normal);
+				var min = (int)((SpeakMusicPlayer.Duration - SpeakMusicPlayer.CurrentTime) / 60);
+				var sec = (int)((SpeakMusicPlayer.Duration - SpeakMusicPlayer.CurrentTime) % 60);
+				lblTime.Text = String.Format("{0:D2}:{1:D2}", min, sec);
 				SliderSpeak.Value = (float)SpeakMusicPlayer.CurrentTime;
 			}
 			else
 			{
-				//ButtonPlay.SetImage(playBtnBg, UIControlState.Normal);
+				ButtonAudioPlay.SetImage(playBtnBg, UIControlState.Normal);
 			}
 		}
 
-        void UpdateViewForPlayerState()
+		void UpdateViewForPlayerState()
 		{
 			if (SpeakMusicPlayer.Playing)
 			{
-				update_timer = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.01), delegate
+				ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 10, 10, 10);
+				ButtonAudioPlay.SetImage(pauseBtnBg, UIControlState.Normal);
+				InvokeOnMainThread(() =>
 				{
-					UpdateCurrentTime();
+					update_timer = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.01), delegate
+			   {
+				   UpdateCurrentTime();
+			   });
 				});
 			}
 			else
 			{
+				ButtonAudioPlay.ImageEdgeInsets = new UIEdgeInsets(10, 12, 10, 10);
+				ButtonAudioPlay.SetImage(playBtnBg, UIControlState.Normal);
 				if (update_timer != null)
 				{
 					update_timer.Invalidate();
@@ -162,20 +179,20 @@ namespace Naxam.Busuu.iOS.Social.Cells
 			}
 		}
 
-        void UpdateViewForPlayerInfo()
+		void UpdateViewForPlayerInfo()
 		{
 			SliderSpeak.Value = 0;
 			SliderSpeak.MaxValue = (float)SpeakMusicPlayer.Duration;
 			lblTime.Text = String.Format("{0:00}:{1:00}", (int)SpeakMusicPlayer.Duration / 60, (int)SpeakMusicPlayer.Duration % 60);
 		}
 
-        void PausePlayback()
+		void PausePlayback()
 		{
 			SpeakMusicPlayer.Pause();
 			UpdateViewForPlayerState();
 		}
 
-        void StartPlayback()
+		void StartPlayback()
 		{
 			SpeakMusicPlayer.Play();
 			UpdateViewForPlayerState();

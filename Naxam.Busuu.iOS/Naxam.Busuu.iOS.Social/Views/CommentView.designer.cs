@@ -25,9 +25,6 @@ namespace Naxam.Busuu.iOS.Social.Views
 		UIKit.UIButton btnSay { get; set; }
 
 		[Outlet]
-		UIKit.UITextField fieldCorrect { get; set; }
-
-		[Outlet]
 		UIKit.UIImageView imgCircle { get; set; }
 
 		[Outlet]
@@ -44,6 +41,12 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 		[Outlet]
 		UIKit.UILabel textQuestion { get; set; }
+
+		[Outlet]
+		UIKit.UITextView textViewComment { get; set; }
+
+		[Outlet]
+		UIKit.UITextView textViewCorrect { get; set; }
 
 		[Outlet]
 		UIKit.UIView ViewAudioPlayer { get; set; }
@@ -65,6 +68,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 		[Outlet]
 		UIKit.UIView ViewStar { get; set; }
+
+		[Action ("btnAudioPlay_TouchUpInside:")]
+		partial void btnAudioPlay_TouchUpInside (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -88,9 +94,14 @@ namespace Naxam.Busuu.iOS.Social.Views
 				btnSay = null;
 			}
 
-			if (fieldCorrect != null) {
-				fieldCorrect.Dispose ();
-				fieldCorrect = null;
+			if (imgCircle != null) {
+				imgCircle.Dispose ();
+				imgCircle = null;
+			}
+
+			if (textViewComment != null) {
+				textViewComment.Dispose ();
+				textViewComment = null;
 			}
 
 			if (imgQuestion != null) {
@@ -101,6 +112,11 @@ namespace Naxam.Busuu.iOS.Social.Views
 			if (lblTime != null) {
 				lblTime.Dispose ();
 				lblTime = null;
+			}
+
+			if (textViewCorrect != null) {
+				textViewCorrect.Dispose ();
+				textViewCorrect = null;
 			}
 
 			if (SliderSpeak != null) {
@@ -151,11 +167,6 @@ namespace Naxam.Busuu.iOS.Social.Views
 			if (ViewStar != null) {
 				ViewStar.Dispose ();
 				ViewStar = null;
-			}
-
-			if (imgCircle != null) {
-				imgCircle.Dispose ();
-				imgCircle = null;
 			}
 		}
 	}
