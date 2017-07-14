@@ -22,13 +22,13 @@ namespace Naxam.Busuu.Droid.Learning.Converter
             ExerciseType type = (ExerciseType)value;
             switch (type)
             {
-                case ExerciseType.Bubbles:
+                case ExerciseType.Conversation:
                     return Resource.Drawable.icon_bubbles;
-                case ExerciseType.Discovery:
+                case ExerciseType.Discover:
                     return Resource.Drawable.icon_book_search;
                 case ExerciseType.Evolution:
                     return Resource.Drawable.icon_book_side;
-                case ExerciseType.Memorability:
+                case ExerciseType.Memorise:
                     return Resource.Drawable.icon_lightning;
                 case ExerciseType.Practice:
                     return Resource.Drawable.icon_book_tick;

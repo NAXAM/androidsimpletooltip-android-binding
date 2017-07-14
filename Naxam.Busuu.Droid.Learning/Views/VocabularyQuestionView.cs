@@ -29,7 +29,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resources.Configuration.Orientation == Android.Content.Res.Orientation.Portrait ? Resource.Layout.vocabulary_question : Resource.Layout.landscape_vocabulary_question);
+            SetContentView(Resource.Layout.vocabulary_question);
 
             InitInterface();
         }

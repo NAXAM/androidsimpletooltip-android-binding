@@ -9,6 +9,30 @@ namespace Naxam.Busuu.Learning.Model
 {
     public class UnitModel : MvxNotifyPropertyChanged
     {
+        public enum UnitType
+        {
+            Unknow,
+            SelectWord,
+            FillSentence
+        }
+
+        private UnitType _Type;
+
+        public UnitType Type
+        {
+            get { return _Type; }
+            set
+            {
+                if (_Type != value)
+                {
+                    _Type = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+
+
         private string _title;
 
         public string Title
@@ -39,9 +63,9 @@ namespace Naxam.Busuu.Learning.Model
             }
         }
 
-        private IList<string> _audios;
+        private IList<AudioModel> _audios;
 
-        public IList<string> Audios
+        public IList<AudioModel> Audios
         {
             get { return _audios; }
             set
@@ -55,7 +79,6 @@ namespace Naxam.Busuu.Learning.Model
         }
 
         private IList<string> _input;
-
         public IList<string> Input
         {
             get { return _input; }
@@ -68,9 +91,6 @@ namespace Naxam.Busuu.Learning.Model
                 }
             }
         }
-
-
-  
 
         private IList<AnswerModel> _answers;
 

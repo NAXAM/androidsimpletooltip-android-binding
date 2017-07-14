@@ -13,12 +13,20 @@ using Android.Util;
 using Android.Graphics.Drawables;
 using Android.Graphics;
 using Android.Graphics.Drawables.Shapes;
+using Android.Media;
+using Java.IO;
+using Com.Longtailvideo.Jwplayer;
+using Com.Longtailvideo.Jwplayer.Configuration;
+using Com.Longtailvideo.Jwplayer.Media.Playlists;
+ 
+using Com.Google.Android.Exoplayer;
 
 namespace Naxam.Busuu.Droid.Learning.Util
 {
     public class Util
     {
-        public static float DpFromPx(Context context,float px)
+        
+        public static float DpFromPx(Context context, float px)
         {
             return px / context.Resources.DisplayMetrics.Density;
         }
@@ -31,13 +39,13 @@ namespace Naxam.Busuu.Droid.Learning.Util
 
     public class BackgroundUtil
     {
-        public static Drawable BackgroundRound(Context context, int radius,Color color)
+        public static Drawable BackgroundRound(Context context, int radius, Color color)
         {
             PaintDrawable background = new PaintDrawable(color);
             background.Shape = new RectShape();
             int radiusPX = (int)Util.PxFromDp(context, radius);
             background.SetCornerRadius(radiusPX);
-            
+
             return background;
         }
     }

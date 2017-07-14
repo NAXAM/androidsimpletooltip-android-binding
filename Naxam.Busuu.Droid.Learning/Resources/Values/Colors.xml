@@ -14,4 +14,5 @@
   <color name="colorQuestion">#38A9F6</color>
   <color name="colorTextIncorrect">#E54532</color>
   <color name="colorTextCorrect">#74B826</color>
+  <color name="colorSelected">#CFEAFC</color>
 </resources>

@@ -14,55 +14,46 @@ using Com.Google.Android.Flexbox;
 using Naxam.Busuu.Learning.Model;
 using Android.Graphics;
 using Com.Bumptech.Glide;
+using MvvmCross.Core.ViewModels;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class MemoSelectWord : LinearLayout
+    public class MemoSelectWord : Android.Support.V4.App.Fragment
     {
+        public event EventHandler<bool> NextClicked;
+        private event EventHandler<AnswerModel> AnswerClick;
+
 
         public UnitModel Item;
-        int CountAnswer;
-        List<TextView> listTextViewCorrect;
         public int OrientationScreen;
         Dictionary<TextView, AnswerModel> listChoice;
-        public MemoSelectWord(Context context) : base(context)
+        List<TextView> listTextViewCorrect;
+
+        bool result;
+        int imageCount, CountAnswer;
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-        }
-
-        public MemoSelectWord(Context context, IAttributeSet attrs) : base(context, attrs)
-        {
-        }
-
-        public MemoSelectWord(Context context, IAttributeSet attrs, int defStyleAttr) : base(context, attrs, defStyleAttr)
-        {
-        }
-
-        public MemoSelectWord(Context context, IAttributeSet attrs, int defStyleAttr, int defStyleRes) : base(context, attrs, defStyleAttr, defStyleRes)
-        {
-        }
-
-        protected MemoSelectWord(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
-        {
-        }
-
-
-
-        private event EventHandler<AnswerModel> AnswerClick;
-        public View Init()
-        {
-            RemoveAllViews();
-            int imageCount = Item.Images.Count;
+            imageCount = Item.Images.Count;
             listChoice = new Dictionary<TextView, AnswerModel>();
             listTextViewCorrect = new List<TextView>();
             CountAnswer = Item.Answers.Where(d => d.Value).ToList().Count;
-            View view = LayoutInflater.FromContext(Context).Inflate(OrientationScreen == 2 && imageCount > 0 ? Resource.Layout.landscape_select_words_layout:Resource.Layout.portrait_select_words_layout, null);
+            View view = inflater.Inflate(imageCount > 0 ? Resource.Layout.select_words_layout : Resource.Layout.select_words_layout_non_image, null);
+            Init(view);
+            return view;
+        }
+
+        public void Init(View view)
+        {
             TextView txtQuestion = view.FindViewById<TextView>(Resource.Id.txtQuestion);
             ImageView imgImage = view.FindViewById<ImageView>(Resource.Id.imgImage);
             NXPlayButton btnPlay = view.FindViewById<NXPlayButton>(Resource.Id.btnPlay);
             FlexboxLayout flexbox = view.FindViewById<FlexboxLayout>(Resource.Id.flexAnswer);
             Button btnNext = view.FindViewById<Button>(Resource.Id.btnNext);
             btnNext.Visibility = ViewStates.Gone;
-
+            btnNext.Click += (s, e) =>
+            {
+                NextClicked?.Invoke(btnNext, result);
+            };
             txtQuestion.Text = Item.Title;
 
             if (Item.Audios.Count > 0)
@@ -92,17 +83,24 @@ namespace Naxam.Busuu.Droid.Learning.Control
             }
             if (imageCount > 0)
             {
-                if (OrientationScreen == 2)
+                var layoutImage = imgImage.LayoutParameters;
+                if (Context.Resources.Configuration.Orientation == Android.Content.Res.Orientation.Landscape)
                 {
-                    imgImage.LayoutParameters.Width = (int)measuredWidth / 2;
-                    imgImage.LayoutParameters.Height = (int)measuredWidth * 9 / 32;
+                    layoutImage.Width = (int)measuredWidth / 2;
+                    layoutImage.Height = (int)measuredWidth * 3 / 8;
                 }
-                if (OrientationScreen == 1)
+                if (Context.Resources.Configuration.Orientation == Android.Content.Res.Orientation.Portrait)
                 {
-                    imgImage.LayoutParameters.Width = (int)measuredWidth;
-                    imgImage.LayoutParameters.Height = (int)measuredWidth * 9 / 16;
+                    layoutImage.Width = (int)measuredWidth;
+                    layoutImage.Height = (int)measuredWidth * 3 / 4;
                 }
-                Glide.With(Context).Load(Item.Images[0]).Into(imgImage);
+                if (Context.Resources.Configuration.Orientation == Android.Content.Res.Orientation.Square)
+                {
+                    layoutImage.Width = (int)measuredWidth;
+                    layoutImage.Height = (int)measuredWidth * 3 / 4;
+                }
+                imgImage.LayoutParameters = layoutImage;
+                Glide.With(Context).Load(Item.Images[0]).CenterCrop().Into(imgImage);
                 imgImage.Visibility = ViewStates.Visible;
             }
             else
@@ -147,34 +145,13 @@ namespace Naxam.Busuu.Droid.Learning.Control
             }
             AnswerClick += (s, e) =>
             {
-                //if (CountAnswer == 1)
-                //{
-                //    AnswerModel answerCorrect = Item.Answers.Where(d => d.Value).FirstOrDefault();
-                //    TextView txtAnswer = (TextView)s;
-                //    if (e.Value)
-                //    {
-                //        txtAnswer.Background = Util.BackgroundUtil.BackgroundRound(Context, 4, Color.ParseColor("#74B826"));
-                //    }
-                //    else
-                //    {
-                //        txtAnswer.Background = Util.BackgroundUtil.BackgroundRound(Context, 4, Color.ParseColor("#E54532"));
-                //        foreach (var item in listTextViewCorrect)
-                //        {
-                //            item.Background = Util.BackgroundUtil.BackgroundRound(Context, 4, Color.ParseColor("#74B826"));
-                //        }
-                //    }
-
-                //    btnNext.Visibility = ViewStates.Visible;
-                //}
-                //else
-                //{
                 if (!listChoice.Keys.Contains((TextView)s))
                 {
                     listChoice.Add((TextView)s, e);
                     if (listChoice.Count >= CountAnswer)
                     {
                         btnNext.Visibility = ViewStates.Visible;
-
+                        result = true;
                         if (listChoice.Values.Where(d => d.Value).ToList().Count == CountAnswer)
                         {
                             foreach (var item in listTextViewCorrect)
@@ -192,6 +169,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
                             {
                                 item.Key.Background = Util.BackgroundUtil.BackgroundRound(Context, 4, Color.ParseColor("#E54532"));
                             }
+                            result = false;
                         }
                         for (int i = 0; i < flexbox.ChildCount; i++)
                         {
@@ -212,13 +190,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
                     listChoice.Remove((TextView)s);
                     ((TextView)s).Background = Util.BackgroundUtil.BackgroundRound(Context, 4, Color.ParseColor("#36A8F8"));
                 }
-                //}
             };
-            AddView(view, new LinearLayout.LayoutParams(-1, -1));
-
-            return view;
         }
-
-
     }
 }

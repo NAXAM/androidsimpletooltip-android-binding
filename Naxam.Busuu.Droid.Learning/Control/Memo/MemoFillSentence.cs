@@ -23,37 +23,33 @@ using System.Text.RegularExpressions;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class MemoFillSentence : LinearLayout
+    public class MemoFillSentence : Android.Support.V4.App.Fragment
     {
+        public event EventHandler<bool> NextClicked;
         private event EventHandler<AnswerModel> AnswerClick;
         public int OrientationScreen;
+        bool result;
         public UnitModel Item;
         List<string> listString;
         List<int> listIndex;
         List<AnswerModel> listCorrect;
         Dictionary<TextView, AnswerModel> listChoice;
         int CountCorrect;
-        public MemoFillSentence(Context context) : base(context)
-        {
-        }
-
-        public MemoFillSentence(Context context, IAttributeSet attrs) : base(context, attrs)
-        {
-        }
-
-        public MemoFillSentence(Context context, IAttributeSet attrs, int defStyleAttr) : base(context, attrs, defStyleAttr)
-        {
-        }
-
-        public MemoFillSentence(Context context, IAttributeSet attrs, int defStyleAttr, int defStyleRes) : base(context, attrs, defStyleAttr, defStyleRes)
-        {
-        }
-
-        protected MemoFillSentence(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
-        {
-        }
-
         public object FlexBoxLayout { get; private set; }
+        int imageCount;
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        {
+            listString = new List<string>();
+            listIndex = new List<int>();
+            imageCount = Item.Images.Count;
+            listChoice = new Dictionary<TextView, AnswerModel>();
+            listCorrect = Item.Answers.Where(d => d.Value).OrderBy(d => d.Position).ToList();
+            CountCorrect = Item.Answers.Where(d => d.Value).ToList().Count;
+            View view = inflater.Inflate(imageCount > 0 ? Resource.Layout.fill_sentence_layout : Resource.Layout.fill_sentence_layout_non_image, null);
+            Init(view);
+            return view;
+        }
+
         private Drawable GetBackground(Color color)
         {
             PaintDrawable background = new PaintDrawable(color);
@@ -62,16 +58,9 @@ namespace Naxam.Busuu.Droid.Learning.Control
             return background;
         }
         string input;
-        public void Init()
+        public void Init(View view)
         {
-            RemoveAllViews();
-            listString = new List<string>();
-            listIndex = new List<int>();
-            int imageCount = Item.Images.Count;
-            listChoice = new Dictionary<TextView, AnswerModel>();
-            listCorrect = Item.Answers.Where(d => d.Value).OrderBy(d => d.Position).ToList();
-            CountCorrect = Item.Answers.Where(d => d.Value).ToList().Count;
-            View view = LayoutInflater.FromContext(Context).Inflate(OrientationScreen == 2 && imageCount > 0 ? Resource.Layout.landscape_fill_sentence_image_layout : Resource.Layout.portrait_fill_sentence_image_layout, null);
+
             ImageView imgImage = view.FindViewById<ImageView>(Resource.Id.imgImage);
             TextView txtQuestion = view.FindViewById<TextView>(Resource.Id.txtQuestion);
             TextView txtInput = view.FindViewById<TextView>(Resource.Id.txtInput);
@@ -109,12 +98,12 @@ namespace Naxam.Busuu.Droid.Learning.Control
                 if (OrientationScreen == 2)
                 {
                     imgImage.LayoutParameters.Width = (int)measuredWidth / 2;
-                    imgImage.LayoutParameters.Height = (int)measuredWidth * 9 / 32;
+                    imgImage.LayoutParameters.Height = (int)measuredWidth * 3 / 8;
                 }
                 if (OrientationScreen == 1)
                 {
                     imgImage.LayoutParameters.Width = (int)measuredWidth;
-                    imgImage.LayoutParameters.Height = (int)measuredWidth * 9 / 16;
+                    imgImage.LayoutParameters.Height = (int)measuredWidth * 3 / 4;
                 }
                 Glide.With(Context).Load(Item.Images[0]).Into(imgImage);
             }
@@ -143,7 +132,10 @@ namespace Naxam.Busuu.Droid.Learning.Control
                 ssb.SetSpan(new UnderlineSpan(), listIndex[i], listIndex[i] + 5, SpanTypes.InclusiveInclusive);
             }
             txtInput.SetText(ssb, BufferType.Normal);
-
+            btnNext.Click += (s, e) =>
+            {
+                NextClicked?.Invoke(btnNext, result);
+            };
             btnNext.Visibility = ViewStates.Gone;
             int margin = (int)Util.Util.PxFromDp(Context, 8);
             for (int i = 0; i < Item.Answers.Count; i++)
@@ -212,6 +204,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
                             input += listString[i];
                         }
                     }
+                    result = true;
                     SpannableStringBuilder ssbt = new SpannableStringBuilder(input);
                     for (int i = 0; i < listIndex.Count; i++)
                     {
@@ -222,6 +215,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
                         }
                         else
                         {
+                            result = false;
                             ssbt.SetSpan(new StyleSpan(TypefaceStyle.Bold), listIndex[i], listIndex[i] + listCorrect[i].Text.Length + listChoice.Values.ElementAt(i).Text.Length + 1, SpanTypes.InclusiveInclusive);
                             ssbt.SetSpan(new ForegroundColorSpan(Color.ParseColor("#E54532")), listIndex[i], listIndex[i] + listChoice.Values.ElementAt(i).Text.Length, SpanTypes.InclusiveInclusive);
                             ssbt.SetSpan(new StrikethroughSpan(), listIndex[i], listIndex[i] + listChoice.Values.ElementAt(i).Text.Length, SpanTypes.InclusiveInclusive);
@@ -237,6 +231,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
                             viewChild.Enabled = false;
                         }
                     }
+
                     btnNext.Visibility = ViewStates.Visible;
                 }
                 else
@@ -280,7 +275,6 @@ namespace Naxam.Busuu.Droid.Learning.Control
                 }
 
             };
-            AddView(view, new LinearLayout.LayoutParams(-1, -1));
         }
 
 

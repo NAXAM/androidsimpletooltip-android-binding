@@ -16,7 +16,7 @@ using Naxam.Busuu.Learning.Model;
 
 namespace Naxam.Busuu.Droid.Learning.Views
 {
-    [Activity(Label = "Premium", Theme = "@style/AppTheme.Premium", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
+    [Activity(Label = "Premium", Theme = "@style/AppTheme.Premium" )]
     public class TestView : MvxAppCompatActivity
     {
         MemoSelectWord alterView;
@@ -24,10 +24,10 @@ namespace Naxam.Busuu.Droid.Learning.Views
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.test_layout);
-            alterView = FindViewById<MemoSelectWord>(Resource.Id.alterView);
-           alterView.OrientationScreen = 1;
+            //alterView = FindViewById<MemoSelectWord>(Resource.Id.alterView);
+            alterView.OrientationScreen = 1;
             alterView.Item = Data;
-            alterView.Init();
+          //  alterView.Init();
         }
         private UnitModel Data
         {
@@ -35,17 +35,20 @@ namespace Naxam.Busuu.Droid.Learning.Views
             {
                 return new Busuu.Learning.Model.UnitModel
                 {
-                    Title = "Ai là đàn bà",
+                    Title = "Chọn từ đúng",
 
                     Input = new List<string>
                 {
-                    "Tôi Là %% Ai Em Là Ai %%  kaka Em là ai kệ em"
+                    "Tôi là %% người %%  trai nhất naxam"
                 },
                     Images = new List<string> {
                     "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg",
                 },
-                    Audios = new List<string> {
-                    "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg"
+                    Audios = new List<AudioModel> {
+                    new AudioModel
+                    {
+                        Link = "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg"
+                    }
                 },
                     Answers = new List<AnswerModel>
                 {
@@ -56,50 +59,31 @@ namespace Naxam.Busuu.Droid.Learning.Views
                     },
                      new AnswerModel
                     {
-                        Text = "nghĩa",
+                        Text = "xấu",
                         Value  = true,
                         Position = 1
                     },
                       new AnswerModel
                     {
-                        Text = "hà"
+                        Text = "đẹp"
                     },
                        new AnswerModel
                     {
-                        Text = "tuyến"
+                        Text = "nghĩa"
                     }
                        ,
                        new AnswerModel
                     {
-                        Text = "bình"
+                        Text = "sơn"
                     },
                        new AnswerModel
                     {
-                        Text = "sơn"
+                        Text = "dị"
                     }
                 }
                 };
             }
         }
-        public override void OnConfigurationChanged(Configuration newConfig)
-        {
-            base.OnConfigurationChanged(newConfig);
-            if (newConfig.Orientation == Android.Content.Res.Orientation.Landscape)
-            {
-                alterView.Dispose();
-                alterView = FindViewById<MemoSelectWord>(Resource.Id.alterView);
-                alterView.OrientationScreen = 2;
-                alterView.Item = Data;
-                alterView.Init();
-            }
-            if (newConfig.Orientation == Android.Content.Res.Orientation.Portrait)
-            {
-                alterView.Dispose();
-                alterView = FindViewById<MemoSelectWord>(Resource.Id.alterView);
-                alterView.OrientationScreen = 1;
-                alterView.Item = Data;
-                alterView.Init();
-            }
-        }
+        
     }
 }

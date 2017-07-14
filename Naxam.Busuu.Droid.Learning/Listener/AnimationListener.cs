@@ -20,19 +20,13 @@ namespace Naxam.Busuu.Droid.Learning.Control
             AnimationEnd?.Invoke(animation);
         }
 
-
-
         public void OnAnimationRepeat(Animation animation)
         {
         }
-
-
 
         public void OnAnimationStart(Animation animation)
         {
             AnimationStart?.Invoke(animation);
         }
-
-
     }
 }

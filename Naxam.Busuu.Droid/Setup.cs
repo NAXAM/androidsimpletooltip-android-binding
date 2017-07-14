@@ -95,7 +95,7 @@ namespace Naxam.Busuu.Droid
             registry.RegisterCustomBindingFactory<View>("BackgroundColor160", view => new BackgroundColor160TargetBinding(view));
             registry.RegisterCustomBindingFactory<View>("Background", view => new BackgroundTargetBinding(view));
             registry.RegisterCustomBindingFactory<View>("BorderColor", view => new BorderTargetBinding(view));
-            
+           
             registry.RegisterCustomBindingFactory<ImageView>("TintColor", view => new TintColorTargetBinding(view));
             registry.RegisterCustomBindingFactory<ImageView>("ImageResource", view => new ImageResourceTargetBinding(view));
             registry.RegisterCustomBindingFactory<ImageView>("Source", view => new ImageSourceTargetBinding(view));
@@ -103,6 +103,7 @@ namespace Naxam.Busuu.Droid
             registry.RegisterCustomBindingFactory<ExerciesView>("Color", view => new ExerciesColorTargetBinding(view));
             registry.RegisterCustomBindingFactory<NXMvxExpandableListView>("DownloadCommand", view => new DownloadCommandTargetBinding(view));
             registry.RegisterCustomBindingFactory<NXMvxExpandableListView>("ExerciseClick", view => new ExerciseClickCommandTargetBinding(view));
+            registry.RegisterCustomBindingFactory<MemoriseBodyView>("Item", view => new MemoriseTargetBinding(view));
         }
 
         protected override IEnumerable<Assembly> GetViewAssemblies()

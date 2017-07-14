@@ -24,11 +24,12 @@ namespace Naxam.Busuu.Learning.Model
         public enum ExerciseType
         {
             Vocabulary,
-            Memorability,
-            Discovery,
+            Memorise,
+            Discover,
             Evolution,
             Practice,
-            Bubbles
+            Dialogue,
+            Conversation
         }
 
         private ExerciseType _type;
@@ -92,6 +93,23 @@ namespace Naxam.Busuu.Learning.Model
                 }
             }
         }
+
+
+        private IList<UnitModel> _units;
+
+        public IList<UnitModel> Units
+        {
+            get { return _units; }
+            set
+            {
+                if (_units != value)
+                {
+                    _units = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
 
     }
 }

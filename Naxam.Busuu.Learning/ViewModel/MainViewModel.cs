@@ -75,7 +75,7 @@ namespace Naxam.Busuu.Learning.ViewModel
                 "#58B0F8","#B02018","#FEAB35"
            };
             Random random = new Random();
-            
+
 
             string[] icons = new string[]
             {
@@ -96,7 +96,7 @@ namespace Naxam.Busuu.Learning.ViewModel
                     Color = color[i % 3],
                     Percent = random.Next(1, 100),
                     Icon = icons[i % 3]
-                }; 
+                };
                 Lessons.Add(lesson);
             }
         }
@@ -104,6 +104,60 @@ namespace Naxam.Busuu.Learning.ViewModel
         private MvxObservableCollection<TopicModel> GetTopic(string color)
         {
             Random random = new Random();
+            List<UnitModel> listUnit = new List<UnitModel>();
+            for (int i = 0; i < 5; i++)
+            {
+                listUnit.Add(new UnitModel
+                {
+                    Title = "Chọn từ đúng",
+                    Type = UnitModel.UnitType.FillSentence,
+
+                    Input = new List<string>
+                {
+                    "Tôi là %% người %%  trai nhất naxam"
+                },
+                    Images = new List<string> {
+                    "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg",
+                },
+                    Audios = new List<AudioModel> {
+                    new AudioModel
+                    {
+                        Link = "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg"
+                    }
+                },
+                    Answers = new List<AnswerModel>
+                {
+                    new AnswerModel
+                    {
+                        Text = "thảo",
+                        Value = true
+                    },
+                     new AnswerModel
+                    {
+                        Text = "xấu",
+                        Value  = true,
+                        Position = 1
+                    },
+                      new AnswerModel
+                    {
+                        Text = "đẹp"
+                    },
+                       new AnswerModel
+                    {
+                        Text = "nghĩa"
+                    }
+                       ,
+                       new AnswerModel
+                    {
+                        Text = "sơn"
+                    },
+                       new AnswerModel
+                    {
+                        Text = "dị"
+                    }
+                }
+                });
+            }
             Topicsx = new MvxObservableCollection<TopicModel>();
             for (int i = 0; i < 6; i++)
             {
@@ -115,22 +169,30 @@ namespace Naxam.Busuu.Learning.ViewModel
                     Exercises = new MvxObservableCollection<ExerciseModel>
                     {
                         new ExerciseModel{
-                            Type = ExerciseModel.ExerciseType.Discovery,
+                            Type = ExerciseModel.ExerciseType.Discover,
                             IsDone = true,
-                            Color = color
+                            Color = color,
+                            Name = "Cai Gi Do AI Biet Duoc",
+                            Units = listUnit
                         },
                         new ExerciseModel{
                             Type = ExerciseModel.ExerciseType.Vocabulary,
-                            Color = color
+                            Color = color,
+                            Name = "Cai Gi Do AI Biet Duoc",
+                            Units = listUnit
                         },
                         new ExerciseModel{
-                            Type = ExerciseModel.ExerciseType.Memorability,
-                            Color = color
+                            Type = ExerciseModel.ExerciseType.Memorise,
+                            Color = color,
+                             Name = "Cai Gi Do AI Biet Duoc",
+                            Units = listUnit
                         },
                         new ExerciseModel{
                             Type = ExerciseModel.ExerciseType.Practice,
                             IsDone = true,
-                            Color = color
+                            Color = color,
+                            Name = "Cai Gi Do AI Biet Duoc",
+                            Units = listUnit
                         },
                     }
                 });
@@ -153,7 +215,7 @@ namespace Naxam.Busuu.Learning.ViewModel
 
         void RunDownloadCommand()
         {
-            
+
         }
 
         private IMvxCommand _ExerciseClickCommand;
@@ -166,7 +228,7 @@ namespace Naxam.Busuu.Learning.ViewModel
 
         void RunExerciseClickCommand(ExerciseClickEventArg e)
         {
-
+            ShowViewModel<MemoriseViewModel>(e.Exercise);
         }
 
 
