@@ -9,26 +9,58 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Support.V4.View;
 
 namespace Naxam.Busuu.Droid.Learning.Transformers
 {
-    public class ForegroundToBackgroundTransformer : BaseTransformer
+    public class ForegroundToBackgroundTransformer : Java.Lang.Object,ViewPager.IPageTransformer
     {
-        protected override void onTransform(View view, float position)
-        {
-             float height = view.Height;
-             float width = view.Width;
-             float scale = min(position > 0 ? 1f : Math.Abs(1f + position), 0.5f);
+        private static float MIN_SCALE = 0.85f;
+        private static float MIN_ALPHA = 0.5f;
 
-            view.ScaleX=scale;
-            view.ScaleY=scale;
-            view.PivotX=width * 0.5f;
-            view.PivotY=height * 1.0f;
-            view.TranslationX=(position > 0 ? width * position : -width * position * 0.25f);
-        }
-        private static  float min(float val, float min)
+        public void TransformPage(View view, float position)
         {
-            return val < min ? min : val;
+            int pageWidth = view.Width;
+            int pageHeight = view.Height;
+
+            if (position < -1)
+            { // [-Infinity,-1)
+              // This page is way off-screen to the left.
+                view.Alpha = 0;
+
+            }
+            else if (position <= 1)
+            { // [-1,1]
+                if (view.Tag.Equals("1"))
+                {
+
+                    // Modify the default slide transition to shrink the page as well
+                    float scaleFactor = Math.Max(MIN_SCALE, 1 - Math.Abs(position));
+                    float vertMargin = pageHeight * (1 - scaleFactor);
+                    float horzMargin = pageWidth * (1 - scaleFactor);
+                    if (position < 0)
+                    {
+                        view.TranslationX = horzMargin - vertMargin;
+                    }
+                    else
+                    {
+                        view.TranslationX = -horzMargin + vertMargin;
+                    }
+
+                    // Scale the page down (between MIN_SCALE and 1)
+                    view.ScaleX = scaleFactor;
+                    view.ScaleY = scaleFactor;
+                }
+
+
+            }
+            else
+            { // (1,+Infinity]
+              // This page is way off-screen to the right.
+                view.Alpha = 0;
+            }
         }
+
+       
     }
 }

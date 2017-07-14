@@ -23,6 +23,7 @@ namespace Naxam.Busuu.Droid.Learning
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.PreparePronounce, container, false);
+            view.Tag = "1";
             return view;
         }
 
