@@ -1,4 +1,5 @@
 ﻿using System;
+using CoreAnimation;
 using CoreGraphics;
 using Foundation;
 using Naxam.Ausuu.IOS.Review.Floaty;
@@ -171,10 +172,16 @@ namespace Naxam.Busuu.IOS.Review.Floaty
                 var y = FloatButton.Center.Y;
                 foreach (ActionButtonItem item in items)
                 {
-                    y -= 50;
-                    item.View.Center = new CGPoint(FloatButton.Center.X - 83, y);
-            //        item.View.RemoveFromSuperview();
+                    item.View.Center = new CGPoint(FloatButton.Center.X-83, y);
+                    item.View.RemoveFromSuperview();
                     this.ContentView.AddSubview(item.View);
+                    y -= 50;
+					UIView.BeginAnimations("slideAnimation");
+					UIView.SetAnimationDuration(0.3f);
+					UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
+					UIView.SetAnimationDelegate(this);
+					item.View.Center = new CGPoint(FloatButton.Center.X - 83, y);
+					UIView.CommitAnimations();
                 }
             }
         }

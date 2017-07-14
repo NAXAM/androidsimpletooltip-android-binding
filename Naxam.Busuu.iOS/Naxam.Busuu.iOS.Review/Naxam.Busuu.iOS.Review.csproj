@@ -200,6 +200,15 @@
     <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak.png" />
     <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Nokia-tune-Nokia-tune.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

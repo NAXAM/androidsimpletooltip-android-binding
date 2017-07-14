@@ -76,5 +76,18 @@ namespace Naxam.Busuu.Review.Models
 			}
 		}
 
+        string _soundUrl;
+        public string SoundUrl
+        {
+            get { return _soundUrl; }
+            set
+            {
+				if (_soundUrl != value)
+				{
+					_soundUrl = value;
+					RaisePropertyChanged();
+				}
+            }
+        }
     }
 }

@@ -30,6 +30,9 @@ namespace Naxam.Busuu.iOS.Review.Views
 		[Outlet]
 		UIKit.UILabel lbTitle { get; set; }
 
+		[Action ("btnPlay_TouchUpInside:")]
+		partial void btnPlay_TouchUpInside (Foundation.NSObject sender);
+
 		[Action ("btnStar_TouchUpInside:")]
 		partial void btnStar_TouchUpInside (Foundation.NSObject sender);
 		

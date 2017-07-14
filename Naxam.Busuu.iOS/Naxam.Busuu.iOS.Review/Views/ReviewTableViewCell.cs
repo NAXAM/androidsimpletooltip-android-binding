@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using AVFoundation;
 using FFImageLoading;
 using FFImageLoading.Work;
 using Foundation;
@@ -14,14 +15,16 @@ namespace Naxam.Busuu.iOS.Review.Views
 {
     public partial class ReviewTableViewCell : MvxTableViewCell
     {
-		private ReviewModel item;
-		public ReviewModel Item { get => item; set => item = value; }
+        private ReviewModel _item;
+		public ReviewModel Item { get => _item; set => _item = value; }
+		private AVAudioPlayer _ringtoneAudioPlayer;
+        public bool isPlaying = ReviewAllView.isPlayingAudio;
 
         public void SetupCell()
         {
-            lbTitle.Text = item.Title;
-            lbSubtitle.Text = item.SubTitle;
-            switch (item.StrengthLevel)
+            lbTitle.Text = Item.Title;
+            lbSubtitle.Text = Item.SubTitle;
+            switch (Item.StrengthLevel)
             {
                 case 0: imgStrength.Image = UIImage.FromBundle("strength_0"); break;
                 case 1: imgStrength.Image = UIImage.FromBundle("strength_1"); break;
@@ -31,7 +34,7 @@ namespace Naxam.Busuu.iOS.Review.Views
                 default:
                     imgStrength.Image = UIImage.FromBundle("strength_0"); break;
             }
-            if(item.IsFavorite)
+            if(Item.IsFavorite)
             {
                 btnStar.SetImage(UIImage.FromBundle("rating_star_gold"), UIControlState.Normal);
             }else
@@ -39,10 +42,20 @@ namespace Naxam.Busuu.iOS.Review.Views
                 btnStar.SetImage(UIImage.FromBundle("rating_star_grey"), UIControlState.Normal);
             }
 
-            ImageService.Instance.LoadUrl(item.ImgWord).
+            ImageService.Instance.LoadUrl(Item.ImgWord).
                         ErrorPlaceholder("image_placeholder.png",ImageSource.ApplicationBundle).
                         LoadingPlaceholder("placeholder", ImageSource.CompiledResource).
                         Into(imgWord);
+
+			_ringtoneAudioPlayer = AVAudioPlayer.FromUrl(NSUrl.FromFilename(Item.SoundUrl));
+			_ringtoneAudioPlayer.NumberOfLoops = -1;
+            if(isPlaying)
+            {
+                PlayRingtone();
+            }else
+            {
+                StopRingtone();
+            }
         }
 
         protected ReviewTableViewCell(IntPtr handle) : base(handle)
@@ -52,8 +65,8 @@ namespace Naxam.Busuu.iOS.Review.Views
 
         partial void btnStar_TouchUpInside(NSObject sender)
         {
-            item.IsFavorite = !item.IsFavorite;
-			if (item.IsFavorite)
+            Item.IsFavorite = !Item.IsFavorite;
+			if (Item.IsFavorite)
 			{
 				btnStar.SetImage(UIImage.FromBundle("rating_star_gold"), UIControlState.Normal);
 			}
@@ -63,10 +76,41 @@ namespace Naxam.Busuu.iOS.Review.Views
 			}
         }
 
+        partial void btnPlay_TouchUpInside(NSObject sender)
+        {
+            isPlaying = !isPlaying;
+            if(isPlaying) 
+            {
+                PlayRingtone();
+            }else
+            {
+                StopRingtone();
+            }
+        }
+
         public override void AwakeFromNib()
         {
             base.AwakeFromNib();
             imgWord.Layer.CornerRadius = 4;
         }
+
+		public void PlayRingtone()
+		{
+			if (_ringtoneAudioPlayer != null)
+			{
+				_ringtoneAudioPlayer.Stop();
+			}
+            btnPlay.SetImage(UIImage.FromBundle("conversation_speaking_stop_button"), UIControlState.Normal);
+			_ringtoneAudioPlayer.Play();
+		}
+
+		public void StopRingtone()
+		{
+			if (_ringtoneAudioPlayer != null)
+			{
+                btnPlay.SetImage(UIImage.FromBundle("conversation_speaking_play_button"), UIControlState.Normal);
+				_ringtoneAudioPlayer.Stop();
+			}
+		}
     }
 }

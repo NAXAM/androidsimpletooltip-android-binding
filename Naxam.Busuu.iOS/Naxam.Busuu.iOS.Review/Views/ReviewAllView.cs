@@ -14,20 +14,26 @@ using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 using Naxam.Ausuu.IOS.Review.Floaty;
 using Naxam.Busuu.IOS.Review.Floaty;
+using System.Linq;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
     [MvxFromStoryboard(StoryboardName = "Review")]
-    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource
+    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource, IUISearchResultsUpdating
     {
         public ReviewAllView(IntPtr handle) : base(handle)
         {
         }
 
+        UISearchController searchController;
         CGPoint oriPoint;
         bool isAll = true;
-        List<ReviewModel> AllReviews, FavoriteReviews;
+        List<ReviewModel> AllReviews, FavoriteReviews, FilteredReviews;
         ActionButton actionButton;
+        public static bool isPlayingAudio;
+
+        IGrouping<char, ReviewModel>[] grouping;
+        string[] indices;
 
         public override void ViewDidLoad()
         {
@@ -60,7 +66,31 @@ namespace Naxam.Busuu.iOS.Review.Views
 
             AllReviews = this.ViewModel.Reviews;
             FavoriteReviews = this.ViewModel.FavoriteReviews;
+            UpdateKeyFromList(AllReviews);
+
             ReviewTableView.WeakDataSource = this;
+            searchController = new UISearchController((UIViewController)null);
+            searchController.SearchResultsUpdater = this;
+            searchController.DimsBackgroundDuringPresentation = false;
+            searchController.SearchBar.WeakDelegate = this;
+
+			ReviewTableView.TableHeaderView = searchController.SearchBar;
+			DefinesPresentationContext = true;
+			searchController.SearchBar.SizeToFit();
+        }
+
+        void UpdateKeyFromList(List<ReviewModel> list)
+        {
+            
+			grouping = (from w in list
+						orderby w.Title[0].ToString().ToUpper() ascending
+						group w by w.Title[0] into g
+						select g).ToArray();
+
+			indices = (from s in list
+					   orderby s.Title[0].ToString().ToUpper() ascending
+					   group s by s.Title[0] into g
+					   select g.Key.ToString().ToUpper()).ToArray();
         }
 
         public override void ViewDidLayoutSubviews()
@@ -87,6 +117,7 @@ namespace Naxam.Busuu.iOS.Review.Views
         {
             if (isAll) return;
             isAll = true;
+            UpdateKeyFromList(AllReviews);
             ReviewTableView.ReloadData();
 
             UIView.BeginAnimations("slideAnimation");
@@ -103,6 +134,7 @@ namespace Naxam.Busuu.iOS.Review.Views
         {
             if (!isAll) return;
             isAll = false;
+            UpdateKeyFromList(FavoriteReviews);
             ReviewTableView.ReloadData();
 
             UIView.BeginAnimations("slideAnimation");
@@ -138,24 +170,82 @@ namespace Naxam.Busuu.iOS.Review.Views
 
         public nint RowsInSection(UITableView tableView, nint section)
         {
-            return isAll ? AllReviews.Count : FavoriteReviews.Count;
+           
+            if (FilteredReviews == null)
+            {
+                return grouping[section].Count();
+            }else
+            {
+                return FilteredReviews.Count;
+            }
+        }
+
+        [Export("numberOfSectionsInTableView:")]
+        public nint NumberOfSections(UITableView tableView)
+        {
+            return grouping.Length;
+        }
+
+        [Export("tableView:titleForHeaderInSection:")]
+        public string TitleForHeader(UITableView tableView, nint section)
+        {
+            return grouping[section].Key.ToString().ToUpper();
+        }
+
+        [Export("sectionIndexTitlesForTableView:")]
+        public string[] SectionIndexTitles(UITableView tableView)
+        {
+            return indices;
         }
 
         public UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             var cell = (ReviewTableViewCell)tableView.DequeueReusableCell("reviewCell", indexPath);
-            if (isAll)
+            if (FilteredReviews == null)
             {
-                cell.Item = AllReviews[indexPath.Row];
-                cell.SetupCell();
-                AllReviews[indexPath.Row] = cell.Item;
+                if (isAll)
+                {
+                    cell.Item = grouping[indexPath.Section].ElementAt(indexPath.Row);
+                    cell.SetupCell();
+                }
+                else
+                {
+                    cell.Item = FavoriteReviews[indexPath.Row];
+                    cell.SetupCell();
+                }
             }else
             {
-                cell.Item = FavoriteReviews[indexPath.Row];
-                cell.SetupCell();
-                FavoriteReviews[indexPath.Row] = cell.Item;
+				cell.Item = FilteredReviews[indexPath.Row];
+				cell.SetupCell();   
             }
+            isPlayingAudio = cell.isPlaying;
             return cell;
+        }
+
+        public void UpdateSearchResultsForSearchController(UISearchController searchController)
+        {
+            if (searchController.Active)
+            {
+                FilteredReviews = new List<ReviewModel>();
+            }
+            else
+            {
+                FilteredReviews = null;
+            }
+			FilterContentForSearchText(searchController.SearchBar.Text);
+		}
+
+        private void FilterContentForSearchText(string text)
+        {
+			if (FilteredReviews != null)
+			{
+				FilteredReviews.Clear();
+				FilteredReviews.AddRange(
+					AllReviews.Where(e =>
+									string.IsNullOrWhiteSpace(text)
+									|| e.Title.ToUpper().Contains(text.ToUpper())));
+			}
+			ReviewTableView.ReloadData();
         }
     }
 }
