@@ -31,7 +31,7 @@ namespace Naxam.Busuu.Social.ViewModels
 					RaisePropertyChanged(() => SocialDetailData);
 				}
 			}
-		}
+		}		
 
         public void Init(SocialModel item)
         {

@@ -4,15 +4,14 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Register View-->
+        <!--Profile-->
         <scene sceneID="s2C-Kj-WWM">
             <objects>
-                <viewController storyboardIdentifier="RegisterView" id="MgT-Ig-Wub" customClass="RegisterView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterView" title="Profile" id="MgT-Ig-Wub" customClass="RegisterView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1QU-7d-y3o"/>
                         <viewControllerLayoutGuide type="bottom" id="llH-X3-1Dl"/>

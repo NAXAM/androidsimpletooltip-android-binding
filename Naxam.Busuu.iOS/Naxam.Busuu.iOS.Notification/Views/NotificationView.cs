@@ -3,8 +3,11 @@
 using System;
 
 using Foundation;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
+using Naxam.Busuu.iOS.Notification.Common;
 using Naxam.Busuu.Notification.ViewModels;
 using UIKit;
 
@@ -17,5 +20,21 @@ namespace Naxam.Busuu.iOS.Notification.Views
 		public NotificationView (IntPtr handle) : base (handle)
 		{
 		}
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+
+            var nSource = new NotificationTableViewSource(NotificationTableView);
+
+            var setBinding = this.CreateBindingSet<NotificationView, NotificationViewModel>();
+            setBinding.Bind(nSource).To(vm => vm.NotificationData);
+            setBinding.Bind(nSource).For(vm => vm.SelectionChangedCommand).To(vm => vm.ViewNotificationCommand);
+			setBinding.Apply();
+
+			NotificationTableView.RowHeight = UITableView.AutomaticDimension;
+			NotificationTableView.EstimatedRowHeight = 72f;
+			NotificationTableView.Source = nSource;
+        }
 	}
 }

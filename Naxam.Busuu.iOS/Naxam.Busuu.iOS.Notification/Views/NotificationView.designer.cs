@@ -12,9 +12,15 @@ namespace Naxam.Busuu.iOS.Notification.Views
 	[Register ("NotificationView")]
 	partial class NotificationView
 	{
+		[Outlet]
+		UIKit.UITableView NotificationTableView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (NotificationTableView != null) {
+				NotificationTableView.Dispose ();
+				NotificationTableView = null;
+			}
 		}
 	}
 }

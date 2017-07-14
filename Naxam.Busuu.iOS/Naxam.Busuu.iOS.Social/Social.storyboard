@@ -793,7 +793,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="210" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v7R-RF-fDY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
                                 <color key="backgroundColor" red="0.91715604066848755" green="0.92907196283340454" blue="0.95391279458999634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendsCell" id="yEf-bD-iZo" customClass="FriendsCell">
@@ -994,7 +994,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94464218619999996" green="0.956749022" blue="0.96912759540000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="v7R-RF-fDY" secondAttribute="bottom" constant="44" id="0zC-Bg-Kke"/>
+                            <constraint firstAttribute="bottom" secondItem="v7R-RF-fDY" secondAttribute="bottom" constant="94" id="0zC-Bg-Kke"/>
                             <constraint firstItem="v7R-RF-fDY" firstAttribute="leading" secondItem="k5g-Hg-Fr2" secondAttribute="leading" id="5Ic-Ga-tvk"/>
                             <constraint firstAttribute="trailing" secondItem="v7R-RF-fDY" secondAttribute="trailing" id="TYG-dd-41j"/>
                             <constraint firstItem="v7R-RF-fDY" firstAttribute="top" secondItem="k5g-Hg-Fr2" secondAttribute="top" id="uLi-2l-XcC"/>

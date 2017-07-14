@@ -4,7 +4,7 @@ using MvvmCross.Platform.Converters;
 
 namespace Naxam.Busuu.iOS.Social.Common
 {
-    public static class MyMvxConverter
+    public class MyMvxConverter
     {
 		public class InverseValueConverter : MvxValueConverter<bool, bool>
 		{
