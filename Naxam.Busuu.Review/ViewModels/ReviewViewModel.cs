@@ -114,5 +114,7 @@ namespace Naxam.Busuu.Review.ViewModels
                 FavoriteReviews.Add(item);
             }
         }
+
+
     }
 }

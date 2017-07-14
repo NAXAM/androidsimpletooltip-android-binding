@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Globalization;
+using FFImageLoading;
+using FFImageLoading.Work;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
@@ -12,38 +14,53 @@ namespace Naxam.Busuu.iOS.Review.Views
 {
     public partial class ReviewTableViewCell : MvxTableViewCell
     {
-        public event EventHandler<ReviewModel> FavoriteHandler;
+		private ReviewModel item;
+		public ReviewModel Item { get => item; set => item = value; }
 
-		private readonly MvxImageViewLoader imgWordViewLoader;
-        private readonly MvxImageViewLoader imgStrengthViewLoader;
-        public bool IsFavorite = false;
-
-        public UIButton BtnStar
+        public void SetupCell()
         {
-            get => btnStar;
-            set => value = btnStar;
+            lbTitle.Text = item.Title;
+            lbSubtitle.Text = item.SubTitle;
+            switch (item.StrengthLevel)
+            {
+                case 0: imgStrength.Image = UIImage.FromBundle("strength_0"); break;
+                case 1: imgStrength.Image = UIImage.FromBundle("strength_1"); break;
+                case 2: imgStrength.Image = UIImage.FromBundle("strength_2"); break;
+                case 3: imgStrength.Image = UIImage.FromBundle("strength_3"); break;
+                case 4: imgStrength.Image = UIImage.FromBundle("strength_4"); break;
+                default:
+                    imgStrength.Image = UIImage.FromBundle("strength_0"); break;
+            }
+            if(item.IsFavorite)
+            {
+                btnStar.SetImage(UIImage.FromBundle("rating_star_gold"), UIControlState.Normal);
+            }else
+            {
+                btnStar.SetImage(UIImage.FromBundle("rating_star_grey"), UIControlState.Normal);
+            }
+
+            ImageService.Instance.LoadUrl(item.ImgWord).
+                        ErrorPlaceholder("image_placeholder.png",ImageSource.ApplicationBundle).
+                        LoadingPlaceholder("placeholder", ImageSource.CompiledResource).
+                        Into(imgWord);
         }
 
         protected ReviewTableViewCell(IntPtr handle) : base(handle)
         {
 			// Note: this .ctor should not contain any initialization logic.
-            imgWordViewLoader = new MvxImageViewLoader(() => imgWord);
-            imgStrengthViewLoader = new MvxImageViewLoader(() => imgStrength);
-
-            this.DelayBind(() =>
-			{
-				var set = this.CreateBindingSet<ReviewTableViewCell, ReviewModel>();
-				set.Bind(lbTitle).To(m => m.Title);
-				set.Bind(lbSubtitle).To(m => m.SubTitle);
-                set.Bind(imgWordViewLoader).To(m => m.ImgWord); 
-                set.Bind(imgStrengthViewLoader).To(m=>m.StrengthLevel).WithConversion(new ImageStrengthValueConverter(),null);
-				set.Apply();
-			});
         }
 
         partial void btnStar_TouchUpInside(NSObject sender)
         {
-            FavoriteHandler?.Invoke(this, (ReviewModel)DataContext);
+            item.IsFavorite = !item.IsFavorite;
+			if (item.IsFavorite)
+			{
+				btnStar.SetImage(UIImage.FromBundle("rating_star_gold"), UIControlState.Normal);
+			}
+			else
+			{
+				btnStar.SetImage(UIImage.FromBundle("rating_star_grey"), UIControlState.Normal);
+			}
         }
 
         public override void AwakeFromNib()
@@ -52,60 +69,4 @@ namespace Naxam.Busuu.iOS.Review.Views
             imgWord.Layer.CornerRadius = 4;
         }
     }
-
-	class ButtonConverter : MvxValueConverter<bool, UIColor>
-	{
-		UIColor selectedColour = UIColor.FromRGB(128, 128, 128);
-		UIColor unSelectedColour = UIColor.GroupTableViewBackgroundColor;
-		protected override UIColor Convert(bool value, Type targetType, object parameter, CultureInfo culture)
-		{
-			return value ? selectedColour : unSelectedColour;
-		}
-		protected override bool ConvertBack(UIColor value, Type targetType, object parameter, CultureInfo culture)
-		{
-			return value == selectedColour;
-		}
-	}
-
-    public class FavoriteImageValueConverter:MvxValueConverter<bool, string>
-    {
-        protected override string Convert(bool value, Type targetType, object parameter, CultureInfo culture)
-        {
-            return value ? "res:rounded_golden_star" : "res:rounded_grey_star";
-        }
-    }
-
-	public class ImageUriValueConverter : MvxValueConverter<string, string>
-	{
-		protected override string Convert(string value, Type targetType, object parameter, CultureInfo cultureInfo)
-		{
-			return "res:" + value;
-		}
-	}
-
-
-
-    public class ImageStrengthValueConverter: MvxValueConverter<int, string>
-    {
-        protected override string Convert(int value, Type targetType, object parameter, CultureInfo culture)
-        {
-            switch (value)
-            {
-                case 0:
-                    return "res:strength_0";
-				case 1:
-					return "res:strength_1";
-				case 2:
-					return "res:strength_2";
-				case 3:
-					return "res:strength_3";
-				case 4:
-					return "res:strength_4";
-                default:
-                    return "res:strength_0";
-
-            }
-        }
-    }
-
 }

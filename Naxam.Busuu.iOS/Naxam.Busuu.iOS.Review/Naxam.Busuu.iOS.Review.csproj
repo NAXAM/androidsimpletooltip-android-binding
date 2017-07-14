@@ -80,10 +80,23 @@
     <Reference Include="MvvmCross.Localization">
       <HintPath>..\..\packages\MvvmCross.Binding.5.0.5\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
     </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>..\..\packages\SkiaSharp.1.56.1\lib\XamariniOS\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\..\packages\WebP.Touch.1.0.3\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
+    <Folder Include="Floaty\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +110,8 @@
     </Compile>
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Floaty\ActionButtonItem.cs" />
+    <Compile Include="Floaty\ActionButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Review.storyboard" />
@@ -149,6 +164,42 @@
     <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\strength_4.png" />
     <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\strength_4%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\add_language.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\add_language%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\btn_activityCloseCrossButtonNew.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\btn_activityCloseCrossButtonNew%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\rating_star_gold.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\rating_star_gold%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\rating_star_grey.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\rating_star_grey%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\greyX.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\greyX%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\image_placeholder.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\image_placeholder%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\greyCheck.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\greyCheck%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\fab_menu_row_learning.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\fab_menu_row_learning%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\fab_menu_row_all.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\fab_menu_row_all%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\fab_menu_row_fav.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\fab_menu_row_fav%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

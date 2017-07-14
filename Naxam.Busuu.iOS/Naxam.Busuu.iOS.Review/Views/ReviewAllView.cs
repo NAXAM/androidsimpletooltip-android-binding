@@ -11,40 +11,56 @@ using Naxam.Busuu.Review.Models;
 using System.ComponentModel;
 using MvvmCross.Core.ViewModels;
 using System.Runtime.CompilerServices;
+using System.Collections.Generic;
+using Naxam.Ausuu.IOS.Review.Floaty;
+using Naxam.Busuu.IOS.Review.Floaty;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
     [MvxFromStoryboard(StoryboardName = "Review")]
-    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>
+    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource
     {
-        public ReviewAllView(IntPtr handle): base(handle)
+        public ReviewAllView(IntPtr handle) : base(handle)
         {
         }
 
         CGPoint oriPoint;
         bool isAll = true;
-        MvxStandardTableViewSource source;
-        MvxFluentBindingDescriptionSet<ReviewAllView, ReviewAllViewModel> setBinding;
+        List<ReviewModel> AllReviews, FavoriteReviews;
+        ActionButton actionButton;
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            var btnContinueLearning = new ActionButtonItem("CONTINUE LEARNING", UIImage.FromBundle("fab_menu_row_learning"), UIColor.White);
+            btnContinueLearning.ActionPerform = HandleAction;
+
+            var btnAll = new ActionButtonItem("TEST ALL", UIImage.FromBundle("fab_menu_row_all"), UIColor.Gray);
+            btnAll.ActionPerform = HandleAction;
+
+			var btnStrength = new ActionButtonItem("STRENGTHEN VOCABULARY", UIImage.FromBundle("fab_menu_row_weak"), UIColor.Gray);
+			btnStrength.ActionPerform = HandleAction;
+
+			var btnTestFavorite = new ActionButtonItem("TEST FAVORITES", UIImage.FromBundle("fab_menu_row_fav"), UIColor.Gray);
+			btnTestFavorite.ActionPerform = HandleAction;
+
+            actionButton = new ActionButton(this.View, new[] { btnContinueLearning, btnAll, btnStrength, btnTestFavorite });
+            actionButton.Action = delegate {
+                actionButton.ToggleMenu();
+            };
+            actionButton.SetTitle("+", UIControlState.Normal);
+
+            actionButton.BackgroundColor = UIColor.Orange;
+
             // Perform any additional setup after loading the view, typically from a nib.
+         
             this.NavigationItem.TitleView = uiViewButton;
             ReviewTableView.RowHeight = 60;
 
-            source = new ReviewTableViewSource(ReviewTableView,(NSString)"reviewCell");
-            ReviewTableView.Source = source;
-
-            setBinding = this.CreateBindingSet<ReviewAllView, ReviewAllViewModel>();
-            setBinding.Bind(source).To(vm => vm.Reviews);
-            setBinding.Bind(source).For(nameof(ReviewTableViewSource.FavoriteCommand)).To(vm=>vm.FavoriteCommand);
-            setBinding.Bind(searchBar).To(vm => vm.SearchTerm).TwoWay();
-            setBinding.Apply();
-            ReviewTableView.ReloadData();
-
-            searchBar.SearchButtonClicked += SearchBar_SearchButtonClicked;
-            searchBar.CancelButtonClicked += SearchBar_CancelButtonClicked;
+            AllReviews = this.ViewModel.Reviews;
+            FavoriteReviews = this.ViewModel.FavoriteReviews;
+            ReviewTableView.WeakDataSource = this;
         }
 
         public override void ViewDidLayoutSubviews()
@@ -56,18 +72,22 @@ namespace Naxam.Busuu.iOS.Review.Views
             oriPoint = uiViewSlide.Center;
         }
 
+        void HandleAction(Ausuu.IOS.Review.Floaty.ActionButtonItem obj)
+        {
+			UIAlertView alert = new UIAlertView()
+			{
+				Title = "alert title",
+				Message = "this is a simple alert"
+			};
+			alert.AddButton("OK");
+			alert.Show();
+        }
+
         partial void btnAll_TouchUpInside(NSObject sender)
         {
             if (isAll) return;
             isAll = true;
-
-            this.ClearAllBindings();
-            
-            //var set = this.CreateBindingSet<ReviewAllView, ReviewAllViewModel>();
-            setBinding.Bind(source).To(vm => vm.Reviews);
-            setBinding.Apply();
             ReviewTableView.ReloadData();
-
 
             UIView.BeginAnimations("slideAnimation");
             UIView.SetAnimationDuration(0.2);
@@ -83,20 +103,14 @@ namespace Naxam.Busuu.iOS.Review.Views
         {
             if (!isAll) return;
             isAll = false;
-
-            this.ClearAllBindings();
-            //var set = this.CreateBindingSet<ReviewAllView, ReviewAllViewModel>();
-            setBinding.Bind(source).To(vm => vm.FavoriteReviews);
-            setBinding.Apply();
             ReviewTableView.ReloadData();
 
-            ReviewTableView.ReloadData();
             UIView.BeginAnimations("slideAnimation");
             UIView.SetAnimationDuration(0.2);
             UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
             UIView.SetAnimationDelegate(this);
             UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
-            uiViewSlide.Center = new CGPoint(oriPoint.X + uiViewSlide.Bounds.Width , oriPoint.Y);
+            uiViewSlide.Center = new CGPoint(oriPoint.X + uiViewSlide.Bounds.Width, oriPoint.Y);
             UIView.CommitAnimations();
             lbButtonClicked.Text = "";
         }
@@ -104,8 +118,9 @@ namespace Naxam.Busuu.iOS.Review.Views
         [Export("animationDidStop:finished:context:")]
         void SlideStopped(NSString animationID, NSNumber finished, NSObject context)
         {
-            if (!isAll) { 
-                uiViewSlide.Center = new CGPoint(oriPoint.X + uiViewSlide.Bounds.Width, oriPoint.Y); 
+            if (!isAll)
+            {
+                uiViewSlide.Center = new CGPoint(oriPoint.X + uiViewSlide.Bounds.Width, oriPoint.Y);
                 lbButtonClicked.Text = "Favorites";
             }
             else
@@ -121,88 +136,27 @@ namespace Naxam.Busuu.iOS.Review.Views
             // Release any cached data, images, etc that aren't in use.
         }
 
-        void SearchBar_SearchButtonClicked(object sender, EventArgs e)
+        public nint RowsInSection(UITableView tableView, nint section)
         {
-            this.ClearAllBindings();
-            setBinding.Bind(source).To(m => m.Filterediews);
-            setBinding.Apply();
-            ReviewTableView.ReloadData();
+            return isAll ? AllReviews.Count : FavoriteReviews.Count;
         }
 
-        void SearchBar_CancelButtonClicked(object sender, EventArgs e)
+        public UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            this.ClearAllBindings();
-            if(isAll)
+            var cell = (ReviewTableViewCell)tableView.DequeueReusableCell("reviewCell", indexPath);
+            if (isAll)
             {
-                setBinding.Bind(source).To(m => m.Reviews);
+                cell.Item = AllReviews[indexPath.Row];
+                cell.SetupCell();
+                AllReviews[indexPath.Row] = cell.Item;
             }else
             {
-                setBinding.Bind(source).To(m => m.FavoriteReviews);
+                cell.Item = FavoriteReviews[indexPath.Row];
+                cell.SetupCell();
+                FavoriteReviews[indexPath.Row] = cell.Item;
             }
-            setBinding.Apply();
-            ReviewTableView.ReloadData();
+            return cell;
         }
-    }
-
-    public class ReviewTableViewSource : MvxStandardTableViewSource, INotifyPropertyChanged
-    {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        IMvxCommand _favoriteCommand;
-		public IMvxCommand FavoriteCommand
-		{
-			get
-			{
-				return _favoriteCommand;
-			}
-
-			set
-			{
-				SetProperty(ref _favoriteCommand, value);
-			}
-		}
-
-        public ReviewTableViewSource(UITableView tableview, NSString cellId): base(tableview,cellId)
-        {
-            
-        }
-
-        public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
-        {
-            var cell = (ReviewTableViewCell)base.GetCell(tableView, indexPath);
-
-            cell.FavoriteHandler -= HandleEventHandler;
-            cell.FavoriteHandler += HandleEventHandler;
-
-			return cell;
-        }
-
-        void HandleEventHandler(object sender, ReviewModel e)
-        {
-			if (FavoriteCommand?.CanExecute(e) != true) return;
-
-			FavoriteCommand.Execute(e);
-
-            var cell = sender as ReviewTableViewCell;
-            if (!cell.IsFavorite)
-			{
-				cell.BtnStar.SetImage(UIImage.FromBundle("rounded_golden_star"), UIControlState.Normal);
-			}
-			else
-			{
-				cell.BtnStar.SetImage(UIImage.FromBundle("rounded_grey_star"), UIControlState.Normal);
-			}
-			cell.IsFavorite = !cell.IsFavorite;
-        }
-
-        void SetProperty<T>(ref T backingField, T value, [CallerMemberName] string propertyName = null)
-		{
-			if (Equals(backingField, value)) return;
-
-			backingField = value;
-
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-		}
     }
 }
 

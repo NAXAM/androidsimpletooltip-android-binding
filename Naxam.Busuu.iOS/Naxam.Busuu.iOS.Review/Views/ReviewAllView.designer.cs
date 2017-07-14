@@ -38,14 +38,12 @@ namespace Naxam.Busuu.iOS.Review.Views
 
 		[Action ("btnFavorite_TouchUpInside:")]
 		partial void btnFavorite_TouchUpInside (Foundation.NSObject sender);
+
+		[Action ("btnPlus_TouchUpInside:")]
+		partial void btnPlus_TouchUpInside (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (searchBar != null) {
-				searchBar.Dispose ();
-				searchBar = null;
-			}
-
 			if (btnAll != null) {
 				btnAll.Dispose ();
 				btnAll = null;
@@ -64,6 +62,11 @@ namespace Naxam.Busuu.iOS.Review.Views
 			if (ReviewTableView != null) {
 				ReviewTableView.Dispose ();
 				ReviewTableView = null;
+			}
+
+			if (searchBar != null) {
+				searchBar.Dispose ();
+				searchBar = null;
 			}
 
 			if (uiViewButton != null) {

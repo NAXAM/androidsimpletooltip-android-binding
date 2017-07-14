@@ -76,14 +76,5 @@ namespace Naxam.Busuu.Review.Models
 			}
 		}
 
-		//public MvxCommand FlipSelected
-		//{
-  //          get { return new MvxCommand(() => 
-  //                                  { this.IsFavorite = !this.IsFavorite;
-  //                                    RaisePropertyChanged(); 
-  //                                  });
-  //              }
-		//}
-
     }
 }
