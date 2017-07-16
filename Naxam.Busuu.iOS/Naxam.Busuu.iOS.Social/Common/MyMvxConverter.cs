@@ -38,6 +38,14 @@ namespace Naxam.Busuu.iOS.Social.Common
 			}
 		}
 
+        public class DatetimeStringValueConverter : MvxValueConverter<DateTime, string>
+		{
+            protected override string Convert(DateTime value, Type targetType, object parameter, CultureInfo cultureInfo)
+			{
+				return value.ToString("f").Replace(" PM", "PM").Replace(" AM", "AM");
+			}
+		}
+
         // Lười quá đành phải làm thế  ahuhu T.T
         public class ImageForFriendsValueConverter : MvxValueConverter<string, string>
 		{

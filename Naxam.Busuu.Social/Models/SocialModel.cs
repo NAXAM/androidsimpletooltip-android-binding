@@ -1,4 +1,5 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using System;
+using MvvmCross.Core.ViewModels;
 
 namespace Naxam.Busuu.Social.Models
 {
@@ -139,9 +140,9 @@ namespace Naxam.Busuu.Social.Models
 			}
 		}
 
-        string _PublicTime;
+        DateTime _PublicTime;
 
-		public string PublicTime
+        public DateTime PublicTime
 		{
 			get { return _PublicTime; }
 			set

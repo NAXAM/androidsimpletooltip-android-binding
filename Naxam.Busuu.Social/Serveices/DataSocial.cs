@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Naxam.Busuu.Social.Models;
 using System.Collections.Generic;
+using System;
 
 namespace Naxam.Busuu.Social.Serveices
 {
@@ -9,8 +10,8 @@ namespace Naxam.Busuu.Social.Serveices
         public SocialModel[] GetAllSocial()
         {
             var list = new List<SocialModel>()
-			{
-				new SocialModel()
+            {
+                new SocialModel()
                 {
                     Id = 0,
                     Avatar = "user_avatar_placeholder.png",
@@ -21,13 +22,13 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!\nI am a new member.",
-                    PublicTime = "29/5/2017",
+                    PublicTime = new DateTime(2017, 5, 29),
                     Star = 5,
                     Friends = false,
-					ImgQuestion = "ImageMeoNo.jpg",
-					TextQuestion = "Say hello Naxam!"
-				},
-				new SocialModel()
+                    ImgQuestion = "ImageMeoNo.jpg",
+                    TextQuestion = "Say hello Naxam!"
+                },
+                new SocialModel()
                 {
                     Id = 1,
                     Avatar = "user_avatar_placeholder.png",
@@ -38,13 +39,13 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3",
-                    PublicTime = "29/5/2017",
+                    PublicTime = new DateTime(2017, 5, 29),
                     Star = 4.5,
                     Friends = false,
-					ImgQuestion = "ImageMeoNo.jpg",
-					TextQuestion = "Say hello Naxam!"
-				},
-				new SocialModel()
+                    ImgQuestion = "ImageMeoNo.jpg",
+                    TextQuestion = "Say hello Naxam!"
+                },
+                new SocialModel()
                 {
                     Id = 2,
                     Avatar = "user_avatar_placeholder.png",
@@ -55,13 +56,13 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!",
-                    PublicTime = "28/5/2017",
+                    PublicTime = new DateTime(2017, 5, 28),
                     Star = 4.5,
                     Friends = false,
-					ImgQuestion = "ImageMeoNo.jpg",
-					TextQuestion = "Say hello Naxam!"
-				},
-				new SocialModel()
+                    ImgQuestion = "ImageMeoNo.jpg",
+                    TextQuestion = "Say hello Naxam!"
+                },
+                new SocialModel()
                 {
                     Id = 3,
                     Avatar = "user_avatar_placeholder.png",
@@ -72,13 +73,13 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!\nI am a new member.\nI am a new member.\nI am a new member.",
-                    PublicTime = "21/5/2017",
+                    PublicTime = new DateTime(2017, 5, 21),
                     Star = 4,
                     Friends = false,
-					ImgQuestion = "ImageMeoNo.jpg",
-					TextQuestion = "Say hello Naxam!"
-				},
-				new SocialModel()
+                    ImgQuestion = "ImageMeoNo.jpg",
+                    TextQuestion = "Say hello Naxam!"
+                },
+                new SocialModel()
                 {
                     Id = 4,
                     Avatar = "user_avatar_placeholder.png",
@@ -89,13 +90,13 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
-                    PublicTime = "21/5/2017",
+                    PublicTime = new DateTime(2017, 5, 21),
                     Star = 3.5,
                     Friends = false,
-					ImgQuestion = "ImageMeoNo.jpg",
-					TextQuestion = "Say hello Naxam!"
-				},
-				new SocialModel()
+                    ImgQuestion = "ImageMeoNo.jpg",
+                    TextQuestion = "Say hello Naxam!"
+                },
+                new SocialModel()
                 {
                     Id = 5,
                     Avatar = "user_avatar_placeholder.png",
@@ -106,13 +107,13 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!",
-                    PublicTime = "21/5/2017",
+                    PublicTime = new DateTime(2017, 5, 21),
                     Star = 3,
                     Friends = false,
-					ImgQuestion = "ImageMeoNo.jpg",
-					TextQuestion = "Say hello Naxam!"
-				},
-				new SocialModel()
+                    ImgQuestion = "ImageMeoNo.jpg",
+                    TextQuestion = "Say hello Naxam!"
+                },
+                new SocialModel()
                 {
                     Id = 6,
                     Avatar = "user_avatar_placeholder.png",
@@ -123,13 +124,13 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
-                    PublicTime = "19/5/2017",
+                    PublicTime = new DateTime(2017, 5, 19),
                     Star = 2.5,
                     Friends = false,
-					ImgQuestion = "ImageMeoNo.jpg",
-					TextQuestion = "Say hello Naxam!"
-				},
-				new SocialModel()
+                    ImgQuestion = "ImageMeoNo.jpg",
+                    TextQuestion = "Say hello Naxam!"
+                },
+                new SocialModel()
                 {
                     Id = 7,
                     Avatar = "user_avatar_placeholder.png",
@@ -140,13 +141,13 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!",
-                    PublicTime = "19/5/2017",
+                    PublicTime = new DateTime(2017, 5, 19),
                     Star = 2,
                     Friends = false,
-					ImgQuestion = "ImageMeoNo.jpg",
-					TextQuestion = "Say hello Naxam!"
-				},
-				new SocialModel()
+                    ImgQuestion = "ImageMeoNo.jpg",
+                    TextQuestion = "Say hello Naxam!"
+                },
+                new SocialModel()
                 {
                     Id = 8,
                     Avatar = "user_avatar_placeholder.png",
@@ -157,41 +158,41 @@ namespace Naxam.Busuu.Social.Serveices
                     TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3",
-                    PublicTime = "19/5/2017",
+                    PublicTime = new DateTime(2017, 5, 19),
                     Star = 0,
                     Friends = false,
-					ImgQuestion = "ImageMeoNo.jpg",
-					TextQuestion = "Say hello Naxam!"
-				},
-				new SocialModel()
+                    ImgQuestion = "ImageMeoNo.jpg",
+                    TextQuestion = "Say hello Naxam!"
+                },
+                new SocialModel()
                 {
                     Id = 9,
                     Avatar = "user_avatar_placeholder.png",
-                    Name = "Nguyen Nhu Son",
-                    Country = "Vietnam",
-                    ImageSpeakLanguage = "profile_flag_vn.png",
+                    Name = "Rosa Gans",
+                    Country = "Brazil",
+                    ImageSpeakLanguage = "flag_small_portuguese.png",
                     ImageLearn = "flag_small_english.png",
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!\nI am a new member.",
-                    PublicTime = "29/5/2017",
+                    PublicTime = new DateTime(2017, 5, 29),
                     Star = 5,
                     Friends = false,
 					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
-				},
-				new SocialModel()
+                },
+                new SocialModel()
                 {
                     Id = 10,
                     Avatar = "user_avatar_placeholder.png",
-                    Name = "Nguyen Nhu Son",
-                    Country = "Vietnam",
-                    ImageSpeakLanguage = "profile_flag_vn.png",
+                    Name = "Sangbunrueng Siri",
+                    Country = "United States",
+                    ImageSpeakLanguage = "flag_small_english.png",
                     ImageLearn = "flag_small_english.png",
                     TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
-                    PublicTime = "29/5/2017",
+                    PublicTime = new DateTime(2017, 5, 29),
                     Star = 4.5,
                     Friends = false,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -208,11 +209,11 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.",
-					PublicTime = "29/5/2017",
+					PublicTime = new DateTime(2017, 5, 29),
 					Star = 5,
                     Friends = true,
-                    ImgQuestion = "ImageMeoNo.jpg",
-                    TextQuestion = "Say hello Naxam!"
+					ImgQuestion = "ImageMeoNo.jpg",
+					TextQuestion = "Say hello Naxam!"
 				},
 				new SocialModel()
 				{
@@ -225,7 +226,7 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3",
-					PublicTime = "29/5/2017",
+					PublicTime = new DateTime(2017, 5, 29),
 					Star = 4.5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -242,7 +243,7 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!",
-					PublicTime = "28/5/2017",
+					PublicTime = new DateTime(2017, 5, 28),
 					Star = 4.5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -259,7 +260,7 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.\nI am a new member.\nI am a new member.",
-					PublicTime = "21/5/2017",
+					PublicTime = new DateTime(2017, 5, 21),
 					Star = 4,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -276,7 +277,7 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Nokia-tune-Nokia-tune.mp3",
-					PublicTime = "21/5/2017",
+					PublicTime = new DateTime(2017, 5, 21),
 					Star = 3.5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -293,7 +294,7 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!",
-					PublicTime = "21/5/2017",
+					PublicTime = new DateTime(2017, 5, 21),
 					Star = 3,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -310,7 +311,7 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Nokia-tune-Nokia-tune.mp3",
-					PublicTime = "19/5/2017",
+					PublicTime = new DateTime(2017, 5, 19),
 					Star = 2.5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -327,7 +328,7 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!",
-					PublicTime = "19/5/2017",
+					PublicTime = new DateTime(2017, 5, 19),
 					Star = 2,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -344,24 +345,24 @@ namespace Naxam.Busuu.Social.Serveices
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3",
-					PublicTime = "19/5/2017",
+					PublicTime = new DateTime(2017, 5, 19),
 					Star = 0,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				},
-			    new SocialModel()
+				 new SocialModel()
 				{
 					Id = 20,
 					Avatar = "user_avatar_placeholder.png",
-					Name = "Nguyen Nhu Son",
-					Country = "Vietnam",
-					ImageSpeakLanguage = "profile_flag_vn.png",
+					Name = "Rosa Gans",
+					Country = "Brazil",
+					ImageSpeakLanguage = "flag_small_portuguese.png",
 					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.",
-					PublicTime = "29/5/2017",
+					PublicTime = new DateTime(2017, 5, 29),
 					Star = 5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -371,14 +372,14 @@ namespace Naxam.Busuu.Social.Serveices
 				{
 					Id = 21,
 					Avatar = "user_avatar_placeholder.png",
-					Name = "Nguyen Nhu Son",
-					Country = "Vietnam",
-					ImageSpeakLanguage = "profile_flag_vn.png",
+					Name = "Sangbunrueng Siri",
+					Country = "United States",
+					ImageSpeakLanguage = "flag_small_english.png",
 					ImageLearn = "flag_small_english.png",
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Nokia-tune-Nokia-tune.mp3",
-					PublicTime = "29/5/2017",
+					PublicTime = new DateTime(2017, 5, 29),
 					Star = 4.5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",

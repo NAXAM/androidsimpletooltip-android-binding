@@ -37,7 +37,7 @@ namespace Naxam.Busuu.iOS.Social.Cells
                 setBinding.Bind(lblUserName).To(f => f.Name);
                 setBinding.Bind(lblCountry).To(f => f.Country);
                 setBinding.Bind(_loaderImgLearn).To(f => f.ImageLearn).WithConversion(new MyMvxConverter.ImageForFriendsValueConverter(), null);
-                setBinding.Bind(lblTimePublic).To(f => f.PublicTime);
+                setBinding.Bind(lblTimePublic).To(f => f.PublicTime).WithConversion(new MyMvxConverter.DatetimeStringValueConverter(), null);
                 setBinding.Bind(ViewAudioPlayer).For(f => f.Hidden).To(f => f.Speak).WithConversion(new MyMvxConverter.InverseValueConverter(), null);
                 setBinding.Bind(audioViewBottomConstraint).For(f => f.Active).To(f => f.Speak);
                 setBinding.Bind(audioViewTopConstraint).For(f => f.Active).To(f => f.Speak);

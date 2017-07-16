@@ -65,9 +65,9 @@ namespace Naxam.Busuu.Notification.Models
 			}
 		}
 
-		string _Time;
+        DateTime _Time;
 
-		public string Time
+        public DateTime Time
 		{
 			get { return _Time; }
 			set

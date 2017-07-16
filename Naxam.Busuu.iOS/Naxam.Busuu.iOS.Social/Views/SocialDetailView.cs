@@ -49,7 +49,7 @@ namespace Naxam.Busuu.iOS.Social.Views
             setBinding.Bind(audioViewTopConstraint).For(x => x.Active).To(d => d.SocialDetailData.Speak);
             setBinding.Bind(WriteText).For(d => d.Hidden).To(d => d.SocialDetailData.Speak);
             setBinding.Bind(WriteText).To(d => d.SocialDetailData.Write);
-            setBinding.Bind(lblTimePublic).To(d => d.SocialDetailData.PublicTime);
+            setBinding.Bind(lblTimePublic).To(d => d.SocialDetailData.PublicTime).WithConversion(new MyMvxConverter.DatetimeStringValueConverter(), null);
             setBinding.Bind(lblRate).To(d => d.SocialDetailData.Star).WithConversion(new MyMvxConverter.TextRateValueConverter(), null);
             setBinding.Bind(btnFeedBack).To(d => d.CommentViewCommand);
             setBinding.Apply();

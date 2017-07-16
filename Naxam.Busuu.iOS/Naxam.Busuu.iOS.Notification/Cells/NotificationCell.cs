@@ -2,7 +2,6 @@
 
 using System;
 
-using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using Naxam.Busuu.iOS.Notification.Common;
@@ -15,7 +14,7 @@ namespace Naxam.Busuu.iOS.Notification.Cells
 	{
         readonly MvxImageViewLoader _loaderImageUser;
 
-		public NotificationCell (IntPtr handle) : base (handle)
+		public NotificationCell (IntPtr handle) : base(handle)
 		{
             _loaderImageUser = new MvxImageViewLoader(() => this.imgUser);
 
@@ -23,26 +22,19 @@ namespace Naxam.Busuu.iOS.Notification.Cells
 			{
                 var setBinding = this.CreateBindingSet<NotificationCell, NotificationModel>();
                 setBinding.Bind(_loaderImageUser).To(n => n.ImgUser).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
-                setBinding.Bind(lblDetail).To(n => n.Details);
-                setBinding.Bind(lblTime).To(n => n.Time);
+                setBinding.Bind(lblDetail).For(n => n.AttributedText).To(n => n.Details).WithConversion(new MyMvxConverter.DetailValueConverter(), null);
+                setBinding.Bind(lblTime).To(n => n.Time).WithConversion(new MyMvxConverter.DatetimeStringValueConverter(), null);
                 setBinding.Bind(ContentView).For(n => n.BackgroundColor).To(n => n.Check).WithConversion(new MyMvxConverter.ColorValueConverter(), null);
-				setBinding.Apply();
+                setBinding.Apply();
 			});
+                      
 		}
 
-        public override void LayoutSubviews()
+        public override void AwakeFromNib()
         {
-            base.LayoutSubviews();
+            base.AwakeFromNib();
 
-            var firstAttributes = new UIStringAttributes
-            {
-                Font = UIFont.BoldSystemFontOfSize(14f)
-			};
-
-			var prettyString = new NSMutableAttributedString(lblDetail.Text);
-			prettyString.SetAttributes(firstAttributes.Dictionary, new NSRange(0, 14));
-
-            lblDetail.AttributedText = prettyString;
+            imgUser.Layer.CornerRadius = imgUser.Frame.Width / 2;
         }
 	}
 }
