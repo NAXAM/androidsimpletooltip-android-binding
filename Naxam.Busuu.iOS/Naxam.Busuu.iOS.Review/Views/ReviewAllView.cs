@@ -201,6 +201,7 @@ namespace Naxam.Busuu.iOS.Review.Views
         public UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             var cell = (ReviewTableViewCell)tableView.DequeueReusableCell("reviewCell", indexPath);
+            cell.Layer.MasksToBounds = true;
             if (FilteredReviews == null)
             {
                 if (isAll)
