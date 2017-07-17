@@ -154,6 +154,7 @@
     <Compile Include="Control\Conversation\ListConversationAdapter.cs" />
     <Compile Include="Control\MemoriseBodyView.cs" />
     <Compile Include="Control\Memo\MemoSelectWord.cs" />
+    <Compile Include="Control\Summary.cs" />
     <Compile Include="Listener\AnimationListener.cs" />
     <Compile Include="Listener\AnimatorListener.cs" />
     <Compile Include="Listener\AnimatorUpdateListener.cs" />
@@ -599,7 +600,9 @@
     <AndroidResource Include="Resources\Layout\memorise_layout.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Layout\memorise_activity.xml" />
+    <AndroidResource Include="Resources\Layout\memorise_activity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\circle_drwable.xml" />
@@ -643,7 +646,24 @@
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\ic_yellow_star.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_progressbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\progress_progressbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_book_course.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\summary_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_mark.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_button_next.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

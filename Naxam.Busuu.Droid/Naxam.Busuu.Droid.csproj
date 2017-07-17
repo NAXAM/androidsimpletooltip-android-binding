@@ -219,6 +219,10 @@
       <Project>{dfd37792-d1a1-463e-ba9f-8dd045e61178}</Project>
       <Name>Naxam.Busuu.Droid.Profile</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Droid.Social\Naxam.Busuu.Droid.Social.csproj">
+      <Project>{57dae196-2d72-405b-ae3a-c18a107fde4b}</Project>
+      <Name>Naxam.Busuu.Droid.Social</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
       <Project>{E1334FF3-BC22-4F7C-B363-A01DE69429F8}</Project>
       <Name>Naxam.Busuu.Learning</Name>
@@ -226,6 +230,10 @@
     <ProjectReference Include="..\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
       <Project>{B6F89F5C-B669-40B1-BCE1-C72089933F2F}</Project>
       <Name>Naxam.Busuu.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
+      <Project>{6255cda3-b742-4d16-ac6c-03e414eac000}</Project>
+      <Name>Naxam.Busuu.Social</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

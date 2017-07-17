@@ -15,16 +15,20 @@ using Naxam.Busuu.Learning.Model;
 using Android.Graphics;
 using Com.Bumptech.Glide;
 using MvvmCross.Core.ViewModels;
+using Naxam.Busuu.Droid.Learning.Control.Memo;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class MemoSelectWord : Android.Support.V4.App.Fragment
+    public class MemoSelectWord : MemoriseFragmentBase
     {
-        public event EventHandler<bool> NextClicked;
+        public override event EventHandler<bool> NextClicked;
         private event EventHandler<AnswerModel> AnswerClick;
 
-
-        public UnitModel Item;
+        public MemoSelectWord(UnitModel Item)
+        {
+            this.Item = Item;
+        }
+         
         public int OrientationScreen;
         Dictionary<TextView, AnswerModel> listChoice;
         List<TextView> listTextViewCorrect;

@@ -13,7 +13,8 @@ namespace Naxam.Busuu.Learning.Model
         {
             Unknow,
             SelectWord,
-            FillSentence
+            FillSentence,
+            ChooseWord
         }
 
         private UnitType _Type;

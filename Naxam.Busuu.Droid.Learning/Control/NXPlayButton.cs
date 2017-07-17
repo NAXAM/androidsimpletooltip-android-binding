@@ -99,7 +99,12 @@ namespace Naxam.Busuu.Droid.Learning.Control
         
         private void Init()
         {
-            playerView = new JWPlayerView(Context, new PlayerConfig.Builder().Build());
+            List<PlaylistItem> list = new List<PlaylistItem>();
+            list.Add(new PlaylistItem(Url));
+            playerView = new JWPlayerView(Context, 
+                new PlayerConfig.Builder()
+                .Playlist(list)
+                .Build());
             playerView.AddOnTimeListener(this);
             playerView.AddOnPlayListener(this);
             playerView.AddOnPauseListener(this);
