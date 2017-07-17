@@ -30,7 +30,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
             txtStep.Text = prgStep.Progress + "/" + prgStep.Max;
             var manager = SupportFragmentManager;
             var transaction = manager.BeginTransaction();
-            
+
             var temp = Item.Units[PositionStep];
             if (temp.Type == UnitModel.UnitType.FillSentence)
             {
@@ -38,12 +38,16 @@ namespace Naxam.Busuu.Droid.Learning.Views
                 {
                     Item = temp
                 };
-                fillSentence.NextClicked += (s, e) => {
+                fillSentence.NextClicked += (s, e) =>
+                {
                     if (e)
                     {
-                       
+
                     }
-                    PositionStep++;
+                    if (prgStep.Max > PositionStep)
+                    {
+                        PositionStep++;
+                    }
                     transaction.Remove(fillSentence);
                     InitFragment();
                 };
@@ -56,12 +60,17 @@ namespace Naxam.Busuu.Droid.Learning.Views
                 {
                     Item = temp
                 };
-                selectWord.NextClicked += (s, e) => {
+                selectWord.NextClicked += (s, e) =>
+                {
                     if (e)
                     {
 
                     }
-                    PositionStep++;
+                   
+                    if (prgStep.Max > PositionStep)
+                    {
+                        PositionStep++;
+                    }
                     transaction.Remove(selectWord);
                     InitFragment();
                 };
@@ -82,7 +91,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
             };
             Item = Item ?? (ViewModel as MemoriseViewModel).Exercise;
             prgStep.Max = Item.Units.Count;
-            
+
             InitFragment();
         }
     }
