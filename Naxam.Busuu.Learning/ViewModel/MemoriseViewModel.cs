@@ -27,6 +27,9 @@ namespace Naxam.Busuu.Learning.ViewModel
 
         public void Init(ExerciseModel ex)
         {
+            UnitModel.UnitType[] lstType = new UnitModel.UnitType[] {
+                UnitModel.UnitType.FillSentence,UnitModel.UnitType.SelectWord,UnitModel.UnitType.ChooseWord
+            };
             Exercise = ex ?? new ExerciseModel();
             List<UnitModel> listUnit = new List<UnitModel>();
             for (int i = 0; i < 5; i++)
@@ -34,15 +37,18 @@ namespace Naxam.Busuu.Learning.ViewModel
                 listUnit.Add(new UnitModel
                 {
                     Title = "Chọn từ đúng",
-                    Type = i%2==0?UnitModel.UnitType.FillSentence: UnitModel.UnitType.SelectWord,
+                    Type = lstType[i % 3],
 
                     Input = new List<string>
                 {
-                    "Tôi là %% người %%  trai nhất naxam"
+                    "Tôi là %% người %%  trai nhất naxam",
+                        "Tôi là %% người %%  trai nhất naxam",
+                        "Tôi là %% người %%  trai nhất naxam"
                 },
-                    Images = new List<string> {
-                   // "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg",
-                },
+                    Images = new List<string>
+                    {
+                        // "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg",
+                    },
                     Audios = new List<AudioModel> {
                     new AudioModel
                     {
@@ -54,7 +60,7 @@ namespace Naxam.Busuu.Learning.ViewModel
                     new AnswerModel
                     {
                         Text = "thảo",
-                        Value = true
+                        Value = (i+1)%3!=0
                     },
                      new AnswerModel
                     {

@@ -153,6 +153,9 @@
     <Compile Include="Control\Conversation\ListConversationNormalAdapter.cs" />
     <Compile Include="Control\Conversation\ListConversationAdapter.cs" />
     <Compile Include="Control\MemoriseBodyView.cs" />
+    <Compile Include="Control\Memo\MemoChooseWord.cs" />
+    <Compile Include="Control\Memo\MemoMatchingSentence.cs" />
+    <Compile Include="Control\Memo\MemoriseFragmentBase.cs" />
     <Compile Include="Control\Memo\MemoSelectWord.cs" />
     <Compile Include="Control\Summary.cs" />
     <Compile Include="Listener\AnimationListener.cs" />
@@ -211,7 +214,6 @@
     <Compile Include="Views\TestListView.cs" />
     <Compile Include="Views\TestView.cs" />
     <Compile Include="Views\TrueFalseHearQuestionView.cs" />
-    <Compile Include="Views\VocabularyQuestionView.cs" />
     <Compile Include="Transformers\ForegroundToBackgroundTransformer.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -251,6 +253,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\ListPractice.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\matching_sentence_layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -663,6 +668,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\background_button_next.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dotted.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

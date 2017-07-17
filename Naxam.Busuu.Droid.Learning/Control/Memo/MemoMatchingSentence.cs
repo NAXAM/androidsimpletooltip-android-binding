@@ -9,47 +9,54 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using MvvmCross.Droid.Support.V7.AppCompat;
 using Android.Graphics;
+using Naxam.Busuu.Learning.Model;
 
-namespace Naxam.Busuu.Droid.Profile.Views
+namespace Naxam.Busuu.Droid.Learning.Control.Memo
 {
-    [Activity(Label = "MachingSentenceView")]
-    public class MachingSentenceView : MvxAppCompatActivity, View.IOnTouchListener
+    public class MemoMatchingSentence : MemoriseFragmentBase, View.IOnTouchListener
     {
+        public override event EventHandler<bool> NextClicked;
         Dictionary<string, string> MatchingSentence;
         TextView txt01Move, txt02Move, txt03Move, txt01, txt02, txt03, txt04, txt05, txt06, txtGuide;
+
+        public MemoMatchingSentence(UnitModel Item)
+        {
+            this.Item = Item;
+        }
 
         float xMove01, yMove01;
         float xMove02, yMove02;
         float xMove03, yMove03;
-        //
+
         float xTxt04, yTxt04;
         float xTxt05, yTxt05;
         float xTxt06, yTxt06;
-        //
+
         Button btnContinue;
-        //
-        bool firstTouchMove01, firstTouchMove02, firstTouchMove03, firstTouchTxt04, firstTouchTxt05, firstTouchTxt06;
+        bool firstTouchMove01, firstTouchMove02, firstTouchMove03, firstTouchTxt04, firstTouchTxt05, firstTouchTxt06, correct;
 
         ViewGroup _root;
         Rect rectTxt04, rectTxt05, rectTxt06, rectMove01, rectMove02, rectMove03;
         private float _xDelta;
         private float _yDelta;
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-           SetContentView(Resource.Layout.MatchingSentenceActivity);
-            Init();
-
+            View view = inflater.Inflate(Resource.Layout.matching_sentence_layout, container, false);
+            Init(view);
+            return view;
         }
-        private void Init()
+
+
+        private void Init(View view)
         {
             MatchingSentence = new Dictionary<string, string>();
-            MatchingSentence.Add("Tôi ổn, cảm ơn", "Fine, Thanks");
-            MatchingSentence.Add("Bạn có khỏe không?", "How's it going");
-            MatchingSentence.Add("Rất vui được gặp bạn", "Nice to meet you");
+            for (int i = 0; i < Item.Input.Count; i++)
+            {
+                MatchingSentence.Add(Item.Answers[i].Text, Item.Input[i]);
+            }
+
             //
             rectTxt04 = new Rect();
             rectTxt05 = new Rect();
@@ -64,33 +71,38 @@ namespace Naxam.Busuu.Droid.Profile.Views
             firstTouchTxt04 = false;
             firstTouchTxt05 = false;
             firstTouchTxt06 = false;
-            _root = (ViewGroup)FindViewById(Resource.Id.root);
+            _root = view.FindViewById<RelativeLayout>(Resource.Id.root);
             //
-            txtGuide = (TextView)FindViewById(Resource.Id.txtGuide);
-            //
-            btnContinue = FindViewById<Button>(Resource.Id.btnContinue);
+            txtGuide = view.FindViewById<TextView>(Resource.Id.txtGuide);
+            txtGuide.Text = Item.Title;
+
+            btnContinue = view.FindViewById<Button>(Resource.Id.btnContinue);
             btnContinue.Visibility = ViewStates.Gone;
+            btnContinue.Click += (s, e) =>
+            {
+                NextClicked?.Invoke(btnContinue, correct);
+            };
             //
-            txt01Move = (TextView)FindViewById(Resource.Id.txt01Move);
-            txt02Move = (TextView)FindViewById(Resource.Id.txt02Move);
-            txt03Move = (TextView)FindViewById(Resource.Id.txt03Move);
+            txt01Move = view.FindViewById<Button>(Resource.Id.txt01Move);
+            txt02Move = view.FindViewById<Button>(Resource.Id.txt02Move);
+            txt03Move = view.FindViewById<Button>(Resource.Id.txt03Move);
             //
             txt01Move.Elevation = 8;
             txt02Move.Elevation = 8;
             txt03Move.Elevation = 8;
             //
-            txt03 = (TextView)FindViewById(Resource.Id.txt03);
-            txt02 = (TextView)FindViewById(Resource.Id.txt02);
-            txt01 = (TextView)FindViewById(Resource.Id.txt01);
-            txt04 = (TextView)FindViewById(Resource.Id.txt04);
-            txt05 = (TextView)FindViewById(Resource.Id.txt05);
-            txt06 = (TextView)FindViewById(Resource.Id.txt06);
+            txt03 = view.FindViewById<Button>(Resource.Id.txt03);
+            txt02 = view.FindViewById<Button>(Resource.Id.txt02);
+            txt01 = view.FindViewById<Button>(Resource.Id.txt01);
+            txt04 = view.FindViewById<Button>(Resource.Id.txt04);
+            txt05 = view.FindViewById<Button>(Resource.Id.txt05);
+            txt06 = view.FindViewById<Button>(Resource.Id.txt06);
 
             string key01, key02, key03, val01, val02, val03;
             Random random = new Random();
             //
             key01 = MatchingSentence.Keys.ElementAt(random.Next(0, 3));
-            key02 = MatchingSentence.Keys.Where(d => d != key01).ElementAt(random.Next(0,2));
+            key02 = MatchingSentence.Keys.Where(d => d != key01).ElementAt(random.Next(0, 2));
             key03 = MatchingSentence.Keys.Where(d => d != key01 && d != key02).FirstOrDefault();
             //
             val01 = MatchingSentence.Values.ElementAt(random.Next(0, 3));
@@ -116,23 +128,23 @@ namespace Naxam.Busuu.Droid.Profile.Views
             txt02Move.SetOnTouchListener(this);
             txt03Move.SetOnTouchListener(this);
 
-           
+
         }
         private void ChangeColorByValue(Rect rect, TextView fixedTxtView)// remembering pass extactly
         {
             // getting a current textview collising with 04, 05, 06
-           TextView txtViewMove=  getTxtMoveCollision(rect);
-            if(MatchingSentence[fixedTxtView.Text] == txtViewMove.Text)
+            TextView txtViewMove = getTxtMoveCollision(rect);
+            if (MatchingSentence[fixedTxtView.Text] == txtViewMove.Text)
             {
                 txtViewMove.SetBackgroundColor(Color.ParseColor("#74B825"));// true
             }
             else
             {
-                
+
                 txtViewMove.SetBackgroundColor(Color.ParseColor("#EB4431"));// false
             }
 
-           
+
 
         }
 
@@ -476,7 +488,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
                     if (view.Id == Resource.Id.txt01Move)
                     {// touching move 1
                         txt01Move.BringToFront();
-                         txt01Move.SetBackgroundColor(new Color(255, 255, 255, 178));
+                        txt01Move.SetBackgroundColor(new Color(255, 255, 255, 178));
 
                         if (hasCollision040506(rectMove01) == false)
                         {

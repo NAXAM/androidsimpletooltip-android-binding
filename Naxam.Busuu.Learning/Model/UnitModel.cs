@@ -14,7 +14,8 @@ namespace Naxam.Busuu.Learning.Model
             Unknow,
             SelectWord,
             FillSentence,
-            ChooseWord
+            ChooseWord,
+            MatchingSentence
         }
 
         private UnitType _Type;

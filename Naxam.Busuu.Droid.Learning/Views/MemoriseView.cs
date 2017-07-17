@@ -27,7 +27,8 @@ namespace Naxam.Busuu.Droid.Learning.Views
         LinearLayout layoutStep, layout;
         int Corrrect;
         Android.Support.V7.App.ActionBar actionBar;
-
+        Android.Support.V4.App.FragmentTransaction transaction;
+        Android.Support.V4.App.FragmentManager manager;
         protected override void OnViewModelSet()
         {
             SetContentView(Resource.Layout.memorise_activity);
@@ -51,12 +52,15 @@ namespace Naxam.Busuu.Droid.Learning.Views
             };
             Item = Item ?? (ViewModel as MemoriseViewModel).Exercise;
             prgStep.Max = Item.Units.Count;
+            manager = SupportFragmentManager;
 
             InitFragment();
         }
 
-        private void AddFragment(Android.Support.V4.App.FragmentTransaction transaction, MemoriseFragmentBase fragment)
+        private void AddFragment(MemoriseFragmentBase fragment)
         {
+            
+            transaction = manager.BeginTransaction();
             fragment.NextClicked += (s, e) =>
             {
                 if (e)
@@ -76,9 +80,6 @@ namespace Naxam.Busuu.Droid.Learning.Views
 
         private void InitFragment()
         {
-            var manager = SupportFragmentManager;
-            Android.Support.V4.App.FragmentTransaction transaction = manager.BeginTransaction();
-
             if (PositionStep == prgStep.Max)
             {
                 actionBar.Hide();
@@ -95,21 +96,21 @@ namespace Naxam.Busuu.Droid.Learning.Views
 
             var temp = Item.Units[PositionStep];
 
-
             switch (temp.Type)
             {
                 case UnitModel.UnitType.ChooseWord:
-                    AddFragment(transaction, new MemoChooseWord(temp));
+                    AddFragment(new MemoChooseWord(temp));
                     break;
                 case UnitModel.UnitType.FillSentence:
-                    AddFragment(transaction, new MemoFillSentence(temp));
+                    AddFragment(new MemoFillSentence(temp));
                     break;
                 case UnitModel.UnitType.SelectWord:
-                    AddFragment(transaction, new MemoSelectWord(temp));
+                    AddFragment(new MemoSelectWord(temp));
                     break;
-
+                case UnitModel.UnitType.MatchingSentence:
+                    AddFragment(new MemoMatchingSentence(temp));
+                    break;
             }
-
         }
     }
 }

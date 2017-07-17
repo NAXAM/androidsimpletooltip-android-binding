@@ -4042,7 +4042,7 @@ namespace Naxam.Busuu.Droid.Profile
 			public static int MainActivity = 2130903108;
 			
 			// aapt resource value: 0x7f030045
-			public static int MatchingSentenceActivity = 2130903109;
+			public static int matching_sentence_layout = 2130903109;
 			
 			// aapt resource value: 0x7f030046
 			public static int media_controller = 2130903110;

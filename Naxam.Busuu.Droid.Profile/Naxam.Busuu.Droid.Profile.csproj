@@ -148,9 +148,7 @@
     <Compile Include="Views\ChooseCountryView.cs" />
     <Compile Include="Views\ChooseLanguageView.cs" />
     <Compile Include="Views\ConfirmChooseLanguageView.cs" />
-    <Compile Include="Views\FillSentenceAudioView.cs" />
     <Compile Include="Views\ForgotPasswordView.cs" />
-    <Compile Include="Views\MachingSentenceView.cs" />
     <Compile Include="Views\RegisterView.cs" />
     <Compile Include="Views\LoginView.cs" />
     <Compile Include="Views\ScreenSlidePageFragment.cs" />
@@ -180,9 +178,6 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\StartPage.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\MatchingSentenceActivity.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\FillSentenceAudio.axml">
