@@ -89,6 +89,9 @@
     <Reference Include="MvvmCross.Platform">
       <HintPath>..\packages\MvvmCross.Platform.5.0.6\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
     <Reference Include="MvvmCross.Platform.iOS">
       <HintPath>..\packages\MvvmCross.Platform.5.0.6\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
     </Reference>
@@ -122,10 +125,25 @@
     <Reference Include="MvvmCross.Plugins.File.iOS">
       <HintPath>..\packages\MvvmCross.Plugin.File.5.0.6\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\packages\WebP.Touch.1.0.3\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\graystar.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\graystar.imageset\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\graystar.imageset\" />
     <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%402x.png" />
     <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%403x.png" />
@@ -190,16 +208,20 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Setup.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Naxam.Busuu.iOS.Review\Naxam.Busuu.iOS.Review.csproj">
+      <Project>{1030A24B-B42C-4076-B166-F7E3A875E071}</Project>
+      <Name>Naxam.Busuu.iOS.Review</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
+      <Project>{BAAA7577-3BE2-423B-A051-61B47489B015}</Project>
+      <Name>Naxam.Busuu.Review</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
       <Project>{6255CDA3-B742-4D16-AC6C-03E414EAC000}</Project>
       <Name>Naxam.Busuu.Social</Name>
