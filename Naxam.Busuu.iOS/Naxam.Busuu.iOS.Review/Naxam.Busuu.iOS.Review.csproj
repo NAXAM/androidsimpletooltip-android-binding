@@ -206,6 +206,9 @@
     <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button.png" />
     <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\back_arrow.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\back_arrow%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Nokia-tune-Nokia-tune.mp3" />

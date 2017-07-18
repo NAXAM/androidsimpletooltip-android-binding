@@ -19,16 +19,18 @@ using System.Linq;
 namespace Naxam.Busuu.iOS.Review.Views
 {
     [MvxFromStoryboard(StoryboardName = "Review")]
-    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource, IUISearchResultsUpdating
+    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource, IUISearchBarDelegate
     {
         public ReviewAllView(IntPtr handle) : base(handle)
         {
         }
 
-        UISearchController searchController;
         CGPoint oriPoint;
+        UISearchBar SearchBar;
+        UIBarButtonItem SearchBarButtonItem, TitleBarButtonItem;
+        UILabel TitleLabel;
         bool isAll = true;
-        List<ReviewModel> AllReviews, FavoriteReviews, FilteredReviews;
+        List<ReviewModel> AllReviews, FavoriteReviews = null, FilteredReviews = null;
         ActionButton actionButton;
         public static bool isPlayingAudio;
 
@@ -60,7 +62,7 @@ namespace Naxam.Busuu.iOS.Review.Views
             actionButton.BackgroundColor = UIColor.Blue;
 
             // Perform any additional setup after loading the view, typically from a nib.
-            NavigationItem.Title = "Review";
+
             ReviewTableView.RowHeight = 60;
 
             AllReviews = this.ViewModel.Reviews;
@@ -68,14 +70,21 @@ namespace Naxam.Busuu.iOS.Review.Views
             UpdateKeyFromList(AllReviews);
 
             ReviewTableView.WeakDataSource = this;
-            searchController = new UISearchController((UIViewController)null);
-            searchController.SearchResultsUpdater = this;
-            searchController.DimsBackgroundDuringPresentation = false;
-            searchController.SearchBar.WeakDelegate = this;
+            SearchBar = new UISearchBar();
+            SearchBar.Delegate = this;
+            SearchBar.SearchBarStyle = UISearchBarStyle.Minimal;
+			
+            TitleLabel = new UILabel(new CGRect(0, 0, 150, 30));
+            TitleLabel.BackgroundColor = UIColor.Clear;
+            TitleLabel.Font = UIFont.FromName("HelveticaNeue-Medium",18);
+            TitleLabel.TextAlignment = UITextAlignment.Left;
+            TitleLabel.TextColor = UIColor.White;
+            TitleLabel.Text = "Review";
 
-			ReviewTableView.TableHeaderView = searchController.SearchBar;
-			DefinesPresentationContext = true;
-			searchController.SearchBar.SizeToFit();
+            SearchBarButtonItem = new UIBarButtonItem(UIBarButtonSystemItem.Search, SearchHandler);
+            TitleBarButtonItem = new UIBarButtonItem(TitleLabel);
+            NavigationItem.LeftBarButtonItem = TitleBarButtonItem;
+            NavigationItem.RightBarButtonItem = SearchBarButtonItem;
         }
 
         void UpdateKeyFromList(List<ReviewModel> list)
@@ -90,6 +99,40 @@ namespace Naxam.Busuu.iOS.Review.Views
 					   orderby s.Title[0].ToString().ToUpper() ascending
 					   group s by s.Title[0] into g
 					   select g.Key.ToString().ToUpper()).ToArray();
+        }
+
+        void SearchHandler(object sender, EventArgs e)
+        {
+            ShowSearchBar();
+        }
+
+        private void ShowSearchBar()
+        {
+            SearchBar.Alpha = 0;
+            UIView.Animate(0.5f, ()=>
+            {
+                NavigationItem.TitleView = SearchBar;
+                
+                NavigationItem.SetLeftBarButtonItem(new UIBarButtonItem(UIImage.FromBundle("back_arrow"), UIBarButtonItemStyle.Plain, (sender, e) => {
+                    HideSearchBar();
+                }), true);
+				NavigationItem.SetRightBarButtonItem(null, true);
+                this.SearchBar.Alpha = 1;
+            }, ()=>{
+                SearchBar.BecomeFirstResponder();
+            });
+        }
+
+        void HideSearchBar()
+        {
+            UIView.Animate(0.2f,() => {
+                SearchBar.Alpha = 0;
+                NavigationItem.SetRightBarButtonItem(SearchBarButtonItem, true);
+                NavigationItem.SetLeftBarButtonItem(TitleBarButtonItem, true);
+                SearchBar.ResignFirstResponder();
+            },() => {
+                
+            });
         }
 
         public override void ViewDidLayoutSubviews()
@@ -122,12 +165,15 @@ namespace Naxam.Busuu.iOS.Review.Views
                 btnAll.SetTitleColor(UIColor.FromRGB(86, 156, 201), UIControlState.Normal);
                 btnFavorite.SetTitleColor(UIColor.LightGray, UIControlState.Normal);
             });
+            FavoriteReviews = null;
         }
 
         partial void btnFavorite_TouchUpInside(NSObject sender)
         {
             if (!isAll) return;
             isAll = false;
+            FavoriteReviews = new List<ReviewModel>();
+            FilterFavorite();
             UpdateKeyFromList(FavoriteReviews);
             ReviewTableView.ReloadData();
 
@@ -214,6 +260,20 @@ namespace Naxam.Busuu.iOS.Review.Views
 			FilterContentForSearchText(searchController.SearchBar.Text);
 		}
 
+        [Export("searchBarSearchButtonClicked:")]
+        public void SearchButtonClicked(UISearchBar searchBar)
+        {
+            FilteredReviews = new List<ReviewModel>();
+            FilterContentForSearchText(SearchBar.Text);
+        }
+
+        [Export("searchBar:textDidChange:")]
+        public void TextChanged(UISearchBar searchBar, string searchText)
+        {
+			FilteredReviews = new List<ReviewModel>();
+			FilterContentForSearchText(SearchBar.Text);
+        }
+
         private void FilterContentForSearchText(string text)
         {
 			if (FilteredReviews != null)
@@ -223,6 +283,16 @@ namespace Naxam.Busuu.iOS.Review.Views
 					AllReviews.Where(e =>
 									string.IsNullOrWhiteSpace(text)
 									|| e.Title.ToUpper().Contains(text.ToUpper())));
+			}
+			ReviewTableView.ReloadData();
+        }
+
+        private void FilterFavorite()
+        {
+            if (FavoriteReviews!=null)
+            {
+				FavoriteReviews.AddRange(
+					AllReviews.Where(e => e.IsFavorite));
 			}
 			ReviewTableView.ReloadData();
         }
