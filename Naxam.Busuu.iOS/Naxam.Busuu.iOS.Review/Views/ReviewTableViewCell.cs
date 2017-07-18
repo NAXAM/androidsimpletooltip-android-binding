@@ -103,6 +103,12 @@ namespace Naxam.Busuu.iOS.Review.Views
             {
                 StopRingtone();
             }
+
+			UIView.Animate(0.1f, () =>
+			{
+				btnPlay.Transform = CGAffineTransform.MakeRotation(0.3f);
+			});
+
 			CABasicAnimation scaleAnimation = AnimateKeyPath("transform.scale",
 																   0.0001f,
 																   1.0f,

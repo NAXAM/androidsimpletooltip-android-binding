@@ -70,7 +70,7 @@ namespace Naxam.Ausuu.IOS.Review.Floaty
             if (!String.IsNullOrEmpty(text))
             {
                 Label = new UILabel();
-                Label.Font = UIFont.FromName("HelveticaNeue-Medium", 13);
+                Label.Font = UIFont.FromName("HelveticaNeue-Medium", 12);
                 Label.TextColor = UIColor.Black;
                 Label.TextAlignment = UITextAlignment.Right;
                 Label.Text = text;

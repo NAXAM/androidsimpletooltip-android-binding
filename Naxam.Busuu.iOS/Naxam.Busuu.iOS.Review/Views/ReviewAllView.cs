@@ -42,10 +42,10 @@ namespace Naxam.Busuu.iOS.Review.Views
             var btnContinueLearning = new ActionButtonItem("CONTINUE LEARNING", UIImage.FromBundle("fab_menu_row_learning"), UIColor.White);
             btnContinueLearning.ActionPerform = HandleAction;
 
-            var btnAll = new ActionButtonItem("TEST ALL", UIImage.FromBundle("fab_menu_row_all"), UIColor.Gray);
+            var btnAll = new ActionButtonItem("TEST ALL", UIImage.FromBundle("fab_menu_row_all"), UIColor.Blue);
             btnAll.ActionPerform = HandleAction;
 
-			var btnStrength = new ActionButtonItem("STRENGTHEN VOCABULARY", UIImage.FromBundle("fab_menu_row_weak"), UIColor.Gray);
+			var btnStrength = new ActionButtonItem("STRENGTHEN VOCABULARY", UIImage.FromBundle("fab_menu_row_weak"), UIColor.Red);
 			btnStrength.ActionPerform = HandleAction;
 
 			var btnTestFavorite = new ActionButtonItem("TEST FAVORITES", UIImage.FromBundle("fab_menu_row_fav"), UIColor.Gray);
@@ -57,11 +57,10 @@ namespace Naxam.Busuu.iOS.Review.Views
             };
             actionButton.SetTitle("+", UIControlState.Normal);
 
-            actionButton.BackgroundColor = UIColor.Orange;
+            actionButton.BackgroundColor = UIColor.Blue;
 
             // Perform any additional setup after loading the view, typically from a nib.
-         
-            this.NavigationItem.TitleView = uiViewButton;
+            NavigationItem.Title = "Review";
             ReviewTableView.RowHeight = 60;
 
             AllReviews = this.ViewModel.Reviews;
@@ -96,9 +95,6 @@ namespace Naxam.Busuu.iOS.Review.Views
         public override void ViewDidLayoutSubviews()
         {
             base.ViewDidLayoutSubviews();
-            uiViewButton.Layer.CornerRadius = uiViewButton.Bounds.Height / 2;
-            uiViewSlide.Layer.CornerRadius = uiViewSlide.Bounds.Height / 2;
-            btnAll.SetTitleColor(UIColor.White, UIControlState.Normal);
             oriPoint = uiViewSlide.Center;
         }
 
@@ -119,15 +115,13 @@ namespace Naxam.Busuu.iOS.Review.Views
             isAll = true;
             UpdateKeyFromList(AllReviews);
             ReviewTableView.ReloadData();
-
-            UIView.BeginAnimations("slideAnimation");
-            UIView.SetAnimationDuration(0.2);
-            UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
-            UIView.SetAnimationDelegate(this);
-            UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
-            uiViewSlide.Center = new CGPoint(oriPoint.X, oriPoint.Y);
-            UIView.CommitAnimations();
-            lbButtonClicked.Text = "";
+            UIView.Animate(0.2, () =>
+            {
+                uiViewSlide.Center = new CGPoint(btnAll.Frame.GetMidX(), btnAll.Frame.GetMaxY());
+                uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
+                btnAll.SetTitleColor(UIColor.FromRGB(86, 156, 201), UIControlState.Normal);
+                btnFavorite.SetTitleColor(UIColor.LightGray, UIControlState.Normal);
+            });
         }
 
         partial void btnFavorite_TouchUpInside(NSObject sender)
@@ -137,29 +131,13 @@ namespace Naxam.Busuu.iOS.Review.Views
             UpdateKeyFromList(FavoriteReviews);
             ReviewTableView.ReloadData();
 
-            UIView.BeginAnimations("slideAnimation");
-            UIView.SetAnimationDuration(0.2);
-            UIView.SetAnimationCurve(UIViewAnimationCurve.EaseInOut);
-            UIView.SetAnimationDelegate(this);
-            UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
-            uiViewSlide.Center = new CGPoint(oriPoint.X + uiViewSlide.Bounds.Width, oriPoint.Y);
-            UIView.CommitAnimations();
-            lbButtonClicked.Text = "";
-        }
-
-        [Export("animationDidStop:finished:context:")]
-        void SlideStopped(NSString animationID, NSNumber finished, NSObject context)
-        {
-            if (!isAll)
-            {
-                uiViewSlide.Center = new CGPoint(oriPoint.X + uiViewSlide.Bounds.Width, oriPoint.Y);
-                lbButtonClicked.Text = "Favorites";
-            }
-            else
-            {
-                uiViewSlide.Center = new CGPoint(oriPoint.X, oriPoint.Y);
-                lbButtonClicked.Text = "All";
-            }
+			UIView.Animate(0.2, () =>
+			{
+                uiViewSlide.Center = new CGPoint(btnFavorite.Frame.GetMidX(), btnFavorite.Frame.GetMaxY());
+				uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
+                btnFavorite.SetTitleColor(UIColor.FromRGB(86,156,201), UIControlState.Normal);
+                btnAll.SetTitleColor(UIColor.LightGray, UIControlState.Normal);
+			});
         }
 
         public override void DidReceiveMemoryWarning()
