@@ -34,7 +34,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
         float xTxt06, yTxt06;
 
         Button btnContinue;
-        bool firstTouchMove01, firstTouchMove02, firstTouchMove03, firstTouchTxt04, firstTouchTxt05, firstTouchTxt06, correct;
+        bool firstTouchMove01, firstTouchMove02, firstTouchMove03, firstTouchTxt04, firstTouchTxt05, firstTouchTxt06, correct = true;
 
         ViewGroup _root;
         Rect rectTxt04, rectTxt05, rectTxt06, rectMove01, rectMove02, rectMove03;
@@ -83,31 +83,39 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                 NextClicked?.Invoke(btnContinue, correct);
             };
             //
-            txt01Move = view.FindViewById<Button>(Resource.Id.txt01Move);
-            txt02Move = view.FindViewById<Button>(Resource.Id.txt02Move);
-            txt03Move = view.FindViewById<Button>(Resource.Id.txt03Move);
+            txt01Move = view.FindViewById<TextView>(Resource.Id.txt01Move);
+            txt02Move = view.FindViewById<TextView>(Resource.Id.txt02Move);
+            txt03Move = view.FindViewById<TextView>(Resource.Id.txt03Move);
             //
-            txt01Move.Elevation = 8;
-            txt02Move.Elevation = 8;
-            txt03Move.Elevation = 8;
+            float elevation = Util.Util.PxFromDp(Context, 2);
+            txt01Move.Elevation = elevation;
+            txt02Move.Elevation = elevation;
+            txt03Move.Elevation = elevation;
             //
-            txt03 = view.FindViewById<Button>(Resource.Id.txt03);
-            txt02 = view.FindViewById<Button>(Resource.Id.txt02);
-            txt01 = view.FindViewById<Button>(Resource.Id.txt01);
-            txt04 = view.FindViewById<Button>(Resource.Id.txt04);
-            txt05 = view.FindViewById<Button>(Resource.Id.txt05);
-            txt06 = view.FindViewById<Button>(Resource.Id.txt06);
+            txt03 = view.FindViewById<TextView>(Resource.Id.txt03);
+            txt02 = view.FindViewById<TextView>(Resource.Id.txt02);
+            txt01 = view.FindViewById<TextView>(Resource.Id.txt01);
+            txt04 = view.FindViewById<TextView>(Resource.Id.txt04);
+            txt05 = view.FindViewById<TextView>(Resource.Id.txt05);
+            txt06 = view.FindViewById<TextView>(Resource.Id.txt06);
 
             string key01, key02, key03, val01, val02, val03;
             Random random = new Random();
             //
+            var listempKey = MatchingSentence.Keys.ToList();
             key01 = MatchingSentence.Keys.ElementAt(random.Next(0, 3));
-            key02 = MatchingSentence.Keys.Where(d => d != key01).ElementAt(random.Next(0, 2));
-            key03 = MatchingSentence.Keys.Where(d => d != key01 && d != key02).FirstOrDefault();
+            listempKey.Remove(key01);
+            key02 = listempKey.ElementAt(random.Next(0, 2));
+            listempKey.Remove(key02);
+            key03 = listempKey[0];
             //
             val01 = MatchingSentence.Values.ElementAt(random.Next(0, 3));
-            val02 = MatchingSentence.Values.Where(d => d != val01).ElementAt(random.Next(0, 2));
-            val03 = MatchingSentence.Values.Where(d => d != val01 && d != val02).FirstOrDefault();
+
+            var listemp = MatchingSentence.Values.ToList();
+            listemp.Remove(val01);
+            val02 = listemp.ElementAt(random.Next(0, 2));
+            listemp.Remove(val02);
+            val03 = listemp[0];
             //
             // above: values
             // below: keys
@@ -140,7 +148,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
             }
             else
             {
-
+                correct = false;
                 txtViewMove.SetBackgroundColor(Color.ParseColor("#EB4431"));// false
             }
 
@@ -479,6 +487,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                         ChangeColorByValue(rectTxt06, txt06);
                         //
                         txtGuide.Visibility = ViewStates.Gone;
+                        btnContinue.BringToFront();
                         btnContinue.Visibility = ViewStates.Visible;
                         //Toast.MakeText(this, "Done nhé thảo đẹp trai!", ToastLength.Long).Show();
                     }

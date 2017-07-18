@@ -13,11 +13,14 @@ using Android.Animation;
 using static Android.Resource;
 using Java.Lang;
 using Android.Views.Animations;
+using Naxam.Busuu.Droid.Learning.Control.Memo;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class Summary : Android.Support.V4.App.Fragment
+    public class Summary : MemoriseFragmentBase
     {
+        public override event EventHandler<bool> NextClicked;
+        public event EventHandler<bool> TryAgainClicked;
         public int Correct;
         public int Total;
         private bool IsCompleted;
@@ -25,12 +28,11 @@ namespace Naxam.Busuu.Droid.Learning.Control
         {
             this.Correct = Correct;
             this.Total = Total;
-            if (Correct == Total - 1)
+            if (Correct >= Total - 1)
             {
                 IsCompleted = true;
             }
         }
-
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -57,7 +59,14 @@ namespace Naxam.Busuu.Droid.Learning.Control
             txtTotal.Text = "trên " + Total;
             txtResult.Text = IsCompleted ? "Hãy tiếp tục!" : "bạn cần ít nhất " + (Total - 1) + " Điểm để vượt qua";
             btnTryAgain.Visibility = IsCompleted ? ViewStates.Gone : ViewStates.Visible;
-
+            btnTryAgain.Click += (s, e) =>
+            {
+                TryAgainClicked?.Invoke(btnTryAgain, true);
+            };
+            btnNext.Click += (s, e) =>
+            {
+                NextClicked?.Invoke(btnNext, IsCompleted);
+            };
             ValueAnimator animator = ValueAnimator.OfInt(0, Correct);
             ScaleAnimation scaleUp = new ScaleAnimation(1.0f, 1.03f, 1.0f, 1.03f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f);
             scaleUp.Duration = 75;

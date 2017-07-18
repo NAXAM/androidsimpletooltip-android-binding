@@ -4135,13 +4135,7 @@ namespace Naxam.Busuu.Droid.Profile
 			public static int test_fill_list_sentence_layout = 2130903139;
 			
 			// aapt resource value: 0x7f030064
-			public static int test_fill_sentence_layout = 2130903140;
-			
-			// aapt resource value: 0x7f030065
-			public static int test_layout = 2130903141;
-			
-			// aapt resource value: 0x7f030066
-			public static int vocabulary_question = 2130903142;
+			public static int vocabulary_question = 2130903140;
 			
 			static Layout()
 			{
