@@ -12,6 +12,7 @@ using Android.Widget;
 using Android.Animation;
 using static Android.Resource;
 using Java.Lang;
+using Android.Views.Animations;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
@@ -37,7 +38,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             InitComponent(view);
             return view;
         }
-
+        bool busy;
         TextView txtStatus, txtMark, txtTotal, txtTip, txtResult;
         Button btnNext, btnTryAgain;
         RelativeLayout layoutMark;
@@ -58,35 +59,56 @@ namespace Naxam.Busuu.Droid.Learning.Control
             btnTryAgain.Visibility = IsCompleted ? ViewStates.Gone : ViewStates.Visible;
 
             ValueAnimator animator = ValueAnimator.OfInt(0, Correct);
-            ValueAnimator animatorBackground = ValueAnimator.OfInt(0, 3);
-            AnimatorSet setAnim = new AnimatorSet();
-            setAnim.Play(animator).After(animatorBackground);
-            
-            animatorBackground.SetDuration(500);
-            animator.SetDuration(500 * Correct);
-            setAnim.Start();
-            animatorBackground.AddUpdateListener(new AnimatorUpdateListener((anim) =>
+            ScaleAnimation scaleUp = new ScaleAnimation(1.0f, 1.03f, 1.0f, 1.03f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f);
+            scaleUp.Duration = 75;
+            ScaleAnimation scaleDown = new ScaleAnimation(1.03f, 1.0f, 1.03f, 1.0f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f);
+            scaleUp.Duration = 75;
+            scaleUp.SetAnimationListener(new AnimationListener
             {
-                txtMark.Text = anim.AnimatedValue + "";
-                if ((int)anim.AnimatedValue % 2 == 0)
+                AnimationEnd = (anim) =>
                 {
+                    if (scaleDown != null)
+                        layoutMark.StartAnimation(scaleDown);
+                }
+            });
+            scaleDown.SetAnimationListener(new AnimationListener
+            {
+                AnimationEnd = (anim) =>
+                {
+                    if (scaleUp != null)
+                        layoutMark.StartAnimation(scaleUp);
+                }
+            });
 
-                    layoutMark.LayoutParameters.Width += 20;
-                    layoutMark.LayoutParameters.Height += 20;
-                }
-                else
-                {
-                    layoutMark.LayoutParameters.Width -= 20;
-                    layoutMark.LayoutParameters.Height -= 20;
-                }
-            }));
+            AnimatorSet setAnim = new AnimatorSet();
+
+            int dpDistance = (int)Util.Util.PxFromDp(Context, 2);
+            animator.SetDuration(300 * (Correct + 1));
+
+
             animator.AddUpdateListener(new AnimatorUpdateListener((anim) =>
             {
                 txtMark.Text = anim.AnimatedValue + "";
-                if ((int)anim.AnimatedValue == Total - 1)
-                { 
+                if ((int)anim.AnimatedValue == Correct - 1 && !busy)
+                {
+                    busy = true;
+                    layoutMark.StartAnimation(scaleUp);
                 }
             }));
+
+            animator.AddListener(new AnimatorListener
+            {
+                AnimationEndHandle = (anim) =>
+                {
+                    layoutMark.ClearAnimation();
+                    scaleUp.Cancel();
+                    scaleDown.Cancel();
+                    scaleDown = null;
+                    scaleUp = null;
+                }
+            });
+
+            animator.Start();
         }
     }
 }

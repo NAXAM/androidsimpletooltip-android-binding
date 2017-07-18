@@ -210,9 +210,7 @@
     <Compile Include="Views\MemoriseView.cs" />
     <Compile Include="Views\PremiumArrayAdapter.cs" />
     <Compile Include="Views\PremiumView.cs" />
-    <Compile Include="Views\TestFillSentenceView.cs" />
     <Compile Include="Views\TestListView.cs" />
-    <Compile Include="Views\TestView.cs" />
     <Compile Include="Views\TrueFalseHearQuestionView.cs" />
     <Compile Include="Transformers\ForegroundToBackgroundTransformer.cs" />
   </ItemGroup>
@@ -231,13 +229,7 @@
     <AndroidResource Include="Resources\Layout\MainActivity.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\Layout\test_layout.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\Layout\test_fill_list_sentence_layout.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\Layout\test_fill_sentence_layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\HearAndRepeat.axml">

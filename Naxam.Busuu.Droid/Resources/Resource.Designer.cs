@@ -4636,8 +4636,6 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.summary_layout = global::Naxam.Busuu.Droid.Resource.Layout.summary_layout;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.support_simple_spinner_dropdown_item = global::Naxam.Busuu.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.test_fill_list_sentence_layout = global::Naxam.Busuu.Droid.Resource.Layout.test_fill_list_sentence_layout;
-			global::Naxam.Busuu.Droid.Learning.Resource.Layout.test_fill_sentence_layout = global::Naxam.Busuu.Droid.Resource.Layout.test_fill_sentence_layout;
-			global::Naxam.Busuu.Droid.Learning.Resource.Layout.test_layout = global::Naxam.Busuu.Droid.Resource.Layout.test_layout;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.vocabulary_question = global::Naxam.Busuu.Droid.Resource.Layout.vocabulary_question;
 			global::Naxam.Busuu.Droid.Learning.Resource.Menu.menu_bottom = global::Naxam.Busuu.Droid.Resource.Menu.menu_bottom;
 			global::Naxam.Busuu.Droid.Learning.Resource.Raw.beelden = global::Naxam.Busuu.Droid.Resource.Raw.beelden;

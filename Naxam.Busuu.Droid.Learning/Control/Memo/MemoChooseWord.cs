@@ -62,9 +62,15 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
 
             for (int i = 0; i < Item.Answers.Count; i++)
             {
-                Button btnAnswer = new Button(Context);
+                TextView btnAnswer = new TextView(Context);
+                if (Build.VERSION.SdkInt > BuildVersionCodes.Kitkat)
+                {
+                    btnAnswer.Elevation = Util.Util.PxFromDp(Context, 2);
+                }
                 var temp = Item.Answers[i];
-                LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(WindowManagerLayoutParams.MatchParent, WindowManagerLayoutParams.WrapContent);
+                LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(WindowManagerLayoutParams.MatchParent, (int)Util.Util.PxFromDp(Context, 48));
+                param.Gravity = GravityFlags.Center;
+                btnAnswer.Gravity = GravityFlags.Center;
                 param.RightMargin = 64;
                 param.LeftMargin = 64;
                 param.BottomMargin = 32;
@@ -76,7 +82,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                 vocabularyQuestionLayout.AddView(btnAnswer);
                 btnAnswer.Click += (s, e) =>
                 {
-                    btnAnswer.SetBackgroundColor(temp.Value ? Color.ParseColor("") : Color.ParseColor(""));
+                    btnAnswer.SetBackgroundColor(temp.Value ? Color.ParseColor("#74B826") : Color.ParseColor("#E54532"));
                     btnAnswer.SetTextColor(Color.White);
 
                     correct = temp.Value;
@@ -96,13 +102,30 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                         translate4.Duration = 100;
                         translate4.FillAfter = true;
 
-                        AnimationSet set = new AnimationSet(true);
-                        AnimatorSet setAnim = new AnimatorSet();
-                        set.AddAnimation(translate);
-                        set.AddAnimation(translate2);
-                        set.AddAnimation(translate3);
-                        set.AddAnimation(translate4);
-                        set.Start();
+                        translate.SetAnimationListener(new AnimationListener {
+                            AnimationEnd = (anim) => {
+                                translate2.Start();
+                            }
+                        });
+                        translate.SetAnimationListener(new AnimationListener
+                        {
+                            AnimationEnd = (anim) => {
+                                translate2.Start();
+                            }
+                        });
+                        translate2.SetAnimationListener(new AnimationListener
+                        {
+                            AnimationEnd = (anim) => {
+                                translate3.Start();
+                            }
+                        });
+                        translate3.SetAnimationListener(new AnimationListener
+                        {
+                            AnimationEnd = (anim) => {
+                                translate4.Start();
+                            }
+                        });
+                    
 
 
                         btnAnswer.StartAnimation(translate);

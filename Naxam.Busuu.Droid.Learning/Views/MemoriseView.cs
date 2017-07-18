@@ -84,8 +84,10 @@ namespace Naxam.Busuu.Droid.Learning.Views
             {
                 actionBar.Hide();
                 layoutStep.Visibility = ViewStates.Gone;
+                
                 ((LinearLayout.LayoutParams)layout.LayoutParameters).BottomMargin = 0;
                 Summary summary = new Summary(Corrrect, PositionStep);
+                transaction = manager.BeginTransaction();
                 transaction.Replace(Resource.Id.layout, summary, PositionStep + "");
                 transaction.Commit();
                 return;

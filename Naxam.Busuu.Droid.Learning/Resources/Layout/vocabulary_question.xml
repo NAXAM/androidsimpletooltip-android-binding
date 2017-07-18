@@ -43,9 +43,8 @@
         android:id="@+id/bt_vocabulary_continue"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@drawable/corner_button_green"
-        android:text="CONTINUE"
-        android:textColor="#ffffff"
+        style="@style/StyleNextButton"
+        android:text="CONTINUE" 
         android:layout_gravity="bottom"
         android:visibility="invisible"
         android:layout_margin="16dp"/>

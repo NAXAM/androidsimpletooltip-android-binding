@@ -4021,13 +4021,7 @@ namespace Naxam.Busuu.Droid.Learning
 			public static int test_fill_list_sentence_layout = 2130903128;
 			
 			// aapt resource value: 0x7f030059
-			public static int test_fill_sentence_layout = 2130903129;
-			
-			// aapt resource value: 0x7f03005a
-			public static int test_layout = 2130903130;
-			
-			// aapt resource value: 0x7f03005b
-			public static int vocabulary_question = 2130903131;
+			public static int vocabulary_question = 2130903129;
 			
 			static Layout()
 			{
