@@ -44,6 +44,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
         TextView txtStatus, txtMark, txtTotal, txtTip, txtResult;
         Button btnNext, btnTryAgain;
         RelativeLayout layoutMark;
+
         private void InitComponent(View view)
         {
             txtStatus = view.FindViewById<TextView>(Resource.Id.txtStatus);
@@ -69,9 +70,9 @@ namespace Naxam.Busuu.Droid.Learning.Control
             };
             ValueAnimator animator = ValueAnimator.OfInt(0, Correct);
             ScaleAnimation scaleUp = new ScaleAnimation(1.0f, 1.03f, 1.0f, 1.03f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f);
-            scaleUp.Duration = 75;
+            scaleUp.Duration = 100;
             ScaleAnimation scaleDown = new ScaleAnimation(1.03f, 1.0f, 1.03f, 1.0f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f, Android.Views.Animations.Dimension.RelativeToSelf, 0.5f);
-            scaleUp.Duration = 75;
+            scaleDown.Duration = 100;
             scaleUp.SetAnimationListener(new AnimationListener
             {
                 AnimationEnd = (anim) =>
@@ -84,21 +85,24 @@ namespace Naxam.Busuu.Droid.Learning.Control
             {
                 AnimationEnd = (anim) =>
                 {
-                    if (scaleUp != null)
-                        layoutMark.StartAnimation(scaleUp);
+
                 }
             });
 
-            AnimatorSet setAnim = new AnimatorSet();
 
             int dpDistance = (int)Util.Util.PxFromDp(Context, 2);
-            animator.SetDuration(300 * (Correct + 1));
+            animator.SetDuration(1500 * (Correct + 1));
 
 
             animator.AddUpdateListener(new AnimatorUpdateListener((anim) =>
             {
-                txtMark.Text = anim.AnimatedValue + "";
-                if ((int)anim.AnimatedValue == Correct - 1 && !busy)
+                if (txtMark.Text != anim.AnimatedValue + "")
+                {
+                    txtMark.Text = anim.AnimatedValue + "";
+                    busy = false;
+                }
+
+                if (!busy&& (int)anim.AnimatedValue>0)
                 {
                     busy = true;
                     layoutMark.StartAnimation(scaleUp);
