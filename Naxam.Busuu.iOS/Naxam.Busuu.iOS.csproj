@@ -86,64 +86,46 @@
     <Reference Include="System.Collections.Immutable">
       <HintPath>..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Platform">
-      <HintPath>..\packages\MvvmCross.Platform.5.0.6\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Platform.iOS">
-      <HintPath>..\packages\MvvmCross.Platform.5.0.6\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Core">
-      <HintPath>..\packages\MvvmCross.Core.5.0.6\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.iOS">
-      <HintPath>..\packages\MvvmCross.Core.5.0.6\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Binding">
-      <HintPath>..\packages\MvvmCross.Binding.5.0.6\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Binding.iOS">
-      <HintPath>..\packages\MvvmCross.Binding.5.0.6\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.Localization">
-      <HintPath>..\packages\MvvmCross.Binding.5.0.6\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
-    </Reference>
     <Reference Include="IQKeyboardManager">
       <HintPath>..\packages\Xamarin.IQKeyboardManager.1.3.2\lib\Xamarin.iOS10\IQKeyboardManager.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Plugins.DownloadCache">
-      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.5.0.6\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.5.1.0\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Plugins.DownloadCache.iOS">
-      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.5.0.6\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.iOS.dll</HintPath>
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\packages\MvvmCross.Platform.5.1.0\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.5.1.0\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\packages\MvvmCross.Core.5.1.0\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.5.1.0\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\packages\MvvmCross.Binding.5.1.0\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.5.1.0\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Plugins.File">
-      <HintPath>..\packages\MvvmCross.Plugin.File.5.0.6\lib\Xamarin.iOS10\MvvmCross.Plugins.File.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.Plugin.File.5.1.0\lib\Xamarin.iOS10\MvvmCross.Plugins.File.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Plugins.File.iOS">
-      <HintPath>..\packages\MvvmCross.Plugin.File.5.0.6\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.Plugin.File.5.1.0\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.5.1.0\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.5.1.0\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%403x.png" />
-    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Layer 0%402x.png" />
-    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Layer 0%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_back.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_back.imageset\Layer 0%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_back.imageset\Layer 0%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\Layer 0%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\Layer 0%403x.png" />
-    <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\social_tab_icon%402x.png" />
-    <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\social_tab_icon.png" />
-    <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected.png" />
-    <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected%402x.png" />
     <ImageAsset Include="Assets.xcassets\profile_tab_icon.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\profile_tab_icon.imageset\profile_tab_icon.png" />
     <ImageAsset Include="Assets.xcassets\profile_tab_icon.imageset\profile_tab_icon%402x.png" />
@@ -151,11 +133,26 @@
     <ImageAsset Include="Assets.xcassets\profile_tab_icon_selected.imageset\profile_tab_icon_selected.png" />
     <ImageAsset Include="Assets.xcassets\profile_tab_icon_selected.imageset\profile_tab_icon_selected%402x.png" />
     <ImageAsset Include="Assets.xcassets\notifications_tab_icon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\notifications_tab_icon.imageset\notifications_tab_icon.png" />
-    <ImageAsset Include="Assets.xcassets\notifications_tab_icon.imageset\notifications_tab_icon%402x.png" />
     <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\notifications_tab_icon_selected.png" />
     <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\notifications_tab_icon_selected%402x.png" />
+    <ImageAsset Include="Assets.xcassets\notifications_tab_icon.imageset\notifications_tab_icon.png" />
+    <ImageAsset Include="Assets.xcassets\notifications_tab_icon.imageset\notifications_tab_icon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\play_icon_small%402x.png" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\play_icon_small%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\ic_filter%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\ic_filter%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\ic_send_light%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\ic_send_light%403x.png" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\social_tab_icon.png" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\social_tab_icon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected.png" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -178,6 +175,14 @@
     <Folder Include="Assets.xcassets\notifications_tab_icon.imageset\" />
     <Folder Include="Assets.xcassets\notifications_tab_icon_selected.imageset\" />
     <Folder Include="Views\" />
+    <Folder Include="Assets.xcassets\notifications_tab_icon.imageset\" />
+    <Folder Include="Assets.xcassets\notifications_tab_icon_selected.imageset\" />
+    <Folder Include="Assets.xcassets\social_tab_icon.imageset\" />
+    <Folder Include="Assets.xcassets\social_tab_icon_selected.imageset\" />
+    <Folder Include="Assets.xcassets\play_icon_small.imageset\" />
+    <Folder Include="Assets.xcassets\ic_filter.imageset\" />
+    <Folder Include="Assets.xcassets\ic_send_light.imageset\" />
+    <Folder Include="Resources\Stars\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -193,12 +198,12 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
-    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Views\MainTabBarView.cs" />
     <Compile Include="Views\MainTabBarView.designer.cs">
       <DependentUpon>..\Naxam.Busuu.iOS.Core\Views\MainTabBarView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
@@ -233,6 +238,34 @@
       <Project>{2EADB781-E679-4485-8A53-AE7A8945CD1B}</Project>
       <Name>Naxam.Busuu.Notification</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\add_friend_icon.png" />
+    <BundleResource Include="Resources\BackgroundDetail05.jpg" />
+    <BundleResource Include="Resources\conversation_speaking_button_Blue.png" />
+    <BundleResource Include="Resources\conversation_speaking_button_red.png" />
+    <BundleResource Include="Resources\conversation_speaking_button.png" />
+    <BundleResource Include="Resources\conversation_speaking_play_button.png" />
+    <BundleResource Include="Resources\dots_menu.png" />
+    <BundleResource Include="Resources\flag_small_arabic.png" />
+    <BundleResource Include="Resources\flag_small_chinese.png" />
+    <BundleResource Include="Resources\flag_small_english.png" />
+    <BundleResource Include="Resources\flag_small_german.png" />
+    <BundleResource Include="Resources\flag_small_portuguese.png" />
+    <BundleResource Include="Resources\flag_small_spanish.png" />
+    <BundleResource Include="Resources\friendship_request_sent.png" />
+    <BundleResource Include="Resources\ic_delete.png" />
+    <BundleResource Include="Resources\ImageMeoNo.jpg" />
+    <BundleResource Include="Resources\list_flagcut_enc.png" />
+    <BundleResource Include="Resources\Nokia-tune-Nokia-tune.mp3" />
+    <BundleResource Include="Resources\pause_btn.png" />
+    <BundleResource Include="Resources\play_btn.png" />
+    <BundleResource Include="Resources\profile_flag_vn.png" />
+    <BundleResource Include="Resources\social_background_pattern_image.png" />
+    <BundleResource Include="Resources\user_avatar_placeholder.png" />
+    <BundleResource Include="Resources\Stars\grey_star.png" />
+    <BundleResource Include="Resources\Stars\grey_star2.png" />
+    <BundleResource Include="Resources\Stars\yellow_star_d.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

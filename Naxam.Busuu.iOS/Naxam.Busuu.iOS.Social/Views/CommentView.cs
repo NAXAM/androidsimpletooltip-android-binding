@@ -28,8 +28,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 		UIImage playBtnBg, pauseBtnBg;
 
         UIBarButtonItem btnsend;
-        bool IsAnimationBtnSay;
+        bool IsAnimationSld;
         bool IsAnimationBtnRemove;
+        bool IsVoiceRecorde;
 
         CircularProgress fourColorCircularProgress;
 
@@ -149,6 +150,8 @@ namespace Naxam.Busuu.iOS.Social.Views
             btnSay.TouchDown += BtnSay_TouchDown; 
             btnSay.TouchUpInside += BtnSay_TouchUpInside;
 
+			btnRemove.Alpha = 0;
+			
             ConfigureFourColorCircularProgress();
 		}
 
@@ -169,26 +172,46 @@ namespace Naxam.Busuu.iOS.Social.Views
 			ViewSay2.AddSubview(fourColorCircularProgress);
 		}
 
-		int DemNguoc = 25;
+		int DemNguoc = 35;
 
 		void BtnSay_TouchDown(object sender, EventArgs e)
 		{
-			ViewSay3.Layer.ShadowRadius = 2.5f;
-			ViewSay3.Layer.ShadowOpacity = 0.35f;
-			ViewSay3.Layer.ShadowOffset = new CGSize(0, 2.5f);
-
-            if (update_timer2 == null)
+            if (!IsVoiceRecorde)
             {
-                update_timer3 = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.01), delegate
-                    {
-                        UpdateCurrentTime3();
-                    });
+                ViewSay3.Layer.ShadowRadius = 2.5f;
+                ViewSay3.Layer.ShadowOpacity = 0.35f;
+                ViewSay3.Layer.ShadowOffset = new CGSize(0, 2.5f);
+
+                if (update_timer2 == null)
+                {
+                    update_timer3 = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.01), delegate
+                        {
+                            UpdateCurrentTime3();
+                        });
+                }
             }
 		}
 
 		void BtnSay_TouchUpInside(object sender, EventArgs e)
 		{
-            StopAnimationSld();
+            if (DemNguoc == 0)
+            {
+                StopAnimationSld();
+            }
+            else
+            {			
+				if (update_timer3 != null)
+				{
+					update_timer3.Invalidate();
+					update_timer3 = null;
+				}
+
+				ViewSay3.Layer.ShadowRadius = 1.5f;
+				ViewSay3.Layer.ShadowOpacity = 0.25f;
+				ViewSay3.Layer.ShadowOffset = new CGSize(0, 1.5f);
+
+				DemNguoc = 25;
+			}
 		}
 
 		void UpdateCurrentTime3()
@@ -211,7 +234,6 @@ namespace Naxam.Busuu.iOS.Social.Views
 
         void UpdateCurrentTime2()
         {
-
             ViewSay.Layer.CornerRadius = ViewSay.Frame.Width / 2;
             slidervalue += 0.0003333333;
 
@@ -230,12 +252,12 @@ namespace Naxam.Busuu.iOS.Social.Views
 
         void StartAnimationSld()
         {
-            if (!IsAnimationBtnSay)
+            if (!IsAnimationSld)
 			{
-                IsAnimationBtnSay = true;
+                IsAnimationSld = true;
                                
 				UIView.BeginAnimations("sliderAnimation");
-				UIView.SetAnimationDuration(0.25);
+				UIView.SetAnimationDuration(0.35);
 				UIView.SetAnimationCurve(UIViewAnimationCurve.EaseOut);
 				UIView.SetAnimationDelegate(this);
 				UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
@@ -246,9 +268,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 
         void StopAnimationSld()
         {
-            if (IsAnimationBtnSay)
+            if (IsAnimationSld)
 			{
-                IsAnimationBtnSay= false;
+                IsAnimationSld = false;
 
                 ViewSay3.Layer.ShadowRadius = 1.5f;
 				ViewSay3.Layer.ShadowOpacity = 0.25f;
@@ -267,7 +289,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 		[Export("animationDidStop:finished:context:")]
 		void SlideStopped(NSString animationID, NSNumber finished, NSObject context)
 		{
-            if (IsAnimationBtnSay)
+            if (IsAnimationSld)
             {
                 ViewSay.Layer.Bounds = new CGRect(0, 0, 130, 130);
 
@@ -287,8 +309,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 				}
 
 				slidervalue = 0;
-				//timeSay = 30;
-                DemNguoc = 25;
+                //timeSay = 30;           
 
 				lblTimeSay.Text = "Review your correction";
 
@@ -305,6 +326,7 @@ namespace Naxam.Busuu.iOS.Social.Views
             if (!IsAnimationBtnRemove)
             {
                 IsAnimationBtnRemove = true;
+                btnRemove.Transform = CGAffineTransform.MakeRotation((float)Math.PI);
 
                 UIView.BeginAnimations("btnSayAnimation");
                 UIView.SetAnimationDuration(0.25);
@@ -312,7 +334,9 @@ namespace Naxam.Busuu.iOS.Social.Views
                 UIView.SetAnimationDelegate(this);
                 UIView.SetAnimationDidStopSelector(new Selector("animationBtnSay:finished:context:"));
                 btnSay.Transform = CGAffineTransform.MakeRotation((float)Math.PI * 2);
-                btnRemove.Center = new CGPoint(btnSay.Center.X + 68, btnSay.Center.Y);
+                btnRemove.Center = new CGPoint(btnRemove.Center.X + 68, btnRemove.Center.Y);    
+                btnRemove.Transform = CGAffineTransform.MakeRotation(0);
+                btnRemove.Alpha = 1;
                 UIView.CommitAnimations();
             }
         }
@@ -328,8 +352,8 @@ namespace Naxam.Busuu.iOS.Social.Views
                 UIView.SetAnimationCurve(UIViewAnimationCurve.EaseOut);
                 UIView.SetAnimationDelegate(this);
                 UIView.SetAnimationDidStopSelector(new Selector("animationBtnSay:finished:context:"));
-                btnSay.Transform = CGAffineTransform.MakeRotation((float)Math.PI * 2);
-                btnRemove.Center = new CGPoint(btnSay.Center.X, btnSay.Center.Y);
+                btnSay.Transform = CGAffineTransform.MakeRotation(0);
+                btnRemove.Alpha = 0;
                 UIView.CommitAnimations();
             }
 		}
@@ -340,22 +364,39 @@ namespace Naxam.Busuu.iOS.Social.Views
             if (IsAnimationBtnRemove)
             {
                 btnSay.Transform = CGAffineTransform.MakeRotation((float)Math.PI * 2);
-                btnRemove.Center = new CGPoint(btnSay.Center.X + 68, btnSay.Center.Y);
+				btnRemove.Center = new CGPoint(btnRemove.Center.X, btnRemove.Center.Y);
+                btnRemove.Transform = CGAffineTransform.MakeRotation(0);
+				btnRemove.Alpha = 1;
 
 				var playBtnSay = UIImage.FromFile("conversation_speaking_play_button.png");
 				btnSay.SetImage(playBtnSay, UIControlState.Normal);
-                btnSay.ImageEdgeInsets = new UIEdgeInsets(30, 34, 30, 30);
+				btnSay.SetImage(playBtnSay, UIControlState.Selected);
+				btnSay.SetImage(playBtnSay, UIControlState.Highlighted);				
+
+                btnSay.ImageEdgeInsets = new UIEdgeInsets(30, 35, 30, 30);
+
+                IsVoiceRecorde = true;
 			}
             else
             {
+				DemNguoc = 35;
+
                 lblTimeSay.Text = "Hold the button to record your corection";
 
-				btnSay.Transform = CGAffineTransform.MakeRotation((float)Math.PI * 2);
+				btnSay.Transform = CGAffineTransform.MakeRotation(0);
 				btnRemove.Center = new CGPoint(btnSay.Center.X, btnSay.Center.Y);
+                btnRemove.Alpha = 0;
 
 				var playBtnSay = UIImage.FromFile("conversation_speaking_button_Blue.png");
 				btnSay.SetImage(playBtnSay, UIControlState.Normal);
+
+				var img2 = UIImage.FromBundle("conversation_speaking_button_red.png");
+				btnSay.SetImage(img2, UIControlState.Selected);
+				btnSay.SetImage(img2, UIControlState.Highlighted);
+             
                 btnSay.ImageEdgeInsets = new UIEdgeInsets(28, 32, 28, 32);
+
+                IsVoiceRecorde = false;
 			}
         }
 

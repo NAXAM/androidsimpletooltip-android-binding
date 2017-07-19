@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -1137,14 +1136,6 @@
                                                                     <constraint firstAttribute="width" constant="82" id="YT0-fn-msJ"/>
                                                                 </constraints>
                                                             </view>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REg-JG-XYJ" userLabel="btnRemove">
-                                                                <rect key="frame" x="154" y="143" width="34" height="34"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <state key="normal" title="Button" image="ic_delete.png"/>
-                                                                <connections>
-                                                                    <action selector="btnRemove_TouchUpInside:" destination="EDs-De-ALC" eventType="touchUpInside" id="abW-fH-6zL"/>
-                                                                </connections>
-                                                            </button>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bt-vi-was" userLabel="ViewSay3">
                                                                 <rect key="frame" x="130" y="118.5" width="82" height="82"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1161,6 +1152,14 @@
                                                                     <constraint firstAttribute="width" constant="84.5" id="qS4-xl-fUl"/>
                                                                 </constraints>
                                                             </view>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REg-JG-XYJ" userLabel="btnRemove">
+                                                                <rect key="frame" x="222.5" y="143" width="34" height="34"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <state key="normal" title="Button" image="ic_delete.png"/>
+                                                                <connections>
+                                                                    <action selector="btnRemove_TouchUpInside:" destination="EDs-De-ALC" eventType="touchUpInside" id="abW-fH-6zL"/>
+                                                                </connections>
+                                                            </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h99-9W-u7g" userLabel="btnSay">
                                                                 <rect key="frame" x="129" y="117.5" width="84" height="84"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1179,13 +1178,13 @@
                                                             <constraint firstAttribute="trailing" secondItem="h1u-1I-nzB" secondAttribute="trailing" id="Ndz-my-ui3"/>
                                                             <constraint firstItem="h99-9W-u7g" firstAttribute="centerY" secondItem="7yK-Og-VP2" secondAttribute="centerY" id="SGR-rh-GfM"/>
                                                             <constraint firstItem="h99-9W-u7g" firstAttribute="centerX" secondItem="7yK-Og-VP2" secondAttribute="centerX" id="Tcw-mv-4G5"/>
-                                                            <constraint firstItem="REg-JG-XYJ" firstAttribute="centerX" secondItem="h99-9W-u7g" secondAttribute="centerX" id="Y74-vP-2c7"/>
                                                             <constraint firstItem="REg-JG-XYJ" firstAttribute="height" secondItem="h99-9W-u7g" secondAttribute="height" multiplier="1:2.5" id="b4o-Qm-zFU"/>
                                                             <constraint firstItem="Cs8-Qe-x5s" firstAttribute="centerX" secondItem="7yK-Og-VP2" secondAttribute="centerX" id="cOc-Dx-G9j"/>
                                                             <constraint firstItem="8bt-vi-was" firstAttribute="centerY" secondItem="7yK-Og-VP2" secondAttribute="centerY" id="dkw-yQ-8Z8"/>
                                                             <constraint firstItem="h1u-1I-nzB" firstAttribute="top" secondItem="K61-z7-NrV" secondAttribute="top" id="eKk-oa-5aC"/>
-                                                            <constraint firstItem="REg-JG-XYJ" firstAttribute="centerY" secondItem="h99-9W-u7g" secondAttribute="centerY" id="gdj-wU-mHd"/>
+                                                            <constraint firstItem="REg-JG-XYJ" firstAttribute="centerY" secondItem="7yK-Og-VP2" secondAttribute="centerY" id="l1b-W5-0yY"/>
                                                             <constraint firstItem="Cs8-Qe-x5s" firstAttribute="centerY" secondItem="7yK-Og-VP2" secondAttribute="centerY" id="pqa-cN-AUE"/>
+                                                            <constraint firstItem="REg-JG-XYJ" firstAttribute="centerX" secondItem="7yK-Og-VP2" secondAttribute="centerX" constant="68" id="sc8-3y-veZ"/>
                                                             <constraint firstItem="4dI-H8-pHo" firstAttribute="top" secondItem="h1u-1I-nzB" secondAttribute="bottom" constant="16" id="zE6-Sk-pB6"/>
                                                         </constraints>
                                                     </view>

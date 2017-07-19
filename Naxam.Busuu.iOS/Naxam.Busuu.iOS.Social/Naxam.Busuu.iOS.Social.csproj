@@ -50,25 +50,25 @@
       <HintPath>Controls\PDRating.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Platform">
-      <HintPath>..\..\packages\MvvmCross.Platform.5.0.6\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platform.5.1.0\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Platform.iOS">
-      <HintPath>..\..\packages\MvvmCross.Platform.5.0.6\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platform.5.1.0\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Core">
-      <HintPath>..\..\packages\MvvmCross.Core.5.0.6\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.5.1.0\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.iOS">
-      <HintPath>..\..\packages\MvvmCross.Core.5.0.6\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.5.1.0\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Binding">
-      <HintPath>..\..\packages\MvvmCross.Binding.5.0.6\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.5.1.0\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Binding.iOS">
-      <HintPath>..\..\packages\MvvmCross.Binding.5.0.6\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.5.1.0\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Localization">
-      <HintPath>..\..\packages\MvvmCross.Binding.5.0.6\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.5.1.0\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -130,36 +130,27 @@
     <InterfaceDefinition Include="Social.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\user_avatar_placeholder.png" />
-    <BundleResource Include="Resources\flag_small_arabic.png" />
-    <BundleResource Include="Resources\flag_small_chinese.png" />
-    <BundleResource Include="Resources\flag_small_english.png" />
-    <BundleResource Include="Resources\profile_flag_vn.png" />
-    <BundleResource Include="Resources\social_background_pattern_image.png" />
-    <BundleResource Include="Resources\flag_small_german.png" />
-    <BundleResource Include="Resources\flag_small_portuguese.png" />
-    <BundleResource Include="Resources\flag_small_spanish.png" />
-    <BundleResource Include="Resources\play_btn.png" />
-    <BundleResource Include="Resources\pause_btn.png" />
-    <BundleResource Include="Resources\Nokia-tune-Nokia-tune.mp3" />
-    <BundleResource Include="Resources\Stars\yellow_star_d.png" />
-    <BundleResource Include="Resources\Stars\grey_star.png" />
-    <BundleResource Include="Resources\friendship_request_sent.png" />
-    <BundleResource Include="Resources\dots_menu.png" />
-    <BundleResource Include="Resources\add_friend_icon.png" />
-    <BundleResource Include="Resources\list_flagcut_enc.png" />
-    <BundleResource Include="Resources\BackgroundDetail05.jpg" />
-    <BundleResource Include="Resources\ImageMeoNo.jpg" />
-    <BundleResource Include="Resources\conversation_speaking_button.png" />
-    <BundleResource Include="Resources\Stars\grey_star2.png" />
-    <BundleResource Include="Resources\conversation_speaking_button_Blue.png" />
-    <BundleResource Include="Resources\conversation_speaking_button_red.png" />
-    <BundleResource Include="Resources\ic_delete.png" />
-    <BundleResource Include="Resources\conversation_speaking_play_button.png" />
+    <BundleResource Include="Social.xcassets\Contents.json" />
+    <BundleResource Include="Social.xcassets\ic_filter.imageset\Contents.json" />
+    <BundleResource Include="Social.xcassets\ic_filter.imageset\ic_filter%402x.png" />
+    <BundleResource Include="Social.xcassets\ic_filter.imageset\ic_filter%403x.png" />
+    <BundleResource Include="Social.xcassets\ic_send_light.imageset\Contents.json" />
+    <BundleResource Include="Social.xcassets\ic_send_light.imageset\ic_send_light%402x.png" />
+    <BundleResource Include="Social.xcassets\ic_send_light.imageset\ic_send_light%403x.png" />
+    <BundleResource Include="Social.xcassets\play_icon_small.imageset\Contents.json" />
+    <BundleResource Include="Social.xcassets\play_icon_small.imageset\play_icon_small%402x.png" />
+    <BundleResource Include="Social.xcassets\play_icon_small.imageset\play_icon_small%403x.png" />
+    <BundleResource Include="Social.xcassets\social_tab_icon.imageset\Contents.json" />
+    <BundleResource Include="Social.xcassets\social_tab_icon.imageset\social_tab_icon.png" />
+    <BundleResource Include="Social.xcassets\social_tab_icon.imageset\social_tab_icon%402x.png" />
+    <BundleResource Include="Social.xcassets\social_tab_icon_selected.imageset\Contents.json" />
+    <BundleResource Include="Social.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected.png" />
+    <BundleResource Include="Social.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Controls\PDRating.dll" />
+    <None Include="Social.xcassets\.DS_Store" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

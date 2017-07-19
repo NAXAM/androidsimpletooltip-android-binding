@@ -13,7 +13,7 @@ namespace Naxam.Busuu.iOS
 		{          
             Mvx.RegisterType<IDataSocial, DataSocial>();
 			Mvx.RegisterType<IDataNotification, DataNotification>();
-            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<CommentViewModel>());
+            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainTabBarViewModel>());
 		}
 	}
 }
