@@ -148,11 +148,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\SelectWordImageRecyclerViewAdapter.cs" />
-    <Compile Include="Control\Conversation\ConversationNormalListSentence.cs" />
-    <Compile Include="Control\Conversation\ConversationFillListSentence.cs" />
-    <Compile Include="Control\Conversation\ConversationPagerAdapter.cs" />
-    <Compile Include="Control\Conversation\ListConversationNormalAdapter.cs" />
-    <Compile Include="Control\Conversation\ListConversationAdapter.cs" />
+    <Compile Include="Control\Dialogue\DialogueFragmentBase.cs" />
+    <Compile Include="Control\Dialogue\DialogueNormalListSentence.cs" />
+    <Compile Include="Control\Dialogue\DialogueFillListSentence.cs" />
+    <Compile Include="Control\Dialogue\DialogueListNormalAdapter.cs" />
+    <Compile Include="Control\Dialogue\DialogueListAdapter.cs" />
     <Compile Include="Control\MemoriseBodyView.cs" />
     <Compile Include="Control\Memo\MemoChooseWord.cs" />
     <Compile Include="Control\Memo\MemoMatchingSentence.cs" />
@@ -206,13 +206,13 @@
     <Compile Include="Util\Util.cs" />
     <Compile Include="Views\BuyPremiumView.cs" />
     <Compile Include="Views\ChangeLanguageView.cs" />
+    <Compile Include="Views\DialogueView.cs" />
     <Compile Include="Views\GridSpacingItemDecoration.cs" />
     <Compile Include="Views\LearnView.cs" />
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\MemoriseView.cs" />
     <Compile Include="Views\PremiumArrayAdapter.cs" />
     <Compile Include="Views\PremiumView.cs" />
-    <Compile Include="Views\TestListView.cs" />
     <Compile Include="Views\TrueFalseHearQuestionView.cs" />
     <Compile Include="Transformers\ForegroundToBackgroundTransformer.cs" />
   </ItemGroup>
@@ -680,6 +680,14 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout-land\select_word_with_image_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\dialogue_activity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control\Conversation\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -43,18 +43,15 @@
     <Compile Include="Model\TopicModel.cs" />
     <Compile Include="Model\UnitModel.cs" />
     <Compile Include="Model\TrueFalseHearQuestionModel.cs" />
-    <Compile Include="Model\VocabularyQuestionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\BuyPremiumViewModel.cs" />
     <Compile Include="ViewModel\ChangeLanguageViewModel.cs" />
     <Compile Include="ViewModel\LearnViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\DialogueViewModel.cs" />
     <Compile Include="ViewModel\MemoriseViewModel.cs" />
     <Compile Include="ViewModel\PremiumViewModel.cs" />
     <Compile Include="ViewModel\HearConversationViewModel.cs" />
-    <Compile Include="ViewModel\TestFillSentenceViewModel.cs" />
-    <Compile Include="ViewModel\TestListViewModel.cs" />
-    <Compile Include="ViewModel\TestViewModel.cs" />
     <Compile Include="ViewModel\TrueFalseHearQuestionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

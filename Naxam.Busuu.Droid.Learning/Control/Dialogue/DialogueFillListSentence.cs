@@ -17,42 +17,34 @@ using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.Graphics.Drawables.Shapes;
 using System.Text.RegularExpressions;
+using Naxam.Busuu.Droid.Learning.Control.Dialogue;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class ConversationFillListSentence : LinearLayout
+    public class DialogueFillListSentence : DialogueFragmentBase
     {
-        public IList<UnitModel> Items;
-        int CountAnswer;
+        public override event EventHandler<int> NextClicked;
+
         public int OrientationScreen;
         List<AnswerModel> listTextIndex;
         List<AnswerModel> listAnswer;
-
-
         private int focusIndex;
-        public ConversationFillListSentence(Context context) : base(context)
+        int CountAnswer;
+        int correct;
+        public DialogueFillListSentence(IList<UnitModel> Items)
         {
+            this.Items = Items;
         }
 
-        public ConversationFillListSentence(Context context, IAttributeSet attrs) : base(context, attrs)
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
+            View view = inflater.Inflate(Resource.Layout.conversation_fill_list_sentence_layout, null);
+            Init(view);
+            return view;
         }
 
-        public ConversationFillListSentence(Context context, IAttributeSet attrs, int defStyleAttr) : base(context, attrs, defStyleAttr)
+        public void Init(View view)
         {
-        }
-
-        public ConversationFillListSentence(Context context, IAttributeSet attrs, int defStyleAttr, int defStyleRes) : base(context, attrs, defStyleAttr, defStyleRes)
-        {
-        }
-
-        protected ConversationFillListSentence(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
-        {
-        }
-
-        public View Init()
-        {
-            RemoveAllViews();
             int margin = (int)Util.Util.PxFromDp(Context, 4);
             listAnswer = new List<AnswerModel>();
             listTextIndex = new List<AnswerModel>();
@@ -68,10 +60,10 @@ namespace Naxam.Busuu.Droid.Learning.Control
                 Value = true
             }).ToList();
             List<AudioModel> listAudio = Items.Select(d => d.Audios.FirstOrDefault()).ToList();
-            View view = LayoutInflater.FromContext(Context).Inflate(Resource.Layout.conversation_fill_list_sentence_layout, null);
+
             ListView lstView = view.FindViewById<ListView>(Resource.Id.lstView);
             NXPlayButton btnPlay = view.FindViewById<NXPlayButton>(Resource.Id.btnPlay);
-            ListConversationAdapter adapter = new ListConversationAdapter(Context, Items, listTextIndex);
+            DialogueListAdapter adapter = new DialogueListAdapter(Context, Items, listTextIndex);
             lstView.DividerHeight = 0;
             lstView.Divider = null;
             lstView.ItemClick += (s, e) =>
@@ -99,8 +91,12 @@ namespace Naxam.Busuu.Droid.Learning.Control
                 btnPlay.Elevation = margin / 2 + 2;
             }
             Button btnNext = view.FindViewById<Button>(Resource.Id.btnNext);
+            btnNext.Click += (s, e) =>
+            {
+                NextClicked?.Invoke(btnNext, correct);
+            };
             btnNext.Visibility = ViewStates.Gone;
-            
+
             lstView.Adapter = adapter;
             adapter.AnswerClickedHandler += (s, e) =>
             {
@@ -187,14 +183,12 @@ namespace Naxam.Busuu.Droid.Learning.Control
                     if (focusIndex == -1)
                     {
                         btnNext.Visibility = ViewStates.Visible;
+                        correct = listTextIndex.Where(d => d.Value).ToList().Count;
                     }
                 };
-
             }
-            AddView(view, new LinearLayout.LayoutParams(-1, -1));
-
-            return view;
         }
+
         private Drawable GetBackground(Color color)
         {
             PaintDrawable background = new PaintDrawable(color);
