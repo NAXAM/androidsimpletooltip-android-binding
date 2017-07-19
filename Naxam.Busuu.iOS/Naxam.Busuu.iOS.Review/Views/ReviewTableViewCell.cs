@@ -20,8 +20,7 @@ namespace Naxam.Busuu.iOS.Review.Views
         private ReviewModel _item;
 		public ReviewModel Item { get => _item; set => _item = value; }
 		private AVAudioPlayer _ringtoneAudioPlayer;
-        public bool isPlaying = ReviewAllView.isPlayingAudio;
-
+		static bool isPlaying;
 		public Action AnimationDidStartFunc;
 		public Action<bool> AnimationDidStopFunc;
         CAShapeLayer StarShape, PlayShape, CellShape;
@@ -102,12 +101,6 @@ namespace Naxam.Busuu.iOS.Review.Views
             {
                 StopRingtone();
             }
-
-			UIView.Animate(0.1f, () =>
-			{
-				btnPlay.Transform = CGAffineTransform.MakeRotation(0.3f);
-			});
-
 			CABasicAnimation scaleAnimation = AnimateKeyPath("transform.scale",
 																   0.0001f,
 																   1.0f,
@@ -184,7 +177,7 @@ namespace Naxam.Busuu.iOS.Review.Views
 
             StarShape.Frame = new CGRect(btnStar.Center.X - 38 ,btnStar.Center.Y -18, 36,36);
             StarShape.Path = UIBezierPath.FromOval(new CGRect(0, 0, 36, 36)).CGPath;
-            PlayShape.Frame = new CGRect(btnPlay.Center.X - 36, btnPlay.Center.Y - 18, 36, 36);
+            PlayShape.Frame = new CGRect(btnPlay.Center.X - 34, btnPlay.Center.Y - 18, 36, 36);
             PlayShape.Path = UIBezierPath.FromOval(new CGRect(0, 0, 36, 36)).CGPath;
         }
 
@@ -213,7 +206,6 @@ namespace Naxam.Busuu.iOS.Review.Views
 			{
 				_ringtoneAudioPlayer.Stop();
 			}
-            btnPlay.SetImage(UIImage.FromBundle("conversation_speaking_stop_button"), UIControlState.Normal);
 			_ringtoneAudioPlayer.Play();
 		}
 
@@ -221,7 +213,6 @@ namespace Naxam.Busuu.iOS.Review.Views
 		{
 			if (_ringtoneAudioPlayer != null)
 			{
-                btnPlay.SetImage(UIImage.FromBundle("conversation_speaking_play_button"), UIControlState.Normal);
 				_ringtoneAudioPlayer.Stop();
 			}
 		}

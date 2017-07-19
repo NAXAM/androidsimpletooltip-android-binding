@@ -21,21 +21,19 @@ namespace Naxam.Busuu.iOS.Review.Views
 {
     [MvxFromStoryboard(StoryboardName = "Review")]
     [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "profile_tab_icon", TabName = "Review", TabSelectedIconName = "profile_tab_icon_selected")]
-    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource, IUISearchBarDelegate
+    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource
     {
         public ReviewAllView(IntPtr handle) : base(handle)
         {
         }
 
         CGPoint oriPoint;
-        UISearchBar SearchBar;
+        UITextField SearchTextField;
         UIBarButtonItem SearchBarButtonItem, TitleBarButtonItem;
         UILabel TitleLabel;
         bool isAll = true;
         List<ReviewModel> AllReviews, FavoriteReviews = null, FilteredReviews = null;
         ActionButton actionButton;
-        public static bool isPlayingAudio;
-
         IGrouping<char, ReviewModel>[] grouping;
         string[] indices;
 
@@ -49,14 +47,15 @@ namespace Naxam.Busuu.iOS.Review.Views
             var btnAll = new ActionButtonItem("TEST ALL", UIImage.FromBundle("fab_menu_row_all"), UIColor.Blue);
             btnAll.ActionPerform = HandleAction;
 
-			var btnStrength = new ActionButtonItem("STRENGTHEN VOCABULARY", UIImage.FromBundle("fab_menu_row_weak"), UIColor.Red);
-			btnStrength.ActionPerform = HandleAction;
+            var btnStrength = new ActionButtonItem("STRENGTHEN VOCABULARY", UIImage.FromBundle("fab_menu_row_weak"), UIColor.Red);
+            btnStrength.ActionPerform = HandleAction;
 
-			var btnTestFavorite = new ActionButtonItem("TEST FAVORITES", UIImage.FromBundle("fab_menu_row_fav"), UIColor.Gray);
-			btnTestFavorite.ActionPerform = HandleAction;
+            var btnTestFavorite = new ActionButtonItem("TEST FAVORITES", UIImage.FromBundle("fab_menu_row_fav"), UIColor.Gray);
+            btnTestFavorite.ActionPerform = HandleAction;
 
             actionButton = new ActionButton(this.View, new[] { btnContinueLearning, btnAll, btnStrength, btnTestFavorite });
-            actionButton.Action = delegate {
+            actionButton.Action = delegate
+            {
                 actionButton.ToggleMenu();
             };
             actionButton.SetTitle("+", UIControlState.Normal);
@@ -68,17 +67,21 @@ namespace Naxam.Busuu.iOS.Review.Views
             ReviewTableView.RowHeight = 60;
 
             AllReviews = this.ViewModel.Reviews;
-            FavoriteReviews = this.ViewModel.FavoriteReviews;
             UpdateKeyFromList(AllReviews);
 
             ReviewTableView.WeakDataSource = this;
-            SearchBar = new UISearchBar();
-            SearchBar.Delegate = this;
-            SearchBar.SearchBarStyle = UISearchBarStyle.Minimal;
-			
+
+            SearchTextField = new UITextField(new CGRect(0, 0, 300, 30));
+            SearchTextField.BackgroundColor = UIColor.Clear;
+            SearchTextField.TextAlignment = UITextAlignment.Left;
+            SearchTextField.TextColor = UIColor.White;
+            SearchTextField.Placeholder = "Search";
+            SearchTextField.BorderStyle = UITextBorderStyle.None;
+            SearchTextField.EditingChanged += SearchTextField_EdittingChanged;
+
             TitleLabel = new UILabel(new CGRect(0, 0, 150, 30));
             TitleLabel.BackgroundColor = UIColor.Clear;
-            TitleLabel.Font = UIFont.FromName("HelveticaNeue-Medium",18);
+            TitleLabel.Font = UIFont.FromName("HelveticaNeue-Medium", 18);
             TitleLabel.TextAlignment = UITextAlignment.Left;
             TitleLabel.TextColor = UIColor.White;
             TitleLabel.Text = "Review";
@@ -91,16 +94,16 @@ namespace Naxam.Busuu.iOS.Review.Views
 
         void UpdateKeyFromList(List<ReviewModel> list)
         {
-            
-			grouping = (from w in list
-						orderby w.Title[0].ToString().ToUpper() ascending
-						group w by w.Title[0] into g
-						select g).ToArray();
+            grouping = (from w in list
+                        orderby w.Title[0].ToString().ToUpper() ascending
+                        group w by w.Title[0] into g
+                        select g).ToArray();
 
-			indices = (from s in list
-					   orderby s.Title[0].ToString().ToUpper() ascending
-					   group s by s.Title[0] into g
-					   select g.Key.ToString().ToUpper()).ToArray();
+            indices = (from s in list
+                       orderby s.Title[0].ToString().ToUpper() ascending
+                       group s by s.Title[0] into g
+                       select g.Key.ToString().ToUpper()).ToArray();
+
         }
 
         void SearchHandler(object sender, EventArgs e)
@@ -110,32 +113,54 @@ namespace Naxam.Busuu.iOS.Review.Views
 
         private void ShowSearchBar()
         {
-            SearchBar.Alpha = 0;
-            UIView.Animate(0.5f, ()=>
+            SearchTextField.Alpha = 0;
+            UIView.Animate(0.5f, () =>
             {
-                NavigationItem.TitleView = SearchBar;
-                
-                NavigationItem.SetLeftBarButtonItem(new UIBarButtonItem(UIImage.FromBundle("back_arrow"), UIBarButtonItemStyle.Plain, (sender, e) => {
-                    HideSearchBar();
+                SearchTextField.Text = "";
+                NavigationItem.TitleView = SearchTextField;
+                NavigationItem.SetLeftBarButtonItem(new UIBarButtonItem(UIImage.FromBundle("back_arrow"), UIBarButtonItemStyle.Plain, (sender, e) =>
+                {
+                    {
+                        HideSearchBar();
+                        if (isAll)
+                        {
+                            UpdateKeyFromList(AllReviews);
+                        }
+                        else
+                        {
+                            UpdateKeyFromList(FavoriteReviews);
+                        }
+                        ReviewTableView.ReloadData();
+                    }
                 }), true);
-				NavigationItem.SetRightBarButtonItem(null, true);
-                this.SearchBar.Alpha = 1;
-            }, ()=>{
-                SearchBar.BecomeFirstResponder();
+                NavigationItem.SetRightBarButtonItem(null, true);
+                this.SearchTextField.Alpha = 1;
+            }, () =>
+            {
+                SearchTextField.BecomeFirstResponder();
             });
         }
 
         void HideSearchBar()
         {
-            UIView.Animate(0.2f,() => {
-                SearchBar.Alpha = 0;
+            UIView.Animate(0.2f, () =>
+            {
+                SearchTextField.Alpha = 0;
                 NavigationItem.SetRightBarButtonItem(SearchBarButtonItem, true);
                 NavigationItem.SetLeftBarButtonItem(TitleBarButtonItem, true);
-                SearchBar.ResignFirstResponder();
-            },() => {
-                
+            }, () =>
+            {
+                SearchTextField.ResignFirstResponder();
             });
         }
+        void SearchTextField_EdittingChanged(object sender, EventArgs e)
+        {
+            FilteredReviews = new List<ReviewModel>();
+            FilterContentForSearchText(SearchTextField.Text);
+            UpdateKeyFromList(FilteredReviews);
+            ReviewTableView.ReloadData();
+        }
+
 
         public override void ViewDidLayoutSubviews()
         {
@@ -145,13 +170,13 @@ namespace Naxam.Busuu.iOS.Review.Views
 
         void HandleAction(Ausuu.IOS.Review.Floaty.ActionButtonItem obj)
         {
-			UIAlertView alert = new UIAlertView()
-			{
-				Title = "alert title",
-				Message = "this is a simple alert"
-			};
-			alert.AddButton("OK");
-			alert.Show();
+            UIAlertView alert = new UIAlertView()
+            {
+                Title = "alert title",
+                Message = "this is a simple alert"
+            };
+            alert.AddButton("OK");
+            alert.Show();
         }
 
         partial void btnAll_TouchUpInside(NSObject sender)
@@ -162,7 +187,8 @@ namespace Naxam.Busuu.iOS.Review.Views
             ReviewTableView.ReloadData();
             UIView.Animate(0.2, () =>
             {
-                uiViewSlide.Center = new CGPoint(btnAll.Frame.GetMidX(), btnAll.Frame.GetMaxY());
+                uiViewSlide.Center = new CGPoint(btnAll.Frame.GetMidX(), btnAll.Frame.GetMaxY() - uiViewSlide.Bounds.Size.Height / 2);
+
                 uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
                 btnAll.SetTitleColor(UIColor.FromRGB(86, 156, 201), UIControlState.Normal);
                 btnFavorite.SetTitleColor(UIColor.LightGray, UIControlState.Normal);
@@ -179,13 +205,14 @@ namespace Naxam.Busuu.iOS.Review.Views
             UpdateKeyFromList(FavoriteReviews);
             ReviewTableView.ReloadData();
 
-			UIView.Animate(0.2, () =>
-			{
-                uiViewSlide.Center = new CGPoint(btnFavorite.Frame.GetMidX(), btnFavorite.Frame.GetMaxY());
-				uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
-                btnFavorite.SetTitleColor(UIColor.FromRGB(86,156,201), UIControlState.Normal);
-                btnAll.SetTitleColor(UIColor.LightGray, UIControlState.Normal);
-			});
+            UIView.Animate(0.2, () =>
+ {
+     uiViewSlide.Center = new CGPoint(btnFavorite.Frame.GetMidX(), btnFavorite.Frame.GetMaxY() - uiViewSlide.Bounds.Size.Height / 2);
+     uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
+     btnFavorite.SetTitleColor(UIColor.FromRGB(86, 156, 201), UIControlState.Normal);
+
+     btnAll.SetTitleColor(UIColor.LightGray, UIControlState.Normal);
+ });
         }
 
         public override void DidReceiveMemoryWarning()
@@ -196,11 +223,12 @@ namespace Naxam.Busuu.iOS.Review.Views
 
         public nint RowsInSection(UITableView tableView, nint section)
         {
-           
+
             if (FilteredReviews == null)
             {
                 return grouping[section].Count();
-            }else
+            }
+            else
             {
                 return FilteredReviews.Count;
             }
@@ -228,24 +256,8 @@ namespace Naxam.Busuu.iOS.Review.Views
         {
             var cell = (ReviewTableViewCell)tableView.DequeueReusableCell("reviewCell", indexPath);
             cell.Layer.MasksToBounds = true;
-            if (FilteredReviews == null)
-            {
-                if (isAll)
-                {
-                    cell.Item = grouping[indexPath.Section].ElementAt(indexPath.Row);
-                    cell.SetupCell();
-                }
-                else
-                {
-                    cell.Item = FavoriteReviews[indexPath.Row];
-                    cell.SetupCell();
-                }
-            }else
-            {
-				cell.Item = FilteredReviews[indexPath.Row];
-				cell.SetupCell();   
-            }
-            isPlayingAudio = cell.isPlaying;
+			cell.Item = grouping[indexPath.Section].ElementAt(indexPath.Row);
+			cell.SetupCell();
             return cell;
         }
 
@@ -259,44 +271,29 @@ namespace Naxam.Busuu.iOS.Review.Views
             {
                 FilteredReviews = null;
             }
-			FilterContentForSearchText(searchController.SearchBar.Text);
-		}
-
-        [Export("searchBarSearchButtonClicked:")]
-        public void SearchButtonClicked(UISearchBar searchBar)
-        {
-            FilteredReviews = new List<ReviewModel>();
-            FilterContentForSearchText(SearchBar.Text);
-        }
-
-        [Export("searchBar:textDidChange:")]
-        public void TextChanged(UISearchBar searchBar, string searchText)
-        {
-			FilteredReviews = new List<ReviewModel>();
-			FilterContentForSearchText(SearchBar.Text);
+            FilterContentForSearchText(searchController.SearchBar.Text);
         }
 
         private void FilterContentForSearchText(string text)
         {
-			if (FilteredReviews != null)
-			{
-				FilteredReviews.Clear();
-				FilteredReviews.AddRange(
-					AllReviews.Where(e =>
-									string.IsNullOrWhiteSpace(text)
-									|| e.Title.ToUpper().Contains(text.ToUpper())));
-			}
-			ReviewTableView.ReloadData();
+            if (FilteredReviews != null)
+            {
+                FilteredReviews.Clear();
+                FilteredReviews.AddRange(
+                    AllReviews.Where(e =>
+                                    string.IsNullOrWhiteSpace(text)
+                                    || e.Title.ToUpper().Contains(text.ToUpper())));
+            }
         }
 
         private void FilterFavorite()
         {
-            if (FavoriteReviews!=null)
+            if (FavoriteReviews != null)
             {
-				FavoriteReviews.AddRange(
-					AllReviews.Where(e => e.IsFavorite));
-			}
-			ReviewTableView.ReloadData();
+                FavoriteReviews.AddRange(
+                    AllReviews.Where(e => e.IsFavorite));
+            }
+            ReviewTableView.ReloadData();
         }
     }
 }

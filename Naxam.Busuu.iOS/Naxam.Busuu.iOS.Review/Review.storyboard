@@ -50,7 +50,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvQ-YT-cG3">
-                                                    <rect key="frame" x="56" y="26" width="212" height="15"/>
+                                                    <rect key="frame" x="56" y="26" width="200" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="z9Y-Fx-NSL"/>
                                                     </constraints>
@@ -59,13 +59,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWs-Fs-70M">
-                                                    <rect key="frame" x="56" y="10" width="212" height="16"/>
+                                                    <rect key="frame" x="56" y="10" width="200" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-Hn-Gfa">
-                                                    <rect key="frame" x="316" y="18" width="24" height="24"/>
+                                                    <rect key="frame" x="304" y="18" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="RpW-w7-ZHX"/>
                                                         <constraint firstAttribute="height" constant="24" id="dBt-fj-PSb"/>
@@ -80,13 +80,13 @@ CQk
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdF-Sq-2en">
-                                                    <rect key="frame" x="348" y="24" width="12" height="12"/>
+                                                    <rect key="frame" x="336" y="18" width="24" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="12" id="WS2-8e-tte"/>
-                                                        <constraint firstAttribute="height" constant="12" id="qKU-Oq-Eed"/>
+                                                        <constraint firstAttribute="width" constant="24" id="WS2-8e-tte"/>
+                                                        <constraint firstAttribute="height" constant="24" id="qKU-Oq-Eed"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <state key="normal" image="conversation_speaking_play_button">
+                                                    <state key="normal" image="play_btn">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
@@ -205,8 +205,8 @@ CQk
         </scene>
     </scenes>
     <resources>
-        <image name="conversation_speaking_play_button" width="20" height="28"/>
         <image name="image_placeholder" width="20" height="16"/>
+        <image name="play_btn" width="112" height="112"/>
         <image name="rounded_grey_star" width="25" height="25"/>
     </resources>
 </document>

@@ -20,15 +20,6 @@ namespace Naxam.Busuu.Review.ViewModels
 		public async override void Start()
 		{
 			Reviews =  await _reviewService.GetAllReview();
-            FavoriteReviews = new List<ReviewModel>();
-            Filterediews = new List<ReviewModel>();
-            foreach (var item in Reviews)
-            {
-                if (item.IsFavorite)
-                {
-                    FavoriteReviews.Add(item);
-                }
-            }
             base.Start();
 		}
 
@@ -47,52 +38,6 @@ namespace Naxam.Busuu.Review.ViewModels
 			}
         }
 
-		private List<ReviewModel> _favoriteReviews;
-
-		public List<ReviewModel> FavoriteReviews
-		{
-			get { return _favoriteReviews; }
-			set
-			{
-				if (_favoriteReviews != value)
-				{
-					_favoriteReviews = value;
-					RaisePropertyChanged(() => FavoriteReviews);
-				}
-			}
-		}
-
-        private List<ReviewModel> _filteredReviews;
-
-        public List<ReviewModel> Filterediews
-		{
-			get { return _filteredReviews; }
-			set
-			{
-				if (_filteredReviews != value)
-				{
-					_filteredReviews = value;
-					RaisePropertyChanged(() => Filterediews);
-				}
-			}
-		}
-
-		private string _searchTerm;
-		public string SearchTerm
-		{
-			get { return _searchTerm; }
-			set
-			{
-				_searchTerm = value;
-				Filterediews.Clear();
-				Filterediews.AddRange(
-					Reviews.Where(e => e.Title.ToUpper().Contains(_searchTerm.ToUpper()) || string.IsNullOrWhiteSpace(_searchTerm))
-				);
-				RaisePropertyChanged(() => SearchTerm);
-				RaisePropertyChanged(() => Filterediews);
-			}
-		}
-
         IMvxCommand _favoriteCommand;
 		public IMvxCommand FavoriteCommand
 		{
@@ -104,17 +49,7 @@ namespace Naxam.Busuu.Review.ViewModels
 
         private void ExecuteFavoriteCommand(ReviewModel item)
         {
-            item.IsFavorite = !item.IsFavorite; 
-            var itemToRemove = FavoriteReviews.SingleOrDefault(m => m.Title == item.Title);
-            if (itemToRemove != null)
-            {
-                FavoriteReviews.Remove((item));
-            }else
-            {
-                FavoriteReviews.Add(item);
-            }
+            item.IsFavorite = !item.IsFavorite;
         }
-
-
     }
 }
