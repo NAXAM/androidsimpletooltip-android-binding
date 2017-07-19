@@ -20,16 +20,16 @@ using Android.Text;
 using Android.Text.Style;
 using static Android.Widget.TextView;
 using System.Text.RegularExpressions;
+using Naxam.Busuu.Droid.Learning.Control.Memo;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class MemoFillSentence : Android.Support.V4.App.Fragment
+    public class MemoFillSentence : MemoriseFragmentBase
     {
-        public event EventHandler<bool> NextClicked;
+        public override event EventHandler<bool> NextClicked;
         private event EventHandler<AnswerModel> AnswerClick;
         public int OrientationScreen;
-        bool result;
-        public UnitModel Item;
+        bool result; 
         List<string> listString;
         List<int> listIndex;
         List<AnswerModel> listCorrect;
@@ -37,6 +37,11 @@ namespace Naxam.Busuu.Droid.Learning.Control
         int CountCorrect;
         public object FlexBoxLayout { get; private set; }
         int imageCount;
+
+        public MemoFillSentence(UnitModel Item)
+        {
+            this.Item = Item;
+        }
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             listString = new List<string>();

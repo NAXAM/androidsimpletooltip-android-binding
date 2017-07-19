@@ -15,4 +15,7 @@
   <color name="colorTextIncorrect">#E54532</color>
   <color name="colorTextCorrect">#74B826</color>
   <color name="colorSelected">#CFEAFC</color>
+  <color name="colorFalse">#EB4431</color>
+  <color name="colorTrue">#74B825</color>
+  
 </resources>

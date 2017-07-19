@@ -15,14 +15,14 @@
           android:layout_alignParentTop="true">
 
         <ImageView
-            android:id="@+id/imgImage"
+            android:id="@+id/img_complete_sentence_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:scaleType="fitXY" />
 
         <Naxam.Busuu.Droid.Learning.Control.NXPlayButton
-            android:id="@+id/btnPlay"
+            android:id="@+id/btn_complete_sentence_play"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_gravity="bottom|center_horizontal"
@@ -43,11 +43,16 @@
       <TextView
           android:id="@+id/txt_compelte_sentence_question"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
+          android:layout_height="40dp"
           android:layout_below="@+id/txt_compelte_sentence_title"
           android:gravity="center"
-          android:padding="16dp"
           android:text="_______ are your from?" />
+      <EditText
+          android:id="@+id/edt_compelte_sentence_question"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_below="@+id/txt_compelte_sentence_title"
+          android:gravity="center"/>
 
       <TextView
           android:id="@+id/txt_compelte_sentence_true_answer"
@@ -62,6 +67,7 @@
   </ScrollView>
 
   <Button
+    android:id="@+id/bt_complete_sentence_continue"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_alignParentBottom="true"

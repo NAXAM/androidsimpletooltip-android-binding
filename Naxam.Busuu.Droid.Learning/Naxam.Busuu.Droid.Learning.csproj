@@ -156,7 +156,11 @@
     <Compile Include="Control\Conversation\ListConversationNormalAdapter.cs" />
     <Compile Include="Control\Conversation\ListConversationAdapter.cs" />
     <Compile Include="Control\MemoriseBodyView.cs" />
+    <Compile Include="Control\Memo\MemoChooseWord.cs" />
+    <Compile Include="Control\Memo\MemoMatchingSentence.cs" />
+    <Compile Include="Control\Memo\MemoriseFragmentBase.cs" />
     <Compile Include="Control\Memo\MemoSelectWord.cs" />
+    <Compile Include="Control\Summary.cs" />
     <Compile Include="Control\RecorderButton.cs" />
     <Compile Include="Listener\AnimationListener.cs" />
     <Compile Include="Listener\AnimatorListener.cs" />
@@ -187,6 +191,11 @@
     <Compile Include="TargetBinding\LessonHeaderTargetBinding.cs" />
     <Compile Include="Control\NXExpandableListAdapter.cs" />
     <Compile Include="Control\NXRecyclerView.cs" />
+    <Compile Include="Adapters\MyPagerAdapter.cs" />
+    <Compile Include="CustomControls\CustomViewPager.cs" />
+    <Compile Include="HearAndRepeatView.cs" />
+    <Compile Include="ListPracticeView.cs" />
+    <Compile Include="PreparePronounceView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TargetBinding\FinishColorTargetBinding.cs" />
@@ -199,17 +208,17 @@
     <Compile Include="Util\Util.cs" />
     <Compile Include="Views\BuyPremiumView.cs" />
     <Compile Include="Views\ChangeLanguageView.cs" />
+    <Compile Include="Control\Memo\MemoCompleteSentence.cs" />
     <Compile Include="Views\GridSpacingItemDecoration.cs" />
     <Compile Include="Views\LearnView.cs" />
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\MemoriseView.cs" />
     <Compile Include="Views\PremiumArrayAdapter.cs" />
     <Compile Include="Views\PremiumView.cs" />
-    <Compile Include="Views\TestFillSentenceView.cs" />
     <Compile Include="Views\TestListView.cs" />
     <Compile Include="Views\TestView.cs" />
     <Compile Include="Views\TrueFalseHearQuestionView.cs" />
-    <Compile Include="Views\VocabularyQuestionView.cs" />
+    <Compile Include="Transformers\ForegroundToBackgroundTransformer.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\fonts\awesome.ttf" />
@@ -226,15 +235,28 @@
     <AndroidResource Include="Resources\Layout\MainActivity.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\Layout\test_layout.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\Layout\test_fill_list_sentence_layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\Layout\test_fill_sentence_layout.axml">
+    <AndroidResource Include="Resources\Layout\HearAndRepeat.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\Layout\PreparePronounce.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-land\PreparePronounce.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-land\HearAndRepeat.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\ListPractice.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\matching_sentence_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\test_layout.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
@@ -582,7 +604,72 @@
     <AndroidResource Include="Resources\Layout\memorise_layout.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Layout\memorise_activity.xml" />
+    <AndroidResource Include="Resources\Layout\memorise_activity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\circle_drwable.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\star_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\beach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_mic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_play_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\activity_picture_and_audio.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\zoom_in_btn.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\zoom_out_btn.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\fade_in.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\roteanim.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\roteanimback.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\zoom_in.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_pause_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_yellow_star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_progressbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\progress_progressbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_book_course.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\summary_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_mark.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_button_next.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dotted.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\recorder_button.xml" />

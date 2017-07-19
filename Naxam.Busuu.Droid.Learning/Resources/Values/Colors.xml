@@ -15,4 +15,9 @@
   <color name="colorTextIncorrect">#E54532</color>
   <color name="colorTextCorrect">#74B826</color>
   <color name="colorSelected">#CFEAFC</color>
+
+  <color name="colorNormalBtn">#D6DFE6</color>
+  <color name="colorHoverBtn">#A9B0B8</color>
+  <color name="colorEnable">#FFFFFF</color>
+  <color name="colorDiable">#CFEAFC</color>
 </resources>
