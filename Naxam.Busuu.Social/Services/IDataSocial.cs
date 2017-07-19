@@ -1,6 +1,6 @@
 ﻿using Naxam.Busuu.Social.Models;
 
-namespace Naxam.Busuu.Social.Serveices
+namespace Naxam.Busuu.Social.Services
 {
 	public interface IDataSocial
 	{		

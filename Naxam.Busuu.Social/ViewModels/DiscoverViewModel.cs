@@ -1,6 +1,6 @@
 ﻿using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Social.Models;
-using Naxam.Busuu.Social.Serveices;
+using Naxam.Busuu.Social.Services;
 
 namespace Naxam.Busuu.Social.ViewModels
 {

@@ -1,8 +1,8 @@
 ﻿using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using Naxam.Busuu.Core.ViewModels;
-using Naxam.Busuu.Notification.Serveices;
-using Naxam.Busuu.Social.Serveices;
+using Naxam.Busuu.Notification.Services;
+using Naxam.Busuu.Social.Services;
 
 namespace Naxam.Busuu.iOS
 {

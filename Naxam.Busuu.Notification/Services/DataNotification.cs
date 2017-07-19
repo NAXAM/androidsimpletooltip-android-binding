@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Naxam.Busuu.Notification.Models;
 using Naxam.Busuu.Social.Models;
-using Naxam.Busuu.Social.Serveices;
+using Naxam.Busuu.Social.Services;
 
-namespace Naxam.Busuu.Notification.Serveices
+namespace Naxam.Busuu.Notification.Services
 {
     public class DataNotification : IDataNotification
     {

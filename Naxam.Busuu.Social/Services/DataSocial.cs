@@ -3,7 +3,7 @@ using Naxam.Busuu.Social.Models;
 using System.Collections.Generic;
 using System;
 
-namespace Naxam.Busuu.Social.Serveices
+namespace Naxam.Busuu.Social.Services
 {
     public class DataSocial : IDataSocial
     {

@@ -40,14 +40,14 @@
     <Compile Include="ViewModels\SocialDetailViewModel.cs" />
     <Compile Include="ViewModels\FilterViewModel.cs" />
     <Compile Include="Models\SocialModel.cs" />
-    <Compile Include="Serveices\IDataSocial.cs" />
-    <Compile Include="Serveices\DataSocial.cs" />
+    <Compile Include="Services\IDataSocial.cs" />
+    <Compile Include="Services\DataSocial.cs" />
     <Compile Include="ViewModels\CommentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Serveices\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
