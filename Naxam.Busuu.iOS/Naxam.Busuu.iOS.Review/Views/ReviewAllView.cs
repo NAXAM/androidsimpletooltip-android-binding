@@ -20,7 +20,7 @@ using MvvmCross.iOS.Views.Presenters.Attributes;
 namespace Naxam.Busuu.iOS.Review.Views
 {
     [MvxFromStoryboard(StoryboardName = "Review")]
-    [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "profile_tab_icon", TabName = "Review`", TabSelectedIconName = "profile_tab_icon_selected")]
+    [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "profile_tab_icon", TabName = "Review", TabSelectedIconName = "profile_tab_icon_selected")]
     public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource, IUISearchBarDelegate
     {
         public ReviewAllView(IntPtr handle) : base(handle)

@@ -51,8 +51,7 @@ namespace Naxam.Busuu.iOS.Review.Views
             }
 
             ImageService.Instance.LoadUrl(Item.ImgWord).
-                        ErrorPlaceholder("image_placeholder.png",ImageSource.ApplicationBundle).
-                        LoadingPlaceholder("placeholder", ImageSource.CompiledResource).
+                        LoadingPlaceholder("image_placeholder", ImageSource.CompiledResource).
                         Into(imgWord);
 
 			_ringtoneAudioPlayer = AVAudioPlayer.FromUrl(NSUrl.FromFilename(Item.SoundUrl));
