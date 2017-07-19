@@ -42,7 +42,7 @@ namespace Naxam.Busuu.Profile.ViewModel
                 }
             }
         }
- 
+
 
         public ChooseCountryViewModel()
         {

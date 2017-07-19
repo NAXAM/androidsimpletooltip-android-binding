@@ -38,6 +38,39 @@ namespace Naxam.Busuu.Profile.Model
                 }
             }
         }
-         
+
+
+        private int _percent;
+
+        public int Percent
+        {
+            get { return _percent; }
+            set
+            {
+                if (_percent != value)
+                {
+                    _percent = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+
+        private bool _isCurrent;
+
+        public bool IsCurrent
+        {
+            get { return _isCurrent; }
+            set
+            {
+                if (_isCurrent != value)
+                {
+                    _isCurrent = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+
     }
 }
