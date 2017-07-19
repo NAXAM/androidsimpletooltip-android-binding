@@ -26,7 +26,7 @@ namespace Naxam.Busuu.Droid
         public override void Initialize()
         {
            // RegisterAppStart<ForgotPasswordViewModel>();
-            RegisterAppStart<ChooseLanguageViewModel>();
+            RegisterAppStart<LoginViewModel>();
         }
     }
 }
