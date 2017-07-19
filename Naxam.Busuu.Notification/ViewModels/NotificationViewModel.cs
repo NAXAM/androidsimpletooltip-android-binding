@@ -48,9 +48,37 @@ namespace Naxam.Busuu.Notification.ViewModels
 			});
 		}
 
+        string _notificationCount;
+
+        public string NotificationCount
+        {
+			get { return _notificationCount; }
+			set
+			{
+				if (_notificationCount != value)
+				{
+					_notificationCount = value;
+					RaisePropertyChanged(() => NotificationCount);
+				}
+			}
+        }
+
 		public override void Start()
 		{
 			NotificationData = new MvxObservableCollection<NotificationModel>(_datanotification.GetNotification());
+
+            int noti = 1;
+
+            for (int i = 0; i < NotificationData.Count; i++)
+            {
+                if (!NotificationData[i].Check)
+                {
+                    noti++;
+                }
+            }
+
+            NotificationCount = noti.ToString();
+
 			base.Start();
 		}
 

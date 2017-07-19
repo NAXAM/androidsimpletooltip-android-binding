@@ -34,6 +34,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 		UIKit.UILabel lblTime { get; set; }
 
 		[Outlet]
+		UIKit.UILabel lblTimeSay { get; set; }
+
+		[Outlet]
 		UIKit.UISlider SliderSpeak { get; set; }
 
 		[Outlet]
@@ -62,6 +65,15 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 		[Outlet]
 		UIKit.UIView ViewQuestion { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewSay { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewSay2 { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewSay3 { get; set; }
 
 		[Outlet]
 		UIKit.UIView ViewShadow { get; set; }
@@ -99,11 +111,6 @@ namespace Naxam.Busuu.iOS.Social.Views
 				imgCircle = null;
 			}
 
-			if (textViewComment != null) {
-				textViewComment.Dispose ();
-				textViewComment = null;
-			}
-
 			if (imgQuestion != null) {
 				imgQuestion.Dispose ();
 				imgQuestion = null;
@@ -112,11 +119,6 @@ namespace Naxam.Busuu.iOS.Social.Views
 			if (lblTime != null) {
 				lblTime.Dispose ();
 				lblTime = null;
-			}
-
-			if (textViewCorrect != null) {
-				textViewCorrect.Dispose ();
-				textViewCorrect = null;
 			}
 
 			if (SliderSpeak != null) {
@@ -129,9 +131,24 @@ namespace Naxam.Busuu.iOS.Social.Views
 				textHowDid = null;
 			}
 
+			if (lblTimeSay != null) {
+				lblTimeSay.Dispose ();
+				lblTimeSay = null;
+			}
+
 			if (textQuestion != null) {
 				textQuestion.Dispose ();
 				textQuestion = null;
+			}
+
+			if (textViewComment != null) {
+				textViewComment.Dispose ();
+				textViewComment = null;
+			}
+
+			if (textViewCorrect != null) {
+				textViewCorrect.Dispose ();
+				textViewCorrect = null;
 			}
 
 			if (ViewAudioPlayer != null) {
@@ -157,6 +174,21 @@ namespace Naxam.Busuu.iOS.Social.Views
 			if (ViewQuestion != null) {
 				ViewQuestion.Dispose ();
 				ViewQuestion = null;
+			}
+
+			if (ViewSay != null) {
+				ViewSay.Dispose ();
+				ViewSay = null;
+			}
+
+			if (ViewSay2 != null) {
+				ViewSay2.Dispose ();
+				ViewSay2 = null;
+			}
+
+			if (ViewSay3 != null) {
+				ViewSay3.Dispose ();
+				ViewSay3 = null;
 			}
 
 			if (ViewShadow != null) {

@@ -8,7 +8,10 @@ using MvvmCross.iOS.Views;
 using Naxam.Busuu.iOS.Social.Common;
 using Naxam.Busuu.Social.ViewModels;
 using PatridgeDev;
+using ObjCRuntime;
 using UIKit;
+using SeekArc.Touch;
+using System.Collections.Generic;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
@@ -20,10 +23,13 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 		AVAudioPlayer SpeakMusicPlayer;
 		NSTimer update_timer;
+        NSTimer update_timer2;
 
 		UIImage playBtnBg, pauseBtnBg;
 
         UIBarButtonItem btnsend;
+        CircularSlider circularSlider;
+        bool IsAnimationView;
 
 		public CommentView (IntPtr handle) : base (handle)
 		{
@@ -112,20 +118,98 @@ namespace Naxam.Busuu.iOS.Social.Views
             SliderSpeak.SetThumbImage(img, UIControlState.Selected);
             SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);
 
+            ViewSay.Layer.CornerRadius = ViewSay.Frame.Width / 2;
+			ViewSay3.Layer.CornerRadius = ViewSay3.Frame.Width / 2;
+            ViewSay2.Layer.CornerRadius = ViewSay2.Frame.Width / 2;
+            ViewSay2.Layer.MasksToBounds = false;
+			ViewSay2.Layer.ShadowRadius = 1;
+			ViewSay2.Layer.ShadowOpacity = 0.25f;
+			ViewSay2.Layer.ShadowOffset = new CGSize(0, 1);
+
             var img2 = UIImage.FromBundle("conversation_speaking_button_red.png");
             btnSay.SetImage(img2, UIControlState.Selected);
             btnSay.SetImage(img2, UIControlState.Highlighted);
             btnSay.Layer.CornerRadius = btnSay.Frame.Width / 2;
             btnSay.Layer.MasksToBounds = false;
-            btnSay.ImageEdgeInsets = new UIEdgeInsets(26, 30, 26, 30);
-            btnSay.Layer.ShadowRadius = 1;
-            btnSay.Layer.ShadowOpacity = 0.25f;
-            btnSay.Layer.ShadowOffset = new CGSize(0, 1);
+            btnSay.ImageEdgeInsets = new UIEdgeInsets(29, 32, 29, 32);        
 
             textViewComment.ShouldBeginEditing += TextViewShouldBeginEditing;
             textViewComment.ShouldEndEditing += TextViewShouldEndEditing;
-        }
 
+            btnSay.TouchDown += BtnSay_TouchDown; 
+            btnSay.TouchUpInside += BtnSay_TouchUpInside;
+
+            circularSlider = new CircularSlider(new CGRect(0, 0, 84.5, 84.5));
+            circularSlider.SetUnfilledColor(UIColor.Clear);
+            circularSlider.SetMaximumValue(60);
+            circularSlider.SetMinimumValue(0);
+            circularSlider.SetCurrentValue(0);
+            circularSlider.SetLineWidth(2.5f);
+			ViewSay2.AddSubview(circularSlider);
+		}
+
+        nfloat slidervalue = 1; 
+
+		void UpdateCurrentTime2()
+		{
+            ViewSay.Layer.CornerRadius = ViewSay.Frame.Width / 2;
+			
+            if (slidervalue < 60)
+            {
+                slidervalue += 1;
+                ViewSay.Layer.CornerRadius = ViewSay.Bounds.Width / 2;
+                circularSlider.SetCurrentValue(slidervalue);
+                lblTimeSay.Text = circularSlider.CurrentValue.ToString();
+            }
+            else
+            {
+				if (update_timer2 != null)
+				{
+					update_timer2.Invalidate();
+					update_timer2 = null;
+				}
+            }
+		}
+
+		void BtnSay_TouchDown(object sender, EventArgs e)
+		{
+            if (!IsAnimationView)
+            {
+                IsAnimationView = true;
+
+                UIView.BeginAnimations("slideAnimation");
+                UIView.SetAnimationDuration(0.25);
+                UIView.SetAnimationCurve(UIViewAnimationCurve.EaseOut);
+                UIView.SetAnimationDelegate(this);
+                UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
+                ViewSay.Bounds = new CGRect(0, 0, 130, 130);
+                UIView.CommitAnimations();
+            }
+		}
+
+		[Export("animationDidStop:finished:context:")]
+		void SlideStopped(NSString animationID, NSNumber finished, NSObject context)
+		{
+            ViewSay.Layer.Bounds = new CGRect(0, 0, 130, 130);
+            ViewSay.Layer.CornerRadius = ViewSay.Frame.Width / 2;
+
+			update_timer2 = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(1), delegate
+	{
+		UpdateCurrentTime2();
+	});
+		}
+
+		void BtnSay_TouchUpInside(object sender, EventArgs e)
+        {
+            //circularSlider.SetCurrentValue(45);
+            IsAnimationView = false;
+			if (update_timer2 != null)
+			{
+				update_timer2.Invalidate();
+				update_timer2 = null;
+			}
+        }
+		
         private bool TextViewShouldEndEditing(UITextView textView)
         {
             if (textView.Text == "") {

@@ -25,11 +25,11 @@ namespace Naxam.Busuu.iOS.Notification.Common
 					Font = UIFont.BoldSystemFontOfSize(14f)
 				};
 
-                var prettyString = new NSMutableAttributedString(value.Replace("*", ""));
+                var prettyString = new NSMutableAttributedString(value.Replace("|", ""));
 
-                string[] abcd = value.Split('*');
+                string[] abcd = value.Split('|');
 
-                prettyString.SetAttributes(firstAttributes.Dictionary, new NSRange(0, abcd[1].Length));
+                prettyString.SetAttributes(firstAttributes.Dictionary, new NSRange(0, abcd[0].Length));
 
                 return prettyString;
 			}

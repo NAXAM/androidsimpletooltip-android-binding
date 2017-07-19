@@ -44,6 +44,7 @@ namespace Naxam.Busuu.iOS.Social.Views
             setBinding.Bind(lblCountry).To(d => d.SocialDetailData.Country);
             setBinding.Bind(_loaderImgQuestion).To(d => d.SocialDetailData.ImgQuestion).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
             setBinding.Bind(textQuestion).To(d => d.SocialDetailData.TextQuestion);
+            setBinding.Bind(btnAddFriends).For(d => d.Hidden).To(d => d.SocialDetailData.Friends);
             setBinding.Bind(ViewAudioPlayer).For(d => d.Hidden).To(d => d.SocialDetailData.Speak).WithConversion(new MyMvxConverter.InverseValueConverter(), null);
             setBinding.Bind(audioViewBottomConstraint).For(x => x.Active).To(d => d.SocialDetailData.Speak);
             setBinding.Bind(audioViewTopConstraint).For(x => x.Active).To(d => d.SocialDetailData.Speak);

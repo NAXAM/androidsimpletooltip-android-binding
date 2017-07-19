@@ -162,9 +162,9 @@ namespace Naxam.Busuu.iOS.Social.Cells
 				InvokeOnMainThread(() =>
 				{
 					update_timer = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.01), delegate
-			   {
-				   UpdateCurrentTime();
-			   });
+			        {
+				        UpdateCurrentTime();
+			        });
 				});
 			}
 			else

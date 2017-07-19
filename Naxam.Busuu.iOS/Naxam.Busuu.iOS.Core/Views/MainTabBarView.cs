@@ -3,17 +3,21 @@
 using System;
 
 using Foundation;
+using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
+using MvvmCross.iOS.Views.Presenters.Attributes;
 using Naxam.Busuu.Core.ViewModels;
 using Naxam.Busuu.iOS.Social.Views;
+using Naxam.Busuu.Notification.ViewModels;
 using UIKit;
 
 namespace Naxam.Busuu.iOS.Core.Views
 {
     [MvxFromStoryboard(StoryboardName = "Core")]
+    [MvxRootPresentation(WrapInNavigationController = true)]
     public partial class MainTabBarView : MvxTabBarViewController<MainTabBarViewModel>
 	{
-        private bool _isPresentedFirstTime = true;
+        bool _isPresentedFirstTime = true;
 
 		public MainTabBarView (IntPtr handle) : base (handle)
 		{
@@ -23,11 +27,16 @@ namespace Naxam.Busuu.iOS.Core.Views
 		{
 			base.ViewWillAppear(animated);
 
+
 			if (ViewModel != null && _isPresentedFirstTime)
-			{
+			{               
 				_isPresentedFirstTime = false;
-				ViewModel.ShowInitialViewModelsCommand.Execute(null);
+				ViewModel.ShowInitialViewModelsCommand.Execute(null);	
+
+                //this.CreateBinding(TabBar.Items[1]).For(vm => vm.BadgeValue).To<NotificationViewModel>(vm => vm.NotificationCount).Apply();
+                TabBar.Items[1].BadgeValue = "9";
 			}
-		}		
+		}	
+
 	}
 }

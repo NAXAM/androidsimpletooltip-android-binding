@@ -39,7 +39,7 @@ namespace Naxam.Busuu.Notification.Serveices
                         Id = x,
                         ImgUser = "user_avatar_placeholder.png",
                         NameUser = dataScial[x].Name,
-                        Details = "*" + dataScial[x].Name + "* has asked you to correct their exercise",
+                        Details = dataScial[x].Name + "| has asked you to correct their exercise",
                         Time = new DateTime(2017, 7, z--),
                         Check = bbb
                     });
@@ -51,7 +51,7 @@ namespace Naxam.Busuu.Notification.Serveices
 						Id = x,
 						ImgUser = "user_avatar_placeholder.png",
 						NameUser = dataScial[x].Name,
-						Details = "*" + dataScial[x].Name + "* has asked you to correct their exercise",
+						Details = dataScial[x].Name + "| has asked you to correct their exercise",
 						Time = new DateTime(2017, 7, 1),
 						Check = bbb
 					});

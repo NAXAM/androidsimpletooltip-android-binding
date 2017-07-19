@@ -18,9 +18,9 @@ namespace Naxam.Busuu.iOS.Social.Views
     [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "social_tab_icon", TabName = "Social", TabSelectedIconName = "social_tab_icon_selected")]
     public partial class SocialView : MvxViewController<SocialViewModel>
 	{
-        private bool IsAnimationViewBar = true;
-        private MvxViewController dvView = (MvxViewController)UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("DiscoverView");
-        private MvxViewController friView = (MvxViewController)UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("FriendsView");
+        bool IsAnimationViewBar = true;
+        MvxViewController dvView = (MvxViewController)UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("DiscoverView");
+        MvxViewController friView = (MvxViewController)UIStoryboard.FromName("Social", NSBundle.MainBundle).InstantiateViewController("FriendsView");
         //private SocialPageView socialPageView;
 
 		public SocialView (IntPtr handle) : base (handle)
@@ -36,10 +36,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 			ViewBarItem.Layer.ShadowRadius = 2;
 			ViewBarItem.Layer.ShadowOffset = new CGSize(0, 2);
-			ViewBarItem.Layer.ShadowOpacity = 0.25f;
-
-			dvView.View.Frame = ViewContainer.Bounds;
-			friView.View.Frame = ViewContainer.Bounds;
+			ViewBarItem.Layer.ShadowOpacity = 0.25f;			
 
             //socialPageView = this.Storyboard.InstantiateViewController("SocialPageView") as SocialPageView;
 			//socialPageView.DataSource = new PageViewControllerDataSource();
@@ -56,6 +53,14 @@ namespace Naxam.Busuu.iOS.Social.Views
             setBinding.Bind(btnfilter).For("Clicked").To(vm => vm.FilterViewCommand);
 			setBinding.Apply();
 		}
+
+        public override void ViewWillLayoutSubviews()
+        {
+            base.ViewWillLayoutSubviews();
+
+			dvView.View.Frame = new CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, ViewContainer.Frame.Height);
+			friView.View.Frame = new CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, ViewContainer.Frame.Height);
+        }
 
 		partial void ButtonDiscover_TouchUpInside(NSObject sender)
 		{

@@ -89,6 +89,10 @@
       <Project>{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}</Project>
       <Name>Naxam.Busuu.iOS.Social</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Naxam.Busuu.Notification\Naxam.Busuu.Notification.csproj">
+      <Project>{2EADB781-E679-4485-8A53-AE7A8945CD1B}</Project>
+      <Name>Naxam.Busuu.Notification</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Core.storyboard" />

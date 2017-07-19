@@ -18,7 +18,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 
         public override void ViewDidLoad()
         {
-	        this.Request = new MvxViewModelRequest<FriendsViewModel>(null, null);
+            this.Request = new MvxViewModelRequest<FriendsViewModel>(null, null);
 
 			base.ViewDidLoad();
 			

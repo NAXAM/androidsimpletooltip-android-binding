@@ -118,6 +118,8 @@
     <Compile Include="Views\CommentView.designer.cs">
       <DependentUpon>CommentView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CircularSlider.cs" />
+    <Compile Include="Controls\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
@@ -140,7 +142,6 @@
     <BundleResource Include="Resources\flag_small_spanish.png" />
     <BundleResource Include="Resources\play_btn.png" />
     <BundleResource Include="Resources\pause_btn.png" />
-    <BundleResource Include="Resources\Lumia-RingTone-Nokia-Remix-Nokia-DJ.mp3" />
     <BundleResource Include="Resources\Nokia-tune-Nokia-tune.mp3" />
     <BundleResource Include="Resources\Stars\yellow_star_d.png" />
     <BundleResource Include="Resources\Stars\grey_star.png" />
