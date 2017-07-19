@@ -30,7 +30,7 @@ namespace Naxam.Busuu.Social.ViewModels
 
         public void Init(SocialModel item)
 		{			
-            CommentData = _datacomment.GetSocialById(item.Id);
+            CommentData = _datacomment.GetSocialById(1);
 		}
     }
 }

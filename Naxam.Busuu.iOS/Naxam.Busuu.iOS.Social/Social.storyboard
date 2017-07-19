@@ -1137,6 +1137,14 @@
                                                                     <constraint firstAttribute="width" constant="82" id="YT0-fn-msJ"/>
                                                                 </constraints>
                                                             </view>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REg-JG-XYJ" userLabel="btnRemove">
+                                                                <rect key="frame" x="154" y="143" width="34" height="34"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <state key="normal" title="Button" image="ic_delete.png"/>
+                                                                <connections>
+                                                                    <action selector="btnRemove_TouchUpInside:" destination="EDs-De-ALC" eventType="touchUpInside" id="abW-fH-6zL"/>
+                                                                </connections>
+                                                            </button>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bt-vi-was" userLabel="ViewSay3">
                                                                 <rect key="frame" x="130" y="118.5" width="82" height="82"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1164,15 +1172,19 @@
                                                             </button>
                                                         </subviews>
                                                         <constraints>
+                                                            <constraint firstItem="REg-JG-XYJ" firstAttribute="width" secondItem="h99-9W-u7g" secondAttribute="width" multiplier="1:2.5" id="1gq-Y7-mSU"/>
                                                             <constraint firstItem="h1u-1I-nzB" firstAttribute="leading" secondItem="K61-z7-NrV" secondAttribute="leading" id="6sm-w7-hYx"/>
                                                             <constraint firstItem="7yK-Og-VP2" firstAttribute="top" secondItem="4dI-H8-pHo" secondAttribute="bottom" constant="36" id="8qq-7O-LSs"/>
                                                             <constraint firstItem="8bt-vi-was" firstAttribute="centerX" secondItem="7yK-Og-VP2" secondAttribute="centerX" id="AiG-6a-VvG"/>
                                                             <constraint firstAttribute="trailing" secondItem="h1u-1I-nzB" secondAttribute="trailing" id="Ndz-my-ui3"/>
                                                             <constraint firstItem="h99-9W-u7g" firstAttribute="centerY" secondItem="7yK-Og-VP2" secondAttribute="centerY" id="SGR-rh-GfM"/>
                                                             <constraint firstItem="h99-9W-u7g" firstAttribute="centerX" secondItem="7yK-Og-VP2" secondAttribute="centerX" id="Tcw-mv-4G5"/>
+                                                            <constraint firstItem="REg-JG-XYJ" firstAttribute="centerX" secondItem="h99-9W-u7g" secondAttribute="centerX" id="Y74-vP-2c7"/>
+                                                            <constraint firstItem="REg-JG-XYJ" firstAttribute="height" secondItem="h99-9W-u7g" secondAttribute="height" multiplier="1:2.5" id="b4o-Qm-zFU"/>
                                                             <constraint firstItem="Cs8-Qe-x5s" firstAttribute="centerX" secondItem="7yK-Og-VP2" secondAttribute="centerX" id="cOc-Dx-G9j"/>
                                                             <constraint firstItem="8bt-vi-was" firstAttribute="centerY" secondItem="7yK-Og-VP2" secondAttribute="centerY" id="dkw-yQ-8Z8"/>
                                                             <constraint firstItem="h1u-1I-nzB" firstAttribute="top" secondItem="K61-z7-NrV" secondAttribute="top" id="eKk-oa-5aC"/>
+                                                            <constraint firstItem="REg-JG-XYJ" firstAttribute="centerY" secondItem="h99-9W-u7g" secondAttribute="centerY" id="gdj-wU-mHd"/>
                                                             <constraint firstItem="Cs8-Qe-x5s" firstAttribute="centerY" secondItem="7yK-Og-VP2" secondAttribute="centerY" id="pqa-cN-AUE"/>
                                                             <constraint firstItem="4dI-H8-pHo" firstAttribute="top" secondItem="h1u-1I-nzB" secondAttribute="bottom" constant="16" id="zE6-Sk-pB6"/>
                                                         </constraints>
@@ -1326,6 +1338,7 @@
                         <outlet property="audioViewBottomConstraint" destination="9pw-jG-cjI" id="XEw-ba-0Wx"/>
                         <outlet property="audioViewTopConstraint" destination="23n-5v-b97" id="FXa-rt-0sB"/>
                         <outlet property="btnAudioPlay" destination="MGT-gJ-X3F" id="k5V-FZ-SnK"/>
+                        <outlet property="btnRemove" destination="REg-JG-XYJ" id="qEC-lT-sma"/>
                         <outlet property="btnSay" destination="h99-9W-u7g" id="ft2-8Z-JXh"/>
                         <outlet property="imgQuestion" destination="PIJ-dT-Agb" id="ov8-J5-o9r"/>
                         <outlet property="lblTime" destination="TMs-Nb-AuB" id="q6E-zp-3Af"/>
@@ -1346,6 +1359,7 @@
         <image name="conversation_speaking_button_Blue.png" width="56" height="80"/>
         <image name="dots_menu.png" width="36" height="10"/>
         <image name="flag_small_english.png" width="144" height="144"/>
+        <image name="ic_delete.png" width="121" height="121"/>
         <image name="play_btn" width="16" height="16"/>
         <image name="play_btn.png" width="60" height="81"/>
         <image name="social_background_pattern_image" width="16" height="16"/>

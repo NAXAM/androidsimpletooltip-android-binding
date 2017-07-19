@@ -10,8 +10,7 @@ using Naxam.Busuu.Social.ViewModels;
 using PatridgeDev;
 using ObjCRuntime;
 using UIKit;
-using System.Collections.Generic;
-using System.Drawing;
+using Xamarin.CircularProgress.iOS;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
@@ -24,11 +23,15 @@ namespace Naxam.Busuu.iOS.Social.Views
 		AVAudioPlayer SpeakMusicPlayer;
 		NSTimer update_timer;
         NSTimer update_timer2;
+		NSTimer update_timer3;
 
 		UIImage playBtnBg, pauseBtnBg;
 
         UIBarButtonItem btnsend;
-        bool IsAnimationView;
+        bool IsAnimationBtnSay;
+        bool IsAnimationBtnRemove;
+
+        CircularProgress fourColorCircularProgress;
 
 		public CommentView (IntPtr handle) : base (handle)
 		{
@@ -118,91 +121,250 @@ namespace Naxam.Busuu.iOS.Social.Views
             SliderSpeak.SetThumbImage(img, UIControlState.Highlighted);
 
             ViewSay.Layer.CornerRadius = ViewSay.Frame.Width / 2;
-			ViewSay3.Layer.CornerRadius = ViewSay3.Frame.Width / 2;
             ViewSay2.Layer.CornerRadius = ViewSay2.Frame.Width / 2;
-            ViewSay2.Layer.MasksToBounds = false;
-			ViewSay2.Layer.ShadowRadius = 1;
-			ViewSay2.Layer.ShadowOpacity = 0.25f;
-			ViewSay2.Layer.ShadowOffset = new CGSize(0, 1);
+
+            ViewSay3.Layer.CornerRadius = ViewSay3.Frame.Width / 2;
+            ViewSay3.Layer.MasksToBounds = false;
+            ViewSay3.Layer.ShadowRadius = 1.5f;
+			ViewSay3.Layer.ShadowOpacity = 0.25f;
+			ViewSay3.Layer.ShadowOffset = new CGSize(0, 1.5f);
 
             var img2 = UIImage.FromBundle("conversation_speaking_button_red.png");
             btnSay.SetImage(img2, UIControlState.Selected);
             btnSay.SetImage(img2, UIControlState.Highlighted);
             btnSay.Layer.CornerRadius = btnSay.Frame.Width / 2;
             btnSay.Layer.MasksToBounds = false;
-            btnSay.ImageEdgeInsets = new UIEdgeInsets(29, 32, 29, 32);        
+            btnSay.ImageEdgeInsets = new UIEdgeInsets(28, 32, 28, 32);  
 
-            textViewComment.ShouldBeginEditing += TextViewShouldBeginEditing;
+            btnRemove.Layer.CornerRadius = btnRemove.Frame.Width / 2;
+            btnRemove.Layer.MasksToBounds = false;
+            btnRemove.Layer.ShadowRadius = 1.5f;
+			btnRemove.Layer.ShadowOpacity = 0.25f;
+			btnRemove.Layer.ShadowOffset = new CGSize(0, 1.5f);
+            btnRemove.ImageEdgeInsets = new UIEdgeInsets(4, 4, 4, 4);
+
+			textViewComment.ShouldBeginEditing += TextViewShouldBeginEditing;
             textViewComment.ShouldEndEditing += TextViewShouldEndEditing;
 
             btnSay.TouchDown += BtnSay_TouchDown; 
             btnSay.TouchUpInside += BtnSay_TouchUpInside;
-                     
-			//ViewSay2.AddSubview(progressView);
+
+            ConfigureFourColorCircularProgress();
 		}
 
-        nfloat slidervalue = 1; 
-
-		void UpdateCurrentTime2()
+		private void ConfigureFourColorCircularProgress()
 		{
-            ViewSay.Layer.CornerRadius = ViewSay.Frame.Width / 2;
-			
-            if (slidervalue < 60)
-            {
-                slidervalue += 1;
-                ViewSay.Layer.CornerRadius = ViewSay.Bounds.Width / 2;
-                //circularSlider.SetCurrentValue(slidervalue);
-                //lblTimeSay.Text = circularSlider.CurrentValue.ToString();
-            }
-            else
-            {
-				if (update_timer2 != null)
-				{
-					update_timer2.Invalidate();
-					update_timer2 = null;
-				}
-            }
+			var frame = new CGRect(-0.4, -0.4, 85.4, 85.4);
+
+			fourColorCircularProgress = new CircularProgress(frame);
+			fourColorCircularProgress.StartAngle = fourColorCircularProgress.EndAngle = -90;
+            fourColorCircularProgress.Progress = 0;
+            fourColorCircularProgress.LineWidth = 2.5;
+
+            fourColorCircularProgress.Colors = new[]
+            {			
+				UIColor.Red.CGColor
+			};
+
+			ViewSay2.AddSubview(fourColorCircularProgress);
 		}
+
+		int DemNguoc = 25;
 
 		void BtnSay_TouchDown(object sender, EventArgs e)
 		{
-            if (!IsAnimationView)
-            {
-                IsAnimationView = true;
+			ViewSay3.Layer.ShadowRadius = 2.5f;
+			ViewSay3.Layer.ShadowOpacity = 0.35f;
+			ViewSay3.Layer.ShadowOffset = new CGSize(0, 2.5f);
 
-                UIView.BeginAnimations("slideAnimation");
-                UIView.SetAnimationDuration(0.25);
-                UIView.SetAnimationCurve(UIViewAnimationCurve.EaseOut);
-                UIView.SetAnimationDelegate(this);
-                UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
-                ViewSay.Bounds = new CGRect(0, 0, 130, 130);
-                UIView.CommitAnimations();
+            if (update_timer2 == null)
+            {
+                update_timer3 = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.01), delegate
+                    {
+                        UpdateCurrentTime3();
+                    });
             }
+		}
+
+		void BtnSay_TouchUpInside(object sender, EventArgs e)
+		{
+            StopAnimationSld();
+		}
+
+		void UpdateCurrentTime3()
+		{
+			DemNguoc--;
+			if (DemNguoc == 0)
+			{
+				if (update_timer3 != null)
+				{
+					update_timer3.Invalidate();
+					update_timer3 = null;
+				}
+
+				StartAnimationSld();				
+			}
+		}
+
+		double slidervalue;
+		//int timeSay = 30;
+
+        void UpdateCurrentTime2()
+        {
+
+            ViewSay.Layer.CornerRadius = ViewSay.Frame.Width / 2;
+            slidervalue += 0.0003333333;
+
+            if (slidervalue < 1)
+            {
+                ViewSay.Layer.CornerRadius = ViewSay.Bounds.Width / 2;
+                fourColorCircularProgress.Progress = slidervalue;
+                //timeSay -= (int)(30 * 0.0003333333);
+                //lblTimeSay.Text = String.Format("-{0:D2}:{1:D2}", 0, timeSay);
+            }
+            else
+            {
+                StopAnimationSld();
+            }
+        }
+
+        void StartAnimationSld()
+        {
+            if (!IsAnimationBtnSay)
+			{
+                IsAnimationBtnSay = true;
+                               
+				UIView.BeginAnimations("sliderAnimation");
+				UIView.SetAnimationDuration(0.25);
+				UIView.SetAnimationCurve(UIViewAnimationCurve.EaseOut);
+				UIView.SetAnimationDelegate(this);
+				UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
+				ViewSay.Bounds = new CGRect(0, 0, 130, 130);
+				UIView.CommitAnimations();
+			}
+        }
+
+        void StopAnimationSld()
+        {
+            if (IsAnimationBtnSay)
+			{
+                IsAnimationBtnSay= false;
+
+                ViewSay3.Layer.ShadowRadius = 1.5f;
+				ViewSay3.Layer.ShadowOpacity = 0.25f;
+				ViewSay3.Layer.ShadowOffset = new CGSize(0, 1.5f);				
+
+				UIView.BeginAnimations("sliderAnimation");
+				UIView.SetAnimationDuration(0.25);
+				UIView.SetAnimationCurve(UIViewAnimationCurve.EaseOut);
+				UIView.SetAnimationDelegate(this);
+				UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
+				ViewSay.Bounds = new CGRect(0, 0, 82, 82);
+				UIView.CommitAnimations();
+			}
 		}
 
 		[Export("animationDidStop:finished:context:")]
 		void SlideStopped(NSString animationID, NSNumber finished, NSObject context)
 		{
-            ViewSay.Layer.Bounds = new CGRect(0, 0, 130, 130);
-            ViewSay.Layer.CornerRadius = ViewSay.Frame.Width / 2;
+            if (IsAnimationBtnSay)
+            {
+                ViewSay.Layer.Bounds = new CGRect(0, 0, 130, 130);
 
-			update_timer2 = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(1), delegate
-	{
-		UpdateCurrentTime2();
-	});
+				update_timer2 = NSTimer.CreateRepeatingScheduledTimer(TimeSpan.FromSeconds(0.01), delegate
+				{
+					UpdateCurrentTime2();
+				});
+            }
+            else
+            {
+				ViewSay.Layer.Bounds = new CGRect(0, 0, 82, 82);
+
+				if (update_timer2 != null)
+				{
+					update_timer2.Invalidate();
+					update_timer2 = null;
+				}
+
+				slidervalue = 0;
+				//timeSay = 30;
+                DemNguoc = 25;
+
+				lblTimeSay.Text = "Review your correction";
+
+				fourColorCircularProgress.Progress = 0;
+                btnSay.Transform = CGAffineTransform.MakeRotation((float)Math.PI);
+                StartAnimationBtnSay();
+            }
+
+            ViewSay.Layer.CornerRadius = ViewSay.Frame.Width / 2;
 		}
 
-		void BtnSay_TouchUpInside(object sender, EventArgs e)
+        void StartAnimationBtnSay()
         {
-            //circularSlider.SetCurrentValue(45);
-            IsAnimationView = false;
-			if (update_timer2 != null)
-			{
-				update_timer2.Invalidate();
-				update_timer2 = null;
+            if (!IsAnimationBtnRemove)
+            {
+                IsAnimationBtnRemove = true;
+
+                UIView.BeginAnimations("btnSayAnimation");
+                UIView.SetAnimationDuration(0.25);
+                UIView.SetAnimationCurve(UIViewAnimationCurve.EaseOut);
+                UIView.SetAnimationDelegate(this);
+                UIView.SetAnimationDidStopSelector(new Selector("animationBtnSay:finished:context:"));
+                btnSay.Transform = CGAffineTransform.MakeRotation((float)Math.PI * 2);
+                btnRemove.Center = new CGPoint(btnSay.Center.X + 68, btnSay.Center.Y);
+                UIView.CommitAnimations();
+            }
+        }
+
+		void StopAnimationBtnSay()
+		{
+            if (IsAnimationBtnRemove)
+            {
+                IsAnimationBtnRemove = false;
+
+                UIView.BeginAnimations("btnSayAnimation");
+                UIView.SetAnimationDuration(0.25);
+                UIView.SetAnimationCurve(UIViewAnimationCurve.EaseOut);
+                UIView.SetAnimationDelegate(this);
+                UIView.SetAnimationDidStopSelector(new Selector("animationBtnSay:finished:context:"));
+                btnSay.Transform = CGAffineTransform.MakeRotation((float)Math.PI * 2);
+                btnRemove.Center = new CGPoint(btnSay.Center.X, btnSay.Center.Y);
+                UIView.CommitAnimations();
+            }
+		}
+
+        [Export("animationBtnSay:finished:context:")]
+        void btnSayStopped(NSString animationID, NSNumber finished, NSObject context)
+        {
+            if (IsAnimationBtnRemove)
+            {
+                btnSay.Transform = CGAffineTransform.MakeRotation((float)Math.PI * 2);
+                btnRemove.Center = new CGPoint(btnSay.Center.X + 68, btnSay.Center.Y);
+
+				var playBtnSay = UIImage.FromFile("conversation_speaking_play_button.png");
+				btnSay.SetImage(playBtnSay, UIControlState.Normal);
+                btnSay.ImageEdgeInsets = new UIEdgeInsets(30, 34, 30, 30);
+			}
+            else
+            {
+                lblTimeSay.Text = "Hold the button to record your corection";
+
+				btnSay.Transform = CGAffineTransform.MakeRotation((float)Math.PI * 2);
+				btnRemove.Center = new CGPoint(btnSay.Center.X, btnSay.Center.Y);
+
+				var playBtnSay = UIImage.FromFile("conversation_speaking_button_Blue.png");
+				btnSay.SetImage(playBtnSay, UIControlState.Normal);
+                btnSay.ImageEdgeInsets = new UIEdgeInsets(28, 32, 28, 32);
 			}
         }
-		
+
+        partial void btnRemove_TouchUpInside(NSObject sender)
+        {
+            btnSay.Transform = CGAffineTransform.MakeRotation((float)Math.PI);
+            StopAnimationBtnSay();
+        }
+			
         private bool TextViewShouldEndEditing(UITextView textView)
         {
             if (textView.Text == "") {

@@ -22,6 +22,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 		UIKit.UIButton btnAudioPlay { get; set; }
 
 		[Outlet]
+		UIKit.UIButton btnRemove { get; set; }
+
+		[Outlet]
 		UIKit.UIButton btnSay { get; set; }
 
 		[Outlet]
@@ -83,6 +86,9 @@ namespace Naxam.Busuu.iOS.Social.Views
 
 		[Action ("btnAudioPlay_TouchUpInside:")]
 		partial void btnAudioPlay_TouchUpInside (Foundation.NSObject sender);
+
+		[Action ("btnRemove_TouchUpInside:")]
+		partial void btnRemove_TouchUpInside (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -121,6 +127,11 @@ namespace Naxam.Busuu.iOS.Social.Views
 				lblTime = null;
 			}
 
+			if (lblTimeSay != null) {
+				lblTimeSay.Dispose ();
+				lblTimeSay = null;
+			}
+
 			if (SliderSpeak != null) {
 				SliderSpeak.Dispose ();
 				SliderSpeak = null;
@@ -129,11 +140,6 @@ namespace Naxam.Busuu.iOS.Social.Views
 			if (textHowDid != null) {
 				textHowDid.Dispose ();
 				textHowDid = null;
-			}
-
-			if (lblTimeSay != null) {
-				lblTimeSay.Dispose ();
-				lblTimeSay = null;
 			}
 
 			if (textQuestion != null) {
@@ -159,6 +165,11 @@ namespace Naxam.Busuu.iOS.Social.Views
 			if (ViewBossQuestion != null) {
 				ViewBossQuestion.Dispose ();
 				ViewBossQuestion = null;
+			}
+
+			if (btnRemove != null) {
+				btnRemove.Dispose ();
+				btnRemove = null;
 			}
 
 			if (ViewForSpeak != null) {
