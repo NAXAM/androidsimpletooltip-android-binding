@@ -1,32 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Tab Bar View-->
-        <scene sceneID="11K-rW-rhU">
+        <!--Storyboard Reference-->
+        <scene sceneID="GCF-7i-fBy">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarView" automaticallyAdjustsScrollViewInsets="NO" id="gli-lB-KJV" customClass="MainTabBarView" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="h21-Wi-UgB"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="L2j-fL-BBr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.22203999757766724" green="0.66085714101791382" blue="0.96421164274215698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBar>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tQJ-fE-NbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5na-CW-ozJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder id="Qdd-0c-4pW" sceneMemberID="viewController"/>
+                <view contentMode="scaleToFill" id="qtk-cB-VZH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXo-dn-ROJ">
+                            <rect key="frame" x="299" y="7" width="60" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="1nU-NV-VXN"/>
+                                <constraint firstAttribute="height" constant="30" id="bFv-aF-zsh"/>
+                            </constraints>
+                            <state key="normal" title="GO">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50% off Premium!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAT-f3-Ta9">
+                            <rect key="frame" x="16" y="14" width="115" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="gAT-f3-Ta9" firstAttribute="leading" secondItem="qtk-cB-VZH" secondAttribute="leading" constant="16" id="BJu-nq-YmF"/>
+                        <constraint firstAttribute="trailing" secondItem="DXo-dn-ROJ" secondAttribute="trailing" constant="16" id="QwF-49-Wjk"/>
+                        <constraint firstItem="gAT-f3-Ta9" firstAttribute="centerY" secondItem="qtk-cB-VZH" secondAttribute="centerY" id="Xw3-qC-3gG"/>
+                        <constraint firstItem="DXo-dn-ROJ" firstAttribute="centerY" secondItem="qtk-cB-VZH" secondAttribute="centerY" id="dpd-h6-iJV"/>
+                    </constraints>
+                </view>
             </objects>
-            <point key="canvasLocation" x="-314" y="202"/>
+            <point key="canvasLocation" x="116" y="152"/>
         </scene>
     </scenes>
 </document>

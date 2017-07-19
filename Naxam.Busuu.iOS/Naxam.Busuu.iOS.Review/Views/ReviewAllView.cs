@@ -16,6 +16,7 @@ using Naxam.Ausuu.IOS.Review.Floaty;
 using Naxam.Busuu.IOS.Review.Floaty;
 using System.Linq;
 using MvvmCross.iOS.Views.Presenters.Attributes;
+using Naxam.Busuu.iOS.Core.Views;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
@@ -70,6 +71,9 @@ namespace Naxam.Busuu.iOS.Review.Views
             UpdateKeyFromList(AllReviews);
 
             ReviewTableView.WeakDataSource = this;
+
+            var buypremiumcell = new BuyPremiumCell();
+            View.AddSubview(buypremiumcell);
 
             SearchTextField = new UITextField(new CGRect(0, 0, 300, 30));
             SearchTextField.BackgroundColor = UIColor.Clear;

@@ -51,5 +51,19 @@ namespace Naxam.Busuu.Review.ViewModels
         {
             item.IsFavorite = !item.IsFavorite;
         }
+
+		IMvxCommand _playSoundCommand;
+		public IMvxCommand PlaySoundCommand
+		{
+			get
+			{
+				return (_playSoundCommand = _playSoundCommand ?? new MvxCommand<ReviewModel>(ExecutePlayCommand));
+			}
+		}
+
+        void ExecutePlayCommand(ReviewModel review)
+        {
+            
+        }
     }
 }

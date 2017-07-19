@@ -75,23 +75,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\MainTabBarView.cs" />
-    <Compile Include="Views\MainTabBarView.designer.cs">
-      <DependentUpon>MainTabBarView.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Views\BuyPremiumCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
       <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
       <Name>Naxam.Busuu.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Naxam.Busuu.iOS.Social\Naxam.Busuu.iOS.Social.csproj">
-      <Project>{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}</Project>
-      <Name>Naxam.Busuu.iOS.Social</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Core.storyboard" />
+    <InterfaceDefinition Include="Views\BuyPremiumCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

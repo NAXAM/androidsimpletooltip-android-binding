@@ -35,7 +35,7 @@ namespace Naxam.Busuu.iOS
         {
             var assemblies = new List<Assembly>
             {
-                typeof(MainTabBarView).Assembly,
+                //typeof(MainTabBarView).Assembly,
                 typeof(SocialView).Assembly,
                 typeof(NotificationView).Assembly,
                 typeof(RegisterView).Assembly,
@@ -50,7 +50,7 @@ namespace Naxam.Busuu.iOS
 			var assemblies = new List<Assembly>
 			{
 
-				typeof(MainTabBarViewModel).Assembly,
+				//typeof(MainTabBarViewModel).Assembly,
                 typeof(ReviewAllViewModel).Assembly,
                 typeof(SocialViewModel).Assembly,
                 typeof(NotificationViewModel).Assembly,
