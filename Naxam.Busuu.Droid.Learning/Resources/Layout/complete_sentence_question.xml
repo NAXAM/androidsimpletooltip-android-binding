@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <FrameLayout
+          android:id="@+id/layout_complete_sentence_description"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/imgImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:scaleType="fitXY" />
+
+        <Naxam.Busuu.Droid.Learning.Control.NXPlayButton
+            android:id="@+id/btnPlay"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="8dp" />
+      </FrameLayout>
+
+      <TextView
+          android:id="@+id/txt_compelte_sentence_title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/layout_complete_sentence_description"
+          android:layout_marginBottom="16dp"
+          android:gravity="center"
+          android:padding="16dp"
+          android:text="Hoàn thành câu bằng từ để hỏi chính xác."
+          android:textColor="#38A9F6" />
+
+      <TextView
+          android:id="@+id/txt_compelte_sentence_question"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/txt_compelte_sentence_title"
+          android:gravity="center"
+          android:padding="16dp"
+          android:text="_______ are your from?" />
+
+      <TextView
+          android:id="@+id/txt_compelte_sentence_true_answer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/txt_compelte_sentence_question"
+          android:gravity="center"
+          android:padding="16dp"
+          android:text="Where are you from?"
+          android:textColor="#74B826" />
+    </RelativeLayout>
+  </ScrollView>
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="16dp"
+      android:layout_marginLeft="32dp"
+      android:layout_marginRight="32dp"
+      android:background="@drawable/background_circle_green"
+      android:text="TIẾP TỤC"
+      android:textColor="#ffffff" />
+</RelativeLayout>

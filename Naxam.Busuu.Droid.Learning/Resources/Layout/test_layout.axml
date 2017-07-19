@@ -4,9 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Naxam.Busuu.Droid.Learning.Control.MemoSelectWord
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/alterView"
-        app:MvxBind="NextCommand NextCommand" />
+  <Naxam.Busuu.Droid.Learning.Control.RecorderButton
+      android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>

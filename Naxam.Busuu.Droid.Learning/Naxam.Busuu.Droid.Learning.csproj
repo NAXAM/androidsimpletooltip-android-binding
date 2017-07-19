@@ -157,6 +157,7 @@
     <Compile Include="Control\Conversation\ListConversationAdapter.cs" />
     <Compile Include="Control\MemoriseBodyView.cs" />
     <Compile Include="Control\Memo\MemoSelectWord.cs" />
+    <Compile Include="Control\RecorderButton.cs" />
     <Compile Include="Listener\AnimationListener.cs" />
     <Compile Include="Listener\AnimatorListener.cs" />
     <Compile Include="Listener\AnimatorUpdateListener.cs" />
@@ -633,6 +634,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_conversation_speak.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\complete_sentence_question.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\complete_sentence_question.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
