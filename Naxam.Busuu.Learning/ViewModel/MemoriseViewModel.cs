@@ -28,7 +28,7 @@ namespace Naxam.Busuu.Learning.ViewModel
         public void Init(ExerciseModel ex)
         {
             UnitModel.UnitType[] lstType = new UnitModel.UnitType[] {
-            UnitModel.UnitType.FillSentence,UnitModel.UnitType.MatchingSentence,UnitModel.UnitType.SelectWord
+            UnitModel.UnitType.FillSentence,UnitModel.UnitType.ChooseWord,UnitModel.UnitType.SelectWord
             };
             Exercise = ex ?? new ExerciseModel();
             List<UnitModel> listUnit = new List<UnitModel>();

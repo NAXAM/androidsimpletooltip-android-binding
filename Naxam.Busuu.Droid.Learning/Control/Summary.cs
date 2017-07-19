@@ -79,9 +79,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
 
             mAnimatorSet.SetDuration(50);
            
-
-
-            int dpDistance = (int)Util.Util.PxFromDp(Context, 2);
+             
             animator.SetDuration(500 * (Correct + 1));
 
 
