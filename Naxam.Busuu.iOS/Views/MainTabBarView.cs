@@ -2,18 +2,14 @@
 
 using System;
 
-using Foundation;
-using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using Naxam.Busuu.Core.ViewModels;
-using Naxam.Busuu.iOS.Social.Views;
-using Naxam.Busuu.Notification.ViewModels;
 using UIKit;
 
-namespace Naxam.Busuu.iOS.Core.Views
+namespace Naxam.Busuu.iOS.Views
 {
-    [MvxFromStoryboard(StoryboardName = "Core")]
+    [MvxFromStoryboard(StoryboardName = "Main")]
     [MvxRootPresentation(WrapInNavigationController = true)]
     public partial class MainTabBarView : MvxTabBarViewController<MainTabBarViewModel>
 	{

@@ -177,6 +177,7 @@
     <Folder Include="Assets.xcassets\profile_tab_icon_selected.imageset\" />
     <Folder Include="Assets.xcassets\notifications_tab_icon.imageset\" />
     <Folder Include="Assets.xcassets\notifications_tab_icon_selected.imageset\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -190,14 +191,14 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Setup.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Views\MainTabBarView.cs" />
+    <Compile Include="Views\MainTabBarView.designer.cs">
+      <DependentUpon>..\Naxam.Busuu.iOS.Core\Views\MainTabBarView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">

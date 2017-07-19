@@ -10,8 +10,8 @@ using Naxam.Busuu.Social.ViewModels;
 using PatridgeDev;
 using ObjCRuntime;
 using UIKit;
-using SeekArc.Touch;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
@@ -28,7 +28,6 @@ namespace Naxam.Busuu.iOS.Social.Views
 		UIImage playBtnBg, pauseBtnBg;
 
         UIBarButtonItem btnsend;
-        CircularSlider circularSlider;
         bool IsAnimationView;
 
 		public CommentView (IntPtr handle) : base (handle)
@@ -138,14 +137,8 @@ namespace Naxam.Busuu.iOS.Social.Views
 
             btnSay.TouchDown += BtnSay_TouchDown; 
             btnSay.TouchUpInside += BtnSay_TouchUpInside;
-
-            circularSlider = new CircularSlider(new CGRect(0, 0, 84.5, 84.5));
-            circularSlider.SetUnfilledColor(UIColor.Clear);
-            circularSlider.SetMaximumValue(60);
-            circularSlider.SetMinimumValue(0);
-            circularSlider.SetCurrentValue(0);
-            circularSlider.SetLineWidth(2.5f);
-			ViewSay2.AddSubview(circularSlider);
+                     
+			//ViewSay2.AddSubview(progressView);
 		}
 
         nfloat slidervalue = 1; 
@@ -158,8 +151,8 @@ namespace Naxam.Busuu.iOS.Social.Views
             {
                 slidervalue += 1;
                 ViewSay.Layer.CornerRadius = ViewSay.Bounds.Width / 2;
-                circularSlider.SetCurrentValue(slidervalue);
-                lblTimeSay.Text = circularSlider.CurrentValue.ToString();
+                //circularSlider.SetCurrentValue(slidervalue);
+                //lblTimeSay.Text = circularSlider.CurrentValue.ToString();
             }
             else
             {

@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace Naxam.Busuu.iOS.Core.Views
+namespace Naxam.Busuu.iOS.Views
 {
 	[Register ("MainTabBarView")]
 	partial class MainTabBarView

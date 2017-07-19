@@ -5,7 +5,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.iOS.Views.Presenters;
 using Naxam.Busuu.Core.ViewModels;
-using Naxam.Busuu.iOS.Core.Views;
+using Naxam.Busuu.iOS.Views;
 using Naxam.Busuu.iOS.Notification.Views;
 using Naxam.Busuu.iOS.Profile.Views;
 using Naxam.Busuu.iOS.Social.Views;
@@ -30,7 +30,6 @@ namespace Naxam.Busuu.iOS
 		{
 			var assemblies = new List<Assembly>
 			{
-                typeof(MainTabBarView).Assembly,
                 typeof(SocialView).Assembly,
                 typeof(NotificationView).Assembly,
                 typeof(RegisterView).Assembly
@@ -44,8 +43,7 @@ namespace Naxam.Busuu.iOS
 		{
 			var assemblies = new List<Assembly>
 			{
-				typeof(MainTabBarViewModel).Assembly,
-                typeof(SocialViewModel).Assembly,
+				typeof(SocialViewModel).Assembly,
                 typeof(NotificationViewModel).Assembly,
                 typeof(RegisterViewModel).Assembly
 			};

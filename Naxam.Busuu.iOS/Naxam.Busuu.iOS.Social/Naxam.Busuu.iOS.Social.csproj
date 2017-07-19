@@ -118,8 +118,7 @@
     <Compile Include="Views\CommentView.designer.cs">
       <DependentUpon>CommentView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CircularSlider.cs" />
-    <Compile Include="Controls\Utils.cs" />
+    <Compile Include="Controls\CircularProgress.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
