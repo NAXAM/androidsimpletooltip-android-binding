@@ -76,6 +76,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\BuyPremiumCell.cs" />
+    <Compile Include="Views\BuyPremiumCell.designer.cs">
+      <DependentUpon>BuyPremiumCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">

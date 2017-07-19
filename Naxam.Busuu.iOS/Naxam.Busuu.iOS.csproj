@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -174,6 +173,7 @@
     <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\notifications_tab_icon_selected.png" />
     <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\notifications_tab_icon_selected%402x.png" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -212,6 +212,8 @@
     <Compile Include="App.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Views\MainTabBarView.cs" />
+    <Compile Include="Views\MainTabBarView.designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Naxam.Busuu.iOS.Review\Naxam.Busuu.iOS.Review.csproj">

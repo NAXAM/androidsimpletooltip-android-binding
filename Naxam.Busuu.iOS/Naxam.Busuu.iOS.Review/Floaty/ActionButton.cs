@@ -146,7 +146,7 @@ namespace Naxam.Busuu.IOS.Review.Floaty
             metric.Add(new NSString("FloatButtonRadius"), NSNumber.FromNFloat(FloatButtonRadius));
 
 			var width = NSLayoutConstraint.FromVisualFormat("H:[FloatButton(FloatButtonRadius)]-16-|", NSLayoutFormatOptions.AlignAllCenterX, metric, views);
-			var height = NSLayoutConstraint.FromVisualFormat("V:[FloatButton(FloatButtonRadius)]-64\t-|", NSLayoutFormatOptions.AlignAllCenterX, metric, views);
+			var height = NSLayoutConstraint.FromVisualFormat("V:[FloatButton(FloatButtonRadius)]-64-|", NSLayoutFormatOptions.AlignAllCenterX, metric, views);
 			ParentView.AddConstraints(width);
 			ParentView.AddConstraints(height);
 		}

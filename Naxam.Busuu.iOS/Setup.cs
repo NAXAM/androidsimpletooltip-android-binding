@@ -5,7 +5,6 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.iOS.Views.Presenters;
 using Naxam.Busuu.Core.ViewModels;
-using Naxam.Busuu.iOS.Core.Views;
 using Naxam.Busuu.iOS.Notification.Views;
 using Naxam.Busuu.iOS.Profile.Views;
 using Naxam.Busuu.iOS.Review.Views;

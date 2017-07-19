@@ -17,8 +17,8 @@ namespace Naxam.Busuu.iOS
 			Mvx.RegisterType<IDataNotification, DataNotification>();
 			Mvx.RegisterType<IReviewService, ReviewService>();
 
-            //Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainTabBarViewModel>());
-			Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<ReviewAllViewModel>());
+            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainTabBarViewModel>());
+			//Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<ReviewAllViewModel>());
 		}
 	}
 }
