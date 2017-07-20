@@ -4,7 +4,7 @@ using System;
 
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
-using Naxam.Busuu.Core.ViewModels;
+using Naxam.Busuu.ViewModels;
 using UIKit;
 
 namespace Naxam.Busuu.iOS.Views
@@ -30,7 +30,7 @@ namespace Naxam.Busuu.iOS.Views
 				ViewModel.ShowInitialViewModelsCommand.Execute(null);	
 
                 //this.CreateBinding(TabBar.Items[1]).For(vm => vm.BadgeValue).To<NotificationViewModel>(vm => vm.NotificationCount).Apply();
-                TabBar.Items[1].BadgeValue = "9";
+                TabBar.Items[2].BadgeValue = "9";
 			}
 		}	
 

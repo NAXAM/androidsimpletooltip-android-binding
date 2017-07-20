@@ -12,6 +12,11 @@ using Naxam.Busuu.iOS.Social.Views;
 using Naxam.Busuu.Notification.ViewModels;
 using Naxam.Busuu.Profile.ViewModel;
 using Naxam.Busuu.Social.ViewModels;
+using MvvmCross.Binding.Bindings.Target.Construction;
+using Naxam.Busuu.iOS.Core.CustomBindings;
+using MvvmCross.Platform.Converters;
+using MvvmCross.Binding.BindingContext;
+using Naxam.Busuu.iOS.Core.Converter;
 using UIKit;
 
 namespace Naxam.Busuu.iOS
@@ -57,14 +62,34 @@ namespace Naxam.Busuu.iOS
 			return assemblies;
         }
 
-        protected override void FillBindingNames(MvvmCross.Binding.BindingContext.IMvxBindingNameRegistry obj)
+        protected override void FillBindingNames(IMvxBindingNameRegistry obj)
         {
             base.FillBindingNames(obj);
         }
 
-        protected override void FillTargetFactories(MvvmCross.Binding.Bindings.Target.Construction.IMvxTargetBindingFactoryRegistry registry)
+        protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
         {
-            
+            base.FillTargetFactories(registry);
+
+            registry.RegisterCustomBindingFactory<UILabel>(
+                "FormattedText",
+                x => new AttributedTextTargetBinding(x)
+            );
         }
+
+		protected override void FillValueConverters(IMvxValueConverterRegistry registry)
+		{
+			// avoid the reflection overhead - do not call base class
+			//base.FillValueConverters(registry);
+			registry.AddOrOverwrite("ImageUriValueConverter", new ImageUriConverter());
+            registry.AddOrOverwrite("BoolInverseConverter", new BoolInverseConverter());
+			registry.AddOrOverwrite("StarTextConverter", new StarTextConverter());
+            registry.AddOrOverwrite("HowDidTextConverter", new HowDidTextConverter());
+			registry.AddOrOverwrite("DatetimeTextConverter", new DatetimeTextConverter());
+            registry.AddOrOverwrite("FriendsImgSpeakValueConverter", new FriendsImgSpeakConverter());
+            registry.AddOrOverwrite("NotificationTextConverter", new NotificationTextConverter());
+            registry.AddOrOverwrite("NotificationDatetimeConverter", new NotificationDatetimeConverter());
+            registry.AddOrOverwrite("NotificationColorConverter", new NotificationColorConverter());
+		}
     }
 }

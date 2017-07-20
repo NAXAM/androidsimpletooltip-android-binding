@@ -17,11 +17,6 @@ namespace Naxam.Busuu.iOS.Notification.Views
     [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "notifications_tab_icon", TabName = "Notifications", TabSelectedIconName = "notifications_tab_icon_selected")]
 	public partial class NotificationView : MvxViewController<NotificationViewModel>
 	{
-        public NotificationView()
-        {
-            this.TabBarController.TabBar.Items[1].BadgeValue = "5";
-        }
-
         public NotificationView(IntPtr handle) : base(handle)
         {
 
@@ -42,7 +37,7 @@ namespace Naxam.Busuu.iOS.Notification.Views
 			NotificationTableView.EstimatedRowHeight = 72f;
 			NotificationTableView.Source = nSource;
 
-            this.TabBarController.TabBar.Items[1].BadgeValue = null;	
+            this.TabBarController.TabBar.Items[2].BadgeValue = null;	
         }
 	}
 }
