@@ -217,6 +217,7 @@
     <Compile Include="Views\PremiumView.cs" />
     <Compile Include="Control\Vocabulary\TrueFalseHearQuestionView.cs" />
     <Compile Include="Transformers\ForegroundToBackgroundTransformer.cs" />
+    <Compile Include="Views\TipDialog.cs" />
     <Compile Include="Views\VocabularyView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -708,6 +709,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\tip_dialog_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

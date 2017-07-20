@@ -35,6 +35,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
         Android.Support.V4.App.FragmentManager manager;
         VocabularyViewPager viewPager;
         VocabularyPagerAdapter adapter;
+        ImageView menuTip;
         IList<Android.Support.V4.App.Fragment> listFragment;
         protected override void OnViewModelSet()
         {
@@ -50,12 +51,14 @@ namespace Naxam.Busuu.Droid.Learning.Views
             SetSupportActionBar(toolbar);
             actionBar = SupportActionBar;
             viewPager = FindViewById<VocabularyViewPager>(Resource.Id.viewPager);
-
             viewPager.SetAllowedSwipeDirection(VocabularyViewPager.SwipeDirection.Right);
-
             viewPager.SetPageTransformer(true, new ForegroundToBackgroundTransformer());
 
-
+            menuTip = FindViewById<ImageView>(Resource.Id.menuTip);
+            menuTip.Click += (s, e) => {
+                TipDialog dialog = new TipDialog(this, Item.Units[PositionStep].Tip);
+                dialog.Show();
+            };
             txtStep = FindViewById<TextView>(Resource.Id.txtStep);
             prgStep = FindViewById<ProgressBar>(Resource.Id.prgStep);
             layoutStep = FindViewById<LinearLayout>(Resource.Id.layoutStep);
