@@ -79,6 +79,8 @@
     <Compile Include="Views\BuyPremiumCell.designer.cs">
       <DependentUpon>BuyPremiumCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SpreadOutAnimationView.cs" />
+    <Compile Include="Views\UIViewExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">

@@ -94,6 +94,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
     <Folder Include="Floaty\" />
+    <Folder Include="Resources\Assets.xcassets\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -125,11 +126,28 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\star.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\star.imageset\star.png" />
+    <BundleResource Include="Resources\Nokia-tune-Nokia-tune.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\add_language.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\add_language%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\back_arrow.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\back_arrow%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\btn_activityCloseCrossButtonNew.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\btn_activityCloseCrossButtonNew%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\play_btn.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\play_btn.imageset\play_btn.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button%402x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\entity_strength_0.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\entity_strength_0.imageset\entity_strength_0.png" />
     <ImageAsset Include="Resources\Assets.xcassets\entity_strength_1.imageset\Contents.json" />
@@ -140,14 +158,45 @@
     <ImageAsset Include="Resources\Assets.xcassets\entity_strength_3.imageset\entity_strength_3.png" />
     <ImageAsset Include="Resources\Assets.xcassets\entity_strength_4.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\entity_strength_4.imageset\entity_strength_4.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\star_active.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\star_active.imageset\star_active.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\fab_menu_row_all.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\fab_menu_row_all%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\fab_menu_row_fav.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\fab_menu_row_fav%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\fab_menu_row_learning.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\fab_menu_row_learning%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\greyCheck.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\greyCheck%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\greyX.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\greyX%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\image_placeholder.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\image_placeholder%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\play_btn.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\play_btn.imageset\play_btn.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\rating_star_gold.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\rating_star_gold%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\rating_star_grey.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\rating_star_grey%402x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\rounded_golden_star.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\rounded_golden_star.imageset\rounded_golden_star.png" />
     <ImageAsset Include="Resources\Assets.xcassets\rounded_golden_star.imageset\rounded_golden_star%402x.png" />
     <ImageAsset Include="Resources\Assets.xcassets\rounded_grey_star.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\rounded_grey_star.imageset\rounded_grey_star.png" />
     <ImageAsset Include="Resources\Assets.xcassets\rounded_grey_star.imageset\rounded_grey_star%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\star.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\star.imageset\star.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\star_active.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\star_active.imageset\star_active.png" />
     <ImageAsset Include="Resources\Assets.xcassets\strength_0.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\strength_0.imageset\strength_0.png" />
     <ImageAsset Include="Resources\Assets.xcassets\strength_0.imageset\strength_0%402x.png" />
@@ -163,54 +212,6 @@
     <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\Contents.json" />
     <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\strength_4.png" />
     <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\strength_4%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\add_language.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\add_language%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\btn_activityCloseCrossButtonNew.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\btn_activityCloseCrossButtonNew%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\rating_star_gold.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\rating_star_gold%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\rating_star_grey.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\rating_star_grey%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\greyX.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\greyX%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\image_placeholder.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\image_placeholder%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\greyCheck.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\greyCheck%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\fab_menu_row_learning.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\fab_menu_row_learning%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\fab_menu_row_all.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\fab_menu_row_all%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\fab_menu_row_fav.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\fab_menu_row_fav%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\back_arrow.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\back_arrow%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Nokia-tune-Nokia-tune.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

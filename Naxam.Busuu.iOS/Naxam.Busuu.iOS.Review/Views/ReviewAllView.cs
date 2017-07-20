@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using CoreGraphics;
 using MvvmCross.iOS.Views;
 using Naxam.Busuu.Review.ViewModels;
@@ -17,6 +17,8 @@ using Naxam.Busuu.IOS.Review.Floaty;
 using System.Linq;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using Naxam.Busuu.iOS.Core;
+
+using Naxam.Busuu.iOS.Core.Views;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
@@ -95,6 +97,8 @@ namespace Naxam.Busuu.iOS.Review.Views
             TitleBarButtonItem = new UIBarButtonItem(TitleLabel);
             NavigationItem.LeftBarButtonItem = TitleBarButtonItem;
             NavigationItem.RightBarButtonItem = SearchBarButtonItem;
+
+            View.AddRippleLayer();
         }
 
         void UpdateKeyFromList(List<ReviewModel> list)
@@ -193,7 +197,6 @@ namespace Naxam.Busuu.iOS.Review.Views
             UIView.Animate(0.2, () =>
             {
                 uiViewSlide.Center = new CGPoint(btnAll.Frame.GetMidX(), btnAll.Frame.GetMaxY() - uiViewSlide.Bounds.Size.Height / 2);
-
                 uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
                 btnAll.SetTitleColor(UIColor.FromRGB(86, 156, 201), UIControlState.Normal);
                 btnFavorite.SetTitleColor(UIColor.LightGray, UIControlState.Normal);

@@ -21,6 +21,7 @@ namespace Naxam.Busuu.iOS.Review.Views
         public ReviewModel Item { get => _item; set => _item = value; }
         private AVAudioPlayer _ringtoneAudioPlayer;
         static bool isPlaying;
+
         public Action AnimationDidStartFunc;
         public Action<bool> AnimationDidStopFunc;
         CAShapeLayer StarShape, PlayShape, CellShape;
@@ -241,4 +242,4 @@ namespace Naxam.Busuu.iOS.Review.Views
             AnimationDidStopFunc?.Invoke(finished);
         }
     }
-}
+}       
