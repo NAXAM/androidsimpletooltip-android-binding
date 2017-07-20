@@ -130,27 +130,8 @@
     <InterfaceDefinition Include="Social.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Social.xcassets\Contents.json" />
-    <BundleResource Include="Social.xcassets\ic_filter.imageset\Contents.json" />
-    <BundleResource Include="Social.xcassets\ic_filter.imageset\ic_filter%402x.png" />
-    <BundleResource Include="Social.xcassets\ic_filter.imageset\ic_filter%403x.png" />
-    <BundleResource Include="Social.xcassets\ic_send_light.imageset\Contents.json" />
-    <BundleResource Include="Social.xcassets\ic_send_light.imageset\ic_send_light%402x.png" />
-    <BundleResource Include="Social.xcassets\ic_send_light.imageset\ic_send_light%403x.png" />
-    <BundleResource Include="Social.xcassets\play_icon_small.imageset\Contents.json" />
-    <BundleResource Include="Social.xcassets\play_icon_small.imageset\play_icon_small%402x.png" />
-    <BundleResource Include="Social.xcassets\play_icon_small.imageset\play_icon_small%403x.png" />
-    <BundleResource Include="Social.xcassets\social_tab_icon.imageset\Contents.json" />
-    <BundleResource Include="Social.xcassets\social_tab_icon.imageset\social_tab_icon.png" />
-    <BundleResource Include="Social.xcassets\social_tab_icon.imageset\social_tab_icon%402x.png" />
-    <BundleResource Include="Social.xcassets\social_tab_icon_selected.imageset\Contents.json" />
-    <BundleResource Include="Social.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected.png" />
-    <BundleResource Include="Social.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
     <None Include="Controls\PDRating.dll" />
-    <None Include="Social.xcassets\.DS_Store" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
