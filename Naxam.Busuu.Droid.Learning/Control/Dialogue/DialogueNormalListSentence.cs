@@ -21,40 +21,32 @@ using System.Net;
 using Java.IO;
 using Android.Provider;
 using Android.Database;
+using Naxam.Busuu.Droid.Learning.Control.Dialogue;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class ConversationNormalListSentence : LinearLayout
+    public class DialogueNormalListSentence : DialogueFragmentBase
     {
-        public IList<UnitModel> Items;
+        public override event EventHandler<int> NextClicked;
         public int OrientationScreen;
 
         private int focusIndex;
-        public ConversationNormalListSentence(Context context) : base(context)
+
+        public DialogueNormalListSentence(IList<UnitModel> Items)
         {
+            this.Items = Items;
         }
 
-        public ConversationNormalListSentence(Context context, IAttributeSet attrs) : base(context, attrs)
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
+            View view = inflater.Inflate(Resource.Layout.conversation_fill_list_sentence_layout, container, false);
+            Init(view);
+            return view;
         }
 
-        public ConversationNormalListSentence(Context context, IAttributeSet attrs, int defStyleAttr) : base(context, attrs, defStyleAttr)
+        public void Init(View view)
         {
-        }
-
-        public ConversationNormalListSentence(Context context, IAttributeSet attrs, int defStyleAttr, int defStyleRes) : base(context, attrs, defStyleAttr, defStyleRes)
-        {
-        }
-
-        protected ConversationNormalListSentence(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
-        {
-        }
-
-        public View Init()
-        {
-            RemoveAllViews();
             int margin = (int)Util.Util.PxFromDp(Context, 4);
-            View view = LayoutInflater.FromContext(Context).Inflate(Resource.Layout.conversation_fill_list_sentence_layout, null);
             ListView lstView = view.FindViewById<ListView>(Resource.Id.lstView);
             lstView.DividerHeight = 0;
             lstView.Divider = null;
@@ -68,7 +60,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
 
             btnPlay.Url = Download("http://www.montemagno.com/sample.mp3");
             List<AudioModel> listAudio = Items.Select(d => d.Audios.FirstOrDefault()).ToList();
-            ListConversationNormalAdapter adapter = new ListConversationNormalAdapter(Context, Items, -1);
+            DialogueListNormalAdapter adapter = new DialogueListNormalAdapter(Context, Items, -1);
             btnPlay.PositionChanged += (s, e) =>
             {
                 AudioModel selectedAudio = listAudio.Where(d => d.Start <= e / 1000 && d.End > e / 1000).FirstOrDefault();
@@ -95,7 +87,10 @@ namespace Naxam.Busuu.Droid.Learning.Control
                 btnPlay.Elevation = margin / 2 + 2;
             }
             Button btnNext = view.FindViewById<Button>(Resource.Id.btnNext);
-
+            btnNext.Click += (s, e) =>
+            {
+                NextClicked.Invoke(btnNext, 0);
+            };
             lstView.Adapter = adapter;
 
             if (Items[0].Audios.Count > 0)
@@ -106,12 +101,8 @@ namespace Naxam.Busuu.Droid.Learning.Control
             {
                 btnPlay.Visibility = ViewStates.Gone;
             }
-
-
-            AddView(view, new LinearLayout.LayoutParams(-1, -1));
-
-            return view;
         }
+
         private Drawable GetBackground(Color color)
         {
             PaintDrawable background = new PaintDrawable(color);

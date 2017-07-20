@@ -22,17 +22,17 @@ using Naxam.Busuu.Droid.Learning.TargetBinding;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class ListConversationNormalAdapter : BaseAdapter
+    public class DialogueListNormalAdapter : BaseAdapter
     {
         public event EventHandler<int> AnswerClickedHandler;
         public IList<UnitModel> ItemSource;
         public Context context;
         public int FocusIndex;
         IList<IList<AnswerModel>> answer;
-        protected ListConversationNormalAdapter(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
+        protected DialogueListNormalAdapter(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
         {
         }
-        public ListConversationNormalAdapter(Context context, IList<UnitModel> ItemSource, int focusIndex)
+        public DialogueListNormalAdapter(Context context, IList<UnitModel> ItemSource, int focusIndex)
         {
             this.ItemSource = ItemSource;
             this.context = context;

@@ -147,16 +147,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\Conversation\ConversationNormalListSentence.cs" />
-    <Compile Include="Control\Conversation\ConversationFillListSentence.cs" />
-    <Compile Include="Control\Conversation\ConversationPagerAdapter.cs" />
-    <Compile Include="Control\Conversation\ListConversationNormalAdapter.cs" />
-    <Compile Include="Control\Conversation\ListConversationAdapter.cs" />
+    <Compile Include="Adapters\SelectWordImageRecyclerViewAdapter.cs" />
+    <Compile Include="Control\Dialogue\DialogueFragmentBase.cs" />
+    <Compile Include="Control\Dialogue\DialogueNormalListSentence.cs" />
+    <Compile Include="Control\Dialogue\DialogueFillListSentence.cs" />
+    <Compile Include="Control\Dialogue\DialogueListNormalAdapter.cs" />
+    <Compile Include="Control\Dialogue\DialogueListAdapter.cs" />
     <Compile Include="Control\MemoriseBodyView.cs" />
     <Compile Include="Control\Memo\MemoChooseWord.cs" />
     <Compile Include="Control\Memo\MemoMatchingSentence.cs" />
     <Compile Include="Control\Memo\MemoriseFragmentBase.cs" />
     <Compile Include="Control\Memo\MemoSelectWord.cs" />
+    <Compile Include="Control\Memo\MemoSelectWordImage.cs" />
     <Compile Include="Control\Summary.cs" />
     <Compile Include="Listener\AnimationListener.cs" />
     <Compile Include="Listener\AnimatorListener.cs" />
@@ -165,7 +167,7 @@
     <Compile Include="Control\LessonHeader.cs" />
     <Compile Include="Control\Memo\MemoFillSentence.cs" />
     <Compile Include="Control\NXMvxExpandableListView.cs" />
-    <Compile Include="Control\NXMvxExpandableListAdapter.cs" />
+    <Compile Include="Adapters\NXMvxExpandableListAdapter.cs" />
     <Compile Include="Control\NXExpandableListView.cs" />
     <Compile Include="Control\NXPlayButton.cs" />
     <Compile Include="Converter\AlphaColorConverter.cs" />
@@ -185,10 +187,10 @@
     <Compile Include="TargetBinding\ImageResourceTargetBinding.cs" />
     <Compile Include="TargetBinding\ImageSourceTargetBinding.cs" />
     <Compile Include="TargetBinding\LessonHeaderTargetBinding.cs" />
-    <Compile Include="Control\NXExpandableListAdapter.cs" />
+    <Compile Include="Adapters\NXExpandableListAdapter.cs" />
     <Compile Include="Control\NXRecyclerView.cs" />
     <Compile Include="Adapters\MyPagerAdapter.cs" />
-    <Compile Include="CustomControls\CustomViewPager.cs" />
+    <Compile Include="Control\CustomViewPager.cs" />
     <Compile Include="HearAndRepeatView.cs" />
     <Compile Include="ListPracticeView.cs" />
     <Compile Include="PreparePronounceView.cs" />
@@ -204,13 +206,13 @@
     <Compile Include="Util\Util.cs" />
     <Compile Include="Views\BuyPremiumView.cs" />
     <Compile Include="Views\ChangeLanguageView.cs" />
+    <Compile Include="Views\DialogueView.cs" />
     <Compile Include="Views\GridSpacingItemDecoration.cs" />
     <Compile Include="Views\LearnView.cs" />
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\MemoriseView.cs" />
     <Compile Include="Views\PremiumArrayAdapter.cs" />
     <Compile Include="Views\PremiumView.cs" />
-    <Compile Include="Views\TestListView.cs" />
     <Compile Include="Views\TrueFalseHearQuestionView.cs" />
     <Compile Include="Transformers\ForegroundToBackgroundTransformer.cs" />
   </ItemGroup>
@@ -663,6 +665,29 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\dotted.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\select_word_with_image_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\select_word_with_image_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\v.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\select_word_with_image_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\dialogue_activity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control\Conversation\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

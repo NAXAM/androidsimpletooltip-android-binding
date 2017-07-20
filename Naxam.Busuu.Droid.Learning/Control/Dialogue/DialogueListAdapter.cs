@@ -22,7 +22,7 @@ using Naxam.Busuu.Droid.Learning.TargetBinding;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class ListConversationAdapter : BaseAdapter
+    public class DialogueListAdapter : BaseAdapter
     {
         public event EventHandler<int> AnswerClickedHandler;
         public IList<UnitModel> ItemSource;
@@ -30,10 +30,10 @@ namespace Naxam.Busuu.Droid.Learning.Control
         public Context context;
         public int FocusIndex;
         IList<IList<AnswerModel>> answer;
-        protected ListConversationAdapter(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
+        protected DialogueListAdapter(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
         {
         }
-        public ListConversationAdapter(Context context, IList<UnitModel> ItemSource, IList<AnswerModel> ListTextResult)
+        public DialogueListAdapter(Context context, IList<UnitModel> ItemSource, IList<AnswerModel> ListTextResult)
         {
 
             this.ItemSource = ItemSource;

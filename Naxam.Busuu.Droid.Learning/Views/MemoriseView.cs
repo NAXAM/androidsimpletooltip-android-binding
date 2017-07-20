@@ -112,6 +112,9 @@ namespace Naxam.Busuu.Droid.Learning.Views
                 case UnitModel.UnitType.MatchingSentence:
                     AddFragment(new MemoMatchingSentence(temp));
                     break;
+                case UnitModel.UnitType.SelectWordImage:
+                    AddFragment(new MemoSelectWordImage(temp));
+                    break;
             }
         }
     }

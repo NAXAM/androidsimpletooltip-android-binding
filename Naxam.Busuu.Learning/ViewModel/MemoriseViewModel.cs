@@ -28,7 +28,7 @@ namespace Naxam.Busuu.Learning.ViewModel
         public void Init(ExerciseModel ex)
         {
             UnitModel.UnitType[] lstType = new UnitModel.UnitType[] {
-                UnitModel.UnitType.FillSentence,UnitModel.UnitType.SelectWord,UnitModel.UnitType.MatchingSentence
+            UnitModel.UnitType.FillSentence,UnitModel.UnitType.ChooseWord,UnitModel.UnitType.SelectWord
             };
             Exercise = ex ?? new ExerciseModel();
             List<UnitModel> listUnit = new List<UnitModel>();
@@ -60,17 +60,20 @@ namespace Naxam.Busuu.Learning.ViewModel
                     new AnswerModel
                     {
                         Text = "thảo",
-                        Value = (i+1)%3!=0
+                        Value = (i+1)%3!=0,
+                        Image = "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg"
                     },
                      new AnswerModel
                     {
                         Text = "xấu",
                         Value  = true,
-                        Position = 1
+                        Position = 1,
+                        Image = "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg"
                     },
                       new AnswerModel
                     {
-                        Text = "đẹp"
+                        Text = "đẹp",
+                        Image = "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg"
                     },
                     //   new AnswerModel
                     //{
