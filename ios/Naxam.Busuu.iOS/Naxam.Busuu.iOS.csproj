@@ -137,6 +137,7 @@
   <Folder Include="Views\" />
   <Folder Include="Resources\Assets.xcassets\" />
   <Folder Include="Assets.xcassets\" />
+  <Folder Include="CustomControls\" />
 </ItemGroup>
 <ItemGroup>
   <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -158,6 +159,7 @@
   </Compile>
   <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
   <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+  <Compile Include="CustomControls\MaterialTabBar.cs" />
 </ItemGroup>
 <ItemGroup>
   <ProjectReference Include="..\..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">

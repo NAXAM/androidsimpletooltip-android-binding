@@ -20,7 +20,7 @@ namespace Naxam.Busuu.Core.ViewModels
 
 		void ShowInitialViewModels()
 		{
-            ShowViewModel<Naxam.Busuu.Review.ViewModels.ReviewAllViewModel>();
+            ShowViewModel<Review.ViewModels.ReviewAllViewModel>();
 			ShowViewModel<SocialViewModel>();
             ShowViewModel<NotificationViewModel>();
             ShowViewModel<RegisterViewModel>();
