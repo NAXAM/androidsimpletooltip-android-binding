@@ -41,6 +41,22 @@ namespace Naxam.Busuu.Profile.ViewModel
             }
         }
 
+        private string _policy;
+
+        public string Policy
+        {
+            get { return _policy; }
+            set
+            {
+                if (_policy != value)
+                {
+                    _policy = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+
         private string _phoneCode;
 
         public string PhoneCode
@@ -103,12 +119,15 @@ namespace Naxam.Busuu.Profile.ViewModel
 
         public RegisterViewModel()
         {
-            //ShowViewModel<ChooseCountryViewModel>();
+            //ShowViewModel<ChooseCountryViewModel>(); 
         }
 
         public void Init(CountryModel country)
         {
             PhoneCode = country.PhoneCode;
+            if (string.IsNullOrEmpty(PhoneCode))
+                PhoneCode = "+1";
+            
         }
     }
 }

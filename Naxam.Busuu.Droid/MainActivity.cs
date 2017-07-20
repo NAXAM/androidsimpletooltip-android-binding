@@ -13,19 +13,17 @@ using Naxam.Busuu.Droid.Profile.Views;
 using Android.Support.V7.App;
 using Android.Support.V4.Content;
 using Android.Graphics;
+using Naxam.Busuu.Droid.Learning.Views;
 
 namespace Naxam.Busuu.Droid
 {
-    [Activity(Label = "MainActivity", MainLauncher = true, SupportsPictureInPicture = true,AllowEmbedded =true)]
+    [Activity(Label = "MainActivity",Theme= "@style/AppTheme", MainLauncher = true, SupportsPictureInPicture = true, AllowEmbedded = true)]
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Main);
-            StartActivity(new Intent(this, typeof(ChooseLanguageView)));
-
-
+            base.OnCreate(savedInstanceState); 
+            StartActivity(new Intent(this, typeof(MainView)));
         }
     }
 }

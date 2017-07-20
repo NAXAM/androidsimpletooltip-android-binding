@@ -62,11 +62,16 @@ namespace Naxam.Busuu.Droid.Profile.Views
                 if (_countries != value)
                 {
                     _countries = value;
+                    if (countries != null)
+                        list.SetAdapter(new Adapter(this, countries, (c) =>
+                        {
+                            CountrySelected = c;
+                        }));
                     RaisePropertyChanged(() => countries);
                 }
             }
         }
-
+        HeaderListView list; 
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -74,20 +79,24 @@ namespace Naxam.Busuu.Droid.Profile.Views
         {
             base.OnViewModelSet();
 
-            HeaderListView list = new HeaderListView(this);
-
-            SetContentView(list);
-            //ountries.Bind(ChooseCountryViewModel, "Countries");
-            Random random = new Random();
             var set = this.CreateBindingSet<ChooseCountryView, ChooseCountryViewModel>();
             set.Bind(countries).To(vm => vm.Countries);
             set.Bind(CountrySelected).To(vm => vm.CountrySelected).OneWayToSource();
-            countries = (ViewModel as ChooseCountryViewModel).Countries;
+            set.Apply();
+
+
+            list = new HeaderListView(this);
+
+            SetContentView(list);  
+
+            countries = countries ?? (ViewModel as ChooseCountryViewModel).Countries;
 
             if (countries != null)
-                list.SetAdapter(new Adapter(this, countries, (c) => {
+                list.SetAdapter(new Adapter(this, countries, (c) =>
+                {
                     CountrySelected = c;
                 }));
+
         }
 
         public bool ShouldAlwaysRaiseInpcOnUserInterfaceThread()
@@ -187,8 +196,8 @@ namespace Naxam.Busuu.Droid.Profile.Views
 
             public override void OnRowItemClick(AdapterView parent, View view, int section, int row, long id)
             {
-                base.OnRowItemClick(parent, view, section, row, id);
-                SelectCountry?.Invoke(RowItem(section, row)); 
+                base.OnRowItemClick(parent, view, section, row, id); 
+                SelectCountry?.Invoke(RowItem(section, row));
             }
 
             public override View GetSectionHeaderView(int section, View convertView, ViewGroup parent)

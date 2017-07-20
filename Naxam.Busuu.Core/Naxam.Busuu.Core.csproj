@@ -54,6 +54,10 @@
       <Project>{2EADB781-E679-4485-8A53-AE7A8945CD1B}</Project>
       <Name>Naxam.Busuu.Notification</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
+      <Project>{BAAA7577-3BE2-423B-A051-61B47489B015}</Project>
+      <Name>Naxam.Busuu.Review</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
