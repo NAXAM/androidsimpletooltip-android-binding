@@ -67,13 +67,13 @@ namespace Naxam.Busuu.Learning.ViewModel
             }
         }
 
-        public override void Appeared()
+        public override void ViewAppeared()
         {
-            base.Appeared();
+            base.ViewAppeared();
             string[] color = new string[]
-           {
+            {
                 "#58B0F8","#B02018","#FEAB35"
-           };
+            };
             Random random = new Random();
 
 

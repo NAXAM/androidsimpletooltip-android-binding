@@ -9,7 +9,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Naxam.Busuu.Droid.Profile.Views;
 using Android.Support.V7.App;
 using Android.Support.V4.Content;
 using Android.Graphics;
