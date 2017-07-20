@@ -7,7 +7,7 @@ using CoreAnimation;
 using System.Collections.Generic;
 using FBKVOControllerNS;
 
-namespace Naxam.Busuu.iOS.CustomControls
+namespace Naxam.Busuu.iOS.Core.CustomControls
 {
 	class BadgeLabel : UILabel
 	{

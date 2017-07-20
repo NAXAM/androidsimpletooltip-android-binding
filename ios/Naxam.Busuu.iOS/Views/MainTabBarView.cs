@@ -5,7 +5,7 @@ using Foundation;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using Naxam.Busuu.Core.ViewModels;
-using Naxam.Busuu.iOS.CustomControls;
+using Naxam.Busuu.iOS.Core.CustomControls;
 
 namespace Naxam.Busuu.iOS.Views
 {
