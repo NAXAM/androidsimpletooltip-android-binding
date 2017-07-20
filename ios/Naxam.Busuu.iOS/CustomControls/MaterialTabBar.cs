@@ -5,6 +5,7 @@ using Foundation;
 using System.Linq;
 using CoreAnimation;
 using System.Collections.Generic;
+using FBKVOControllerNS;
 
 namespace Naxam.Busuu.iOS.CustomControls
 {
@@ -54,7 +55,8 @@ namespace Naxam.Busuu.iOS.CustomControls
 
 	public class MaterialTabBar : UIView
 	{
-		private UIColor _SelectedColor;
+#region Private properties
+        private UIColor _SelectedColor;
 		private UIColor _UnselectedColor;
 		private CGSize _IconSize = new CGSize(24, 24);
 		private nfloat _LabelHeight = 16;
@@ -67,7 +69,18 @@ namespace Naxam.Busuu.iOS.CustomControls
 
 		private UIColor _RippleColor;
 
-		public UIColor RippleColor
+		UIView _RippleContainer = new UIView()
+		{
+			BackgroundColor = UIColor.Clear,
+			ClipsToBounds = true
+		};
+
+		FBKVOController _KVOController;
+#endregion
+
+        #region Public properties
+
+        public UIColor RippleColor
 		{
 			get => _RippleColor;
 			set
@@ -77,11 +90,6 @@ namespace Naxam.Busuu.iOS.CustomControls
 			}
 		}
 
-		UIView _RippleContainer = new UIView()
-		{
-			BackgroundColor = UIColor.Clear,
-			ClipsToBounds = true
-		};
 
 		public IMaterialTabBarDelegate Delegate;
 
@@ -89,8 +97,9 @@ namespace Naxam.Busuu.iOS.CustomControls
 		{
 			get; private set;
 		}
+#endregion
 
-		public MaterialTabBar(UITabBar tabbar, UIColor selectedColor = null, UIColor unselectedColor = null) : base(CGRect.Empty)
+        public MaterialTabBar(UITabBar tabbar, UIColor selectedColor = null, UIColor unselectedColor = null) : base(CGRect.Empty)
 		{
 			if (tabbar == null) throw new Exception("Tabbar cannot be null");
 
@@ -151,6 +160,8 @@ namespace Naxam.Busuu.iOS.CustomControls
 
 			UserInteractionEnabled = true;
 
+            _KVOController = new FBKVOController(this);
+
 			UpdateItems(tabbar.Items);
 		}
 
@@ -167,6 +178,7 @@ namespace Naxam.Busuu.iOS.CustomControls
 
 		public void UpdateItems(UITabBarItem[] items)
 		{
+            _KVOController.UnobserveAll();
 			var mainStack = ViewWithTag(MAIN_STACK_TAG) as UIStackView;
 			foreach (UIView sview in mainStack.Subviews)
 			{
@@ -239,11 +251,22 @@ namespace Naxam.Busuu.iOS.CustomControls
 				badge.Text = item.BadgeValue;
 				_Badges.Add(badge);
 
+                item.Tag = tag;
+
+                _KVOController.Observe(item, "badgeValue", NSKeyValueObservingOptions.New, UpdateBadgeForItem);
+
 				tag++;
 			}
 		}
 
-		public void SetSelectedIndex(int index, bool animated)
+        private void UpdateBadgeForItem(NSObject arg0, NSObject arg1, NSDictionary<NSString, NSObject> arg2)
+        {
+            if (arg1 is UITabBarItem item) {
+                UpdateBadge((int)item.Tag - 1, item.BadgeValue);
+            }
+        }
+
+        public void SetSelectedIndex(int index, bool animated)
 		{
 			var mainStack = ViewWithTag(MAIN_STACK_TAG);
 
@@ -304,5 +327,15 @@ namespace Naxam.Busuu.iOS.CustomControls
 			if (index < 0 || index >= _Badges.Count) return;
 			_Badges[index].Text = badgeValue;
 		}
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+            if (_KVOController != null) {
+                _KVOController.UnobserveAll();
+                _KVOController.Dispose();
+                _KVOController = null;
+            }
+        }
 	}
 }
