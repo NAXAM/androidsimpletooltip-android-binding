@@ -9,18 +9,25 @@ using System.CodeDom.Compiler;
 
 namespace Naxam.Busuu.iOS.Core
 {
-	[Register ("PremiumView")]
-	partial class PremiumView
+	[Register ("FeatureCell")]
+	partial class FeatureCell
 	{
 		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UIKit.UITableView FeatureTableView { get; set; }
+		UIKit.UIImageView imgFeature { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lbFeature { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (FeatureTableView != null) {
-				FeatureTableView.Dispose ();
-				FeatureTableView = null;
+			if (imgFeature != null) {
+				imgFeature.Dispose ();
+				imgFeature = null;
+			}
+
+			if (lbFeature != null) {
+				lbFeature.Dispose ();
+				lbFeature = null;
 			}
 		}
 	}

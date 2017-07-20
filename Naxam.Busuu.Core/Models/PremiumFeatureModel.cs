@@ -7,16 +7,16 @@ namespace Naxam.Busuu.Core.Models
     public class PremiumFeatureModel:MvxNotifyPropertyChanged
     {
 
-        private string _features;
+        private string _feature;
 
-        public string Features
+        public string Feature
 		{
-			get { return _features; }
+			get { return _feature; }
 			set
 			{
-				if (_features != value)
+				if (_feature != value)
 				{
-					_features = value;
+					_feature = value;
 					RaisePropertyChanged();
 				}
 			}
@@ -36,5 +36,11 @@ namespace Naxam.Busuu.Core.Models
 				}
 			}
 		}
+
+        public PremiumFeatureModel(string feature, string image)
+        {
+            Feature = feature;
+            Image = image;
+        }
     }
 }
