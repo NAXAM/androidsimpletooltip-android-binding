@@ -12,28 +12,31 @@ using Android.Widget;
 using Android.Support.V4.View;
 using Android.Util;
 
-namespace Naxam.Busuu.Droid.Learning.CustomControls
+namespace Naxam.Busuu.Droid.Learning.Control.Vocabulary
 {
-    public class CustomViewPager : ViewPager
+    public class VocabularyViewPager : ViewPager
     {
         public enum SwipeDirection
         {
-            all, left, right, none
+            All, Left, Right, None
         }
 
         private float initialXValue;
-        private SwipeDirection direction;
-        //
-        public CustomViewPager(Context context, IAttributeSet attrs) : base(context, attrs)
+        private SwipeDirection Direction;
+
+        public VocabularyViewPager(Context context, IAttributeSet attrs) : base(context, attrs)
         {
-            this.direction = SwipeDirection.all;
+
         }
-        //
+        public VocabularyViewPager(Context context) : base(context)
+        {
+            Direction = SwipeDirection.All;
+        }
         private bool IsSwipeAllowed(MotionEvent e)
         {
-            if (this.direction == SwipeDirection.all) return true;
+            if (Direction == SwipeDirection.All) return true;
 
-            if (direction == SwipeDirection.none)//disable any swipe
+            if (Direction == SwipeDirection.None)
                 return false;
 
             if (e.Action == MotionEventActions.Down)
@@ -47,18 +50,18 @@ namespace Naxam.Busuu.Droid.Learning.CustomControls
                 try
                 {
                     float diffX = e.GetX() - initialXValue;
-                    if (diffX > 0 && direction == SwipeDirection.right)
+                    if (diffX > 0 && Direction == SwipeDirection.Right)
                     {
                         // swipe from left to right detected
                         return false;
                     }
-                    else if (diffX < 0 && direction == SwipeDirection.left)
+                    else if (diffX < 0 && Direction == SwipeDirection.Left)
                     {
                         // swipe from right to left detected
                         return false;
                     }
                 }
-                catch (Exception exception)
+                catch
                 {
                     //exception.PrintStackTrace();
                 }
@@ -66,10 +69,10 @@ namespace Naxam.Busuu.Droid.Learning.CustomControls
 
             return true;
         }
-        //
+
         public override bool OnTouchEvent(MotionEvent e)
         {
-            if (this.IsSwipeAllowed(e))
+            if (IsSwipeAllowed(e))
             {
                 return base.OnTouchEvent(e);
             }
@@ -79,15 +82,15 @@ namespace Naxam.Busuu.Droid.Learning.CustomControls
 
         public override bool OnInterceptTouchEvent(MotionEvent ev)
         {
-            if (this.IsSwipeAllowed(ev))
+            if (IsSwipeAllowed(ev))
             {
                 return base.OnInterceptTouchEvent(ev);
             }
             return false;
         }
-        public void setAllowedSwipeDirection(SwipeDirection direction)
+        public void SetAllowedSwipeDirection(SwipeDirection direction)
         {
-            this.direction = direction;
+            this.Direction = direction;
         }
     }
 }

@@ -154,18 +154,21 @@
     <Compile Include="Control\Dialogue\DialogueListNormalAdapter.cs" />
     <Compile Include="Control\Dialogue\DialogueListAdapter.cs" />
     <Compile Include="Control\MemoriseBodyView.cs" />
-    <Compile Include="Control\Memo\MemoChooseWord.cs" />
-    <Compile Include="Control\Memo\MemoMatchingSentence.cs" />
+    <Compile Include="Control\Memo\ChooseWordFragment.cs" />
+    <Compile Include="Control\Memo\MatchingSentenceFragment.cs" />
     <Compile Include="Control\Memo\MemoriseFragmentBase.cs" />
-    <Compile Include="Control\Memo\MemoSelectWord.cs" />
-    <Compile Include="Control\Memo\MemoSelectWordImage.cs" />
+    <Compile Include="Control\Memo\SelectWordFragment.cs" />
+    <Compile Include="Control\Memo\SelectWordImageFragment.cs" />
     <Compile Include="Control\Summary.cs" />
+    <Compile Include="Control\Vocabulary\TipFragment.cs" />
+    <Compile Include="Control\Vocabulary\VocabularyViewPagerFragment.cs" />
+    <Compile Include="Control\Vocabulary\VocabularyFragmentBase.cs" />
     <Compile Include="Listener\AnimationListener.cs" />
     <Compile Include="Listener\AnimatorListener.cs" />
     <Compile Include="Listener\AnimatorUpdateListener.cs" />
     <Compile Include="Control\ExerciesView.cs" />
     <Compile Include="Control\LessonHeader.cs" />
-    <Compile Include="Control\Memo\MemoFillSentence.cs" />
+    <Compile Include="Control\Memo\FillSentenceFragment.cs" />
     <Compile Include="Control\NXMvxExpandableListView.cs" />
     <Compile Include="Adapters\NXMvxExpandableListAdapter.cs" />
     <Compile Include="Control\NXExpandableListView.cs" />
@@ -189,11 +192,10 @@
     <Compile Include="TargetBinding\LessonHeaderTargetBinding.cs" />
     <Compile Include="Adapters\NXExpandableListAdapter.cs" />
     <Compile Include="Control\NXRecyclerView.cs" />
-    <Compile Include="Adapters\MyPagerAdapter.cs" />
-    <Compile Include="Control\CustomViewPager.cs" />
-    <Compile Include="HearAndRepeatView.cs" />
-    <Compile Include="ListPracticeView.cs" />
-    <Compile Include="PreparePronounceView.cs" />
+    <Compile Include="Adapters\VocabularyPagerAdapter.cs" />
+    <Compile Include="Control\VocabularyViewPager.cs" />
+    <Compile Include="Control\Vocabulary\HearAndRepeatFragment.cs" />
+    <Compile Include="Control\Vocabulary\PreparePronounceFragment.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TargetBinding\FinishColorTargetBinding.cs" />
@@ -207,14 +209,15 @@
     <Compile Include="Views\BuyPremiumView.cs" />
     <Compile Include="Views\ChangeLanguageView.cs" />
     <Compile Include="Views\DialogueView.cs" />
-    <Compile Include="Views\GridSpacingItemDecoration.cs" />
+    <Compile Include="Adapters\GridSpacingItemDecoration.cs" />
     <Compile Include="Views\LearnView.cs" />
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\MemoriseView.cs" />
-    <Compile Include="Views\PremiumArrayAdapter.cs" />
+    <Compile Include="Adapters\PremiumArrayAdapter.cs" />
     <Compile Include="Views\PremiumView.cs" />
-    <Compile Include="Views\TrueFalseHearQuestionView.cs" />
+    <Compile Include="Control\Vocabulary\TrueFalseHearQuestionView.cs" />
     <Compile Include="Transformers\ForegroundToBackgroundTransformer.cs" />
+    <Compile Include="Views\VocabularyView.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\fonts\awesome.ttf" />
@@ -688,6 +691,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Control\Conversation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\tip_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lightbult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\vocabulary_viewpager_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\vocabulary_activity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_light.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

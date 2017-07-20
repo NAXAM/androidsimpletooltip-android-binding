@@ -38,7 +38,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            View view = inflater.Inflate(Resource.Layout.conversation_fill_list_sentence_layout, null);
+            View view = inflater.Inflate(Resource.Layout.conversation_fill_list_sentence_layout, container,false);
             Init(view);
             return view;
         }

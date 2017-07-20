@@ -228,7 +228,7 @@ namespace Naxam.Busuu.Learning.ViewModel
 
         void RunExerciseClickCommand(ExerciseClickEventArg e)
         {
-            ShowViewModel<DialogueViewModel>(e.Exercise);
+            ShowViewModel<VocabularyViewModel>(e.Exercise);
         }
 
 

@@ -17,7 +17,7 @@ using Com.Bumptech.Glide;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Memo
 {
-    public class MemoChooseWord : MemoriseFragmentBase
+    public class ChooseWordFragment : MemoriseFragmentBase
     {
         public override event EventHandler<bool> NextClicked; 
         private LinearLayout vocabularyQuestionLayout;
@@ -27,7 +27,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
 
         bool correct;
 
-        public MemoChooseWord(UnitModel Item)
+        public ChooseWordFragment(UnitModel Item)
         {
             this.Item = Item;
         }

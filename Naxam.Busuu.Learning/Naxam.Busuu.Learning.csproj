@@ -40,6 +40,7 @@
     <Compile Include="Model\ExerciseModel.cs" />
     <Compile Include="Model\LanguageModel.cs" />
     <Compile Include="Model\LessonModel.cs" />
+    <Compile Include="Model\TipModel.cs" />
     <Compile Include="Model\TopicModel.cs" />
     <Compile Include="Model\UnitModel.cs" />
     <Compile Include="Model\TrueFalseHearQuestionModel.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="ViewModel\PremiumViewModel.cs" />
     <Compile Include="ViewModel\HearConversationViewModel.cs" />
     <Compile Include="ViewModel\TrueFalseHearQuestionViewModel.cs" />
+    <Compile Include="ViewModel\VocabularyViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Binding, Version=5.0.6.0, Culture=neutral, processorArchitecture=MSIL">

@@ -51,8 +51,7 @@
   <ScrollView
       android:layout_below="@+id/txtInput"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_weight="1"
+      android:layout_height="match_parent" 
         >
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/flexAnswer"
@@ -60,8 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_weight="1"
+        android:layout_marginRight="16dp" 
         app:alignContent="flex_start"
         app:alignItems="flex_start"
         app:flexWrap="wrap"

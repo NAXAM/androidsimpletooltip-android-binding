@@ -21,8 +21,5 @@ namespace Naxam.Busuu.Learning.ViewModel
         {
             ShowViewModel<BuyPremiumViewModel>();
         }
-
-
-
     }
 }
