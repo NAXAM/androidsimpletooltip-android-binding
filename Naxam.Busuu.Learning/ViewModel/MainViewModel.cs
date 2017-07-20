@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Naxam.Busuu.Core.ViewModels;
 
 namespace Naxam.Busuu.Learning.ViewModel
 {
@@ -67,9 +68,9 @@ namespace Naxam.Busuu.Learning.ViewModel
             }
         }
 
-        public override void Appeared()
+        public override void ViewAppeared()
         {
-            base.Appeared();
+            base.ViewAppeared();
             string[] color = new string[]
            {
                 "#58B0F8","#B02018","#FEAB35"

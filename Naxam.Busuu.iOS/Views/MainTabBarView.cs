@@ -4,7 +4,7 @@ using System;
 
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
-using Naxam.Busuu.Core.ViewModels;
+using Naxam.Busuu.ViewModels;
 using UIKit;
 
 namespace Naxam.Busuu.iOS.Views

@@ -2,7 +2,6 @@
 using CoreAnimation;
 using CoreGraphics;
 using Foundation;
-using Naxam.Ausuu.IOS.Review.Floaty;
 using UIKit;
 
 namespace Naxam.Busuu.IOS.Review.Floaty

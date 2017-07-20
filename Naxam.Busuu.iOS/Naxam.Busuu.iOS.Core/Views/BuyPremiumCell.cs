@@ -26,5 +26,11 @@ namespace Naxam.Busuu.iOS.Core
 		{
 			btnGo.Layer.CornerRadius = btnGo.Bounds.Size.Height / 2;
 		}
+
+        public UIButton BtnGo
+        {
+            get => btnGo;
+            set => btnGo = value;
+        }
     }
 }

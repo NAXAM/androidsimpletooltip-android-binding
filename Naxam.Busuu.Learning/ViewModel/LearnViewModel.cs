@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Naxam.Busuu.Core.ViewModels;
 
 namespace Naxam.Busuu.Learning.ViewModel
 {
@@ -21,7 +22,6 @@ namespace Naxam.Busuu.Learning.ViewModel
         {
             ShowViewModel<PremiumViewModel>();
         }
-
 
     }
 }

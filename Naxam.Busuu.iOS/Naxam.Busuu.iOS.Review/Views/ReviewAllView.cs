@@ -12,19 +12,17 @@ using System.ComponentModel;
 using MvvmCross.Core.ViewModels;
 using System.Runtime.CompilerServices;
 using System.Collections.Generic;
-using Naxam.Ausuu.IOS.Review.Floaty;
-using Naxam.Busuu.IOS.Review.Floaty;
 using System.Linq;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using Naxam.Busuu.iOS.Core;
-
 using Naxam.Busuu.iOS.Core.Views;
+using Naxam.Busuu.IOS.Core.Floaty;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
     [MvxFromStoryboard(StoryboardName = "Review")]
     [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "profile_tab_icon", TabName = "Review", TabSelectedIconName = "profile_tab_icon_selected")]
-    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource
+    public partial class ReviewAllView : MvxViewController<ReviewViewModel>, IUITableViewDataSource
     {
         public ReviewAllView(IntPtr handle) : base(handle)
         {
@@ -76,7 +74,12 @@ namespace Naxam.Busuu.iOS.Review.Views
 
 			var v = BuyPremiumCell.Create();
             v.Frame = new CGRect(uiViewSlide.Frame.GetMinX(), uiViewSlide.Frame.GetMaxY(), View.Bounds.Size.Width, 50);
-			View.AddSubview(v);
+            //v.AddGestureRecognizer(new UITapGestureRecognizer(() => ShowViewModel(PremiumViewModel););
+            View.AddSubview(v);
+
+			var setBinding = this.CreateBindingSet<ReviewAllView, ReviewViewModel>();
+			setBinding.Bind(v.BtnGo).To(vm=>vm.GoPremiumCommand);
+            setBinding.Apply();
 
 			SearchTextField = new UITextField(new CGRect(0, 0, 300, 30));
             SearchTextField.BackgroundColor = UIColor.Clear;
@@ -177,7 +180,7 @@ namespace Naxam.Busuu.iOS.Review.Views
             oriPoint = uiViewSlide.Center;
         }
 
-        void HandleAction(Ausuu.IOS.Review.Floaty.ActionButtonItem obj)
+        void HandleAction(ActionButtonItem obj)
         {
             UIAlertView alert = new UIAlertView()
             {

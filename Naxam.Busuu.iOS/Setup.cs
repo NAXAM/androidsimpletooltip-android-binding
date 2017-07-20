@@ -15,6 +15,7 @@ using Naxam.Busuu.iOS.Social.Views;
 using Naxam.Busuu.Notification.ViewModels;
 using Naxam.Busuu.Profile.ViewModel;
 using Naxam.Busuu.Social.ViewModels;
+using Naxam.Busuu.iOS.Core;
 
 namespace Naxam.Busuu.iOS
 {
@@ -38,7 +39,8 @@ namespace Naxam.Busuu.iOS
                 typeof(SocialView).Assembly,
                 typeof(NotificationView).Assembly,
                 typeof(RegisterView).Assembly,
-                typeof(ReviewAllView).Assembly
+                typeof(ReviewAllView).Assembly,
+                typeof(PremiumView).Assembly
             };
 			assemblies.AddRange(base.GetViewAssemblies());
 			return assemblies; 
@@ -50,10 +52,11 @@ namespace Naxam.Busuu.iOS
 			{
 
 				//typeof(MainTabBarViewModel).Assembly,
-                typeof(ReviewAllViewModel).Assembly,
+                typeof(ReviewViewModel).Assembly,
                 typeof(SocialViewModel).Assembly,
                 typeof(NotificationViewModel).Assembly,
-                typeof(RegisterViewModel).Assembly
+                typeof(RegisterViewModel).Assembly,
+                typeof(PremiumViewModel).Assembly
 			};
 
 			assemblies.AddRange(base.GetViewModelAssemblies());

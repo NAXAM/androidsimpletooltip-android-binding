@@ -72,6 +72,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
+    <Folder Include="FloatyButton\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +82,12 @@
     </Compile>
     <Compile Include="Views\SpreadOutAnimationView.cs" />
     <Compile Include="Views\UIViewExtensions.cs" />
+    <Compile Include="FloatyButton\ActionButton.cs" />
+    <Compile Include="FloatyButton\ActionButtonItem.cs" />
+    <Compile Include="PremiumView.cs" />
+    <Compile Include="PremiumView.designer.cs">
+      <DependentUpon>PremiumView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
@@ -89,8 +96,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Core.storyboard" />
     <InterfaceDefinition Include="Views\BuyPremiumCell.xib" />
+    <InterfaceDefinition Include="Core.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

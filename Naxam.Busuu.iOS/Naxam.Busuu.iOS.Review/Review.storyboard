@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eVx-jE-jEI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
@@ -20,10 +20,10 @@
                         <viewControllerLayoutGuide type="bottom" id="tX8-nq-BxN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ucr-Mc-Vau">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nbq-SY-xmX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nbq-SY-xmX" misplaced="YES">
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kwP-wT-G0f" id="rKu-93-BZX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="92c-iD-fbb">
@@ -42,14 +42,14 @@
                                                         <constraint firstAttribute="width" constant="40" id="sJC-Ok-dkd"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Trv-8H-Hvn">
-                                                    <rect key="frame" x="22" y="35.5" width="28" height="16"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Trv-8H-Hvn" misplaced="YES">
+                                                    <rect key="frame" x="22" y="36" width="28" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="R4k-qD-9z3"/>
                                                         <constraint firstAttribute="width" constant="28" id="yHh-C0-MLS"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvQ-YT-cG3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvQ-YT-cG3" misplaced="YES">
                                                     <rect key="frame" x="56" y="26" width="200" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="z9Y-Fx-NSL"/>
@@ -58,13 +58,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWs-Fs-70M">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWs-Fs-70M" misplaced="YES">
                                                     <rect key="frame" x="56" y="10" width="200" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-Hn-Gfa">
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-Hn-Gfa" misplaced="YES">
                                                     <rect key="frame" x="304" y="18" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="RpW-w7-ZHX"/>
@@ -79,7 +79,7 @@ CQk
                                                         <action selector="btnStar_TouchUpInside:" destination="kwP-wT-G0f" eventType="touchUpInside" id="1Z9-Nd-wjQ"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdF-Sq-2en">
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdF-Sq-2en" misplaced="YES">
                                                     <rect key="frame" x="336" y="18" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="WS2-8e-tte"/>
@@ -124,11 +124,11 @@ CQk
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFf-ck-X1y">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFf-ck-X1y" misplaced="YES">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7R-s2-Kfs">
-                                        <rect key="frame" x="0.0" y="38.5" width="187.5" height="5.5"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7R-s2-Kfs" misplaced="YES">
+                                        <rect key="frame" x="0.0" y="39" width="188" height="5"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov7-lj-BM3">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="28"/>
@@ -140,8 +140,8 @@ CQk
                                         </subviews>
                                         <color key="backgroundColor" red="0.16005983739999999" green="0.80461529700000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-Ve-rJE">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-Ve-rJE" misplaced="YES">
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="All">
                                             <color key="titleColor" red="0.33725490200000002" green="0.61176470589999998" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -150,8 +150,8 @@ CQk
                                             <action selector="btnAll_TouchUpInside:" destination="eVx-jE-jEI" eventType="touchUpInside" id="QMK-Qq-SBb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYz-nW-v0T">
-                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYz-nW-v0T" misplaced="YES">
+                                        <rect key="frame" x="188" y="0.0" width="187" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Favorite">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,7 +202,6 @@ CQk
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMq-jj-xBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="Nat-Yo-W8k">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biY-2H-7Ov">
                             <rect key="frame" x="299" y="7" width="60" height="30"/>
@@ -231,12 +230,39 @@ CQk
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="124" y="154.27286356821591"/>
+            <point key="canvasLocation" x="124" y="154.2729"/>
         </scene>
     </scenes>
     <resources>
         <image name="image_placeholder" width="20" height="16"/>
         <image name="play_btn" width="112" height="112"/>
         <image name="rounded_grey_star" width="25" height="25"/>
+        <image name="add_language" width="93" height="92"/>
+        <image name="back_arrow" width="12" height="22"/>
+        <image name="btn_activityCloseCrossButtonNew" width="32" height="32"/>
+        <image name="btn_close" width="32" height="32"/>
+        <image name="conversation_speaking_play_button" width="20" height="28"/>
+        <image name="conversation_speaking_stop_button" width="22" height="22"/>
+        <image name="entity_strength_0" width="140" height="80"/>
+        <image name="entity_strength_1" width="140" height="80"/>
+        <image name="entity_strength_2" width="140" height="80"/>
+        <image name="entity_strength_3" width="140" height="80"/>
+        <image name="entity_strength_4" width="140" height="80"/>
+        <image name="fab_menu_row_all" width="20" height="14"/>
+        <image name="fab_menu_row_fav" width="20" height="19"/>
+        <image name="fab_menu_row_learning" width="21" height="10"/>
+        <image name="fab_menu_row_weak" width="19" height="13"/>
+        <image name="greyCheck" width="32" height="32"/>
+        <image name="greyX" width="32" height="32"/>
+        <image name="rating_star_gold" width="15" height="14"/>
+        <image name="rating_star_grey" width="15" height="14"/>
+        <image name="rounded_golden_star" width="25" height="25"/>
+        <image name="star" width="176" height="124"/>
+        <image name="star_active" width="176" height="124"/>
+        <image name="strength_0" width="35" height="20"/>
+        <image name="strength_1" width="35" height="20"/>
+        <image name="strength_2" width="35" height="20"/>
+        <image name="strength_3" width="35" height="20"/>
+        <image name="strength_4" width="35" height="20"/>
     </resources>
 </document>

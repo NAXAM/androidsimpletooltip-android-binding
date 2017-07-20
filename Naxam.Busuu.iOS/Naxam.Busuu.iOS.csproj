@@ -256,6 +256,10 @@
       <Project>{2EADB781-E679-4485-8A53-AE7A8945CD1B}</Project>
       <Name>Naxam.Busuu.Notification</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu\Naxam.Busuu.csproj">
+      <Project>{679E6E86-C7ED-4BAA-9255-E043A4D8C445}</Project>
+      <Name>Naxam.Busuu</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

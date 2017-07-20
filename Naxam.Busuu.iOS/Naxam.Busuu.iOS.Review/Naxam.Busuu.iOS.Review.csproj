@@ -93,7 +93,6 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
-    <Folder Include="Floaty\" />
     <Folder Include="Resources\Assets.xcassets\" />
   </ItemGroup>
   <ItemGroup>
@@ -106,8 +105,6 @@
     <Compile Include="Views\ReviewTableViewCell.designer.cs">
       <DependentUpon>ReviewTableViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Floaty\ActionButtonItem.cs" />
-    <Compile Include="Floaty\ActionButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Review.storyboard" />
