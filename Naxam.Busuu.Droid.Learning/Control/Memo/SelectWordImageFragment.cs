@@ -19,14 +19,14 @@ using Android.Animation;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Memo
 {
-    public class SelectWordImageFragment : MemoriseFragmentBase
+    public class SelectWordImageFragment : BaseFragment
     {
-        public override event EventHandler<bool> NextClicked;
+        public override event EventHandler<int> NextClicked;
         TextView txtQuestion;
         NXPlayButton btnPlay;
         Button btnNext;
         RecyclerView recyclerView;
-
+        bool correct;
         public SelectWordImageFragment(UnitModel Item)
         {
             this.Item = Item;
@@ -51,12 +51,16 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
             recyclerView.SetLayoutManager(grid);
             recyclerView.SetAdapter(adapter);
             ItemtouchListener touch = new ItemtouchListener(Context);
-
+            btnNext.Click += (s, e) =>
+            {
+                NextClicked?.Invoke(btnNext, corrects?1:0);
+            };
             touch.Clicked += (s, e) =>
             {
                 if (clicked)
                     return;
                 clicked = true;
+                corrects = true;
                 View itemView = ((View)s);
                 ImageView imgResult = itemView.FindViewById<ImageView>(Resource.Id.imgResult);
                 TextView txtAnswer = itemView.FindViewById<TextView>(Resource.Id.txtAnswer);
@@ -65,7 +69,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                 if (Item.Answers[e].Value)
                 {
                     itemView.SetBackgroundColor(Color.ParseColor("#74B825"));
-                    corrects = true;
+                
                 }
                 else
                 {
@@ -77,8 +81,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                     anim.RepeatCount = 10;
                     anim.RepeatMode = ValueAnimatorRepeatMode.Reverse;
                     mAnimatorSet.Play(anim);
-                    
-
+                    correct = false;
                     mAnimatorSet.SetDuration(50);
                     mAnimatorSet.Start();
 

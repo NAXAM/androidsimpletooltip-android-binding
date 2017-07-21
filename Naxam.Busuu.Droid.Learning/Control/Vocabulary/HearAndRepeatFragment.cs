@@ -17,7 +17,7 @@ using Android.Animation;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Vocabulary
 {
-    public class HearAndRepeatView : VocabularyFragmentBase
+    public class HearAndRepeatView : BaseFragment
     {
         ImageView imgMic, hiddenCircle, imgPlayBtn;
         GradientDrawable clikedShape;

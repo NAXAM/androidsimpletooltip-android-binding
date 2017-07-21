@@ -17,9 +17,9 @@ using Com.Bumptech.Glide;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Memo
 {
-    public class ChooseWordFragment : MemoriseFragmentBase
+    public class ChooseWordFragment : BaseFragment
     {
-        public override event EventHandler<bool> NextClicked; 
+        public override event EventHandler<int> NextClicked; 
         private LinearLayout vocabularyQuestionLayout;
         private ImageView imDescription;
         private TextView tvQuestion;
@@ -46,10 +46,10 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
             tvQuestion = view.FindViewById<TextView>(Resource.Id.tv_vocabulary_question);
             btVocabularyContinue = view.FindViewById<Button>(Resource.Id.bt_vocabulary_continue);
             btVocabularyContinue.Click += (s, e) => {
-                NextClicked?.Invoke(btVocabularyContinue, correct);
+                NextClicked?.Invoke(btVocabularyContinue, correct?1:0);
             };
             tvQuestion.Text = Item.Title;
-            if (Item.Images.Count > 0)
+            if (Item.Images?.Count > 0)
             {
                 imDescription.Visibility = ViewStates.Visible;
                 Glide.With(Context).Load(Item.Images[0]).Into(imDescription);

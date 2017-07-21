@@ -55,10 +55,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
             viewPager.SetPageTransformer(true, new ForegroundToBackgroundTransformer());
 
             menuTip = FindViewById<ImageView>(Resource.Id.menuTip);
-            menuTip.Click += (s, e) => {
-                TipDialog dialog = new TipDialog(this, Item.Units[PositionStep].Tip);
-                dialog.Show();
-            };
+           
             txtStep = FindViewById<TextView>(Resource.Id.txtStep);
             prgStep = FindViewById<ProgressBar>(Resource.Id.prgStep);
             layoutStep = FindViewById<LinearLayout>(Resource.Id.layoutStep);
@@ -70,10 +67,23 @@ namespace Naxam.Busuu.Droid.Learning.Views
             };
             Item = Item ?? (ViewModel as VocabularyViewModel).Exercise;
             prgStep.Max = Item.Units.Count;
-            
+            if (Item.Units[PositionStep].Tip == null)
+            {
+                menuTip.Visibility = ViewStates.Gone;
+            }
+            else
+            {
+                menuTip.Visibility = ViewStates.Visible;
+            }
+            menuTip.Click += (s, e) =>
+            {
+                TipDialog dialog = new TipDialog(this, Item.Units[PositionStep].Tip);
+                dialog.Show();
+            };
             adapter = new VocabularyPagerAdapter(manager, listFragment);
             viewPager.Adapter = adapter;
-            viewPager.AddOnPageChangeListener(new OnPageChangeListener((position)=> {
+            viewPager.AddOnPageChangeListener(new OnPageChangeListener((position) =>
+            {
                 if (position == 1)
                 {
                     viewPager.SetAllowedSwipeDirection(VocabularyViewPager.SwipeDirection.None);
@@ -89,11 +99,11 @@ namespace Naxam.Busuu.Droid.Learning.Views
                 this.PageSelected = PageSelected;
             }
             public void OnPageScrolled(int position, float positionOffset, int positionOffsetPixels)
-            { 
+            {
             }
 
             public void OnPageScrollStateChanged(int state)
-            { 
+            {
             }
 
             public void OnPageSelected(int position)
@@ -104,6 +114,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
 
         private void InitFragment()
         {
+           
             if (PositionStep == prgStep.Max)
             {
                 actionBar.Hide();
@@ -120,18 +131,35 @@ namespace Naxam.Busuu.Droid.Learning.Views
             txtStep.Text = prgStep.Progress + "/" + prgStep.Max;
 
             var temp = Item.Units[PositionStep];
+            switch (temp.Type)
+            {
+                case UnitModel.UnitType.FillSentence:
+                    AddFragment(new FillSentenceFragment(temp), temp);
+                    break;
+                case UnitModel.UnitType.ChooseWord:
+                    AddFragment(new ChooseWordFragment(temp), temp);
+                    break;
+                case UnitModel.UnitType.MatchingSentence:
+                    AddFragment(new MatchingSentenceFragment(temp), temp);
+                    break;
+                case UnitModel.UnitType.SelectWord:
+                    AddFragment(new SelectWordFragment(temp), temp);
+                    break;
+                case UnitModel.UnitType.SelectWordImage:
+                    AddFragment(new SelectWordImageFragment(temp), temp);
+                    break;
+            }
 
-            AddFragment(temp);
             adapter.NotifyDataSetChanged();
             viewPager.Adapter = adapter;
         }
 
-        private void AddFragment(UnitModel item)
+        private void AddFragment(BaseFragment fragment, UnitModel item)
         {
             listFragment.Clear();
             viewPager.SetAllowedSwipeDirection(VocabularyViewPager.SwipeDirection.Right);
             listFragment.Add(new PreparePronounceFragment(item));
-            if (item.Tip!=null)
+            if (item.Tip != null)
             {
                 TipFragment tip2 = new TipFragment(item);
                 listFragment.Add(tip2);
@@ -140,19 +168,25 @@ namespace Naxam.Busuu.Droid.Learning.Views
                     viewPager.SetCurrentItem(2, false);
                 };
             }
-            
-            FillSentenceFragment fill2 = new FillSentenceFragment(item);
-            fill2.NextClicked += (s, e) =>
+            fragment.NextClicked += (s, e) =>
             {
                 PositionStep++;
-                if (e)
+                try
                 {
-                    Corrrect++;
+                    if (Item.Units[PositionStep].Tip == null)
+                    {
+                        menuTip.Visibility = ViewStates.Gone;
+                    }
+                    else
+                    {
+                        menuTip.Visibility = ViewStates.Visible;
+                    }
                 }
-                InitFragment( ); 
+                catch { }
+                Corrrect += e;
+                InitFragment();
             };
-            listFragment.Add(fill2);
- 
+            listFragment.Add(fragment);
         }
     }
 }

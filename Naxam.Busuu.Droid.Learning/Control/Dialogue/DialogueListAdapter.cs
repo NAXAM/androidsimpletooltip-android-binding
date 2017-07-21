@@ -68,7 +68,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             TextView txtInput = convertView.FindViewById<TextView>(Resource.Id.txtInput);
             Glide.With(context).Load(ItemSource[position].Images[0]).Transform(new CircleTransform(context)).Into(imgAvatar);
             txtName.Text = ItemSource[position].Title;
-            List<string> listString = Regex.Split(ItemSource[position].Input[0], "%%").ToList();
+            List<string> listString = Regex.Split(" "+ItemSource[position].Input[0].Trim()+" ", "%%").ToList();
             List<int> listIndex = new List<int>();
             string input = "";
             for (int i = 0; i < listString.Count; i++)

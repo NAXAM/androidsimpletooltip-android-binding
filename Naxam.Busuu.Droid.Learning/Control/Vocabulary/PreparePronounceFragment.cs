@@ -15,7 +15,7 @@ using Naxam.Busuu.Learning.Model;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Vocabulary
 {
-    public class PreparePronounceFragment : VocabularyFragmentBase
+    public class PreparePronounceFragment : BaseFragment
     {
         private bool isClickStar;
         ImageView imgPlayBtn, imgStarBtn;

@@ -17,9 +17,9 @@ using Naxam.Busuu.Droid.Learning.Control.Memo;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class Summary : MemoriseFragmentBase
+    public class Summary : BaseFragment
     {
-        public override event EventHandler<bool> NextClicked;
+        public override event EventHandler<int> NextClicked;
         public event EventHandler<bool> TryAgainClicked;
         public int Correct;
         public int Total;
@@ -66,7 +66,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             };
             btnNext.Click += (s, e) =>
             {
-                NextClicked?.Invoke(btnNext, IsCompleted);
+                NextClicked?.Invoke(btnNext, IsCompleted?1:0);
             };
             float distance = Util.Util.PxFromDp(Context, 2);
             ValueAnimator animator = ValueAnimator.OfInt(0, Correct);

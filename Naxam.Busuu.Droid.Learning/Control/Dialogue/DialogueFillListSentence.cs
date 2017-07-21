@@ -17,11 +17,10 @@ using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.Graphics.Drawables.Shapes;
 using System.Text.RegularExpressions;
-using Naxam.Busuu.Droid.Learning.Control.Dialogue;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class DialogueFillListSentence : DialogueFragmentBase
+    public class DialogueFillListSentence : BaseFragment
     {
         public override event EventHandler<int> NextClicked;
 
@@ -38,7 +37,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            View view = inflater.Inflate(Resource.Layout.conversation_fill_list_sentence_layout, container,false);
+            View view = inflater.Inflate(Resource.Layout.conversation_fill_list_sentence_layout, container, false);
             Init(view);
             return view;
         }
@@ -52,14 +51,16 @@ namespace Naxam.Busuu.Droid.Learning.Control
             {
                 listAnswer.AddRange(item);
             }
+            List<AnswerModel> tempAnswer = new List<AnswerModel>();
             Random random = new Random();
+
             CountAnswer = listAnswer.Count;
             listTextIndex = listAnswer.Where(d => d.Value).Select(d => new AnswerModel
             {
                 Text = "##########",
                 Value = true
             }).ToList();
-            List<AudioModel> listAudio = Items.Select(d => d.Audios.FirstOrDefault()).ToList();
+            List<AudioModel> listAudio = Items.Select(d => d.Audios?.FirstOrDefault()).ToList();
 
             ListView lstView = view.FindViewById<ListView>(Resource.Id.lstView);
             NXPlayButton btnPlay = view.FindViewById<NXPlayButton>(Resource.Id.btnPlay);
@@ -151,7 +152,13 @@ namespace Naxam.Busuu.Droid.Learning.Control
             {
                 btnPlay.Visibility = ViewStates.Gone;
             }
-
+            while (tempAnswer.Count < listAnswer.Count)
+            {
+                var temp = listAnswer[random.Next(1, 100) % listAnswer.Count];
+                if (!tempAnswer.Contains(temp))
+                    tempAnswer.Add(temp);
+            }
+            listAnswer = tempAnswer;
             for (int i = 0; i < listAnswer.Count; i++)
             {
                 TextView btn = new TextView(Context);

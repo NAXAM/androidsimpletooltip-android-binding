@@ -148,7 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\SelectWordImageRecyclerViewAdapter.cs" />
-    <Compile Include="Control\Dialogue\DialogueFragmentBase.cs" />
+    <Compile Include="Control\BaseFragment.cs" />
     <Compile Include="Control\Dialogue\DialogueNormalListSentence.cs" />
     <Compile Include="Control\Dialogue\DialogueFillListSentence.cs" />
     <Compile Include="Control\Dialogue\DialogueListNormalAdapter.cs" />
@@ -156,13 +156,11 @@
     <Compile Include="Control\MemoriseBodyView.cs" />
     <Compile Include="Control\Memo\ChooseWordFragment.cs" />
     <Compile Include="Control\Memo\MatchingSentenceFragment.cs" />
-    <Compile Include="Control\Memo\MemoriseFragmentBase.cs" />
     <Compile Include="Control\Memo\SelectWordFragment.cs" />
     <Compile Include="Control\Memo\SelectWordImageFragment.cs" />
     <Compile Include="Control\Summary.cs" />
     <Compile Include="Control\Vocabulary\TipFragment.cs" />
     <Compile Include="Control\Vocabulary\VocabularyViewPagerFragment.cs" />
-    <Compile Include="Control\Vocabulary\VocabularyFragmentBase.cs" />
     <Compile Include="Listener\AnimationListener.cs" />
     <Compile Include="Listener\AnimatorListener.cs" />
     <Compile Include="Listener\AnimatorUpdateListener.cs" />

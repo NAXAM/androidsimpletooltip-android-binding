@@ -14,9 +14,9 @@ using Naxam.Busuu.Learning.Model;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Memo
 {
-    public class MatchingSentenceFragment : MemoriseFragmentBase, View.IOnTouchListener
+    public class MatchingSentenceFragment : BaseFragment, View.IOnTouchListener
     {
-        public override event EventHandler<bool> NextClicked;
+        public override event EventHandler<int> NextClicked;
         Dictionary<string, string> MatchingSentence;
         TextView txt01Move, txt02Move, txt03Move, txt01, txt02, txt03, txt04, txt05, txt06, txtGuide;
 
@@ -80,7 +80,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
             btnContinue.Visibility = ViewStates.Gone;
             btnContinue.Click += (s, e) =>
             {
-                NextClicked?.Invoke(btnContinue, correct);
+                NextClicked?.Invoke(btnContinue, correct?1:0);
             };
             //
             txt01Move = view.FindViewById<TextView>(Resource.Id.txt01Move);

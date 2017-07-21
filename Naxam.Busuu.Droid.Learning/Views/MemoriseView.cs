@@ -57,16 +57,13 @@ namespace Naxam.Busuu.Droid.Learning.Views
             InitFragment();
         }
 
-        private void AddFragment(MemoriseFragmentBase fragment)
+        private void AddFragment(BaseFragment fragment)
         {
-            
+
             transaction = manager.BeginTransaction();
             fragment.NextClicked += (s, e) =>
             {
-                if (e)
-                {
-                    Corrrect += 1;
-                }
+                Corrrect += e;
                 if (prgStep.Max > PositionStep)
                 {
                     PositionStep++;
@@ -84,7 +81,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
             {
                 actionBar.Hide();
                 layoutStep.Visibility = ViewStates.Gone;
-                
+
                 ((LinearLayout.LayoutParams)layout.LayoutParameters).BottomMargin = 0;
                 Summary summary = new Summary(Corrrect, PositionStep);
                 transaction = manager.BeginTransaction();
@@ -107,7 +104,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
                     AddFragment(new FillSentenceFragment(temp));
                     break;
                 case UnitModel.UnitType.SelectWord:
-                    AddFragment(new MemoSelectWord(temp));
+                    AddFragment(new SelectWordFragment(temp));
                     break;
                 case UnitModel.UnitType.MatchingSentence:
                     AddFragment(new MatchingSentenceFragment(temp));
