@@ -11,6 +11,7 @@ using Naxam.Busuu.Social.ViewModels;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Views.Presenters.Attributes;
+using System.Collections.Generic;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
@@ -31,8 +32,12 @@ namespace Naxam.Busuu.iOS.Social.Views
 		{
 			base.ViewDidLoad();
 
-            var btnfilter = new UIBarButtonItem(UIImage.FromBundle("ic_filter"), UIBarButtonItemStyle.Plain, (sender, args) => { });
-			NavigationItem.RightBarButtonItem = btnfilter;
+			var btnfilter = new UIBarButtonItem()
+			{
+                Image = UIImage.FromBundle("ic_filter")
+			};
+
+            NavigationItem.SetRightBarButtonItem(btnfilter, false);
 
 			ViewBarItem.Layer.ShadowRadius = 2;
 			ViewBarItem.Layer.ShadowOffset = new CGSize(0, 2);
@@ -51,7 +56,7 @@ namespace Naxam.Busuu.iOS.Social.Views
 
             var setBinding = this.CreateBindingSet<SocialView, SocialViewModel>();
             setBinding.Bind(btnfilter).For("Clicked").To(vm => vm.FilterViewCommand);
-			setBinding.Apply();
+            setBinding.Apply();
 		}
 
         public override void ViewWillLayoutSubviews()

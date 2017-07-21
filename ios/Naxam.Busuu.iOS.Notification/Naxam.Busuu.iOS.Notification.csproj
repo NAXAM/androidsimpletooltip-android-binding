@@ -83,7 +83,6 @@
       <DependentUpon>NotificationCell.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\NotificationTableViewSource.cs" />
-    <Compile Include="Common\MyMvxConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Notification.storyboard" />

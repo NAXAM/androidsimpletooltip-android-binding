@@ -174,10 +174,6 @@
       <Project>{B18CE05B-DA11-45F4-BEF8-6945AE895FA2}</Project>
       <Name>Naxam.Busuu.iOS.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
-      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
-      <Name>Naxam.Busuu.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.iOS.Profile\Naxam.Busuu.iOS.Profile.csproj">
       <Project>{701B6C86-B033-45D2-89EE-0E11499DCA7E}</Project>
       <Name>Naxam.Busuu.iOS.Profile</Name>
@@ -201,6 +197,10 @@
     <ProjectReference Include="..\..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
       <Project>{BAAA7577-3BE2-423B-A051-61B47489B015}</Project>
       <Name>Naxam.Busuu.Review</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Naxam.Busuu\Naxam.Busuu.csproj">
+      <Project>{51CFB2E1-B73F-48BA-B205-02F74CE40050}</Project>
+      <Name>Naxam.Busuu</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -5,10 +5,9 @@ using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
 using Naxam.Busuu.Social.ViewModels;
 using PatridgeDev;
-using UIKit;
-using Naxam.Busuu.iOS.Social.Common;
 using AVFoundation;
 using Foundation;
+using UIKit;
 
 namespace Naxam.Busuu.iOS.Social.Views
 {
@@ -39,19 +38,19 @@ namespace Naxam.Busuu.iOS.Social.Views
 			ViewShadow.Layer.ShadowOffset = new CGSize(0, 2);
 
             var setBinding = this.CreateBindingSet<SocialDetailView, SocialDetailViewModel>();
-            setBinding.Bind(_loaderImageUser).To(d => d.SocialDetailData.Avatar).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
+            setBinding.Bind(_loaderImageUser).To(d => d.SocialDetailData.Avatar).WithConversion("ImageUriValueConverter");
             setBinding.Bind(lblUserName).To(d => d.SocialDetailData.Name);
             setBinding.Bind(lblCountry).To(d => d.SocialDetailData.Country);
-            setBinding.Bind(_loaderImgQuestion).To(d => d.SocialDetailData.ImgQuestion).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
+            setBinding.Bind(_loaderImgQuestion).To(d => d.SocialDetailData.ImgQuestion).WithConversion("ImageUriValueConverter");
             setBinding.Bind(textQuestion).To(d => d.SocialDetailData.TextQuestion);
             setBinding.Bind(btnAddFriends).For(d => d.Hidden).To(d => d.SocialDetailData.Friends);
-            setBinding.Bind(ViewAudioPlayer).For(d => d.Hidden).To(d => d.SocialDetailData.Speak).WithConversion(new MyMvxConverter.InverseValueConverter(), null);
+            setBinding.Bind(ViewAudioPlayer).For(d => d.Hidden).To(d => d.SocialDetailData.Speak).WithConversion("BoolInverseConverter");
             setBinding.Bind(audioViewBottomConstraint).For(x => x.Active).To(d => d.SocialDetailData.Speak);
             setBinding.Bind(audioViewTopConstraint).For(x => x.Active).To(d => d.SocialDetailData.Speak);
             setBinding.Bind(WriteText).For(d => d.Hidden).To(d => d.SocialDetailData.Speak);
             setBinding.Bind(WriteText).To(d => d.SocialDetailData.Write);
-            setBinding.Bind(lblTimePublic).To(d => d.SocialDetailData.PublicTime).WithConversion(new MyMvxConverter.DatetimeStringValueConverter(), null);
-            setBinding.Bind(lblRate).To(d => d.SocialDetailData.Star).WithConversion(new MyMvxConverter.TextRateValueConverter(), null);
+            setBinding.Bind(lblTimePublic).To(d => d.SocialDetailData.PublicTime).WithConversion("DatetimeTextConverter");
+            setBinding.Bind(lblRate).To(d => d.SocialDetailData.Star).WithConversion("StarTextConverter");
             setBinding.Bind(btnFeedBack).To(d => d.CommentViewCommand);
             setBinding.Apply();
 
