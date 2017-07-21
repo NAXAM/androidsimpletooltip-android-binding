@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using UIKit;
 using CoreGraphics;
 using Foundation;
@@ -115,7 +115,7 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 
 			BackgroundColor = UIColor.White;
 			Layer.ShadowColor = UIColor.Black.CGColor;
-			Layer.ShadowOpacity = 0.2f;
+			Layer.ShadowOpacity = 0.25f;
 			Layer.ShadowOffset = new CGSize(0, -2);
 
 			tabbar.Superview.Add(this);

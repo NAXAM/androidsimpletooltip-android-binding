@@ -14,12 +14,20 @@ namespace Naxam.Busuu.iOS.Notification.Views
 	{
 		[Outlet]
 		UIKit.UITableView NotificationTableView { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewShadow { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
 			if (NotificationTableView != null) {
 				NotificationTableView.Dispose ();
 				NotificationTableView = null;
+			}
+
+			if (ViewShadow != null) {
+				ViewShadow.Dispose ();
+				ViewShadow = null;
 			}
 		}
 	}

@@ -26,6 +26,10 @@ namespace Naxam.Busuu.iOS.Notification.Views
         {
             base.ViewDidLoad();
 
+			ViewShadow.Layer.ShadowRadius = 2;
+			ViewShadow.Layer.ShadowOpacity = 0.25f;
+			ViewShadow.Layer.ShadowOffset = new CoreGraphics.CGSize(0, 2);
+
             var nSource = new NotificationTableViewSource(NotificationTableView);
 
             var setBinding = this.CreateBindingSet<NotificationView, NotificationViewModel>();
