@@ -152,8 +152,9 @@ namespace Naxam.Busuu.Droid.Learning.Control
                                 isRecordComplete = true;
 
                                 AnimatorSet animatorSet = new AnimatorSet();
-                                animatorSet.Play(btnDeleteAnimatorL2R).With(btnPLayAnimatorForward);
-                                animatorSet.Start();
+                                //animatorSet.Play(btnDeleteAnimatorL2R).With(btnPLayAnimatorForward);
+                                //animatorSet.Start();
+                                btnDeleteAnimatorL2R.Start();
 
                                 prgRecord.Max = ((int)prgRecord.Progress);
                                 prgRecord.Progress = 0;
@@ -177,15 +178,15 @@ namespace Naxam.Busuu.Droid.Learning.Control
                 animatorSet.Play(btnDeleteAnimatorR2L).With(btnPLayAnimatorBackward);
                 animatorSet.Start();
                 isRecordComplete = false;
-                btPlay.Visibility=(ViewStates.Invisible);
-                btSpeak.Visibility=(ViewStates.Visible);
+                btPlay.Visibility = (ViewStates.Invisible);
+                btSpeak.Visibility = (ViewStates.Visible);
                 btSpeak.SetBackgroundResource(Resource.Drawable.ic_conversation_speak_blue);
                 btPlay.SetBackgroundResource(Resource.Drawable.ic_play_blue);
-                btDelete.Visibility=(ViewStates.Invisible);
+                btDelete.Visibility = (ViewStates.Invisible);
 
-                prgRecord.Max=(30);
-                prgRecord.Progress=0;
-                prgRecord.Visibility=(ViewStates.Invisible);
+                prgRecord.Max = (30);
+                prgRecord.Progress = 0;
+                prgRecord.Visibility = (ViewStates.Invisible);
             };
         }
     }

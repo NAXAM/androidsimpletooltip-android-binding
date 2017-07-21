@@ -4,4 +4,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/test_layout_fragment" />
+    android:id="@+id/test_layout_fragment">
+  <Naxam.Busuu.Droid.Learning.Control.NXRecorderButton
+          android:id="@+id/bt_record"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="80dp"
+          android:layout_gravity="center"
+          android:background="@drawable/ic_conversation_speak_blue"
+          android:visibility="gone"/>
+</LinearLayout>

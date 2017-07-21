@@ -10,6 +10,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Animation;
+using Android.Views.Animations;
+using Com.Bumptech.Glide;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Memo
 {
@@ -24,9 +26,9 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
         private LinearLayout layoutInputSpeak;
         private Button btWrite;
         private Button btSpeak;
-        private Space viewSpace;
+        private View viewSpace;
         private EditText edtAnswer;
-        private Button btRecord;
+        private RecorderButton btRecord;
         private RelativeLayout layoutSent;
         private TextView txtSuggestNumberWord;
         private Button btSent;
@@ -51,34 +53,40 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
             btWrite = view.FindViewById<Button>(Resource.Id.bt_write);
             btSpeak = view.FindViewById<Button>(Resource.Id.bt_speak);
             edtAnswer = view.FindViewById<EditText>(Resource.Id.edt_answer);
-            btRecord = view.FindViewById<Button>(Resource.Id.bt_record);
+            btRecord = view.FindViewById<RecorderButton>(Resource.Id.bt_record);
             layoutSent = view.FindViewById<RelativeLayout>(Resource.Id.layout_sent);
             txtSuggestNumberWord = view.FindViewById<TextView>(Resource.Id.txt_suggest_number_word);
             btSent = view.FindViewById<Button>(Resource.Id.bt_sent);
-            viewSpace = view.FindViewById<Space>(Resource.Id.view_space);
-
+            viewSpace = view.FindViewById<View>(Resource.Id.view_space);
+            Glide.With(this).Load("https://cdn.pixabay.com/photo/2013/04/06/11/50/image-editing-101040_960_720.jpg").CenterCrop().Into(imDescription);
             txtShowHint.Click += (s, e) =>
             {
                 txtHint.Visibility = txtHint.Visibility == ViewStates.Gone ? ViewStates.Visible : ViewStates.Gone;
             };
 
+            LinearLayout.LayoutParams param = (LinearLayout.LayoutParams)viewSpace.LayoutParameters;
+
             btWrite.Click += (s, e) =>
             {
-                //layoutSent.Visibility = ViewStates.Visible;
                 layoutInputSpeak.Visibility = ViewStates.Gone;
-                ObjectAnimator animator = ObjectAnimator.OfInt(viewSpace, "LayoutParameters.Width", 64,0);
+                ValueAnimator animator = ValueAnimator.OfInt(64, 0);
                 animator.SetDuration(500);
+                animator.Update += (sa, ea) =>
+                {
+                    param.Width = (int)ea.Animation.AnimatedValue;
+                    viewSpace.LayoutParameters = param;
+                };
 
-                //animator.Update += (sa, ea) =>
-                //{
-                //    viewSpace.LayoutParameters.Width = (int)ea.Animation.AnimatedValue;
-                //};
+                ObjectAnimator animatorEdtAnswer = ObjectAnimator.OfFloat(edtAnswer, "ScaleX", 0, 1);
+                animatorEdtAnswer.SetDuration(500);
 
-                //animator.AnimationEnd += (sa, ea) =>
-                //{
-                //    layoutInputMethod.Visibility = ViewStates.Gone;
-                //    edtAnswer.Visibility = ViewStates.Visible;
-                //};
+                animator.AnimationEnd += (sa, ea) =>
+                {
+                    layoutInputMethod.Visibility = ViewStates.Gone;
+                    edtAnswer.Visibility = ViewStates.Visible;
+                    layoutSent.Visibility = ViewStates.Visible;
+                    animatorEdtAnswer.Start();
+                };
 
                 animator.Start();
 
@@ -86,7 +94,29 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
 
             btSpeak.Click += (s, e) =>
             {
+                layoutInputWrite.Visibility = ViewStates.Gone;
+                ValueAnimator animator = ValueAnimator.OfInt(64, 0);
+                animator.SetDuration(500);
+                animator.Update += (sa, ea) =>
+                {
+                    param.Width = (int)ea.Animation.AnimatedValue;
+                    viewSpace.LayoutParameters = param;
+                };
 
+                animator.AnimationEnd += (sa, es) =>
+                {
+                    layoutInputSpeak.Visibility = ViewStates.Gone;
+                    btRecord.Visibility = ViewStates.Visible;
+                };
+
+                animator.Start();
+            };
+
+            edtAnswer.TextChanged += (s, e) =>
+            {
+                int wordCount = (edtAnswer.Text.Split(new char[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries)).Length;
+                if (3 - wordCount > 0) txtSuggestNumberWord.Text = (3 - wordCount) + " words to go";
+                else txtSuggestNumberWord.Text = "Ready to go! :D";
             };
         }
 

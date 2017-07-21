@@ -99,10 +99,10 @@
               android:text="WRITE" />
         </LinearLayout>
 
-        <Space
+        <View
             android:id="@+id/view_space"
             android:layout_width="64dp"
-            android:layout_height="1dp" />
+            android:layout_height="20dp"/>
 
         <LinearLayout
             android:id="@+id/layout_input_speak"
@@ -137,10 +137,10 @@
           android:padding="16dp"
           android:visibility="gone"/>
 
-      <Button
+      <Naxam.Busuu.Droid.Learning.Control.RecorderButton
           android:id="@+id/bt_record"
-          android:layout_width="96dp"
-          android:layout_height="96dp"
+          android:layout_width="104dp"
+          android:layout_height="104dp"
           android:layout_centerHorizontal="true"
           android:layout_marginBottom="80dp"
           android:layout_gravity="center"
