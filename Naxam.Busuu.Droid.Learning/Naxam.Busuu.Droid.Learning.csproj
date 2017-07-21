@@ -157,6 +157,7 @@
     <Compile Include="Control\Conversation\ListConversationAdapter.cs" />
     <Compile Include="Control\MemoriseBodyView.cs" />
     <Compile Include="Control\Memo\MemoChooseWord.cs" />
+    <Compile Include="Control\Memo\MemoConversationSentence.cs" />
     <Compile Include="Control\Memo\MemoMatchingSentence.cs" />
     <Compile Include="Control\Memo\MemoriseFragmentBase.cs" />
     <Compile Include="Control\Memo\MemoSelectWord.cs" />
@@ -727,6 +728,14 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout-land\complete_sentence_question.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\conversation_question.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\conversation_question.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -97,6 +97,8 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
             {
                 txtQuestion.SetText(CheckAnswer(edtAnswer.Text.Trim().ToLower(), model.Answers[0].Text.Trim().ToLower()), BufferType.Normal);
                 txtTrueAnswer.Visibility = ViewStates.Visible;
+                txtQuestion.Enabled = false;
+                btContinue.Enabled = true;
             };
         }
 
@@ -128,7 +130,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                     if (i < listInputString.Length - 1)
                     {
                         SpannableString spstring = new SpannableString(inputString);
-                        spstring.SetSpan(new ForegroundColorSpan(Color.Green), 0, inputString.Length, SpanTypes.ExclusiveExclusive);
+                        spstring.SetSpan(new ForegroundColorSpan(Resources.GetColor(Resource.Color.colorAnswer)), 0, inputString.Length, SpanTypes.ExclusiveExclusive);
                         builder.Append(spstring);
                     }
                 }
@@ -143,7 +145,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                         SpannableString spstring = new SpannableString(inputString + " " + compareString);
                         spstring.SetSpan(new ForegroundColorSpan(Color.Red), 0, inputString.Length, SpanTypes.ExclusiveExclusive);
                         spstring.SetSpan(new StrikethroughSpan(), 0, inputString.Length, SpanTypes.ExclusiveExclusive);
-                        spstring.SetSpan(new ForegroundColorSpan(Color.Green), inputString.Length + 1, inputString.Length + 1 + compareString.Length, SpanTypes.ExclusiveExclusive);
+                        spstring.SetSpan(new ForegroundColorSpan(Resources.GetColor(Resource.Color.colorAnswer)), inputString.Length + 1, inputString.Length + 1 + compareString.Length, SpanTypes.ExclusiveExclusive);
                         builder.Append(spstring);
                     }
                 }
