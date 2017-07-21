@@ -4239,6 +4239,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.ic_expand_arrow_20_20 = global::Naxam.Busuu.Droid.Resource.Drawable.ic_expand_arrow_20_20;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.ic_indicator_selected = global::Naxam.Busuu.Droid.Resource.Drawable.ic_indicator_selected;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.ic_indicator_unselected = global::Naxam.Busuu.Droid.Resource.Drawable.ic_indicator_unselected;
+			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.ic_light = global::Naxam.Busuu.Droid.Resource.Drawable.ic_light;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.ic_lock = global::Naxam.Busuu.Droid.Resource.Drawable.ic_lock;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.ic_menu_learn = global::Naxam.Busuu.Droid.Resource.Drawable.ic_menu_learn;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.ic_menu_profile = global::Naxam.Busuu.Droid.Resource.Drawable.ic_menu_profile;
@@ -4269,6 +4270,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.jw_play_button = global::Naxam.Busuu.Droid.Resource.Drawable.jw_play_button;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.learn_background_button_go = global::Naxam.Busuu.Droid.Resource.Drawable.learn_background_button_go;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.learn_border_image = global::Naxam.Busuu.Droid.Resource.Drawable.learn_border_image;
+			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.lightbult = global::Naxam.Busuu.Droid.Resource.Drawable.lightbult;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.listview_selector = global::Naxam.Busuu.Droid.Resource.Drawable.listview_selector;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.logo = global::Naxam.Busuu.Droid.Resource.Drawable.logo;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.navigation_empty_icon = global::Naxam.Busuu.Droid.Resource.Drawable.navigation_empty_icon;
@@ -4300,7 +4302,9 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.tall_short_couble = global::Naxam.Busuu.Droid.Resource.Drawable.tall_short_couble;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.underline_background_focus = global::Naxam.Busuu.Droid.Resource.Drawable.underline_background_focus;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.underline_background_normal = global::Naxam.Busuu.Droid.Resource.Drawable.underline_background_normal;
+			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.v = global::Naxam.Busuu.Droid.Resource.Drawable.v;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.vocab_trainer_icon = global::Naxam.Busuu.Droid.Resource.Drawable.vocab_trainer_icon;
+			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.x = global::Naxam.Busuu.Droid.Resource.Drawable.x;
 			global::Naxam.Busuu.Droid.Learning.Resource.Drawable.yellow_star_d = global::Naxam.Busuu.Droid.Resource.Drawable.yellow_star_d;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.LanguageListview = global::Naxam.Busuu.Droid.Resource.Id.LanguageListview;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.MvvmCrossTagId = global::Naxam.Busuu.Droid.Resource.Id.MvvmCrossTagId;
@@ -4424,18 +4428,21 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.im_premium_icon = global::Naxam.Busuu.Droid.Resource.Id.im_premium_icon;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.im_vocabulary_description = global::Naxam.Busuu.Droid.Resource.Id.im_vocabulary_description;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.image = global::Naxam.Busuu.Droid.Resource.Id.image;
+			global::Naxam.Busuu.Droid.Learning.Resource.Id.imgAnswer = global::Naxam.Busuu.Droid.Resource.Id.imgAnswer;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.imgAvatar = global::Naxam.Busuu.Droid.Resource.Id.imgAvatar;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.imgExercise = global::Naxam.Busuu.Droid.Resource.Id.imgExercise;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.imgImage = global::Naxam.Busuu.Droid.Resource.Id.imgImage;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.imgLock = global::Naxam.Busuu.Droid.Resource.Id.imgLock;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.imgMic = global::Naxam.Busuu.Droid.Resource.Id.imgMic;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.imgPlayBtn = global::Naxam.Busuu.Droid.Resource.Id.imgPlayBtn;
+			global::Naxam.Busuu.Droid.Learning.Resource.Id.imgResult = global::Naxam.Busuu.Droid.Resource.Id.imgResult;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.imgStar = global::Naxam.Busuu.Droid.Resource.Id.imgStar;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.img_complete_sentence_description = global::Naxam.Busuu.Droid.Resource.Id.img_complete_sentence_description;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.info = global::Naxam.Busuu.Droid.Resource.Id.info;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.item_touch_helper_previous_elevation = global::Naxam.Busuu.Droid.Resource.Id.item_touch_helper_previous_elevation;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.largeLabel = global::Naxam.Busuu.Droid.Resource.Id.largeLabel;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.layout = global::Naxam.Busuu.Droid.Resource.Id.layout;
+			global::Naxam.Busuu.Droid.Learning.Resource.Id.layoutCenter = global::Naxam.Busuu.Droid.Resource.Id.layoutCenter;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.layoutMark = global::Naxam.Busuu.Droid.Resource.Id.layoutMark;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.layoutStep = global::Naxam.Busuu.Droid.Resource.Id.layoutStep;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.layoutTip = global::Naxam.Busuu.Droid.Resource.Id.layoutTip;
@@ -4458,6 +4465,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.media_actions = global::Naxam.Busuu.Droid.Resource.Id.media_actions;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.mediacontroller_progress = global::Naxam.Busuu.Droid.Resource.Id.mediacontroller_progress;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.memoriseBody = global::Naxam.Busuu.Droid.Resource.Id.memoriseBody;
+			global::Naxam.Busuu.Droid.Learning.Resource.Id.menuTip = global::Naxam.Busuu.Droid.Resource.Id.menuTip;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.menu_bottom = global::Naxam.Busuu.Droid.Resource.Id.menu_bottom;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.menu_learn = global::Naxam.Busuu.Droid.Resource.Id.menu_learn;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.menu_notification = global::Naxam.Busuu.Droid.Resource.Id.menu_notification;
@@ -4484,6 +4492,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.progress_circular = global::Naxam.Busuu.Droid.Resource.Id.progress_circular;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.progress_horizontal = global::Naxam.Busuu.Droid.Resource.Id.progress_horizontal;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.radio = global::Naxam.Busuu.Droid.Resource.Id.radio;
+			global::Naxam.Busuu.Droid.Learning.Resource.Id.recyclerView = global::Naxam.Busuu.Droid.Resource.Id.recyclerView;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.right = global::Naxam.Busuu.Droid.Resource.Id.right;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.right_icon = global::Naxam.Busuu.Droid.Resource.Id.right_icon;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.right_side = global::Naxam.Busuu.Droid.Resource.Id.right_side;
@@ -4563,6 +4572,8 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txt04 = global::Naxam.Busuu.Droid.Resource.Id.txt04;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txt05 = global::Naxam.Busuu.Droid.Resource.Id.txt05;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txt06 = global::Naxam.Busuu.Droid.Resource.Id.txt06;
+			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtAnswer = global::Naxam.Busuu.Droid.Resource.Id.txtAnswer;
+			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtDetail = global::Naxam.Busuu.Droid.Resource.Id.txtDetail;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtGuide = global::Naxam.Busuu.Droid.Resource.Id.txtGuide;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtInput = global::Naxam.Busuu.Droid.Resource.Id.txtInput;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtLessonName = global::Naxam.Busuu.Droid.Resource.Id.txtLessonName;
@@ -4574,6 +4585,8 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtStatus = global::Naxam.Busuu.Droid.Resource.Id.txtStatus;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtStep = global::Naxam.Busuu.Droid.Resource.Id.txtStep;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtTime = global::Naxam.Busuu.Droid.Resource.Id.txtTime;
+			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtTip = global::Naxam.Busuu.Droid.Resource.Id.txtTip;
+			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtTitle = global::Naxam.Busuu.Droid.Resource.Id.txtTitle;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtTopic = global::Naxam.Busuu.Droid.Resource.Id.txtTopic;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txtTotal = global::Naxam.Busuu.Droid.Resource.Id.txtTotal;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txt_compelte_sentence_question = global::Naxam.Busuu.Droid.Resource.Id.txt_compelte_sentence_question;
@@ -4586,6 +4599,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.txt_suggest_select_input = global::Naxam.Busuu.Droid.Resource.Id.txt_suggest_select_input;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.up = global::Naxam.Busuu.Droid.Resource.Id.up;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.useLogo = global::Naxam.Busuu.Droid.Resource.Id.useLogo;
+			global::Naxam.Busuu.Droid.Learning.Resource.Id.viewPager = global::Naxam.Busuu.Droid.Resource.Id.viewPager;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.view_offset_helper = global::Naxam.Busuu.Droid.Resource.Id.view_offset_helper;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.view_space = global::Naxam.Busuu.Droid.Resource.Id.view_space;
 			global::Naxam.Busuu.Droid.Learning.Resource.Id.visible = global::Naxam.Busuu.Droid.Resource.Id.visible;
@@ -4652,6 +4666,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.design_navigation_menu = global::Naxam.Busuu.Droid.Resource.Layout.design_navigation_menu;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.design_navigation_menu_item = global::Naxam.Busuu.Droid.Resource.Layout.design_navigation_menu_item;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.design_text_input_password_icon = global::Naxam.Busuu.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Naxam.Busuu.Droid.Learning.Resource.Layout.dialogue_activity = global::Naxam.Busuu.Droid.Resource.Layout.dialogue_activity;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.exo_playback_control_view = global::Naxam.Busuu.Droid.Resource.Layout.exo_playback_control_view;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.exo_simple_player_view = global::Naxam.Busuu.Droid.Resource.Layout.exo_simple_player_view;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.fill_sentence_layout = global::Naxam.Busuu.Droid.Resource.Layout.fill_sentence_layout;
@@ -4690,14 +4705,20 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.select_dialog_item_material = global::Naxam.Busuu.Droid.Resource.Layout.select_dialog_item_material;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.select_dialog_multichoice_material = global::Naxam.Busuu.Droid.Resource.Layout.select_dialog_multichoice_material;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.select_dialog_singlechoice_material = global::Naxam.Busuu.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Naxam.Busuu.Droid.Learning.Resource.Layout.select_word_with_image_item = global::Naxam.Busuu.Droid.Resource.Layout.select_word_with_image_item;
+			global::Naxam.Busuu.Droid.Learning.Resource.Layout.select_word_with_image_layout = global::Naxam.Busuu.Droid.Resource.Layout.select_word_with_image_layout;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.select_words_layout = global::Naxam.Busuu.Droid.Resource.Layout.select_words_layout;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.select_words_layout_non_image = global::Naxam.Busuu.Droid.Resource.Layout.select_words_layout_non_image;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.summary_layout = global::Naxam.Busuu.Droid.Resource.Layout.summary_layout;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.support_simple_spinner_dropdown_item = global::Naxam.Busuu.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.test_fill_list_sentence_layout = global::Naxam.Busuu.Droid.Resource.Layout.test_fill_list_sentence_layout;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.test_layout = global::Naxam.Busuu.Droid.Resource.Layout.test_layout;
+			global::Naxam.Busuu.Droid.Learning.Resource.Layout.tip_dialog_layout = global::Naxam.Busuu.Droid.Resource.Layout.tip_dialog_layout;
+			global::Naxam.Busuu.Droid.Learning.Resource.Layout.tip_layout = global::Naxam.Busuu.Droid.Resource.Layout.tip_layout;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.tooltip_textview = global::Naxam.Busuu.Droid.Resource.Layout.tooltip_textview;
+			global::Naxam.Busuu.Droid.Learning.Resource.Layout.vocabulary_activity = global::Naxam.Busuu.Droid.Resource.Layout.vocabulary_activity;
 			global::Naxam.Busuu.Droid.Learning.Resource.Layout.vocabulary_question = global::Naxam.Busuu.Droid.Resource.Layout.vocabulary_question;
+			global::Naxam.Busuu.Droid.Learning.Resource.Layout.vocabulary_viewpager_layout = global::Naxam.Busuu.Droid.Resource.Layout.vocabulary_viewpager_layout;
 			global::Naxam.Busuu.Droid.Learning.Resource.Menu.menu_bottom = global::Naxam.Busuu.Droid.Resource.Menu.menu_bottom;
 			global::Naxam.Busuu.Droid.Learning.Resource.Raw.beelden = global::Naxam.Busuu.Droid.Resource.Raw.beelden;
 			global::Naxam.Busuu.Droid.Learning.Resource.Raw.bekle = global::Naxam.Busuu.Droid.Resource.Raw.bekle;
@@ -4805,6 +4826,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Learning.Resource.Style.Animation_Design_BottomSheetDialog = global::Naxam.Busuu.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
 			global::Naxam.Busuu.Droid.Learning.Resource.Style.AppTheme_AppBarOverlay = global::Naxam.Busuu.Droid.Resource.Style.AppTheme_AppBarOverlay;
 			global::Naxam.Busuu.Droid.Learning.Resource.Style.AppTheme_NoActionBar = global::Naxam.Busuu.Droid.Resource.Style.AppTheme_NoActionBar;
+			global::Naxam.Busuu.Droid.Learning.Resource.Style.AppTheme_Transparent = global::Naxam.Busuu.Droid.Resource.Style.AppTheme_Transparent;
 			global::Naxam.Busuu.Droid.Learning.Resource.Style.Base_AlertDialog_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::Naxam.Busuu.Droid.Learning.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::Naxam.Busuu.Droid.Learning.Resource.Style.Base_Animation_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
@@ -6828,6 +6850,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.ic_expand_arrow_20_20 = global::Naxam.Busuu.Droid.Resource.Drawable.ic_expand_arrow_20_20;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.ic_indicator_selected = global::Naxam.Busuu.Droid.Resource.Drawable.ic_indicator_selected;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.ic_indicator_unselected = global::Naxam.Busuu.Droid.Resource.Drawable.ic_indicator_unselected;
+			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.ic_light = global::Naxam.Busuu.Droid.Resource.Drawable.ic_light;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.ic_lock = global::Naxam.Busuu.Droid.Resource.Drawable.ic_lock;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.ic_menu_learn = global::Naxam.Busuu.Droid.Resource.Drawable.ic_menu_learn;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.ic_menu_profile = global::Naxam.Busuu.Droid.Resource.Drawable.ic_menu_profile;
@@ -6858,6 +6881,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.jw_play_button = global::Naxam.Busuu.Droid.Resource.Drawable.jw_play_button;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.learn_background_button_go = global::Naxam.Busuu.Droid.Resource.Drawable.learn_background_button_go;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.learn_border_image = global::Naxam.Busuu.Droid.Resource.Drawable.learn_border_image;
+			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.lightbult = global::Naxam.Busuu.Droid.Resource.Drawable.lightbult;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.listview_selector = global::Naxam.Busuu.Droid.Resource.Drawable.listview_selector;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.logo = global::Naxam.Busuu.Droid.Resource.Drawable.logo;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.logo_facebook = global::Naxam.Busuu.Droid.Resource.Drawable.logo_facebook;
@@ -6895,6 +6919,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.transparent = global::Naxam.Busuu.Droid.Resource.Drawable.transparent;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.underline_background_focus = global::Naxam.Busuu.Droid.Resource.Drawable.underline_background_focus;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.underline_background_normal = global::Naxam.Busuu.Droid.Resource.Drawable.underline_background_normal;
+			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.v = global::Naxam.Busuu.Droid.Resource.Drawable.v;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.vocab_trainer_icon = global::Naxam.Busuu.Droid.Resource.Drawable.vocab_trainer_icon;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.vpi__tab_indicator = global::Naxam.Busuu.Droid.Resource.Drawable.vpi__tab_indicator;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.vpi__tab_selected_focused_holo = global::Naxam.Busuu.Droid.Resource.Drawable.vpi__tab_selected_focused_holo;
@@ -6903,6 +6928,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.vpi__tab_unselected_focused_holo = global::Naxam.Busuu.Droid.Resource.Drawable.vpi__tab_unselected_focused_holo;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.vpi__tab_unselected_holo = global::Naxam.Busuu.Droid.Resource.Drawable.vpi__tab_unselected_holo;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.vpi__tab_unselected_pressed_holo = global::Naxam.Busuu.Droid.Resource.Drawable.vpi__tab_unselected_pressed_holo;
+			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.x = global::Naxam.Busuu.Droid.Resource.Drawable.x;
 			global::Naxam.Busuu.Droid.Profile.Resource.Drawable.yellow_star_d = global::Naxam.Busuu.Droid.Resource.Drawable.yellow_star_d;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.LanguageListview = global::Naxam.Busuu.Droid.Resource.Id.LanguageListview;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.MvvmCrossTagId = global::Naxam.Busuu.Droid.Resource.Id.MvvmCrossTagId;
@@ -7022,6 +7048,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.im_second_background = global::Naxam.Busuu.Droid.Resource.Id.im_second_background;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.im_vocabulary_description = global::Naxam.Busuu.Droid.Resource.Id.im_vocabulary_description;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.image = global::Naxam.Busuu.Droid.Resource.Id.image;
+			global::Naxam.Busuu.Droid.Profile.Resource.Id.imgAnswer = global::Naxam.Busuu.Droid.Resource.Id.imgAnswer;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.imgAvatar = global::Naxam.Busuu.Droid.Resource.Id.imgAvatar;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.imgExercise = global::Naxam.Busuu.Droid.Resource.Id.imgExercise;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.imgFlag = global::Naxam.Busuu.Droid.Resource.Id.imgFlag;
@@ -7029,6 +7056,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.imgLock = global::Naxam.Busuu.Droid.Resource.Id.imgLock;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.imgMic = global::Naxam.Busuu.Droid.Resource.Id.imgMic;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.imgPlayBtn = global::Naxam.Busuu.Droid.Resource.Id.imgPlayBtn;
+			global::Naxam.Busuu.Droid.Profile.Resource.Id.imgResult = global::Naxam.Busuu.Droid.Resource.Id.imgResult;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.imgStar = global::Naxam.Busuu.Droid.Resource.Id.imgStar;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.imgViewDownload = global::Naxam.Busuu.Droid.Resource.Id.imgViewDownload;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.img_complete_sentence_description = global::Naxam.Busuu.Droid.Resource.Id.img_complete_sentence_description;
@@ -7037,6 +7065,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.item_touch_helper_previous_elevation = global::Naxam.Busuu.Droid.Resource.Id.item_touch_helper_previous_elevation;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.largeLabel = global::Naxam.Busuu.Droid.Resource.Id.largeLabel;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.layout = global::Naxam.Busuu.Droid.Resource.Id.layout;
+			global::Naxam.Busuu.Droid.Profile.Resource.Id.layoutCenter = global::Naxam.Busuu.Droid.Resource.Id.layoutCenter;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.layoutMark = global::Naxam.Busuu.Droid.Resource.Id.layoutMark;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.layoutPhone = global::Naxam.Busuu.Droid.Resource.Id.layoutPhone;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.layoutSocial = global::Naxam.Busuu.Droid.Resource.Id.layoutSocial;
@@ -7061,6 +7090,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.media_actions = global::Naxam.Busuu.Droid.Resource.Id.media_actions;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.mediacontroller_progress = global::Naxam.Busuu.Droid.Resource.Id.mediacontroller_progress;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.memoriseBody = global::Naxam.Busuu.Droid.Resource.Id.memoriseBody;
+			global::Naxam.Busuu.Droid.Profile.Resource.Id.menuTip = global::Naxam.Busuu.Droid.Resource.Id.menuTip;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.menu_bottom = global::Naxam.Busuu.Droid.Resource.Id.menu_bottom;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.menu_learn = global::Naxam.Busuu.Droid.Resource.Id.menu_learn;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.menu_notification = global::Naxam.Busuu.Droid.Resource.Id.menu_notification;
@@ -7088,6 +7118,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.progress_circular = global::Naxam.Busuu.Droid.Resource.Id.progress_circular;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.progress_horizontal = global::Naxam.Busuu.Droid.Resource.Id.progress_horizontal;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.radio = global::Naxam.Busuu.Droid.Resource.Id.radio;
+			global::Naxam.Busuu.Droid.Profile.Resource.Id.recyclerView = global::Naxam.Busuu.Droid.Resource.Id.recyclerView;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.right = global::Naxam.Busuu.Droid.Resource.Id.right;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.right_icon = global::Naxam.Busuu.Droid.Resource.Id.right_icon;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.right_side = global::Naxam.Busuu.Droid.Resource.Id.right_side;
@@ -7169,9 +7200,11 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txt04 = global::Naxam.Busuu.Droid.Resource.Id.txt04;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txt05 = global::Naxam.Busuu.Droid.Resource.Id.txt05;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txt06 = global::Naxam.Busuu.Droid.Resource.Id.txt06;
+			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtAnswer = global::Naxam.Busuu.Droid.Resource.Id.txtAnswer;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtClose = global::Naxam.Busuu.Droid.Resource.Id.txtClose;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtContent = global::Naxam.Busuu.Droid.Resource.Id.txtContent;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtCountry = global::Naxam.Busuu.Droid.Resource.Id.txtCountry;
+			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtDetail = global::Naxam.Busuu.Droid.Resource.Id.txtDetail;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtDisplay = global::Naxam.Busuu.Droid.Resource.Id.txtDisplay;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtEmail = global::Naxam.Busuu.Droid.Resource.Id.txtEmail;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtForgotPass = global::Naxam.Busuu.Droid.Resource.Id.txtForgotPass;
@@ -7190,6 +7223,8 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtStatus = global::Naxam.Busuu.Droid.Resource.Id.txtStatus;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtStep = global::Naxam.Busuu.Droid.Resource.Id.txtStep;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtTime = global::Naxam.Busuu.Droid.Resource.Id.txtTime;
+			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtTip = global::Naxam.Busuu.Droid.Resource.Id.txtTip;
+			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtTitle = global::Naxam.Busuu.Droid.Resource.Id.txtTitle;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtTopic = global::Naxam.Busuu.Droid.Resource.Id.txtTopic;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txtTotal = global::Naxam.Busuu.Droid.Resource.Id.txtTotal;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.txt_compelte_sentence_question = global::Naxam.Busuu.Droid.Resource.Id.txt_compelte_sentence_question;
@@ -7203,6 +7238,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.underline = global::Naxam.Busuu.Droid.Resource.Id.underline;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.up = global::Naxam.Busuu.Droid.Resource.Id.up;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.useLogo = global::Naxam.Busuu.Droid.Resource.Id.useLogo;
+			global::Naxam.Busuu.Droid.Profile.Resource.Id.viewPager = global::Naxam.Busuu.Droid.Resource.Id.viewPager;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.view_offset_helper = global::Naxam.Busuu.Droid.Resource.Id.view_offset_helper;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.view_space = global::Naxam.Busuu.Droid.Resource.Id.view_space;
 			global::Naxam.Busuu.Droid.Profile.Resource.Id.visible = global::Naxam.Busuu.Droid.Resource.Id.visible;
@@ -7281,6 +7317,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.design_navigation_menu_item = global::Naxam.Busuu.Droid.Resource.Layout.design_navigation_menu_item;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.design_text_input_password_icon = global::Naxam.Busuu.Droid.Resource.Layout.design_text_input_password_icon;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.dialog_confirm_choose_language = global::Naxam.Busuu.Droid.Resource.Layout.dialog_confirm_choose_language;
+			global::Naxam.Busuu.Droid.Profile.Resource.Layout.dialogue_activity = global::Naxam.Busuu.Droid.Resource.Layout.dialogue_activity;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.DownloadDialogActivity = global::Naxam.Busuu.Droid.Resource.Layout.DownloadDialogActivity;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.fill_sentence_layout = global::Naxam.Busuu.Droid.Resource.Layout.fill_sentence_layout;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.fill_sentence_layout_non_image = global::Naxam.Busuu.Droid.Resource.Layout.fill_sentence_layout_non_image;
@@ -7323,6 +7360,8 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.select_dialog_item_material = global::Naxam.Busuu.Droid.Resource.Layout.select_dialog_item_material;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.select_dialog_multichoice_material = global::Naxam.Busuu.Droid.Resource.Layout.select_dialog_multichoice_material;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.select_dialog_singlechoice_material = global::Naxam.Busuu.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Naxam.Busuu.Droid.Profile.Resource.Layout.select_word_with_image_item = global::Naxam.Busuu.Droid.Resource.Layout.select_word_with_image_item;
+			global::Naxam.Busuu.Droid.Profile.Resource.Layout.select_word_with_image_layout = global::Naxam.Busuu.Droid.Resource.Layout.select_word_with_image_layout;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.select_words_layout = global::Naxam.Busuu.Droid.Resource.Layout.select_words_layout;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.select_words_layout_non_image = global::Naxam.Busuu.Droid.Resource.Layout.select_words_layout_non_image;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.StartPage = global::Naxam.Busuu.Droid.Resource.Layout.StartPage;
@@ -7330,8 +7369,12 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.support_simple_spinner_dropdown_item = global::Naxam.Busuu.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.test_fill_list_sentence_layout = global::Naxam.Busuu.Droid.Resource.Layout.test_fill_list_sentence_layout;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.test_layout = global::Naxam.Busuu.Droid.Resource.Layout.test_layout;
+			global::Naxam.Busuu.Droid.Profile.Resource.Layout.tip_dialog_layout = global::Naxam.Busuu.Droid.Resource.Layout.tip_dialog_layout;
+			global::Naxam.Busuu.Droid.Profile.Resource.Layout.tip_layout = global::Naxam.Busuu.Droid.Resource.Layout.tip_layout;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.tooltip_textview = global::Naxam.Busuu.Droid.Resource.Layout.tooltip_textview;
+			global::Naxam.Busuu.Droid.Profile.Resource.Layout.vocabulary_activity = global::Naxam.Busuu.Droid.Resource.Layout.vocabulary_activity;
 			global::Naxam.Busuu.Droid.Profile.Resource.Layout.vocabulary_question = global::Naxam.Busuu.Droid.Resource.Layout.vocabulary_question;
+			global::Naxam.Busuu.Droid.Profile.Resource.Layout.vocabulary_viewpager_layout = global::Naxam.Busuu.Droid.Resource.Layout.vocabulary_viewpager_layout;
 			global::Naxam.Busuu.Droid.Profile.Resource.Menu.menu_bottom = global::Naxam.Busuu.Droid.Resource.Menu.menu_bottom;
 			global::Naxam.Busuu.Droid.Profile.Resource.Raw.beelden = global::Naxam.Busuu.Droid.Resource.Raw.beelden;
 			global::Naxam.Busuu.Droid.Profile.Resource.Raw.bekle = global::Naxam.Busuu.Droid.Resource.Raw.bekle;
@@ -7434,6 +7477,7 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Style.AppTheme_AppBarOverlay = global::Naxam.Busuu.Droid.Resource.Style.AppTheme_AppBarOverlay;
 			global::Naxam.Busuu.Droid.Profile.Resource.Style.AppTheme_NoActionBar = global::Naxam.Busuu.Droid.Resource.Style.AppTheme_NoActionBar;
 			global::Naxam.Busuu.Droid.Profile.Resource.Style.AppTheme_Premium = global::Naxam.Busuu.Droid.Resource.Style.AppTheme_Premium;
+			global::Naxam.Busuu.Droid.Profile.Resource.Style.AppTheme_Transparent = global::Naxam.Busuu.Droid.Resource.Style.AppTheme_Transparent;
 			global::Naxam.Busuu.Droid.Profile.Resource.Style.Base_AlertDialog_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::Naxam.Busuu.Droid.Profile.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::Naxam.Busuu.Droid.Profile.Resource.Style.Base_Animation_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
@@ -12751,26 +12795,26 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f0200f7
-			public const int avd_hide_password_1 = 2130837751;
+			// aapt resource value: 0x7f0200fb
+			public const int avd_hide_password_1 = 2130837755;
 			
-			// aapt resource value: 0x7f0200f8
-			public const int avd_hide_password_2 = 2130837752;
+			// aapt resource value: 0x7f0200fc
+			public const int avd_hide_password_2 = 2130837756;
 			
-			// aapt resource value: 0x7f0200f9
-			public const int avd_hide_password_3 = 2130837753;
+			// aapt resource value: 0x7f0200fd
+			public const int avd_hide_password_3 = 2130837757;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f0200fa
-			public const int avd_show_password_1 = 2130837754;
+			// aapt resource value: 0x7f0200fe
+			public const int avd_show_password_1 = 2130837758;
 			
-			// aapt resource value: 0x7f0200fb
-			public const int avd_show_password_2 = 2130837755;
+			// aapt resource value: 0x7f0200ff
+			public const int avd_show_password_2 = 2130837759;
 			
-			// aapt resource value: 0x7f0200fc
-			public const int avd_show_password_3 = 2130837756;
+			// aapt resource value: 0x7f020100
+			public const int avd_show_password_3 = 2130837760;
 			
 			// aapt resource value: 0x7f020055
 			public const int background1 = 2130837589;
@@ -13028,235 +13072,247 @@ namespace Naxam.Busuu.Droid
 			public const int ic_indicator_unselected = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int ic_lock = 2130837674;
+			public const int ic_light = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ic_menu_learn = 2130837675;
+			public const int ic_lock = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int ic_menu_profile = 2130837676;
+			public const int ic_menu_learn = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int ic_menu_review = 2130837677;
+			public const int ic_menu_profile = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int ic_menu_social = 2130837678;
+			public const int ic_menu_review = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int ic_mic = 2130837679;
+			public const int ic_menu_social = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int ic_pause = 2130837680;
+			public const int ic_mic = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int ic_pause_btn = 2130837681;
+			public const int ic_pause = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int ic_play_arrow = 2130837682;
+			public const int ic_pause_btn = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int ic_play_blue = 2130837683;
+			public const int ic_play_arrow = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int ic_play_btn = 2130837684;
+			public const int ic_play_blue = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int ic_right = 2130837685;
+			public const int ic_play_btn = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int ic_send = 2130837686;
+			public const int ic_right = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int ic_stop = 2130837687;
+			public const int ic_send = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int ic_wrong = 2130837688;
+			public const int ic_stop = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int ic_yellow_star = 2130837689;
+			public const int ic_wrong = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int icdownload = 2130837690;
+			public const int ic_yellow_star = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int Icon = 2130837691;
+			public const int icdownload = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int icon_book_search = 2130837692;
+			public const int Icon = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int icon_book_side = 2130837693;
+			public const int icon_book_search = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int icon_book_tick = 2130837694;
+			public const int icon_book_side = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int icon_bubbles = 2130837695;
+			public const int icon_book_tick = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int icon_cloud_tick = 2130837696;
+			public const int icon_bubbles = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int icon_dialogue = 2130837697;
+			public const int icon_cloud_tick = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int icon_google_drawble_transparent = 2130837698;
+			public const int icon_dialogue = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int icon_lightning = 2130837699;
+			public const int icon_google_drawble_transparent = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int icon_recording = 2130837700;
+			public const int icon_lightning = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int icon_vocabulary = 2130837701;
+			public const int icon_recording = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int jw_play_button = 2130837702;
+			public const int icon_vocabulary = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int learn_background_button_go = 2130837703;
+			public const int jw_play_button = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int learn_border_image = 2130837704;
+			public const int learn_background_button_go = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int listview_selector = 2130837705;
+			public const int learn_border_image = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int logo = 2130837706;
+			public const int lightbult = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int logo_facebook = 2130837707;
+			public const int listview_selector = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int logo_facebook_40_40 = 2130837708;
+			public const int logo = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int logo_google = 2130837709;
+			public const int logo_facebook = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int logo_google_40_40 = 2130837710;
+			public const int logo_facebook_40_40 = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int navigation_empty_icon = 2130837711;
+			public const int logo_google = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int notification_action_background = 2130837712;
+			public const int logo_google_40_40 = 2130837712;
 			
 			// aapt resource value: 0x7f0200d1
-			public const int notification_bg = 2130837713;
+			public const int navigation_empty_icon = 2130837713;
 			
 			// aapt resource value: 0x7f0200d2
-			public const int notification_bg_low = 2130837714;
+			public const int notification_action_background = 2130837714;
 			
 			// aapt resource value: 0x7f0200d3
-			public const int notification_bg_low_normal = 2130837715;
+			public const int notification_bg = 2130837715;
 			
 			// aapt resource value: 0x7f0200d4
-			public const int notification_bg_low_pressed = 2130837716;
+			public const int notification_bg_low = 2130837716;
 			
 			// aapt resource value: 0x7f0200d5
-			public const int notification_bg_normal = 2130837717;
+			public const int notification_bg_low_normal = 2130837717;
 			
 			// aapt resource value: 0x7f0200d6
-			public const int notification_bg_normal_pressed = 2130837718;
+			public const int notification_bg_low_pressed = 2130837718;
 			
 			// aapt resource value: 0x7f0200d7
-			public const int notification_icon_background = 2130837719;
-			
-			// aapt resource value: 0x7f0200f5
-			public const int notification_template_icon_bg = 2130837749;
-			
-			// aapt resource value: 0x7f0200f6
-			public const int notification_template_icon_low_bg = 2130837750;
+			public const int notification_bg_normal = 2130837719;
 			
 			// aapt resource value: 0x7f0200d8
-			public const int notification_tile_bg = 2130837720;
+			public const int notification_bg_normal_pressed = 2130837720;
 			
 			// aapt resource value: 0x7f0200d9
-			public const int notify_panel_notification_icon_bg = 2130837721;
+			public const int notification_icon_background = 2130837721;
+			
+			// aapt resource value: 0x7f0200f9
+			public const int notification_template_icon_bg = 2130837753;
+			
+			// aapt resource value: 0x7f0200fa
+			public const int notification_template_icon_low_bg = 2130837754;
 			
 			// aapt resource value: 0x7f0200da
-			public const int premium_card_background = 2130837722;
+			public const int notification_tile_bg = 2130837722;
 			
 			// aapt resource value: 0x7f0200db
-			public const int progress_progressbar = 2130837723;
+			public const int notify_panel_notification_icon_bg = 2130837723;
 			
 			// aapt resource value: 0x7f0200dc
-			public const int rectange_drawable_text = 2130837724;
+			public const int premium_card_background = 2130837724;
 			
 			// aapt resource value: 0x7f0200dd
-			public const int rounded_image = 2130837725;
+			public const int progress_progressbar = 2130837725;
 			
 			// aapt resource value: 0x7f0200de
-			public const int scrollbar_handle_holo_dark = 2130837726;
+			public const int rectange_drawable_text = 2130837726;
 			
 			// aapt resource value: 0x7f0200df
-			public const int scrollbar_handle_holo_light = 2130837727;
+			public const int rounded_image = 2130837727;
 			
 			// aapt resource value: 0x7f0200e0
-			public const int selector_item_gray_color = 2130837728;
+			public const int scrollbar_handle_holo_dark = 2130837728;
 			
 			// aapt resource value: 0x7f0200e1
-			public const int selector_list_item = 2130837729;
+			public const int scrollbar_handle_holo_light = 2130837729;
 			
 			// aapt resource value: 0x7f0200e2
-			public const int star_white = 2130837730;
+			public const int selector_item_gray_color = 2130837730;
 			
 			// aapt resource value: 0x7f0200e3
-			public const int subscription_image_c_1 = 2130837731;
+			public const int selector_list_item = 2130837731;
 			
 			// aapt resource value: 0x7f0200e4
-			public const int subscription_image_c_2 = 2130837732;
+			public const int star_white = 2130837732;
 			
 			// aapt resource value: 0x7f0200e5
-			public const int subscription_image_c_3 = 2130837733;
+			public const int subscription_image_c_1 = 2130837733;
 			
 			// aapt resource value: 0x7f0200e6
-			public const int subscription_image_c_4 = 2130837734;
+			public const int subscription_image_c_2 = 2130837734;
 			
 			// aapt resource value: 0x7f0200e7
-			public const int subscription_image_c_5 = 2130837735;
+			public const int subscription_image_c_3 = 2130837735;
 			
 			// aapt resource value: 0x7f0200e8
-			public const int tall_short_couble = 2130837736;
+			public const int subscription_image_c_4 = 2130837736;
 			
 			// aapt resource value: 0x7f0200e9
-			public const int transparent = 2130837737;
+			public const int subscription_image_c_5 = 2130837737;
 			
 			// aapt resource value: 0x7f0200ea
-			public const int underline_background_focus = 2130837738;
+			public const int tall_short_couble = 2130837738;
 			
 			// aapt resource value: 0x7f0200eb
-			public const int underline_background_normal = 2130837739;
+			public const int transparent = 2130837739;
 			
 			// aapt resource value: 0x7f0200ec
-			public const int vocab_trainer_icon = 2130837740;
+			public const int underline_background_focus = 2130837740;
 			
 			// aapt resource value: 0x7f0200ed
-			public const int vpi__tab_indicator = 2130837741;
+			public const int underline_background_normal = 2130837741;
 			
 			// aapt resource value: 0x7f0200ee
-			public const int vpi__tab_selected_focused_holo = 2130837742;
+			public const int v = 2130837742;
 			
 			// aapt resource value: 0x7f0200ef
-			public const int vpi__tab_selected_holo = 2130837743;
+			public const int vocab_trainer_icon = 2130837743;
 			
 			// aapt resource value: 0x7f0200f0
-			public const int vpi__tab_selected_pressed_holo = 2130837744;
+			public const int vpi__tab_indicator = 2130837744;
 			
 			// aapt resource value: 0x7f0200f1
-			public const int vpi__tab_unselected_focused_holo = 2130837745;
+			public const int vpi__tab_selected_focused_holo = 2130837745;
 			
 			// aapt resource value: 0x7f0200f2
-			public const int vpi__tab_unselected_holo = 2130837746;
+			public const int vpi__tab_selected_holo = 2130837746;
 			
 			// aapt resource value: 0x7f0200f3
-			public const int vpi__tab_unselected_pressed_holo = 2130837747;
+			public const int vpi__tab_selected_pressed_holo = 2130837747;
 			
 			// aapt resource value: 0x7f0200f4
-			public const int yellow_star_d = 2130837748;
+			public const int vpi__tab_unselected_focused_holo = 2130837748;
+			
+			// aapt resource value: 0x7f0200f5
+			public const int vpi__tab_unselected_holo = 2130837749;
+			
+			// aapt resource value: 0x7f0200f6
+			public const int vpi__tab_unselected_pressed_holo = 2130837750;
+			
+			// aapt resource value: 0x7f0200f7
+			public const int x = 2130837751;
+			
+			// aapt resource value: 0x7f0200f8
+			public const int yellow_star_d = 2130837752;
 			
 			static Drawable()
 			{
@@ -13349,11 +13405,11 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0051
 			public const int all = 2131558481;
 			
-			// aapt resource value: 0x7f0d013a
-			public const int alterView = 2131558714;
+			// aapt resource value: 0x7f0d013e
+			public const int alterView = 2131558718;
 			
-			// aapt resource value: 0x7f0d013b
-			public const int alterView2 = 2131558715;
+			// aapt resource value: 0x7f0d013f
+			public const int alterView2 = 2131558719;
 			
 			// aapt resource value: 0x7f0d0039
 			public const int always = 2131558457;
@@ -13373,8 +13429,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d00a7
 			public const int bt_complete_sentence_continue = 2131558567;
 			
-			// aapt resource value: 0x7f0d00e1
-			public const int bt_continue = 2131558625;
+			// aapt resource value: 0x7f0d00e4
+			public const int bt_continue = 2131558628;
 			
 			// aapt resource value: 0x7f0d0124
 			public const int bt_delete = 2131558692;
@@ -13385,8 +13441,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d00bf
 			public const int bt_record = 2131558591;
 			
-			// aapt resource value: 0x7f0d00e0
-			public const int bt_right = 2131558624;
+			// aapt resource value: 0x7f0d00e3
+			public const int bt_right = 2131558627;
 			
 			// aapt resource value: 0x7f0d00c2
 			public const int bt_sent = 2131558594;
@@ -13394,14 +13450,14 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d00bd
 			public const int bt_speak = 2131558589;
 			
-			// aapt resource value: 0x7f0d0140
-			public const int bt_vocabulary_continue = 2131558720;
+			// aapt resource value: 0x7f0d014a
+			public const int bt_vocabulary_continue = 2131558730;
 			
 			// aapt resource value: 0x7f0d00ba
 			public const int bt_write = 2131558586;
 			
-			// aapt resource value: 0x7f0d00df
-			public const int bt_wrong = 2131558623;
+			// aapt resource value: 0x7f0d00e2
+			public const int bt_wrong = 2131558626;
 			
 			// aapt resource value: 0x7f0d012c
 			public const int btnButtonUsePhoneEmail = 2131558700;
@@ -13412,20 +13468,20 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d00d2
 			public const int btnContinue = 2131558610;
 			
-			// aapt resource value: 0x7f0d00e9
-			public const int btnDownload = 2131558633;
+			// aapt resource value: 0x7f0d00ec
+			public const int btnDownload = 2131558636;
 			
-			// aapt resource value: 0x7f0d00f0
-			public const int btnFb = 2131558640;
-			
-			// aapt resource value: 0x7f0d00f1
-			public const int btnGoogle = 2131558641;
-			
-			// aapt resource value: 0x7f0d00d5
-			public const int btnHocThem = 2131558613;
+			// aapt resource value: 0x7f0d00f3
+			public const int btnFb = 2131558643;
 			
 			// aapt resource value: 0x7f0d00f4
-			public const int btnLogin = 2131558644;
+			public const int btnGoogle = 2131558644;
+			
+			// aapt resource value: 0x7f0d00d8
+			public const int btnHocThem = 2131558616;
+			
+			// aapt resource value: 0x7f0d00f7
+			public const int btnLogin = 2131558647;
 			
 			// aapt resource value: 0x7f0d00b0
 			public const int btnNext = 2131558576;
@@ -13436,8 +13492,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d012d
 			public const int btnRegister = 2131558701;
 			
-			// aapt resource value: 0x7f0d0138
-			public const int btnTryAgain = 2131558712;
+			// aapt resource value: 0x7f0d013c
+			public const int btnTryAgain = 2131558716;
 			
 			// aapt resource value: 0x7f0d00a2
 			public const int btn_complete_sentence_play = 2131558562;
@@ -13463,8 +13519,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0114
 			public const int chronometer = 2131558676;
 			
-			// aapt resource value: 0x7f0d00e6
-			public const int circle_progress = 2131558630;
+			// aapt resource value: 0x7f0d00e9
+			public const int circle_progress = 2131558633;
 			
 			// aapt resource value: 0x7f0d004d
 			public const int clip_horizontal = 2131558477;
@@ -13550,8 +13606,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d003f
 			public const int enterAlwaysCollapsed = 2131558463;
 			
-			// aapt resource value: 0x7f0d00ec
-			public const int exerciseView = 2131558636;
+			// aapt resource value: 0x7f0d00ef
+			public const int exerciseView = 2131558639;
 			
 			// aapt resource value: 0x7f0d0040
 			public const int exitUntilCollapsed = 2131558464;
@@ -13601,8 +13657,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0020
 			public const int exo_subtitles = 2131558432;
 			
-			// aapt resource value: 0x7f0d00ed
-			public const int expLessons = 2131558637;
+			// aapt resource value: 0x7f0d00f0
+			public const int expLessons = 2131558640;
 			
 			// aapt resource value: 0x7f0d006b
 			public const int expand_activities_button = 2131558507;
@@ -13640,11 +13696,11 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d005d
 			public const int flex_start = 2131558493;
 			
-			// aapt resource value: 0x7f0d00d7
-			public const int frameHeader = 2131558615;
+			// aapt resource value: 0x7f0d00da
+			public const int frameHeader = 2131558618;
 			
-			// aapt resource value: 0x7f0d00e2
-			public const int hiddenCircle = 2131558626;
+			// aapt resource value: 0x7f0d00e5
+			public const int hiddenCircle = 2131558629;
 			
 			// aapt resource value: 0x7f0d0006
 			public const int home = 2131558406;
@@ -13664,26 +13720,29 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d00b2
 			public const int im_description = 2131558578;
 			
-			// aapt resource value: 0x7f0d012f
-			public const int im_main_background = 2131558703;
+			// aapt resource value: 0x7f0d0133
+			public const int im_main_background = 2131558707;
 			
 			// aapt resource value: 0x7f0d0099
 			public const int im_premium_icon = 2131558553;
 			
-			// aapt resource value: 0x7f0d0130
-			public const int im_second_background = 2131558704;
+			// aapt resource value: 0x7f0d0134
+			public const int im_second_background = 2131558708;
 			
-			// aapt resource value: 0x7f0d013d
-			public const int im_vocabulary_description = 2131558717;
+			// aapt resource value: 0x7f0d0147
+			public const int im_vocabulary_description = 2131558727;
 			
 			// aapt resource value: 0x7f0d006c
 			public const int image = 2131558508;
 			
+			// aapt resource value: 0x7f0d012f
+			public const int imgAnswer = 2131558703;
+			
 			// aapt resource value: 0x7f0d00aa
 			public const int imgAvatar = 2131558570;
 			
-			// aapt resource value: 0x7f0d00e4
-			public const int imgExercise = 2131558628;
+			// aapt resource value: 0x7f0d00e7
+			public const int imgExercise = 2131558631;
 			
 			// aapt resource value: 0x7f0d00cf
 			public const int imgFlag = 2131558607;
@@ -13691,26 +13750,29 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d00a8
 			public const int imgImage = 2131558568;
 			
-			// aapt resource value: 0x7f0d00e5
-			public const int imgLock = 2131558629;
+			// aapt resource value: 0x7f0d00e8
+			public const int imgLock = 2131558632;
 			
-			// aapt resource value: 0x7f0d00e3
-			public const int imgMic = 2131558627;
+			// aapt resource value: 0x7f0d00e6
+			public const int imgMic = 2131558630;
 			
-			// aapt resource value: 0x7f0d00d9
-			public const int imgPlayBtn = 2131558617;
+			// aapt resource value: 0x7f0d00dc
+			public const int imgPlayBtn = 2131558620;
+			
+			// aapt resource value: 0x7f0d0130
+			public const int imgResult = 2131558704;
 			
 			// aapt resource value: 0x7f0d0121
 			public const int imgStar = 2131558689;
 			
-			// aapt resource value: 0x7f0d00d3
-			public const int imgViewDownload = 2131558611;
+			// aapt resource value: 0x7f0d00d6
+			public const int imgViewDownload = 2131558614;
 			
 			// aapt resource value: 0x7f0d00a1
 			public const int img_complete_sentence_description = 2131558561;
 			
-			// aapt resource value: 0x7f0d0133
-			public const int indicator = 2131558707;
+			// aapt resource value: 0x7f0d0137
+			public const int indicator = 2131558711;
 			
 			// aapt resource value: 0x7f0d0115
 			public const int info = 2131558677;
@@ -13721,11 +13783,14 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d00c4
 			public const int largeLabel = 2131558596;
 			
-			// aapt resource value: 0x7f0d0108
-			public const int layout = 2131558664;
+			// aapt resource value: 0x7f0d00d5
+			public const int layout = 2131558613;
 			
-			// aapt resource value: 0x7f0d0135
-			public const int layoutMark = 2131558709;
+			// aapt resource value: 0x7f0d0141
+			public const int layoutCenter = 2131558721;
+			
+			// aapt resource value: 0x7f0d0139
+			public const int layoutMark = 2131558713;
 			
 			// aapt resource value: 0x7f0d0127
 			public const int layoutPhone = 2131558695;
@@ -13733,11 +13798,11 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0125
 			public const int layoutSocial = 2131558693;
 			
-			// aapt resource value: 0x7f0d0105
-			public const int layoutStep = 2131558661;
+			// aapt resource value: 0x7f0d0106
+			public const int layoutStep = 2131558662;
 			
-			// aapt resource value: 0x7f0d0139
-			public const int layoutTip = 2131558713;
+			// aapt resource value: 0x7f0d013d
+			public const int layoutTip = 2131558717;
 			
 			// aapt resource value: 0x7f0d00a0
 			public const int layout_complete_sentence_description = 2131558560;
@@ -13784,35 +13849,38 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0120
 			public const int lv_premium_value = 2131558688;
 			
-			// aapt resource value: 0x7f0d0142
-			public const int masked = 2131558722;
+			// aapt resource value: 0x7f0d014c
+			public const int masked = 2131558732;
 			
 			// aapt resource value: 0x7f0d010f
 			public const int media_actions = 2131558671;
 			
-			// aapt resource value: 0x7f0d0101
-			public const int mediacontroller_progress = 2131558657;
-			
 			// aapt resource value: 0x7f0d0104
-			public const int memoriseBody = 2131558660;
+			public const int mediacontroller_progress = 2131558660;
 			
-			// aapt resource value: 0x7f0d00ee
-			public const int menu_bottom = 2131558638;
-			
-			// aapt resource value: 0x7f0d0143
-			public const int menu_learn = 2131558723;
-			
-			// aapt resource value: 0x7f0d0146
-			public const int menu_notification = 2131558726;
-			
-			// aapt resource value: 0x7f0d0147
-			public const int menu_profile = 2131558727;
-			
-			// aapt resource value: 0x7f0d0144
-			public const int menu_review = 2131558724;
+			// aapt resource value: 0x7f0d00d4
+			public const int memoriseBody = 2131558612;
 			
 			// aapt resource value: 0x7f0d0145
-			public const int menu_social = 2131558725;
+			public const int menuTip = 2131558725;
+			
+			// aapt resource value: 0x7f0d00f1
+			public const int menu_bottom = 2131558641;
+			
+			// aapt resource value: 0x7f0d014d
+			public const int menu_learn = 2131558733;
+			
+			// aapt resource value: 0x7f0d0150
+			public const int menu_notification = 2131558736;
+			
+			// aapt resource value: 0x7f0d0151
+			public const int menu_profile = 2131558737;
+			
+			// aapt resource value: 0x7f0d014e
+			public const int menu_review = 2131558734;
+			
+			// aapt resource value: 0x7f0d014f
+			public const int menu_social = 2131558735;
 			
 			// aapt resource value: 0x7f0d0038
 			public const int middle = 2131558456;
@@ -13823,8 +13891,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0030
 			public const int multiply = 2131558448;
 			
-			// aapt resource value: 0x7f0d00ef
-			public const int myViewPager = 2131558639;
+			// aapt resource value: 0x7f0d00f2
+			public const int myViewPager = 2131558642;
 			
 			// aapt resource value: 0x7f0d00c9
 			public const int navigation_header_container = 2131558601;
@@ -13850,8 +13918,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0059
 			public const int nowrap = 2131558489;
 			
-			// aapt resource value: 0x7f0d0132
-			public const int pager = 2131558706;
+			// aapt resource value: 0x7f0d0136
+			public const int pager = 2131558710;
 			
 			// aapt resource value: 0x7f0d004b
 			public const int parallax = 2131558475;
@@ -13862,8 +13930,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d004c
 			public const int pin = 2131558476;
 			
-			// aapt resource value: 0x7f0d0106
-			public const int prgStep = 2131558662;
+			// aapt resource value: 0x7f0d0107
+			public const int prgStep = 2131558663;
 			
 			// aapt resource value: 0x7f0d0123
 			public const int prg_record = 2131558691;
@@ -13877,6 +13945,9 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0083
 			public const int radio = 2131558531;
 			
+			// aapt resource value: 0x7f0d0132
+			public const int recyclerView = 2131558706;
+			
 			// aapt resource value: 0x7f0d0049
 			public const int right = 2131558473;
 			
@@ -13886,8 +13957,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0113
 			public const int right_side = 2131558675;
 			
-			// aapt resource value: 0x7f0d00f6
-			public const int root = 2131558646;
+			// aapt resource value: 0x7f0d00f9
+			public const int root = 2131558649;
 			
 			// aapt resource value: 0x7f0d0057
 			public const int row = 2131558487;
@@ -13994,8 +14065,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d004a
 			public const int start = 2131558474;
 			
-			// aapt resource value: 0x7f0d0131
-			public const int start_logo = 2131558705;
+			// aapt resource value: 0x7f0d0135
+			public const int start_logo = 2131558709;
 			
 			// aapt resource value: 0x7f0d010e
 			public const int status_bar_latest_event_content = 2131558670;
@@ -14018,8 +14089,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0028
 			public const int tabMode = 2131558440;
 			
-			// aapt resource value: 0x7f0d013c
-			public const int test_layout_fragment = 2131558716;
+			// aapt resource value: 0x7f0d0140
+			public const int test_layout_fragment = 2131558720;
 			
 			// aapt resource value: 0x7f0d011d
 			public const int text = 2131558685;
@@ -14045,11 +14116,11 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0066
 			public const int texture_view = 2131558502;
 			
-			// aapt resource value: 0x7f0d0102
-			public const int time = 2131558658;
+			// aapt resource value: 0x7f0d0105
+			public const int time = 2131558661;
 			
-			// aapt resource value: 0x7f0d0100
-			public const int time_current = 2131558656;
+			// aapt resource value: 0x7f0d0103
+			public const int time_current = 2131558659;
 			
 			// aapt resource value: 0x7f0d0070
 			public const int title = 2131558512;
@@ -14060,8 +14131,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d007d
 			public const int title_template = 2131558525;
 			
-			// aapt resource value: 0x7f0d0103
-			public const int toolbar = 2131558659;
+			// aapt resource value: 0x7f0d00d3
+			public const int toolbar = 2131558611;
 			
 			// aapt resource value: 0x7f0d0025
 			public const int top = 2131558437;
@@ -14084,8 +14155,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d0000
 			public const int ttlm_container_id = 2131558400;
 			
-			// aapt resource value: 0x7f0d00de
-			public const int tv_content = 2131558622;
+			// aapt resource value: 0x7f0d00e1
+			public const int tv_content = 2131558625;
 			
 			// aapt resource value: 0x7f0d009b
 			public const int tv_old_value = 2131558555;
@@ -14093,41 +14164,44 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d009a
 			public const int tv_premium_describe = 2131558554;
 			
-			// aapt resource value: 0x7f0d00dd
-			public const int tv_title = 2131558621;
+			// aapt resource value: 0x7f0d00e0
+			public const int tv_title = 2131558624;
 			
-			// aapt resource value: 0x7f0d013e
-			public const int tv_vocabulary_question = 2131558718;
-			
-			// aapt resource value: 0x7f0d00f7
-			public const int txt01 = 2131558647;
+			// aapt resource value: 0x7f0d0148
+			public const int tv_vocabulary_question = 2131558728;
 			
 			// aapt resource value: 0x7f0d00fa
-			public const int txt01Move = 2131558650;
-			
-			// aapt resource value: 0x7f0d00f8
-			public const int txt02 = 2131558648;
-			
-			// aapt resource value: 0x7f0d00fb
-			public const int txt02Move = 2131558651;
-			
-			// aapt resource value: 0x7f0d00f9
-			public const int txt03 = 2131558649;
-			
-			// aapt resource value: 0x7f0d00fc
-			public const int txt03Move = 2131558652;
+			public const int txt01 = 2131558650;
 			
 			// aapt resource value: 0x7f0d00fd
-			public const int txt04 = 2131558653;
+			public const int txt01Move = 2131558653;
+			
+			// aapt resource value: 0x7f0d00fb
+			public const int txt02 = 2131558651;
 			
 			// aapt resource value: 0x7f0d00fe
-			public const int txt05 = 2131558654;
+			public const int txt02Move = 2131558654;
+			
+			// aapt resource value: 0x7f0d00fc
+			public const int txt03 = 2131558652;
 			
 			// aapt resource value: 0x7f0d00ff
-			public const int txt06 = 2131558655;
+			public const int txt03Move = 2131558655;
 			
-			// aapt resource value: 0x7f0d00d6
-			public const int txtClose = 2131558614;
+			// aapt resource value: 0x7f0d0100
+			public const int txt04 = 2131558656;
+			
+			// aapt resource value: 0x7f0d0101
+			public const int txt05 = 2131558657;
+			
+			// aapt resource value: 0x7f0d0102
+			public const int txt06 = 2131558658;
+			
+			// aapt resource value: 0x7f0d0131
+			public const int txtAnswer = 2131558705;
+			
+			// aapt resource value: 0x7f0d00d9
+			public const int txtClose = 2131558617;
 			
 			// aapt resource value: 0x7f0d00d0
 			public const int txtContent = 2131558608;
@@ -14135,17 +14209,20 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d009e
 			public const int txtCountry = 2131558558;
 			
-			// aapt resource value: 0x7f0d00da
-			public const int txtDisplay = 2131558618;
+			// aapt resource value: 0x7f0d0144
+			public const int txtDetail = 2131558724;
 			
-			// aapt resource value: 0x7f0d00f2
-			public const int txtEmail = 2131558642;
+			// aapt resource value: 0x7f0d00dd
+			public const int txtDisplay = 2131558621;
 			
 			// aapt resource value: 0x7f0d00f5
-			public const int txtForgotPass = 2131558645;
+			public const int txtEmail = 2131558645;
 			
-			// aapt resource value: 0x7f0d00d4
-			public const int txtGuide = 2131558612;
+			// aapt resource value: 0x7f0d00f8
+			public const int txtForgotPass = 2131558648;
+			
+			// aapt resource value: 0x7f0d00d7
+			public const int txtGuide = 2131558615;
 			
 			// aapt resource value: 0x7f0d009d
 			public const int txtHeader = 2131558557;
@@ -14153,20 +14230,20 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d00ac
 			public const int txtInput = 2131558572;
 			
-			// aapt resource value: 0x7f0d00e8
-			public const int txtLessonName = 2131558632;
+			// aapt resource value: 0x7f0d00eb
+			public const int txtLessonName = 2131558635;
 			
-			// aapt resource value: 0x7f0d00e7
-			public const int txtLessonNumber = 2131558631;
+			// aapt resource value: 0x7f0d00ea
+			public const int txtLessonNumber = 2131558634;
 			
-			// aapt resource value: 0x7f0d0136
-			public const int txtMark = 2131558710;
+			// aapt resource value: 0x7f0d013a
+			public const int txtMark = 2131558714;
 			
 			// aapt resource value: 0x7f0d00ab
 			public const int txtName = 2131558571;
 			
-			// aapt resource value: 0x7f0d00f3
-			public const int txtPassword = 2131558643;
+			// aapt resource value: 0x7f0d00f6
+			public const int txtPassword = 2131558646;
 			
 			// aapt resource value: 0x7f0d009f
 			public const int txtPhoneCode = 2131558559;
@@ -14174,26 +14251,32 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d012e
 			public const int txtPolicy = 2131558702;
 			
-			// aapt resource value: 0x7f0d00d8
-			public const int txtQuestion = 2131558616;
-			
 			// aapt resource value: 0x7f0d00db
-			public const int txtResult = 2131558619;
+			public const int txtQuestion = 2131558619;
 			
-			// aapt resource value: 0x7f0d0134
-			public const int txtStatus = 2131558708;
+			// aapt resource value: 0x7f0d00de
+			public const int txtResult = 2131558622;
 			
-			// aapt resource value: 0x7f0d0107
-			public const int txtStep = 2131558663;
+			// aapt resource value: 0x7f0d0138
+			public const int txtStatus = 2131558712;
 			
-			// aapt resource value: 0x7f0d00eb
-			public const int txtTime = 2131558635;
+			// aapt resource value: 0x7f0d0108
+			public const int txtStep = 2131558664;
 			
-			// aapt resource value: 0x7f0d00ea
-			public const int txtTopic = 2131558634;
+			// aapt resource value: 0x7f0d00ee
+			public const int txtTime = 2131558638;
 			
-			// aapt resource value: 0x7f0d0137
-			public const int txtTotal = 2131558711;
+			// aapt resource value: 0x7f0d0143
+			public const int txtTip = 2131558723;
+			
+			// aapt resource value: 0x7f0d0142
+			public const int txtTitle = 2131558722;
+			
+			// aapt resource value: 0x7f0d00ed
+			public const int txtTopic = 2131558637;
+			
+			// aapt resource value: 0x7f0d013b
+			public const int txtTotal = 2131558715;
 			
 			// aapt resource value: 0x7f0d00a4
 			public const int txt_compelte_sentence_question = 2131558564;
@@ -14228,20 +14311,23 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d002e
 			public const int useLogo = 2131558446;
 			
+			// aapt resource value: 0x7f0d0146
+			public const int viewPager = 2131558726;
+			
 			// aapt resource value: 0x7f0d000f
 			public const int view_offset_helper = 2131558415;
 			
 			// aapt resource value: 0x7f0d00bb
 			public const int view_space = 2131558587;
 			
-			// aapt resource value: 0x7f0d0141
-			public const int visible = 2131558721;
+			// aapt resource value: 0x7f0d014b
+			public const int visible = 2131558731;
 			
-			// aapt resource value: 0x7f0d013f
-			public const int vocabulary_question_layout = 2131558719;
+			// aapt resource value: 0x7f0d0149
+			public const int vocabulary_question_layout = 2131558729;
 			
-			// aapt resource value: 0x7f0d00dc
-			public const int walkthrough_slide_content = 2131558620;
+			// aapt resource value: 0x7f0d00df
+			public const int walkthrough_slide_content = 2131558623;
 			
 			// aapt resource value: 0x7f0d003d
 			public const int withText = 2131558461;
@@ -14489,166 +14575,187 @@ namespace Naxam.Busuu.Droid
 			public const int dialog_confirm_choose_language = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int DownloadDialogActivity = 2130903095;
+			public const int dialogue_activity = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int exo_playback_control_view = 2130903096;
+			public const int DownloadDialogActivity = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int exo_simple_player_view = 2130903097;
+			public const int exo_playback_control_view = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int fill_sentence_layout = 2130903098;
+			public const int exo_simple_player_view = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int fill_sentence_layout_non_image = 2130903099;
+			public const int fill_sentence_layout = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int FillSentenceAudio = 2130903100;
+			public const int fill_sentence_layout_non_image = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int ForgotPasswordActivity = 2130903101;
+			public const int FillSentenceAudio = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int fragment_screen_slide_page = 2130903102;
+			public const int ForgotPasswordActivity = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public const int hear_true_false_question = 2130903103;
+			public const int fragment_screen_slide_page = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public const int HearAndRepeat = 2130903104;
+			public const int hear_true_false_question = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int jw_player_fragment_sample_layout = 2130903105;
+			public const int HearAndRepeat = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int layout_exercise_item = 2130903106;
+			public const int jw_player_fragment_sample_layout = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int layout_lesson_header = 2130903107;
+			public const int layout_exercise_item = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public const int layout_topic_item = 2130903108;
+			public const int layout_lesson_header = 2130903108;
 			
 			// aapt resource value: 0x7f030045
-			public const int LearnActivity = 2130903109;
+			public const int layout_topic_item = 2130903109;
 			
 			// aapt resource value: 0x7f030046
-			public const int ListPractice = 2130903110;
+			public const int LearnActivity = 2130903110;
 			
 			// aapt resource value: 0x7f030047
-			public const int LoginPage = 2130903111;
+			public const int ListPractice = 2130903111;
 			
 			// aapt resource value: 0x7f030048
-			public const int Main = 2130903112;
+			public const int LoginPage = 2130903112;
 			
 			// aapt resource value: 0x7f030049
-			public const int MainActivity = 2130903113;
+			public const int Main = 2130903113;
 			
 			// aapt resource value: 0x7f03004a
-			public const int matching_sentence_layout = 2130903114;
+			public const int MainActivity = 2130903114;
 			
 			// aapt resource value: 0x7f03004b
-			public const int media_controller = 2130903115;
+			public const int matching_sentence_layout = 2130903115;
 			
 			// aapt resource value: 0x7f03004c
-			public const int memorise_activity = 2130903116;
+			public const int media_controller = 2130903116;
 			
 			// aapt resource value: 0x7f03004d
-			public const int memorise_layout = 2130903117;
+			public const int memorise_activity = 2130903117;
 			
 			// aapt resource value: 0x7f03004e
-			public const int notification_action = 2130903118;
+			public const int memorise_layout = 2130903118;
 			
 			// aapt resource value: 0x7f03004f
-			public const int notification_action_tombstone = 2130903119;
+			public const int notification_action = 2130903119;
 			
 			// aapt resource value: 0x7f030050
-			public const int notification_media_action = 2130903120;
+			public const int notification_action_tombstone = 2130903120;
 			
 			// aapt resource value: 0x7f030051
-			public const int notification_media_cancel_action = 2130903121;
+			public const int notification_media_action = 2130903121;
 			
 			// aapt resource value: 0x7f030052
-			public const int notification_template_big_media = 2130903122;
+			public const int notification_media_cancel_action = 2130903122;
 			
 			// aapt resource value: 0x7f030053
-			public const int notification_template_big_media_custom = 2130903123;
+			public const int notification_template_big_media = 2130903123;
 			
 			// aapt resource value: 0x7f030054
-			public const int notification_template_big_media_narrow = 2130903124;
+			public const int notification_template_big_media_custom = 2130903124;
 			
 			// aapt resource value: 0x7f030055
-			public const int notification_template_big_media_narrow_custom = 2130903125;
+			public const int notification_template_big_media_narrow = 2130903125;
 			
 			// aapt resource value: 0x7f030056
-			public const int notification_template_custom_big = 2130903126;
+			public const int notification_template_big_media_narrow_custom = 2130903126;
 			
 			// aapt resource value: 0x7f030057
-			public const int notification_template_icon_group = 2130903127;
+			public const int notification_template_custom_big = 2130903127;
 			
 			// aapt resource value: 0x7f030058
-			public const int notification_template_lines_media = 2130903128;
+			public const int notification_template_icon_group = 2130903128;
 			
 			// aapt resource value: 0x7f030059
-			public const int notification_template_media = 2130903129;
+			public const int notification_template_lines_media = 2130903129;
 			
 			// aapt resource value: 0x7f03005a
-			public const int notification_template_media_custom = 2130903130;
+			public const int notification_template_media = 2130903130;
 			
 			// aapt resource value: 0x7f03005b
-			public const int notification_template_part_chronometer = 2130903131;
+			public const int notification_template_media_custom = 2130903131;
 			
 			// aapt resource value: 0x7f03005c
-			public const int notification_template_part_time = 2130903132;
+			public const int notification_template_part_chronometer = 2130903132;
 			
 			// aapt resource value: 0x7f03005d
-			public const int premium_page = 2130903133;
+			public const int notification_template_part_time = 2130903133;
 			
 			// aapt resource value: 0x7f03005e
-			public const int PreparePronounce = 2130903134;
+			public const int premium_page = 2130903134;
 			
 			// aapt resource value: 0x7f03005f
-			public const int recorder_button = 2130903135;
+			public const int PreparePronounce = 2130903135;
 			
 			// aapt resource value: 0x7f030060
-			public const int RegisterActivity = 2130903136;
+			public const int recorder_button = 2130903136;
 			
 			// aapt resource value: 0x7f030061
-			public const int select_dialog_item_material = 2130903137;
+			public const int RegisterActivity = 2130903137;
 			
 			// aapt resource value: 0x7f030062
-			public const int select_dialog_multichoice_material = 2130903138;
+			public const int select_dialog_item_material = 2130903138;
 			
 			// aapt resource value: 0x7f030063
-			public const int select_dialog_singlechoice_material = 2130903139;
+			public const int select_dialog_multichoice_material = 2130903139;
 			
 			// aapt resource value: 0x7f030064
-			public const int select_words_layout = 2130903140;
+			public const int select_dialog_singlechoice_material = 2130903140;
 			
 			// aapt resource value: 0x7f030065
-			public const int select_words_layout_non_image = 2130903141;
+			public const int select_word_with_image_item = 2130903141;
 			
 			// aapt resource value: 0x7f030066
-			public const int StartPage = 2130903142;
+			public const int select_word_with_image_layout = 2130903142;
 			
 			// aapt resource value: 0x7f030067
-			public const int summary_layout = 2130903143;
+			public const int select_words_layout = 2130903143;
 			
 			// aapt resource value: 0x7f030068
-			public const int support_simple_spinner_dropdown_item = 2130903144;
+			public const int select_words_layout_non_image = 2130903144;
 			
 			// aapt resource value: 0x7f030069
-			public const int test_fill_list_sentence_layout = 2130903145;
+			public const int StartPage = 2130903145;
 			
 			// aapt resource value: 0x7f03006a
-			public const int test_layout = 2130903146;
+			public const int summary_layout = 2130903146;
 			
 			// aapt resource value: 0x7f03006b
-			public const int tooltip_textview = 2130903147;
+			public const int support_simple_spinner_dropdown_item = 2130903147;
 			
 			// aapt resource value: 0x7f03006c
-			public const int vocabulary_question = 2130903148;
+			public const int test_fill_list_sentence_layout = 2130903148;
+			
+			// aapt resource value: 0x7f03006d
+			public const int test_layout = 2130903149;
+			
+			// aapt resource value: 0x7f03006e
+			public const int tip_dialog_layout = 2130903150;
+			
+			// aapt resource value: 0x7f03006f
+			public const int tip_layout = 2130903151;
+			
+			// aapt resource value: 0x7f030070
+			public const int tooltip_textview = 2130903152;
+			
+			// aapt resource value: 0x7f030071
+			public const int vocabulary_activity = 2130903153;
+			
+			// aapt resource value: 0x7f030072
+			public const int vocabulary_question = 2130903154;
+			
+			// aapt resource value: 0x7f030073
+			public const int vocabulary_viewpager_layout = 2130903155;
 			
 			static Layout()
 			{
@@ -15020,14 +15127,17 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0c0182
 			public const int AppTheme = 2131493250;
 			
-			// aapt resource value: 0x7f0c0194
-			public const int AppTheme_AppBarOverlay = 2131493268;
+			// aapt resource value: 0x7f0c0195
+			public const int AppTheme_AppBarOverlay = 2131493269;
 			
-			// aapt resource value: 0x7f0c018e
-			public const int AppTheme_NoActionBar = 2131493262;
+			// aapt resource value: 0x7f0c018f
+			public const int AppTheme_NoActionBar = 2131493263;
 			
 			// aapt resource value: 0x7f0c0181
 			public const int AppTheme_Premium = 2131493249;
+			
+			// aapt resource value: 0x7f0c018e
+			public const int AppTheme_Transparent = 2131493262;
 			
 			// aapt resource value: 0x7f0c00aa
 			public const int Base_AlertDialog_AppCompat = 2131493034;
@@ -15491,29 +15601,29 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0c016a
 			public const int Base_Widget_Design_TabLayout = 2131493226;
 			
-			// aapt resource value: 0x7f0c0195
-			public const int ExoMediaButton = 2131493269;
-			
 			// aapt resource value: 0x7f0c0196
-			public const int ExoMediaButton_FastForward = 2131493270;
+			public const int ExoMediaButton = 2131493270;
 			
 			// aapt resource value: 0x7f0c0197
-			public const int ExoMediaButton_Next = 2131493271;
+			public const int ExoMediaButton_FastForward = 2131493271;
 			
 			// aapt resource value: 0x7f0c0198
-			public const int ExoMediaButton_Pause = 2131493272;
+			public const int ExoMediaButton_Next = 2131493272;
 			
 			// aapt resource value: 0x7f0c0199
-			public const int ExoMediaButton_Play = 2131493273;
+			public const int ExoMediaButton_Pause = 2131493273;
 			
 			// aapt resource value: 0x7f0c019a
-			public const int ExoMediaButton_Previous = 2131493274;
+			public const int ExoMediaButton_Play = 2131493274;
 			
 			// aapt resource value: 0x7f0c019b
-			public const int ExoMediaButton_Rewind = 2131493275;
+			public const int ExoMediaButton_Previous = 2131493275;
 			
-			// aapt resource value: 0x7f0c0193
-			public const int LinearProgress = 2131493267;
+			// aapt resource value: 0x7f0c019c
+			public const int ExoMediaButton_Rewind = 2131493276;
+			
+			// aapt resource value: 0x7f0c0194
+			public const int LinearProgress = 2131493268;
 			
 			// aapt resource value: 0x7f0c0183
 			public const int NoActionBarTheme = 2131493251;
@@ -15620,17 +15730,17 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0c0189
 			public const int StyleEnableButton = 2131493257;
 			
-			// aapt resource value: 0x7f0c018f
-			public const int StyleNextButton = 2131493263;
+			// aapt resource value: 0x7f0c0190
+			public const int StyleNextButton = 2131493264;
+			
+			// aapt resource value: 0x7f0c0193
+			public const int StyleTextAnswer = 2131493267;
 			
 			// aapt resource value: 0x7f0c0192
-			public const int StyleTextAnswer = 2131493266;
+			public const int StyleTextInput = 2131493266;
 			
 			// aapt resource value: 0x7f0c0191
-			public const int StyleTextInput = 2131493265;
-			
-			// aapt resource value: 0x7f0c0190
-			public const int StyleTextQuestion = 2131493264;
+			public const int StyleTextQuestion = 2131493265;
 			
 			// aapt resource value: 0x7f0c0187
 			public const int StyleTextSubTitle = 2131493255;

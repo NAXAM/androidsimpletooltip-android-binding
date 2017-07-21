@@ -15,7 +15,8 @@ namespace Naxam.Busuu.Learning.Model
             SelectWord,
             FillSentence,
             ChooseWord,
-            MatchingSentence
+            MatchingSentence,
+            SelectWordImage
         }
 
         private UnitType _Type;
@@ -33,6 +34,20 @@ namespace Naxam.Busuu.Learning.Model
             }
         }
 
+        private TipModel _tip;
+
+        public TipModel Tip
+        {
+            get { return _tip; }
+            set
+            {
+                if (_tip != value)
+                {
+                    _tip = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
 
 
         private string _title;
