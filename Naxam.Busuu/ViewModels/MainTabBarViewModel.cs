@@ -1,11 +1,12 @@
-﻿using System;
+using System;
 using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Notification.ViewModels;
 using Naxam.Busuu.Profile.ViewModel;
+using Naxam.Busuu.Review.ViewModels;
 using Naxam.Busuu.Social.ViewModels;
 
 
-namespace Naxam.Busuu.Core.ViewModels
+namespace Naxam.Busuu.ViewModels
 {
     public class MainTabBarViewModel : MvxViewModel
     {
@@ -20,7 +21,7 @@ namespace Naxam.Busuu.Core.ViewModels
 
 		void ShowInitialViewModels()
 		{
-            ShowViewModel<Review.ViewModels.ReviewAllViewModel>();
+            ShowViewModel<ReviewAllViewModel>();
 			ShowViewModel<SocialViewModel>();
             ShowViewModel<NotificationViewModel>();
             ShowViewModel<RegisterViewModel>();

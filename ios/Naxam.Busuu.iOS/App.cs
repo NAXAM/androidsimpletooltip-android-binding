@@ -1,6 +1,6 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
-using Naxam.Busuu.Core.ViewModels;
+using Naxam.Busuu.ViewModels;
 using Naxam.Busuu.Notification.Services;
 using Naxam.Busuu.Social.Services;
 using Naxam.Busuu.Review.Services;
