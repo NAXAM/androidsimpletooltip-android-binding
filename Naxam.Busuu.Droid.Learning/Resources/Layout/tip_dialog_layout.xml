@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="24dp"
-    android:layout_marginRight="24dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
     android:layout_marginBottom="24dp"
     android:layout_marginTop="24dp"
     >
@@ -19,7 +19,7 @@
     <LinearLayout
         android:id="@+id/layoutCenter"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:background="#ffffff"
         android:elevation="2dp"
@@ -60,8 +60,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:layout_weight="1"
+            android:gravity="center" 
             android:text="Hi is a slightly more casual way of saying hello. However, we use both words and we can say both at any time of day."
             android:textColor="#7A8389" />
 

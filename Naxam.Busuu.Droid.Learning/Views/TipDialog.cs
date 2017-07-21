@@ -30,13 +30,14 @@ namespace Naxam.Busuu.Droid.Learning.Views
         }
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            Window.RequestFeature(WindowFeatures.NoTitle); 
+            Window.RequestFeature(WindowFeatures.NoTitle);
+            Window.SetFlags(WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
             base.OnCreate(savedInstanceState);
-            
-            //RequestWindowFeature(1);
+           
             SetContentView(Resource.Layout.tip_dialog_layout);
             Window.SetBackgroundDrawable(new ColorDrawable(Color.Transparent));
-            Window.SetLayout(ActionBar.LayoutParams.MatchParent, ActionBar.LayoutParams.MatchParent);
+            Window.SetLayout(ActionBar.LayoutParams.MatchParent, ActionBar.LayoutParams.WrapContent);
+            Window.SetGravity(GravityFlags.Center);
             txtTip = FindViewById<TextView>(Resource.Id.txtTip);
             txtDetail = FindViewById<TextView>(Resource.Id.txtDetail);
             btnNext = FindViewById<Button>(Resource.Id.btnNext);
