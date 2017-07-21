@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using CoreGraphics;
 using MvvmCross.iOS.Views;
 using Naxam.Busuu.Review.ViewModels;
@@ -72,16 +72,16 @@ namespace Naxam.Busuu.iOS.Review.Views
 
             ReviewTableView.WeakDataSource = this;
 
-			var v = BuyPremiumCell.Create();
-            v.Frame = new CGRect(uiViewSlide.Frame.GetMinX(), uiViewSlide.Frame.GetMaxY(), View.Bounds.Size.Width, 50);
-            //v.AddGestureRecognizer(new UITapGestureRecognizer(() => ShowViewModel(PremiumViewModel););
-            View.AddSubview(v);
+            var buyPremiumCell = BuyPremiumCell.Create();
+            buyPremiumCell.Frame = new CGRect(uiViewSlide.Frame.GetMinX(), uiViewSlide.Frame.GetMaxY(), View.Bounds.Size.Width, 50);
+            buyPremiumCell.Layer.MasksToBounds = true;
+            View.AddSubview(buyPremiumCell);
 
-			var setBinding = this.CreateBindingSet<ReviewAllView, ReviewViewModel>();
-			setBinding.Bind(v.BtnGo).To(vm=>vm.GoPremiumCommand);
+            var setBinding = this.CreateBindingSet<ReviewAllView, ReviewViewModel>();
+            setBinding.Bind(buyPremiumCell.BtnGo).To(vm => vm.GoPremiumCommand);
             setBinding.Apply();
 
-			SearchTextField = new UITextField(new CGRect(0, 0, 300, 30));
+            SearchTextField = new UITextField(new CGRect(0, 0, 300, 30));
             SearchTextField.BackgroundColor = UIColor.Clear;
             SearchTextField.TextAlignment = UITextAlignment.Left;
             SearchTextField.TextColor = UIColor.White;
@@ -100,8 +100,6 @@ namespace Naxam.Busuu.iOS.Review.Views
             TitleBarButtonItem = new UIBarButtonItem(TitleLabel);
             NavigationItem.LeftBarButtonItem = TitleBarButtonItem;
             NavigationItem.RightBarButtonItem = SearchBarButtonItem;
-
-            View.AddRippleLayer();
         }
 
         void UpdateKeyFromList(List<ReviewModel> list)
@@ -267,8 +265,8 @@ namespace Naxam.Busuu.iOS.Review.Views
         {
             var cell = (ReviewTableViewCell)tableView.DequeueReusableCell("reviewCell", indexPath);
             cell.Layer.MasksToBounds = true;
-			cell.Item = grouping[indexPath.Section].ElementAt(indexPath.Row);
-			cell.SetupCell();
+            cell.Item = grouping[indexPath.Section].ElementAt(indexPath.Row);
+            cell.SetupCell();
             return cell;
         }
 

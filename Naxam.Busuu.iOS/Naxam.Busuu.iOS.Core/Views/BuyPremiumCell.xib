@@ -16,18 +16,22 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwv-AI-dFe">
-                    <rect key="frame" x="279" y="319" width="80" height="30"/>
+                    <rect key="frame" x="279" y="318.5" width="80" height="30"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="KUh-lx-F0K"/>
-                        <constraint firstAttribute="width" constant="80" id="y4u-IO-tfm"/>
+                        <constraint firstAttribute="width" constant="80" id="4wd-5a-Qgu"/>
+                        <constraint firstAttribute="height" constant="30" id="yc7-j5-JMu"/>
                     </constraints>
                     <state key="normal" title="GO">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50% off Premium!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08A-Dc-Tci">
-                    <rect key="frame" x="16" y="325" width="115" height="17"/>
+                    <rect key="frame" x="16" y="324.5" width="150" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="6DS-pq-XAJ"/>
+                        <constraint firstAttribute="height" constant="18" id="RMV-Wo-ZiN"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -35,13 +39,13 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="08A-Dc-Tci" firstAttribute="centerY" secondItem="zTq-bL-kAi" secondAttribute="centerY" id="33e-Im-Cda"/>
-                <constraint firstItem="fwv-AI-dFe" firstAttribute="centerY" secondItem="zTq-bL-kAi" secondAttribute="centerY" id="68w-TM-ykT"/>
-                <constraint firstItem="08A-Dc-Tci" firstAttribute="leading" secondItem="zTq-bL-kAi" secondAttribute="leading" constant="16" id="Q0m-Sh-wjz"/>
-                <constraint firstAttribute="trailing" secondItem="fwv-AI-dFe" secondAttribute="trailing" constant="16" id="uNG-65-dFh"/>
+                <constraint firstAttribute="trailing" secondItem="fwv-AI-dFe" secondAttribute="trailing" constant="16" id="32U-nh-zoX"/>
+                <constraint firstItem="08A-Dc-Tci" firstAttribute="leading" secondItem="zTq-bL-kAi" secondAttribute="leading" constant="16" id="rX9-mr-pZn"/>
+                <constraint firstItem="fwv-AI-dFe" firstAttribute="centerY" secondItem="08A-Dc-Tci" secondAttribute="centerY" id="y6t-g8-aRG"/>
+                <constraint firstItem="08A-Dc-Tci" firstAttribute="centerY" secondItem="zTq-bL-kAi" secondAttribute="centerY" id="yTY-3q-mhQ"/>
             </constraints>
             <connections>
-                <outlet property="btnGo" destination="fwv-AI-dFe" id="DPj-Se-Tz8"/>
+                <outlet property="btnGo" destination="fwv-AI-dFe" id="5ak-bC-Ty0"/>
                 <outlet property="lbPR" destination="08A-Dc-Tci" id="XbB-V4-1rX"/>
             </connections>
         </view>

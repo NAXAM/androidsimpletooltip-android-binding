@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Naxam.Busuu.Core.Models;
-using Naxam.Busuu.Core.ViewModel;
 
 namespace Naxam.Busuu.Core.ViewModels
 {

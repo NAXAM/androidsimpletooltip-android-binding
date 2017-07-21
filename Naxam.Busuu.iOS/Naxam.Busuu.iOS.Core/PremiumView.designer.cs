@@ -13,11 +13,19 @@ namespace Naxam.Busuu.iOS.Core
 	partial class PremiumView
 	{
 		[Outlet]
+		UIKit.UIButton btnSeePlan { get; set; }
+
+		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UIKit.UITableView FeatureTableView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnSeePlan != null) {
+				btnSeePlan.Dispose ();
+				btnSeePlan = null;
+			}
+
 			if (FeatureTableView != null) {
 				FeatureTableView.Dispose ();
 				FeatureTableView = null;

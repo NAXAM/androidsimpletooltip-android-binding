@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
-using Naxam.Busuu.Core.ViewModel;
 using Naxam.Busuu.Core.ViewModels;
 using Naxam.Busuu.Review.Models;
 using Naxam.Busuu.Review.Services;

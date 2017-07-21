@@ -81,7 +81,7 @@
     <Compile Include="Views\BuyPremiumCell.designer.cs">
       <DependentUpon>BuyPremiumCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\SpreadOutAnimationView.cs" />
+    <Compile Include="Views\RippleLayer.cs" />
     <Compile Include="Views\UIViewExtensions.cs" />
     <Compile Include="FloatyButton\ActionButton.cs" />
     <Compile Include="FloatyButton\ActionButtonItem.cs" />
@@ -92,6 +92,10 @@
     <Compile Include="FeatureCell.cs" />
     <Compile Include="FeatureCell.designer.cs">
       <DependentUpon>FeatureCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuyPremium.cs" />
+    <Compile Include="BuyPremium.designer.cs">
+      <DependentUpon>BuyPremium.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

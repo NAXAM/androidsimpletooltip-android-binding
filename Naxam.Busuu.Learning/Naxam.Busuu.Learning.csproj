@@ -45,7 +45,6 @@
     <Compile Include="Model\TrueFalseHearQuestionModel.cs" />
     <Compile Include="Model\VocabularyQuestionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\BuyPremiumViewModel.cs" />
     <Compile Include="ViewModel\ChangeLanguageViewModel.cs" />
     <Compile Include="ViewModel\LearnViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
