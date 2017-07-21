@@ -24,7 +24,7 @@ namespace Naxam.Busuu.ViewModels
             ShowViewModel<ReviewAllViewModel>();
 			ShowViewModel<SocialViewModel>();
             ShowViewModel<NotificationViewModel>();
-            ShowViewModel<RegisterViewModel>();
+            ShowViewModel<ProfileViewModel>();
 		}
     }
 }

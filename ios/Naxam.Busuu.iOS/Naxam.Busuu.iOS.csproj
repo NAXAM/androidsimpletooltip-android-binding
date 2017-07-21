@@ -348,6 +348,15 @@
   <BundleResource Include="Resources\Stars\grey_star.png" />
   <BundleResource Include="Resources\Stars\grey_star2.png" />
   <BundleResource Include="Resources\Stars\yellow_star_d.png" />
+  <BundleResource Include="Resources\imgStartPage.jpg" />
+  <BundleResource Include="Resources\logoBusuuText.png" />
+  <BundleResource Include="Resources\flag_small_french.png" />
+  <BundleResource Include="Resources\flag_small_indonesia.png" />
+  <BundleResource Include="Resources\flag_small_italian.png" />
+  <BundleResource Include="Resources\flag_small_japanese.png" />
+  <BundleResource Include="Resources\flag_small_polish.png" />
+  <BundleResource Include="Resources\flag_small_russian.png" />
+  <BundleResource Include="Resources\flag_small_turkish.png" />
 </ItemGroup>
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

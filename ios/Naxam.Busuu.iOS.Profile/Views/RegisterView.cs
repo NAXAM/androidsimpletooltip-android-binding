@@ -11,7 +11,6 @@ using UIKit;
 namespace Naxam.Busuu.iOS.Profile.Views
 {
 	[MvxFromStoryboard(StoryboardName = "Profile")]
-    [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "profile_tab_icon", TabName = "Me", TabSelectedIconName = "profile_tab_icon_selected")]
 	public partial class RegisterView : MvxViewController<RegisterViewModel>
 	{
 		public RegisterView (IntPtr handle) : base (handle)

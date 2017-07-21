@@ -69,6 +69,8 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
+    <Folder Include="Cells\" />
+    <Folder Include="Common\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +78,27 @@
     <Compile Include="Views\RegisterView.designer.cs">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProfileView.cs" />
+    <Compile Include="Views\ProfileView.designer.cs">
+      <DependentUpon>ProfileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartPageView.cs" />
+    <Compile Include="Views\StartPageView.designer.cs">
+      <DependentUpon>StartPageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChooseLanguageView.cs" />
+    <Compile Include="Views\ChooseLanguageView.designer.cs">
+      <DependentUpon>ChooseLanguageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.cs" />
+    <Compile Include="Views\LoginView.designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\LanguageTableViewCell.cs" />
+    <Compile Include="Cells\LanguageTableViewCell.designer.cs">
+      <DependentUpon>LanguageTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\LanguageTableViewSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Profile.storyboard" />

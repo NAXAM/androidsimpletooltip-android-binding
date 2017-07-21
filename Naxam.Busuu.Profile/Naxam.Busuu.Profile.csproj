@@ -43,6 +43,7 @@
     <Compile Include="ViewModel\ForgotPasswordViewModel.cs" />
     <Compile Include="ViewModel\RegisterViewModel.cs" />
     <Compile Include="ViewModel\StartPageViewModel.cs" />
+    <Compile Include="ViewModel\ProfileViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
@@ -60,6 +61,10 @@
     <ProjectReference Include="..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
       <Project>{e1334ff3-bc22-4f7c-b363-a01de69429f8}</Project>
       <Name>Naxam.Busuu.Learning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+      <Name>Naxam.Busuu.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

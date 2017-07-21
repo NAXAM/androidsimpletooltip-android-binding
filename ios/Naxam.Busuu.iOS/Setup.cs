@@ -39,7 +39,7 @@ namespace Naxam.Busuu.iOS
             {
                 typeof(SocialView).Assembly,
                 typeof(NotificationView).Assembly,
-                typeof(RegisterView).Assembly,
+                typeof(ProfileView).Assembly,
                 typeof(ReviewAllView).Assembly
 			};
 
@@ -55,7 +55,7 @@ namespace Naxam.Busuu.iOS
 				typeof(ReviewAllViewModel).Assembly,
                 typeof(SocialViewModel).Assembly,
                 typeof(NotificationViewModel).Assembly,
-                typeof(RegisterViewModel).Assembly
+                typeof(ProfileViewModel).Assembly
 			};
 
 			assemblies.AddRange(base.GetViewModelAssemblies());
