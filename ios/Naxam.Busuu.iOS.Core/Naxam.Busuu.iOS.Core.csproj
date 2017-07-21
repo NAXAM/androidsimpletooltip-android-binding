@@ -76,7 +76,10 @@
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
     <Folder Include="Assets.xcassets\" />
+    <Folder Include="CustomBindings\" />
+    <Folder Include="Converter\" />
     <Folder Include="CustomControls\" />
+    <Folder Include="Common\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,7 +89,18 @@
     </Compile>
     <Compile Include="Views\SpreadOutAnimationView.cs" />
     <Compile Include="Views\UIViewExtensions.cs" />
+    <Compile Include="CustomBindings\AttributedTextTargetBinding.cs" />
+    <Compile Include="Converter\ImageUriConverter.cs" />
+    <Compile Include="Converter\NotificationTextConverter.cs" />
+    <Compile Include="Converter\NotificationDatetimeConverter.cs" />
+    <Compile Include="Converter\NotificationColorConverter.cs" />
+    <Compile Include="Converter\BoolInverseConverter.cs" />
+    <Compile Include="Converter\StarTextConverter.cs" />
+    <Compile Include="Converter\HowDidTextConverter.cs" />
+    <Compile Include="Converter\FriendsImgSpeakConverter.cs" />
+    <Compile Include="Converter\DatetimeTextConverter.cs" />
     <Compile Include="CustomControls\MaterialTabBar.cs" />
+    <Compile Include="Common\LinkerPleaseInclude.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">

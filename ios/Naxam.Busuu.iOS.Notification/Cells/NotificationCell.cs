@@ -4,9 +4,7 @@ using System;
 
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
-using Naxam.Busuu.iOS.Notification.Common;
 using Naxam.Busuu.Notification.Models;
-using UIKit;
 
 namespace Naxam.Busuu.iOS.Notification.Cells
 {
@@ -16,23 +14,22 @@ namespace Naxam.Busuu.iOS.Notification.Cells
 
 		public NotificationCell (IntPtr handle) : base(handle)
 		{
-            _loaderImageUser = new MvxImageViewLoader(() => this.imgUser);
-
-			this.DelayBind(() =>
-			{
-                var setBinding = this.CreateBindingSet<NotificationCell, NotificationModel>();
-                setBinding.Bind(_loaderImageUser).To(n => n.ImgUser).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
-                setBinding.Bind(lblDetail).For(n => n.AttributedText).To(n => n.Details).WithConversion(new MyMvxConverter.DetailValueConverter(), null);
-                setBinding.Bind(lblTime).To(n => n.Time).WithConversion(new MyMvxConverter.DatetimeStringValueConverter(), null);
-                setBinding.Bind(ContentView).For(n => n.BackgroundColor).To(n => n.Check).WithConversion(new MyMvxConverter.ColorValueConverter(), null);
-                setBinding.Apply();
-			});
-                      
+            _loaderImageUser = new MvxImageViewLoader(() => this.imgUser);                      
 		}
 
         public override void AwakeFromNib()
         {
-            base.AwakeFromNib();
+			base.AwakeFromNib();
+
+			this.DelayBind(() =>
+			{
+				var setBinding = this.CreateBindingSet<NotificationCell, NotificationModel>();
+                setBinding.Bind(_loaderImageUser).To(n => n.ImgUser).WithConversion("ImageUriValueConverter");
+				setBinding.Bind(lblDetail).For("FormattedText").To(n => n.Details).WithConversion("NotificationTextConverter");
+				setBinding.Bind(lblTime).To(n => n.Time).WithConversion("NotificationDatetimeConverter");
+				setBinding.Bind(ContentView).For(n => n.BackgroundColor).To(n => n.Check).WithConversion("NotificationColorConverter");
+				setBinding.Apply();
+			});
 
             imgUser.Layer.CornerRadius = imgUser.Frame.Width / 2;
         }

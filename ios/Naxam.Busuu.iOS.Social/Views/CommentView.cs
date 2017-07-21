@@ -5,7 +5,6 @@ using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.iOS.Views;
-using Naxam.Busuu.iOS.Social.Common;
 using Naxam.Busuu.Social.ViewModels;
 using PatridgeDev;
 using ObjCRuntime;
@@ -52,14 +51,14 @@ namespace Naxam.Busuu.iOS.Social.Views
             ViewShadow.Layer.ShadowOffset = new CGSize(0, 2);
 
             var setBinding = this.CreateBindingSet<CommentView, CommentViewModel>();
-            setBinding.Bind(_loaderImgQuestion).To(d => d.CommentData.ImgQuestion).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
+            setBinding.Bind(_loaderImgQuestion).To(d => d.CommentData.ImgQuestion).WithConversion("ImageUriValueConverter");
             setBinding.Bind(textQuestion).To(d => d.CommentData.TextQuestion);
-            setBinding.Bind(ViewForSpeak).For(d => d.Hidden).To(d => d.CommentData.Speak).WithConversion(new MyMvxConverter.InverseValueConverter(), null);
+            setBinding.Bind(ViewForSpeak).For(d => d.Hidden).To(d => d.CommentData.Speak).WithConversion("BoolInverseConverter");
             setBinding.Bind(audioViewBottomConstraint).For(x => x.Active).To(d => d.CommentData.Speak);
             setBinding.Bind(audioViewTopConstraint).For(x => x.Active).To(d => d.CommentData.Speak);
             setBinding.Bind(ViewForWrite).For(d => d.Hidden).To(d => d.CommentData.Speak);
             setBinding.Bind(textViewCorrect).To(d => d.CommentData.Write);
-            setBinding.Bind(textHowDid).To(d => d.CommentData.Name).WithConversion(new MyMvxConverter.TextHowDidValueConverter(), null);
+            setBinding.Bind(textHowDid).To(d => d.CommentData.Name).WithConversion("HowDidTextConverter");
             setBinding.Apply();
 
             var ratingConfig = new RatingConfig(UIImage.FromBundle("Stars" + "/grey_star"),
