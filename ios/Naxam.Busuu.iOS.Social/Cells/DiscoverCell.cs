@@ -6,7 +6,6 @@ using MvvmCross.Binding.BindingContext;
 using Naxam.Busuu.Social.Models;
 using CoreGraphics;
 using AVFoundation;
-using Naxam.Busuu.iOS.Social.Common;
 
 namespace Naxam.Busuu.iOS.Social.Cells
 {
@@ -33,16 +32,16 @@ namespace Naxam.Busuu.iOS.Social.Cells
             this.DelayBind(() =>
             {
                 var setBinding = this.CreateBindingSet<DiscoverCell, SocialModel>();
-                setBinding.Bind(_loaderImageUser).To(d => d.Avatar).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
+                setBinding.Bind(_loaderImageUser).To(d => d.Avatar).WithConversion("ImageUriValueConverter");
                 setBinding.Bind(NameUser).To(d => d.Name);
                 setBinding.Bind(Country).To(d => d.Country);
-                setBinding.Bind(_loaderImgSpeak).To(d => d.ImageSpeakLanguage).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
-                setBinding.Bind(ViewSpeak).For(d => d.Hidden).To(d => d.Speak).WithConversion(new MyMvxConverter.InverseValueConverter(), null);
+                setBinding.Bind(_loaderImgSpeak).To(d => d.ImageSpeakLanguage).WithConversion("ImageUriValueConverter");
+                setBinding.Bind(ViewSpeak).For(d => d.Hidden).To(d => d.Speak).WithConversion("BoolInverseConverter");
                 setBinding.Bind(audioViewBottomConstraint).For(x => x.Active).To(d => d.Speak);
                 setBinding.Bind(audioViewTopConstraint).For(x => x.Active).To(d => d.Speak);
                 setBinding.Bind(WriteLabel).For(d => d.Hidden).To(d => d.Speak);
                 setBinding.Bind(WriteLabel).To(d => d.Write);
-                setBinding.Bind(_loaderImgLearn).To(d => d.ImageLearn).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
+                setBinding.Bind(_loaderImgLearn).To(d => d.ImageLearn).WithConversion("ImageUriValueConverter");
                 setBinding.Bind(TextLan).To(d => d.TextLearn);
                 setBinding.Apply();
             });

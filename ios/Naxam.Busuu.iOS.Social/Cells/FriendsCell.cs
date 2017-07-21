@@ -4,7 +4,6 @@ using CoreGraphics;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
-using Naxam.Busuu.iOS.Social.Common;
 using Naxam.Busuu.Social.Models;
 using PatridgeDev;
 using UIKit;
@@ -33,17 +32,17 @@ namespace Naxam.Busuu.iOS.Social.Cells
             this.DelayBind(() =>
             {
                 var setBinding = this.CreateBindingSet<FriendsCell, SocialModel>();
-                setBinding.Bind(_loaderImageUser).To(f => f.Avatar).WithConversion(new MyMvxConverter.ImageUriValueConverter(), null);
+                setBinding.Bind(_loaderImageUser).To(f => f.Avatar).WithConversion("ImageUriValueConverter");
                 setBinding.Bind(lblUserName).To(f => f.Name);
                 setBinding.Bind(lblCountry).To(f => f.Country);
-                setBinding.Bind(_loaderImgLearn).To(f => f.ImageLearn).WithConversion(new MyMvxConverter.ImageForFriendsValueConverter(), null);
-                setBinding.Bind(lblTimePublic).To(f => f.PublicTime).WithConversion(new MyMvxConverter.DatetimeStringValueConverter(), null);
-                setBinding.Bind(ViewAudioPlayer).For(f => f.Hidden).To(f => f.Speak).WithConversion(new MyMvxConverter.InverseValueConverter(), null);
+                setBinding.Bind(_loaderImgLearn).To(f => f.ImageLearn).WithConversion("FriendsImgSpeakValueConverter");
+                setBinding.Bind(lblTimePublic).To(f => f.PublicTime).WithConversion("DatetimeTextConverter");
+                setBinding.Bind(ViewAudioPlayer).For(f => f.Hidden).To(f => f.Speak).WithConversion("BoolInverseConverter");
                 setBinding.Bind(audioViewBottomConstraint).For(f => f.Active).To(f => f.Speak);
                 setBinding.Bind(audioViewTopConstraint).For(f => f.Active).To(f => f.Speak);
                 setBinding.Bind(WriteText).For(f => f.Hidden).To(f => f.Speak);
                 setBinding.Bind(WriteText).To(f => f.Write);
-                setBinding.Bind(lblRate).To(f => f.Star).WithConversion(new MyMvxConverter.TextRateValueConverter(), null);
+                setBinding.Bind(lblRate).To(f => f.Star).WithConversion("StarTextConverter");
                 setBinding.Bind(ratingView).For(vm => vm.AverageRating).To(vm => vm.Star).Apply();
                 setBinding.Apply();
             });

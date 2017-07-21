@@ -4,16 +4,19 @@ using System;
 
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
-using Naxam.Busuu.Core.ViewModels;
+using Naxam.Busuu.ViewModels;
+using Naxam.Busuu.iOS.Core.CustomControls;
 using UIKit;
 
 namespace Naxam.Busuu.iOS.Views
 {
     [MvxFromStoryboard(StoryboardName = "Main")]
     [MvxRootPresentation(WrapInNavigationController = true)]
-    public partial class MainTabBarView : MvxTabBarViewController<MainTabBarViewModel>
+    public partial class MainTabBarView : MvxTabBarViewController<MainTabBarViewModel>, IMaterialTabBarDelegate
 	{
         bool _isPresentedFirstTime = true;
+
+        MaterialTabBar _CustomTabBar;
 
 		public MainTabBarView (IntPtr handle) : base (handle)
 		{
@@ -30,9 +33,17 @@ namespace Naxam.Busuu.iOS.Views
 				ViewModel.ShowInitialViewModelsCommand.Execute(null);	
 
                 //this.CreateBinding(TabBar.Items[1]).For(vm => vm.BadgeValue).To<NotificationViewModel>(vm => vm.NotificationCount).Apply();
-                TabBar.Items[1].BadgeValue = "9";
+                TabBar.Items[2].BadgeValue = "9";
+                _CustomTabBar = new MaterialTabBar(TabBar, UIColor.FromRGB(57, 169, 246))
+                {
+                    Delegate = this
+                };
 			}
-		}	
+		}
 
-	}
+        void IMaterialTabBarDelegate.SelectedIndex(MaterialTabBar tabbar, int index)
+        {
+            SelectedIndex = index;
+        }
+    }
 }

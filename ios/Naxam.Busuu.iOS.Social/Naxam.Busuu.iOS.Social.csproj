@@ -113,7 +113,6 @@
     <Compile Include="Views\SocialDetailView.designer.cs">
       <DependentUpon>SocialDetailView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Common\MyMvxConverter.cs" />
     <Compile Include="Views\CommentView.cs" />
     <Compile Include="Views\CommentView.designer.cs">
       <DependentUpon>CommentView.cs</DependentUpon>
