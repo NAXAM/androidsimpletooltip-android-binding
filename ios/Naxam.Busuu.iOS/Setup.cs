@@ -18,7 +18,9 @@ using MvvmCross.Platform.Converters;
 using MvvmCross.Binding.BindingContext;
 using Naxam.Busuu.iOS.Core.Converter;
 using UIKit;
-
+using Naxam.Busuu.iOS.Core;
+using Naxam.Busuu.Core.ViewModels;
+               
 namespace Naxam.Busuu.iOS
 {
     public class Setup : MvxIosSetup
@@ -40,7 +42,8 @@ namespace Naxam.Busuu.iOS
                 typeof(SocialView).Assembly,
                 typeof(NotificationView).Assembly,
                 typeof(RegisterView).Assembly,
-                typeof(ReviewAllView).Assembly
+                typeof(ReviewAllView).Assembly,
+                typeof(PremiumView).Assembly
 			};
 
 			assemblies.AddRange(base.GetViewAssemblies());
@@ -51,11 +54,11 @@ namespace Naxam.Busuu.iOS
         {
 			var assemblies = new List<Assembly>
 			{
-
-				typeof(ReviewAllViewModel).Assembly,
+				typeof(ReviewViewModel).Assembly,
                 typeof(SocialViewModel).Assembly,
                 typeof(NotificationViewModel).Assembly,
-                typeof(RegisterViewModel).Assembly
+                typeof(RegisterViewModel).Assembly,
+                typeof(PremiumViewModel).Assembly
 			};
 
 			assemblies.AddRange(base.GetViewModelAssemblies());

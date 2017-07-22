@@ -200,6 +200,10 @@
     <Project>{51CFB2E1-B73F-48BA-B205-02F74CE40050}</Project>
     <Name>Naxam.Busuu</Name>
   </ProjectReference>
+  <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+    <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+    <Name>Naxam.Busuu.Core</Name>
+  </ProjectReference>
 </ItemGroup>
 <ItemGroup>
   <ImageAsset Include="Assets.xcassets\Contents.json" />

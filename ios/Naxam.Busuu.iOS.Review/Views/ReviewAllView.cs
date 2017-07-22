@@ -22,7 +22,7 @@ namespace Naxam.Busuu.iOS.Review.Views
 {
     [MvxFromStoryboard(StoryboardName = "Review")]
     [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "review_tab_icon", TabName = "Review", TabSelectedIconName = "review_tab_icon_selected")]
-    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource
+    public partial class ReviewAllView : MvxViewController<ReviewViewModel>, IUITableViewDataSource
     {
         public ReviewAllView(IntPtr handle) : base(handle)
         {
