@@ -12,9 +12,55 @@ namespace Naxam.Busuu.iOS.Profile.Views
 	[Register ("RegisterView")]
 	partial class RegisterView
 	{
+		[Outlet]
+		UIKit.UIButton btnFacebook { get; set; }
+
+		[Outlet]
+		UIKit.UIButton btnGoogle { get; set; }
+
+		[Outlet]
+		UIKit.UIButton btnLogin { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewbtnFacebook { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewbtnGoogle { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewShadow { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (ViewShadow != null) {
+				ViewShadow.Dispose ();
+				ViewShadow = null;
+			}
+
+			if (viewbtnFacebook != null) {
+				viewbtnFacebook.Dispose ();
+				viewbtnFacebook = null;
+			}
+
+			if (btnFacebook != null) {
+				btnFacebook.Dispose ();
+				btnFacebook = null;
+			}
+
+			if (viewbtnGoogle != null) {
+				viewbtnGoogle.Dispose ();
+				viewbtnGoogle = null;
+			}
+
+			if (btnGoogle != null) {
+				btnGoogle.Dispose ();
+				btnGoogle = null;
+			}
+
+			if (btnLogin != null) {
+				btnLogin.Dispose ();
+				btnLogin = null;
+			}
 		}
 	}
 }
