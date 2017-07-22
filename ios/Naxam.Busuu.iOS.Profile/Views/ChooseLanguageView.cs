@@ -22,13 +22,14 @@ namespace Naxam.Busuu.iOS.Profile.Views
         {
             base.ViewDidLoad();
 
-            this.NavigationController.NavigationBarHidden = false;
+            this.NavigationController.NavigationBarHidden = true;
 
 			var lSource = new LanguageTableViewSource(LanguageTableView);
 
             var setBinding = this.CreateBindingSet<ChooseLanguageView, ChooseLanguageViewModel>();
+            setBinding.Bind(btnBack).To(vm => vm.btnBackCommand);
 			setBinding.Bind(lSource).To(vm => vm.Languages);
-			//setBinding.Bind(lSource).For(vm => vm.SelectionChangedCommand).To(vm => vm.SelectedLanguage);
+			setBinding.Bind(lSource).For(vm => vm.SelectionChangedCommand).To(vm => vm.RegisterCommand);
 			setBinding.Apply();
 
             LanguageTableView.Source = lSource;
@@ -39,5 +40,12 @@ namespace Naxam.Busuu.iOS.Profile.Views
 			ViewForTableView.Layer.ShadowOffset = new CGSize(0, 2);
             ViewForTableView.Layer.MasksToBounds = false;
 		}
+
+		public override void ViewWillAppear(bool animated)
+		{
+			base.ViewWillAppear(animated);
+
+			this.NavigationController.NavigationBarHidden = true;
+		}		
 	}
 }

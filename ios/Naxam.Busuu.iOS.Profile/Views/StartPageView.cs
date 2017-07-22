@@ -31,6 +31,13 @@ namespace Naxam.Busuu.iOS.Profile.Views
 			setBinding.Apply();
         }
 
+		public override void ViewWillAppear(bool animated)
+		{
+			base.ViewWillAppear(animated);
+
+            this.NavigationController.NavigationBarHidden = true;
+		}
+
         public override void ViewWillLayoutSubviews()
         {
             base.ViewWillLayoutSubviews();

@@ -4,7 +4,6 @@ using System;
 
 using Foundation;
 using MvvmCross.iOS.Views;
-using MvvmCross.iOS.Views.Presenters.Attributes;
 using Naxam.Busuu.Profile.ViewModel;
 using UIKit;
 

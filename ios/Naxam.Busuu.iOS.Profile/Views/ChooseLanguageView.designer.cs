@@ -13,6 +13,9 @@ namespace Naxam.Busuu.iOS.Profile.Views
 	partial class ChooseLanguageView
 	{
 		[Outlet]
+		UIKit.UIButton btnBack { get; set; }
+
+		[Outlet]
 		UIKit.UITableView LanguageTableView { get; set; }
 
 		[Outlet]
@@ -28,6 +31,11 @@ namespace Naxam.Busuu.iOS.Profile.Views
 			if (ViewForTableView != null) {
 				ViewForTableView.Dispose ();
 				ViewForTableView = null;
+			}
+
+			if (btnBack != null) {
+				btnBack.Dispose ();
+				btnBack = null;
 			}
 		}
 	}

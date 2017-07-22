@@ -197,7 +197,7 @@
     <Name>Naxam.Busuu.Review</Name>
   </ProjectReference>
   <ProjectReference Include="..\..\Naxam.Busuu\Naxam.Busuu.csproj">
-    <Project>{51CFB2E1-B73F-48BA-B205-02F74CE40050}</Project>
+    <Project>{E9A61F00-310C-434B-9E20-A809831DC2CB}</Project>
     <Name>Naxam.Busuu</Name>
   </ProjectReference>
 </ItemGroup>
@@ -357,6 +357,10 @@
   <BundleResource Include="Resources\flag_small_polish.png" />
   <BundleResource Include="Resources\flag_small_russian.png" />
   <BundleResource Include="Resources\flag_small_turkish.png" />
+  <BundleResource Include="Resources\intercom_back.png" />
+  <BundleResource Include="Resources\google_logo.png" />
+  <BundleResource Include="Resources\facebook_logo.png" />
+  <BundleResource Include="Resources\nx_logo_white.png" />
 </ItemGroup>
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
