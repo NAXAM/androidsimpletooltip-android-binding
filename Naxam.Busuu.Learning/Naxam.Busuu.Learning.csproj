@@ -47,7 +47,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ILearningService.cs" />
     <Compile Include="Services\LearningService.cs" />
-    <Compile Include="ViewModel\BuyPremiumViewModel.cs" />
     <Compile Include="ViewModel\ChangeLanguageViewModel.cs" />
     <Compile Include="ViewModel\LearnViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
