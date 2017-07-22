@@ -101,16 +101,19 @@ namespace Naxam.Busuu.Droid.Learning.Views
             switch (temp.Type)
             {
                 case UnitModel.UnitType.ChooseWord:
-                    AddFragment(new MemoChooseWord(temp));
+                    AddFragment(new ChooseWordFragment(temp));
                     break;
                 case UnitModel.UnitType.FillSentence:
-                    AddFragment(new MemoFillSentence(temp));
+                    AddFragment(new FillSentenceFragment(temp));
                     break;
                 case UnitModel.UnitType.SelectWord:
                     AddFragment(new MemoSelectWord(temp));
                     break;
                 case UnitModel.UnitType.MatchingSentence:
-                    AddFragment(new MemoMatchingSentence(temp));
+                    AddFragment(new MatchingSentenceFragment(temp));
+                    break;
+                case UnitModel.UnitType.SelectWordImage:
+                    AddFragment(new SelectWordImageFragment(temp));
                     break;
             }
         }

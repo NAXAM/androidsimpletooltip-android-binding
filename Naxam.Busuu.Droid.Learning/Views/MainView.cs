@@ -21,7 +21,7 @@ using MvvmCross.Core.ViewModels;
 
 namespace Naxam.Busuu.Droid.Learning.Views
 {
-    [Activity(Theme = "@style/AppTheme.NoActionBar")]
+    [Activity(Theme = "@style/AppTheme.NoActionBar",MainLauncher = true)]
     public class MainView : MvxAppCompatActivity
     {
         NXMvxExpandableListView expLessons;

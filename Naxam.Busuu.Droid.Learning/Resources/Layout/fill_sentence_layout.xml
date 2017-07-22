@@ -52,6 +52,7 @@
       android:layout_below="@+id/txtInput"
       android:layout_width="match_parent"
       android:layout_height="match_parent" 
+      android:background="#123123"
       android:layout_marginBottom="64dp"
         >
     <com.google.android.flexbox.FlexboxLayout
@@ -70,15 +71,15 @@
     </com.google.android.flexbox.FlexboxLayout>
 
   </ScrollView>
-
   <Button
       android:id="@+id/btnNext"
-      android:layout_alignParentBottom="true"
-      style="@style/StyleNextButton"
       android:layout_width="match_parent"
-      android:layout_height="48dp"
+      android:layout_height="wrap_content"
+      style="@style/StyleNextButton"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="16dp"
       android:layout_marginLeft="16dp"
       android:layout_marginRight="16dp"
-      android:layout_marginBottom="16dp"
-      android:text="Next"  />
+      android:text="next" />
+  
 </RelativeLayout>
