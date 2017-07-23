@@ -89,49 +89,16 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                     if (!temp.Value)
                     {
                         int translateDistance = (int)Util.Util.PxFromDp(Context, 8);
-                        TranslateAnimation translate = new TranslateAnimation(0, translateDistance, 0, 0);
-                        translate.Duration = 100;
-                        translate.FillAfter = true;
-                        TranslateAnimation translate2 = new TranslateAnimation(0, -translateDistance, 0, 0);
-                        translate2.Duration = 100;
-                        translate2.FillAfter = true;
-                        TranslateAnimation translate3 = new TranslateAnimation(0, translateDistance, 0, 0);
-                        translate3.Duration = 100;
-                        translate3.FillAfter = true;
-                        TranslateAnimation translate4 = new TranslateAnimation(0, -translateDistance, 0, 0);
-                        translate4.Duration = 100;
-                        translate4.FillAfter = true;
-
-                        translate.SetAnimationListener(new AnimationListener {
-                            AnimationEnd = (anim) => {
-                                translate2.Start();
-                            }
-                        });
-                        translate.SetAnimationListener(new AnimationListener
-                        {
-                            AnimationEnd = (anim) => {
-                                translate2.Start();
-                            }
-                        });
-                        translate2.SetAnimationListener(new AnimationListener
-                        {
-                            AnimationEnd = (anim) => {
-                                translate3.Start();
-                            }
-                        });
-                        translate3.SetAnimationListener(new AnimationListener
-                        {
-                            AnimationEnd = (anim) => {
-                                translate4.Start();
-                            }
-                        });
-                    
-
-
-                        btnAnswer.StartAnimation(translate);
+                        AnimatorSet mAnimatorSet = new AnimatorSet();
+                        var animx = ObjectAnimator.OfFloat(btnAnswer, "TranslationX", translateDistance, -translateDistance, 0);
+                        animx.RepeatCount = 8;
+                        animx.RepeatMode = ValueAnimatorRepeatMode.Reverse;
+                        mAnimatorSet.Play(animx);
+                        mAnimatorSet.SetDuration(50);
+                        mAnimatorSet.Start();
                         if (Build.VERSION.SdkInt > BuildVersionCodes.Kitkat)
                         {
-                            btnAnswer.Elevation = Util.Util.PxFromDp(Context, 2);
+                            btnAnswer.Elevation = translateDistance/4;
                         }
 
                     }

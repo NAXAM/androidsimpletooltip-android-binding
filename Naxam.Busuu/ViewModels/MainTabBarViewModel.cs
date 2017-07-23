@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Learning.ViewModel;
 using Naxam.Busuu.Notification.ViewModels;
