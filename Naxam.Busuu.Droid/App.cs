@@ -14,6 +14,11 @@ using Naxam.Busuu.Profile.ViewModel;
 using MvvmCross.Platform; 
 using Naxam.Busuu.Droid.Profile.Service;
 using Naxam.Busuu.Profile.Service;
+using Naxam.Busuu.Social.Services;
+using Naxam.Busuu.Notification.Services;
+using Naxam.Busuu.Review.Services;
+using Naxam.Busuu.Learning.Services;
+using Naxam.Busuu.Learning.ViewModel;
 
 namespace Naxam.Busuu.Droid
 {
@@ -21,12 +26,17 @@ namespace Naxam.Busuu.Droid
     {
         public App()
         {
+            Mvx.RegisterType<IDataSocial, DataSocial>();
+            Mvx.RegisterType<IDataNotification, DataNotification>();
+            Mvx.RegisterType<IReviewService, ReviewService>();
+            Mvx.RegisterType<ILearningService, LearningService>();
+            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainViewModel>());
+            RegisterAppStart<MainViewModel>();
             Mvx.RegisterType<IDialogService, DialogService>();
         }
         public override void Initialize()
-        {
-           // RegisterAppStart<ForgotPasswordViewModel>();
-            RegisterAppStart<LoginViewModel>();
+        { 
+            RegisterAppStart<MainViewModel>();
         }
     }
 }

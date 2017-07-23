@@ -103,6 +103,8 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 		{
 			if (tabbar == null) throw new Exception("Tabbar cannot be null");
 
+            tabbar.Hidden = true;
+
 			_SelectedColor = selectedColor ?? UIColor.FromRGB(14.0f / 255.0f, 122.0f / 255.0f, 254.0f / 255.0f);
 			_UnselectedColor = unselectedColor ?? UIColor.Gray;
 			_RippleColor = _SelectedColor.ColorWithAlpha(0.2f);
@@ -304,7 +306,7 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 					_RippleLayer.AffineTransform = CGAffineTransform.MakeScale(width, width);
 				}
 			};
-
+			SelectedIndex = index;
 			if (animated)
 			{
 				_RippleContainer.Frame = new CGRect(width * index, 0, width, Bounds.Height);
@@ -313,7 +315,6 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 
 				UIView.AnimateNotify(0.3, finalState, (finished) =>
 				{
-					SelectedIndex = index;
 					_RippleContainer.Hidden = true;
 					_RippleLayer.AffineTransform = CGAffineTransform.MakeIdentity();
 				});
@@ -321,7 +322,6 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 			else
 			{
 				finalState.Invoke();
-				SelectedIndex = index;
 			}
 		}
 

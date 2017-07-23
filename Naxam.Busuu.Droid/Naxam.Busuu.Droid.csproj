@@ -17,7 +17,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -228,9 +228,17 @@
       <Project>{E1334FF3-BC22-4F7C-B363-A01DE69429F8}</Project>
       <Name>Naxam.Busuu.Learning</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Notification\Naxam.Busuu.Notification.csproj">
+      <Project>{2eadb781-e679-4485-8a53-ae7a8945cd1b}</Project>
+      <Name>Naxam.Busuu.Notification</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
       <Project>{B6F89F5C-B669-40B1-BCE1-C72089933F2F}</Project>
       <Name>Naxam.Busuu.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
+      <Project>{baaa7577-3be2-423b-a051-61b47489b015}</Project>
+      <Name>Naxam.Busuu.Review</Name>
     </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
       <Project>{6255cda3-b742-4d16-ac6c-03e414eac000}</Project>

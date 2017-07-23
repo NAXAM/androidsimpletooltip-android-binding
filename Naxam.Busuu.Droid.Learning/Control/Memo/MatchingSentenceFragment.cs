@@ -14,13 +14,13 @@ using Naxam.Busuu.Learning.Model;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Memo
 {
-    public class MemoMatchingSentence : MemoriseFragmentBase, View.IOnTouchListener
+    public class MatchingSentenceFragment : MemoriseFragmentBase, View.IOnTouchListener
     {
         public override event EventHandler<bool> NextClicked;
         Dictionary<string, string> MatchingSentence;
         TextView txt01Move, txt02Move, txt03Move, txt01, txt02, txt03, txt04, txt05, txt06, txtGuide;
 
-        public MemoMatchingSentence(UnitModel Item)
+        public MatchingSentenceFragment(UnitModel Item)
         {
             this.Item = Item;
         }

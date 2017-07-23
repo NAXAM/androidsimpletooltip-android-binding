@@ -19,7 +19,7 @@ using Android.Animation;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Memo
 {
-    public class MemoSelectWordImage : MemoriseFragmentBase
+    public class SelectWordImageFragment : MemoriseFragmentBase
     {
         public override event EventHandler<bool> NextClicked;
         TextView txtQuestion;
@@ -27,7 +27,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
         Button btnNext;
         RecyclerView recyclerView;
 
-        public MemoSelectWordImage(UnitModel Item)
+        public SelectWordImageFragment(UnitModel Item)
         {
             this.Item = Item;
         }

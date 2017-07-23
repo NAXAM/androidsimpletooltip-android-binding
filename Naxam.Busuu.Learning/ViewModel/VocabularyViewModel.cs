@@ -1,5 +1,6 @@
 ﻿using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Learning.Model;
+using Naxam.Busuu.Learning.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace Naxam.Busuu.Learning.ViewModel
 {
-    public class MemoriseViewModel : MvxViewModel
+    public class VocabularyViewModel : MvxViewModel
     {
         private ExerciseModel _exercise;
+        readonly ILearningService learningService;
 
         public ExerciseModel Exercise
         {
@@ -24,14 +26,14 @@ namespace Naxam.Busuu.Learning.ViewModel
                 }
             }
         }
-        public MemoriseViewModel()
+        public VocabularyViewModel(ILearningService learningService)
         {
-
+            this.learningService = learningService;
         }
-        public void Init(ExerciseModel ex)
+        public async void Init(ExerciseModel ex)
         {
             Exercise = ex;
+            Exercise.Units = await learningService.GetUnitByExercise(ex);
         }
-
     }
 }

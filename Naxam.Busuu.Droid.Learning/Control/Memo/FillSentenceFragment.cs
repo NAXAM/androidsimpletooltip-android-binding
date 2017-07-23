@@ -24,7 +24,7 @@ using Naxam.Busuu.Droid.Learning.Control.Memo;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class MemoFillSentence : MemoriseFragmentBase
+    public class FillSentenceFragment : MemoriseFragmentBase
     {
         public override event EventHandler<bool> NextClicked;
         private event EventHandler<AnswerModel> AnswerClick;
@@ -38,7 +38,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
         public object FlexBoxLayout { get; private set; }
         int imageCount;
 
-        public MemoFillSentence(UnitModel Item)
+        public FillSentenceFragment(UnitModel Item)
         {
             this.Item = Item;
         }
@@ -50,7 +50,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             listChoice = new Dictionary<TextView, AnswerModel>();
             listCorrect = Item.Answers.Where(d => d.Value).OrderBy(d => d.Position).ToList();
             CountCorrect = Item.Answers.Where(d => d.Value).ToList().Count;
-            View view = inflater.Inflate(imageCount > 0 ? Resource.Layout.fill_sentence_layout : Resource.Layout.fill_sentence_layout_non_image, null);
+            View view = inflater.Inflate(imageCount > 0 ? Resource.Layout.fill_sentence_layout : Resource.Layout.fill_sentence_layout_non_image, container,false);
             Init(view);
             return view;
         }
@@ -141,7 +141,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             {
                 NextClicked?.Invoke(btnNext, result);
             };
-            btnNext.Visibility = ViewStates.Gone;
+            btnNext.Visibility = ViewStates.Invisible;
             int margin = (int)Util.Util.PxFromDp(Context, 8);
             for (int i = 0; i < Item.Answers.Count; i++)
             {

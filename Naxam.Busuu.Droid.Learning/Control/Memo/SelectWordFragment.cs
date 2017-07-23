@@ -41,7 +41,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             listChoice = new Dictionary<TextView, AnswerModel>();
             listTextViewCorrect = new List<TextView>();
             CountAnswer = Item.Answers.Where(d => d.Value).ToList().Count;
-            View view = inflater.Inflate(imageCount > 0 ? Resource.Layout.select_words_layout : Resource.Layout.select_words_layout_non_image, null);
+            View view = inflater.Inflate(imageCount > 0 ? Resource.Layout.select_words_layout : Resource.Layout.select_words_layout_non_image, container,false);
             Init(view);
             return view;
         }

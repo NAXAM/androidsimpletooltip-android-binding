@@ -22,6 +22,7 @@ namespace Naxam.Busuu.Droid.Profile.Utils
             txtClose = FindViewById<TextView>(Resource.Id.txtClose);
             this.Show();
             Window window = this.Window;
+            window.SetGravity(GravityFlags.Center);
             window.SetLayout(ActionBar.LayoutParams.MatchParent, ActionBar.LayoutParams.WrapContent);
             txtClose.Click += (s, e) => {
                 this.Dismiss();
