@@ -1,10 +1,10 @@
 ﻿using System;
 using Foundation;
 using MvvmCross.Binding.iOS.Views;
-using Naxam.Busuu.iOS.Profile.Cells;
+using Naxam.Busuu.iOS.Start.Cells;
 using UIKit;
 
-namespace Naxam.Busuu.iOS.Profile.Common
+namespace Naxam.Busuu.iOS.Start.Common
 {
     public class LanguageTableViewSource : MvxTableViewSource
     {

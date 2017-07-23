@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A8453AAF-F6BF-433B-B268-9954240CBBF4}</ProjectGuid>
+    <ProjectGuid>{7856BAFE-405A-4ABF-9384-A3556FA1B8DD}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Naxam.Busuu.iOS.Learning</RootNamespace>
-    <AssemblyName>Naxam.Busuu.iOS.Learning</AssemblyName>
+    <RootNamespace>Naxam.Busuu.iOS.Start</RootNamespace>
+    <AssemblyName>Naxam.Busuu.iOS.Start</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -22,7 +22,7 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
-    <IOSDebuggerPort>57222</IOSDebuggerPort>
+    <IOSDebuggerPort>47786</IOSDebuggerPort>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
     <MtouchLink></MtouchLink>
     <MtouchHttpClientHandler></MtouchHttpClientHandler>
@@ -68,58 +68,45 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Cells\" />
+    <Folder Include="Common\" />
     <Folder Include="Views\" />
-    <Folder Include="Resources\Assets.xcassets\" />
-    <Folder Include="Resources\Assets.xcassets\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\MainView.cs" />
-    <Compile Include="Views\MainView.designer.cs">
-      <DependentUpon>MainView.cs</DependentUpon>
+    <Compile Include="Cells\LanguageTableViewCell.cs" />
+    <Compile Include="Cells\LanguageTableViewCell.designer.cs">
+      <DependentUpon>..\..\Naxam.Busuu.iOS.Profile\Cells\LanguageTableViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\PremiumView.cs" />
-    <Compile Include="Views\PremiumView.designer.cs">
-      <DependentUpon>PremiumView.cs</DependentUpon>
+    <Compile Include="Common\LanguageTableViewSource.cs" />
+    <Compile Include="Views\ChooseLanguageView.cs" />
+    <Compile Include="Views\ChooseLanguageView.designer.cs">
+      <DependentUpon>..\..\Naxam.Busuu.iOS.Profile\Views\ChooseLanguageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.cs" />
+    <Compile Include="Views\LoginView.designer.cs">
+      <DependentUpon>..\..\Naxam.Busuu.iOS.Profile\Views\LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterView.cs" />
+    <Compile Include="Views\RegisterView.designer.cs">
+      <DependentUpon>..\..\Naxam.Busuu.iOS.Profile\Views\RegisterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartPageView.cs" />
+    <Compile Include="Views\StartPageView.designer.cs">
+      <DependentUpon>..\..\Naxam.Busuu.iOS.Profile\Views\StartPageView.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Naxam.Busuu.iOS.Core\Naxam.Busuu.iOS.Core.csproj">
-      <Project>{B18CE05B-DA11-45F4-BEF8-6945AE895FA2}</Project>
-      <Name>Naxam.Busuu.iOS.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
-      <Project>{E1334FF3-BC22-4F7C-B363-A01DE69429F8}</Project>
-      <Name>Naxam.Busuu.Learning</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="Learning.storyboard" />
-  </ItemGroup>
-  <ItemGroup>
-    <ImageAsset Include="Resources\Assets.xcassets\tick_green%402x.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\certificate.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\certificate.imageset\certificate.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\correct.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\correct.imageset\subscription_image_c_3.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\download_icon.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\download_icon.imageset\download_icon.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\grammar.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\grammar.imageset\subscription_image_c_1.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\language.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\language.imageset\subscription_image_c_5.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\premium.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\premium.imageset\premium.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\test.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\test.imageset\subscription_image_c_2.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\travel.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\travel.imageset\subscription_image_c_4.png" />
-    <ImageAsset Include="Resources\Assets.xcassets\vocab_trainer_icon.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Assets.xcassets\vocab_trainer_icon.imageset\vocab_trainer_icon.png" />
+    <InterfaceDefinition Include="Start.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Naxam.Busuu.Start\Naxam.Busuu.Start.csproj">
+      <Project>{115D0C30-6675-4814-89AC-5AEF6E5EDAEC}</Project>
+      <Name>Naxam.Busuu.Start</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

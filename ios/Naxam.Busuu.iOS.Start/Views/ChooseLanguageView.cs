@@ -5,13 +5,13 @@ using CoreGraphics;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
-using Naxam.Busuu.iOS.Profile.Common;
-using Naxam.Busuu.Profile.ViewModel;
+using Naxam.Busuu.iOS.Start.Common;
+using Naxam.Busuu.Start.ViewModel;
 using UIKit;
 
-namespace Naxam.Busuu.iOS.Profile.Views
+namespace Naxam.Busuu.iOS.Start.Views
 {
-    [MvxFromStoryboard(StoryboardName = "Profile")]
+    [MvxFromStoryboard(StoryboardName = "Start")]
     public partial class ChooseLanguageView : MvxViewController<ChooseLanguageViewModel>
 	{
 		public ChooseLanguageView (IntPtr handle) : base (handle)

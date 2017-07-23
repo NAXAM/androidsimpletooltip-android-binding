@@ -5,12 +5,12 @@ using System;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
-using Naxam.Busuu.Profile.ViewModel;
+using Naxam.Busuu.Start.ViewModel;
 using UIKit;
 
-namespace Naxam.Busuu.iOS.Profile.Views
+namespace Naxam.Busuu.iOS.Start.Views
 {
-    [MvxFromStoryboard(StoryboardName = "Profile")]
+    [MvxFromStoryboard(StoryboardName = "Start")]
     public partial class StartPageView : MvxViewController<StartPageViewModel>
 	{
 		public StartPageView (IntPtr handle) : base (handle)

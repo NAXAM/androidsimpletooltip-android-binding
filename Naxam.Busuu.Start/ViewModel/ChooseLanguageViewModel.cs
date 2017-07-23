@@ -1,15 +1,21 @@
 ﻿using MvvmCross.Core.ViewModels;
-using Naxam.Busuu.Profile.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Naxam.Busuu.Start.Model;
 
-namespace Naxam.Busuu.Profile.ViewModel
+namespace Naxam.Busuu.Start.ViewModel
 {
     public class ChooseLanguageViewModel : MvxViewModel
     {
+		public IMvxCommand btnBackCommand
+		{
+			get { return new MvxCommand(() => Close(this)); }
+		}
+
+        // Để lại cái này để em dùng
+		public IMvxCommand RegisterCommand
+		{
+            get { return new MvxCommand(() => ShowViewModel<RegisterViewModel>()); }
+		}
+
         private MvxObservableCollection<LanguageModel> _languages;
 
         public MvxObservableCollection<LanguageModel> Languages

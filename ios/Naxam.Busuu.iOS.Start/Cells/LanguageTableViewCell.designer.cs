@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace Naxam.Busuu.iOS.Profile.Cells
+namespace Naxam.Busuu.iOS.Start.Cells
 {
     [Register ("LanguageTableViewCell")]
     partial class LanguageTableViewCell

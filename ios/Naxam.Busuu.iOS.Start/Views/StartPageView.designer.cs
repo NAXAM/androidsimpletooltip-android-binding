@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace Naxam.Busuu.iOS.Profile.Views
+namespace Naxam.Busuu.iOS.Start.Views
 {
 	[Register ("StartPageView")]
 	partial class StartPageView

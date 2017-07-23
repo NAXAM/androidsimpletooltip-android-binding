@@ -4,7 +4,7 @@ using Naxam.Busuu.ViewModels;
 using Naxam.Busuu.Notification.Services;
 using Naxam.Busuu.Social.Services;
 using Naxam.Busuu.Review.Services;
-using Naxam.Busuu.Profile.ViewModel;
+using Naxam.Busuu.Start.ViewModel;
 
 namespace Naxam.Busuu.iOS
 {

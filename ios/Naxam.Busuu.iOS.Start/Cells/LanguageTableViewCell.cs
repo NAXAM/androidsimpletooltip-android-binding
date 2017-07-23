@@ -5,10 +5,10 @@ using System;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
-using Naxam.Busuu.Profile.Model;
+using Naxam.Busuu.Start.Model;
 using UIKit;
 
-namespace Naxam.Busuu.iOS.Profile.Cells
+namespace Naxam.Busuu.iOS.Start.Cells
 {
 	public partial class LanguageTableViewCell : MvxTableViewCell
 	{

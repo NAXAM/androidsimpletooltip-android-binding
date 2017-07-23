@@ -3,13 +3,14 @@
 using System;
 
 using Foundation;
+using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
-using Naxam.Busuu.Profile.ViewModel;
+using Naxam.Busuu.Start.ViewModel;
 using UIKit;
 
-namespace Naxam.Busuu.iOS.Profile.Views
+namespace Naxam.Busuu.iOS.Start.Views
 {
-	[MvxFromStoryboard(StoryboardName = "Profile")]
+	[MvxFromStoryboard(StoryboardName = "Start")]
 	public partial class RegisterView : MvxViewController<RegisterViewModel>
 	{
 		public RegisterView (IntPtr handle) : base (handle)
@@ -44,6 +45,12 @@ namespace Naxam.Busuu.iOS.Profile.Views
 			viewbtnGoogle.Layer.ShadowOffset = new CoreGraphics.CGSize(0, 1);
 
 			btnLogin.Layer.CornerRadius = btnLogin.Frame.Height / 2;
+
+            var setBind = this.CreateBindingSet<RegisterView, RegisterViewModel>();
+			setBind.Bind(btnFacebook).To(vm => vm.LoginCommend);
+			setBind.Bind(btnGoogle).To(vm => vm.LoginCommend);
+			setBind.Bind(btnLogin).To(vm => vm.LoginCommend);
+			setBind.Apply();
         }
 	}
 }

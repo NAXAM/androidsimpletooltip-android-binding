@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace Naxam.Busuu.iOS.Profile
+namespace Naxam.Busuu.iOS.Start
 {
 	[Register ("LoginView")]
 	partial class LoginView

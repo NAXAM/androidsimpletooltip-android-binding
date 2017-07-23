@@ -18,6 +18,9 @@ using MvvmCross.Platform.Converters;
 using MvvmCross.Binding.BindingContext;
 using Naxam.Busuu.iOS.Core.Converter;
 using UIKit;
+using Naxam.Busuu.iOS.Start.Views;
+using Naxam.Busuu.iOS.Learning.Views;
+using Naxam.Busuu.Learning.ViewModel;
 
 namespace Naxam.Busuu.iOS
 {
@@ -37,6 +40,8 @@ namespace Naxam.Busuu.iOS
         {
             var assemblies = new List<Assembly>
             {
+                typeof(StartPageView).Assembly,
+                typeof(MainView).Assembly,
                 typeof(SocialView).Assembly,
                 typeof(NotificationView).Assembly,
                 typeof(ProfileView).Assembly,
@@ -51,7 +56,8 @@ namespace Naxam.Busuu.iOS
         {
 			var assemblies = new List<Assembly>
 			{
-
+                typeof(StartPageViewModel).Assembly,
+                typeof(MainViewModel).Assembly,
 				typeof(ReviewAllViewModel).Assembly,
                 typeof(SocialViewModel).Assembly,
                 typeof(NotificationViewModel).Assembly,
