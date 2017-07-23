@@ -69,11 +69,10 @@ namespace Naxam.Busuu.Core.ViewModels
         public PremiumViewModel()
         {
             var random = new Random();
-            var ad = new[] {"22 hours of Busuu Premium = 1 college semester of language study",
-                "Make the most of busuu and unlocl all featers now",
-                "Limited time only",
-                "You're flying through our lessions!",
-                "So here's a"+Discount+" discount on our annual plan"};
+            var ad = new[] {"22 hours of Busuu Premium = 1 college semester of language study. Make the most of busuu and unlocl all featers now",
+                "Limited time only. Make the most of busuu and unlocl all featers now",
+                "You're flying through our lessions! Make the most of busuu and unlocl all featers now",
+                "So here's a"+Discount+" discount on our annual plan. Make the most of busuu and unlocl all featers now"};
             var features = new[] {"Test your knowledge with fun Quizzes",
                 "Develop your language with Grammar units",
                 "Practice what you've learnt and get corrected by native speaker"};

@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "conversation_speaking_stop_button.png",
+      "filename" : "vocab_trainer_icon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "conversation_speaking_stop_button@2x.png",
       "scale" : "2x"
     },
     {

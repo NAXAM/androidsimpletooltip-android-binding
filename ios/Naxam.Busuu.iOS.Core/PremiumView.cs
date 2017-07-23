@@ -11,7 +11,7 @@ using MvvmCross.iOS.Views.Presenters.Attributes;
 namespace Naxam.Busuu.iOS.Core
 {
     [MvxFromStoryboard(StoryboardName = "Core")]
-    [MvxModalPresentation]
+    [MvxModalPresentation(WrapInNavigationController = true, ModalTransitionStyle = UIModalTransitionStyle.CoverVertical)]
     public partial class PremiumView : MvxViewController<PremiumViewModel>
     {
         public PremiumView(IntPtr handle) : base(handle)
@@ -31,6 +31,9 @@ namespace Naxam.Busuu.iOS.Core
             btnSeePlan.Layer.CornerRadius = btnSeePlan.Bounds.Size.Height / 2;
 
             NavigationItem.Title = "Premium";
+            NavigationItem.LeftBarButtonItem = new UIBarButtonItem(UIImage.FromBundle("back_arrow"),
+                                                                   UIBarButtonItemStyle.Plain,
+                                                                   async (sender, e) => await DismissViewControllerAsync(true));
             var discount = this.ViewModel.Discount;
             if (discount !=0)
             {
@@ -58,7 +61,6 @@ namespace Naxam.Busuu.iOS.Core
                 line.Alpha = 0.5f;
                 uiviewHeader.AddSubviews(new[]{label1, label2, line});
                 uiviewHeader.Frame = new CGRect(0,0,View.Bounds.Size.Width, label1.Frame.Height + label2.Frame.Height + 48);
-
 
                 FeatureTableView.TableHeaderView = uiviewHeader;
             } 

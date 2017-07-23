@@ -11,7 +11,7 @@ using UIKit;
 namespace Naxam.Busuu.iOS.Core
 {
     [MvxFromStoryboard(StoryboardName = "Core")]
-    [MvxModalPresentation]
+    [MvxChildPresentation]
     public partial class BuyPremium : MvxViewController<BuyPremiumViewModel>
     {
         public BuyPremium(IntPtr handle) : base(handle)
@@ -21,8 +21,9 @@ namespace Naxam.Busuu.iOS.Core
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            NavigationItem.Title = "Premium";
+            //NavigationItem.Title = "Premium";
             InitSubviews(new[] {monthView, sixMonthView});
+           //NavigationItem.LeftBarButtonItem.Title = "";
         }
 
         void InitSubviews(UIView[] views)

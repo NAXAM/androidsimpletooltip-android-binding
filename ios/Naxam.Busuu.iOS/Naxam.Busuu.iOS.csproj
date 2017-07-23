@@ -137,6 +137,7 @@
   <Folder Include="Views\" />
   <Folder Include="Resources\Assets.xcassets\" />
   <Folder Include="Assets.xcassets\" />
+  <Folder Include="Assets.xcassets\download_icon.imageset\" />
 </ItemGroup>
 <ItemGroup>
   <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -219,12 +220,6 @@
   <ImageAsset Include="Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew.png" />
   <ImageAsset Include="Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew%402x.png" />
   <ImageAsset Include="Assets.xcassets\btn_close.imageset\Contents.json" />
-  <ImageAsset Include="Assets.xcassets\conversation_speaking_play_button.imageset\Contents.json" />
-  <ImageAsset Include="Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button.png" />
-  <ImageAsset Include="Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button%402x.png" />
-  <ImageAsset Include="Assets.xcassets\conversation_speaking_stop_button.imageset\Contents.json" />
-  <ImageAsset Include="Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button.png" />
-  <ImageAsset Include="Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button%402x.png" />
   <ImageAsset Include="Assets.xcassets\entity_strength_0.imageset\Contents.json" />
   <ImageAsset Include="Assets.xcassets\entity_strength_0.imageset\entity_strength_0.png" />
   <ImageAsset Include="Assets.xcassets\entity_strength_1.imageset\Contents.json" />
@@ -324,6 +319,34 @@
   <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected%402x.png" />
   <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
   <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_1.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_1.imageset\subscription_image_c_1.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_2.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_2.imageset\subscription_image_c_2.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_3.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_3.imageset\subscription_image_c_3.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_4.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_4.imageset\subscription_image_c_4.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_5.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_5.imageset\subscription_image_c_5.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\grammar.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\grammar.imageset\subscription_image_c_1.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\correct.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\correct.imageset\subscription_image_c_2.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\language.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\language.imageset\subscription_image_c_3.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\travel.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\travel.imageset\subscription_image_c_4.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\test.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\test.imageset\subscription_image_c_2.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\correct.imageset\subscription_image_c_3.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\language.imageset\subscription_image_c_5.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\certificate.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\certificate.imageset\certificate.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\vocab_trainer_icon.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\vocab_trainer_icon.imageset\vocab_trainer_icon.png" />
+  <ImageAsset Include="Assets.xcassets\download_icon.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\download_icon.imageset\download_icon.png" />
 </ItemGroup>
 <ItemGroup>
   <BundleResource Include="Resources\BackgroundDetail05.jpg" />
