@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oi4-6a-3ST">
-                                <rect key="frame" x="155.5" y="285.5" width="64" height="97"/>
+                                <rect key="frame" x="155.5" y="284.5" width="64" height="99"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nx_logo_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="HPM-43-4KV">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -37,11 +36,12 @@
                                     <constraint firstAttribute="trailing" secondItem="HPM-43-4KV" secondAttribute="trailing" id="OOf-xT-PIb"/>
                                     <constraint firstItem="HPM-43-4KV" firstAttribute="top" secondItem="Oi4-6a-3ST" secondAttribute="top" id="d8v-sr-i3j"/>
                                     <constraint firstItem="HPM-43-4KV" firstAttribute="leading" secondItem="Oi4-6a-3ST" secondAttribute="leading" id="h3a-YT-K49"/>
+                                    <constraint firstItem="HPM-43-4KV" firstAttribute="centerX" secondItem="Oi4-6a-3ST" secondAttribute="centerX" id="k7w-I7-78f"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAXAM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCt-LY-o9Q">
-                                <rect key="frame" x="155" y="361.5" width="64" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <rect key="frame" x="151.5" y="360.5" width="71.5" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -51,7 +51,7 @@
                             <constraint firstItem="Oi4-6a-3ST" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="19h-2D-Rdc"/>
                             <constraint firstItem="CCt-LY-o9Q" firstAttribute="top" secondItem="HPM-43-4KV" secondAttribute="bottom" constant="12" id="6Ez-iF-MRq"/>
                             <constraint firstItem="Oi4-6a-3ST" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Eeu-3c-S9g"/>
-                            <constraint firstItem="CCt-LY-o9Q" firstAttribute="centerX" secondItem="HPM-43-4KV" secondAttribute="centerX" id="RRx-yM-6jz"/>
+                            <constraint firstItem="CCt-LY-o9Q" firstAttribute="centerX" secondItem="HPM-43-4KV" secondAttribute="centerX" id="Z5P-nU-V8i"/>
                             <constraint firstItem="CCt-LY-o9Q" firstAttribute="bottom" secondItem="Oi4-6a-3ST" secondAttribute="bottom" id="ZXL-ZN-eqz"/>
                         </constraints>
                     </view>

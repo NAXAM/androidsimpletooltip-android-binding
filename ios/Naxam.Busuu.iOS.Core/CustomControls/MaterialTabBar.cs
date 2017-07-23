@@ -110,7 +110,7 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 			if (tabbar.Subviews.Length > 1)
 			{
 				_IconSize = tabbar.Subviews[1].Subviews[0].Frame.Size;
-				_LabelHeight = tabbar.Subviews[1].Subviews[1].Frame.Height;
+				_LabelHeight = tabbar.Subviews[1].Subviews[0].Frame.Height;
 			}
 
 			BackgroundColor = UIColor.White;

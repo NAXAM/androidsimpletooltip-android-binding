@@ -38,14 +38,14 @@ namespace Naxam.Busuu.iOS
 
         protected override IEnumerable<Assembly> GetViewAssemblies()
         {
-            var assemblies = new List<Assembly>
-            {
-                typeof(StartPageView).Assembly,
-                typeof(MainView).Assembly,
-                typeof(SocialView).Assembly,
-                typeof(NotificationView).Assembly,
-                typeof(ProfileView).Assembly,
-                typeof(ReviewAllView).Assembly
+			var assemblies = new List<Assembly>
+			{
+				typeof(StartPageView).Assembly,
+                typeof(MainView).Assembly,              
+                typeof(ReviewAllView).Assembly,
+				typeof(SocialView).Assembly,
+				typeof(NotificationView).Assembly,
+				typeof(ProfileView).Assembly
 			};
 
 			assemblies.AddRange(base.GetViewAssemblies());
