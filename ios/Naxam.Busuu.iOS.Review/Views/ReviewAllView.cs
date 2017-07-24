@@ -61,8 +61,6 @@ namespace Naxam.Busuu.iOS.Review.Views
             };
             actionButton.SetTitle("+", UIControlState.Normal);
 
-            actionButton.BackgroundColor = UIColor.Blue;
-
             // Perform any additional setup after loading the view, typically from a nib.
 
             ReviewTableView.RowHeight = 60;
@@ -196,13 +194,15 @@ namespace Naxam.Busuu.iOS.Review.Views
             UpdateKeyFromList(AllReviews);
             ReviewTableView.ReloadData();
             UIView.Animate(0.2, () =>
-            {
-                uiViewSlide.Center = new CGPoint(btnAll.Frame.GetMidX(), btnAll.Frame.GetMaxY() - uiViewSlide.Bounds.Size.Height / 2);
-                uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
-                btnAll.SetTitleColor(UIColor.FromRGB(86, 156, 201), UIControlState.Normal);
-                btnFavorite.SetTitleColor(UIColor.LightGray, UIControlState.Normal);
-            });
+				            {
+				                uiViewSlide.Center = new CGPoint(btnAll.Frame.GetMidX(), btnAll.Frame.GetMaxY() - uiViewSlide.Bounds.Size.Height);
+				                uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
+				                btnAll.SetTitleColor(UIColor.FromRGB(57, 169, 246), UIControlState.Normal);
+				                btnFavorite.SetTitleColor(UIColor.FromRGB(167, 176, 182), UIControlState.Normal);
+				            });
             FavoriteReviews = null;
+            btnAll.Enabled = false;
+            btnFavorite.Enabled = true;
         }
 
         partial void btnFavorite_TouchUpInside(NSObject sender)
@@ -213,15 +213,15 @@ namespace Naxam.Busuu.iOS.Review.Views
             FilterFavorite();
             UpdateKeyFromList(FavoriteReviews);
             ReviewTableView.ReloadData();
-
             UIView.Animate(0.2, () =>
- {
-     uiViewSlide.Center = new CGPoint(btnFavorite.Frame.GetMidX(), btnFavorite.Frame.GetMaxY() - uiViewSlide.Bounds.Size.Height / 2);
-     uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
-     btnFavorite.SetTitleColor(UIColor.FromRGB(86, 156, 201), UIControlState.Normal);
-
-     btnAll.SetTitleColor(UIColor.LightGray, UIControlState.Normal);
- });
+							 {
+							     uiViewSlide.Center = new CGPoint(btnFavorite.Frame.GetMidX(), btnFavorite.Frame.GetMaxY() - uiViewSlide.Bounds.Size.Height);
+							     uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
+							     btnFavorite.SetTitleColor(UIColor.FromRGB(57, 169, 246), UIControlState.Normal);
+							     btnAll.SetTitleColor(UIColor.FromRGB(167, 176, 182), UIControlState.Normal);
+							 });
+            btnFavorite.Enabled = false;
+            btnAll.Enabled = true;
         }
 
         public override void DidReceiveMemoryWarning()

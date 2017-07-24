@@ -13,7 +13,7 @@ namespace Naxam.Busuu.IOS.Review.Floaty
 
         /// The button's background color : set default color and selected color
 
-        UIColor _backgroundColor = UIColor.Blue;
+        UIColor _backgroundColor = UIColor.Orange;
         public UIColor BackgroundColor
         {
             get => _backgroundColor;
@@ -24,7 +24,7 @@ namespace Naxam.Busuu.IOS.Review.Floaty
         }
 
         /// The button's background color : set default color
-        UIColor backgroundColorSelected = UIColor.Blue;
+        UIColor backgroundColorSelected = UIColor.Orange;
 
         /// Indicates if the buttons is active (showing its items)
         bool Active = false;

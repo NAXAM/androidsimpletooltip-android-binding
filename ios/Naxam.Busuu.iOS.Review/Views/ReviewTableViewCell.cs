@@ -29,6 +29,7 @@ namespace Naxam.Busuu.iOS.Review.Views
         {
             lbTitle.Text = Item.Title;
             lbSubtitle.Text = Item.SubTitle;
+            imgWord.Image = UIImage.FromBundle("image_placeholder");
             switch (Item.StrengthLevel)
             {
                 case 0: imgStrength.Image = UIImage.FromBundle("strength_0"); break;
@@ -49,7 +50,6 @@ namespace Naxam.Busuu.iOS.Review.Views
             }
 
             ImageService.Instance.LoadUrl(Item.ImgWord).
-                        LoadingPlaceholder("image_placeholder", ImageSource.CompiledResource).
                         Into(imgWord);
 
             _ringtoneAudioPlayer = AVAudioPlayer.FromUrl(NSUrl.FromFilename(Item.SoundUrl));

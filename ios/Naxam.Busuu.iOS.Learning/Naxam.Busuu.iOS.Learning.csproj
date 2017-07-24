@@ -77,10 +77,6 @@
     <Compile Include="Views\MainView.designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\PremiumView.cs" />
-    <Compile Include="Views\PremiumView.designer.cs">
-      <DependentUpon>PremiumView.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Naxam.Busuu.iOS.Core\Naxam.Busuu.iOS.Core.csproj">

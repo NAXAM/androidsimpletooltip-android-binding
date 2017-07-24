@@ -3,9 +3,9 @@ using System;
 using UIKit;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Binding.BindingContext;
-using Naxam.Busuu.Core.Models;
 using MvvmCross.Platform.Converters;
 using System.Globalization;
+using Naxam.Busuu.Core.Models;
 
 namespace Naxam.Busuu.iOS.Core
 {

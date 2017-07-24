@@ -66,6 +66,19 @@ namespace Naxam.Busuu.Core.ViewModels
             ShowViewModel<BuyPremiumViewModel>();
         }
 
+		private IMvxCommand _GoBackCommand;
+
+		public IMvxCommand GoBackCommand
+		{
+			get { return _GoBackCommand = _GoBackCommand ?? new MvxCommand(ExecuteGoBackCommand); }
+
+		}
+
+        private void ExecuteGoBackCommand()
+        {
+            Close(this);
+        }
+
         public PremiumViewModel()
         {
             var random = new Random();

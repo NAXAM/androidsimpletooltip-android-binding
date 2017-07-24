@@ -17,9 +17,17 @@ namespace Naxam.Busuu.iOS.Core
 
 		[Outlet]
 		UIKit.UILabel lbPR { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewRipple { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (viewRipple != null) {
+				viewRipple.Dispose ();
+				viewRipple = null;
+			}
+
 			if (btnGo != null) {
 				btnGo.Dispose ();
 				btnGo = null;
