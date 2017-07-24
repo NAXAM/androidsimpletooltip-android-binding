@@ -41,7 +41,7 @@ namespace Naxam.Busuu.iOS.Notification.Views
 			NotificationTableView.EstimatedRowHeight = 72f;
 			NotificationTableView.Source = nSource;
 
-            this.TabBarController.TabBar.Items[2].BadgeValue = null;	
+            this.TabBarController.TabBar.Items[3].BadgeValue = null;	
         }
 	}
 }

@@ -137,7 +137,8 @@
   <Folder Include="Views\" />
   <Folder Include="Resources\Assets.xcassets\" />
   <Folder Include="Assets.xcassets\" />
-  <Folder Include="Assets.xcassets\download_icon.imageset\" />
+  <Folder Include="Assets.xcassets\learn_tab_icon.imageset\" />
+  <Folder Include="Assets.xcassets\learn_tab_icon_selected.imageset\" />
 </ItemGroup>
 <ItemGroup>
   <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -198,12 +199,27 @@
     <Name>Naxam.Busuu.Review</Name>
   </ProjectReference>
   <ProjectReference Include="..\..\Naxam.Busuu\Naxam.Busuu.csproj">
-    <Project>{51CFB2E1-B73F-48BA-B205-02F74CE40050}</Project>
+    <Project>{60D3471E-3D82-482D-AE23-7792DBFE53AA}</Project>
     <Name>Naxam.Busuu</Name>
   </ProjectReference>
   <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
     <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
     <Name>Naxam.Busuu.Core</Name>
+  <ProjectReference Include="..\..\Naxam.Busuu.Start\Naxam.Busuu.Start.csproj">
+    <Project>{115D0C30-6675-4814-89AC-5AEF6E5EDAEC}</Project>
+    <Name>Naxam.Busuu.Start</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\Naxam.Busuu.iOS.Start\Naxam.Busuu.iOS.Start.csproj">
+    <Project>{7856BAFE-405A-4ABF-9384-A3556FA1B8DD}</Project>
+    <Name>Naxam.Busuu.iOS.Start</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\Naxam.Busuu.iOS.Learning\Naxam.Busuu.iOS.Learning.csproj">
+    <Project>{A8453AAF-F6BF-433B-B268-9954240CBBF4}</Project>
+    <Name>Naxam.Busuu.iOS.Learning</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
+    <Project>{E1334FF3-BC22-4F7C-B363-A01DE69429F8}</Project>
+    <Name>Naxam.Busuu.Learning</Name>
   </ProjectReference>
 </ItemGroup>
 <ItemGroup>
@@ -347,6 +363,12 @@
   <ImageAsset Include="Resources\Assets.xcassets\vocab_trainer_icon.imageset\vocab_trainer_icon.png" />
   <ImageAsset Include="Assets.xcassets\download_icon.imageset\Contents.json" />
   <ImageAsset Include="Assets.xcassets\download_icon.imageset\download_icon.png" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon.imageset\learn_tab_icon.png" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon.imageset\learn_tab_icon%402x.png" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\learn_tab_icon_selected.png" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\learn_tab_icon_selected%402x.png" />
 </ItemGroup>
 <ItemGroup>
   <BundleResource Include="Resources\BackgroundDetail05.jpg" />
@@ -375,6 +397,19 @@
   <BundleResource Include="Resources\Stars\grey_star.png" />
   <BundleResource Include="Resources\Stars\grey_star2.png" />
   <BundleResource Include="Resources\Stars\yellow_star_d.png" />
+  <BundleResource Include="Resources\imgStartPage.jpg" />
+  <BundleResource Include="Resources\logoBusuuText.png" />
+  <BundleResource Include="Resources\flag_small_french.png" />
+  <BundleResource Include="Resources\flag_small_indonesia.png" />
+  <BundleResource Include="Resources\flag_small_italian.png" />
+  <BundleResource Include="Resources\flag_small_japanese.png" />
+  <BundleResource Include="Resources\flag_small_polish.png" />
+  <BundleResource Include="Resources\flag_small_russian.png" />
+  <BundleResource Include="Resources\flag_small_turkish.png" />
+  <BundleResource Include="Resources\intercom_back.png" />
+  <BundleResource Include="Resources\google_logo.png" />
+  <BundleResource Include="Resources\facebook_logo.png" />
+  <BundleResource Include="Resources\nx_logo_white.png" />
 </ItemGroup>
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -20,7 +20,10 @@ using Naxam.Busuu.iOS.Core.Converter;
 using UIKit;
 using Naxam.Busuu.iOS.Core;
 using Naxam.Busuu.Core.ViewModels;
-               
+using Naxam.Busuu.iOS.Start.Views;
+using Naxam.Busuu.iOS.Learning.Views;
+using Naxam.Busuu.Learning.ViewModel;
+
 namespace Naxam.Busuu.iOS
 {
     public class Setup : MvxIosSetup
@@ -37,12 +40,14 @@ namespace Naxam.Busuu.iOS
 
         protected override IEnumerable<Assembly> GetViewAssemblies()
         {
-            var assemblies = new List<Assembly>
-            {
-                typeof(SocialView).Assembly,
-                typeof(NotificationView).Assembly,
-                typeof(RegisterView).Assembly,
+			var assemblies = new List<Assembly>
+			{
+				typeof(StartPageView).Assembly,
+                typeof(MainView).Assembly,              
                 typeof(ReviewAllView).Assembly,
+				typeof(SocialView).Assembly,
+				typeof(NotificationView).Assembly,
+				typeof(ProfileView).Assembly,
                 typeof(PremiumView).Assembly
 			};
 
@@ -54,10 +59,12 @@ namespace Naxam.Busuu.iOS
         {
 			var assemblies = new List<Assembly>
 			{
+                typeof(StartPageViewModel).Assembly,
+                typeof(MainViewModel).Assembly,
 				typeof(ReviewViewModel).Assembly,
                 typeof(SocialViewModel).Assembly,
                 typeof(NotificationViewModel).Assembly,
-                typeof(RegisterViewModel).Assembly,
+                typeof(ProfileViewModel).Assembly,
                 typeof(PremiumViewModel).Assembly
 			};
 

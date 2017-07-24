@@ -14,22 +14,22 @@ namespace Naxam.Busuu.iOS.Notification.Cells
 
 		public NotificationCell (IntPtr handle) : base(handle)
 		{
-            _loaderImageUser = new MvxImageViewLoader(() => this.imgUser);                      
-		}
-
-        public override void AwakeFromNib()
-        {
-			base.AwakeFromNib();
+            _loaderImageUser = new MvxImageViewLoader(() => this.imgUser);
 
 			this.DelayBind(() =>
 			{
 				var setBinding = this.CreateBindingSet<NotificationCell, NotificationModel>();
-                setBinding.Bind(_loaderImageUser).To(n => n.ImgUser).WithConversion("ImageUriValueConverter");
+				setBinding.Bind(_loaderImageUser).To(n => n.ImgUser).WithConversion("ImageUriValueConverter");
 				setBinding.Bind(lblDetail).For("FormattedText").To(n => n.Details).WithConversion("NotificationTextConverter");
 				setBinding.Bind(lblTime).To(n => n.Time).WithConversion("NotificationDatetimeConverter");
 				setBinding.Bind(ContentView).For(n => n.BackgroundColor).To(n => n.Check).WithConversion("NotificationColorConverter");
 				setBinding.Apply();
 			});
+		}
+
+        public override void AwakeFromNib()
+        {
+			base.AwakeFromNib();	
 
             imgUser.Layer.CornerRadius = imgUser.Frame.Width / 2;
         }
