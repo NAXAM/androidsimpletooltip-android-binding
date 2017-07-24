@@ -5,6 +5,7 @@ using System;
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
+using MaterialControls;
 using Naxam.Busuu.Start.ViewModel;
 using UIKit;
 
@@ -13,6 +14,9 @@ namespace Naxam.Busuu.iOS.Start
     [MvxFromStoryboard(StoryboardName = "Start")]
     public partial class LoginView : MvxViewController<LoginViewModel>
 	{
+        MDTextField fieldEmailPhone;
+        MDTextField fieldPass;
+
 		public LoginView (IntPtr handle) : base (handle)
 		{
 		}
@@ -22,6 +26,31 @@ namespace Naxam.Busuu.iOS.Start
             base.ViewDidLoad();
 
             this.NavigationController.NavigationBarHidden = false;
+
+			fieldEmailPhone = new MDTextField();
+			fieldEmailPhone.SingleLine = true;
+            fieldEmailPhone.TextColor = UIColor.FromRGB(172, 180, 186);
+			fieldEmailPhone.HighlightColor = UIColor.FromRGB(57, 169, 246);
+			fieldEmailPhone.LabelsFont = UIFont.SystemFontOfSize(13.5f);
+			fieldEmailPhone.InputTextFont = UIFont.SystemFontOfSize(13.5f);
+            fieldEmailPhone.ShouldBeginEditing = FieldEmailPhone_ShouldBeginEditing;
+            fieldEmailPhone.ShouldEndEditing = FieldEmailPhone_ShouldEndEditing;
+            fieldEmailPhone.ShouldChangeText = HandleTextFieldShouldChangeText;
+			fieldEmailPhone.Layer.Frame = new CoreGraphics.CGRect(0, 0, ViewEmail.Bounds.Width, ViewEmail.Bounds.Height);
+
+			fieldPass = new MDTextField();
+			fieldPass.SingleLine = true;
+            fieldPass.TextColor = UIColor.FromRGB(172, 180, 186);
+			fieldPass.HighlightColor = UIColor.FromRGB(57, 169, 246);
+			fieldPass.LabelsFont = UIFont.SystemFontOfSize(13.5f);
+			fieldPass.InputTextFont = UIFont.SystemFontOfSize(13.5f);
+            fieldPass.ShouldBeginEditing = FieldPass_ShouldBeginEditing;
+            fieldPass.ShouldEndEditing = FieldPass_ShouldEndEditing;
+            fieldPass.ShouldChangeText = HandleTextFieldShouldChangeText;
+			fieldPass.Layer.Frame = new CoreGraphics.CGRect(0, 0, ViewPassword.Bounds.Width, ViewPassword.Bounds.Height);
+
+			ViewEmail.AddSubview(fieldEmailPhone);
+			ViewPassword.AddSubview(fieldPass);
 
 			ViewShadow.Layer.ShadowRadius = 2;
 			ViewShadow.Layer.ShadowOpacity = 0.25f;
@@ -50,7 +79,78 @@ namespace Naxam.Busuu.iOS.Start
             setBind.Bind(btnFacebook).To(vm => vm.LoginCommend);
             setBind.Bind(btnGoogle).To(vm => vm.LoginCommend);
             setBind.Bind(btnLogin).To(vm => vm.LoginCommend);
+            setBind.Bind(btnForgotPassword).To(vm => vm.ForgotPasswordCommand);
+            setBind.Bind(fieldEmailPhone).For(vm => vm.Text).To(vm => vm.TextEmail);
+            setBind.Bind(fieldPass).For(vm => vm.Text).To(vm => vm.TextPass);
+            setBind.Bind(btnLogin).For(vm => vm.Enabled).To(vm => vm.IsEnableLoginBtn);
 			setBind.Apply();
 		}
-	}
+
+        bool FieldEmailPhone_ShouldBeginEditing(MDTextField textField)
+        {
+			fieldEmailPhone.TextColor = UIColor.Black;
+            if (fieldEmailPhone.Text == "Email address or phone number")
+            {
+                fieldEmailPhone.Text = "";          
+            }
+            return true;
+        }
+
+        bool FieldEmailPhone_ShouldEndEditing(MDTextField textField)
+        {
+            fieldEmailPhone.TextColor = UIColor.FromRGB(172, 180, 186);
+            if (fieldEmailPhone.Text == "")
+            {
+                
+                fieldEmailPhone.Text = "Email address or phone number";
+            }
+
+            return true;
+        }
+
+		bool FieldPass_ShouldBeginEditing(MDTextField textField)
+		{
+            fieldPass.TextColor = UIColor.Black;
+            fieldPass.SecureTextEntry = true;
+            if (fieldPass.Text == "Password (minimum 6 characters)")
+			{
+                fieldPass.Text = "";
+			}
+
+			return true;
+		}
+
+		bool FieldPass_ShouldEndEditing(MDTextField textField)
+		{
+            fieldPass.TextColor = UIColor.FromRGB(172, 180, 186);
+            if (fieldPass.Text == "")
+			{
+                fieldPass.SecureTextEntry = false;
+                fieldPass.Text = "Password (minimum 6 characters)";
+			}
+
+			return true;
+		}
+
+        bool HandleTextFieldShouldChangeText(MDTextField textField, NSRange range, string text)
+        {
+            if (btnLogin.Enabled)
+            {
+                btnLogin.BackgroundColor = UIColor.FromRGB(57, 169, 246);
+				btnLogin.Layer.ShadowRadius = 1;
+				btnLogin.Layer.ShadowOpacity = 0.25f;
+				btnLogin.Layer.ShadowOffset = new CoreGraphics.CGSize(0, 1);
+
+            }
+            else
+            {
+                btnLogin.BackgroundColor = UIColor.FromRGB(214, 222, 230);
+				btnLogin.Layer.ShadowRadius = 0;
+				btnLogin.Layer.ShadowOpacity = 0;
+				btnLogin.Layer.ShadowOffset = new CoreGraphics.CGSize(0, 0);
+            }
+
+            return true;
+        }
+    }
 }

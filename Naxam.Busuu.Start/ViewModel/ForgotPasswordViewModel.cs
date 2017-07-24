@@ -19,13 +19,7 @@ namespace Naxam.Busuu.Start.ViewModel
                     RaisePropertyChanged(() => EmailPhone);
                 }
             }
-        }
-        IDialogService dailogService;
-        public ForgotPasswordViewModel(IDialogService dailogService)
-        {
-            this.dailogService = dailogService;
-           
-        }
+        }    
 
         public void Init(LanguageModel firstNavObject)
         {
@@ -37,7 +31,6 @@ namespace Naxam.Busuu.Start.ViewModel
         public IMvxCommand ForgotPasswordCommand
         {
             get { return _forgotPasswordCommand = _forgotPasswordCommand ?? new MvxCommand(RunForgotPasswordCommand); }
-
         }
 
         void RunForgotPasswordCommand()

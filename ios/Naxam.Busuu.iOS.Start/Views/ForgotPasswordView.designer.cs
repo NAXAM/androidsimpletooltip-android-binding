@@ -1,0 +1,37 @@
+// WARNING
+//
+// This file has been generated automatically by Visual Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
+//
+using Foundation;
+using System.CodeDom.Compiler;
+
+namespace Naxam.Busuu.iOS.Start.Views
+{
+	[Register ("ForgotPasswordView")]
+	partial class ForgotPasswordView
+	{
+		[Outlet]
+		UIKit.UIButton btnSendLink { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewShadow { get; set; }
+
+		[Action ("btnSendLink_TochUpInside:")]
+		partial void btnSendLink_TochUpInside (Foundation.NSObject sender);
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (ViewShadow != null) {
+				ViewShadow.Dispose ();
+				ViewShadow = null;
+			}
+
+			if (btnSendLink != null) {
+				btnSendLink.Dispose ();
+				btnSendLink = null;
+			}
+		}
+	}
+}

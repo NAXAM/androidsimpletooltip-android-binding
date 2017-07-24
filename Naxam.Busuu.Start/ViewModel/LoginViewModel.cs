@@ -22,7 +22,7 @@ namespace Naxam.Busuu.Start.ViewModel
         }
 
 
-        private string _TextPass;
+        private string _TextPass = "Password (minimum 6 characters)";
 
         public string TextPass
         {
@@ -38,7 +38,7 @@ namespace Naxam.Busuu.Start.ViewModel
             }
         }
 
-        private string _TextEmail;
+        private string _TextEmail = "Email address or phone number";
 
         public string TextEmail
         {
@@ -53,12 +53,10 @@ namespace Naxam.Busuu.Start.ViewModel
                 }
             }
         }
-        private IMvxCommand _ForgotPasswordCommand;
-
+       
         public IMvxCommand ForgotPasswordCommand
         {
-            get { return _ForgotPasswordCommand = _ForgotPasswordCommand ?? new MvxCommand(RunForgotPasswordCommand); }
-
+            get { return new MvxCommand(() => ShowViewModel<ForgotPasswordViewModel>()); }
         }
 
         void RunForgotPasswordCommand()
@@ -75,12 +73,18 @@ namespace Naxam.Busuu.Start.ViewModel
 
         private bool CheckPhoneNumber(string email, string pass)
         {
-            Regex regex = new Regex("^[a-zA-Z0-9-_\\.]+@[a-z0-9]+\\.[a-z]{2,4}$");
-            bool checkMail = regex.IsMatch(email);
+            if ((TextEmail != "Email address or phone number") && (TextPass != "Password (minimum 6 characters)"))
+            {
+                Regex regex = new Regex("^[a-zA-Z0-9-_\\.]+@[a-z0-9]+\\.[a-z]{2,4}$");
+                bool checkMail = regex.IsMatch(email);
 
-            Regex regexP = new Regex("^+?[0-9]{9,13}$");
-            bool checkPhone = regexP.IsMatch(email);
-            return (checkMail || checkPhone) && pass.Length >= 6;
+                Regex regexP = new Regex("^+?[0-9]{9,13}$");
+                bool checkPhone = regexP.IsMatch(email);
+
+				return (checkMail || checkPhone) && pass.Length >= 6;
+            }
+
+            return false;
         }
 
 

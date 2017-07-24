@@ -131,6 +131,9 @@
   <Reference Include="FFImageLoading.Platform">
     <HintPath>..\..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
   </Reference>
+  <Reference Include="MaterialControls">
+    <HintPath>..\..\packages\MaterialControls.1.2.2\lib\Xamarin.iOS10\MaterialControls.dll</HintPath>
+  </Reference>
 </ItemGroup>
 <ItemGroup>
   <Folder Include="Resources\" />

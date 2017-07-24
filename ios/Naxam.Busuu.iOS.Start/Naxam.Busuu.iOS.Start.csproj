@@ -65,6 +65,9 @@
     <Reference Include="MvvmCross.Localization">
       <HintPath>..\..\packages\MvvmCross.Binding.5.1.0\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialControls">
+      <HintPath>..\..\packages\MaterialControls.1.2.2\lib\Xamarin.iOS10\MaterialControls.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -94,6 +97,10 @@
     <Compile Include="Views\StartPageView.cs" />
     <Compile Include="Views\StartPageView.designer.cs">
       <DependentUpon>..\..\Naxam.Busuu.iOS.Profile\Views\StartPageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ForgotPasswordView.cs" />
+    <Compile Include="Views\ForgotPasswordView.designer.cs">
+      <DependentUpon>ForgotPasswordView.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

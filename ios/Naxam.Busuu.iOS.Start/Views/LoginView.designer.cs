@@ -16,6 +16,9 @@ namespace Naxam.Busuu.iOS.Start
 		UIKit.UIButton btnFacebook { get; set; }
 
 		[Outlet]
+		UIKit.UIButton btnForgotPassword { get; set; }
+
+		[Outlet]
 		UIKit.UIButton btnGoogle { get; set; }
 
 		[Outlet]
@@ -28,18 +31,24 @@ namespace Naxam.Busuu.iOS.Start
 		UIKit.UIView viewbtnGoogle { get; set; }
 
 		[Outlet]
+		UIKit.UIView ViewEmail { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewPassword { get; set; }
+
+		[Outlet]
 		UIKit.UIView ViewShadow { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (ViewShadow != null) {
-				ViewShadow.Dispose ();
-				ViewShadow = null;
-			}
-
 			if (btnFacebook != null) {
 				btnFacebook.Dispose ();
 				btnFacebook = null;
+			}
+
+			if (btnForgotPassword != null) {
+				btnForgotPassword.Dispose ();
+				btnForgotPassword = null;
 			}
 
 			if (btnGoogle != null) {
@@ -47,9 +56,19 @@ namespace Naxam.Busuu.iOS.Start
 				btnGoogle = null;
 			}
 
+			if (btnLogin != null) {
+				btnLogin.Dispose ();
+				btnLogin = null;
+			}		
+
 			if (viewbtnFacebook != null) {
 				viewbtnFacebook.Dispose ();
 				viewbtnFacebook = null;
+			}
+
+			if (ViewEmail != null) {
+				ViewEmail.Dispose ();
+				ViewEmail = null;
 			}
 
 			if (viewbtnGoogle != null) {
@@ -57,9 +76,14 @@ namespace Naxam.Busuu.iOS.Start
 				viewbtnGoogle = null;
 			}
 
-			if (btnLogin != null) {
-				btnLogin.Dispose ();
-				btnLogin = null;
+			if (ViewPassword != null) {
+				ViewPassword.Dispose ();
+				ViewPassword = null;
+			}
+            	
+			if (ViewShadow != null) {
+				ViewShadow.Dispose ();
+				ViewShadow = null;
 			}
 		}
 	}
