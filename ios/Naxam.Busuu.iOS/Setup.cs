@@ -22,6 +22,8 @@ using Naxam.Busuu.iOS.Start.Views;
 using Naxam.Busuu.iOS.Learning.Views;
 using Naxam.Busuu.Learning.ViewModel;
 
+using Naxam.Busuu.Core.Converter;
+
 namespace Naxam.Busuu.iOS
 {
     public class Setup : MvxIosSetup
@@ -91,7 +93,8 @@ namespace Naxam.Busuu.iOS
             registry.AddOrOverwrite("BoolInverseConverter", new BoolInverseConverter());
 			registry.AddOrOverwrite("StarTextConverter", new StarTextConverter());
             registry.AddOrOverwrite("HowDidTextConverter", new HowDidTextConverter());
-			registry.AddOrOverwrite("DatetimeTextConverter", new DatetimeTextConverter());
+            registry.AddOrOverwrite("DatetimeTextConverter", new DatetimeTextConverter());
+			registry.AddOrOverwrite("PostedTimeToStringConverter", new PostedTimeToStringConverter());
             registry.AddOrOverwrite("FriendsImgSpeakValueConverter", new FriendsImgSpeakConverter());
             registry.AddOrOverwrite("NotificationTextConverter", new NotificationTextConverter());
             registry.AddOrOverwrite("NotificationDatetimeConverter", new NotificationDatetimeConverter());
