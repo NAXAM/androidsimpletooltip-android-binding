@@ -16,6 +16,9 @@ namespace Naxam.Busuu.iOS.Start.Views
 		UIKit.UIButton btnSendLink { get; set; }
 
 		[Outlet]
+		UIKit.UIView viewEmailPhone { get; set; }
+
+		[Outlet]
 		UIKit.UIView ViewShadow { get; set; }
 
 		[Action ("btnSendLink_TochUpInside:")]
@@ -23,14 +26,19 @@ namespace Naxam.Busuu.iOS.Start.Views
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnSendLink != null) {
+				btnSendLink.Dispose ();
+				btnSendLink = null;
+			}
+
 			if (ViewShadow != null) {
 				ViewShadow.Dispose ();
 				ViewShadow = null;
 			}
 
-			if (btnSendLink != null) {
-				btnSendLink.Dispose ();
-				btnSendLink = null;
+			if (viewEmailPhone != null) {
+				viewEmailPhone.Dispose ();
+				viewEmailPhone = null;
 			}
 		}
 	}

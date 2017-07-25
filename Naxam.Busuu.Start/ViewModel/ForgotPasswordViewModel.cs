@@ -1,12 +1,26 @@
-﻿using MvvmCross.Core.ViewModels;
-using Naxam.Busuu.Start.Model;
-using Naxam.Busuu.Start.Service;
+﻿using System.Text.RegularExpressions;
+using MvvmCross.Core.ViewModels;
 
 namespace Naxam.Busuu.Start.ViewModel
 {
     public class ForgotPasswordViewModel : MvxViewModel
     {
-        private string _emailPhone;
+		bool _IsEnableLoginSend;
+
+		public bool IsEnableLoginSend
+		{
+			get { return _IsEnableLoginSend; }
+			set
+			{
+				if (_IsEnableLoginSend != value)
+				{
+					_IsEnableLoginSend = value;
+					RaisePropertyChanged(() => IsEnableLoginSend);
+				}
+			}
+		}
+
+        string _emailPhone = "Email address or phone number";
 
         public string EmailPhone
         {
@@ -16,26 +30,31 @@ namespace Naxam.Busuu.Start.ViewModel
                 if (_emailPhone != value)
                 {
                     _emailPhone = value;
+                    IsEnableLoginSend = CheckPhoneNumber(EmailPhone);
                     RaisePropertyChanged(() => EmailPhone);
                 }
             }
         }    
 
-        public void Init(LanguageModel firstNavObject)
-        {
-            // use firstNavObject
-        }
-
-        private IMvxCommand _forgotPasswordCommand;
-
         public IMvxCommand ForgotPasswordCommand
         {
-            get { return _forgotPasswordCommand = _forgotPasswordCommand ?? new MvxCommand(RunForgotPasswordCommand); }
+            get { return new MvxCommand(() => ShowViewModel<RegisterViewModel>(EmailPhone)); }
         }
 
-        void RunForgotPasswordCommand()
-        {
-            ShowViewModel<RegisterViewModel>(EmailPhone);
-        }
+		bool CheckPhoneNumber(string email)
+		{
+            if (EmailPhone != "Email address or phone number")
+			{
+				Regex regex = new Regex("^[a-zA-Z0-9-_\\.]+@[a-z0-9]+\\.[a-z]{2,4}$");
+				bool checkMail = regex.IsMatch(email);
+
+				Regex regexP = new Regex("^+?[0-9]{9,13}$");
+				bool checkPhone = regexP.IsMatch(email);
+
+				return (checkMail || checkPhone);
+			}
+
+			return false;
+		}
     }
 }

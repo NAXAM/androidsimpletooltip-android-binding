@@ -6,7 +6,7 @@ namespace Naxam.Busuu.Start.ViewModel
 {
     public class LoginViewModel : MvxViewModel
     {
-        private bool _IsEnableLoginBtn;
+        bool _IsEnableLoginBtn;
 
         public bool IsEnableLoginBtn
         {
@@ -22,7 +22,7 @@ namespace Naxam.Busuu.Start.ViewModel
         }
 
 
-        private string _TextPass = "Password (minimum 6 characters)";
+        string _TextPass = "Password (minimum 6 characters)";
 
         public string TextPass
         {
@@ -38,7 +38,7 @@ namespace Naxam.Busuu.Start.ViewModel
             }
         }
 
-        private string _TextEmail = "Email address or phone number";
+        string _TextEmail = "Email address or phone number";
 
         public string TextEmail
         {
@@ -59,19 +59,12 @@ namespace Naxam.Busuu.Start.ViewModel
             get { return new MvxCommand(() => ShowViewModel<ForgotPasswordViewModel>()); }
         }
 
-        void RunForgotPasswordCommand()
-        {
-            ShowViewModel<ForgotPasswordViewModel>();
-        }
-
         public IMvxCommand LoginCommend
         {
             get { return new MvxCommand(() => ShowViewModel<MainTabBarViewModel>()); }
         }
-            
-        // Validating information here 
-
-        private bool CheckPhoneNumber(string email, string pass)
+           
+        bool CheckPhoneNumber(string email, string pass)
         {
             if ((TextEmail != "Email address or phone number") && (TextPass != "Password (minimum 6 characters)"))
             {
