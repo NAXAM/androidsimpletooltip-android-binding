@@ -22,7 +22,7 @@ namespace Naxam.Busuu.Social.Services
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!\nI am a new member.",
-                    PublicTime = new DateTime(2017, 5, 29),
+                    PostedTime = new DateTime(2017, 5, 29),
                     Star = 5,
                     Friends = false,
                     ImgQuestion = "ImageMeoNo.jpg",
@@ -39,7 +39,7 @@ namespace Naxam.Busuu.Social.Services
                     TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
-                    PublicTime = new DateTime(2017, 5, 29),
+                    PostedTime = new DateTime(2017, 5, 29),
                     Star = 4.5,
                     Friends = false,
                     ImgQuestion = "ImageMeoNo.jpg",
@@ -56,7 +56,7 @@ namespace Naxam.Busuu.Social.Services
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!",
-                    PublicTime = new DateTime(2017, 5, 28),
+                    PostedTime = new DateTime(2017, 5, 28),
                     Star = 4.5,
                     Friends = false,
                     ImgQuestion = "ImageMeoNo.jpg",
@@ -73,7 +73,7 @@ namespace Naxam.Busuu.Social.Services
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!\nI am a new member.\nI am a new member.\nI am a new member.",
-                    PublicTime = new DateTime(2017, 5, 21),
+                    PostedTime = new DateTime(2017, 5, 21),
                     Star = 4,
                     Friends = false,
                     ImgQuestion = "ImageMeoNo.jpg",
@@ -90,7 +90,7 @@ namespace Naxam.Busuu.Social.Services
                     TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
-                    PublicTime = new DateTime(2017, 5, 21),
+                    PostedTime = new DateTime(2017, 5, 21),
                     Star = 3.5,
                     Friends = false,
                     ImgQuestion = "ImageMeoNo.jpg",
@@ -107,7 +107,7 @@ namespace Naxam.Busuu.Social.Services
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!",
-                    PublicTime = new DateTime(2017, 5, 21),
+                    PostedTime = new DateTime(2017, 5, 21),
                     Star = 3,
                     Friends = false,
                     ImgQuestion = "ImageMeoNo.jpg",
@@ -124,7 +124,7 @@ namespace Naxam.Busuu.Social.Services
                     TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
-                    PublicTime = new DateTime(2017, 5, 19),
+                    PostedTime = new DateTime(2017, 5, 19),
                     Star = 2.5,
                     Friends = false,
                     ImgQuestion = "ImageMeoNo.jpg",
@@ -141,7 +141,7 @@ namespace Naxam.Busuu.Social.Services
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!",
-                    PublicTime = new DateTime(2017, 5, 19),
+                    PostedTime = new DateTime(2017, 5, 19),
                     Star = 2,
                     Friends = false,
                     ImgQuestion = "ImageMeoNo.jpg",
@@ -158,7 +158,7 @@ namespace Naxam.Busuu.Social.Services
                     TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
-                    PublicTime = new DateTime(2017, 5, 19),
+                    PostedTime = new DateTime(2017, 5, 19),
                     Star = 0,
                     Friends = false,
                     ImgQuestion = "ImageMeoNo.jpg",
@@ -175,7 +175,7 @@ namespace Naxam.Busuu.Social.Services
                     TextLearn = "ENGLISH",
                     Speak = false,
                     Write = "Hello Naxam!\nI am a new member.",
-                    PublicTime = new DateTime(2017, 5, 29),
+                    PostedTime = new DateTime(2017, 5, 29),
                     Star = 5,
                     Friends = false,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -192,7 +192,7 @@ namespace Naxam.Busuu.Social.Services
                     TextLearn = "ENGLISH",
                     Speak = true,
                     Write = "Nokia-tune-Nokia-tune.mp3",
-                    PublicTime = new DateTime(2017, 5, 29),
+                    PostedTime = new DateTime(2017, 5, 29),
                     Star = 4.5,
                     Friends = false,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -209,7 +209,7 @@ namespace Naxam.Busuu.Social.Services
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.",
-					PublicTime = new DateTime(2017, 5, 29),
+					PostedTime = new DateTime(2017, 5, 29),
 					Star = 5,
                     Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -226,7 +226,7 @@ namespace Naxam.Busuu.Social.Services
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Nokia-tune-Nokia-tune.mp3",
-					PublicTime = new DateTime(2017, 5, 29),
+					PostedTime = new DateTime(2017, 5, 29),
 					Star = 4.5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -243,7 +243,7 @@ namespace Naxam.Busuu.Social.Services
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!",
-					PublicTime = new DateTime(2017, 5, 28),
+					PostedTime = new DateTime(2017, 5, 28),
 					Star = 4.5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -260,7 +260,7 @@ namespace Naxam.Busuu.Social.Services
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.\nI am a new member.\nI am a new member.",
-					PublicTime = new DateTime(2017, 5, 21),
+					PostedTime = new DateTime(2017, 5, 21),
 					Star = 4,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -277,7 +277,7 @@ namespace Naxam.Busuu.Social.Services
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Nokia-tune-Nokia-tune.mp3",
-					PublicTime = new DateTime(2017, 5, 21),
+					PostedTime = new DateTime(2017, 5, 21),
 					Star = 3.5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -294,7 +294,7 @@ namespace Naxam.Busuu.Social.Services
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!",
-					PublicTime = new DateTime(2017, 5, 21),
+					PostedTime = new DateTime(2017, 5, 21),
 					Star = 3,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -311,7 +311,7 @@ namespace Naxam.Busuu.Social.Services
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Nokia-tune-Nokia-tune.mp3",
-					PublicTime = new DateTime(2017, 5, 19),
+					PostedTime = new DateTime(2017, 5, 19),
 					Star = 2.5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -328,7 +328,7 @@ namespace Naxam.Busuu.Social.Services
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!",
-					PublicTime = new DateTime(2017, 5, 19),
+					PostedTime = new DateTime(2017, 5, 19),
 					Star = 2,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -345,7 +345,7 @@ namespace Naxam.Busuu.Social.Services
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Nokia-tune-Nokia-tune.mp3",
-					PublicTime = new DateTime(2017, 5, 19),
+					PostedTime = new DateTime(2017, 5, 19),
 					Star = 0,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -362,7 +362,7 @@ namespace Naxam.Busuu.Social.Services
 					TextLearn = "ENGLISH",
 					Speak = false,
 					Write = "Hello Naxam!\nI am a new member.",
-					PublicTime = new DateTime(2017, 5, 29),
+					PostedTime = new DateTime(2017, 5, 29),
 					Star = 5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
@@ -379,13 +379,17 @@ namespace Naxam.Busuu.Social.Services
 					TextLearn = "ENGLISH",
 					Speak = true,
 					Write = "Nokia-tune-Nokia-tune.mp3",
-					PublicTime = new DateTime(2017, 5, 29),
+					PostedTime = new DateTime(2017, 5, 29),
 					Star = 4.5,
 					Friends = true,
 					ImgQuestion = "ImageMeoNo.jpg",
 					TextQuestion = "Say hello Naxam!"
 				}
 			};
+            foreach (SocialModel model in list) {
+                model.PostedTime = (DateTimeOffset) DateTimeHelper.RandomDateToNow();
+            }
+            list.Sort( (SocialModel x, SocialModel y) => y.PostedTime.CompareTo(x.PostedTime));
             return list.ToArray();
         }
 
@@ -402,6 +406,28 @@ namespace Naxam.Busuu.Social.Services
         public SocialModel GetSocialById(int id)
         {
             return GetAllSocial().Where(d => d.Id == id).FirstOrDefault();
+        }
+    }
+
+    public class DateTimeHelper {
+		private static readonly Random random = new Random();
+		private static readonly object syncLock = new object();
+
+		public static DateTime RandomDate(DateTime from, DateTime to)
+		{
+			lock (syncLock)
+			{
+				return from.AddTicks((long)(random.NextDouble() * (to.Ticks - from.Ticks)));
+			}
+		}
+
+        public static DateTime RandomDateToNow(DateTime? from = null)
+        {
+            lock (syncLock)
+            {
+                var now = DateTime.Now;
+                return RandomDate(from ?? now.AddDays(-7), now);
+            }
         }
     }
 }
