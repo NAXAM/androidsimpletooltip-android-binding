@@ -19,12 +19,12 @@ using Naxam.Busuu.Droid.Learning.Control.Memo;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class MemoSelectWord : MemoriseFragmentBase
+    public class SelectWordFragment : BaseFragment
     {
-        public override event EventHandler<bool> NextClicked;
+        public override event EventHandler<int> NextClicked;
         private event EventHandler<AnswerModel> AnswerClick;
 
-        public MemoSelectWord(UnitModel Item)
+        public SelectWordFragment(UnitModel Item)
         {
             this.Item = Item;
         }
@@ -37,7 +37,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
         int imageCount, CountAnswer;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            imageCount = Item.Images.Count;
+            imageCount = Item.Images!=null? Item.Images.Count:0;
             listChoice = new Dictionary<TextView, AnswerModel>();
             listTextViewCorrect = new List<TextView>();
             CountAnswer = Item.Answers.Where(d => d.Value).ToList().Count;
@@ -56,7 +56,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             btnNext.Visibility = ViewStates.Gone;
             btnNext.Click += (s, e) =>
             {
-                NextClicked?.Invoke(btnNext, result);
+                NextClicked?.Invoke(btnNext, result?1:0);
             };
             txtQuestion.Text = Item.Title;
 

@@ -11,11 +11,12 @@ using Android.Views;
 using Android.Widget;
 using Naxam.Busuu.Learning.Model;
 
-namespace Naxam.Busuu.Droid.Learning.Control.Dialogue
+namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class DialogueFragmentBase : Android.Support.V4.App.Fragment
-    {
-        public virtual event EventHandler<int> NextClicked;
+    public class BaseFragment : Android.Support.V4.App.Fragment
+    { 
+        public UnitModel Item;
         public IList<UnitModel> Items;
+        public virtual event EventHandler<int> NextClicked;
     }
 }

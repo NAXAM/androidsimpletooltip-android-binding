@@ -20,12 +20,11 @@ using System.Text.RegularExpressions;
 using System.Net;
 using Java.IO;
 using Android.Provider;
-using Android.Database;
-using Naxam.Busuu.Droid.Learning.Control.Dialogue;
+using Android.Database; 
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class DialogueNormalListSentence : DialogueFragmentBase
+    public class DialogueNormalListSentence : BaseFragment
     {
         public override event EventHandler<int> NextClicked;
         public int OrientationScreen;
@@ -55,14 +54,18 @@ namespace Naxam.Busuu.Droid.Learning.Control
             lstView.ItemClick += (s, e) =>
             {
                 AudioModel audio = Items.ElementAt(e.Position).Audios.FirstOrDefault();
+                if (audio == null)
+                    return;
                 btnPlay.Play(audio.Start, audio.End);
             };
 
-            btnPlay.Url = Download("http://www.montemagno.com/sample.mp3");
-            List<AudioModel> listAudio = Items.Select(d => d.Audios.FirstOrDefault()).ToList();
+    
+            //    btnPlay.Url = Download("http://www.montemagno.com/sample.mp3");
+            List<AudioModel> listAudio = Items.Select(d => d.Audios?.FirstOrDefault()).ToList();
             DialogueListNormalAdapter adapter = new DialogueListNormalAdapter(Context, Items, -1);
             btnPlay.PositionChanged += (s, e) =>
             {
+                
                 AudioModel selectedAudio = listAudio.Where(d => d.Start <= e / 1000 && d.End > e / 1000).FirstOrDefault();
                 focusIndex = listAudio.IndexOf(selectedAudio);
                 lstView.SetSelection(focusIndex);
@@ -93,7 +96,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             };
             lstView.Adapter = adapter;
 
-            if (Items[0].Audios.Count > 0)
+            if (Items[0].Audios?.Count > 0)
             {
                 btnPlay.Visibility = ViewStates.Visible;
             }

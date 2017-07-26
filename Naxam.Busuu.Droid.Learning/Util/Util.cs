@@ -25,7 +25,15 @@ namespace Naxam.Busuu.Droid.Learning.Util
 {
     public class Util
     {
-        
+        public static void ClearBackStack(Android.Support.V4.App.FragmentManager manager)
+        {
+
+            if (manager.BackStackEntryCount > 0)
+            {
+                var first = manager.GetBackStackEntryAt(0);
+                manager.PopBackStack(first.Id, Android.Support.V4.App.FragmentManager.PopBackStackInclusive);
+            }
+        }
         public static float DpFromPx(Context context, float px)
         {
             return px / context.Resources.DisplayMetrics.Density;

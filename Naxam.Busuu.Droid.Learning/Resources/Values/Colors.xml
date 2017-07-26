@@ -12,6 +12,7 @@
   <color name="lvColorSelector">#CFEAFC</color>
   <color name="colorTextInput">#A7B0B7</color>
   <color name="colorQuestion">#38A9F6</color>
+  <color name="colorAnswer">#74B826</color>
   <color name="colorTextIncorrect">#E54532</color>
   <color name="colorTextCorrect">#74B826</color>
   <color name="colorSelected">#CFEAFC</color>

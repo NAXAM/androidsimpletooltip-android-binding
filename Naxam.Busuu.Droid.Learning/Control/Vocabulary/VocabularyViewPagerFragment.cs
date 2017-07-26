@@ -16,7 +16,7 @@ using Naxam.Busuu.Droid.Learning.Control.Memo;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Vocabulary
 {
-    public class VocabularyViewPagerFragment : VocabularyFragmentBase
+    public class VocabularyViewPagerFragment : BaseFragment
     {
         Android.Support.V4.App.FragmentManager manager;
         IList<Android.Support.V4.App.Fragment> listFragment;

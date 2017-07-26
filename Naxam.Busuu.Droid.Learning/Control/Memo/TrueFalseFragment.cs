@@ -17,33 +17,34 @@ using Naxam.Busuu.Learning.Model;
 
 namespace Naxam.Busuu.Droid.Learning.Views
 {
-    [Activity]
-    public class TrueFalseHearQuestionView : MvxAppCompatActivity
+    public class TrueFalseHearQuestionView : BaseFragment
     {
+
         private Button btWrong;
         private Button btRight;
         private Button btContinue;
 
-        TrueFalseHearQuestionModel model = new TrueFalseHearQuestionModel()
-        {
-            mp3Link = "",
-            sentence = "What is your name",
-            trueAnswer = true
-        };
+      
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        public TrueFalseHearQuestionView(UnitModel item)
         {
-            base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.hear_true_false_question);
-
-            InitInterface();
+            this.Item = item;
         }
 
-        public void InitInterface()
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            btContinue = FindViewById<Button>(Resource.Id.bt_continue);
-            btRight = FindViewById<Button>(Resource.Id.bt_right);
-            btWrong = FindViewById<Button>(Resource.Id.bt_wrong);
+            View view = inflater.Inflate(Resource.Layout.hear_true_false_question, container, false);
+            InitInterface(view);
+            return view;
+        }
+
+
+
+        public void InitInterface(View view)
+        {
+            btContinue = view.FindViewById<Button>(Resource.Id.bt_continue);
+            btRight = view.FindViewById<Button>(Resource.Id.bt_right);
+            btWrong = view.FindViewById<Button>(Resource.Id.bt_wrong);
 
             btContinue.Visibility = ViewStates.Invisible;
             btRight.Click += BtRightWrong_Click;
@@ -55,7 +56,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
             btContinue.Visibility = ViewStates.Visible;
             Random random = new Random();
             int i = random.Next(0, 2);
-            if ((((Button)sender).Text.Equals("TRUE")&&model.trueAnswer==false)|| (((Button)sender).Text.Equals("FALSE") && model.trueAnswer == true))
+            if ((((Button)sender).Text.Equals("TRUE") && !Item.Answers[0].Value) || (((Button)sender).Text.Equals("FALSE") && Item.Answers[0].Value))
             {
                 ((Button)sender).SetBackgroundResource(Resource.Drawable.ic_wrong);
                 ((Button)sender).Text = "";
@@ -86,7 +87,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
                     }
                 });
             }
-            else if ((((Button)sender).Text.Equals("TRUE") && model.trueAnswer == true) || (((Button)sender).Text.Equals("FALSE") && model.trueAnswer == false))
+            else if ((((Button)sender).Text.Equals("TRUE") && Item.Answers[0].Value) || (((Button)sender).Text.Equals("FALSE") && !Item.Answers[0].Value))
             {
                 ((Button)sender).SetBackgroundResource(Resource.Drawable.ic_right);
                 ((Button)sender).Text = "";

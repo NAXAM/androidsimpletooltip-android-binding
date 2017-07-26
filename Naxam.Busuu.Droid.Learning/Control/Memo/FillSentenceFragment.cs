@@ -24,9 +24,9 @@ using Naxam.Busuu.Droid.Learning.Control.Memo;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
-    public class FillSentenceFragment : MemoriseFragmentBase
+    public class FillSentenceFragment : BaseFragment
     {
-        public override event EventHandler<bool> NextClicked;
+        public override event EventHandler<int> NextClicked;
         private event EventHandler<AnswerModel> AnswerClick;
         public int OrientationScreen;
         bool result; 
@@ -139,7 +139,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             txtInput.SetText(ssb, BufferType.Normal);
             btnNext.Click += (s, e) =>
             {
-                NextClicked?.Invoke(btnNext, result);
+                NextClicked?.Invoke(btnNext, result?1:0);
             };
             btnNext.Visibility = ViewStates.Invisible;
             int margin = (int)Util.Util.PxFromDp(Context, 8);
