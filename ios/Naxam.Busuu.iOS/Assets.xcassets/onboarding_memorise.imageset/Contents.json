@@ -4,7 +4,7 @@
       "idiom": "universal"
     },
     {
-      "filename": "download_icon.png",
+      "filename": "onboarding_memorise.png",
       "scale": "1x",
       "idiom": "universal"
     },
@@ -78,7 +78,6 @@
   ],
   "info": {
     "version": 1,
-    "author": "xcode",
-    "template-rendering-intent": "template"
+    "author": "xcode"
   }
 }

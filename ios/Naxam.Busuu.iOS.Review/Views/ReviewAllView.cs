@@ -72,10 +72,13 @@ namespace Naxam.Busuu.iOS.Review.Views
 
             var buyPremiumCell = BuyPremiumCell.Create();
             buyPremiumCell.Frame = new CGRect(uiViewSlide.Frame.GetMinX(), uiViewSlide.Frame.GetMaxY(), View.Bounds.Size.Width, 50);
-            buyPremiumCell.Layer.MasksToBounds = true;
             View.AddSubview(buyPremiumCell);
 
-            var setBinding = this.CreateBindingSet<ReviewAllView, ReviewViewModel>();
+			uiViewButton.Layer.ShadowRadius = 2;
+			uiViewButton.Layer.ShadowOffset = new CGSize(0, 2);
+			uiViewButton.Layer.ShadowOpacity = 0.25f;
+
+			var setBinding = this.CreateBindingSet<ReviewAllView, ReviewViewModel>();
             setBinding.Bind(buyPremiumCell.BtnGo).To(vm => vm.GoPremiumCommand);
             setBinding.Apply();
 

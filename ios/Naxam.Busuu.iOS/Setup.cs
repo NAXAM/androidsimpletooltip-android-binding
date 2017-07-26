@@ -23,6 +23,8 @@ using Naxam.Busuu.Core.ViewModels;
 using Naxam.Busuu.iOS.Start.Views;
 using Naxam.Busuu.iOS.Learning.Views;
 using Naxam.Busuu.Learning.ViewModel;
+using CoreAnimation;
+using Naxam.Busuu.iOS.Core.Views;
 
 namespace Naxam.Busuu.iOS
 {
@@ -85,6 +87,14 @@ namespace Naxam.Busuu.iOS
                 "FormattedText",
                 x => new AttributedTextTargetBinding(x)
             );
+            registry.RegisterCustomBindingFactory<CALayer>(
+                "BorderColor",
+                x=> new ColorTargetBinding(x)
+            );
+			registry.RegisterCustomBindingFactory<RippleLayer>(
+				"RippleColor",
+				x => new RippleColorTargetBinding(x)
+			);
         }
 
 		protected override void FillValueConverters(IMvxValueConverterRegistry registry)

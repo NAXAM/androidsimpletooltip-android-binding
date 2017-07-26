@@ -65,17 +65,33 @@
     <Reference Include="MvvmCross.Localization">
       <HintPath>..\..\packages\MvvmCross.Binding.5.1.0\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialControls">
+      <HintPath>..\..\packages\MaterialControls.1.2.2\lib\Xamarin.iOS10\MaterialControls.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
     <Folder Include="Resources\Assets.xcassets\" />
+    <Folder Include="Cells\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\MainView.designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\LessonTableViewCell.cs" />
+    <Compile Include="Cells\LessonTableViewCell.designer.cs">
+      <DependentUpon>LessonTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\SubLessonTableViewCell.cs" />
+    <Compile Include="Cells\SubLessonTableViewCell.designer.cs">
+      <DependentUpon>SubLessonTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\LessonHeader.cs" />
+    <Compile Include="Cells\LessonHeader.designer.cs">
+      <DependentUpon>LessonHeader.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Learning.storyboard" />
+    <InterfaceDefinition Include="Cells\LessonHeader.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

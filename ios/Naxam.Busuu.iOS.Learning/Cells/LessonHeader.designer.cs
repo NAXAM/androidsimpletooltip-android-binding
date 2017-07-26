@@ -7,19 +7,19 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace Naxam.Busuu.iOS.Learning.Views
+namespace Naxam.Busuu.iOS.Learning
 {
-	[Register ("MainView")]
-	partial class MainView
+	[Register ("LessonHeader")]
+	partial class LessonHeader
 	{
 		[Outlet]
-		UIKit.UITableView LessonTableView { get; set; }
+		UIKit.UILabel lbHeader { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (LessonTableView != null) {
-				LessonTableView.Dispose ();
-				LessonTableView = null;
+			if (lbHeader != null) {
+				lbHeader.Dispose ();
+				lbHeader = null;
 			}
 		}
 	}

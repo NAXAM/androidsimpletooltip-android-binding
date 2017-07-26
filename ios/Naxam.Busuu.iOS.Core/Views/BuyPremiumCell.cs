@@ -21,7 +21,7 @@ namespace Naxam.Busuu.iOS.Core
 
 		public override void AwakeFromNib()
 		{
-			var premiumShape = new RippleLayer(this, UIColor.LightGray, UIColor.Clear);
+			var premiumShape = new RippleLayer(viewRipple, UIColor.LightGray, UIColor.Clear);
 
 			var cellGesture = new UITapGestureRecognizer((UITapGestureRecognizer obj) =>
 						{
@@ -29,12 +29,14 @@ namespace Naxam.Busuu.iOS.Core
 							premiumShape.WillAnimateTapGesture(touchLocation);
                             BtnGo.SendActionForControlEvents(UIControlEvent.TouchUpInside);
 						});
-			this.AddGestureRecognizer(cellGesture);
+			contentView.AddGestureRecognizer(cellGesture);
 
-            Layer.ShadowColor = UIColor.LightGray.CGColor;
-			Layer.ShadowOpacity = 0.8f;
-			Layer.ShadowRadius = 3.0f;
-			Layer.ShadowOffset = new CoreGraphics.CGSize(1.0, 1.0);
+            viewRipple.Layer.MasksToBounds = true;
+
+            contentView.Layer.ShadowColor = UIColor.LightGray.CGColor;
+			contentView.Layer.ShadowOpacity = 0.8f;
+			contentView.Layer.ShadowRadius = 3.0f;
+			contentView.Layer.ShadowOffset = new CoreGraphics.CGSize(1.0, 1.0);
 			BtnGo.Layer.CornerRadius = BtnGo.Bounds.Size.Height / 2;
 		}
 
@@ -44,5 +46,10 @@ namespace Naxam.Busuu.iOS.Core
             set => btnGo = value;
         }
 
-	}
+        public UIView ContentView
+        {
+            get => contentView;
+            set => contentView = value;
+        }
+    }
 }

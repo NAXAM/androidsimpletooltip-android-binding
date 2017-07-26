@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Linq.Expressions;
+using MvvmCross.Platform.UI;
 
 namespace Naxam.Busuu.Learning.Model
 {

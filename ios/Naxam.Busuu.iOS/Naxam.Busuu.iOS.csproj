@@ -139,6 +139,7 @@
   <Folder Include="Assets.xcassets\" />
   <Folder Include="Assets.xcassets\learn_tab_icon.imageset\" />
   <Folder Include="Assets.xcassets\learn_tab_icon_selected.imageset\" />
+  <Folder Include="Assets.xcassets\onboarding_memorise.imageset\" />
 </ItemGroup>
 <ItemGroup>
   <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -370,6 +371,8 @@
   <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\Contents.json" />
   <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\learn_tab_icon_selected.png" />
   <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\learn_tab_icon_selected%402x.png" />
+  <ImageAsset Include="Assets.xcassets\onboarding_memorise.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\onboarding_memorise.imageset\onboarding_memorise.png" />
 </ItemGroup>
 <ItemGroup>
   <BundleResource Include="Resources\BackgroundDetail05.jpg" />

@@ -15,9 +15,10 @@ namespace Naxam.Busuu.iOS.Core.Views
             public static string Down = "scaleDown";
         }
 
+
+
         double X, Y, Radius;
         CGPoint touchLocation;
-
         public RippleLayer() : base()
         {
         }
@@ -33,24 +34,15 @@ namespace Naxam.Busuu.iOS.Core.Views
         public void WillAnimateTapGesture(CGPoint touch)
         {
             touchLocation = touch;
-			if (touchLocation.X < ParentView.Center.X)
-			{
-				Radius = ParentView.Frame.Size.Width - touchLocation.X;
-				X = -(Radius - touchLocation.X);
-				Y = -(Radius - touchLocation.Y);
-			}
-			else
-			{
-				Radius = touchLocation.X;
-				X = 0;
-				Y = -(Radius - touchLocation.Y);
-			}
+            Radius = 2 * Math.Max(ParentView.Bounds.Size.Width, ParentView.Bounds.Size.Height);
+            X = touch.X - Radius;
+            Y = touch.Y - Radius;
 			Frame = new CGRect(X, Y, Radius * 2, Radius * 2);
 			Path = UIBezierPath.FromOval(new CGRect(0, 0, Radius * 2, Radius * 2)).CGPath;
 			WillAnimate();
         }
 
-        public double AnimationDuration = 0.35;
+        public double AnimationDuration = 0.25f;
 
         public Action AnimationDidStartFunc;
         public Action<bool> AnimationDidStopFunc;
@@ -81,7 +73,7 @@ namespace Naxam.Busuu.iOS.Core.Views
            };
             AnimationDelegate.AnimationDidStopFunc = (finished) =>
             {
-                FillColor = FinishColor.CGColor;
+                ParentView.Layer.BackgroundColor = FinishColor.CGColor;
                 AnimationDidStopFunc?.Invoke(finished);
             };
         }
@@ -107,7 +99,7 @@ namespace Naxam.Busuu.iOS.Core.Views
                                                                    1.0f,
                                                                    CAMediaTimingFunction.EaseIn);
 
-            scaleAnimation.Duration = 0.25f;
+            scaleAnimation.Duration = AnimationDuration;
             AddAnimation(scaleAnimation, "scaleUp");
         }
 
