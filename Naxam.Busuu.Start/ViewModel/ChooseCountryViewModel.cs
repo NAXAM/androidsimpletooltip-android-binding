@@ -24,6 +24,7 @@ namespace Naxam.Busuu.Start.ViewModel
                 }
             }
         }
+
         private CountryModel _countrySelected;
 
         public CountryModel CountrySelected
@@ -43,10 +44,8 @@ namespace Naxam.Busuu.Start.ViewModel
             }
         }
 
-
         public ChooseCountryViewModel()
         {
-
             Random random = new Random();
             Countries = new MvxObservableCollection<CountryModel>();
             for (int i = 0; i < 100; i++)
