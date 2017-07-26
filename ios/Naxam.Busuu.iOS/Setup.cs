@@ -18,10 +18,14 @@ using MvvmCross.Platform.Converters;
 using MvvmCross.Binding.BindingContext;
 using Naxam.Busuu.iOS.Core.Converter;
 using UIKit;
+using Naxam.Busuu.iOS.Core;
+using Naxam.Busuu.Core.ViewModels;
 using Naxam.Busuu.iOS.Start.Views;
 using Naxam.Busuu.iOS.Learning.Views;
 using Naxam.Busuu.Learning.ViewModel;
 using Naxam.Busuu.Core.Converter;
+using CoreAnimation;
+using Naxam.Busuu.iOS.Core.Views;
 
 namespace Naxam.Busuu.iOS
 {
@@ -46,7 +50,8 @@ namespace Naxam.Busuu.iOS
                 typeof(ReviewAllView).Assembly,
 				typeof(SocialView).Assembly,
 				typeof(NotificationView).Assembly,
-				typeof(ProfileView).Assembly
+				typeof(ProfileView).Assembly,
+                typeof(PremiumView).Assembly
 			};
 
 			assemblies.AddRange(base.GetViewAssemblies());
@@ -59,10 +64,11 @@ namespace Naxam.Busuu.iOS
 			{
                 typeof(StartPageViewModel).Assembly,
                 typeof(MainViewModel).Assembly,
-				typeof(ReviewAllViewModel).Assembly,
+				typeof(ReviewViewModel).Assembly,
                 typeof(SocialViewModel).Assembly,
                 typeof(NotificationViewModel).Assembly,
-                typeof(ProfileViewModel).Assembly
+                typeof(ProfileViewModel).Assembly,
+                typeof(PremiumViewModel).Assembly
 			};
 
 			assemblies.AddRange(base.GetViewModelAssemblies());
@@ -82,6 +88,14 @@ namespace Naxam.Busuu.iOS
                 "FormattedText",
                 x => new AttributedTextTargetBinding(x)
             );
+            registry.RegisterCustomBindingFactory<CALayer>(
+                "BorderColor",
+                x=> new ColorTargetBinding(x)
+            );
+			registry.RegisterCustomBindingFactory<RippleLayer>(
+				"RippleColor",
+				x => new RippleColorTargetBinding(x)
+			);
         }
 
 		protected override void FillValueConverters(IMvxValueConverterRegistry registry)

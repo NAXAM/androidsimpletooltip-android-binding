@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using CoreGraphics;
 using MvvmCross.iOS.Views;
 using Naxam.Busuu.Review.ViewModels;
@@ -12,19 +12,17 @@ using System.ComponentModel;
 using MvvmCross.Core.ViewModels;
 using System.Runtime.CompilerServices;
 using System.Collections.Generic;
-using Naxam.Ausuu.IOS.Review.Floaty;
-using Naxam.Busuu.IOS.Review.Floaty;
 using System.Linq;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using Naxam.Busuu.iOS.Core;
-
 using Naxam.Busuu.iOS.Core.Views;
+using Naxam.Busuu.IOS.Core.Floaty;
 
 namespace Naxam.Busuu.iOS.Review.Views
 {
     [MvxFromStoryboard(StoryboardName = "Review")]
     [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "review_tab_icon", TabName = "Review", TabSelectedIconName = "review_tab_icon_selected")]
-    public partial class ReviewAllView : MvxViewController<ReviewAllViewModel>, IUITableViewDataSource
+    public partial class ReviewAllView : MvxViewController<ReviewViewModel>, IUITableViewDataSource
     {
         public ReviewAllView(IntPtr handle) : base(handle)
         {
@@ -63,8 +61,6 @@ namespace Naxam.Busuu.iOS.Review.Views
             };
             actionButton.SetTitle("+", UIControlState.Normal);
 
-            actionButton.BackgroundColor = UIColor.Blue;
-
             // Perform any additional setup after loading the view, typically from a nib.
 
             ReviewTableView.RowHeight = 60;
@@ -74,11 +70,19 @@ namespace Naxam.Busuu.iOS.Review.Views
 
             ReviewTableView.WeakDataSource = this;
 
-			var v = BuyPremiumCell.Create();
-            v.Frame = new CGRect(uiViewSlide.Frame.GetMinX(), uiViewSlide.Frame.GetMaxY(), View.Bounds.Size.Width, 50);
-			View.AddSubview(v);
+            var buyPremiumCell = BuyPremiumCell.Create();
+            buyPremiumCell.Frame = new CGRect(uiViewSlide.Frame.GetMinX(), uiViewSlide.Frame.GetMaxY(), View.Bounds.Size.Width, 50);
+            View.AddSubview(buyPremiumCell);
 
-			SearchTextField = new UITextField(new CGRect(0, 0, 300, 30));
+			uiViewButton.Layer.ShadowRadius = 2;
+			uiViewButton.Layer.ShadowOffset = new CGSize(0, 2);
+			uiViewButton.Layer.ShadowOpacity = 0.25f;
+
+			var setBinding = this.CreateBindingSet<ReviewAllView, ReviewViewModel>();
+            setBinding.Bind(buyPremiumCell.BtnGo).To(vm => vm.GoPremiumCommand);
+            setBinding.Apply();
+
+            SearchTextField = new UITextField(new CGRect(0, 0, 300, 30));
             SearchTextField.BackgroundColor = UIColor.Clear;
             SearchTextField.TextAlignment = UITextAlignment.Left;
             SearchTextField.TextColor = UIColor.White;
@@ -97,8 +101,6 @@ namespace Naxam.Busuu.iOS.Review.Views
             TitleBarButtonItem = new UIBarButtonItem(TitleLabel);
             NavigationItem.LeftBarButtonItem = TitleBarButtonItem;
             NavigationItem.RightBarButtonItem = SearchBarButtonItem;
-
-            View.AddRippleLayer();
         }
 
         void UpdateKeyFromList(List<ReviewModel> list)
@@ -177,7 +179,7 @@ namespace Naxam.Busuu.iOS.Review.Views
             oriPoint = uiViewSlide.Center;
         }
 
-        void HandleAction(Ausuu.IOS.Review.Floaty.ActionButtonItem obj)
+        void HandleAction(ActionButtonItem obj)
         {
             UIAlertView alert = new UIAlertView()
             {
@@ -195,13 +197,15 @@ namespace Naxam.Busuu.iOS.Review.Views
             UpdateKeyFromList(AllReviews);
             ReviewTableView.ReloadData();
             UIView.Animate(0.2, () =>
-            {
-                uiViewSlide.Center = new CGPoint(btnAll.Frame.GetMidX(), btnAll.Frame.GetMaxY() - uiViewSlide.Bounds.Size.Height / 2);
-                uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
-                btnAll.SetTitleColor(UIColor.FromRGB(86, 156, 201), UIControlState.Normal);
-                btnFavorite.SetTitleColor(UIColor.LightGray, UIControlState.Normal);
-            });
+				            {
+				                uiViewSlide.Center = new CGPoint(btnAll.Frame.GetMidX(), btnAll.Frame.GetMaxY() - uiViewSlide.Bounds.Size.Height);
+				                uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
+				                btnAll.SetTitleColor(UIColor.FromRGB(57, 169, 246), UIControlState.Normal);
+				                btnFavorite.SetTitleColor(UIColor.FromRGB(167, 176, 182), UIControlState.Normal);
+				            });
             FavoriteReviews = null;
+            btnAll.Enabled = false;
+            btnFavorite.Enabled = true;
         }
 
         partial void btnFavorite_TouchUpInside(NSObject sender)
@@ -212,15 +216,15 @@ namespace Naxam.Busuu.iOS.Review.Views
             FilterFavorite();
             UpdateKeyFromList(FavoriteReviews);
             ReviewTableView.ReloadData();
-
             UIView.Animate(0.2, () =>
- {
-     uiViewSlide.Center = new CGPoint(btnFavorite.Frame.GetMidX(), btnFavorite.Frame.GetMaxY() - uiViewSlide.Bounds.Size.Height / 2);
-     uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
-     btnFavorite.SetTitleColor(UIColor.FromRGB(86, 156, 201), UIControlState.Normal);
-
-     btnAll.SetTitleColor(UIColor.LightGray, UIControlState.Normal);
- });
+							 {
+							     uiViewSlide.Center = new CGPoint(btnFavorite.Frame.GetMidX(), btnFavorite.Frame.GetMaxY() - uiViewSlide.Bounds.Size.Height);
+							     uiViewSlide.Transform = CGAffineTransform.MakeTranslation(0.5f, 0.5f);
+							     btnFavorite.SetTitleColor(UIColor.FromRGB(57, 169, 246), UIControlState.Normal);
+							     btnAll.SetTitleColor(UIColor.FromRGB(167, 176, 182), UIControlState.Normal);
+							 });
+            btnFavorite.Enabled = false;
+            btnAll.Enabled = true;
         }
 
         public override void DidReceiveMemoryWarning()
@@ -264,8 +268,8 @@ namespace Naxam.Busuu.iOS.Review.Views
         {
             var cell = (ReviewTableViewCell)tableView.DequeueReusableCell("reviewCell", indexPath);
             cell.Layer.MasksToBounds = true;
-			cell.Item = grouping[indexPath.Section].ElementAt(indexPath.Row);
-			cell.SetupCell();
+            cell.Item = grouping[indexPath.Section].ElementAt(indexPath.Row);
+            cell.SetupCell();
             return cell;
         }
 
