@@ -1,4 +1,5 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using System.Text.RegularExpressions;
+using MvvmCross.Core.ViewModels;
 using Naxam.Busuu.Start.Model;
 using Naxam.Busuu.ViewModels;
 
@@ -6,54 +7,38 @@ namespace Naxam.Busuu.Start.ViewModel
 {
     public class RegisterViewModel : MvxViewModel
     {
+        bool _IsEnableSignBtn;
 
-        private string _email;
+		public bool IsEnableSignBtn
+		{
+			get { return _IsEnableSignBtn; }
+			set
+			{
+				if (_IsEnableSignBtn != value)
+				{
+					_IsEnableSignBtn = value;
+					RaisePropertyChanged(() => IsEnableSignBtn);
+				}
+			}
+		}
 
-        public string Email
+		string _emailphone = "Email";
+
+        public string EmailPhone
         {
-            get { return _email; }
+            get { return _emailphone; }
             set
             {
-                if (_email != value)
+                if (_emailphone != value)
                 {
-                    _email = value;
+                    _emailphone = value;
+                    IsEnableSignBtn = CheckPhoneNumber(EmailPhone, UserName, Password);
                     RaisePropertyChanged();
                 }
             }
         }
 
-        private string _phone;
-
-        public string Phone
-        {
-            get { return _phone; }
-            set
-            {
-                if (_phone != value)
-                {
-                    _phone = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
-
-        private string _policy;
-
-        public string Policy
-        {
-            get { return _policy; }
-            set
-            {
-                if (_policy != value)
-                {
-                    _policy = value;
-                    RaisePropertyChanged();
-                }
-            }
-        }
-
-
-        private string _phoneCode;
+        string _phoneCode = "+1";
 
         public string PhoneCode
         {
@@ -70,7 +55,7 @@ namespace Naxam.Busuu.Start.ViewModel
 
 
 
-        private string _userName;
+        string _userName = "Username";
 
         public string UserName
         {
@@ -80,12 +65,13 @@ namespace Naxam.Busuu.Start.ViewModel
                 if (_userName != value)
                 {
                     _userName = value;
-                    RaisePropertyChanged();
+					IsEnableSignBtn = CheckPhoneNumber(EmailPhone, UserName, Password);
+					RaisePropertyChanged();
                 }
             }
         }
 
-        private string _password;
+        string _password = "Password (minimum 6 characters)";
 
         public string Password
         {
@@ -95,7 +81,8 @@ namespace Naxam.Busuu.Start.ViewModel
                 if (_password != value)
                 {
                     _password = value;
-                    RaisePropertyChanged();
+					IsEnableSignBtn = CheckPhoneNumber(EmailPhone, UserName, Password);
+					RaisePropertyChanged();
                 }
             }
         }
@@ -114,8 +101,24 @@ namespace Naxam.Busuu.Start.ViewModel
         {
             PhoneCode = country.PhoneCode;
             if (string.IsNullOrEmpty(PhoneCode))
-                PhoneCode = "+1";
-            
+                PhoneCode = "+1";      
         }
-    }
+
+		bool CheckPhoneNumber(string email, string user, string pass)
+		{
+            if ((EmailPhone != "Email") && (UserName != "Username") && (Password != "Password (minimum 6 characters)"))
+			{
+				Regex regex = new Regex("^[a-zA-Z0-9-_\\.]+@[a-z0-9]+\\.[a-z]{2,4}$");
+				bool checkMail = regex.IsMatch(email);
+
+				Regex regexP = new Regex("^+?[0-9]{9,13}$");
+				bool checkPhone = regexP.IsMatch(email);
+
+                return (checkMail || checkPhone) && user.Length > 0 && pass.Length >= 6;
+			}
+
+			return false;
+		}
+
+	}
 }

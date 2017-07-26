@@ -21,7 +21,6 @@ namespace Naxam.Busuu.Start.ViewModel
             }
         }
 
-
         string _TextPass = "Password (minimum 6 characters)";
 
         public string TextPass

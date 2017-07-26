@@ -9,6 +9,7 @@ using MaterialControls;
 using Naxam.Busuu.Start.ViewModel;
 using ObjCRuntime;
 using UIKit;
+using FBKVOControllerNS;
 
 namespace Naxam.Busuu.iOS.Start
 {
@@ -17,6 +18,7 @@ namespace Naxam.Busuu.iOS.Start
 	{
         MDTextField fieldEmailPhone;
         MDTextField fieldPass;
+        FBKVOController _KVOController;
         bool Is1Animating;
         bool Is2Animating;
 
@@ -32,26 +34,26 @@ namespace Naxam.Busuu.iOS.Start
 
 			fieldEmailPhone = new MDTextField();
 			fieldEmailPhone.TextColor = UIColor.FromRGB(172, 180, 186);
+            fieldEmailPhone.NormalColor = UIColor.FromRGB(172, 180, 186);
 			fieldEmailPhone.HighlightColor = UIColor.FromRGB(57, 169, 246);
 			fieldEmailPhone.LabelsFont = UIFont.SystemFontOfSize(14);
 			fieldEmailPhone.InputTextFont = UIFont.SystemFontOfSize(14);
             fieldEmailPhone.ShouldBeginEditing = FieldEmailPhone_ShouldBeginEditing;
             fieldEmailPhone.ShouldEndEditing = FieldEmailPhone_ShouldEndEditing;
-            fieldEmailPhone.ShouldChangeText = HandleTextFieldShouldChangeText;
-			fieldEmailPhone.Layer.Frame = new CoreGraphics.CGRect(0, 0, ViewEmail.Bounds.Width, ViewEmail.Bounds.Height);
+            fieldEmailPhone.Layer.Frame = new CoreGraphics.CGRect(0, 0, ViewEmail.Bounds.Width, ViewEmail.Bounds.Height);
 
 			fieldPass = new MDTextField();
 			fieldPass.TextColor = UIColor.FromRGB(172, 180, 186);
+            fieldPass.NormalColor = UIColor.FromRGB(172, 180, 186);
 			fieldPass.HighlightColor = UIColor.FromRGB(57, 169, 246);
 			fieldPass.LabelsFont = UIFont.SystemFontOfSize(14);
 			fieldPass.InputTextFont = UIFont.SystemFontOfSize(14);
             fieldPass.ShouldBeginEditing = FieldPass_ShouldBeginEditing;
             fieldPass.ShouldEndEditing = FieldPass_ShouldEndEditing;
-            fieldPass.ShouldChangeText = HandleTextFieldShouldChangeText;
-			fieldPass.Layer.Frame = new CoreGraphics.CGRect(0, 0, ViewPassword.Bounds.Width, ViewPassword.Bounds.Height);
+            fieldPass.Layer.Frame = new CoreGraphics.CGRect(0, 0, ViewPassword.Bounds.Width, ViewPassword.Bounds.Height);
 
-			ViewEmail.AddSubview(fieldEmailPhone);
-			ViewPassword.AddSubview(fieldPass);
+            ViewEmail.InsertSubview(fieldEmailPhone, 0);
+            ViewPassword.InsertSubview(fieldPass, 0);
 
 			ViewShadow.Layer.ShadowRadius = 2;
 			ViewShadow.Layer.ShadowOpacity = 0.25f;
@@ -76,7 +78,10 @@ namespace Naxam.Busuu.iOS.Start
 
             btnLogin.Layer.CornerRadius = btnLogin.Frame.Height / 2;
 
-            var setBind = this.CreateBindingSet<LoginView, LoginViewModel>();
+			_KVOController = new FBKVOController(this);
+            _KVOController.Observe(btnLogin, "enabled", NSKeyValueObservingOptions.Initial | NSKeyValueObservingOptions.New, UpdateBackgroundForItem);
+
+			var setBind = this.CreateBindingSet<LoginView, LoginViewModel>();
             setBind.Bind(btnFacebook).To(vm => vm.LoginCommend);
             setBind.Bind(btnGoogle).To(vm => vm.LoginCommend);
             setBind.Bind(btnLogin).To(vm => vm.LoginCommend);
@@ -85,6 +90,27 @@ namespace Naxam.Busuu.iOS.Start
             setBind.Bind(fieldPass).For(vm => vm.Text).To(vm => vm.TextPass);
             setBind.Bind(btnLogin).For(vm => vm.Enabled).To(vm => vm.IsEnableLoginBtn);
 			setBind.Apply();
+		}
+
+		void UpdateBackgroundForItem(NSObject arg0, NSObject arg1, NSDictionary<NSString, NSObject> arg2)
+		{
+			if (arg1 is UIButton item)
+			{
+				if (item.Enabled)
+				{
+					btnLogin.BackgroundColor = UIColor.FromRGB(57, 169, 246);
+					btnLogin.Layer.ShadowRadius = 1.5f;
+					btnLogin.Layer.ShadowOpacity = 0.25f;
+					btnLogin.Layer.ShadowOffset = new CoreGraphics.CGSize(0, 1.5f);
+				}
+				else
+				{
+					btnLogin.BackgroundColor = UIColor.FromRGB(214, 222, 230);
+					btnLogin.Layer.ShadowRadius = 0;
+					btnLogin.Layer.ShadowOpacity = 0;
+					btnLogin.Layer.ShadowOffset = new CoreGraphics.CGSize(0, 0);
+				}
+			}
 		}
 
         bool FieldEmailPhone_ShouldBeginEditing(MDTextField textField)
@@ -99,10 +125,11 @@ namespace Naxam.Busuu.iOS.Start
                 Is2Animating = false;
             }
 
+            viewLineEmail.BackgroundColor = UIColor.FromRGB(57, 169, 246);
 			fieldEmailPhone.TextColor = UIColor.Black;
             if (fieldEmailPhone.Text == "Email address or phone number")
             {
-                fieldEmailPhone.Text = "";          
+				fieldEmailPhone.Text = "";          
             }
 
             return true;
@@ -113,13 +140,21 @@ namespace Naxam.Busuu.iOS.Start
             if (Is1Animating && !Is2Animating)
             {
                 Is1Animating = false;
-                StopAnimation();
+                StopAnimationC();
             }
 
-            fieldEmailPhone.TextColor = UIColor.FromRGB(172, 180, 186);
-            if (fieldEmailPhone.Text == "")
+            viewLineEmail.BackgroundColor = UIColor.Clear;
+            if (fieldEmailPhone.Text == "" || fieldEmailPhone.Text == "Email address or phone number")
             {
+                
+				fieldEmailPhone.TextColor = UIColor.FromRGB(172, 180, 186);
+                fieldEmailPhone.NormalColor = UIColor.FromRGB(172, 180, 186);
                 fieldEmailPhone.Text = "Email address or phone number";
+            }
+            else
+            {
+                fieldEmailPhone.TextColor = UIColor.Black;
+                fieldEmailPhone.NormalColor = UIColor.FromRGB(238, 93, 78);
             }
 
             return true;
@@ -137,6 +172,7 @@ namespace Naxam.Busuu.iOS.Start
 				Is1Animating = false;
             }
 
+            viewLinePass.BackgroundColor = UIColor.FromRGB(57, 169, 246);
             fieldPass.TextColor = UIColor.Black;
             fieldPass.SecureTextEntry = true;
             if (fieldPass.Text == "Password (minimum 6 characters)")
@@ -152,43 +188,30 @@ namespace Naxam.Busuu.iOS.Start
             if (Is2Animating && !Is1Animating)
             {
                 Is2Animating = false;
-                StopAnimation();
+                StopAnimationC();
             }
 
-            fieldPass.TextColor = UIColor.FromRGB(172, 180, 186);
-            if (fieldPass.Text == "")
+            viewLinePass.BackgroundColor = UIColor.Clear;
+            if (fieldPass.Text == "" || fieldPass.Text == "Password (minimum 6 characters)")
 			{
+                fieldPass.TextColor = UIColor.FromRGB(172, 180, 186);
+                fieldPass.NormalColor = UIColor.FromRGB(172, 180, 186);
                 fieldPass.SecureTextEntry = false;
                 fieldPass.Text = "Password (minimum 6 characters)";
+			}
+			else
+			{
+                fieldPass.TextColor = UIColor.Black;
+                fieldPass.NormalColor = UIColor.FromRGB(238, 93, 78);
 			}
 
 			return true;
 		}
 
-        bool HandleTextFieldShouldChangeText(MDTextField textField, NSRange range, string text)
-        {
-            if (btnLogin.Enabled)
-            {
-                btnLogin.BackgroundColor = UIColor.FromRGB(57, 169, 246);
-                btnLogin.Layer.ShadowRadius = 1.5f;
-				btnLogin.Layer.ShadowOpacity = 0.25f;
-				btnLogin.Layer.ShadowOffset = new CoreGraphics.CGSize(0, 1.5f);
-            }
-            else
-            {
-                btnLogin.BackgroundColor = UIColor.FromRGB(214, 222, 230);
-				btnLogin.Layer.ShadowRadius = 0;
-				btnLogin.Layer.ShadowOpacity = 0;
-				btnLogin.Layer.ShadowOffset = new CoreGraphics.CGSize(0, 0);
-            }
-
-            return true;
-        }
-
         void StartAnimation()
         {
             UIView.BeginAnimations("connectAnimation");
-            UIView.SetAnimationDuration(0.25);
+            UIView.SetAnimationDuration(0.35);
             UIView.SetAnimationCurve(UIViewAnimationCurve.EaseOut);
             UIView.SetAnimationDelegate(this);
             UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
@@ -199,7 +222,7 @@ namespace Naxam.Busuu.iOS.Start
         void StopAnimation()
         {
             UIView.BeginAnimations("connectAnimation");
-            UIView.SetAnimationDuration(0.25);
+            UIView.SetAnimationDuration(0.35);
             UIView.SetAnimationCurve(UIViewAnimationCurve.EaseOut);
             UIView.SetAnimationDelegate(this);
             UIView.SetAnimationDidStopSelector(new Selector("animationDidStop:finished:context:"));
@@ -211,7 +234,7 @@ namespace Naxam.Busuu.iOS.Start
 		{
             viewConnectTopConstraint.Constant =- viewConnect.Frame.Height;
 			View.UpdateConstraintsIfNeeded();
-			UIView.AnimateNotify(0.25, () =>
+			UIView.AnimateNotify(0.35, () =>
 			{
 				View.LayoutIfNeeded();
 			}, (finished) =>
@@ -224,12 +247,13 @@ namespace Naxam.Busuu.iOS.Start
         {
 			viewConnectTopConstraint.Constant = 24;
 			View.UpdateConstraintsIfNeeded();
-			UIView.AnimateNotify(0.25, () =>
+			UIView.AnimateNotify(0.35, () =>
 			{
 				View.LayoutIfNeeded();
 			}, (finished) =>
 			{
 				//IsAnimating = false;
+                StopAnimation();
 			});
         }
 
@@ -244,9 +268,18 @@ namespace Naxam.Busuu.iOS.Start
 			else
 			{
                 viewConnect.Alpha = 1;
-                StopAnimationC();
 			}
 		}
 
+		protected override void Dispose(bool disposing)
+		{
+			base.Dispose(disposing);
+			if (_KVOController != null)
+			{
+				_KVOController.UnobserveAll();
+				_KVOController.Dispose();
+				_KVOController = null;
+			}
+		}
 	}
 }

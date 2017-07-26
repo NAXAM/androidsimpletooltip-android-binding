@@ -34,13 +34,15 @@ namespace Naxam.Busuu.iOS.Start.Views
 
 			fieldEmailPhone = new MDTextField();
 			fieldEmailPhone.TextColor = UIColor.FromRGB(172, 180, 186);
+			fieldEmailPhone.NormalColor = UIColor.FromRGB(172, 180, 186);
 			fieldEmailPhone.HighlightColor = UIColor.FromRGB(57, 169, 246);
 			fieldEmailPhone.LabelsFont = UIFont.SystemFontOfSize(14);
 			fieldEmailPhone.InputTextFont = UIFont.SystemFontOfSize(14);
 			fieldEmailPhone.ShouldBeginEditing = FieldEmailPhone_ShouldBeginEditing;
 			fieldEmailPhone.ShouldEndEditing = FieldEmailPhone_ShouldEndEditing;
 			fieldEmailPhone.Layer.Frame = new CoreGraphics.CGRect(0, 0, viewEmailPhone.Bounds.Width, viewEmailPhone.Bounds.Height);
-			viewEmailPhone.AddSubview(fieldEmailPhone);
+			
+            viewEmailPhone.InsertSubview(fieldEmailPhone, 0);
 
             _KVOController = new FBKVOController(this);
             _KVOController.Observe(btnSendLink, "enabled", NSKeyValueObservingOptions.Initial | NSKeyValueObservingOptions.New, UpdateBackgroundForItem);
@@ -74,6 +76,7 @@ namespace Naxam.Busuu.iOS.Start.Views
 
 		bool FieldEmailPhone_ShouldBeginEditing(MDTextField textField)
 		{
+            viewLineEmailPhone.BackgroundColor = UIColor.FromRGB(57, 169, 246);
 			fieldEmailPhone.TextColor = UIColor.Black;
 			if (fieldEmailPhone.Text == "Email address or phone number")
 			{
@@ -85,10 +88,17 @@ namespace Naxam.Busuu.iOS.Start.Views
 
 		bool FieldEmailPhone_ShouldEndEditing(MDTextField textField)
 		{
-			fieldEmailPhone.TextColor = UIColor.FromRGB(172, 180, 186);
-			if (fieldEmailPhone.Text == "")
+            viewLineEmailPhone.BackgroundColor = UIColor.Clear;
+			if (fieldEmailPhone.Text == "" || fieldEmailPhone.Text == "Email address or phone number")
 			{
+				fieldEmailPhone.TextColor = UIColor.FromRGB(172, 180, 186);
+				fieldEmailPhone.NormalColor = UIColor.FromRGB(172, 180, 186);
 				fieldEmailPhone.Text = "Email address or phone number";
+			}
+			else
+			{
+				fieldEmailPhone.TextColor = UIColor.Black;
+				fieldEmailPhone.NormalColor = UIColor.FromRGB(238, 93, 78);
 			}
 
 			return true;
@@ -100,5 +110,16 @@ namespace Naxam.Busuu.iOS.Start.Views
 			alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
 			PresentViewController(alert, true, null);
         }
+
+		protected override void Dispose(bool disposing)
+		{
+			base.Dispose(disposing);
+			if (_KVOController != null)
+			{
+				_KVOController.UnobserveAll();
+				_KVOController.Dispose();
+				_KVOController = null;
+			}
+		}
 	}
 }

@@ -19,7 +19,10 @@ namespace Naxam.Busuu.iOS.Start.Views
 		UIKit.UIButton btnGoogle { get; set; }
 
 		[Outlet]
-		UIKit.UIButton btnLogin { get; set; }
+		UIKit.UIButton btnSignUp { get; set; }
+
+		[Outlet]
+		UIKit.UIButton btnUseEmailPhone { get; set; }
 
 		[Outlet]
 		UIKit.UIView viewbtnFacebook { get; set; }
@@ -28,28 +31,57 @@ namespace Naxam.Busuu.iOS.Start.Views
 		UIKit.UIView viewbtnGoogle { get; set; }
 
 		[Outlet]
+		UIKit.UIView viewConnect { get; set; }
+
+		[Outlet]
+		UIKit.NSLayoutConstraint viewConnectTopConstraint { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewEmail { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewLineEmail { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewLinePass { get; set; }
+
+		[Outlet]
+		UIKit.UIView viewLineUser { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewPassword { get; set; }
+
+		[Outlet]
 		UIKit.UIView ViewShadow { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewUsername { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (ViewShadow != null) {
-				ViewShadow.Dispose ();
-				ViewShadow = null;
-			}
-
-			if (viewbtnFacebook != null) {
-				viewbtnFacebook.Dispose ();
-				viewbtnFacebook = null;
-			}
-
 			if (btnFacebook != null) {
 				btnFacebook.Dispose ();
 				btnFacebook = null;
 			}
 
-			if (viewbtnGoogle != null) {
-				viewbtnGoogle.Dispose ();
-				viewbtnGoogle = null;
+			if (btnSignUp != null) {
+				btnSignUp.Dispose ();
+				btnSignUp = null;
+			}
+
+			if (viewLineEmail != null) {
+				viewLineEmail.Dispose ();
+				viewLineEmail = null;
+			}
+
+			if (viewLinePass != null) {
+				viewLinePass.Dispose ();
+				viewLinePass = null;
+			}
+
+			if (viewLineUser != null) {
+				viewLineUser.Dispose ();
+				viewLineUser = null;
 			}
 
 			if (btnGoogle != null) {
@@ -57,9 +89,49 @@ namespace Naxam.Busuu.iOS.Start.Views
 				btnGoogle = null;
 			}
 
-			if (btnLogin != null) {
-				btnLogin.Dispose ();
-				btnLogin = null;
+			if (btnUseEmailPhone != null) {
+				btnUseEmailPhone.Dispose ();
+				btnUseEmailPhone = null;
+			}
+
+			if (viewbtnFacebook != null) {
+				viewbtnFacebook.Dispose ();
+				viewbtnFacebook = null;
+			}
+
+			if (viewbtnGoogle != null) {
+				viewbtnGoogle.Dispose ();
+				viewbtnGoogle = null;
+			}
+
+			if (viewConnect != null) {
+				viewConnect.Dispose ();
+				viewConnect = null;
+			}
+
+			if (viewConnectTopConstraint != null) {
+				viewConnectTopConstraint.Dispose ();
+				viewConnectTopConstraint = null;
+			}
+
+			if (ViewEmail != null) {
+				ViewEmail.Dispose ();
+				ViewEmail = null;
+			}
+
+			if (ViewPassword != null) {
+				ViewPassword.Dispose ();
+				ViewPassword = null;
+			}
+
+			if (ViewShadow != null) {
+				ViewShadow.Dispose ();
+				ViewShadow = null;
+			}
+
+			if (ViewUsername != null) {
+				ViewUsername.Dispose ();
+				ViewUsername = null;
 			}
 		}
 	}

@@ -19,6 +19,9 @@ namespace Naxam.Busuu.iOS.Start.Views
 		UIKit.UIView viewEmailPhone { get; set; }
 
 		[Outlet]
+		UIKit.UIView viewLineEmailPhone { get; set; }
+
+		[Outlet]
 		UIKit.UIView ViewShadow { get; set; }
 
 		[Action ("btnSendLink_TochUpInside:")]
@@ -31,14 +34,19 @@ namespace Naxam.Busuu.iOS.Start.Views
 				btnSendLink = null;
 			}
 
+			if (viewEmailPhone != null) {
+				viewEmailPhone.Dispose ();
+				viewEmailPhone = null;
+			}
+
 			if (ViewShadow != null) {
 				ViewShadow.Dispose ();
 				ViewShadow = null;
 			}
 
-			if (viewEmailPhone != null) {
-				viewEmailPhone.Dispose ();
-				viewEmailPhone = null;
+			if (viewLineEmailPhone != null) {
+				viewLineEmailPhone.Dispose ();
+				viewLineEmailPhone = null;
 			}
 		}
 	}
