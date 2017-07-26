@@ -21,7 +21,7 @@ namespace Naxam.Busuu.iOS.Core
 
 		public override void AwakeFromNib()
 		{
-			var premiumShape = new RippleLayer(viewRipple, UIColor.LightGray, UIColor.Clear);
+			var premiumShape = new RippleLayer(viewRipple, UIColor.LightGray, UIColor.White);
 
 			var cellGesture = new UITapGestureRecognizer((UITapGestureRecognizer obj) =>
 						{

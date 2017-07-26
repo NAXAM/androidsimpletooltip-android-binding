@@ -74,6 +74,7 @@ namespace Naxam.Busuu.iOS.Core.Views
             AnimationDelegate.AnimationDidStopFunc = (finished) =>
             {
                 ParentView.Layer.BackgroundColor = FinishColor.CGColor;
+                FillColor = FinishColor.CGColor;
                 AnimationDidStopFunc?.Invoke(finished);
             };
         }
