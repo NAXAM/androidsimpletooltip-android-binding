@@ -64,11 +64,14 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 		{
 			AnchorPoint = new CGPoint(0.5f, 0.5f)
 		};
+        private NSLayoutConstraint _HeightConstraint;
 		private static int MAIN_STACK_TAG = 1001;
         private static int SUB_STACK_TAG = 2001;
         private static int ICON_TAG = 201;
         private static int LABEL_TAG = 202;
         private static int ITEM_TAG = 301;
+        private static nfloat BAR_HEIGHT = 49f;
+
 
         private List<BadgeLabel> _Badges = new List<BadgeLabel>();
 
@@ -95,6 +98,10 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 			}
 		}
 
+        public bool IsShowing
+        {
+            get => _HeightConstraint != null && _HeightConstraint.Constant.Equals(BAR_HEIGHT);
+        }
 
 		public IMaterialTabBarDelegate Delegate;
 
@@ -125,12 +132,16 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 			Layer.ShadowOpacity = 0.25f;
 			Layer.ShadowOffset = new CGSize(0, -2);
 
-			tabbar.Superview.Add(this);
+            var sview = tabbar.Superview;
+			sview.Add(this);
 			TranslatesAutoresizingMaskIntoConstraints = false;
-			TopAnchor.ConstraintEqualTo(tabbar.TopAnchor).Active = true;
-			LeadingAnchor.ConstraintEqualTo(tabbar.LeadingAnchor).Active = true;
-			BottomAnchor.ConstraintEqualTo(tabbar.BottomAnchor).Active = true;
-			TrailingAnchor.ConstraintEqualTo(tabbar.TrailingAnchor).Active = true;
+            var marginsGuide = sview.LayoutMarginsGuide;
+            LeadingAnchor.ConstraintEqualTo(sview.LeadingAnchor, -8).Active = true;
+            BottomAnchor.ConstraintEqualTo(marginsGuide.BottomAnchor).Active = true;
+            TrailingAnchor.ConstraintEqualTo(sview.TrailingAnchor, 8).Active = true;
+            _HeightConstraint = HeightAnchor.ConstraintEqualTo(BAR_HEIGHT);
+            _HeightConstraint.Active = true;
+            sview.AddConstraint(_HeightConstraint);
 
 			_RippleContainer.ClipsToBounds = true;
 			AddSubview(_RippleContainer);
@@ -336,6 +347,19 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 			_Badges[index].Text = badgeValue;
 		}
 
+        public void Toggle(bool animated) {
+            _HeightConstraint.Constant = BAR_HEIGHT - _HeightConstraint.Constant;
+            Superview?.UpdateConstraints();
+            if (animated) {
+				UIView.Animate(0.2, () =>
+				{
+					Superview?.LayoutIfNeeded();
+				});
+            }
+            else {
+                Superview?.LayoutIfNeeded();
+            }
+        }
 		protected override void Dispose(bool disposing)
 		{
 			base.Dispose(disposing);
