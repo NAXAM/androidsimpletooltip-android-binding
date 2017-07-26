@@ -6,7 +6,6 @@ using Naxam.Busuu.Profile.ViewModel;
 using Naxam.Busuu.Review.ViewModels;
 using Naxam.Busuu.Social.ViewModels;
 
-
 namespace Naxam.Busuu.ViewModels
 {
     public class MainTabBarViewModel : MvxViewModel
@@ -22,8 +21,8 @@ namespace Naxam.Busuu.ViewModels
 
 		void ShowInitialViewModels()
 		{
-            ShowViewModel<MainViewModel>();
-            ShowViewModel<ReviewAllViewModel>();
+			ShowViewModel<MainViewModel>();
+            ShowViewModel<ReviewViewModel>();
 			ShowViewModel<SocialViewModel>();
             ShowViewModel<NotificationViewModel>();
             ShowViewModel<ProfileViewModel>();

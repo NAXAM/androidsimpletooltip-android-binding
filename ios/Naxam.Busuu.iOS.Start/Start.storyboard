@@ -422,13 +422,37 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iX0-OD-4CM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CountryCell" id="iX0-OD-4CM" customClass="CountryCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iX0-OD-4CM" id="PpM-wG-dpB">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQk-D8-PNY" userLabel="lblCountry">
+                                                    <rect key="frame" x="14" y="13" width="37.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jN-jP-9Eh" userLabel="lblPhoneCode">
+                                                    <rect key="frame" x="321.5" y="13" width="37.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.48907411098480225" green="0.52521044015884399" blue="0.55026894807815552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TQk-D8-PNY" firstAttribute="centerY" secondItem="PpM-wG-dpB" secondAttribute="centerY" id="Qgu-NW-mak"/>
+                                                <constraint firstItem="TQk-D8-PNY" firstAttribute="leading" secondItem="PpM-wG-dpB" secondAttribute="leading" constant="14" id="VCT-wj-lQv"/>
+                                                <constraint firstAttribute="trailing" secondItem="3jN-jP-9Eh" secondAttribute="trailing" constant="16" id="vmd-Ia-VuE"/>
+                                                <constraint firstItem="3jN-jP-9Eh" firstAttribute="centerY" secondItem="PpM-wG-dpB" secondAttribute="centerY" id="zcn-0V-Ncd"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblCountry" destination="TQk-D8-PNY" id="Vsd-AV-4hB"/>
+                                            <outlet property="lblPhoneCode" destination="3jN-jP-9Eh" id="zum-t5-ZeF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -451,6 +475,10 @@
                             <constraint firstItem="oi4-hL-jKx" firstAttribute="top" secondItem="Ck1-wc-ivH" secondAttribute="bottom" id="mnu-p4-L8l"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ChooseCountryTableView" destination="Ck1-wc-ivH" id="Vxo-wB-aRr"/>
+                        <outlet property="ViewShadow" destination="ONM-AO-RTm" id="aNZ-FZ-yDz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQO-4K-gRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,9 +12,23 @@ namespace Naxam.Busuu.iOS.Start.Views
 	[Register ("ChooseCountryView")]
 	partial class ChooseCountryView
 	{
+		[Outlet]
+		UIKit.UITableView ChooseCountryTableView { get; set; }
+
+		[Outlet]
+		UIKit.UIView ViewShadow { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (ChooseCountryTableView != null) {
+				ChooseCountryTableView.Dispose ();
+				ChooseCountryTableView = null;
+			}
+
+			if (ViewShadow != null) {
+				ViewShadow.Dispose ();
+				ViewShadow = null;
+			}
 		}
 	}
 }

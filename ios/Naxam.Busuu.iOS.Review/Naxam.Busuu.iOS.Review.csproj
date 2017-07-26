@@ -92,7 +92,6 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
-    <Folder Include="Floaty\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,8 +103,6 @@
     <Compile Include="Views\ReviewTableViewCell.designer.cs">
       <DependentUpon>ReviewTableViewCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Floaty\ActionButtonItem.cs" />
-    <Compile Include="Floaty\ActionButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Review.storyboard" />

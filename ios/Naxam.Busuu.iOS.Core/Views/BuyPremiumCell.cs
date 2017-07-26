@@ -2,6 +2,7 @@ using Foundation;
 using System;
 using UIKit;
 using ObjCRuntime;
+using Naxam.Busuu.iOS.Core.Views;
 
 namespace Naxam.Busuu.iOS.Core
 {
@@ -15,16 +16,40 @@ namespace Naxam.Busuu.iOS.Core
 		{
 			var arr = NSBundle.MainBundle.LoadNib("BuyPremiumCell", null, null);
 			var v = Runtime.GetNSObject<BuyPremiumCell>(arr.ValueAt(0));
-			v.Layer.ShadowColor = UIColor.LightGray.CGColor;
-			v.Layer.ShadowOpacity = 0.8f;
-			v.Layer.ShadowRadius = 3.0f;
-			v.Layer.ShadowOffset = new CoreGraphics.CGSize(1.0, 1.0);
 			return v;
 		}
 
 		public override void AwakeFromNib()
 		{
-			btnGo.Layer.CornerRadius = btnGo.Bounds.Size.Height / 2;
+			var premiumShape = new RippleLayer(viewRipple, UIColor.LightGray, UIColor.White);
+
+			var cellGesture = new UITapGestureRecognizer((UITapGestureRecognizer obj) =>
+						{
+							var touchLocation = obj.LocationInView(this);
+							premiumShape.WillAnimateTapGesture(touchLocation);
+                            BtnGo.SendActionForControlEvents(UIControlEvent.TouchUpInside);
+						});
+			contentView.AddGestureRecognizer(cellGesture);
+
+            viewRipple.Layer.MasksToBounds = true;
+
+            contentView.Layer.ShadowColor = UIColor.LightGray.CGColor;
+			contentView.Layer.ShadowOpacity = 0.8f;
+			contentView.Layer.ShadowRadius = 3.0f;
+			contentView.Layer.ShadowOffset = new CoreGraphics.CGSize(1.0, 1.0);
+			BtnGo.Layer.CornerRadius = BtnGo.Bounds.Size.Height / 2;
 		}
+
+        public UIButton BtnGo
+        {
+            get => btnGo;
+            set => btnGo = value;
+        }
+
+        public UIView ContentView
+        {
+            get => contentView;
+            set => contentView = value;
+        }
     }
 }

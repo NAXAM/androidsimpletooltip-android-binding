@@ -1,0 +1,265 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{CDD7C719-30F6-46F0-BCCF-4C85974F01C1}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Naxam.Busuu.iOS</RootNamespace>
+    <AssemblyName>Naxam.Busuu.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>15543</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>42754</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.5.0.6\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\packages\MvvmCross.Platform.5.0.6\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.5.0.6\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\packages\MvvmCross.Core.5.0.6\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.5.0.6\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\packages\MvvmCross.Binding.5.0.6\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.5.0.6\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="IQKeyboardManager">
+      <HintPath>..\packages\Xamarin.IQKeyboardManager.1.3.2\lib\Xamarin.iOS10\IQKeyboardManager.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.5.0.6\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.5.0.6\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File">
+      <HintPath>..\packages\MvvmCross.Plugin.File.5.0.6\lib\Xamarin.iOS10\MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File.iOS">
+      <HintPath>..\packages\MvvmCross.Plugin.File.5.0.6\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\packages\WebP.Touch.1.0.3\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\graystar.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\graystar.imageset\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\graystar.imageset\" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Layer 0%403x.png" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Layer 0%402x.png" />
+    <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Layer 0%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_back.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_back.imageset\Layer 0%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_back.imageset\Layer 0%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\Layer 0%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\Layer 0%403x.png" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\social_tab_icon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\social_tab_icon.png" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected.png" />
+    <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected%402x.png" />
+    <ImageAsset Include="Assets.xcassets\profile_tab_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\profile_tab_icon.imageset\profile_tab_icon.png" />
+    <ImageAsset Include="Assets.xcassets\profile_tab_icon.imageset\profile_tab_icon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\profile_tab_icon_selected.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\profile_tab_icon_selected.imageset\profile_tab_icon_selected.png" />
+    <ImageAsset Include="Assets.xcassets\profile_tab_icon_selected.imageset\profile_tab_icon_selected%402x.png" />
+    <ImageAsset Include="Assets.xcassets\notifications_tab_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\notifications_tab_icon.imageset\notifications_tab_icon.png" />
+    <ImageAsset Include="Assets.xcassets\notifications_tab_icon.imageset\notifications_tab_icon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\notifications_tab_icon_selected.png" />
+    <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\notifications_tab_icon_selected%402x.png" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\user_avatar_placeholder.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_spanish.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_english.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_chinese.imageset\" />
+    <Folder Include="Assets.xcassets\flag_small_arabic.imageset\" />
+    <Folder Include="Assets.xcassets\profile_flag_vn.imageset\" />
+    <Folder Include="Assets.xcassets\social_background_pattern_image.imageset\" />
+    <Folder Include="Assets.xcassets\test.imageset\" />
+    <Folder Include="Assets.xcassets\ic_filter.imageset\" />
+    <Folder Include="Assets.xcassets\play_icon_small.imageset\" />
+    <Folder Include="Assets.xcassets\ic_back.imageset\" />
+    <Folder Include="Assets.xcassets\ic_send_light.imageset\" />
+    <Folder Include="Assets.xcassets\social_tab_icon.imageset\" />
+    <Folder Include="Assets.xcassets\social_tab_icon_selected.imageset\" />
+    <Folder Include="Assets.xcassets\profile_tab_icon.imageset\" />
+    <Folder Include="Assets.xcassets\profile_tab_icon_selected.imageset\" />
+    <Folder Include="Assets.xcassets\notifications_tab_icon.imageset\" />
+    <Folder Include="Assets.xcassets\notifications_tab_icon_selected.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Views\MainTabBarView.cs" />
+    <Compile Include="Views\MainTabBarView.designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Naxam.Busuu.iOS.Review\Naxam.Busuu.iOS.Review.csproj">
+      <Project>{1030A24B-B42C-4076-B166-F7E3A875E071}</Project>
+      <Name>Naxam.Busuu.iOS.Review</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
+      <Project>{BAAA7577-3BE2-423B-A051-61B47489B015}</Project>
+      <Name>Naxam.Busuu.Review</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
+      <Project>{6255CDA3-B742-4D16-AC6C-03E414EAC000}</Project>
+      <Name>Naxam.Busuu.Social</Name>
+    </ProjectReference>
+    <ProjectReference Include="Naxam.Busuu.iOS.Social\Naxam.Busuu.iOS.Social.csproj">
+      <Project>{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}</Project>
+      <Name>Naxam.Busuu.iOS.Social</Name>
+    </ProjectReference>
+    <ProjectReference Include="Naxam.Busuu.iOS.Core\Naxam.Busuu.iOS.Core.csproj">
+      <Project>{B18CE05B-DA11-45F4-BEF8-6945AE895FA2}</Project>
+      <Name>Naxam.Busuu.iOS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Naxam.Busuu.iOS.Profile\Naxam.Busuu.iOS.Profile.csproj">
+      <Project>{701B6C86-B033-45D2-89EE-0E11499DCA7E}</Project>
+      <Name>Naxam.Busuu.iOS.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
+      <Project>{B6F89F5C-B669-40B1-BCE1-C72089933F2F}</Project>
+      <Name>Naxam.Busuu.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="Naxam.Busuu.iOS.Notification\Naxam.Busuu.iOS.Notification.csproj">
+      <Project>{3B4949AE-25B1-4F34-9243-4971FA75C107}</Project>
+      <Name>Naxam.Busuu.iOS.Notification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Notification\Naxam.Busuu.Notification.csproj">
+      <Project>{2EADB781-E679-4485-8A53-AE7A8945CD1B}</Project>
+      <Name>Naxam.Busuu.Notification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu\Naxam.Busuu.csproj">
+      <Project>{679E6E86-C7ED-4BAA-9255-E043A4D8C445}</Project>
+      <Name>Naxam.Busuu</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

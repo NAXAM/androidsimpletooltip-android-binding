@@ -12,9 +12,15 @@ namespace Naxam.Busuu.iOS.Learning.Views
 	[Register ("MainView")]
 	partial class MainView
 	{
+		[Outlet]
+		UIKit.UITableView LessonTableView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (LessonTableView != null) {
+				LessonTableView.Dispose ();
+				LessonTableView = null;
+			}
 		}
 	}
 }

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1030A24B-B42C-4076-B166-F7E3A875E071}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Naxam.Busuu.iOS.Review</RootNamespace>
+    <AssemblyName>Naxam.Busuu.iOS.Review</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>47360</IOSDebuggerPort>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchLink></MtouchLink>
+    <MtouchHttpClientHandler></MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchHttpClientHandler></MtouchHttpClientHandler>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\..\packages\MvvmCross.Platform.5.0.5\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.iOS">
+      <HintPath>..\..\packages\MvvmCross.Platform.5.0.5\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File">
+      <HintPath>..\..\packages\MvvmCross.Plugin.File.5.0.5\lib\Xamarin.iOS10\MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.File.5.0.5\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.5.0.5\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache.iOS">
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.5.0.5\lib\Xamarin.iOS10\MvvmCross.Plugins.DownloadCache.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\..\packages\MvvmCross.Core.5.0.5\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.iOS">
+      <HintPath>..\..\packages\MvvmCross.Core.5.0.5\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.0.5\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.iOS">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.0.5\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.0.5\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\..\packages\WebP.Touch.1.0.3\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Views\" />
+    <Folder Include="Resources\Assets.xcassets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ReviewAllView.cs" />
+    <Compile Include="Views\ReviewAllView.designer.cs">
+      <DependentUpon>ReviewAllView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReviewTableViewCell.cs" />
+    <Compile Include="Views\ReviewTableViewCell.designer.cs">
+      <DependentUpon>ReviewTableViewCell.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Review.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
+      <Project>{BAAA7577-3BE2-423B-A051-61B47489B015}</Project>
+      <Name>Naxam.Busuu.Review</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.iOS.Core\Naxam.Busuu.iOS.Core.csproj">
+      <Project>{B18CE05B-DA11-45F4-BEF8-6945AE895FA2}</Project>
+      <Name>Naxam.Busuu.iOS.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Nokia-tune-Nokia-tune.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\add_language.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\add_language%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\add_language.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\back_arrow.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\back_arrow%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\back_arrow.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\btn_activityCloseCrossButtonNew.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\btn_activityCloseCrossButtonNew%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\btn_close.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_0.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_0.imageset\entity_strength_0.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_1.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_1.imageset\entity_strength_1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_2.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_2.imageset\entity_strength_2.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_3.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_3.imageset\entity_strength_3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_4.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\entity_strength_4.imageset\entity_strength_4.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\fab_menu_row_all.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_all.imageset\fab_menu_row_all%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\fab_menu_row_fav.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_fav.imageset\fab_menu_row_fav%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\fab_menu_row_learning.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_learning.imageset\fab_menu_row_learning%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\greyCheck.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyCheck.imageset\greyCheck%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\greyX.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\greyX.imageset\greyX%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\image_placeholder.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\image_placeholder.imageset\image_placeholder%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\play_btn.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\play_btn.imageset\play_btn.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\rating_star_gold.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_gold.imageset\rating_star_gold%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\rating_star_grey.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rating_star_grey.imageset\rating_star_grey%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_golden_star.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_golden_star.imageset\rounded_golden_star.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_golden_star.imageset\rounded_golden_star%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_grey_star.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_grey_star.imageset\rounded_grey_star.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\rounded_grey_star.imageset\rounded_grey_star%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\star.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\star.imageset\star.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\star_active.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\star_active.imageset\star_active.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_0.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_0.imageset\strength_0.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_0.imageset\strength_0%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_1.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_1.imageset\strength_1.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_1.imageset\strength_1%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_2.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_2.imageset\strength_2.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_2.imageset\strength_2%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_3.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_3.imageset\strength_3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_3.imageset\strength_3%402x.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\strength_4.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\strength_4.imageset\strength_4%402x.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

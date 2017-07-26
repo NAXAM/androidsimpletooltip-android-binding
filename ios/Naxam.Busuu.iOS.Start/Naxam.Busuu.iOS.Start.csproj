@@ -120,6 +120,11 @@
     <Compile Include="Views\ChooseCountryView.designer.cs">
       <DependentUpon>ChooseCountryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\ChooseCountryTableViewSource.cs" />
+    <Compile Include="Cells\CountryCell.cs" />
+    <Compile Include="Cells\CountryCell.designer.cs">
+      <DependentUpon>CountryCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Start.storyboard" />

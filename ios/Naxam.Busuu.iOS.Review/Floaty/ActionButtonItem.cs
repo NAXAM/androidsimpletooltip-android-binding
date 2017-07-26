@@ -4,7 +4,7 @@ using CoreGraphics;
 using Foundation;
 using UIKit;
 
-namespace Naxam.Ausuu.IOS.Review.Floaty
+namespace Naxam.Busuu.IOS.Review.Floaty
 {
     public class ActionButtonItem : NSObject
     {

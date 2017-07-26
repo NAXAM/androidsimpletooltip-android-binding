@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
+using Naxam.Busuu.Core.ViewModels;
 using Naxam.Busuu.Review.Models;
 using Naxam.Busuu.Review.Services;
 
 namespace Naxam.Busuu.Review.ViewModels
 {
-    public class ReviewAllViewModel : MvxViewModel
+    public class ReviewViewModel : MvxViewModel
     {
         readonly IReviewService _reviewService;
 
-		public ReviewAllViewModel(IReviewService reviewService)
+		public ReviewViewModel(IReviewService reviewService)
 		{
 			_reviewService = reviewService;
 		}
@@ -64,6 +65,20 @@ namespace Naxam.Busuu.Review.ViewModels
         void ExecutePlayCommand(ReviewModel review)
         {
             
+        }
+
+        IMvxCommand _goPremiumCommand;
+        public IMvxCommand GoPremiumCommand
+        {
+			get
+			{
+				return (_goPremiumCommand = _goPremiumCommand ?? new MvxCommand(ExecuteGoPremiumCommand));
+			}
+        }
+
+        private void ExecuteGoPremiumCommand()
+        {
+            ShowViewModel<PremiumViewModel>();
         }
     }
 }
