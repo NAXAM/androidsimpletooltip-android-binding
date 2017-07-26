@@ -105,6 +105,10 @@
     <Compile Include="Views\ForgotPasswordView.designer.cs">
       <DependentUpon>ForgotPasswordView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ChooseCountryView.cs" />
+    <Compile Include="Views\ChooseCountryView.designer.cs">
+      <DependentUpon>ChooseCountryView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Start.storyboard" />

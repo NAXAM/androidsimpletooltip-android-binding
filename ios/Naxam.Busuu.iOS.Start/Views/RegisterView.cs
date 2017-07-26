@@ -22,6 +22,7 @@ namespace Naxam.Busuu.iOS.Start.Views
 		bool IsEAnimating;
 		bool IsUAnimating;
 		bool IsPAnimating;
+        bool IsUse; // false = Email, true = Phone
 
 		public RegisterView (IntPtr handle) : base (handle)
 		{
@@ -67,7 +68,7 @@ namespace Naxam.Busuu.iOS.Start.Views
 			fieldPass.ShouldEndEditing = FieldPass_ShouldEndEditing;
 			fieldPass.Layer.Frame = new CoreGraphics.CGRect(0, 0, ViewPassword.Bounds.Width, ViewPassword.Bounds.Height);
 
-            ViewEmail.InsertSubview(fieldEmailPhone, 0);
+            ViewEmail.InsertSubview(fieldEmailPhone, 2);
             ViewUsername.InsertSubview(fieldUserName, 0);
             ViewPassword.InsertSubview(fieldPass, 0);
 
@@ -97,6 +98,7 @@ namespace Naxam.Busuu.iOS.Start.Views
 			setBind.Bind(btnFacebook).To(vm => vm.LoginCommend);
 			setBind.Bind(btnGoogle).To(vm => vm.LoginCommend);
 			setBind.Bind(btnSignUp).To(vm => vm.LoginCommend);
+            setBind.Bind(btnChooseCountry).To(vm => vm.PhoneCodeCommand);
             setBind.Bind(fieldEmailPhone).For(vm => vm.Text).To(vm => vm.EmailPhone);
             setBind.Bind(fieldUserName).For(vm => vm.Text).To(vm => vm.UserName);
             setBind.Bind(fieldPass).For(vm => vm.Text).To(vm => vm.Password);
@@ -125,6 +127,26 @@ namespace Naxam.Busuu.iOS.Start.Views
 			}
 		}
 
+        partial void btnUseEmailPhone_TouchUpInside(NSObject sender)
+        {
+            if (!IsUse)
+            {
+                IsUse = true;
+                fieldEmailPhone.Text = "Phone number";
+				fieldEmailPhone.Frame = new CoreGraphics.CGRect(45, 0, ViewEmail.Bounds.Width - 45, ViewEmail.Bounds.Height);
+				btnUseEmailPhone.SetTitle("USE EMAIL", UIControlState.Normal);
+				btnUseEmailPhone.SetTitle("USE EMAIL", UIControlState.Highlighted);
+            }
+            else
+            {
+                IsUse = false;
+				fieldEmailPhone.Text = "Email";
+				fieldEmailPhone.Frame = new CoreGraphics.CGRect(0, 0, ViewEmail.Bounds.Width, ViewEmail.Bounds.Height);
+				btnUseEmailPhone.SetTitle("USE PHONE NUMBER", UIControlState.Normal);
+				btnUseEmailPhone.SetTitle("USE PHONE NUMBER", UIControlState.Highlighted);
+            }
+        }
+
 		bool FieldEmailPhone_ShouldBeginEditing(MDTextField textField)
 		{
 			IsEAnimating = true;
@@ -139,7 +161,7 @@ namespace Naxam.Busuu.iOS.Start.Views
 
 			viewLineEmail.BackgroundColor = UIColor.FromRGB(57, 169, 246);
 			fieldEmailPhone.TextColor = UIColor.Black;
-			if (fieldEmailPhone.Text == "Email")
+			if (fieldEmailPhone.Text == "Email" || fieldEmailPhone.Text == "Phone number")
 			{
 				fieldEmailPhone.Text = "";
 			}
@@ -156,16 +178,25 @@ namespace Naxam.Busuu.iOS.Start.Views
 			}
 
             viewLineEmail.BackgroundColor = UIColor.Clear;
-			if (fieldEmailPhone.Text == "" || fieldEmailPhone.Text == "Email")
+			if (fieldEmailPhone.Text == "" || fieldEmailPhone.Text == "Email" || fieldEmailPhone.Text == "Phone number")
 			{
+                viewLinePhone.BackgroundColor = UIColor.FromRGB(172, 180, 186);
 				fieldEmailPhone.TextColor = UIColor.FromRGB(172, 180, 186);
 				fieldEmailPhone.NormalColor = UIColor.FromRGB(172, 180, 186);
-				fieldEmailPhone.Text = "Email";
+                if (!IsUse)
+                {
+                    fieldEmailPhone.Text = "Email";
+                }
+                else
+                {
+                    fieldEmailPhone.Text = "Phone number";
+                }
 			}
 			else
 			{
 				fieldEmailPhone.TextColor = UIColor.Black;
 				fieldEmailPhone.NormalColor = UIColor.FromRGB(238, 93, 78);
+                viewLinePhone.BackgroundColor = UIColor.FromRGB(238, 93, 78);
 			}
 
 			return true;

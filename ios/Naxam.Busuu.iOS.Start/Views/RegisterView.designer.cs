@@ -13,6 +13,9 @@ namespace Naxam.Busuu.iOS.Start.Views
 	partial class RegisterView
 	{
 		[Outlet]
+		UIKit.UIButton btnChooseCountry { get; set; }
+
+		[Outlet]
 		UIKit.UIButton btnFacebook { get; set; }
 
 		[Outlet]
@@ -46,6 +49,9 @@ namespace Naxam.Busuu.iOS.Start.Views
 		UIKit.UIView viewLinePass { get; set; }
 
 		[Outlet]
+		UIKit.UIView viewLinePhone { get; set; }
+
+		[Outlet]
 		UIKit.UIView viewLineUser { get; set; }
 
 		[Outlet]
@@ -56,6 +62,9 @@ namespace Naxam.Busuu.iOS.Start.Views
 
 		[Outlet]
 		UIKit.UIView ViewUsername { get; set; }
+
+		[Action ("btnUseEmailPhone_TouchUpInside:")]
+		partial void btnUseEmailPhone_TouchUpInside (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -64,29 +73,19 @@ namespace Naxam.Busuu.iOS.Start.Views
 				btnFacebook = null;
 			}
 
+			if (btnGoogle != null) {
+				btnGoogle.Dispose ();
+				btnGoogle = null;
+			}
+
 			if (btnSignUp != null) {
 				btnSignUp.Dispose ();
 				btnSignUp = null;
 			}
 
-			if (viewLineEmail != null) {
-				viewLineEmail.Dispose ();
-				viewLineEmail = null;
-			}
-
-			if (viewLinePass != null) {
-				viewLinePass.Dispose ();
-				viewLinePass = null;
-			}
-
-			if (viewLineUser != null) {
-				viewLineUser.Dispose ();
-				viewLineUser = null;
-			}
-
-			if (btnGoogle != null) {
-				btnGoogle.Dispose ();
-				btnGoogle = null;
+			if (btnChooseCountry != null) {
+				btnChooseCountry.Dispose ();
+				btnChooseCountry = null;
 			}
 
 			if (btnUseEmailPhone != null) {
@@ -114,9 +113,29 @@ namespace Naxam.Busuu.iOS.Start.Views
 				viewConnectTopConstraint = null;
 			}
 
+			if (viewLinePhone != null) {
+				viewLinePhone.Dispose ();
+				viewLinePhone = null;
+			}
+
 			if (ViewEmail != null) {
 				ViewEmail.Dispose ();
 				ViewEmail = null;
+			}
+
+			if (viewLineEmail != null) {
+				viewLineEmail.Dispose ();
+				viewLineEmail = null;
+			}
+
+			if (viewLinePass != null) {
+				viewLinePass.Dispose ();
+				viewLinePass = null;
+			}
+
+			if (viewLineUser != null) {
+				viewLineUser.Dispose ();
+				viewLineUser = null;
 			}
 
 			if (ViewPassword != null) {

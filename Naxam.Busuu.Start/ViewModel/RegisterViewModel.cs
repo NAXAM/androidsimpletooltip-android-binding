@@ -106,7 +106,7 @@ namespace Naxam.Busuu.Start.ViewModel
 
 		bool CheckPhoneNumber(string email, string user, string pass)
 		{
-            if ((EmailPhone != "Email") && (UserName != "Username") && (Password != "Password (minimum 6 characters)"))
+            if ((EmailPhone != "Email") && (EmailPhone != "Phone number") && (UserName != "Username") && (Password != "Password (minimum 6 characters)"))
 			{
 				Regex regex = new Regex("^[a-zA-Z0-9-_\\.]+@[a-z0-9]+\\.[a-z]{2,4}$");
 				bool checkMail = regex.IsMatch(email);

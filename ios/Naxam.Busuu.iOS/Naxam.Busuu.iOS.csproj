@@ -389,6 +389,7 @@
   <BundleResource Include="Resources\google_logo.png" />
   <BundleResource Include="Resources\facebook_logo.png" />
   <BundleResource Include="Resources\nx_logo_white.png" />
+  <BundleResource Include="Resources\triangle.png" />
 </ItemGroup>
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
