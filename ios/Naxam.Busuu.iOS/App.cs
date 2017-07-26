@@ -18,7 +18,7 @@ namespace Naxam.Busuu.iOS
             Mvx.RegisterType<IReviewService, ReviewService>();
             Mvx.RegisterType<IDataSocial, DataSocial>();
 			Mvx.RegisterType<IDataNotification, DataNotification>();		
-            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainTabBarViewModel>());
+            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<StartPageViewModel>());
 		}
 	}
 }

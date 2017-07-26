@@ -195,10 +195,6 @@
     <Project>{1030A24B-B42C-4076-B166-F7E3A875E071}</Project>
     <Name>Naxam.Busuu.iOS.Review</Name>
   </ProjectReference>
-  <ProjectReference Include="..\..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
-    <Project>{BAAA7577-3BE2-423B-A051-61B47489B015}</Project>
-    <Name>Naxam.Busuu.Review</Name>
-  </ProjectReference>
   <ProjectReference Include="..\..\Naxam.Busuu\Naxam.Busuu.csproj">
     <Project>{60D3471E-3D82-482D-AE23-7792DBFE53AA}</Project>
     <Name>Naxam.Busuu</Name>
@@ -219,13 +215,17 @@
     <Project>{A8453AAF-F6BF-433B-B268-9954240CBBF4}</Project>
     <Name>Naxam.Busuu.iOS.Learning</Name>
   </ProjectReference>
+  <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+    <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+    <Name>Naxam.Busuu.Core</Name>
+  </ProjectReference>
   <ProjectReference Include="..\..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
     <Project>{E1334FF3-BC22-4F7C-B363-A01DE69429F8}</Project>
     <Name>Naxam.Busuu.Learning</Name>
   </ProjectReference>
-  <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
-    <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
-    <Name>Naxam.Busuu.Core</Name>
+  <ProjectReference Include="..\..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
+    <Project>{BAAA7577-3BE2-423B-A051-61B47489B015}</Project>
+    <Name>Naxam.Busuu.Review</Name>
   </ProjectReference>
 </ItemGroup>
 <ItemGroup>
