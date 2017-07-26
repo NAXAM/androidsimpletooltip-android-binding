@@ -65,7 +65,12 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 			AnchorPoint = new CGPoint(0.5f, 0.5f)
 		};
 		private static int MAIN_STACK_TAG = 1001;
-		private List<BadgeLabel> _Badges = new List<BadgeLabel>();
+        private static int SUB_STACK_TAG = 2001;
+        private static int ICON_TAG = 201;
+        private static int LABEL_TAG = 202;
+        private static int ITEM_TAG = 301;
+
+        private List<BadgeLabel> _Badges = new List<BadgeLabel>();
 
 		private UIColor _RippleColor;
 
@@ -192,24 +197,24 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 			}
 			_Badges.Clear();
 
-			var tag = 1;
+			var index = 0;
 			foreach (UITabBarItem item in items)
 			{
 				var stack = new UIStackView()
-				{
-					Axis = UILayoutConstraintAxis.Vertical,
-					Distribution = UIStackViewDistribution.FillProportionally,
+                {
+                    Axis = UILayoutConstraintAxis.Vertical,
+                    Distribution = UIStackViewDistribution.Fill,
 					Alignment = UIStackViewAlignment.Center,
-					Tag = tag
+                    Tag = index + SUB_STACK_TAG
 				};
 
-				var isSelected = tag == SelectedIndex + 1;
+                var isSelected = (index == SelectedIndex);
 
 				var iv = new UIImageView(new CGRect(CGPoint.Empty, _IconSize))
 				{
 					TintColor = isSelected ? _SelectedColor : _UnselectedColor,
 					ContentMode = UIViewContentMode.ScaleAspectFit,
-					Tag = 201
+                    Tag = ICON_TAG
 				};
 
 				UIImage image = null;
@@ -239,7 +244,7 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 					AdjustsFontSizeToFitWidth = true,
 					MinimumScaleFactor = 0.5f,
 					TextColor = isSelected ? _SelectedColor : _UnselectedColor,
-					Tag = 202,
+                    Tag = LABEL_TAG,
 					Hidden = !isSelected
 				};
 				stack.AddArrangedSubview(label);
@@ -255,11 +260,11 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 				badge.Text = item.BadgeValue;
 				_Badges.Add(badge);
 
-				item.Tag = tag;
+                item.Tag = ITEM_TAG + index;
 
 				_KVOController.Observe(item, "badgeValue", NSKeyValueObservingOptions.New, UpdateBadgeForItem);
 
-				tag++;
+                index++;
 			}
 		}
 
@@ -267,7 +272,7 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 		{
 			if (arg1 is UITabBarItem item)
 			{
-				UpdateBadge((int)item.Tag - 1, item.BadgeValue);
+                UpdateBadge((int)item.Tag - ITEM_TAG, item.BadgeValue);
 			}
 		}
 
@@ -279,11 +284,11 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 			{
 				return;
 			}
-			var oldIV = mainStack.ViewWithTag(SelectedIndex + 1).ViewWithTag(201) as UIImageView;
-			var oldLabel = mainStack.ViewWithTag(SelectedIndex + 1).ViewWithTag(202) as UILabel;
-			var newStack = mainStack.ViewWithTag(index + 1);
-			var newIV = newStack.ViewWithTag(201) as UIImageView;
-			var newLabel = newStack.ViewWithTag(202) as UILabel;
+            var oldIV = mainStack.ViewWithTag(SelectedIndex + SUB_STACK_TAG).ViewWithTag(ICON_TAG) as UIImageView;
+			var oldLabel = mainStack.ViewWithTag(SelectedIndex + SUB_STACK_TAG).ViewWithTag(LABEL_TAG) as UILabel;
+			var newStack = mainStack.ViewWithTag(index + SUB_STACK_TAG);
+			var newIV = newStack.ViewWithTag(ICON_TAG) as UIImageView;
+			var newLabel = newStack.ViewWithTag(LABEL_TAG) as UILabel;
 			var width = Bounds.Size.Width / mainStack.Subviews.Length;
 			var oldCache = oldIV.Image;
 			var newCache = newIV.Image;

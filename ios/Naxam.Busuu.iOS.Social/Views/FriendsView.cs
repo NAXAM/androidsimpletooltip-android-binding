@@ -33,7 +33,5 @@ namespace Naxam.Busuu.iOS.Social.Views
 			FriendsTableView.EstimatedRowHeight = 210f;
             FriendsTableView.Source = fSource;			
         }
-
-
 	}
 }
