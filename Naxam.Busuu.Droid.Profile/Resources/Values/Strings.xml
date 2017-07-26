@@ -2,4 +2,6 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">$projectname$</string>
+  <string name="fab_scroll_translation_autohide_behavioravatar">Naxam.Busuu.Droid.Profile.Utils.AvatarImageBehavior</string>
+  <string name="fab_scroll_translation_autohide_behaviorFlag">Naxam.Busuu.Droid.Profile.Utils.FragImageBehavior</string>
 </resources>

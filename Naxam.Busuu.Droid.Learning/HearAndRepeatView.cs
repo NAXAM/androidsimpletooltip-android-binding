@@ -32,7 +32,6 @@ namespace Naxam.Busuu.Droid.Learning
             view.Tag = "2";
             init(view);
             return view;
-            
 
         }
      
