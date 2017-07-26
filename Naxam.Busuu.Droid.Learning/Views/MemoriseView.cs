@@ -14,6 +14,7 @@ using Naxam.Busuu.Droid.Learning.Control;
 using Naxam.Busuu.Learning.Model;
 using Naxam.Busuu.Learning.ViewModel;
 using Naxam.Busuu.Droid.Learning.Control.Memo;
+using Naxam.Busuu.Droid.Learning.Control.Vocabulary;
 
 namespace Naxam.Busuu.Droid.Learning.Views
 {
@@ -59,7 +60,6 @@ namespace Naxam.Busuu.Droid.Learning.Views
 
         private void AddFragment(BaseFragment fragment)
         {
-
             transaction = manager.BeginTransaction();
             fragment.NextClicked += (s, e) =>
             {
@@ -84,6 +84,10 @@ namespace Naxam.Busuu.Droid.Learning.Views
 
                 ((LinearLayout.LayoutParams)layout.LayoutParameters).BottomMargin = 0;
                 Summary summary = new Summary(Corrrect, PositionStep);
+                summary.NextClicked += (s, e) => {
+                    Util.Util.ClearBackStack(manager);
+                    OnBackPressed();
+                };
                 transaction = manager.BeginTransaction();
                 transaction.Replace(Resource.Id.layout, summary, PositionStep + "");
                 transaction.Commit();
@@ -111,6 +115,12 @@ namespace Naxam.Busuu.Droid.Learning.Views
                     break;
                 case UnitModel.UnitType.SelectWordImage:
                     AddFragment(new SelectWordImageFragment(temp));
+                    break;
+                case UnitModel.UnitType.CompleteSentence:
+                    AddFragment(new CompleteSentenceFragment(temp));
+                    break;
+                case UnitModel.UnitType.HearAndRepeat:
+                    AddFragment(new HearAndRepeatFragment(temp));
                     break;
             }
         }

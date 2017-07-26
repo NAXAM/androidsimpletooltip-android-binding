@@ -14,7 +14,8 @@ namespace Naxam.Busuu.Learning.Services
                 UnitModel.UnitType.FillSentence,
                 UnitModel.UnitType.MatchingSentence,
                 UnitModel.UnitType.SelectWord,
-                UnitModel.UnitType.SelectWordImage
+                UnitModel.UnitType.SelectWordImage,
+                UnitModel.UnitType.CompleteSentence
             };
         ExerciseModel.ExerciseType[] typeExercise = new ExerciseModel.ExerciseType[] {
              //   ExerciseModel.ExerciseType.Conversation,
@@ -215,7 +216,29 @@ namespace Naxam.Busuu.Learning.Services
                         }
                     };
                     unit.Type = UnitModel.UnitType.SelectWordImage;
-                    
+
+                    break;
+                case UnitModel.UnitType.CompleteSentence:
+                    unit.Title = "Điền vào chỗ trống";
+                    unit.Input = new List<string> { "%% Quỳnh Anh"};
+                    unit.Answers = new List<AnswerModel> {
+                         new AnswerModel
+                        {
+                            Text="i'm",
+                        }
+                    };
+                    unit.Type = UnitModel.UnitType.CompleteSentence;
+                    break;
+                case UnitModel.UnitType.HearAndRepeat:
+                    unit.Title = "Điền vào chỗ trống";
+                    unit.Input = new List<string> { "%% Quỳnh Anh" };
+                    unit.Answers = new List<AnswerModel> {
+                         new AnswerModel
+                        {
+                            Text="i'm",
+                        }
+                    };
+                    unit.Type = UnitModel.UnitType.HearAndRepeat;
                     break;
             }
             if (random.Next(1, 100) % 3 == 0)
@@ -276,7 +299,7 @@ namespace Naxam.Busuu.Learning.Services
             if (ex.Type != ExerciseModel.ExerciseType.Dialogue)
                 for (int i = 0; i < 6; i++)
                 {
-                    lstUnit.Add(GetDataByUnitType(typeUnit[random.Next(1, 100) % 5], random.Next(1, 100) % 2 == 0, random.Next(1, 100) % 2 == 0));
+                    lstUnit.Add(GetDataByUnitType(typeUnit[random.Next(1, 100) % 6], random.Next(1, 100) % 2 == 0, random.Next(1, 100) % 2 == 0));
                 }
             else
             {

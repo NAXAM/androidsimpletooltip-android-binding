@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Naxam.Busuu.Droid.Profile.Views;
 using Android.Support.V7.App;
 using Android.Support.V4.Content;
 using Android.Graphics;
@@ -16,12 +17,11 @@ using Naxam.Busuu.Droid.Learning.Views;
 
 namespace Naxam.Busuu.Droid
 {
-    //[Activity(Label = "MainActivity",Theme= "@style/AppTheme", MainLauncher = true, SupportsPictureInPicture = true, AllowEmbedded = true)]
-    public class MainActivity : AppCompatActivity
+      public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);  
+            base.OnCreate(savedInstanceState); 
         }
     }
 }

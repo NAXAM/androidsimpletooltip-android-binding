@@ -111,7 +111,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
                 PageSelected?.Invoke(position);
             }
         }
-
+        
         private void InitFragment()
         {
            
@@ -120,6 +120,12 @@ namespace Naxam.Busuu.Droid.Learning.Views
                 actionBar.Hide();
                 layoutStep.Visibility = ViewStates.Gone;
                 Summary summary = new Summary(Corrrect, PositionStep);
+                summary.TryAgainClicked += (s, e) => { };
+                summary.NextClicked += (s, e) => {
+
+                    Util.Util.ClearBackStack(manager);
+                    OnBackPressed();
+                };
                 listFragment.Clear();
                 listFragment.Add(summary);
                 adapter.NotifyDataSetChanged();
@@ -147,6 +153,12 @@ namespace Naxam.Busuu.Droid.Learning.Views
                     break;
                 case UnitModel.UnitType.SelectWordImage:
                     AddFragment(new SelectWordImageFragment(temp), temp);
+                    break;
+                case UnitModel.UnitType.CompleteSentence:
+                    AddFragment(new CompleteSentenceFragment(temp), temp);
+                    break;
+                case UnitModel.UnitType.HearAndRepeat:
+                    AddFragment(new CompleteSentenceFragment(temp), temp);
                     break;
             }
 

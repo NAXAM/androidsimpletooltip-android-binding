@@ -14,16 +14,23 @@ using static Android.Views.Animations.Animation;
 using Android.Views.Animations;
 using Android.Graphics;
 using Android.Animation;
+using Naxam.Busuu.Learning.Model;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Vocabulary
 {
-    public class HearAndRepeatView : BaseFragment
+    public class HearAndRepeatFragment : BaseFragment
     {
+        public override event EventHandler<int> NextClicked;
         ImageView imgMic, hiddenCircle, imgPlayBtn;
         GradientDrawable clikedShape;
         GradientDrawable UnclikedShape;
         TextView txtGuide;
         bool isClick;
+
+        public HearAndRepeatFragment(UnitModel item)
+        {
+            this.Item = item;
+        }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -50,7 +57,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Vocabulary
 
             imgMic = (ImageView)view.FindViewById(Resource.Id.imgMic);
             txtGuide = (TextView)view.FindViewById(Resource.Id.txtGuide);
-            
+
             clikedShape = new GradientDrawable();
             clikedShape.SetShape(ShapeType.Rectangle);
             clikedShape.SetCornerRadius(1000);
@@ -81,6 +88,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Vocabulary
                     txtGuide.Visibility = ViewStates.Visible;
                     imgMic.Background = UnclikedShape;
                     isClick = !isClick;
+                    NextClicked?.Invoke(this, 1);
                 };
 
             };

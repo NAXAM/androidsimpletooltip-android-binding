@@ -14,6 +14,7 @@ using MvvmCross.Droid.Support.V7.AppCompat;
 using Naxam.Busuu.Droid.Profile.Controls;
 using Android.Graphics;
 using Android.Views.Animations;
+using Com.Viewpagerindicator;
 
 namespace Naxam.Busuu.Droid.Profile.Views
 {
@@ -27,12 +28,15 @@ namespace Naxam.Busuu.Droid.Profile.Views
         private ImageView imSecondBackground;
         private LinearLayout startLogo;
         private NXIndicator indicator;
+        public IPageIndicator mIndicator;
+
         private int oldPosition = 0;
         private float oldPositionOffset = 0;
         private bool isTouched = false;
         private float touchLocationX;
         private float screenWidth;
         private float screenHeight;
+
 
 
         private bool isSwipeLeft = true;
@@ -88,7 +92,7 @@ namespace Naxam.Busuu.Droid.Profile.Views
             viewPager = FindViewById<ViewPager>(Resource.Id.pager);
             pagerAdapter = new ScreenSlidePagerAdapter(SupportFragmentManager, list);
             viewPager.Adapter = pagerAdapter;
-                        
+
             viewPager.SetOnPageChangeListener(new OnPageChangeListener(
                 (position, positionOffset, positionOffsetPixels) =>
                 {
@@ -152,6 +156,9 @@ namespace Naxam.Busuu.Droid.Profile.Views
                     }
                 }
             }));
+
+            //mIndicator = FindViewById<CirclePageIndicator>(Resource.Id.indicator);
+            //mIndicator.SetViewPager(viewPager);
         }
 
         class OnTouchListener : Java.Lang.Object, View.IOnTouchListener
