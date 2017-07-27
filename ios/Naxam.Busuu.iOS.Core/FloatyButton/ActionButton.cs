@@ -13,7 +13,7 @@ namespace Naxam.Busuu.IOS.Core.Floaty
 
         /// The button's background color : set default color and selected color
 
-        UIColor _backgroundColor = UIColor.Blue;
+        UIColor _backgroundColor;
         public UIColor BackgroundColor
         {
             get => _backgroundColor;
@@ -24,7 +24,7 @@ namespace Naxam.Busuu.IOS.Core.Floaty
         }
 
         /// The button's background color : set default color
-        UIColor backgroundColorSelected = UIColor.Blue;
+        UIColor backgroundColorSelected;
 
         /// Indicates if the buttons is active (showing its items)
         bool Active = false;
@@ -74,10 +74,11 @@ namespace Naxam.Busuu.IOS.Core.Floaty
         /// the float button's radius
         nfloat FloatButtonRadius = 50;
 
-        public ActionButton(UIView view, ActionButtonItem[] itemss) : base()
+        public ActionButton(UIView view, ActionButtonItem[] itemss, UIColor backgroundColor) : base()
         {
             this.ParentView = view;
             var bounds = view.Bounds;
+            this.BackgroundColor = backgroundColor;
             FloatButton = new UIButton(UIButtonType.Custom);
             FloatButton.Layer.CornerRadius = new nfloat(FloatButtonRadius / 2);
             FloatButton.Layer.ShadowOpacity = 1;

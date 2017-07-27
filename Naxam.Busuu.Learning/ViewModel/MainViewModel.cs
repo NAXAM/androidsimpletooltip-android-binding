@@ -23,6 +23,16 @@ namespace Naxam.Busuu.Learning.ViewModel
         {
             base.ViewAppeared();
             Lessons = new MvxObservableCollection<LessonModel>(await learningService.GetAllLesson());
+
+            LessonAndSubLessions = new MvxObservableCollection<object>();
+            foreach (var lesson in Lessons)
+            {
+                LessonAndSubLessions.Add(lesson);
+                foreach (var topic in lesson)
+                {
+                    LessonAndSubLessions.Add(topic);
+                }
+            }
         }
 
         #region Property
@@ -32,14 +42,22 @@ namespace Naxam.Busuu.Learning.ViewModel
         {
             get { return _lessons; }
             set
-            {
-                if (_lessons != value)
-                {
-                    _lessons = value;
-                    RaisePropertyChanged();
-                }
+			{
+				SetProperty(ref _lessons, value);
             }
         }
+
+        private MvxObservableCollection<object> _lessonAndSubLessions;
+
+		public MvxObservableCollection<object> LessonAndSubLessions
+		{
+			get { return _lessonAndSubLessions; }
+			set
+			{
+                SetProperty(ref _lessonAndSubLessions, value);
+            }
+		}
+
         #endregion Property
 
         #region Command

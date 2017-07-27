@@ -1,15 +1,20 @@
 ﻿using System;
-using System.Globalization;
-using CoreGraphics;
-using MvvmCross.Platform.Converters;
 using UIKit;
+using CoreGraphics;
+using System.Globalization;
 
-namespace Naxam.Busuu.iOS.Core.Converter
+namespace Naxam.Busuu.iOS.Core.Extensions
 {
-    public class HexToUIColorValueConverter : MvxValueConverter<string, UIColor>
+    public static class CGColorExtensions
     {
-        protected override UIColor Convert(string value, Type targetType, object parameter, CultureInfo culture)
-        {
+        public static UIColor ToUIColor(this CGColor color) {
+            return UIColor.FromCGColor(color);
+        }
+    }
+
+    public static class ColorUtils
+    {
+        public static UIColor ColorFromHex(string value) {
 			//Remove # if present
 			if (value.IndexOf('#') != -1)
 				value = value.Replace("#", "");

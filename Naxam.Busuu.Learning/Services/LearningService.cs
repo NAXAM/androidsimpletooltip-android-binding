@@ -42,6 +42,7 @@ namespace Naxam.Busuu.Learning.Services
             return Lessons.ToArray();
         }
 
+
         public async Task<TipModel> GetTipByUnit(UnitModel unit)
         {
             List<string> lstTip = new List<string>() { "mot hai ba", "ba bon ngay" };
@@ -53,6 +54,8 @@ namespace Naxam.Busuu.Learning.Services
             };
             return tip;
         }
+
+
 
         public async Task<UnitModel[]> GetUnitByExercise(ExerciseModel ex)
         {

@@ -2,6 +2,7 @@
 using CoreAnimation;
 using CoreGraphics;
 using Foundation;
+using Naxam.Busuu.iOS.Core.Extensions;
 using UIKit;
 
 namespace Naxam.Busuu.iOS.Core.Views
@@ -47,8 +48,24 @@ namespace Naxam.Busuu.iOS.Core.Views
         public Action AnimationDidStartFunc;
         public Action<bool> AnimationDidStopFunc;
 
-        public UIColor FinishColor { get; set; }
-        public UIColor AnimateColor { get; set; }
+        public UIColor FinishColor { 
+            get => FinishCGColor?.ToUIColor(); 
+            set {
+                FinishCGColor = value?.CGColor;
+            } 
+        }
+        public CGColor FinishCGColor {
+            get;
+            set;
+        }
+        public UIColor AnimateColor
+        {
+            get => AnimateCGColor.ToUIColor();
+            set {
+                AnimateCGColor = value?.CGColor;
+            }
+        }
+        public CGColor AnimateCGColor { get; set; }
 
         public SpreadOutAnimationViewDelegate AnimationDelegate { get; set; }
 
@@ -64,17 +81,19 @@ namespace Naxam.Busuu.iOS.Core.Views
             AnchorPoint = new CGPoint(0.5, 0.5);
             MasksToBounds = true;
             FillColor = UIColor.Clear.CGColor;
+            AnimateColor = UIColor.Clear;
 
             AnimationDelegate = new SpreadOutAnimationViewDelegate();
             AnimationDelegate.AnimationDidStartFunc = () =>
            {
                AnimationDidStartFunc?.Invoke();
-               FillColor = AnimateColor.CGColor;
+                FillColor = AnimateCGColor;
            };
             AnimationDelegate.AnimationDidStopFunc = (finished) =>
             {
-                ParentView.Layer.BackgroundColor = FinishColor.CGColor;
-                FillColor = FinishColor.CGColor;
+                Transform = CATransform3D.MakeScale(0.0001f, 0.0001f, 0.0001f);
+                ParentView.Layer.BackgroundColor = FinishCGColor;
+                FillColor = FinishCGColor;
                 AnimationDidStopFunc?.Invoke(finished);
             };
         }
@@ -86,7 +105,7 @@ namespace Naxam.Busuu.iOS.Core.Views
             animation.To = NSNumber.FromNFloat(to);
             animation.RepeatCount = 1;
             animation.TimingFunction = CAMediaTimingFunction.FromName((NSString)timing);
-            animation.RemovedOnCompletion = false;
+            animation.RemovedOnCompletion = true;
             animation.FillMode = CAFillMode.Forwards;
             animation.Duration = AnimationDuration;
             animation.Delegate = AnimationDelegate;

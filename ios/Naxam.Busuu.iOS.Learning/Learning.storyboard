@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lessonCell" rowHeight="80" id="DU4-s7-Edh" customClass="LessonTableViewCell">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DU4-s7-Edh" id="Zkg-gh-N65">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
@@ -70,13 +70,13 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="8aF-Z8-JH9" secondAttribute="trailing" constant="16" id="2pF-40-txN"/>
                                                 <constraint firstItem="Xil-dz-Afh" firstAttribute="centerY" secondItem="Zkg-gh-N65" secondAttribute="centerY" id="6lx-8z-6PM"/>
-                                                <constraint firstItem="wCK-oR-xud" firstAttribute="leading" secondItem="Xil-dz-Afh" secondAttribute="trailing" constant="16" id="7fu-Bs-cE4"/>
                                                 <constraint firstItem="wCK-oR-xud" firstAttribute="top" secondItem="1Xe-2T-WRU" secondAttribute="bottom" constant="6" id="ACM-xi-UU8"/>
                                                 <constraint firstItem="1Xe-2T-WRU" firstAttribute="top" secondItem="Zkg-gh-N65" secondAttribute="topMargin" constant="12" id="Afd-M3-xEd"/>
                                                 <constraint firstItem="Xil-dz-Afh" firstAttribute="leading" secondItem="Zkg-gh-N65" secondAttribute="leading" constant="16" id="YB0-rq-cBh"/>
                                                 <constraint firstItem="8aF-Z8-JH9" firstAttribute="centerY" secondItem="Zkg-gh-N65" secondAttribute="centerY" id="YIn-Ps-Wun"/>
                                                 <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="wCK-oR-xud" secondAttribute="bottom" priority="999" constant="20" id="fPu-zK-uxJ"/>
                                                 <constraint firstItem="1Xe-2T-WRU" firstAttribute="leading" secondItem="Xil-dz-Afh" secondAttribute="trailing" constant="16" id="hK4-rw-5JL"/>
+                                                <constraint firstItem="wCK-oR-xud" firstAttribute="leading" secondItem="1Xe-2T-WRU" secondAttribute="leading" id="olm-hR-mQd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -88,7 +88,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="subCell" rowHeight="140" id="oO0-3D-MOS" customClass="SubLessonTableViewCell">
-                                        <rect key="frame" x="0.0" y="135.5" width="375" height="140"/>
+                                        <rect key="frame" x="0.0" y="136" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oO0-3D-MOS" id="ByQ-3F-cdG">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
