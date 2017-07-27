@@ -56,26 +56,26 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 	public class MaterialTabBar : UIView
 	{
 		#region Private properties
-		private UIColor _SelectedColor;
-		private UIColor _UnselectedColor;
-		private CGSize _IconSize = new CGSize(24, 24);
-		private nfloat _LabelHeight = 16;
-		private CAShapeLayer _RippleLayer = new CAShapeLayer()
+		UIColor _SelectedColor;
+		UIColor _UnselectedColor;
+		CGSize _IconSize = new CGSize(24, 24);
+	    nfloat _LabelHeight = 16;
+		CAShapeLayer _RippleLayer = new CAShapeLayer()
 		{
 			AnchorPoint = new CGPoint(0.5f, 0.5f)
 		};
-        private NSLayoutConstraint _HeightConstraint;
-		private static int MAIN_STACK_TAG = 1001;
-        private static int SUB_STACK_TAG = 2001;
-        private static int ICON_TAG = 201;
-        private static int LABEL_TAG = 202;
-        private static int ITEM_TAG = 301;
-        private static nfloat BAR_HEIGHT = 49f;
+        NSLayoutConstraint _HeightConstraint;
+		static int MAIN_STACK_TAG = 1001;
+        static int SUB_STACK_TAG = 2001;
+        static int ICON_TAG = 201;
+        static int LABEL_TAG = 202;
+        static int ITEM_TAG = 301;
+        static nfloat BAR_HEIGHT = 49f;
 
 
-        private List<BadgeLabel> _Badges = new List<BadgeLabel>();
+        List<BadgeLabel> _Badges = new List<BadgeLabel>();
 
-		private UIColor _RippleColor;
+		UIColor _RippleColor;
 
 		UIView _RippleContainer = new UIView()
 		{
@@ -279,7 +279,7 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 			}
 		}
 
-		private void UpdateBadgeForItem(NSObject arg0, NSObject arg1, NSDictionary<NSString, NSObject> arg2)
+		void UpdateBadgeForItem(NSObject arg0, NSObject arg1, NSDictionary<NSString, NSObject> arg2)
 		{
 			if (arg1 is UITabBarItem item)
 			{
