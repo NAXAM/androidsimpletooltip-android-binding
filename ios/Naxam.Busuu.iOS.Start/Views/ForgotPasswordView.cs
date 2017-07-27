@@ -9,6 +9,7 @@ using MvvmCross.iOS.Views;
 using Naxam.Busuu.Start.ViewModel;
 using FBKVOControllerNS;
 using UIKit;
+using System.Text.RegularExpressions;
 
 namespace Naxam.Busuu.iOS.Start.Views
 {
@@ -98,7 +99,15 @@ namespace Naxam.Busuu.iOS.Start.Views
 			else
 			{
 				fieldEmailPhone.TextColor = UIColor.Black;
-				fieldEmailPhone.NormalColor = UIColor.FromRGB(238, 93, 78);
+
+				if (CheckEmailPhone())
+				{
+					fieldEmailPhone.NormalColor = UIColor.FromRGB(172, 180, 186);
+				}
+				else
+				{
+					fieldEmailPhone.NormalColor = UIColor.FromRGB(238, 93, 78);
+				}
 			}
 
 			return true;
@@ -110,6 +119,22 @@ namespace Naxam.Busuu.iOS.Start.Views
 			alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
 			PresentViewController(alert, true, null);
         }
+
+		bool CheckEmailPhone()
+		{
+			if (fieldEmailPhone.Text != "Email address or phone number")
+			{
+				Regex regex = new Regex("^[a-zA-Z0-9-_\\.]+@[a-z0-9]+\\.[a-z]{2,4}$");
+				bool checkMail = regex.IsMatch(fieldEmailPhone.Text);
+
+				Regex regexP = new Regex("^+?[0-9]{9,13}$");
+				bool checkPhone = regexP.IsMatch(fieldEmailPhone.Text);
+
+				return (checkMail || checkPhone);
+			}
+
+			return false;
+		}
 
 		protected override void Dispose(bool disposing)
 		{
