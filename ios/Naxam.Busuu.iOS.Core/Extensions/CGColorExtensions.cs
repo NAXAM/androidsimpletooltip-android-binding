@@ -61,4 +61,18 @@ namespace Naxam.Busuu.iOS.Core.Extensions
 			return UIColor.FromRGB(red, green, blue);
         }
     }
+
+    public static class UIColorExtensions
+    {
+        public static UIColor BrighterColor(this UIColor color) {
+            nfloat r = 0, g = 0, b = 0, a = 1;
+            color.GetRGBA(out r, out g, out b, out a);
+            return UIColor.FromRGBA(
+                1 - (1-r)*(1-r),
+                1 - (1 - g) * (1 - g),
+                1 - (1 - b) * (1 - b),
+                a
+            );
+        }
+    }
 }

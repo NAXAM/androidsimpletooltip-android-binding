@@ -58,7 +58,6 @@ namespace Naxam.Busuu.iOS.Learning.Views
     {
         public event PropertyChangedEventHandler PropertyChanged;
         List<int> lessonIndexs;
-        //List<NSIndexPath> topicWillOpen;
         List<int> openingLessons;
         Dictionary<int, List<NSIndexPath>> AllTopicWithLessonKey;
 
@@ -78,7 +77,6 @@ namespace Naxam.Busuu.iOS.Learning.Views
 		public LessionTableViewSource(UITableView tableview) : base(tableview)
 		{
             lessonIndexs = new List<int>();
-            //topicWillOpen = new List<NSIndexPath>();
             openingLessons = new List<int>();
             AllTopicWithLessonKey = new Dictionary<int, List<NSIndexPath>>();
 		}
@@ -99,13 +97,16 @@ namespace Naxam.Busuu.iOS.Learning.Views
                     return 80f;
                 }
             }
-			//foreach (var item in topicWillOpen)
-			//{
-			//	if (indexPath.Row == item.Row)
-			//	{
-   //                 return 140f;
-			//	}
-			//}
+            foreach (var lesson in openingLessons)
+            {
+                foreach (var topic in AllTopicWithLessonKey[lesson])
+                {
+                    if(indexPath.Row == topic.Row)
+                    {
+                        return 140f;
+                    }
+                }
+            }
             return 0;
         }
 

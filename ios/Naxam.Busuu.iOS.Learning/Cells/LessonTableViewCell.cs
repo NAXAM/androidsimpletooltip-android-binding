@@ -7,6 +7,7 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Platform.Converters;
 using Naxam.Busuu.iOS.Core.Converter;
+using Naxam.Busuu.iOS.Core.Extensions;
 using Naxam.Busuu.iOS.Core.Views;
 using Naxam.Busuu.Learning.Model;
 using UIKit;
@@ -89,7 +90,7 @@ namespace Naxam.Busuu.iOS.Learning
                  lbTitle.TextColor = UIColor.DarkTextColor;
                  btnDownload.TintColor = UIColor.LightGray;
                 //});
-                ContentView.Layer.BackgroundColor = UIColor.White.CGColor;
+                ContentView.Layer.BackgroundColor = cellColor.ToUIColor().BrighterColor().CGColor;
             }
         }
 
