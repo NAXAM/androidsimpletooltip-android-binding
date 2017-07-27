@@ -16,7 +16,9 @@ namespace Naxam.Busuu.Learning.Model
             FillSentence,
             ChooseWord,
             MatchingSentence,
-            SelectWordImage
+            SelectWordImage,
+            CompleteSentence,
+            HearAndRepeat
         }
 
         private UnitType _Type;

@@ -117,6 +117,8 @@ namespace Naxam.Busuu.Droid.Learning.Control
                     return Resource.Drawable.icon_book_tick;
                 case ExerciseType.Vocabulary:
                     return Resource.Drawable.icon_vocabulary;
+                case ExerciseType.Dialogue:
+                    return Resource.Drawable.icon_dialogue;
 
             }
             return Resource.Drawable.ic_component_memorise;

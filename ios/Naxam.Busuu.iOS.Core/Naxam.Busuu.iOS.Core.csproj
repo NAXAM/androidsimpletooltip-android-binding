@@ -39,6 +39,17 @@
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchHttpClientHandler></MtouchHttpClientHandler>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|iPhoneSimulator' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -127,9 +138,9 @@
     <Compile Include="CustomControls\MaterialTabBar.cs" />
     <Compile Include="Common\LinkerPleaseInclude.cs" />
     <Compile Include="CustomBindings\ColorTargetBinding.cs" />
-    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
     <Compile Include="Converter\HexToUIColorValueConverter.cs" />
     <Compile Include="CustomBindings\RippleColorTargetBinding.cs" />
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\BuyPremiumCell.xib" />

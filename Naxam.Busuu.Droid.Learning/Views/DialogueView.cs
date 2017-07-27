@@ -12,8 +12,7 @@ using Android.Widget;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using Naxam.Busuu.Learning.Model;
 using Naxam.Busuu.Droid.Learning.Control;
-using Naxam.Busuu.Learning.ViewModel;
-using Naxam.Busuu.Droid.Learning.Control.Dialogue;
+using Naxam.Busuu.Learning.ViewModel; 
 
 namespace Naxam.Busuu.Droid.Learning.Views
 {
@@ -51,7 +50,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
         }
 
 
-        private void AddFragment(DialogueFragmentBase fragment)
+        private void AddFragment(BaseFragment fragment)
         {
             transaction = manager.BeginTransaction();
             fragment.NextClicked += (s, e) =>

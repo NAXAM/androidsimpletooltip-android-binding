@@ -58,10 +58,12 @@ namespace Naxam.Busuu.Droid.Learning.Control
             {
                 convertView = LayoutInflater.FromContext(context).Inflate(Resource.Layout.conversation_fill_list_sentence_item, null);
             }
+
             ImageView imgAvatar = convertView.FindViewById<ImageView>(Resource.Id.imgAvatar);
             TextView txtName = convertView.FindViewById<TextView>(Resource.Id.txtName);
             TextView txtInput = convertView.FindViewById<TextView>(Resource.Id.txtInput);
-            Glide.With(context).Load(ItemSource[position].Images[0]).Transform(new CircleTransform(context)).Into(imgAvatar);
+            if (ItemSource[position].Images?.Count > 0)
+                Glide.With(context).Load(ItemSource[position].Images[0]).Transform(new CircleTransform(context)).Into(imgAvatar);
             txtName.Text = ItemSource[position].Title;
             List<string> listString = Regex.Split(ItemSource[position].Input[0], "%%").ToList();
 
@@ -81,7 +83,7 @@ namespace Naxam.Busuu.Droid.Learning.Control
             txtInput.Text = input;
             if (position == FocusIndex)
             {
-                convertView.SetBackgroundColor(Color.ParseColor("#CFEAFC")); 
+                convertView.SetBackgroundColor(Color.ParseColor("#CFEAFC"));
             }
             else
             {

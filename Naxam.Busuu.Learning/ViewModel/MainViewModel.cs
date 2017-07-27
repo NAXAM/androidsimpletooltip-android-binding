@@ -94,7 +94,20 @@ namespace Naxam.Busuu.Learning.ViewModel
 
         void RunExerciseClickCommand(ExerciseClickEventArg e)
         {
-            ShowViewModel<VocabularyViewModel>(e.Exercise);
+            var ex = Lessons[e.LessonIndex][e.TopicIndex].Exercises[e.ExerciseIndex];
+            switch (ex.Type)
+            {
+                case ExerciseModel.ExerciseType.Memorise:
+                    ShowViewModel<MemoriseViewModel>(ex);
+                    break;
+                case ExerciseModel.ExerciseType.Vocabulary:
+                    ShowViewModel<VocabularyViewModel>(ex);
+                    break;
+                case ExerciseModel.ExerciseType.Dialogue:
+                    ShowViewModel<DialogueViewModel>(ex);
+                    break;
+            }
+
         }
 
         #endregion Command

@@ -101,13 +101,13 @@ namespace Naxam.Busuu.Droid.Learning.Control
         {
             List<PlaylistItem> list = new List<PlaylistItem>();
             list.Add(new PlaylistItem(Url));
-            playerView = new JWPlayerView(Context, 
-                new PlayerConfig.Builder()
-                .Playlist(list)
-                .Build());
-            playerView.AddOnTimeListener(this);
-            playerView.AddOnPlayListener(this);
-            playerView.AddOnPauseListener(this);
+            //playerView = new JWPlayerView(Context, 
+             //   new PlayerConfig.Builder()
+             //   .Playlist(list)
+             //   .Build());
+            //playerView.AddOnTimeListener(this);
+          //  playerView.AddOnPlayListener(this);
+          //  playerView.AddOnPauseListener(this);
             if (ChildCount == 1)
                 return;
             imIcon = new ImageView(Context);
@@ -133,18 +133,18 @@ namespace Naxam.Busuu.Droid.Learning.Control
                 limit = playerView.Duration;
                 if (isPlay)
                 {
-                    playerView.Pause();
+                 //   playerView.Pause();
                 }
                 else
                 {
                     if (playerView.State == PlayerState.Paused)
                     {
-                        playerView.Play();
+                      //  playerView.Play();
                     }
                     else
                     {
                         playerView.Load(new PlaylistItem(Url));
-                        playerView.Play();
+                     //   playerView.Play();
                     }
                 }
                 OnClick();
@@ -186,21 +186,21 @@ namespace Naxam.Busuu.Droid.Learning.Control
         public void OnTime(long p0, long p1)
         {
             PositionChanged?.Invoke(this, p0);
-            if (p0 > limit)
-                playerView.Pause();
+           // if (p0 > limit)
+            //    playerView.Pause();
         }
         public void Play(int from, int to)
         {
             if (playerView.State == PlayerState.Paused)
             {
-                playerView.Seek((long)from * 1000);
-                playerView.Play();
+              //  playerView.Seek((long)from * 1000);
+              //  playerView.Play();
             }
             else
             {
-                playerView.Load(new PlaylistItem(Url));
-                playerView.Seek((long)from * 1000);
-                playerView.Play();
+              //  playerView.Load(new PlaylistItem(Url));
+              //  playerView.Seek((long)from * 1000);
+              //  playerView.Play();
             }
             limit = to * 1000;
         }

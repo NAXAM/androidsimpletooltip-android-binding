@@ -9,9 +9,27 @@ namespace Naxam.Busuu.Learning.Services
 {
     public class LearningService : ILearningService
     {
+        UnitModel.UnitType[] typeUnit = new UnitModel.UnitType[] {
+                UnitModel.UnitType.ChooseWord,
+                UnitModel.UnitType.FillSentence,
+                UnitModel.UnitType.MatchingSentence,
+                UnitModel.UnitType.SelectWord,
+                UnitModel.UnitType.SelectWordImage,
+                UnitModel.UnitType.CompleteSentence
+            };
+        ExerciseModel.ExerciseType[] typeExercise = new ExerciseModel.ExerciseType[] {
+             //   ExerciseModel.ExerciseType.Conversation,
+                ExerciseModel.ExerciseType.Dialogue,
+            //    ExerciseModel.ExerciseType.Discover,
+           //     ExerciseModel.ExerciseType.Evolution,
+                ExerciseModel.ExerciseType.Memorise,
+             //   ExerciseModel.ExerciseType.Practice,
+                ExerciseModel.ExerciseType.Vocabulary
+            };
+        Random random = new Random();
         public async Task<LessonModel[]> GetAllLesson()
         {
-            Random random = new Random();
+
             string[] color = new string[]
             {
                 "#58B0F8","#B02018","#FEAB35"
@@ -54,134 +72,211 @@ namespace Naxam.Busuu.Learning.Services
             return tip;
         }
 
-        public async Task<UnitModel[]> GetUnitByExercise(ExerciseModel ex)
+
+        private ExerciseModel GetRandomExercise()
         {
-            UnitModel.UnitType[] lstType = new UnitModel.UnitType[] {
-            UnitModel.UnitType.FillSentence,UnitModel.UnitType.ChooseWord,UnitModel.UnitType.SelectWord
-            };
+            ExerciseModel ex = new ExerciseModel();
 
 
-            ex = ex ?? new ExerciseModel();
-
-            List<UnitModel> listUnit = new List<UnitModel>();
-            for (int i = 0; i < 5; i++)
-            {
-                listUnit.Add(new UnitModel
-                {
-                    Title = "Chọn từ đúng",
-                    Type = lstType[i % 3],
-
-                    Tip = await GetTipByUnit(null),
-                    Input = new List<string>
-                {
-                    "Tôi là %% người %%  trai nhất naxam"
-                },
-                    Images = new List<string>
-                    {
-                        // "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg",
-                    },
-                    Audios = new List<AudioModel> {
-                    new AudioModel
-                    {
-                        Link = "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg"
-                    }
-                },
-                    Answers = new List<AnswerModel>
-                {
-                    new AnswerModel
-                    {
-                        Text = "thảo",
-                        Value = true,
-                        Image = "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg"
-                    },
-                     new AnswerModel
-                    {
-                        Text = "xấu",
-                        Value  = true,
-                        Position = 1,
-                        Image = "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg"
-                    },
-                      new AnswerModel
-                    {
-                        Text = "đẹp",
-                        Image = "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg"
-                    },
-                       new AnswerModel
-                    {
-                        Text = "nghĩa"
-                    }
-                       ,
-                       new AnswerModel
-                    {
-                        Text = "sơn"
-                    },
-                       new AnswerModel
-                    {
-                        Text = "dị"
-                    }
-                }
-                });
-            }
-            ex.Units = listUnit;
-            return listUnit.ToArray();
+            ex.Type = typeExercise[random.Next(1, 100) % 3];
+            ex.Name = "Exercise " + random.Next(1, 100);
+            return ex;
         }
+
+
+        private UnitModel GetDataByUnitType(UnitModel.UnitType type, bool hasImage, bool hasAudio)
+        {
+            UnitModel unit = new UnitModel();
+            switch (type)
+            {
+                case UnitModel.UnitType.FillSentence:
+                    unit.Input = new List<string> {
+                        "What's your name? %%  " };
+                    unit.Title = "Select the correct word(s) to fill the gap.";
+                    unit.Images = new List<string>() { };
+                    unit.Answers = new List<AnswerModel> {
+                        new AnswerModel
+                        {
+                            Text="I'm from...",
+                            Value = false
+                        },
+                        new AnswerModel
+                        {
+                            Text="I'm...",
+                            Value = true
+                        }
+                        ,
+                        new AnswerModel
+                        {
+                            Text="she is from...",
+                            Value = false
+                        },
+                    };
+                    unit.Type = UnitModel.UnitType.FillSentence;
+                    break;
+                case UnitModel.UnitType.ChooseWord:
+                    unit.Title = "Bấm vào từ đối nghĩa của từ\"Tall\" ";
+                    unit.Answers = new List<AnswerModel> {
+                        new AnswerModel
+                        {
+                            Text="Old",
+                            Value = false
+                        },
+                        new AnswerModel
+                        {
+                            Text="Short",
+                            Value = true
+                        } ,
+                        new AnswerModel
+                        {
+                            Text="Tall",
+                            Value = false
+                        },
+                    };
+
+                    unit.Type = UnitModel.UnitType.ChooseWord;
+                    break;
+                case UnitModel.UnitType.MatchingSentence:
+                    unit.Title = "Nối cặp/cụm từ";
+                    unit.Answers = new List<AnswerModel> {
+                        new AnswerModel
+                        {
+                            Text="Sinh Viên",
+                            Value = true
+                        },
+                        new AnswerModel
+                        {
+                            Text="Bác Sĩ",
+                            Value = true
+                        } ,
+                        new AnswerModel
+                        {
+                            Text="Giáo Viên",
+                            Value = true
+                        },
+                    };
+                    unit.Input = new List<string> {
+                        "Student","Doctor","Teacher" };
+                    unit.Type = UnitModel.UnitType.MatchingSentence;
+                    break;
+                case UnitModel.UnitType.SelectWord:
+                    unit.Title = "Chọn các từ có nghia là \"Phụ Nữ\" ";
+                    unit.Answers = new List<AnswerModel> {
+                        new AnswerModel
+                        {
+                            Text="Man",
+                            Value = false
+                        },
+                        new AnswerModel
+                        {
+                            Text="Woman",
+                            Value = true
+                        }
+                        ,
+                         new AnswerModel
+                        {
+                            Text="Girl",
+                            Value = true
+                        }
+                        ,
+                        new AnswerModel
+                        {
+                            Text="Boy",
+                            Value = false
+                        },
+                        new AnswerModel
+                        {
+                            Text="Friend",
+                            Value = false
+                        }
+                    };
+                    unit.Type = UnitModel.UnitType.SelectWord;
+                    break;
+                case UnitModel.UnitType.SelectWordImage:
+                    unit.Title = "Con trai";
+                    unit.Answers = new List<AnswerModel> {
+                        new AnswerModel
+                        {
+                            Text="Brother",
+                            Value = false,
+                            Image="https://cdn.busuu.com/v1.0/jpgmedium1/media/img/1_1_7_N_I__enc__10_1450281721.jpg"
+                        },
+                        new AnswerModel
+                        {
+                            Text="Mother",
+                            Value = false,
+                            Image="https://cdn.busuu.com/v1.0/jpgmedium1/media/img/1_1_7_N_I__enc__7_1450281192.jpg"
+                        }
+                        ,
+                         new AnswerModel
+                        {
+                            Text="Son",
+                            Value = true,
+                            Image="https://cdn.busuu.com/v1.0/jpgmedium1/media/img/father_1455729260.jpg"
+                        }
+                    };
+                    unit.Type = UnitModel.UnitType.SelectWordImage;
+
+                    break;
+                case UnitModel.UnitType.CompleteSentence:
+                    unit.Title = "Điền vào chỗ trống";
+                    unit.Input = new List<string> { "%% Quỳnh Anh"};
+                    unit.Answers = new List<AnswerModel> {
+                         new AnswerModel
+                        {
+                            Text="i'm",
+                        }
+                    };
+                    unit.Type = UnitModel.UnitType.CompleteSentence;
+                    break;
+                case UnitModel.UnitType.HearAndRepeat:
+                    unit.Title = "Điền vào chỗ trống";
+                    unit.Input = new List<string> { "%% Quỳnh Anh" };
+                    unit.Answers = new List<AnswerModel> {
+                         new AnswerModel
+                        {
+                            Text="i'm",
+                        }
+                    };
+                    unit.Type = UnitModel.UnitType.HearAndRepeat;
+                    break;
+            }
+            if (random.Next(1, 100) % 3 == 0)
+            {
+                unit.Tip = new TipModel
+                {
+                    Tip = "Tuyển tập cua gái đại pháp",
+                    Detail = "1. thất bại hãy cua em khác,<\br>2. muốn thành công hãy đối mặt với thật bại",
+                    Samples = new List<string> { "Phương án 1", "Phương án 2" }
+                };
+            }
+            unit.Audios = new List<AudioModel>()
+            {
+                new AudioModel
+                {
+                    Link=""
+                }
+            };
+            if (hasAudio) { }
+
+            if (hasImage)
+            {
+                unit.Images = new List<string>
+                {
+                    //   "http://newsen.vn/data/news/2015/3/11/17/So-Ji-Sub-bat-ngo-tai-xuat-man-anh-rong-Newsen-vn-0-1426043851.jpg"
+                };
+            }
+            return unit;
+        }
+
+
 
         private List<TopicModel> GetTopic(string color)
         {
-            Random random = new Random();
-            List<UnitModel> listUnit = new List<UnitModel>();
-            for (int i = 0; i < 5; i++)
+            List<ExerciseModel> lstExercise = new List<ExerciseModel>();
+            for (int i = 0; i < 3; i++)
             {
-                listUnit.Add(new UnitModel
-                {
-                    Title = "Chọn từ đúng",
-                    Type = UnitModel.UnitType.FillSentence,
-
-                    Input = new List<string>
-                {
-                    "Tôi là %% người %%  trai nhất naxam"
-                },
-                    Images = new List<string> {
-                    "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg",
-                },
-                    Audios = new List<AudioModel> {
-                    new AudioModel
-                    {
-                        Link = "http://funnyneel.com/image/files/i/01-2014/beautiful-trees-v.jpg"
-                    }
-                },
-                    Answers = new List<AnswerModel>
-                {
-                    new AnswerModel
-                    {
-                        Text = "thảo",
-                        Value = true
-                    },
-                     new AnswerModel
-                    {
-                        Text = "xấu",
-                        Value  = true,
-                        Position = 1
-                    },
-                      new AnswerModel
-                    {
-                        Text = "đẹp"
-                    },
-                       new AnswerModel
-                    {
-                        Text = "nghĩa"
-                    }
-                       ,
-                       new AnswerModel
-                    {
-                        Text = "sơn"
-                    },
-                       new AnswerModel
-                    {
-                        Text = "dị"
-                    }
-                }
-                });
+                lstExercise.Add(GetRandomExercise());
             }
             List<TopicModel> Topicsx = new List<TopicModel>();
             for (int i = 0; i < 6; i++)
@@ -191,38 +286,29 @@ namespace Naxam.Busuu.Learning.Services
                     Toppic = "Topic " + random.Next(1, 1000),
                     Time = random.Next(1, 50),
                     Color = color,
-                    Exercises = new List<ExerciseModel>
-                    {
-                        new ExerciseModel{
-                            Type = ExerciseModel.ExerciseType.Discover,
-                            IsDone = true,
-                            Color = color,
-                            Name = "Cai Gi Do AI Biet Duoc",
-                            Units = listUnit
-                        },
-                        new ExerciseModel{
-                            Type = ExerciseModel.ExerciseType.Vocabulary,
-                            Color = color,
-                            Name = "Cai Gi Do AI Biet Duoc",
-                            Units = listUnit
-                        },
-                        new ExerciseModel{
-                            Type = ExerciseModel.ExerciseType.Memorise,
-                            Color = color,
-                             Name = "Cai Gi Do AI Biet Duoc",
-                            Units = listUnit
-                        },
-                        new ExerciseModel{
-                            Type = ExerciseModel.ExerciseType.Practice,
-                            IsDone = true,
-                            Color = color,
-                            Name = "Cai Gi Do AI Biet Duoc",
-                            Units = listUnit
-                        },
-                    }
+                    Exercises = lstExercise
                 });
             }
             return Topicsx;
+        }
+
+        public async Task<UnitModel[]> GetUnitByExercise(ExerciseModel ex)
+        {
+
+            List<UnitModel> lstUnit = new List<UnitModel>();
+            if (ex.Type != ExerciseModel.ExerciseType.Dialogue)
+                for (int i = 0; i < 6; i++)
+                {
+                    lstUnit.Add(GetDataByUnitType(typeUnit[random.Next(1, 100) % 6], random.Next(1, 100) % 2 == 0, random.Next(1, 100) % 2 == 0));
+                }
+            else
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    lstUnit.Add(GetDataByUnitType(UnitModel.UnitType.FillSentence, random.Next(1, 100) % 2 == 0, random.Next(1, 100) % 2 == 0));
+                }
+            }
+            return lstUnit.ToArray();
         }
     }
 }

@@ -17,9 +17,9 @@ using static Android.Widget.TextView;
 
 namespace Naxam.Busuu.Droid.Learning.Control.Vocabulary
 {
-    public class TipFragment : VocabularyFragmentBase
+    public class TipFragment : BaseFragment
     {
-        public override event EventHandler<bool> NextClicked;
+        public override event EventHandler<int> NextClicked;
         LinearLayout layoutTip;
         TextView txtTip;
         Button btnNext;
@@ -42,7 +42,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Vocabulary
             layoutTip = view.FindViewById<LinearLayout>(Resource.Id.layoutTip);
             btnNext.Click += (s, e) =>
             {
-                NextClicked?.Invoke(btnNext, false);
+                NextClicked?.Invoke(btnNext, 0);
             }; 
             if (Build.VERSION.SdkInt < BuildVersionCodes.N)
             {

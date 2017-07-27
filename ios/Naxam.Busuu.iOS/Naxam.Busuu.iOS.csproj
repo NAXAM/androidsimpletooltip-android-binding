@@ -78,6 +78,23 @@
   <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
   <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
 </PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|iPhoneSimulator' ">
+  <DebugSymbols>true</DebugSymbols>
+  <DebugType>full</DebugType>
+  <Optimize>false</Optimize>
+  <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
+  <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+  <WarningLevel>4</WarningLevel>
+  <CodesignKey>iPhone Developer</CodesignKey>
+  <DeviceSpecificBuild>true</DeviceSpecificBuild>
+  <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+  <MtouchLink>None</MtouchLink>
+  <MtouchArch>i386, x86_64</MtouchArch>
+<MtouchDebug>true</MtouchDebug>
+<IOSDebuggerPort>15543</IOSDebuggerPort>
+<MtouchFastDev>true</MtouchFastDev>
+<MtouchExtraArgs>--framework:/Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/RevealServer.framework</MtouchExtraArgs>
+</PropertyGroup>
 <ItemGroup>
   <Reference Include="System" />
   <Reference Include="System.Xml" />
