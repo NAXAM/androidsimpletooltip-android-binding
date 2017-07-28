@@ -1,5 +1,4 @@
 ﻿using MvvmCross.Core.ViewModels;
-using Naxam.Busuu.Learning.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;

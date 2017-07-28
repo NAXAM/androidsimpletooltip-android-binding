@@ -18,6 +18,14 @@ using MvvmCross.Platform.Converters;
 using MvvmCross.Binding.BindingContext;
 using Naxam.Busuu.iOS.Core.Converter;
 using UIKit;
+using Naxam.Busuu.iOS.Core;
+using Naxam.Busuu.Core.ViewModels;
+using Naxam.Busuu.iOS.Start.Views;
+using Naxam.Busuu.iOS.Learning.Views;
+using Naxam.Busuu.Learning.ViewModel;
+using Naxam.Busuu.Core.Converter;
+using CoreAnimation;
+using Naxam.Busuu.iOS.Core.Views;
 
 namespace Naxam.Busuu.iOS
 {
@@ -35,12 +43,15 @@ namespace Naxam.Busuu.iOS
 
         protected override IEnumerable<Assembly> GetViewAssemblies()
         {
-            var assemblies = new List<Assembly>
-            {
-                typeof(SocialView).Assembly,
-                typeof(NotificationView).Assembly,
-                typeof(RegisterView).Assembly,
-                typeof(ReviewAllView).Assembly
+			var assemblies = new List<Assembly>
+			{
+				typeof(StartPageView).Assembly,
+                typeof(MainView).Assembly,              
+                typeof(ReviewAllView).Assembly,
+				typeof(SocialView).Assembly,
+				typeof(NotificationView).Assembly,
+				typeof(ProfileView).Assembly,
+                typeof(PremiumView).Assembly
 			};
 
 			assemblies.AddRange(base.GetViewAssemblies());
@@ -51,11 +62,13 @@ namespace Naxam.Busuu.iOS
         {
 			var assemblies = new List<Assembly>
 			{
-
-				typeof(ReviewAllViewModel).Assembly,
+                typeof(StartPageViewModel).Assembly,
+                typeof(MainViewModel).Assembly,
+				typeof(ReviewViewModel).Assembly,
                 typeof(SocialViewModel).Assembly,
                 typeof(NotificationViewModel).Assembly,
-                typeof(RegisterViewModel).Assembly
+                typeof(ProfileViewModel).Assembly,
+                typeof(PremiumViewModel).Assembly
 			};
 
 			assemblies.AddRange(base.GetViewModelAssemblies());
@@ -75,6 +88,14 @@ namespace Naxam.Busuu.iOS
                 "FormattedText",
                 x => new AttributedTextTargetBinding(x)
             );
+            registry.RegisterCustomBindingFactory<CALayer>(
+                "BorderColor",
+                x=> new ColorTargetBinding(x)
+            );
+			registry.RegisterCustomBindingFactory<RippleLayer>(
+				"RippleColor",
+				x => new RippleColorTargetBinding(x)
+			);
         }
 
 		protected override void FillValueConverters(IMvxValueConverterRegistry registry)
@@ -85,7 +106,8 @@ namespace Naxam.Busuu.iOS
             registry.AddOrOverwrite("BoolInverseConverter", new BoolInverseConverter());
 			registry.AddOrOverwrite("StarTextConverter", new StarTextConverter());
             registry.AddOrOverwrite("HowDidTextConverter", new HowDidTextConverter());
-			registry.AddOrOverwrite("DatetimeTextConverter", new DatetimeTextConverter());
+            registry.AddOrOverwrite("DatetimeTextConverter", new DatetimeTextConverter());
+			registry.AddOrOverwrite("PostedTimeToStringConverter", new PostedTimeToStringConverter());
             registry.AddOrOverwrite("FriendsImgSpeakValueConverter", new FriendsImgSpeakConverter());
             registry.AddOrOverwrite("NotificationTextConverter", new NotificationTextConverter());
             registry.AddOrOverwrite("NotificationDatetimeConverter", new NotificationDatetimeConverter());

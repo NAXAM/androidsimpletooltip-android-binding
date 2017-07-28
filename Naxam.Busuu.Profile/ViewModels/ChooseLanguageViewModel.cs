@@ -42,10 +42,9 @@ namespace Naxam.Busuu.Profile.ViewModels
                     RaisePropertyChanged();
                 }
             }
-        }
+        }		
 
-
-        public ChooseLanguageViewModel()
+		public ChooseLanguageViewModel()
         {
             string[] flags = new string[] {
                 "flag_small_arabic",

@@ -140,16 +140,16 @@ namespace Naxam.Busuu.Social.Models
 			}
 		}
 
-        DateTime _PublicTime;
+        DateTimeOffset _PostedTime;
 
-        public DateTime PublicTime
+        public DateTimeOffset PostedTime
 		{
-			get { return _PublicTime; }
+            get { return _PostedTime; }
 			set
 			{
-				if (_PublicTime != value)
+				if (_PostedTime != value)
 				{
-					_PublicTime = value;
+					_PostedTime = value;
 					RaisePropertyChanged();
 				}
 			}

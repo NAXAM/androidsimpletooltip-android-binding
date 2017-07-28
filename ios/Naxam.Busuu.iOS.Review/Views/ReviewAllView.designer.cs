@@ -19,13 +19,7 @@ namespace Naxam.Busuu.iOS.Review.Views
 		UIKit.UIButton btnFavorite { get; set; }
 
 		[Outlet]
-		UIKit.UILabel lbButtonClicked { get; set; }
-
-		[Outlet]
 		UIKit.UITableView ReviewTableView { get; set; }
-
-		[Outlet]
-		UIKit.UISearchBar searchBar { get; set; }
 
 		[Outlet]
 		UIKit.UIView uiViewButton { get; set; }
@@ -38,9 +32,6 @@ namespace Naxam.Busuu.iOS.Review.Views
 
 		[Action ("btnFavorite_TouchUpInside:")]
 		partial void btnFavorite_TouchUpInside (Foundation.NSObject sender);
-
-		[Action ("btnPlus_TouchUpInside:")]
-		partial void btnPlus_TouchUpInside (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -54,19 +45,9 @@ namespace Naxam.Busuu.iOS.Review.Views
 				btnFavorite = null;
 			}
 
-			if (lbButtonClicked != null) {
-				lbButtonClicked.Dispose ();
-				lbButtonClicked = null;
-			}
-
 			if (ReviewTableView != null) {
 				ReviewTableView.Dispose ();
 				ReviewTableView = null;
-			}
-
-			if (searchBar != null) {
-				searchBar.Dispose ();
-				searchBar = null;
 			}
 
 			if (uiViewButton != null) {

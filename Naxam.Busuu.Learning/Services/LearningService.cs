@@ -35,13 +35,13 @@ namespace Naxam.Busuu.Learning.Services
                 "#58B0F8","#B02018","#FEAB35"
             };
 
+
             string[] icons = new string[]
             {
                 "http://app4e.net/busuu/lesson1.png",
                 "http://app4e.net/busuu/lesson2.png",
                 "http://app4e.net/busuu/lesson3.png",
             };
-
 
             List<LessonModel> Lessons = new List<LessonModel>();
             for (int i = 0; i < 10; i++)

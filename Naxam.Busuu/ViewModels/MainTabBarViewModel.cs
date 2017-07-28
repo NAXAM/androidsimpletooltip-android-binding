@@ -1,10 +1,10 @@
 using System;
 using MvvmCross.Core.ViewModels;
+using Naxam.Busuu.Learning.ViewModel;
 using Naxam.Busuu.Notification.ViewModels;
 using Naxam.Busuu.Profile.ViewModels;
 using Naxam.Busuu.Review.ViewModels;
 using Naxam.Busuu.Social.ViewModels;
-
 
 namespace Naxam.Busuu.ViewModels
 {
@@ -21,10 +21,11 @@ namespace Naxam.Busuu.ViewModels
 
 		void ShowInitialViewModels()
 		{
-            ShowViewModel<ReviewAllViewModel>();
+			ShowViewModel<MainViewModel>();
+            ShowViewModel<ReviewViewModel>();
 			ShowViewModel<SocialViewModel>();
             ShowViewModel<NotificationViewModel>();
-            ShowViewModel<RegisterViewModel>();
+            ShowViewModel<ProfileViewModel>();
 		}
     }
 }

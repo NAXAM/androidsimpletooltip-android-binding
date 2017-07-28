@@ -80,6 +80,23 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchDebug>true</MtouchDebug>
+    <IOSDebuggerPort>15543</IOSDebuggerPort>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchExtraArgs>--framework:/Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/RevealServer.framework</MtouchExtraArgs>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -139,6 +156,9 @@
     <Folder Include="Views\" />
     <Folder Include="Resources\Assets.xcassets\" />
     <Folder Include="Assets.xcassets\" />
+    <Folder Include="Assets.xcassets\learn_tab_icon.imageset\" />
+    <Folder Include="Assets.xcassets\learn_tab_icon_selected.imageset\" />
+    <Folder Include="Assets.xcassets\onboarding_memorise.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -194,13 +214,37 @@
       <Project>{1030A24B-B42C-4076-B166-F7E3A875E071}</Project>
       <Name>Naxam.Busuu.iOS.Review</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Naxam.Busuu\Naxam.Busuu.csproj">
+      <Project>{60D3471E-3D82-482D-AE23-7792DBFE53AA}</Project>
+      <Name>Naxam.Busuu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Naxam.Busuu.Start\Naxam.Busuu.Start.csproj">
+      <Project>{115D0C30-6675-4814-89AC-5AEF6E5EDAEC}</Project>
+      <Name>Naxam.Busuu.Start</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.iOS.Start\Naxam.Busuu.iOS.Start.csproj">
+      <Project>{7856BAFE-405A-4ABF-9384-A3556FA1B8DD}</Project>
+      <Name>Naxam.Busuu.iOS.Start</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.iOS.Learning\Naxam.Busuu.iOS.Learning.csproj">
+      <Project>{A8453AAF-F6BF-433B-B268-9954240CBBF4}</Project>
+      <Name>Naxam.Busuu.iOS.Learning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
+      <Project>{E1334FF3-BC22-4F7C-B363-A01DE69429F8}</Project>
+      <Name>Naxam.Busuu.Learning</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
       <Project>{BAAA7577-3BE2-423B-A051-61B47489B015}</Project>
       <Name>Naxam.Busuu.Review</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Naxam.Busuu\Naxam.Busuu.csproj">
-      <Project>{51CFB2E1-B73F-48BA-B205-02F74CE40050}</Project>
-      <Name>Naxam.Busuu</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -241,24 +285,6 @@
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\btn_close.imageset\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\conversation_speaking_play_button.imageset\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\conversation_speaking_play_button.imageset\conversation_speaking_play_button%402x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\conversation_speaking_stop_button.imageset\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\conversation_speaking_stop_button.imageset\conversation_speaking_stop_button%402x.png">
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\entity_strength_0.imageset\Contents.json">
@@ -558,6 +584,114 @@
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_1.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_1.imageset\subscription_image_c_1.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_2.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_2.imageset\subscription_image_c_2.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_3.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_3.imageset\subscription_image_c_3.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_4.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_4.imageset\subscription_image_c_4.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_5.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_5.imageset\subscription_image_c_5.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\grammar.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\grammar.imageset\subscription_image_c_1.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\correct.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\correct.imageset\subscription_image_c_2.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\language.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\language.imageset\subscription_image_c_3.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\travel.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\travel.imageset\subscription_image_c_4.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\test.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\test.imageset\subscription_image_c_2.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\correct.imageset\subscription_image_c_3.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\language.imageset\subscription_image_c_5.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\certificate.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\certificate.imageset\certificate.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\vocab_trainer_icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\vocab_trainer_icon.imageset\vocab_trainer_icon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\download_icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\download_icon.imageset\download_icon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\learn_tab_icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\learn_tab_icon.imageset\learn_tab_icon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\learn_tab_icon.imageset\learn_tab_icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\learn_tab_icon_selected.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\learn_tab_icon_selected%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\onboarding_memorise.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\onboarding_memorise.imageset\onboarding_memorise.png">
+      <InProject>false</InProject>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\BackgroundDetail05.jpg" />
@@ -586,6 +720,20 @@
     <BundleResource Include="Resources\Stars\grey_star.png" />
     <BundleResource Include="Resources\Stars\grey_star2.png" />
     <BundleResource Include="Resources\Stars\yellow_star_d.png" />
+    <BundleResource Include="Resources\imgStartPage.jpg" />
+    <BundleResource Include="Resources\logoBusuuText.png" />
+    <BundleResource Include="Resources\flag_small_french.png" />
+    <BundleResource Include="Resources\flag_small_indonesia.png" />
+    <BundleResource Include="Resources\flag_small_italian.png" />
+    <BundleResource Include="Resources\flag_small_japanese.png" />
+    <BundleResource Include="Resources\flag_small_polish.png" />
+    <BundleResource Include="Resources\flag_small_russian.png" />
+    <BundleResource Include="Resources\flag_small_turkish.png" />
+    <BundleResource Include="Resources\intercom_back.png" />
+    <BundleResource Include="Resources\google_logo.png" />
+    <BundleResource Include="Resources\facebook_logo.png" />
+    <BundleResource Include="Resources\nx_logo_white.png" />
+    <BundleResource Include="Resources\triangle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
