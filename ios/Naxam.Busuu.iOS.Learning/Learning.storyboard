@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lessonCell" rowHeight="80" id="DU4-s7-Edh" customClass="LessonTableViewCell">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DU4-s7-Edh" id="Zkg-gh-N65">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
@@ -88,35 +88,35 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="subCell" rowHeight="140" id="oO0-3D-MOS" customClass="SubLessonTableViewCell">
-                                        <rect key="frame" x="0.0" y="135.5" width="375" height="140"/>
+                                        <rect key="frame" x="0.0" y="136" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oO0-3D-MOS" id="ByQ-3F-cdG">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3u-Fg-KEV">
-                                                    <rect key="frame" x="150.5" y="16" width="74.5" height="18"/>
+                                                    <rect key="frame" x="152" y="16" width="72" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="Gxw-IX-cUd"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 minute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEk-jU-Tnb">
-                                                    <rect key="frame" x="160.5" y="38" width="54.5" height="12"/>
+                                                    <rect key="frame" x="165.5" y="38" width="45.5" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="Qxi-ky-5mN"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efr-ds-22b">
-                                                    <rect key="frame" x="83.5" y="66" width="208" height="40"/>
+                                                    <rect key="frame" x="69.5" y="66" width="236" height="44"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ba-kv-lMl">
-                                                            <rect key="frame" x="0.0" y="18" width="208" height="4"/>
+                                                            <rect key="frame" x="0.0" y="20" width="236" height="4"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="4" id="wTC-cK-Qhj"/>
@@ -127,9 +127,9 @@
                                                     <constraints>
                                                         <constraint firstItem="4Ba-kv-lMl" firstAttribute="centerX" secondItem="efr-ds-22b" secondAttribute="centerX" id="JLA-eZ-kZ0"/>
                                                         <constraint firstItem="4Ba-kv-lMl" firstAttribute="width" secondItem="efr-ds-22b" secondAttribute="width" id="TX8-53-8lS"/>
-                                                        <constraint firstAttribute="width" constant="208" id="V5Y-Cb-crL"/>
+                                                        <constraint firstAttribute="width" constant="236" id="V5Y-Cb-crL"/>
                                                         <constraint firstItem="4Ba-kv-lMl" firstAttribute="centerY" secondItem="efr-ds-22b" secondAttribute="centerY" id="im7-Fi-Wpm"/>
-                                                        <constraint firstAttribute="height" constant="40" id="rvU-RN-i87"/>
+                                                        <constraint firstAttribute="height" constant="44" id="rvU-RN-i87"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

@@ -40,8 +40,8 @@ namespace Naxam.Busuu.iOS.Learning.CustomBindings
                     float width = 24, height = 24;
                     foreach (var exercise in exercises)
                     {
-                        UIView imView = new UIView(new CGRect(x, y, 40, 40));
-                        UIImageView img = new UIImageView(new CGRect(8, 8, width, height));
+                        UIView imView = new UIView(new CGRect(x, y, 44, 44));
+                        UIImageView img = new UIImageView(new CGRect(10, 10, width, height));
 						img.TintColor = Core.Extensions.ColorUtils.ColorFromHex(exercise.Color);
                         switch (exercise.Type)
                         {
@@ -60,7 +60,7 @@ namespace Naxam.Busuu.iOS.Learning.CustomBindings
                         imView.BackgroundColor = UIColor.White;
                         imView.AddSubview(img);
                         view.AddSubview(imView);
-                        x += 56;
+                        x += 64;
                     }
 				}
 
