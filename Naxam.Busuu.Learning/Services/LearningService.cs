@@ -60,6 +60,7 @@ namespace Naxam.Busuu.Learning.Services
             return Lessons.ToArray();
         }
 
+
         public async Task<TipModel> GetTipByUnit(UnitModel unit)
         {
             List<string> lstTip = new List<string>() { "mot hai ba", "ba bon ngay" };
@@ -72,8 +73,7 @@ namespace Naxam.Busuu.Learning.Services
             return tip;
         }
 
-
-        private ExerciseModel GetRandomExercise()
+        public async Task<UnitModel[]> GetUnitByExercise(ExerciseModel ex)
         {
             ExerciseModel ex = new ExerciseModel();
 
@@ -286,7 +286,39 @@ namespace Naxam.Busuu.Learning.Services
                     Toppic = "Topic " + random.Next(1, 1000),
                     Time = random.Next(1, 50),
                     Color = color,
+<<<<<<< HEAD
                     Exercises = lstExercise
+=======
+                    Exercises = new List<ExerciseModel>
+                    {
+                        new ExerciseModel{
+                            Type = ExerciseModel.ExerciseType.Discover,
+                            IsDone = true,
+                            Color = color,
+                            Name = "Cai Gi Do AI Biet   ",
+                            Units = listUnit
+                        },
+                        new ExerciseModel{
+                            Type = ExerciseModel.ExerciseType.Vocabulary,
+                            Color = color,
+                            Name = "Cai Gi Do AI Biet Duoc",
+                            Units = listUnit
+                        },
+                        new ExerciseModel{
+                            Type = ExerciseModel.ExerciseType.Memorise,
+                            Color = color,
+                             Name = "Cai Gi Do AI Biet Duoc",
+                            Units = listUnit
+                        },
+                        new ExerciseModel{
+                            Type = ExerciseModel.ExerciseType.Practice,
+                            IsDone = true,
+                            Color = color,
+                            Name = "Cai Gi Do AI Biet Duoc",
+                            Units = listUnit
+                        },
+                    }
+>>>>>>> ios-sonnt-learning
                 });
             }
             return Topicsx;

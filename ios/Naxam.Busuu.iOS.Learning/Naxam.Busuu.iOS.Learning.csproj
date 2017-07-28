@@ -85,6 +85,7 @@
     <Folder Include="Views\" />
     <Folder Include="Resources\Assets.xcassets\" />
     <Folder Include="Cells\" />
+    <Folder Include="CustomBindings\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Cells\LessonHeader.designer.cs">
       <DependentUpon>LessonHeader.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomBindings\ImageExcersiceTargetBinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Naxam.Busuu.iOS.Core\Naxam.Busuu.iOS.Core.csproj">

@@ -1,5 +1,6 @@
 ﻿using System;
 using CoreAnimation;
+using CoreGraphics;
 using Foundation;
 using MvvmCross.Binding;
 using MvvmCross.Binding.Bindings.Target;
@@ -31,12 +32,19 @@ namespace Naxam.Busuu.iOS.Core.CustomBindings
 
         public override void SetValue(object value)
         {
-            var layer = (CALayer)Target;
-            if (value is UIColor color)
-            {
-                layer.BorderColor = color.CGColor;
-                layer.BackgroundColor = UIColor.White.CGColor;
+            if (value is UIColor color) {
+				if (Target is CALayer layer)
+				{
+
+					{
+						layer.BorderColor = color.CGColor;
+						layer.BackgroundColor = UIColor.White.CGColor;
+					}
+				}
+			
             }
+
+
         }
     }
 }

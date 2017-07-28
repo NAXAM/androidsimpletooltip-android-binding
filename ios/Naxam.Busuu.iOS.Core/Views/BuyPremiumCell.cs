@@ -3,6 +3,7 @@ using System;
 using UIKit;
 using ObjCRuntime;
 using Naxam.Busuu.iOS.Core.Views;
+using Naxam.Busuu.iOS.Core.Extensions;
 
 namespace Naxam.Busuu.iOS.Core
 {
@@ -21,8 +22,7 @@ namespace Naxam.Busuu.iOS.Core
 
 		public override void AwakeFromNib()
 		{
-			var premiumShape = new RippleLayer(viewRipple, UIColor.LightGray, UIColor.White);
-
+			var premiumShape = new RippleLayer(viewRipple, UIColor.LightGray.BrighterColor(), UIColor.White);
 			var cellGesture = new UITapGestureRecognizer((UITapGestureRecognizer obj) =>
 						{
 							var touchLocation = obj.LocationInView(this);
