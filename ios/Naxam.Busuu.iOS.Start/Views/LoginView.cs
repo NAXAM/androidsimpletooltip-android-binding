@@ -10,6 +10,7 @@ using Naxam.Busuu.Start.ViewModel;
 using ObjCRuntime;
 using UIKit;
 using FBKVOControllerNS;
+using System.Text.RegularExpressions;
 
 namespace Naxam.Busuu.iOS.Start
 {
@@ -146,15 +147,22 @@ namespace Naxam.Busuu.iOS.Start
             viewLineEmail.BackgroundColor = UIColor.Clear;
             if (fieldEmailPhone.Text == "" || fieldEmailPhone.Text == "Email address or phone number")
             {
-                
-				fieldEmailPhone.TextColor = UIColor.FromRGB(172, 180, 186);
+				fieldEmailPhone.TextColor = UIColor.FromRGB(172, 180, 186);  
                 fieldEmailPhone.NormalColor = UIColor.FromRGB(172, 180, 186);
                 fieldEmailPhone.Text = "Email address or phone number";
             }
             else
             {
                 fieldEmailPhone.TextColor = UIColor.Black;
-                fieldEmailPhone.NormalColor = UIColor.FromRGB(238, 93, 78);
+
+				if (CheckEmailPhone())
+				{
+					fieldEmailPhone.NormalColor = UIColor.FromRGB(172, 180, 186);
+				}
+				else
+				{
+					fieldEmailPhone.NormalColor = UIColor.FromRGB(238, 93, 78);
+				}
             }
 
             return true;
@@ -194,17 +202,26 @@ namespace Naxam.Busuu.iOS.Start
             viewLinePass.BackgroundColor = UIColor.Clear;
             if (fieldPass.Text == "" || fieldPass.Text == "Password (minimum 6 characters)")
 			{
-                fieldPass.TextColor = UIColor.FromRGB(172, 180, 186);
+                fieldPass.TextColor = UIColor.FromRGB(172, 180, 186);  
                 fieldPass.NormalColor = UIColor.FromRGB(172, 180, 186);
                 fieldPass.SecureTextEntry = false;
                 fieldPass.Text = "Password (minimum 6 characters)";
 			}
 			else
 			{
+				fieldPass.SecureTextEntry = true;
                 fieldPass.TextColor = UIColor.Black;
-                fieldPass.NormalColor = UIColor.FromRGB(238, 93, 78);
-			}
 
+				if (fieldPass.Text.Length >= 6)
+				{
+					fieldPass.NormalColor = UIColor.FromRGB(172, 180, 186);
+				}
+				else
+				{
+					fieldPass.NormalColor = UIColor.FromRGB(238, 93, 78);
+				}
+			}
+                      
 			return true;
 		}
 
@@ -270,6 +287,22 @@ namespace Naxam.Busuu.iOS.Start
                 viewConnect.Alpha = 1;
 			}
 		}
+        		
+        bool CheckEmailPhone()
+        {
+			if (fieldEmailPhone.Text != "Email address or phone number")
+			{
+				Regex regex = new Regex("^[a-zA-Z0-9-_\\.]+@[a-z0-9]+\\.[a-z]{2,4}$");
+                bool checkMail = regex.IsMatch(fieldEmailPhone.Text);
+
+				Regex regexP = new Regex("^+?[0-9]{9,13}$");
+				bool checkPhone = regexP.IsMatch(fieldEmailPhone.Text);
+
+                return (checkMail || checkPhone);
+			}
+
+			return false;
+        }
 
 		protected override void Dispose(bool disposing)
 		{

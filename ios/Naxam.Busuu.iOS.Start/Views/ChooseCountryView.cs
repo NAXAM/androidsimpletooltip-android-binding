@@ -35,7 +35,7 @@ namespace Naxam.Busuu.iOS.Start.Views
 
             var setBinding = this.CreateBindingSet<ChooseCountryView, ChooseCountryViewModel>();
             setBinding.Bind(cSource).To(vm => vm.Countries);
-			//setBinding.Bind(cSource).For(vm => vm.SelectionChangedCommand).To(vm => vm.ViewNotificationCommand);
+            setBinding.Bind(cSource).For(vm => vm.SelectedItem).To(vm => vm.CountrySelected);
 			setBinding.Apply();
            	
 			ChooseCountryTableView.Source = cSource;

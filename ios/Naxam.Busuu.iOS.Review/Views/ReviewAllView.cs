@@ -54,7 +54,7 @@ namespace Naxam.Busuu.iOS.Review.Views
             var btnTestFavorite = new ActionButtonItem("TEST FAVORITES", UIImage.FromBundle("fab_menu_row_fav"), UIColor.Gray);
             btnTestFavorite.ActionPerform = HandleAction;
 
-            actionButton = new ActionButton(this.View, new[] { btnContinueLearning, btnAll, btnStrength, btnTestFavorite });
+            actionButton = new ActionButton(this.View, new[] { btnContinueLearning, btnAll, btnStrength, btnTestFavorite }, UIColor.FromRGB(57,169,246));
             actionButton.Action = delegate
             {
                 actionButton.ToggleMenu();

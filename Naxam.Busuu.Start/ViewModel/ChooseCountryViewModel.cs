@@ -37,7 +37,8 @@ namespace Naxam.Busuu.Start.ViewModel
                     _countrySelected = value;
                     if (_countrySelected != null)
                     {
-                        ShowViewModel<RegisterViewModel>(CountrySelected);
+                        //ShowViewModel<RegisterViewModel>(CountrySelected);
+                        Close(this);
                     }
                     RaisePropertyChanged("CountrySelected");
                 }
