@@ -18,11 +18,11 @@ namespace Naxam.Busuu.iOS.Core.Converter
 			}
 			else if ((diff2 > 0) && (diff2 <= 3))
 			{
-				return diff2.ToString() + " days ago";
+                return diff2.ToString() + " days ago, " + value.ToShortTimeString();
 			}
 			else
 			{
-				return value.ToString("f").Replace(" PM", "PM").Replace(" AM", "AM");
+                return value.ToString("M") + ", " + value.ToShortTimeString();
 			}
 		}
     }

@@ -410,8 +410,8 @@ namespace Naxam.Busuu.Social.Services
     }
 
     public class DateTimeHelper {
-		private static readonly Random random = new Random();
-		private static readonly object syncLock = new object();
+		static readonly Random random = new Random();
+		static readonly object syncLock = new object();
 
 		public static DateTime RandomDate(DateTime from, DateTime to)
 		{
