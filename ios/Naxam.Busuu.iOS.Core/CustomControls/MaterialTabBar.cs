@@ -59,7 +59,7 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 		UIColor _SelectedColor;
 		UIColor _UnselectedColor;
 		CGSize _IconSize = new CGSize(24, 24);
-	    nfloat _LabelHeight = 16;
+        nfloat _LabelHeight = 20.5f;
 		CAShapeLayer _RippleLayer = new CAShapeLayer()
 		{
 			AnchorPoint = new CGPoint(0.5f, 0.5f)
@@ -120,12 +120,6 @@ namespace Naxam.Busuu.iOS.Core.CustomControls
 			_SelectedColor = selectedColor ?? UIColor.FromRGB(14.0f / 255.0f, 122.0f / 255.0f, 254.0f / 255.0f);
 			_UnselectedColor = unselectedColor ?? UIColor.Gray;
 			_RippleColor = _SelectedColor.ColorWithAlpha(0.2f);
-
-			if (tabbar.Subviews.Length > 1)
-			{
-				_IconSize = tabbar.Subviews[1].Subviews[0].Frame.Size;
-				_LabelHeight = tabbar.Subviews[1].Subviews[1].Frame.Height;
-			}
 
 			BackgroundColor = UIColor.White;
 			Layer.ShadowColor = UIColor.Black.CGColor;
