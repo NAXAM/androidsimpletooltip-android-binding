@@ -21,6 +21,7 @@ using System.Diagnostics;
 using Com.Nguyenhoanglam.Imagepicker.Activity;
 using Java.Nio;
 using Com.Nguyenhoanglam.Imagepicker.Model;
+using Naxam.Busuu.Profile.Model;
 
 namespace Naxam.Busuu.Droid.Profile.Views
 {
@@ -53,12 +54,51 @@ namespace Naxam.Busuu.Droid.Profile.Views
         private TextView txtClearData;
 
         int REQUEST_CODE_PICKER = 2000;
+        int REQUEST_CODE_CAMERA = 0;
+        int REQUEST_CODE_CHANGE_DATA = 1;
         private List<Image> images = new List<Image>();
+        UserModel model;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.profiles_setting);
+
+            model = new UserModel()
+            {
+                username = "nghianahit",
+                password = "deobiet",
+                avatarImage = "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/19554344_1170448823067074_3677184999917790335_n.jpg?oh=2882b6b2b9c7bfcba934fa3f4e9876cb&oe=5A01D016",
+                fullName = "Ha Minh Nghia",
+                gender = 1,
+                email = "nghiaanhit@gmail.com",
+                phoneNumber = "0984228297",
+                country = new CountryModel()
+                {
+                    Country = "Viet Nam",
+                    PhoneCode = "+84"
+                },
+                speakLanguages = new List<LanguageModel>()
+                {
+                    new LanguageModel()
+                    {
+                        Language = "Viet Nam"
+                    },
+                    new LanguageModel()
+                    {
+                        Language = "English"
+                    },
+                    new LanguageModel()
+                    {
+                        Language = "French"
+                    }
+                },
+                interfaceLanguage = new LanguageModel()
+                {
+                    Language = "Viet Nam"
+                }
+            };
+
             InitInterface();
         }
 
@@ -89,7 +129,22 @@ namespace Naxam.Busuu.Droid.Profile.Views
             txtInterfaceLanguage = FindViewById<TextView>(Resource.Id.txt_interface_language);
             txtClearData = FindViewById<TextView>(Resource.Id.txt_clear_data);
 
-            Glide.With(this).Load("https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/19554344_1170448823067074_3677184999917790335_n.jpg?oh=2882b6b2b9c7bfcba934fa3f4e9876cb&oe=5A01D016").BitmapTransform(new CircleTransform(this)).Into(imPersonalAvatar);
+            txtPersonalName.Text = model.fullName != null ? model.fullName : "";
+            if (model.avatarImage != null) Glide.With(this).Load("https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/19554344_1170448823067074_3677184999917790335_n.jpg?oh=2882b6b2b9c7bfcba934fa3f4e9876cb&oe=5A01D016").BitmapTransform(new CircleTransform(this)).Into(imPersonalAvatar);
+            txtAboutMe.Text = model.selfDescription != null ? model.selfDescription : "Write a bit about yourself";
+            txtPersonalEmail.Text = model.email != null ? model.email : "";
+            txtCountry.Text = model.country != null ? model.country.Country : "";
+            txtGender.Text = model.gender != null ? model.gender != 0 ? model.gender != 1 ? "Undisclosed" : "Female" : "Male" : "";
+            if (model.speakLanguages != null)
+            {
+                for (int i = 0; i < model.speakLanguages.Count; i++)
+                {
+                    txtISpeak.Text += model.speakLanguages[i].Language + ", ";
+                }
+            }
+            txtInterfaceLanguage.Text = model.interfaceLanguage != null ? model.interfaceLanguage.Language : "";
+
+            Intent intentChangeInput = new Intent(this, typeof(ProfileInputView));
 
             layoutPersonalAvatar.Click += (s, e) =>
             {
@@ -104,20 +159,11 @@ namespace Naxam.Busuu.Droid.Profile.Views
                         if (v.Id == Resource.Id.btn_take_camera)
                         {
                             Intent cameraIntent = new Intent(Android.Provider.MediaStore.ActionImageCapture);
-                            StartActivityForResult(cameraIntent, 0);
+                            StartActivityForResult(cameraIntent, REQUEST_CODE_CAMERA);
                         }
 
                         if (v.Id == Resource.Id.btn_take_gallery)
                         {
-                            //ImagePicker.Create(this)
-                            //.FolderMode(true)
-                            //.FolderTitle("Folder")
-                            //.ImageTitle("Tap to select")
-                            //.Single()
-                            //.ShowCamera(false)
-                            //.ImageDirectory("Camera")
-                            //.Start(REQUEST_CODE_PICKER);
-
                             Intent intent = new Intent(this, typeof(ImagePickerActivity));
                             intent.PutExtra(ImagePickerActivity.IntentExtraFolderMode, true);
                             intent.PutExtra(ImagePickerActivity.IntentExtraMode, ImagePickerActivity.ModeSingle);
@@ -137,13 +183,63 @@ namespace Naxam.Busuu.Droid.Profile.Views
                 {
                     ItemClick = (p0, p1, p2, p3) =>
                     {
-                        Toast.MakeText(this, "DialogPlus: " + " onItemClick() called with: " + "item = [" +
-                            p1 + "], position = [" + p3 + "]", ToastLength.Short).Show();
                     }
                 }).SetExpanded(false)
                 .SetCancelable(true)
                 .Create();
                 dialog.Show();
+            };
+            layoutPersonalName.Click += (s, e) =>
+            {
+                intentChangeInput.PutExtra("ProfileInputData", model.fullName != null ? model.fullName : "");
+                intentChangeInput.PutExtra("ProfileInputType", "name");
+                StartActivityForResult(intentChangeInput, REQUEST_CODE_CHANGE_DATA);
+            };
+            layoutAboutMe.Click += (s, e) =>
+            {
+                intentChangeInput.PutExtra("ProfileInputData", model.selfDescription != null ? model.selfDescription : "");
+                intentChangeInput.PutExtra("ProfileInputType", "aboutme");
+                StartActivityForResult(intentChangeInput, REQUEST_CODE_CHANGE_DATA);
+            };
+            layoutCountry.Click += (s, e) =>
+            {
+                intentChangeInput.PutExtra("ProfileInputData", model.country.Country);
+                intentChangeInput.PutExtra("ProfileInputType", "country");
+                StartActivityForResult(intentChangeInput, REQUEST_CODE_CHANGE_DATA);
+            };
+            layoutISpeak.Click += (s, e) =>
+            {
+
+            };
+            layoutInterfaceLanguage.Click += (s, e) =>
+            {
+
+            };
+            layoutClearData.Click += (s, e) =>
+            {
+
+            };
+            layoutItWork.Click += (s, e) =>
+            {
+
+            };
+            layoutContactUs.Click += (s, e) =>
+            {
+
+            };
+            layoutLogOut.Click += (s, e) =>
+            {
+                Toast.MakeText(this, "Log out complete!", ToastLength.Short).Show();
+            };
+            layoutRedeemVoucher.Click += (s, e) =>
+            {
+                Toast.MakeText(this, model.voucher != null ? "You used a voucher!" : "You don't have a voucher at all!", ToastLength.Short).Show();
+            };
+            layoutGender.Click += (s, e) =>
+            {
+                intentChangeInput.PutExtra("ProfileInputData", model.gender != null ? model.gender : 0);
+                intentChangeInput.PutExtra("ProfileInputType", "gender");
+                StartActivityForResult(intentChangeInput, REQUEST_CODE_CHANGE_DATA);
             };
         }
 
@@ -170,9 +266,34 @@ namespace Naxam.Busuu.Droid.Profile.Views
 
                 Glide.With(this).Load(new Java.IO.File(images[0].Path)).BitmapTransform(new CircleTransform(this)).Into(imPersonalAvatar);
             }
+            else if (resultCode == Result.Ok && requestCode == REQUEST_CODE_CHANGE_DATA)
+            {
+                if (data.HasExtra("name") && data.GetStringExtra("name") != null)
+                {
+                    txtPersonalName.Text = data.GetStringExtra("name");
+                }
+                else if (data.HasExtra("aboutme") && data.GetStringExtra("aboutme") != null)
+                {
+                    txtAboutMe.Text = data.GetStringExtra("aboutme").Length != 0 ? data.GetStringExtra("aboutme") : "Write a bit about yourselft";
+                }
+                else if (data.HasExtra("country") && data.GetStringExtra("country") != null)
+                {
+                    txtCountry.Text = data.GetStringExtra("country");
+                }
+                else if (data.HasExtra("gender") && data.GetIntExtra("gender", 0) != null)
+                {
+                    txtGender.Text = data.GetIntExtra("gender", 0) != 0 ? data.GetIntExtra("gender", 0) != 1 ? "Undisclosed" : "Female" : "Male";
+                }
+                else if (data.HasExtra("ispeak") && data.GetStringExtra("ispeak") != null)
+                {
+
+                }
+                else if (data.HasExtra("interfacelanguage") && data.GetStringExtra("interfacelanguage") != null)
+                {
+
+                }
+            }
         }
-
-
         class OnClickListener : Java.Lang.Object, IOnClickListener
         {
             public Action<DialogPlus, View> ClickAction;
