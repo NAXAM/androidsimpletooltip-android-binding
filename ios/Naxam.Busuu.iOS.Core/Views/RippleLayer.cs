@@ -27,9 +27,9 @@ namespace Naxam.Busuu.iOS.Core.Views
         public RippleLayer(UIView parentView, UIColor animateColor, UIColor finishColor) : base()
         {
             ParentView = parentView;
+            InitShapeLayer();
             AnimateColor = animateColor;
             FinishColor = finishColor;
-            InitShapeLayer();
         }
 
         public void WillAnimateTapGesture(CGPoint touch)
@@ -80,8 +80,8 @@ namespace Naxam.Busuu.iOS.Core.Views
             ParentView.Layer.InsertSublayer(this, 0);
             AnchorPoint = new CGPoint(0.5, 0.5);
             MasksToBounds = true;
-            FillColor = UIColor.Clear.CGColor;
-            AnimateColor = UIColor.Clear;
+            FillColor = UIColor.White.CGColor;
+            AnimateColor = UIColor.White;
 
             AnimationDelegate = new SpreadOutAnimationViewDelegate();
             AnimationDelegate.AnimationDidStartFunc = () =>

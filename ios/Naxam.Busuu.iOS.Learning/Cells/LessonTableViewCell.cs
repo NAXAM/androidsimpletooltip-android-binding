@@ -29,16 +29,16 @@ namespace Naxam.Busuu.iOS.Learning
         public LessonTableViewCell(IntPtr handle) : base(handle)
         {
             imgLessonViewLoader = new MvxImageViewLoader(() => imgLesson);
-			this.DelayBind(() =>
-		  {
-			  var bindingSet = this.CreateBindingSet<LessonTableViewCell, LessonModel>();
-			  bindingSet.Bind(lbNumber).To(m => m.LessonNumber);
-			  bindingSet.Bind(lbTitle).To(m => m.LessonName);
-			  bindingSet.Bind(imgLessonViewLoader).To(m => m.Icon);
-			  bindingSet.Bind(imgLesson.Layer).For("BorderColor").To(m => m.Color).WithConversion(new HexToUIColorValueConverter(), null);
-			  bindingSet.Bind(CellShape).For("RippleColor").To(m => m.Color).WithConversion(new HexToUIColorValueConverter(), null);
-			  bindingSet.Apply();
-		  });
+            this.DelayBind(() =>
+          {
+              var bindingSet = this.CreateBindingSet<LessonTableViewCell, LessonModel>();
+              bindingSet.Bind(lbNumber).To(m => m.LessonNumber);
+              bindingSet.Bind(lbTitle).To(m => m.LessonName);
+              bindingSet.Bind(imgLessonViewLoader).To(m => m.Icon);
+              bindingSet.Bind(imgLesson.Layer).For("BorderColor").To(m => m.Color).WithConversion(new HexToUIColorValueConverter(), null);
+              bindingSet.Bind(CellShape).For("RippleColor").To(m => m.Color).WithConversion(new HexToUIColorValueConverter(), null);
+              bindingSet.Apply();
+          });
         }
         public RippleLayer CellShape;
 
@@ -51,8 +51,7 @@ namespace Naxam.Busuu.iOS.Learning
 
             btnDownload.SetImage(UIImage.FromBundle("download_icon"), UIControlState.Normal);
             btnDownload.TintColor = UIColor.LightGray;
-			
-           
+
             CellShape = new RippleLayer();
             // config ripple layer
             CellShape.ParentView = ContentView;
@@ -63,34 +62,32 @@ namespace Naxam.Busuu.iOS.Learning
         }
 
 
-        public void Update(bool isOpen, LessonModel model) {
+        public void Update(bool isOpen, LessonModel model)
+        {
             IsOpen = isOpen;
             cellColor = Core.Extensions.ColorUtils.ColorFromHex(model.Color).CGColor;
             if (IsOpen)
             {
                 ContentView.Layer.BackgroundColor = cellColor;
                 numberLblHeightConstraint.Constant = _LabelDefaultHeight * 1.5f;
-				this.UpdateConstraintsIfNeeded();
+                this.UpdateConstraintsIfNeeded();
 
-										this.LayoutIfNeeded();
-										lbNumber.TextColor = UIColor.White;
-										lbTitle.TextColor = UIColor.White;
-										btnDownload.TintColor = UIColor.White;
-									//});
-            } else
+                this.LayoutIfNeeded();
+                lbNumber.TextColor = UIColor.White;
+                lbTitle.TextColor = UIColor.White;
+                btnDownload.TintColor = UIColor.White;
+            }
+            else
             {
-				CellShape.AnimateColor = UIColor.White;
-				CellShape.FinishColor = UIColor.Clear;
+                CellShape.AnimateColor = UIColor.White;
+                CellShape.FinishColor = UIColor.Clear;
                 numberLblHeightConstraint.Constant = _LabelDefaultHeight;
                 this.UpdateConstraintsIfNeeded();
-                //UIView.Animate(0.4, () =>
-                //{
-                 this.LayoutIfNeeded();
-                 lbNumber.TextColor = UIColor.FromRGB(57, 169, 246);
-                 lbTitle.TextColor = UIColor.DarkTextColor;
-                 btnDownload.TintColor = UIColor.LightGray;
-                //});
-                ContentView.Layer.BackgroundColor = cellColor.ToUIColor().BrighterColor().CGColor;
+                this.LayoutIfNeeded();
+                lbNumber.TextColor = UIColor.FromRGB(57, 169, 246);
+                lbTitle.TextColor = UIColor.DarkTextColor;
+                btnDownload.TintColor = UIColor.LightGray;
+                ContentView.Layer.BackgroundColor = UIColor.White.CGColor;
             }
         }
 
@@ -101,8 +98,8 @@ namespace Naxam.Busuu.iOS.Learning
             cellColor = imgLesson.Layer.BorderColor;
             if (IsOpen)
             {
-                    CellShape.AnimateCGColor = cellColor;
-                    CellShape.FinishCGColor = cellColor;
+                CellShape.AnimateCGColor = cellColor;
+                CellShape.FinishCGColor = cellColor;
                 CellShape.WillAnimateTapGesture(touchLocation);
                 // lesson number & title scale up
                 numberLblHeightConstraint.Constant *= 1.5f;

@@ -131,6 +131,8 @@
     <Compile Include="Converter\HexToUIColorValueConverter.cs" />
     <Compile Include="CustomBindings\RippleColorTargetBinding.cs" />
     <Compile Include="Extensions\CGColorExtensions.cs" />
+    <Compile Include="CustomBindings\LayerColorTargetBinding.cs" />
+    <Compile Include="Converter\HexToBrighterUIColorValueConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\BuyPremiumCell.xib" />

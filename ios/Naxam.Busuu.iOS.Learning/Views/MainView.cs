@@ -38,7 +38,6 @@ namespace Naxam.Busuu.iOS.Learning.Views
 			View.AddSubview(buyPremiumCell);
 
 			var source = new LessionTableViewSource(LessonTableView);
-
 			LessonTableView.Source = source;
 
             var bindingSet = this.CreateBindingSet<MainView, MainViewModel>();
@@ -168,22 +167,14 @@ namespace Naxam.Busuu.iOS.Learning.Views
             if(cell.IsOpen)
             {
                 openingLessons.Add(indexPath.Row);
-                //foreach (var item in AllTopicWithLessonKey[indexPath.Row])
-                //{
-                //    topicWillOpen.Add(item);
-                //}
-                //TableView.ReloadRows(AllTopicWithLessonKey[indexPath.Row].ToArray(), UITableViewRowAnimation.Automatic);
+                TableView.ReloadRows(AllTopicWithLessonKey[indexPath.Row].ToArray(), UITableViewRowAnimation.Automatic);
+                TableView.ScrollToRow(indexPath, UITableViewScrollPosition.Top, true);
             }
              else
             {
                 openingLessons.Remove(indexPath.Row);
-				//foreach (var item in AllTopicWithLessonKey[indexPath.Row])
-				//{
-    //                if (topicWillOpen.Contains(item)) {topicWillOpen.Remove(item); }
-				//}
-                //TableView.ReloadData();
+                TableView.ReloadRows(AllTopicWithLessonKey[indexPath.Row].ToArray(), UITableViewRowAnimation.Automatic);
             }
-			TableView.ReloadRows(AllTopicWithLessonKey[indexPath.Row].ToArray(), UITableViewRowAnimation.Automatic);
 		}
     }
 }

@@ -200,7 +200,7 @@ namespace Naxam.Busuu.Learning.Services
                             Type = ExerciseModel.ExerciseType.Discover,
                             IsDone = true,
                             Color = color,
-                            Name = "Cai Gi Do AI Biet Duoc",
+                            Name = "Cai Gi Do AI Biet   ",
                             Units = listUnit
                         },
                         new ExerciseModel{

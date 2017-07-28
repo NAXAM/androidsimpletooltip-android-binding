@@ -9,6 +9,7 @@ using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Platform.Converters;
+using Naxam.Busuu.iOS.Core.Extensions;
 using Naxam.Busuu.iOS.Core.Views;
 using Naxam.Busuu.Review.Models;
 using UIKit;
@@ -102,9 +103,9 @@ namespace Naxam.Busuu.iOS.Review.Views
 
             base.AwakeFromNib();
             imgWord.Layer.CornerRadius = 4;
-            StarShape = new RippleLayer(ContentView, UIColor.LightGray, UIColor.Clear);
-            CellShape = new RippleLayer(ContentView, UIColor.LightGray, UIColor.Clear);
-            PlayShape = new RippleLayer(ContentView, UIColor.LightGray, UIColor.Clear);
+            StarShape = new RippleLayer(ContentView, UIColor.LightGray.BrighterColor(), UIColor.Clear);
+            CellShape = new RippleLayer(ContentView, UIColor.LightGray.BrighterColor(), UIColor.Clear);
+            PlayShape = new RippleLayer(ContentView, UIColor.LightGray.BrighterColor(), UIColor.Clear);
             StarShape.Frame = new CGRect(btnStar.Center.X - 38, btnStar.Center.Y - 18, 36, 36);
             StarShape.Path = UIBezierPath.FromOval(new CGRect(0, 0, 36, 36)).CGPath;
 			PlayShape.Frame = new CGRect(btnPlay.Center.X - 34, btnPlay.Center.Y - 18, 36, 36);
