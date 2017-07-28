@@ -1,6 +1,5 @@
 ﻿using MvvmCross.Core.ViewModels;
-using Naxam.Busuu.Profile.Model;
-using Naxam.Busuu.Profile.Service;
+using Naxam.Busuu.Profile.Models; 
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Naxam.Busuu.Profile.ViewModel
+namespace Naxam.Busuu.Profile.ViewModels
 {
     public class ForgotPasswordViewModel : MvxViewModel
     {
@@ -26,10 +25,9 @@ namespace Naxam.Busuu.Profile.ViewModel
                 }
             }
         }
-        IDialogService dailogService;
-        public ForgotPasswordViewModel(IDialogService dailogService)
-        {
-            this.dailogService = dailogService;
+        
+        public ForgotPasswordViewModel( )
+        { 
            
         }
 

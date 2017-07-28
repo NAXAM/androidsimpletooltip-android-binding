@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks; 
 
-namespace Naxam.Busuu.Profile.ViewModel
+namespace Naxam.Busuu.Profile.ViewModels
 {
     public class LoginViewModel : MvxViewModel
     {

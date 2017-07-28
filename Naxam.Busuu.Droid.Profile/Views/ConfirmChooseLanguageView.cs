@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using static Android.Views.View;
-using Naxam.Busuu.Profile.Model;
+using Naxam.Busuu.Profile.Models;
 using MvvmCross.Droid.Support.V4;
 using MvvmCross.Binding.Droid.BindingContext;
 

@@ -1,12 +1,12 @@
 ﻿using MvvmCross.Core.ViewModels;
-using Naxam.Busuu.Profile.Model;
+using Naxam.Busuu.Profile.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naxam.Busuu.Profile.ViewModel
+namespace Naxam.Busuu.Profile.ViewModels
 {
     public class RegisterViewModel : MvxViewModel
     {

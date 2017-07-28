@@ -10,10 +10,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using MvvmCross.Core.ViewModels;
-using Naxam.Busuu.Profile.ViewModel;
+using Naxam.Busuu.Profile.ViewModels;
 using MvvmCross.Platform; 
-using Naxam.Busuu.Droid.Profile.Service;
-using Naxam.Busuu.Profile.Service;
+using Naxam.Busuu.Droid.Profile.Service; 
 using Naxam.Busuu.Social.Services;
 using Naxam.Busuu.Notification.Services;
 using Naxam.Busuu.Review.Services;
@@ -32,7 +31,7 @@ namespace Naxam.Busuu.Droid
             Mvx.RegisterType<ILearningService, LearningService>();
             Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainViewModel>());
             RegisterAppStart<MainViewModel>();
-            Mvx.RegisterType<IDialogService, DialogService>();
+           // Mvx.RegisterType<IDialogService, DialogService>();
         }
         public override void Initialize()
         { 

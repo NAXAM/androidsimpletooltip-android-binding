@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Naxam.Busuu.Profile.Model
+namespace Naxam.Busuu.Profile.Models
 {
     public class LanguageModel: MvxNotifyPropertyChanged
     {

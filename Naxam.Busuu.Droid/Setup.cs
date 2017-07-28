@@ -14,7 +14,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.Platform;
 using System.Reflection;
 using Naxam.Busuu.Droid.Profile.Views;
-using Naxam.Busuu.Profile.ViewModel;
+using Naxam.Busuu.Profile.ViewModels;
 using Naxam.Busuu.Core.Converter;
 using System.Collections;
 using Naxam.Busuu.Droid.Learning.Views;
