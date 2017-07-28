@@ -102,6 +102,7 @@
     <Folder Include="Converter\" />
     <Folder Include="CustomControls\" />
     <Folder Include="Common\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,7 +111,6 @@
       <DependentUpon>BuyPremiumCell.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\RippleLayer.cs" />
-    <Compile Include="Views\UIViewExtensions.cs" />
     <Compile Include="FloatyButton\ActionButton.cs" />
     <Compile Include="FloatyButton\ActionButtonItem.cs" />
     <Compile Include="PremiumView.cs" />
@@ -141,6 +141,9 @@
     <Compile Include="Converter\HexToUIColorValueConverter.cs" />
     <Compile Include="CustomBindings\RippleColorTargetBinding.cs" />
     <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="Extensions\CGColorExtensions.cs" />
+    <Compile Include="CustomBindings\LayerColorTargetBinding.cs" />
+    <Compile Include="Converter\HexToBrighterUIColorValueConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\BuyPremiumCell.xib" />

@@ -15,13 +15,19 @@ namespace Naxam.Busuu.iOS.Core
         public FeatureCell (IntPtr handle) : base (handle)
         {
             imgFeatureLoader = new MvxImageViewLoader(() => imgFeature);
-            this.DelayBind(() =>
-            {
+        }
+
+        public override void AwakeFromNib()
+        {
+            base.AwakeFromNib();
+			this.DelayBind(() =>
+			{
 				var setBinding = this.CreateBindingSet<FeatureCell, PremiumFeatureModel>();
 				setBinding.Bind(lbFeature).To(m => m.Feature);
 				setBinding.Bind(imgFeatureLoader).To(m => m.Image).WithConversion(new ImageUriValueConverter(), null);
-				setBinding.Apply(); 
-            });
+				setBinding.Apply();
+			});
+            imgFeature.TintColor = UIColor.FromRGB(249,155,42);
         }
     }
 

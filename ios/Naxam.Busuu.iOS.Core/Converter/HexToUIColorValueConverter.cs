@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using CoreGraphics;
 using MvvmCross.Platform.Converters;
 using UIKit;
 
