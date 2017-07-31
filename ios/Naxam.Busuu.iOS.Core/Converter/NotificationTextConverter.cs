@@ -19,7 +19,10 @@ namespace Naxam.Busuu.iOS.Core.Converter
 
 			string[] abcd = value.Split('|');
 
-			prettyString.SetAttributes(firstAttributes.Dictionary, new NSRange(0, abcd[0].Length));
+            if (abcd.Length >= 2)
+            {
+                prettyString.SetAttributes(firstAttributes.Dictionary, new NSRange(0, abcd[0].Length));
+            }
 
 			return prettyString;
 		}

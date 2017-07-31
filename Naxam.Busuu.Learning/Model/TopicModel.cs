@@ -24,7 +24,6 @@ namespace Naxam.Busuu.Learning.Model
             }
         }
 
-
         private string _toppic;
 
         public string Toppic
@@ -84,6 +83,21 @@ namespace Naxam.Busuu.Learning.Model
                 }
             }
         }
+
+		private int _lessonId;
+
+		public int LessonId
+		{
+			get { return _lessonId; }
+			set
+			{
+				if (_lessonId != value)
+				{
+					_lessonId = value;
+					RaisePropertyChanged();
+				}
+			}
+		}
 
     }
 }

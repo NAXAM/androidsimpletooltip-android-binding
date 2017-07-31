@@ -14,7 +14,6 @@ namespace Naxam.Busuu.Learning.Model
     {
         public LessonModel(IList<TopicModel> collection) : base(collection)
         {
-
         }
 
         public event EventHandler<LessonModel> DownloadHandle;
@@ -28,9 +27,29 @@ namespace Naxam.Busuu.Learning.Model
             {
                 if (_Id != value)
                 {
-                    _Id = value; 
+                    _Id = value;
+                    UpdateLessionId();
                 }
             }
+        }
+
+        private void UpdateLessionId()
+        {
+            foreach (TopicModel topic in this) {
+                topic.LessonId = Id;
+            }
+        }
+
+        protected override void InsertItem(int index, TopicModel item)
+        {
+            item.LessonId = Id;
+            base.InsertItem(index, item);
+        }
+
+        protected override void SetItem(int index, TopicModel item)
+        {
+            item.LessonId = Id;
+            base.SetItem(index, item);
         }
 
         private string _color;

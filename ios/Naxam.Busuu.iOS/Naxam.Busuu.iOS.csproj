@@ -686,10 +686,58 @@
     <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\learn_tab_icon_selected%402x.png">
       <InProject>false</InProject>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\onboarding_memorise.imageset\Contents.json">
+    <ImageAsset Include="Resources\Assets.xcassets\develop_icon.imageset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\onboarding_memorise.imageset\onboarding_memorise.png">
+    <ImageAsset Include="Resources\Assets.xcassets\develop_icon.imageset\develop_icon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\develop_icon.imageset\develop_icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\meaning_icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\meaning_icon.imageset\meaning_icon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\meaning_icon.imageset\meaning_icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\memorise_icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\memorise_icon.imageset\memorise_icon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\memorise_icon.imageset\memorise_icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\practice_icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\practice_icon.imageset\practice_icon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\practice_icon.imageset\practice_icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\review_icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\review_icon.imageset\review_icon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\review_icon.imageset\review_icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\vocabulary_icon.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\vocabulary_icon.imageset\vocabulary_icon.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\vocabulary_icon.imageset\vocabulary_icon%402x.png">
       <InProject>false</InProject>
     </ImageAsset>
   </ItemGroup>

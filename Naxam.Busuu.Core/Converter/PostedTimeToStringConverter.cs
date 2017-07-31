@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using MvvmCross.Platform.Converters;
 using Naxam.Busuu.Core.Helpers;
 
@@ -6,7 +7,7 @@ namespace Naxam.Busuu.Core.Converter
 {
     public class PostedTimeToStringConverter: MvxValueConverter<DateTimeOffset, string>
     {
-        protected override string Convert(DateTimeOffset value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        protected override string Convert(DateTimeOffset value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value.IsToday())
             {

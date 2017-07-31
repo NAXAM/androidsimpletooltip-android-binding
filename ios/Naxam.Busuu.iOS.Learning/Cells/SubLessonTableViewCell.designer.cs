@@ -9,34 +9,34 @@ using System.CodeDom.Compiler;
 
 namespace Naxam.Busuu.iOS.Learning
 {
-    [Register ("SubLessonTableViewCell")]
-    partial class SubLessonTableViewCell
-    {
-        [Outlet]
-        UIKit.UIImageView imgSubLesson { get; set; }
+	[Register ("SubLessonTableViewCell")]
+	partial class SubLessonTableViewCell
+	{
+		[Outlet]
+		UIKit.UIView exerciseView { get; set; }
 
-        [Outlet]
-        UIKit.UILabel lbTime { get; set; }
+		[Outlet]
+		UIKit.UILabel lbTime { get; set; }
 
-        [Outlet]
-        UIKit.UILabel lbTitle { get; set; }
-        
-        void ReleaseDesignerOutlets ()
-        {
-            if (lbTitle != null) {
-                lbTitle.Dispose ();
-                lbTitle = null;
-            }
+		[Outlet]
+		UIKit.UILabel lbTitle { get; set; }
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (exerciseView != null) {
+				exerciseView.Dispose ();
+				exerciseView = null;
+			}
 
-            if (lbTime != null) {
-                lbTime.Dispose ();
-                lbTime = null;
-            }
+			if (lbTime != null) {
+				lbTime.Dispose ();
+				lbTime = null;
+			}
 
-            if (imgSubLesson != null) {
-                imgSubLesson.Dispose ();
-                imgSubLesson = null;
-            }
-        }
-    }
+			if (lbTitle != null) {
+				lbTitle.Dispose ();
+				lbTitle = null;
+			}
+		}
+	}
 }

@@ -20,7 +20,7 @@ namespace Naxam.Busuu.iOS.Notification.Cells
 			{
 				var setBinding = this.CreateBindingSet<NotificationCell, NotificationModel>();
 				setBinding.Bind(_loaderImageUser).To(n => n.ImgUser).WithConversion("ImageUriValueConverter");
-				setBinding.Bind(lblDetail).For("FormattedText").To(n => n.Details).WithConversion("NotificationTextConverter");
+                setBinding.Bind(lblDetail).For("FormattedText").To(n => n.Details).WithConversion("NotificationTextConverter");
 				setBinding.Bind(lblTime).To(n => n.Time).WithConversion("NotificationDatetimeConverter");
 				setBinding.Bind(ContentView).For(n => n.BackgroundColor).To(n => n.Check).WithConversion("NotificationColorConverter");
 				setBinding.Apply();

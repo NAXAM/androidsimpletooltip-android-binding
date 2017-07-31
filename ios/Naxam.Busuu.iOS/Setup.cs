@@ -26,6 +26,7 @@ using Naxam.Busuu.Learning.ViewModel;
 using Naxam.Busuu.Core.Converter;
 using CoreAnimation;
 using Naxam.Busuu.iOS.Core.Views;
+using Naxam.Busuu.iOS.Learning.CustomBindings;
 
 namespace Naxam.Busuu.iOS
 {
@@ -95,6 +96,14 @@ namespace Naxam.Busuu.iOS
 			registry.RegisterCustomBindingFactory<RippleLayer>(
 				"RippleColor",
 				x => new RippleColorTargetBinding(x)
+			);
+			registry.RegisterCustomBindingFactory<CALayer>(
+				"LayerBackgroundColor",
+				x => new LayerColorTargetBinding(x)
+			);
+			registry.RegisterCustomBindingFactory<UIView>(
+				"ExcersizeImageView",
+				x => new ImageExersiceTargetBinding(x)
 			);
         }
 
