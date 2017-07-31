@@ -254,5 +254,6 @@
       android:padding="12dp"
       android:layout_gravity="right|top"
       android:src="@drawable/ic_settings"
+      app:MvxBind="Click SettingCommand"
         />
 </android.support.design.widget.CoordinatorLayout>

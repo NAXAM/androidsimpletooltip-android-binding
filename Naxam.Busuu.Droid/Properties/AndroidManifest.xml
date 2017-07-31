@@ -5,7 +5,9 @@
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-	<application android:label="Naxam.Busuu.Droid" android:theme="@style/AppTheme" android:icon="@drawable/Icon">
+	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<application android:label="c" android:theme="@style/AppTheme" android:icon="@drawable/Icon">
 		<meta-data android:name="JW_LICENSE_KEY" android:value="upydWUEcObEN/YtMOAIsdPoVbf6vbabPu2vPiw==" />
 	</application>
 </manifest>
