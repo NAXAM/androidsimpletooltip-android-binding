@@ -31,7 +31,7 @@
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/FillFlexBox"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/txtTitle"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
@@ -41,6 +41,7 @@
         app:flexWrap="wrap" />
 
     <LinearLayout
+        android:id="@+id/LayoutAnswer"
         android:layout_marginTop="24dp"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
@@ -49,7 +50,7 @@
         android:layout_height="wrap_content"
         android:background="#ffff"
         android:elevation="4dp"
-        android:layout_below="@+id/FillFlexBox"
+        android:layout_below="@+id/txtGuide"
         android:orientation="vertical">
 
         <TextView
