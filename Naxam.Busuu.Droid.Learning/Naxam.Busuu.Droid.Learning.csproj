@@ -165,6 +165,7 @@
     <Compile Include="Control\Memo\ChooseWordFragment.cs" />
     <Compile Include="Control\Memo\MatchingSentenceFragment.cs" />
     <Compile Include="Control\Memo\MemoConversationSentence.cs" />
+    <Compile Include="Control\Memo\OrderWordFragment.cs" />
     <Compile Include="Control\Memo\SelectWordFragment.cs" />
     <Compile Include="Control\Memo\SelectWordImageFragment.cs" />
     <Compile Include="Control\Summary.cs" />
@@ -790,6 +791,9 @@
     <AndroidResource Include="Resources\Layout\tip_dialog_layout.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\order_word_layout.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

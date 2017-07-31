@@ -32,7 +32,7 @@ using Naxam.Busuu.Droid.Profile.Dialogs;
 namespace Naxam.Busuu.Droid.Profile.Views
 {
 
-    [Activity(Label = "GeneralProfileView", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "GeneralProfileView", Theme = "@style/AppTheme.NoActionBar")]
     public class GeneralProfileView : MvxAppCompatActivity
     {
         private TabLayout tabLayout;
