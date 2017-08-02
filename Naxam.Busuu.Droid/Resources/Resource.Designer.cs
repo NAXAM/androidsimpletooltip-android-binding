@@ -8782,6 +8782,1925 @@ namespace Naxam.Busuu.Droid
 			global::Naxam.Busuu.Droid.Profile.Resource.Styleable.ViewStubCompat_android_id = global::Naxam.Busuu.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Naxam.Busuu.Droid.Profile.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Naxam.Busuu.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Naxam.Busuu.Droid.Profile.Resource.Styleable.ViewStubCompat_android_layout = global::Naxam.Busuu.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.abc_fade_in = global::Naxam.Busuu.Droid.Resource.Animation.abc_fade_in;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.abc_fade_out = global::Naxam.Busuu.Droid.Resource.Animation.abc_fade_out;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.abc_grow_fade_in_from_bottom = global::Naxam.Busuu.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.abc_popup_enter = global::Naxam.Busuu.Droid.Resource.Animation.abc_popup_enter;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.abc_popup_exit = global::Naxam.Busuu.Droid.Resource.Animation.abc_popup_exit;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.abc_shrink_fade_out_from_bottom = global::Naxam.Busuu.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.abc_slide_in_bottom = global::Naxam.Busuu.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.abc_slide_in_top = global::Naxam.Busuu.Droid.Resource.Animation.abc_slide_in_top;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.abc_slide_out_bottom = global::Naxam.Busuu.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.abc_slide_out_top = global::Naxam.Busuu.Droid.Resource.Animation.abc_slide_out_top;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.design_bottom_sheet_slide_in = global::Naxam.Busuu.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.design_bottom_sheet_slide_out = global::Naxam.Busuu.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.design_fab_in = global::Naxam.Busuu.Droid.Resource.Animation.design_fab_in;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.design_fab_out = global::Naxam.Busuu.Droid.Resource.Animation.design_fab_out;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.design_snackbar_in = global::Naxam.Busuu.Droid.Resource.Animation.design_snackbar_in;
+			global::Naxam.Busuu.Droid.Review.Resource.Animation.design_snackbar_out = global::Naxam.Busuu.Droid.Resource.Animation.design_snackbar_out;
+			global::Naxam.Busuu.Droid.Review.Resource.Animator.design_appbar_state_list_animator = global::Naxam.Busuu.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.MvxBind = global::Naxam.Busuu.Droid.Resource.Attribute.MvxBind;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.MvxDropDownItemTemplate = global::Naxam.Busuu.Droid.Resource.Attribute.MvxDropDownItemTemplate;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.MvxGroupItemTemplate = global::Naxam.Busuu.Droid.Resource.Attribute.MvxGroupItemTemplate;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.MvxItemTemplate = global::Naxam.Busuu.Droid.Resource.Attribute.MvxItemTemplate;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.MvxLang = global::Naxam.Busuu.Droid.Resource.Attribute.MvxLang;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.MvxSource = global::Naxam.Busuu.Droid.Resource.Attribute.MvxSource;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.MvxTemplate = global::Naxam.Busuu.Droid.Resource.Attribute.MvxTemplate;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionBarDivider = global::Naxam.Busuu.Droid.Resource.Attribute.actionBarDivider;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionBarItemBackground = global::Naxam.Busuu.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionBarPopupTheme = global::Naxam.Busuu.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionBarSize = global::Naxam.Busuu.Droid.Resource.Attribute.actionBarSize;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionBarSplitStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionBarStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionBarTabBarStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionBarTabStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionBarTabTextStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionBarTheme = global::Naxam.Busuu.Droid.Resource.Attribute.actionBarTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionBarWidgetTheme = global::Naxam.Busuu.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionButtonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionDropDownStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionLayout = global::Naxam.Busuu.Droid.Resource.Attribute.actionLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionMenuTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionMenuTextColor = global::Naxam.Busuu.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModeBackground = global::Naxam.Busuu.Droid.Resource.Attribute.actionModeBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModeCloseButtonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModeCloseDrawable = global::Naxam.Busuu.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModeCopyDrawable = global::Naxam.Busuu.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModeCutDrawable = global::Naxam.Busuu.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModeFindDrawable = global::Naxam.Busuu.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModePasteDrawable = global::Naxam.Busuu.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModePopupWindowStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModeSelectAllDrawable = global::Naxam.Busuu.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModeShareDrawable = global::Naxam.Busuu.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModeSplitBackground = global::Naxam.Busuu.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModeStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionModeStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionModeWebSearchDrawable = global::Naxam.Busuu.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionOverflowButtonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionOverflowMenuStyle = global::Naxam.Busuu.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionProviderClass = global::Naxam.Busuu.Droid.Resource.Attribute.actionProviderClass;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.actionViewClass = global::Naxam.Busuu.Droid.Resource.Attribute.actionViewClass;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.activityChooserViewStyle = global::Naxam.Busuu.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.alertDialogButtonGroupStyle = global::Naxam.Busuu.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.alertDialogCenterButtons = global::Naxam.Busuu.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.alertDialogStyle = global::Naxam.Busuu.Droid.Resource.Attribute.alertDialogStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.alertDialogTheme = global::Naxam.Busuu.Droid.Resource.Attribute.alertDialogTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.allowStacking = global::Naxam.Busuu.Droid.Resource.Attribute.allowStacking;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.alpha = global::Naxam.Busuu.Droid.Resource.Attribute.alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.arrowHeadLength = global::Naxam.Busuu.Droid.Resource.Attribute.arrowHeadLength;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.arrowShaftLength = global::Naxam.Busuu.Droid.Resource.Attribute.arrowShaftLength;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.autoCompleteTextViewStyle = global::Naxam.Busuu.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.background = global::Naxam.Busuu.Droid.Resource.Attribute.background;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.backgroundSplit = global::Naxam.Busuu.Droid.Resource.Attribute.backgroundSplit;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.backgroundStacked = global::Naxam.Busuu.Droid.Resource.Attribute.backgroundStacked;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.backgroundTint = global::Naxam.Busuu.Droid.Resource.Attribute.backgroundTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.backgroundTintMode = global::Naxam.Busuu.Droid.Resource.Attribute.backgroundTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.barLength = global::Naxam.Busuu.Droid.Resource.Attribute.barLength;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.behavior_autoHide = global::Naxam.Busuu.Droid.Resource.Attribute.behavior_autoHide;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.behavior_hideable = global::Naxam.Busuu.Droid.Resource.Attribute.behavior_hideable;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.behavior_overlapTop = global::Naxam.Busuu.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.behavior_peekHeight = global::Naxam.Busuu.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.behavior_skipCollapsed = global::Naxam.Busuu.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.borderWidth = global::Naxam.Busuu.Droid.Resource.Attribute.borderWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.borderlessButtonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.bottomSheetDialogTheme = global::Naxam.Busuu.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.bottomSheetStyle = global::Naxam.Busuu.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.buttonBarButtonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.buttonBarNegativeButtonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.buttonBarNeutralButtonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.buttonBarPositiveButtonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.buttonBarStyle = global::Naxam.Busuu.Droid.Resource.Attribute.buttonBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.buttonGravity = global::Naxam.Busuu.Droid.Resource.Attribute.buttonGravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.buttonPanelSideLayout = global::Naxam.Busuu.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.buttonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.buttonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.buttonStyleSmall = global::Naxam.Busuu.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.buttonTint = global::Naxam.Busuu.Droid.Resource.Attribute.buttonTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.buttonTintMode = global::Naxam.Busuu.Droid.Resource.Attribute.buttonTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.checkboxStyle = global::Naxam.Busuu.Droid.Resource.Attribute.checkboxStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.checkedTextViewStyle = global::Naxam.Busuu.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.closeIcon = global::Naxam.Busuu.Droid.Resource.Attribute.closeIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.closeItemLayout = global::Naxam.Busuu.Droid.Resource.Attribute.closeItemLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.collapseContentDescription = global::Naxam.Busuu.Droid.Resource.Attribute.collapseContentDescription;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.collapseIcon = global::Naxam.Busuu.Droid.Resource.Attribute.collapseIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.collapsedTitleGravity = global::Naxam.Busuu.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.collapsedTitleTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.color = global::Naxam.Busuu.Droid.Resource.Attribute.color;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.colorAccent = global::Naxam.Busuu.Droid.Resource.Attribute.colorAccent;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.colorBackgroundFloating = global::Naxam.Busuu.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.colorButtonNormal = global::Naxam.Busuu.Droid.Resource.Attribute.colorButtonNormal;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.colorControlActivated = global::Naxam.Busuu.Droid.Resource.Attribute.colorControlActivated;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.colorControlHighlight = global::Naxam.Busuu.Droid.Resource.Attribute.colorControlHighlight;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.colorControlNormal = global::Naxam.Busuu.Droid.Resource.Attribute.colorControlNormal;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.colorPrimary = global::Naxam.Busuu.Droid.Resource.Attribute.colorPrimary;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.colorPrimaryDark = global::Naxam.Busuu.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.colorSwitchThumbNormal = global::Naxam.Busuu.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.commitIcon = global::Naxam.Busuu.Droid.Resource.Attribute.commitIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.contentInsetEnd = global::Naxam.Busuu.Droid.Resource.Attribute.contentInsetEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.contentInsetEndWithActions = global::Naxam.Busuu.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.contentInsetLeft = global::Naxam.Busuu.Droid.Resource.Attribute.contentInsetLeft;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.contentInsetRight = global::Naxam.Busuu.Droid.Resource.Attribute.contentInsetRight;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.contentInsetStart = global::Naxam.Busuu.Droid.Resource.Attribute.contentInsetStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.contentInsetStartWithNavigation = global::Naxam.Busuu.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.contentScrim = global::Naxam.Busuu.Droid.Resource.Attribute.contentScrim;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.controlBackground = global::Naxam.Busuu.Droid.Resource.Attribute.controlBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.counterEnabled = global::Naxam.Busuu.Droid.Resource.Attribute.counterEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.counterMaxLength = global::Naxam.Busuu.Droid.Resource.Attribute.counterMaxLength;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.counterOverflowTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.counterTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.counterTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.customNavigationLayout = global::Naxam.Busuu.Droid.Resource.Attribute.customNavigationLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.defaultQueryHint = global::Naxam.Busuu.Droid.Resource.Attribute.defaultQueryHint;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.dialogPreferredPadding = global::Naxam.Busuu.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.dialogTheme = global::Naxam.Busuu.Droid.Resource.Attribute.dialogTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.displayOptions = global::Naxam.Busuu.Droid.Resource.Attribute.displayOptions;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.divider = global::Naxam.Busuu.Droid.Resource.Attribute.divider;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.dividerHorizontal = global::Naxam.Busuu.Droid.Resource.Attribute.dividerHorizontal;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.dividerPadding = global::Naxam.Busuu.Droid.Resource.Attribute.dividerPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.dividerVertical = global::Naxam.Busuu.Droid.Resource.Attribute.dividerVertical;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.drawableSize = global::Naxam.Busuu.Droid.Resource.Attribute.drawableSize;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.drawerArrowStyle = global::Naxam.Busuu.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.dropDownListViewStyle = global::Naxam.Busuu.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.dropdownListPreferredItemHeight = global::Naxam.Busuu.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.editTextBackground = global::Naxam.Busuu.Droid.Resource.Attribute.editTextBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.editTextColor = global::Naxam.Busuu.Droid.Resource.Attribute.editTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.editTextStyle = global::Naxam.Busuu.Droid.Resource.Attribute.editTextStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.elevation = global::Naxam.Busuu.Droid.Resource.Attribute.elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.errorEnabled = global::Naxam.Busuu.Droid.Resource.Attribute.errorEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.errorTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.errorTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.expandActivityOverflowButtonDrawable = global::Naxam.Busuu.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.expanded = global::Naxam.Busuu.Droid.Resource.Attribute.expanded;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.expandedTitleGravity = global::Naxam.Busuu.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.expandedTitleMargin = global::Naxam.Busuu.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.expandedTitleMarginBottom = global::Naxam.Busuu.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.expandedTitleMarginEnd = global::Naxam.Busuu.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.expandedTitleMarginStart = global::Naxam.Busuu.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.expandedTitleMarginTop = global::Naxam.Busuu.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.expandedTitleTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.fabSize = global::Naxam.Busuu.Droid.Resource.Attribute.fabSize;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.foregroundInsidePadding = global::Naxam.Busuu.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.gapBetweenBars = global::Naxam.Busuu.Droid.Resource.Attribute.gapBetweenBars;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.goIcon = global::Naxam.Busuu.Droid.Resource.Attribute.goIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.headerLayout = global::Naxam.Busuu.Droid.Resource.Attribute.headerLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.height = global::Naxam.Busuu.Droid.Resource.Attribute.height;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.hideOnContentScroll = global::Naxam.Busuu.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.hintAnimationEnabled = global::Naxam.Busuu.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.hintEnabled = global::Naxam.Busuu.Droid.Resource.Attribute.hintEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.hintTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.hintTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.homeAsUpIndicator = global::Naxam.Busuu.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.homeLayout = global::Naxam.Busuu.Droid.Resource.Attribute.homeLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.icon = global::Naxam.Busuu.Droid.Resource.Attribute.icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.iconifiedByDefault = global::Naxam.Busuu.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.imageButtonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.imageButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.indeterminateProgressStyle = global::Naxam.Busuu.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.initialActivityCount = global::Naxam.Busuu.Droid.Resource.Attribute.initialActivityCount;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.insetForeground = global::Naxam.Busuu.Droid.Resource.Attribute.insetForeground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.isLightTheme = global::Naxam.Busuu.Droid.Resource.Attribute.isLightTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.itemBackground = global::Naxam.Busuu.Droid.Resource.Attribute.itemBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.itemIconTint = global::Naxam.Busuu.Droid.Resource.Attribute.itemIconTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.itemPadding = global::Naxam.Busuu.Droid.Resource.Attribute.itemPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.itemTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.itemTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.itemTextColor = global::Naxam.Busuu.Droid.Resource.Attribute.itemTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.keylines = global::Naxam.Busuu.Droid.Resource.Attribute.keylines;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layout = global::Naxam.Busuu.Droid.Resource.Attribute.layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layoutManager = global::Naxam.Busuu.Droid.Resource.Attribute.layoutManager;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layout_anchor = global::Naxam.Busuu.Droid.Resource.Attribute.layout_anchor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layout_anchorGravity = global::Naxam.Busuu.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layout_behavior = global::Naxam.Busuu.Droid.Resource.Attribute.layout_behavior;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layout_collapseMode = global::Naxam.Busuu.Droid.Resource.Attribute.layout_collapseMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layout_collapseParallaxMultiplier = global::Naxam.Busuu.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layout_dodgeInsetEdges = global::Naxam.Busuu.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layout_insetEdge = global::Naxam.Busuu.Droid.Resource.Attribute.layout_insetEdge;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layout_keyline = global::Naxam.Busuu.Droid.Resource.Attribute.layout_keyline;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layout_scrollFlags = global::Naxam.Busuu.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.layout_scrollInterpolator = global::Naxam.Busuu.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.listChoiceBackgroundIndicator = global::Naxam.Busuu.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.listDividerAlertDialog = global::Naxam.Busuu.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.listItemLayout = global::Naxam.Busuu.Droid.Resource.Attribute.listItemLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.listLayout = global::Naxam.Busuu.Droid.Resource.Attribute.listLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.listMenuViewStyle = global::Naxam.Busuu.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.listPopupWindowStyle = global::Naxam.Busuu.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.listPreferredItemHeight = global::Naxam.Busuu.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.listPreferredItemHeightLarge = global::Naxam.Busuu.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.listPreferredItemHeightSmall = global::Naxam.Busuu.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.listPreferredItemPaddingLeft = global::Naxam.Busuu.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.listPreferredItemPaddingRight = global::Naxam.Busuu.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.logo = global::Naxam.Busuu.Droid.Resource.Attribute.logo;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.logoDescription = global::Naxam.Busuu.Droid.Resource.Attribute.logoDescription;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.maxActionInlineWidth = global::Naxam.Busuu.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.maxButtonHeight = global::Naxam.Busuu.Droid.Resource.Attribute.maxButtonHeight;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.measureWithLargestChild = global::Naxam.Busuu.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.menu = global::Naxam.Busuu.Droid.Resource.Attribute.menu;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.multiChoiceItemLayout = global::Naxam.Busuu.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.navigationContentDescription = global::Naxam.Busuu.Droid.Resource.Attribute.navigationContentDescription;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.navigationIcon = global::Naxam.Busuu.Droid.Resource.Attribute.navigationIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.navigationMode = global::Naxam.Busuu.Droid.Resource.Attribute.navigationMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.overlapAnchor = global::Naxam.Busuu.Droid.Resource.Attribute.overlapAnchor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.paddingBottomNoButtons = global::Naxam.Busuu.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.paddingEnd = global::Naxam.Busuu.Droid.Resource.Attribute.paddingEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.paddingStart = global::Naxam.Busuu.Droid.Resource.Attribute.paddingStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.paddingTopNoTitle = global::Naxam.Busuu.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.panelBackground = global::Naxam.Busuu.Droid.Resource.Attribute.panelBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.panelMenuListTheme = global::Naxam.Busuu.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.panelMenuListWidth = global::Naxam.Busuu.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.passwordToggleContentDescription = global::Naxam.Busuu.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.passwordToggleDrawable = global::Naxam.Busuu.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.passwordToggleEnabled = global::Naxam.Busuu.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.passwordToggleTint = global::Naxam.Busuu.Droid.Resource.Attribute.passwordToggleTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.passwordToggleTintMode = global::Naxam.Busuu.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.popupMenuStyle = global::Naxam.Busuu.Droid.Resource.Attribute.popupMenuStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.popupTheme = global::Naxam.Busuu.Droid.Resource.Attribute.popupTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.popupWindowStyle = global::Naxam.Busuu.Droid.Resource.Attribute.popupWindowStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.preserveIconSpacing = global::Naxam.Busuu.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.pressedTranslationZ = global::Naxam.Busuu.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.progressBarPadding = global::Naxam.Busuu.Droid.Resource.Attribute.progressBarPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.progressBarStyle = global::Naxam.Busuu.Droid.Resource.Attribute.progressBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.queryBackground = global::Naxam.Busuu.Droid.Resource.Attribute.queryBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.queryHint = global::Naxam.Busuu.Droid.Resource.Attribute.queryHint;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.radioButtonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.radioButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.ratingBarStyle = global::Naxam.Busuu.Droid.Resource.Attribute.ratingBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.ratingBarStyleIndicator = global::Naxam.Busuu.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.ratingBarStyleSmall = global::Naxam.Busuu.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.reverseLayout = global::Naxam.Busuu.Droid.Resource.Attribute.reverseLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.rippleColor = global::Naxam.Busuu.Droid.Resource.Attribute.rippleColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.scrimAnimationDuration = global::Naxam.Busuu.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.scrimVisibleHeightTrigger = global::Naxam.Busuu.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.searchHintIcon = global::Naxam.Busuu.Droid.Resource.Attribute.searchHintIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.searchIcon = global::Naxam.Busuu.Droid.Resource.Attribute.searchIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.searchViewStyle = global::Naxam.Busuu.Droid.Resource.Attribute.searchViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.seekBarStyle = global::Naxam.Busuu.Droid.Resource.Attribute.seekBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.selectableItemBackground = global::Naxam.Busuu.Droid.Resource.Attribute.selectableItemBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.selectableItemBackgroundBorderless = global::Naxam.Busuu.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.showAsAction = global::Naxam.Busuu.Droid.Resource.Attribute.showAsAction;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.showDividers = global::Naxam.Busuu.Droid.Resource.Attribute.showDividers;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.showText = global::Naxam.Busuu.Droid.Resource.Attribute.showText;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.showTitle = global::Naxam.Busuu.Droid.Resource.Attribute.showTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.singleChoiceItemLayout = global::Naxam.Busuu.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.spanCount = global::Naxam.Busuu.Droid.Resource.Attribute.spanCount;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.spinBars = global::Naxam.Busuu.Droid.Resource.Attribute.spinBars;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.spinnerDropDownItemStyle = global::Naxam.Busuu.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.spinnerStyle = global::Naxam.Busuu.Droid.Resource.Attribute.spinnerStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.splitTrack = global::Naxam.Busuu.Droid.Resource.Attribute.splitTrack;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.srcCompat = global::Naxam.Busuu.Droid.Resource.Attribute.srcCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.stackFromEnd = global::Naxam.Busuu.Droid.Resource.Attribute.stackFromEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.state_above_anchor = global::Naxam.Busuu.Droid.Resource.Attribute.state_above_anchor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.state_collapsed = global::Naxam.Busuu.Droid.Resource.Attribute.state_collapsed;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.state_collapsible = global::Naxam.Busuu.Droid.Resource.Attribute.state_collapsible;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.statusBarBackground = global::Naxam.Busuu.Droid.Resource.Attribute.statusBarBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.statusBarScrim = global::Naxam.Busuu.Droid.Resource.Attribute.statusBarScrim;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.subMenuArrow = global::Naxam.Busuu.Droid.Resource.Attribute.subMenuArrow;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.submitBackground = global::Naxam.Busuu.Droid.Resource.Attribute.submitBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.subtitle = global::Naxam.Busuu.Droid.Resource.Attribute.subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.subtitleTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.subtitleTextColor = global::Naxam.Busuu.Droid.Resource.Attribute.subtitleTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.subtitleTextStyle = global::Naxam.Busuu.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.suggestionRowLayout = global::Naxam.Busuu.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.switchMinWidth = global::Naxam.Busuu.Droid.Resource.Attribute.switchMinWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.switchPadding = global::Naxam.Busuu.Droid.Resource.Attribute.switchPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.switchStyle = global::Naxam.Busuu.Droid.Resource.Attribute.switchStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.switchTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.switchTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabBackground = global::Naxam.Busuu.Droid.Resource.Attribute.tabBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabContentStart = global::Naxam.Busuu.Droid.Resource.Attribute.tabContentStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabGravity = global::Naxam.Busuu.Droid.Resource.Attribute.tabGravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabIndicatorColor = global::Naxam.Busuu.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabIndicatorHeight = global::Naxam.Busuu.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabMaxWidth = global::Naxam.Busuu.Droid.Resource.Attribute.tabMaxWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabMinWidth = global::Naxam.Busuu.Droid.Resource.Attribute.tabMinWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabMode = global::Naxam.Busuu.Droid.Resource.Attribute.tabMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabPadding = global::Naxam.Busuu.Droid.Resource.Attribute.tabPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabPaddingBottom = global::Naxam.Busuu.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabPaddingEnd = global::Naxam.Busuu.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabPaddingStart = global::Naxam.Busuu.Droid.Resource.Attribute.tabPaddingStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabPaddingTop = global::Naxam.Busuu.Droid.Resource.Attribute.tabPaddingTop;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabSelectedTextColor = global::Naxam.Busuu.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.tabTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tabTextColor = global::Naxam.Busuu.Droid.Resource.Attribute.tabTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.textAllCaps = global::Naxam.Busuu.Droid.Resource.Attribute.textAllCaps;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.textAppearanceLargePopupMenu = global::Naxam.Busuu.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.textAppearanceListItem = global::Naxam.Busuu.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.textAppearanceListItemSmall = global::Naxam.Busuu.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.textAppearancePopupMenuHeader = global::Naxam.Busuu.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.textAppearanceSearchResultSubtitle = global::Naxam.Busuu.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.textAppearanceSearchResultTitle = global::Naxam.Busuu.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.textAppearanceSmallPopupMenu = global::Naxam.Busuu.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.textColorAlertDialogListItem = global::Naxam.Busuu.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.textColorError = global::Naxam.Busuu.Droid.Resource.Attribute.textColorError;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.textColorSearchUrl = global::Naxam.Busuu.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.theme = global::Naxam.Busuu.Droid.Resource.Attribute.theme;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.thickness = global::Naxam.Busuu.Droid.Resource.Attribute.thickness;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.thumbTextPadding = global::Naxam.Busuu.Droid.Resource.Attribute.thumbTextPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.thumbTint = global::Naxam.Busuu.Droid.Resource.Attribute.thumbTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.thumbTintMode = global::Naxam.Busuu.Droid.Resource.Attribute.thumbTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tickMark = global::Naxam.Busuu.Droid.Resource.Attribute.tickMark;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tickMarkTint = global::Naxam.Busuu.Droid.Resource.Attribute.tickMarkTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.tickMarkTintMode = global::Naxam.Busuu.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.title = global::Naxam.Busuu.Droid.Resource.Attribute.title;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.titleEnabled = global::Naxam.Busuu.Droid.Resource.Attribute.titleEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.titleMargin = global::Naxam.Busuu.Droid.Resource.Attribute.titleMargin;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.titleMarginBottom = global::Naxam.Busuu.Droid.Resource.Attribute.titleMarginBottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.titleMarginEnd = global::Naxam.Busuu.Droid.Resource.Attribute.titleMarginEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.titleMarginStart = global::Naxam.Busuu.Droid.Resource.Attribute.titleMarginStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.titleMarginTop = global::Naxam.Busuu.Droid.Resource.Attribute.titleMarginTop;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.titleMargins = global::Naxam.Busuu.Droid.Resource.Attribute.titleMargins;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.titleTextAppearance = global::Naxam.Busuu.Droid.Resource.Attribute.titleTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.titleTextColor = global::Naxam.Busuu.Droid.Resource.Attribute.titleTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.titleTextStyle = global::Naxam.Busuu.Droid.Resource.Attribute.titleTextStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.toolbarId = global::Naxam.Busuu.Droid.Resource.Attribute.toolbarId;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.toolbarNavigationButtonStyle = global::Naxam.Busuu.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.toolbarStyle = global::Naxam.Busuu.Droid.Resource.Attribute.toolbarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.track = global::Naxam.Busuu.Droid.Resource.Attribute.track;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.trackTint = global::Naxam.Busuu.Droid.Resource.Attribute.trackTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.trackTintMode = global::Naxam.Busuu.Droid.Resource.Attribute.trackTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.useCompatPadding = global::Naxam.Busuu.Droid.Resource.Attribute.useCompatPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.voiceIcon = global::Naxam.Busuu.Droid.Resource.Attribute.voiceIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.windowActionBar = global::Naxam.Busuu.Droid.Resource.Attribute.windowActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.windowActionBarOverlay = global::Naxam.Busuu.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.windowActionModeOverlay = global::Naxam.Busuu.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.windowFixedHeightMajor = global::Naxam.Busuu.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.windowFixedHeightMinor = global::Naxam.Busuu.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.windowFixedWidthMajor = global::Naxam.Busuu.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.windowFixedWidthMinor = global::Naxam.Busuu.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.windowMinWidthMajor = global::Naxam.Busuu.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.windowMinWidthMinor = global::Naxam.Busuu.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Naxam.Busuu.Droid.Review.Resource.Attribute.windowNoTitle = global::Naxam.Busuu.Droid.Resource.Attribute.windowNoTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Boolean.abc_action_bar_embed_tabs = global::Naxam.Busuu.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Naxam.Busuu.Droid.Review.Resource.Boolean.abc_allow_stacked_button_bar = global::Naxam.Busuu.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Naxam.Busuu.Droid.Review.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::Naxam.Busuu.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Naxam.Busuu.Droid.Review.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::Naxam.Busuu.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::Naxam.Busuu.Droid.Review.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::Naxam.Busuu.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_background_cache_hint_selector_material_dark = global::Naxam.Busuu.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_background_cache_hint_selector_material_light = global::Naxam.Busuu.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_btn_colored_borderless_text_material = global::Naxam.Busuu.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_btn_colored_text_material = global::Naxam.Busuu.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_color_highlight_material = global::Naxam.Busuu.Droid.Resource.Color.abc_color_highlight_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_hint_foreground_material_dark = global::Naxam.Busuu.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_hint_foreground_material_light = global::Naxam.Busuu.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_input_method_navigation_guard = global::Naxam.Busuu.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_primary_text_disable_only_material_dark = global::Naxam.Busuu.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_primary_text_disable_only_material_light = global::Naxam.Busuu.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_primary_text_material_dark = global::Naxam.Busuu.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_primary_text_material_light = global::Naxam.Busuu.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_search_url_text = global::Naxam.Busuu.Droid.Resource.Color.abc_search_url_text;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_search_url_text_normal = global::Naxam.Busuu.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_search_url_text_pressed = global::Naxam.Busuu.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_search_url_text_selected = global::Naxam.Busuu.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_secondary_text_material_dark = global::Naxam.Busuu.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_secondary_text_material_light = global::Naxam.Busuu.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_tint_btn_checkable = global::Naxam.Busuu.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_tint_default = global::Naxam.Busuu.Droid.Resource.Color.abc_tint_default;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_tint_edittext = global::Naxam.Busuu.Droid.Resource.Color.abc_tint_edittext;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_tint_seek_thumb = global::Naxam.Busuu.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_tint_spinner = global::Naxam.Busuu.Droid.Resource.Color.abc_tint_spinner;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_tint_switch_thumb = global::Naxam.Busuu.Droid.Resource.Color.abc_tint_switch_thumb;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.abc_tint_switch_track = global::Naxam.Busuu.Droid.Resource.Color.abc_tint_switch_track;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.accent_material_dark = global::Naxam.Busuu.Droid.Resource.Color.accent_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.accent_material_light = global::Naxam.Busuu.Droid.Resource.Color.accent_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.background = global::Naxam.Busuu.Droid.Resource.Color.background;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.background_floating_material_dark = global::Naxam.Busuu.Droid.Resource.Color.background_floating_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.background_floating_material_light = global::Naxam.Busuu.Droid.Resource.Color.background_floating_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.background_material_dark = global::Naxam.Busuu.Droid.Resource.Color.background_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.background_material_light = global::Naxam.Busuu.Droid.Resource.Color.background_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.black_semi_transparent = global::Naxam.Busuu.Droid.Resource.Color.black_semi_transparent;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.blue_semi_transparent = global::Naxam.Busuu.Droid.Resource.Color.blue_semi_transparent;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.blue_semi_transparent_pressed = global::Naxam.Busuu.Droid.Resource.Color.blue_semi_transparent_pressed;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.bright_foreground_disabled_material_dark = global::Naxam.Busuu.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.bright_foreground_disabled_material_light = global::Naxam.Busuu.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.bright_foreground_inverse_material_dark = global::Naxam.Busuu.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.bright_foreground_inverse_material_light = global::Naxam.Busuu.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.bright_foreground_material_dark = global::Naxam.Busuu.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.bright_foreground_material_light = global::Naxam.Busuu.Droid.Resource.Color.bright_foreground_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.button_material_dark = global::Naxam.Busuu.Droid.Resource.Color.button_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.button_material_light = global::Naxam.Busuu.Droid.Resource.Color.button_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorAccent = global::Naxam.Busuu.Droid.Resource.Color.colorAccent;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorButtonDisable = global::Naxam.Busuu.Droid.Resource.Color.colorButtonDisable;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorButtonEnable = global::Naxam.Busuu.Droid.Resource.Color.colorButtonEnable;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorDiable = global::Naxam.Busuu.Droid.Resource.Color.colorDiable;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorEnable = global::Naxam.Busuu.Droid.Resource.Color.colorEnable;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorHintEditText = global::Naxam.Busuu.Droid.Resource.Color.colorHintEditText;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorHoverBtn = global::Naxam.Busuu.Droid.Resource.Color.colorHoverBtn;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorNormalBtn = global::Naxam.Busuu.Droid.Resource.Color.colorNormalBtn;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorPrimary = global::Naxam.Busuu.Droid.Resource.Color.colorPrimary;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorPrimaryDark = global::Naxam.Busuu.Droid.Resource.Color.colorPrimaryDark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorTextPrimary = global::Naxam.Busuu.Droid.Resource.Color.colorTextPrimary;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorTextSecondary = global::Naxam.Busuu.Droid.Resource.Color.colorTextSecondary;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.colorWhite = global::Naxam.Busuu.Droid.Resource.Color.colorWhite;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_bottom_navigation_shadow_color = global::Naxam.Busuu.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_error = global::Naxam.Busuu.Droid.Resource.Color.design_error;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_fab_shadow_end_color = global::Naxam.Busuu.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_fab_shadow_mid_color = global::Naxam.Busuu.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_fab_shadow_start_color = global::Naxam.Busuu.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_fab_stroke_end_inner_color = global::Naxam.Busuu.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_fab_stroke_end_outer_color = global::Naxam.Busuu.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_fab_stroke_top_inner_color = global::Naxam.Busuu.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_fab_stroke_top_outer_color = global::Naxam.Busuu.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_snackbar_background_color = global::Naxam.Busuu.Droid.Resource.Color.design_snackbar_background_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_textinput_error_color_dark = global::Naxam.Busuu.Droid.Resource.Color.design_textinput_error_color_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_textinput_error_color_light = global::Naxam.Busuu.Droid.Resource.Color.design_textinput_error_color_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.design_tint_password_toggle = global::Naxam.Busuu.Droid.Resource.Color.design_tint_password_toggle;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.dim_foreground_disabled_material_dark = global::Naxam.Busuu.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.dim_foreground_disabled_material_light = global::Naxam.Busuu.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.dim_foreground_material_dark = global::Naxam.Busuu.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.dim_foreground_material_light = global::Naxam.Busuu.Droid.Resource.Color.dim_foreground_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.foreground_material_dark = global::Naxam.Busuu.Droid.Resource.Color.foreground_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.foreground_material_light = global::Naxam.Busuu.Droid.Resource.Color.foreground_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.half_black = global::Naxam.Busuu.Droid.Resource.Color.half_black;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.highlighted_text_material_dark = global::Naxam.Busuu.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.highlighted_text_material_light = global::Naxam.Busuu.Droid.Resource.Color.highlighted_text_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_blue_grey_800 = global::Naxam.Busuu.Droid.Resource.Color.material_blue_grey_800;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_blue_grey_900 = global::Naxam.Busuu.Droid.Resource.Color.material_blue_grey_900;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_blue_grey_950 = global::Naxam.Busuu.Droid.Resource.Color.material_blue_grey_950;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_deep_teal_200 = global::Naxam.Busuu.Droid.Resource.Color.material_deep_teal_200;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_deep_teal_500 = global::Naxam.Busuu.Droid.Resource.Color.material_deep_teal_500;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_grey_100 = global::Naxam.Busuu.Droid.Resource.Color.material_grey_100;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_grey_300 = global::Naxam.Busuu.Droid.Resource.Color.material_grey_300;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_grey_50 = global::Naxam.Busuu.Droid.Resource.Color.material_grey_50;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_grey_600 = global::Naxam.Busuu.Droid.Resource.Color.material_grey_600;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_grey_800 = global::Naxam.Busuu.Droid.Resource.Color.material_grey_800;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_grey_850 = global::Naxam.Busuu.Droid.Resource.Color.material_grey_850;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.material_grey_900 = global::Naxam.Busuu.Droid.Resource.Color.material_grey_900;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.notification_action_color_filter = global::Naxam.Busuu.Droid.Resource.Color.notification_action_color_filter;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.notification_icon_bg_color = global::Naxam.Busuu.Droid.Resource.Color.notification_icon_bg_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.notification_material_background_media_default_color = global::Naxam.Busuu.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.pink = global::Naxam.Busuu.Droid.Resource.Color.pink;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.pink_pressed = global::Naxam.Busuu.Droid.Resource.Color.pink_pressed;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.primary_dark_material_dark = global::Naxam.Busuu.Droid.Resource.Color.primary_dark_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.primary_dark_material_light = global::Naxam.Busuu.Droid.Resource.Color.primary_dark_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.primary_material_dark = global::Naxam.Busuu.Droid.Resource.Color.primary_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.primary_material_light = global::Naxam.Busuu.Droid.Resource.Color.primary_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.primary_text_default_material_dark = global::Naxam.Busuu.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.primary_text_default_material_light = global::Naxam.Busuu.Droid.Resource.Color.primary_text_default_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.primary_text_disabled_material_dark = global::Naxam.Busuu.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.primary_text_disabled_material_light = global::Naxam.Busuu.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.ripple_material_dark = global::Naxam.Busuu.Droid.Resource.Color.ripple_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.ripple_material_light = global::Naxam.Busuu.Droid.Resource.Color.ripple_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.secondary_text_default_material_dark = global::Naxam.Busuu.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.secondary_text_default_material_light = global::Naxam.Busuu.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.secondary_text_disabled_material_dark = global::Naxam.Busuu.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.secondary_text_disabled_material_light = global::Naxam.Busuu.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.switch_thumb_disabled_material_dark = global::Naxam.Busuu.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.switch_thumb_disabled_material_light = global::Naxam.Busuu.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.switch_thumb_material_dark = global::Naxam.Busuu.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.switch_thumb_material_light = global::Naxam.Busuu.Droid.Resource.Color.switch_thumb_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.switch_thumb_normal_material_dark = global::Naxam.Busuu.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.switch_thumb_normal_material_light = global::Naxam.Busuu.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.white = global::Naxam.Busuu.Droid.Resource.Color.white;
+			global::Naxam.Busuu.Droid.Review.Resource.Color.white_pressed = global::Naxam.Busuu.Droid.Resource.Color.white_pressed;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_content_inset_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_default_height_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_default_padding_end_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_default_padding_start_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_elevation_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_progress_bar_size = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_stacked_max_height = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_button_min_height_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_button_min_width_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_action_button_min_width_overflow_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_alert_dialog_button_bar_height = global::Naxam.Busuu.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_button_inset_horizontal_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_button_inset_vertical_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_button_padding_horizontal_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_button_padding_vertical_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::Naxam.Busuu.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_config_prefDialogWidth = global::Naxam.Busuu.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_control_corner_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_control_inset_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_control_padding_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dialog_fixed_height_major = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dialog_fixed_height_minor = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dialog_fixed_width_major = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dialog_fixed_width_minor = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dialog_min_width_major = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dialog_min_width_minor = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dialog_padding_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dialog_padding_top_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dialog_title_divider_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_disabled_alpha_material_dark = global::Naxam.Busuu.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_disabled_alpha_material_light = global::Naxam.Busuu.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dropdownitem_icon_width = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dropdownitem_text_padding_left = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_dropdownitem_text_padding_right = global::Naxam.Busuu.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_edit_text_inset_bottom_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_edit_text_inset_top_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_floating_window_z = global::Naxam.Busuu.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_list_item_padding_horizontal_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_panel_menu_list_width = global::Naxam.Busuu.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_progress_bar_height_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_search_view_preferred_height = global::Naxam.Busuu.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_search_view_preferred_width = global::Naxam.Busuu.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_seekbar_track_background_height_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_seekbar_track_progress_height_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_select_dialog_padding_start_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_switch_padding = global::Naxam.Busuu.Droid.Resource.Dimension.abc_switch_padding;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_body_1_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_body_2_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_button_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_caption_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_display_1_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_display_2_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_display_3_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_display_4_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_headline_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_large_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_medium_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_menu_header_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_menu_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_small_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_subhead_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_title_material = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.abc_text_size_title_material_toolbar = global::Naxam.Busuu.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.buttonHeightDefault = global::Naxam.Busuu.Droid.Resource.Dimension.buttonHeightDefault;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_appbar_elevation = global::Naxam.Busuu.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::Naxam.Busuu.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_bottom_navigation_active_text_size = global::Naxam.Busuu.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_bottom_navigation_elevation = global::Naxam.Busuu.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_bottom_navigation_height = global::Naxam.Busuu.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_bottom_navigation_item_max_width = global::Naxam.Busuu.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_bottom_navigation_item_min_width = global::Naxam.Busuu.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_bottom_navigation_margin = global::Naxam.Busuu.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_bottom_navigation_shadow_height = global::Naxam.Busuu.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_bottom_navigation_text_size = global::Naxam.Busuu.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_bottom_sheet_modal_elevation = global::Naxam.Busuu.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_bottom_sheet_peek_height_min = global::Naxam.Busuu.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_fab_border_width = global::Naxam.Busuu.Droid.Resource.Dimension.design_fab_border_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_fab_elevation = global::Naxam.Busuu.Droid.Resource.Dimension.design_fab_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_fab_image_size = global::Naxam.Busuu.Droid.Resource.Dimension.design_fab_image_size;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_fab_size_mini = global::Naxam.Busuu.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_fab_size_normal = global::Naxam.Busuu.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_fab_translation_z_pressed = global::Naxam.Busuu.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_navigation_elevation = global::Naxam.Busuu.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_navigation_icon_padding = global::Naxam.Busuu.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_navigation_icon_size = global::Naxam.Busuu.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_navigation_max_width = global::Naxam.Busuu.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_navigation_padding_bottom = global::Naxam.Busuu.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_navigation_separator_vertical_padding = global::Naxam.Busuu.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_snackbar_action_inline_max_width = global::Naxam.Busuu.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_snackbar_background_corner_radius = global::Naxam.Busuu.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_snackbar_elevation = global::Naxam.Busuu.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::Naxam.Busuu.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_snackbar_max_width = global::Naxam.Busuu.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_snackbar_min_width = global::Naxam.Busuu.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_snackbar_padding_horizontal = global::Naxam.Busuu.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_snackbar_padding_vertical = global::Naxam.Busuu.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::Naxam.Busuu.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_snackbar_text_size = global::Naxam.Busuu.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_tab_max_width = global::Naxam.Busuu.Droid.Resource.Dimension.design_tab_max_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_tab_scrollable_min_width = global::Naxam.Busuu.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_tab_text_size = global::Naxam.Busuu.Droid.Resource.Dimension.design_tab_text_size;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.design_tab_text_size_2line = global::Naxam.Busuu.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.disabled_alpha_material_dark = global::Naxam.Busuu.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.disabled_alpha_material_light = global::Naxam.Busuu.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.highlight_alpha_material_colored = global::Naxam.Busuu.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.highlight_alpha_material_dark = global::Naxam.Busuu.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.highlight_alpha_material_light = global::Naxam.Busuu.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.hint_alpha_material_dark = global::Naxam.Busuu.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.hint_alpha_material_light = global::Naxam.Busuu.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.hint_pressed_alpha_material_dark = global::Naxam.Busuu.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.hint_pressed_alpha_material_light = global::Naxam.Busuu.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.image_final_width = global::Naxam.Busuu.Droid.Resource.Dimension.image_final_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.image_width = global::Naxam.Busuu.Droid.Resource.Dimension.image_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::Naxam.Busuu.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::Naxam.Busuu.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::Naxam.Busuu.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_action_icon_size = global::Naxam.Busuu.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_action_text_size = global::Naxam.Busuu.Droid.Resource.Dimension.notification_action_text_size;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_big_circle_margin = global::Naxam.Busuu.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_content_margin_start = global::Naxam.Busuu.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_large_icon_height = global::Naxam.Busuu.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_large_icon_width = global::Naxam.Busuu.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_main_column_padding_top = global::Naxam.Busuu.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_media_narrow_margin = global::Naxam.Busuu.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_right_icon_size = global::Naxam.Busuu.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_right_side_padding_top = global::Naxam.Busuu.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_small_icon_background_padding = global::Naxam.Busuu.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_small_icon_size_as_large = global::Naxam.Busuu.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_subtext_size = global::Naxam.Busuu.Droid.Resource.Dimension.notification_subtext_size;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_top_pad = global::Naxam.Busuu.Droid.Resource.Dimension.notification_top_pad;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.notification_top_pad_large_text = global::Naxam.Busuu.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.spacing_normal = global::Naxam.Busuu.Droid.Resource.Dimension.spacing_normal;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.textSizeSubTitle = global::Naxam.Busuu.Droid.Resource.Dimension.textSizeSubTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Dimension.textSizeTitle = global::Naxam.Busuu.Droid.Resource.Dimension.textSizeTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_action_bar_item_background_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_btn_borderless_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_btn_check_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::Naxam.Busuu.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::Naxam.Busuu.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_btn_colored_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_btn_default_mtrl_shape = global::Naxam.Busuu.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_btn_radio_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::Naxam.Busuu.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::Naxam.Busuu.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::Naxam.Busuu.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::Naxam.Busuu.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_cab_background_internal_bg = global::Naxam.Busuu.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_cab_background_top_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_control_background_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_control_background_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_dialog_material_background = global::Naxam.Busuu.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_edit_text_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_ab_back_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_clear_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_go_search_api_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_menu_overflow_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_search_api_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_star_black_16dp = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_star_black_36dp = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_star_black_48dp = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_star_half_black_16dp = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_star_half_black_36dp = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_star_half_black_48dp = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ic_voice_search_api_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_item_background_holo_dark = global::Naxam.Busuu.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_item_background_holo_light = global::Naxam.Busuu.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_list_divider_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_list_focused_holo = global::Naxam.Busuu.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_list_longpressed_holo = global::Naxam.Busuu.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_list_pressed_holo_dark = global::Naxam.Busuu.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_list_pressed_holo_light = global::Naxam.Busuu.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::Naxam.Busuu.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::Naxam.Busuu.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::Naxam.Busuu.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_list_selector_disabled_holo_light = global::Naxam.Busuu.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_list_selector_holo_dark = global::Naxam.Busuu.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_list_selector_holo_light = global::Naxam.Busuu.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::Naxam.Busuu.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_popup_background_mtrl_mult = global::Naxam.Busuu.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ratingbar_indicator_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ratingbar_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_ratingbar_small_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::Naxam.Busuu.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::Naxam.Busuu.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_seekbar_thumb_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_seekbar_tick_mark_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_seekbar_track_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_spinner_textfield_background_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_switch_thumb_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_switch_track_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_tab_indicator_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_text_cursor_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::Naxam.Busuu.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::Naxam.Busuu.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::Naxam.Busuu.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::Naxam.Busuu.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::Naxam.Busuu.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::Naxam.Busuu.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::Naxam.Busuu.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_textfield_search_material = global::Naxam.Busuu.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.abc_vector_test = global::Naxam.Busuu.Droid.Resource.Drawable.abc_vector_test;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.avd_hide_password = global::Naxam.Busuu.Droid.Resource.Drawable.avd_hide_password;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.avd_hide_password_1 = global::Naxam.Busuu.Droid.Resource.Drawable.avd_hide_password_1;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.avd_hide_password_2 = global::Naxam.Busuu.Droid.Resource.Drawable.avd_hide_password_2;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.avd_hide_password_3 = global::Naxam.Busuu.Droid.Resource.Drawable.avd_hide_password_3;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.avd_show_password = global::Naxam.Busuu.Droid.Resource.Drawable.avd_show_password;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.avd_show_password_1 = global::Naxam.Busuu.Droid.Resource.Drawable.avd_show_password_1;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.avd_show_password_2 = global::Naxam.Busuu.Droid.Resource.Drawable.avd_show_password_2;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.avd_show_password_3 = global::Naxam.Busuu.Droid.Resource.Drawable.avd_show_password_3;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.design_bottom_navigation_item_background = global::Naxam.Busuu.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.design_fab_background = global::Naxam.Busuu.Droid.Resource.Drawable.design_fab_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.design_ic_visibility = global::Naxam.Busuu.Droid.Resource.Drawable.design_ic_visibility;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.design_ic_visibility_off = global::Naxam.Busuu.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.design_password_eye = global::Naxam.Busuu.Droid.Resource.Drawable.design_password_eye;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.design_snackbar_background = global::Naxam.Busuu.Droid.Resource.Drawable.design_snackbar_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.entity_strength_0 = global::Naxam.Busuu.Droid.Resource.Drawable.entity_strength_0;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.entity_strength_1 = global::Naxam.Busuu.Droid.Resource.Drawable.entity_strength_1;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.entity_strength_2 = global::Naxam.Busuu.Droid.Resource.Drawable.entity_strength_2;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.entity_strength_3 = global::Naxam.Busuu.Droid.Resource.Drawable.entity_strength_3;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.entity_strength_4 = global::Naxam.Busuu.Droid.Resource.Drawable.entity_strength_4;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.ic_menu_learn = global::Naxam.Busuu.Droid.Resource.Drawable.ic_menu_learn;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.ic_menu_profile = global::Naxam.Busuu.Droid.Resource.Drawable.ic_menu_profile;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.ic_menu_review = global::Naxam.Busuu.Droid.Resource.Drawable.ic_menu_review;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.ic_menu_social = global::Naxam.Busuu.Droid.Resource.Drawable.ic_menu_social;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.ic_search_white = global::Naxam.Busuu.Droid.Resource.Drawable.ic_search_white;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.Icon = global::Naxam.Busuu.Droid.Resource.Drawable.Icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.navigation_empty_icon = global::Naxam.Busuu.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notification_action_background = global::Naxam.Busuu.Droid.Resource.Drawable.notification_action_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notification_bg = global::Naxam.Busuu.Droid.Resource.Drawable.notification_bg;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notification_bg_low = global::Naxam.Busuu.Droid.Resource.Drawable.notification_bg_low;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notification_bg_low_normal = global::Naxam.Busuu.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notification_bg_low_pressed = global::Naxam.Busuu.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notification_bg_normal = global::Naxam.Busuu.Droid.Resource.Drawable.notification_bg_normal;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notification_bg_normal_pressed = global::Naxam.Busuu.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notification_icon_background = global::Naxam.Busuu.Droid.Resource.Drawable.notification_icon_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notification_template_icon_bg = global::Naxam.Busuu.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notification_template_icon_low_bg = global::Naxam.Busuu.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notification_tile_bg = global::Naxam.Busuu.Droid.Resource.Drawable.notification_tile_bg;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.notify_panel_notification_icon_bg = global::Naxam.Busuu.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.play_btn = global::Naxam.Busuu.Droid.Resource.Drawable.play_btn;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.selector_item_gray_color = global::Naxam.Busuu.Droid.Resource.Drawable.selector_item_gray_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Drawable.yellow_star_d = global::Naxam.Busuu.Droid.Resource.Drawable.yellow_star_d;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.MvvmCrossTagId = global::Naxam.Busuu.Droid.Resource.Id.MvvmCrossTagId;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.MvxBindingTagUnique = global::Naxam.Busuu.Droid.Resource.Id.MvxBindingTagUnique;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action0 = global::Naxam.Busuu.Droid.Resource.Id.action0;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_bar = global::Naxam.Busuu.Droid.Resource.Id.action_bar;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_bar_activity_content = global::Naxam.Busuu.Droid.Resource.Id.action_bar_activity_content;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_bar_container = global::Naxam.Busuu.Droid.Resource.Id.action_bar_container;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_bar_root = global::Naxam.Busuu.Droid.Resource.Id.action_bar_root;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_bar_spinner = global::Naxam.Busuu.Droid.Resource.Id.action_bar_spinner;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_bar_subtitle = global::Naxam.Busuu.Droid.Resource.Id.action_bar_subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_bar_title = global::Naxam.Busuu.Droid.Resource.Id.action_bar_title;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_container = global::Naxam.Busuu.Droid.Resource.Id.action_container;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_context_bar = global::Naxam.Busuu.Droid.Resource.Id.action_context_bar;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_divider = global::Naxam.Busuu.Droid.Resource.Id.action_divider;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_image = global::Naxam.Busuu.Droid.Resource.Id.action_image;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_menu_divider = global::Naxam.Busuu.Droid.Resource.Id.action_menu_divider;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_menu_presenter = global::Naxam.Busuu.Droid.Resource.Id.action_menu_presenter;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_mode_bar = global::Naxam.Busuu.Droid.Resource.Id.action_mode_bar;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_mode_bar_stub = global::Naxam.Busuu.Droid.Resource.Id.action_mode_bar_stub;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_mode_close_button = global::Naxam.Busuu.Droid.Resource.Id.action_mode_close_button;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.action_text = global::Naxam.Busuu.Droid.Resource.Id.action_text;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.actions = global::Naxam.Busuu.Droid.Resource.Id.actions;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.activity_chooser_view_content = global::Naxam.Busuu.Droid.Resource.Id.activity_chooser_view_content;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.add = global::Naxam.Busuu.Droid.Resource.Id.add;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.alertTitle = global::Naxam.Busuu.Droid.Resource.Id.alertTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.all = global::Naxam.Busuu.Droid.Resource.Id.all;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.always = global::Naxam.Busuu.Droid.Resource.Id.always;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.auto = global::Naxam.Busuu.Droid.Resource.Id.auto;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.beginning = global::Naxam.Busuu.Droid.Resource.Id.beginning;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.bottom = global::Naxam.Busuu.Droid.Resource.Id.bottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.btnFavorite = global::Naxam.Busuu.Droid.Resource.Id.btnFavorite;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.btnPlay = global::Naxam.Busuu.Droid.Resource.Id.btnPlay;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.buttonPanel = global::Naxam.Busuu.Droid.Resource.Id.buttonPanel;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.cancel_action = global::Naxam.Busuu.Droid.Resource.Id.cancel_action;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.center = global::Naxam.Busuu.Droid.Resource.Id.center;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.center_horizontal = global::Naxam.Busuu.Droid.Resource.Id.center_horizontal;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.center_vertical = global::Naxam.Busuu.Droid.Resource.Id.center_vertical;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.checkbox = global::Naxam.Busuu.Droid.Resource.Id.checkbox;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.chronometer = global::Naxam.Busuu.Droid.Resource.Id.chronometer;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.clip_horizontal = global::Naxam.Busuu.Droid.Resource.Id.clip_horizontal;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.clip_vertical = global::Naxam.Busuu.Droid.Resource.Id.clip_vertical;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.collapseActionView = global::Naxam.Busuu.Droid.Resource.Id.collapseActionView;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.contentPanel = global::Naxam.Busuu.Droid.Resource.Id.contentPanel;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.custom = global::Naxam.Busuu.Droid.Resource.Id.custom;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.customPanel = global::Naxam.Busuu.Droid.Resource.Id.customPanel;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.decor_content_parent = global::Naxam.Busuu.Droid.Resource.Id.decor_content_parent;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.default_activity_button = global::Naxam.Busuu.Droid.Resource.Id.default_activity_button;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.design_bottom_sheet = global::Naxam.Busuu.Droid.Resource.Id.design_bottom_sheet;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.design_menu_item_action_area = global::Naxam.Busuu.Droid.Resource.Id.design_menu_item_action_area;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.design_menu_item_action_area_stub = global::Naxam.Busuu.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.design_menu_item_text = global::Naxam.Busuu.Droid.Resource.Id.design_menu_item_text;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.design_navigation_view = global::Naxam.Busuu.Droid.Resource.Id.design_navigation_view;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.disableHome = global::Naxam.Busuu.Droid.Resource.Id.disableHome;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.edit_query = global::Naxam.Busuu.Droid.Resource.Id.edit_query;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.end = global::Naxam.Busuu.Droid.Resource.Id.end;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.end_padder = global::Naxam.Busuu.Droid.Resource.Id.end_padder;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.enterAlways = global::Naxam.Busuu.Droid.Resource.Id.enterAlways;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.enterAlwaysCollapsed = global::Naxam.Busuu.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.exitUntilCollapsed = global::Naxam.Busuu.Droid.Resource.Id.exitUntilCollapsed;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.expand_activities_button = global::Naxam.Busuu.Droid.Resource.Id.expand_activities_button;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.expanded_menu = global::Naxam.Busuu.Droid.Resource.Id.expanded_menu;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.fill = global::Naxam.Busuu.Droid.Resource.Id.fill;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.fill_horizontal = global::Naxam.Busuu.Droid.Resource.Id.fill_horizontal;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.fill_vertical = global::Naxam.Busuu.Droid.Resource.Id.fill_vertical;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.@fixed = global::Naxam.Busuu.Droid.Resource.Id.@fixed;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.home = global::Naxam.Busuu.Droid.Resource.Id.home;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.homeAsUp = global::Naxam.Busuu.Droid.Resource.Id.homeAsUp;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.icon = global::Naxam.Busuu.Droid.Resource.Id.icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.icon_group = global::Naxam.Busuu.Droid.Resource.Id.icon_group;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.ifRoom = global::Naxam.Busuu.Droid.Resource.Id.ifRoom;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.image = global::Naxam.Busuu.Droid.Resource.Id.image;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.imgCover = global::Naxam.Busuu.Droid.Resource.Id.imgCover;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.imgStrength = global::Naxam.Busuu.Droid.Resource.Id.imgStrength;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.info = global::Naxam.Busuu.Droid.Resource.Id.info;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.item_touch_helper_previous_elevation = global::Naxam.Busuu.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.largeLabel = global::Naxam.Busuu.Droid.Resource.Id.largeLabel;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.left = global::Naxam.Busuu.Droid.Resource.Id.left;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.line1 = global::Naxam.Busuu.Droid.Resource.Id.line1;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.line3 = global::Naxam.Busuu.Droid.Resource.Id.line3;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.listMode = global::Naxam.Busuu.Droid.Resource.Id.listMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.list_item = global::Naxam.Busuu.Droid.Resource.Id.list_item;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.masked = global::Naxam.Busuu.Droid.Resource.Id.masked;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.media_actions = global::Naxam.Busuu.Droid.Resource.Id.media_actions;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.menu_bottom = global::Naxam.Busuu.Droid.Resource.Id.menu_bottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.menu_learn = global::Naxam.Busuu.Droid.Resource.Id.menu_learn;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.menu_notification = global::Naxam.Busuu.Droid.Resource.Id.menu_notification;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.menu_profile = global::Naxam.Busuu.Droid.Resource.Id.menu_profile;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.menu_review = global::Naxam.Busuu.Droid.Resource.Id.menu_review;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.menu_social = global::Naxam.Busuu.Droid.Resource.Id.menu_social;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.middle = global::Naxam.Busuu.Droid.Resource.Id.middle;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.mini = global::Naxam.Busuu.Droid.Resource.Id.mini;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.multiply = global::Naxam.Busuu.Droid.Resource.Id.multiply;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.navigation_header_container = global::Naxam.Busuu.Droid.Resource.Id.navigation_header_container;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.never = global::Naxam.Busuu.Droid.Resource.Id.never;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.none = global::Naxam.Busuu.Droid.Resource.Id.none;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.normal = global::Naxam.Busuu.Droid.Resource.Id.normal;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.notification_background = global::Naxam.Busuu.Droid.Resource.Id.notification_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.notification_main_column = global::Naxam.Busuu.Droid.Resource.Id.notification_main_column;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.notification_main_column_container = global::Naxam.Busuu.Droid.Resource.Id.notification_main_column_container;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.parallax = global::Naxam.Busuu.Droid.Resource.Id.parallax;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.parentPanel = global::Naxam.Busuu.Droid.Resource.Id.parentPanel;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.pin = global::Naxam.Busuu.Droid.Resource.Id.pin;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.progress_circular = global::Naxam.Busuu.Droid.Resource.Id.progress_circular;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.progress_horizontal = global::Naxam.Busuu.Droid.Resource.Id.progress_horizontal;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.radio = global::Naxam.Busuu.Droid.Resource.Id.radio;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.right = global::Naxam.Busuu.Droid.Resource.Id.right;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.right_icon = global::Naxam.Busuu.Droid.Resource.Id.right_icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.right_side = global::Naxam.Busuu.Droid.Resource.Id.right_side;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.screen = global::Naxam.Busuu.Droid.Resource.Id.screen;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.scroll = global::Naxam.Busuu.Droid.Resource.Id.scroll;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.scrollIndicatorDown = global::Naxam.Busuu.Droid.Resource.Id.scrollIndicatorDown;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.scrollIndicatorUp = global::Naxam.Busuu.Droid.Resource.Id.scrollIndicatorUp;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.scrollView = global::Naxam.Busuu.Droid.Resource.Id.scrollView;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.scrollable = global::Naxam.Busuu.Droid.Resource.Id.scrollable;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.search_badge = global::Naxam.Busuu.Droid.Resource.Id.search_badge;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.search_bar = global::Naxam.Busuu.Droid.Resource.Id.search_bar;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.search_button = global::Naxam.Busuu.Droid.Resource.Id.search_button;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.search_close_btn = global::Naxam.Busuu.Droid.Resource.Id.search_close_btn;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.search_edit_frame = global::Naxam.Busuu.Droid.Resource.Id.search_edit_frame;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.search_go_btn = global::Naxam.Busuu.Droid.Resource.Id.search_go_btn;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.search_mag_icon = global::Naxam.Busuu.Droid.Resource.Id.search_mag_icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.search_plate = global::Naxam.Busuu.Droid.Resource.Id.search_plate;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.search_src_text = global::Naxam.Busuu.Droid.Resource.Id.search_src_text;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.search_voice_btn = global::Naxam.Busuu.Droid.Resource.Id.search_voice_btn;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.select_dialog_listview = global::Naxam.Busuu.Droid.Resource.Id.select_dialog_listview;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.shortcut = global::Naxam.Busuu.Droid.Resource.Id.shortcut;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.showCustom = global::Naxam.Busuu.Droid.Resource.Id.showCustom;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.showHome = global::Naxam.Busuu.Droid.Resource.Id.showHome;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.showTitle = global::Naxam.Busuu.Droid.Resource.Id.showTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.smallLabel = global::Naxam.Busuu.Droid.Resource.Id.smallLabel;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.snackbar_action = global::Naxam.Busuu.Droid.Resource.Id.snackbar_action;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.snackbar_text = global::Naxam.Busuu.Droid.Resource.Id.snackbar_text;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.snap = global::Naxam.Busuu.Droid.Resource.Id.snap;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.spacer = global::Naxam.Busuu.Droid.Resource.Id.spacer;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.split_action_bar = global::Naxam.Busuu.Droid.Resource.Id.split_action_bar;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.src_atop = global::Naxam.Busuu.Droid.Resource.Id.src_atop;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.src_in = global::Naxam.Busuu.Droid.Resource.Id.src_in;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.src_over = global::Naxam.Busuu.Droid.Resource.Id.src_over;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.start = global::Naxam.Busuu.Droid.Resource.Id.start;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.status_bar_latest_event_content = global::Naxam.Busuu.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.submenuarrow = global::Naxam.Busuu.Droid.Resource.Id.submenuarrow;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.submit_area = global::Naxam.Busuu.Droid.Resource.Id.submit_area;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.tabMode = global::Naxam.Busuu.Droid.Resource.Id.tabMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.tab_layout = global::Naxam.Busuu.Droid.Resource.Id.tab_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.text = global::Naxam.Busuu.Droid.Resource.Id.text;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.text2 = global::Naxam.Busuu.Droid.Resource.Id.text2;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.textSpacerNoButtons = global::Naxam.Busuu.Droid.Resource.Id.textSpacerNoButtons;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.textSpacerNoTitle = global::Naxam.Busuu.Droid.Resource.Id.textSpacerNoTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.text_input_password_toggle = global::Naxam.Busuu.Droid.Resource.Id.text_input_password_toggle;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.textinput_counter = global::Naxam.Busuu.Droid.Resource.Id.textinput_counter;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.textinput_error = global::Naxam.Busuu.Droid.Resource.Id.textinput_error;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.time = global::Naxam.Busuu.Droid.Resource.Id.time;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.title = global::Naxam.Busuu.Droid.Resource.Id.title;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.titleDividerNoCustom = global::Naxam.Busuu.Droid.Resource.Id.titleDividerNoCustom;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.title_template = global::Naxam.Busuu.Droid.Resource.Id.title_template;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.toolbar = global::Naxam.Busuu.Droid.Resource.Id.toolbar;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.top = global::Naxam.Busuu.Droid.Resource.Id.top;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.topPanel = global::Naxam.Busuu.Droid.Resource.Id.topPanel;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.touch_outside = global::Naxam.Busuu.Droid.Resource.Id.touch_outside;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.transition_current_scene = global::Naxam.Busuu.Droid.Resource.Id.transition_current_scene;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.transition_scene_layoutid_cache = global::Naxam.Busuu.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.txtHeader = global::Naxam.Busuu.Droid.Resource.Id.txtHeader;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.txtSubTitle = global::Naxam.Busuu.Droid.Resource.Id.txtSubTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.txtTitle = global::Naxam.Busuu.Droid.Resource.Id.txtTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.up = global::Naxam.Busuu.Droid.Resource.Id.up;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.useLogo = global::Naxam.Busuu.Droid.Resource.Id.useLogo;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.view_offset_helper = global::Naxam.Busuu.Droid.Resource.Id.view_offset_helper;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.view_pager = global::Naxam.Busuu.Droid.Resource.Id.view_pager;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.visible = global::Naxam.Busuu.Droid.Resource.Id.visible;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.withText = global::Naxam.Busuu.Droid.Resource.Id.withText;
+			global::Naxam.Busuu.Droid.Review.Resource.Id.wrap_content = global::Naxam.Busuu.Droid.Resource.Id.wrap_content;
+			global::Naxam.Busuu.Droid.Review.Resource.Integer.abc_config_activityDefaultDur = global::Naxam.Busuu.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Naxam.Busuu.Droid.Review.Resource.Integer.abc_config_activityShortDur = global::Naxam.Busuu.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Naxam.Busuu.Droid.Review.Resource.Integer.app_bar_elevation_anim_duration = global::Naxam.Busuu.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Naxam.Busuu.Droid.Review.Resource.Integer.bottom_sheet_slide_duration = global::Naxam.Busuu.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Naxam.Busuu.Droid.Review.Resource.Integer.cancel_button_image_alpha = global::Naxam.Busuu.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Integer.design_snackbar_text_max_lines = global::Naxam.Busuu.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Naxam.Busuu.Droid.Review.Resource.Integer.hide_password_duration = global::Naxam.Busuu.Droid.Resource.Integer.hide_password_duration;
+			global::Naxam.Busuu.Droid.Review.Resource.Integer.show_password_duration = global::Naxam.Busuu.Droid.Resource.Integer.show_password_duration;
+			global::Naxam.Busuu.Droid.Review.Resource.Integer.status_bar_notification_info_maxnum = global::Naxam.Busuu.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_action_bar_title_item = global::Naxam.Busuu.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_action_bar_up_container = global::Naxam.Busuu.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_action_bar_view_list_nav_layout = global::Naxam.Busuu.Droid.Resource.Layout.abc_action_bar_view_list_nav_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_action_menu_item_layout = global::Naxam.Busuu.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_action_menu_layout = global::Naxam.Busuu.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_action_mode_bar = global::Naxam.Busuu.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_action_mode_close_item_material = global::Naxam.Busuu.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_activity_chooser_view = global::Naxam.Busuu.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_activity_chooser_view_list_item = global::Naxam.Busuu.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_alert_dialog_button_bar_material = global::Naxam.Busuu.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_alert_dialog_material = global::Naxam.Busuu.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_alert_dialog_title_material = global::Naxam.Busuu.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_dialog_title_material = global::Naxam.Busuu.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_expanded_menu_layout = global::Naxam.Busuu.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_list_menu_item_checkbox = global::Naxam.Busuu.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_list_menu_item_icon = global::Naxam.Busuu.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_list_menu_item_layout = global::Naxam.Busuu.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_list_menu_item_radio = global::Naxam.Busuu.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_popup_menu_header_item_layout = global::Naxam.Busuu.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_popup_menu_item_layout = global::Naxam.Busuu.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_screen_content_include = global::Naxam.Busuu.Droid.Resource.Layout.abc_screen_content_include;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_screen_simple = global::Naxam.Busuu.Droid.Resource.Layout.abc_screen_simple;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_screen_simple_overlay_action_mode = global::Naxam.Busuu.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_screen_toolbar = global::Naxam.Busuu.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_search_dropdown_item_icons_2line = global::Naxam.Busuu.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_search_view = global::Naxam.Busuu.Droid.Resource.Layout.abc_search_view;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.abc_select_dialog_material = global::Naxam.Busuu.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_bottom_navigation_item = global::Naxam.Busuu.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_bottom_sheet_dialog = global::Naxam.Busuu.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_layout_snackbar = global::Naxam.Busuu.Droid.Resource.Layout.design_layout_snackbar;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_layout_snackbar_include = global::Naxam.Busuu.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_layout_tab_icon = global::Naxam.Busuu.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_layout_tab_text = global::Naxam.Busuu.Droid.Resource.Layout.design_layout_tab_text;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_menu_item_action_area = global::Naxam.Busuu.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_navigation_item = global::Naxam.Busuu.Droid.Resource.Layout.design_navigation_item;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_navigation_item_header = global::Naxam.Busuu.Droid.Resource.Layout.design_navigation_item_header;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_navigation_item_separator = global::Naxam.Busuu.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_navigation_item_subheader = global::Naxam.Busuu.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_navigation_menu = global::Naxam.Busuu.Droid.Resource.Layout.design_navigation_menu;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_navigation_menu_item = global::Naxam.Busuu.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.design_text_input_password_icon = global::Naxam.Busuu.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.Main = global::Naxam.Busuu.Droid.Resource.Layout.Main;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.MainActivity = global::Naxam.Busuu.Droid.Resource.Layout.MainActivity;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_action = global::Naxam.Busuu.Droid.Resource.Layout.notification_action;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_action_tombstone = global::Naxam.Busuu.Droid.Resource.Layout.notification_action_tombstone;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_media_action = global::Naxam.Busuu.Droid.Resource.Layout.notification_media_action;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_media_cancel_action = global::Naxam.Busuu.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_template_big_media = global::Naxam.Busuu.Droid.Resource.Layout.notification_template_big_media;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_template_big_media_custom = global::Naxam.Busuu.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_template_big_media_narrow = global::Naxam.Busuu.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_template_big_media_narrow_custom = global::Naxam.Busuu.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_template_custom_big = global::Naxam.Busuu.Droid.Resource.Layout.notification_template_custom_big;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_template_icon_group = global::Naxam.Busuu.Droid.Resource.Layout.notification_template_icon_group;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_template_lines_media = global::Naxam.Busuu.Droid.Resource.Layout.notification_template_lines_media;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_template_media = global::Naxam.Busuu.Droid.Resource.Layout.notification_template_media;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_template_media_custom = global::Naxam.Busuu.Droid.Resource.Layout.notification_template_media_custom;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_template_part_chronometer = global::Naxam.Busuu.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.notification_template_part_time = global::Naxam.Busuu.Droid.Resource.Layout.notification_template_part_time;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.review_activity = global::Naxam.Busuu.Droid.Resource.Layout.review_activity;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.review_header_item = global::Naxam.Busuu.Droid.Resource.Layout.review_header_item;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.review_item = global::Naxam.Busuu.Droid.Resource.Layout.review_item;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.select_dialog_item_material = global::Naxam.Busuu.Droid.Resource.Layout.select_dialog_item_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.select_dialog_multichoice_material = global::Naxam.Busuu.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.select_dialog_singlechoice_material = global::Naxam.Busuu.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Naxam.Busuu.Droid.Review.Resource.Layout.support_simple_spinner_dropdown_item = global::Naxam.Busuu.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Naxam.Busuu.Droid.Review.Resource.Menu.menu_bottom = global::Naxam.Busuu.Droid.Resource.Menu.menu_bottom;
+			global::Naxam.Busuu.Droid.Review.Resource.String.ApplicationName = global::Naxam.Busuu.Droid.Resource.String.ApplicationName;
+			global::Naxam.Busuu.Droid.Review.Resource.String.Hello = global::Naxam.Busuu.Droid.Resource.String.Hello;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_action_bar_home_description = global::Naxam.Busuu.Droid.Resource.String.abc_action_bar_home_description;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_action_bar_home_description_format = global::Naxam.Busuu.Droid.Resource.String.abc_action_bar_home_description_format;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_action_bar_home_subtitle_description_format = global::Naxam.Busuu.Droid.Resource.String.abc_action_bar_home_subtitle_description_format;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_action_bar_up_description = global::Naxam.Busuu.Droid.Resource.String.abc_action_bar_up_description;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_action_menu_overflow_description = global::Naxam.Busuu.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_action_mode_done = global::Naxam.Busuu.Droid.Resource.String.abc_action_mode_done;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_activity_chooser_view_see_all = global::Naxam.Busuu.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_activitychooserview_choose_application = global::Naxam.Busuu.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_capital_off = global::Naxam.Busuu.Droid.Resource.String.abc_capital_off;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_capital_on = global::Naxam.Busuu.Droid.Resource.String.abc_capital_on;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_body_1_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_body_1_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_body_2_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_body_2_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_button_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_button_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_caption_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_caption_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_display_1_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_display_1_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_display_2_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_display_2_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_display_3_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_display_3_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_display_4_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_display_4_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_headline_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_headline_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_menu_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_menu_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_subhead_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_subhead_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_font_family_title_material = global::Naxam.Busuu.Droid.Resource.String.abc_font_family_title_material;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_search_hint = global::Naxam.Busuu.Droid.Resource.String.abc_search_hint;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_searchview_description_clear = global::Naxam.Busuu.Droid.Resource.String.abc_searchview_description_clear;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_searchview_description_query = global::Naxam.Busuu.Droid.Resource.String.abc_searchview_description_query;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_searchview_description_search = global::Naxam.Busuu.Droid.Resource.String.abc_searchview_description_search;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_searchview_description_submit = global::Naxam.Busuu.Droid.Resource.String.abc_searchview_description_submit;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_searchview_description_voice = global::Naxam.Busuu.Droid.Resource.String.abc_searchview_description_voice;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_shareactionprovider_share_with = global::Naxam.Busuu.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_shareactionprovider_share_with_application = global::Naxam.Busuu.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Naxam.Busuu.Droid.Review.Resource.String.abc_toolbar_collapse_description = global::Naxam.Busuu.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Naxam.Busuu.Droid.Review.Resource.String.appbar_scrolling_view_behavior = global::Naxam.Busuu.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Naxam.Busuu.Droid.Review.Resource.String.bottom_sheet_behavior = global::Naxam.Busuu.Droid.Resource.String.bottom_sheet_behavior;
+			global::Naxam.Busuu.Droid.Review.Resource.String.character_counter_pattern = global::Naxam.Busuu.Droid.Resource.String.character_counter_pattern;
+			global::Naxam.Busuu.Droid.Review.Resource.String.password_toggle_content_description = global::Naxam.Busuu.Droid.Resource.String.password_toggle_content_description;
+			global::Naxam.Busuu.Droid.Review.Resource.String.path_password_eye = global::Naxam.Busuu.Droid.Resource.String.path_password_eye;
+			global::Naxam.Busuu.Droid.Review.Resource.String.path_password_eye_mask_strike_through = global::Naxam.Busuu.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Naxam.Busuu.Droid.Review.Resource.String.path_password_eye_mask_visible = global::Naxam.Busuu.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Naxam.Busuu.Droid.Review.Resource.String.path_password_strike_through = global::Naxam.Busuu.Droid.Resource.String.path_password_strike_through;
+			global::Naxam.Busuu.Droid.Review.Resource.String.search_menu_title = global::Naxam.Busuu.Droid.Resource.String.search_menu_title;
+			global::Naxam.Busuu.Droid.Review.Resource.String.status_bar_notification_info_overflow = global::Naxam.Busuu.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.AlertDialog_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.AlertDialog_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Animation_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Animation_AppCompat_DropDownUp = global::Naxam.Busuu.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Animation_Design_BottomSheetDialog = global::Naxam.Busuu.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.AppTheme = global::Naxam.Busuu.Droid.Resource.Style.AppTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.AppTheme_NoActionBar = global::Naxam.Busuu.Droid.Resource.Style.AppTheme_NoActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.AppTheme_Premium = global::Naxam.Busuu.Droid.Resource.Style.AppTheme_Premium;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_AlertDialog_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Animation_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::Naxam.Busuu.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_DialogWindowTitle_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Button = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Large = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Small = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Title = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::Naxam.Busuu.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::Naxam.Busuu.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_ThemeOverlay_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::Naxam.Busuu.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::Naxam.Busuu.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::Naxam.Busuu.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::Naxam.Busuu.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V21_Theme_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V21_Theme_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V22_Theme_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V23_Theme_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V7_Theme_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V7_Theme_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::Naxam.Busuu.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::Naxam.Busuu.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ActionButton = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ActionMode = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Button = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Button_Small = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_EditText = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ImageButton = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ListView = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_RatingBar = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_SearchView = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_SeekBar = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Spinner = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Toolbar = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_Design_AppBarLayout = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_Design_AppBarLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Base_Widget_Design_TabLayout = global::Naxam.Busuu.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.NoActionBarTheme = global::Naxam.Busuu.Droid.Resource.Style.NoActionBarTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Platform_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_ThemeOverlay_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::Naxam.Busuu.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_V11_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Platform_V11_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_V11_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Platform_V11_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_V14_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Platform_V14_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_V14_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Platform_V14_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_V21_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_V21_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_V25_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_V25_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Platform_Widget_AppCompat_Spinner = global::Naxam.Busuu.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::Naxam.Busuu.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::Naxam.Busuu.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::Naxam.Busuu.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.StyleButton = global::Naxam.Busuu.Droid.Resource.Style.StyleButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.StyleButtonConfirmDialog = global::Naxam.Busuu.Droid.Resource.Style.StyleButtonConfirmDialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.StyleEditText = global::Naxam.Busuu.Droid.Resource.Style.StyleEditText;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.StyleTextSubTitle = global::Naxam.Busuu.Droid.Resource.Style.StyleTextSubTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.StyleTextTitle = global::Naxam.Busuu.Droid.Resource.Style.StyleTextTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.StyleTextTitleBold = global::Naxam.Busuu.Droid.Resource.Style.StyleTextTitleBold;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.StyleTextTitleRegular = global::Naxam.Busuu.Droid.Resource.Style.StyleTextTitleRegular;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Body1 = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Body2 = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Button = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Caption = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Display1 = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Display2 = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Display3 = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Display4 = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Headline = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Inverse = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Large = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Medium = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Menu = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Notification = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Notification;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Notification_Info = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Notification_Info;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Notification_Info_Media = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Notification_Info_Media;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Notification_Line2 = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Notification_Line2;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Notification_Line2_Media = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Notification_Line2_Media;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Notification_Media = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Notification_Media;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Notification_Time = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Notification_Time;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Notification_Time_Media = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Notification_Time_Media;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Notification_Title = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Notification_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Notification_Title_Media = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Notification_Title_Media;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Small = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Subhead = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Title = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_Design_Counter = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_Design_Counter_Overflow = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_Design_Error = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_Design_Hint = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_Design_Snackbar_Message = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_Design_Tab = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_StatusBar_EventContent = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_StatusBar_EventContent;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_StatusBar_EventContent_Info = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Info;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_StatusBar_EventContent_Line2 = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Line2;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_StatusBar_EventContent_Time = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Time;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_StatusBar_EventContent_Title = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::Naxam.Busuu.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_CompactMenu = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_DayNight = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_Dialog_Alert = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_Light_Dialog = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_AppCompat_NoActionBar = global::Naxam.Busuu.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_Design = global::Naxam.Busuu.Droid.Resource.Style.Theme_Design;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_Design_BottomSheetDialog = global::Naxam.Busuu.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_Design_Light = global::Naxam.Busuu.Droid.Resource.Style.Theme_Design_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::Naxam.Busuu.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_Design_Light_NoActionBar = global::Naxam.Busuu.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Theme_Design_NoActionBar = global::Naxam.Busuu.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.ThemeOverlay_AppCompat = global::Naxam.Busuu.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.ThemeOverlay_AppCompat_Dark = global::Naxam.Busuu.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::Naxam.Busuu.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::Naxam.Busuu.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.ThemeOverlay_AppCompat_Light = global::Naxam.Busuu.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ActionButton = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ActionMode = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ActivityChooserView = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Button = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Button_Borderless = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Button_Colored = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Button_Small = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ButtonBar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_EditText = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ImageButton = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionButton = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_SearchView = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ListMenuView = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ListPopupWindow = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ListView = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ListView_DropDown = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ListView_Menu = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_NotificationActionContainer = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_NotificationActionContainer;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_NotificationActionText = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_NotificationActionText;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_PopupMenu = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_PopupWindow = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ProgressBar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_RatingBar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_RatingBar_Small = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_SearchView = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_SeekBar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Spinner = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Toolbar = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::Naxam.Busuu.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_Design_AppBarLayout = global::Naxam.Busuu.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_Design_BottomNavigationView = global::Naxam.Busuu.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_Design_BottomSheet_Modal = global::Naxam.Busuu.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_Design_CollapsingToolbar = global::Naxam.Busuu.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_Design_CoordinatorLayout = global::Naxam.Busuu.Droid.Resource.Style.Widget_Design_CoordinatorLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_Design_FloatingActionButton = global::Naxam.Busuu.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_Design_NavigationView = global::Naxam.Busuu.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::Naxam.Busuu.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_Design_Snackbar = global::Naxam.Busuu.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_Design_TabLayout = global::Naxam.Busuu.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.Widget_Design_TextInputLayout = global::Naxam.Busuu.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.styleTextDescription = global::Naxam.Busuu.Droid.Resource.Style.styleTextDescription;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.styleTextHeader = global::Naxam.Busuu.Droid.Resource.Style.styleTextHeader;
+			global::Naxam.Busuu.Droid.Review.Resource.Style.styleTextNormal = global::Naxam.Busuu.Droid.Resource.Style.styleTextNormal;
+			global::Naxam.Busuu.Droid.Review.Resource.Xml.Empty = global::Naxam.Busuu.Droid.Resource.Xml.Empty;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_background = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_backgroundSplit = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_backgroundStacked = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_contentInsetEnd = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_contentInsetLeft = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_contentInsetRight = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_contentInsetStart = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_customNavigationLayout = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_displayOptions = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_divider = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_divider;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_elevation = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_height = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_height;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_hideOnContentScroll = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_homeAsUpIndicator = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_homeLayout = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_icon = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_itemPadding = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_logo = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_logo;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_navigationMode = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_popupTheme = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_progressBarPadding = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_progressBarStyle = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_subtitle = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_subtitleTextStyle = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_title = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_title;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBar_titleTextStyle = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBarLayout = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBarLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::Naxam.Busuu.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionMenuItemView = global::Naxam.Busuu.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionMenuItemView_android_minWidth = global::Naxam.Busuu.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionMenuView = global::Naxam.Busuu.Droid.Resource.Styleable.ActionMenuView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionMode = global::Naxam.Busuu.Droid.Resource.Styleable.ActionMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionMode_background = global::Naxam.Busuu.Droid.Resource.Styleable.ActionMode_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionMode_backgroundSplit = global::Naxam.Busuu.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionMode_closeItemLayout = global::Naxam.Busuu.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionMode_height = global::Naxam.Busuu.Droid.Resource.Styleable.ActionMode_height;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionMode_subtitleTextStyle = global::Naxam.Busuu.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActionMode_titleTextStyle = global::Naxam.Busuu.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActivityChooserView = global::Naxam.Busuu.Droid.Resource.Styleable.ActivityChooserView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::Naxam.Busuu.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ActivityChooserView_initialActivityCount = global::Naxam.Busuu.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AlertDialog = global::Naxam.Busuu.Droid.Resource.Styleable.AlertDialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AlertDialog_android_layout = global::Naxam.Busuu.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::Naxam.Busuu.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AlertDialog_listItemLayout = global::Naxam.Busuu.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AlertDialog_listLayout = global::Naxam.Busuu.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::Naxam.Busuu.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AlertDialog_showTitle = global::Naxam.Busuu.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::Naxam.Busuu.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppBarLayout = global::Naxam.Busuu.Droid.Resource.Styleable.AppBarLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppBarLayout_android_background = global::Naxam.Busuu.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppBarLayout_elevation = global::Naxam.Busuu.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppBarLayout_expanded = global::Naxam.Busuu.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppBarLayoutStates = global::Naxam.Busuu.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::Naxam.Busuu.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::Naxam.Busuu.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppBarLayout_Layout = global::Naxam.Busuu.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::Naxam.Busuu.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::Naxam.Busuu.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatImageView = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatImageView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatImageView_android_src = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatImageView_srcCompat = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatSeekBar = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatSeekBar_android_thumb = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatSeekBar_tickMark = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTextHelper = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTextView = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTextView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTextView_android_textAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTextView_textAllCaps = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionBarDivider = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionBarSize = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionBarStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionBarTheme = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModeBackground = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModeStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_buttonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_checkboxStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_colorAccent = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_colorControlActivated = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_colorControlNormal = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_colorPrimary = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_controlBackground = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_dialogTheme = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_dividerVertical = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_editTextBackground = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_editTextColor = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_editTextStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_panelBackground = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_searchViewStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_seekBarStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_spinnerStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_switchStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_toolbarStyle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_windowActionBar = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.AppCompatTheme_windowNoTitle = global::Naxam.Busuu.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.BottomNavigationView = global::Naxam.Busuu.Droid.Resource.Styleable.BottomNavigationView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.BottomNavigationView_elevation = global::Naxam.Busuu.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.BottomNavigationView_itemBackground = global::Naxam.Busuu.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.BottomNavigationView_itemIconTint = global::Naxam.Busuu.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.BottomNavigationView_itemTextColor = global::Naxam.Busuu.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.BottomNavigationView_menu = global::Naxam.Busuu.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.BottomSheetBehavior_Layout = global::Naxam.Busuu.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::Naxam.Busuu.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::Naxam.Busuu.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::Naxam.Busuu.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ButtonBarLayout = global::Naxam.Busuu.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ButtonBarLayout_allowStacking = global::Naxam.Busuu.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_title = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_Layout = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::Naxam.Busuu.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ColorStateListItem = global::Naxam.Busuu.Droid.Resource.Styleable.ColorStateListItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ColorStateListItem_alpha = global::Naxam.Busuu.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ColorStateListItem_android_alpha = global::Naxam.Busuu.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ColorStateListItem_android_color = global::Naxam.Busuu.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CompoundButton = global::Naxam.Busuu.Droid.Resource.Styleable.CompoundButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CompoundButton_android_button = global::Naxam.Busuu.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CompoundButton_buttonTint = global::Naxam.Busuu.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CompoundButton_buttonTintMode = global::Naxam.Busuu.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CoordinatorLayout = global::Naxam.Busuu.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CoordinatorLayout_keylines = global::Naxam.Busuu.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Naxam.Busuu.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CoordinatorLayout_Layout = global::Naxam.Busuu.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::Naxam.Busuu.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::Naxam.Busuu.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::Naxam.Busuu.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::Naxam.Busuu.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::Naxam.Busuu.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::Naxam.Busuu.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::Naxam.Busuu.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DesignTheme = global::Naxam.Busuu.Droid.Resource.Styleable.DesignTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::Naxam.Busuu.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DesignTheme_bottomSheetStyle = global::Naxam.Busuu.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DesignTheme_textColorError = global::Naxam.Busuu.Droid.Resource.Styleable.DesignTheme_textColorError;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DrawerArrowToggle = global::Naxam.Busuu.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::Naxam.Busuu.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::Naxam.Busuu.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DrawerArrowToggle_barLength = global::Naxam.Busuu.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DrawerArrowToggle_color = global::Naxam.Busuu.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DrawerArrowToggle_drawableSize = global::Naxam.Busuu.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::Naxam.Busuu.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DrawerArrowToggle_spinBars = global::Naxam.Busuu.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.DrawerArrowToggle_thickness = global::Naxam.Busuu.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.FloatingActionButton = global::Naxam.Busuu.Droid.Resource.Styleable.FloatingActionButton;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.FloatingActionButton_backgroundTint = global::Naxam.Busuu.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::Naxam.Busuu.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.FloatingActionButton_borderWidth = global::Naxam.Busuu.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.FloatingActionButton_elevation = global::Naxam.Busuu.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.FloatingActionButton_fabSize = global::Naxam.Busuu.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::Naxam.Busuu.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.FloatingActionButton_rippleColor = global::Naxam.Busuu.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.FloatingActionButton_useCompatPadding = global::Naxam.Busuu.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::Naxam.Busuu.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::Naxam.Busuu.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ForegroundLinearLayout = global::Naxam.Busuu.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::Naxam.Busuu.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::Naxam.Busuu.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::Naxam.Busuu.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_android_gravity = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_android_orientation = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_divider = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_showDividers = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_Layout = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::Naxam.Busuu.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ListPopupWindow = global::Naxam.Busuu.Droid.Resource.Styleable.ListPopupWindow;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::Naxam.Busuu.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::Naxam.Busuu.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuGroup = global::Naxam.Busuu.Droid.Resource.Styleable.MenuGroup;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuGroup_android_checkableBehavior = global::Naxam.Busuu.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuGroup_android_enabled = global::Naxam.Busuu.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuGroup_android_id = global::Naxam.Busuu.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuGroup_android_menuCategory = global::Naxam.Busuu.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuGroup_android_orderInCategory = global::Naxam.Busuu.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuGroup_android_visible = global::Naxam.Busuu.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_actionLayout = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_actionProviderClass = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_actionViewClass = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_checkable = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_checked = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_enabled = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_icon = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_id = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_menuCategory = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_numericShortcut = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_onClick = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_orderInCategory = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_title = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_titleCondensed = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_android_visible = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuItem_showAsAction = global::Naxam.Busuu.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuView = global::Naxam.Busuu.Droid.Resource.Styleable.MenuView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuView_android_headerBackground = global::Naxam.Busuu.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuView_android_horizontalDivider = global::Naxam.Busuu.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuView_android_itemBackground = global::Naxam.Busuu.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::Naxam.Busuu.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuView_android_itemTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuView_android_verticalDivider = global::Naxam.Busuu.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuView_android_windowAnimationStyle = global::Naxam.Busuu.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuView_preserveIconSpacing = global::Naxam.Busuu.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MenuView_subMenuArrow = global::Naxam.Busuu.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxBinding = global::Naxam.Busuu.Droid.Resource.Styleable.MvxBinding;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxBinding_MvxBind = global::Naxam.Busuu.Droid.Resource.Styleable.MvxBinding_MvxBind;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxBinding_MvxLang = global::Naxam.Busuu.Droid.Resource.Styleable.MvxBinding_MvxLang;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxControl = global::Naxam.Busuu.Droid.Resource.Styleable.MvxControl;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxControl_MvxTemplate = global::Naxam.Busuu.Droid.Resource.Styleable.MvxControl_MvxTemplate;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxExpandableListView = global::Naxam.Busuu.Droid.Resource.Styleable.MvxExpandableListView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate = global::Naxam.Busuu.Droid.Resource.Styleable.MvxExpandableListView_MvxGroupItemTemplate;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxImageView = global::Naxam.Busuu.Droid.Resource.Styleable.MvxImageView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxImageView_MvxSource = global::Naxam.Busuu.Droid.Resource.Styleable.MvxImageView_MvxSource;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxListView = global::Naxam.Busuu.Droid.Resource.Styleable.MvxListView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::Naxam.Busuu.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.MvxListView_MvxItemTemplate = global::Naxam.Busuu.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.NavigationView = global::Naxam.Busuu.Droid.Resource.Styleable.NavigationView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.NavigationView_android_background = global::Naxam.Busuu.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::Naxam.Busuu.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.NavigationView_android_maxWidth = global::Naxam.Busuu.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.NavigationView_elevation = global::Naxam.Busuu.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.NavigationView_headerLayout = global::Naxam.Busuu.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.NavigationView_itemBackground = global::Naxam.Busuu.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.NavigationView_itemIconTint = global::Naxam.Busuu.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.NavigationView_itemTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.NavigationView_itemTextColor = global::Naxam.Busuu.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.NavigationView_menu = global::Naxam.Busuu.Droid.Resource.Styleable.NavigationView_menu;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.PopupWindow = global::Naxam.Busuu.Droid.Resource.Styleable.PopupWindow;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::Naxam.Busuu.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.PopupWindow_android_popupBackground = global::Naxam.Busuu.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.PopupWindow_overlapAnchor = global::Naxam.Busuu.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.PopupWindowBackgroundState = global::Naxam.Busuu.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::Naxam.Busuu.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.RecycleListView = global::Naxam.Busuu.Droid.Resource.Styleable.RecycleListView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::Naxam.Busuu.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::Naxam.Busuu.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.RecyclerView = global::Naxam.Busuu.Droid.Resource.Styleable.RecyclerView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.RecyclerView_android_descendantFocusability = global::Naxam.Busuu.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.RecyclerView_android_orientation = global::Naxam.Busuu.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.RecyclerView_layoutManager = global::Naxam.Busuu.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.RecyclerView_reverseLayout = global::Naxam.Busuu.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.RecyclerView_spanCount = global::Naxam.Busuu.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.RecyclerView_stackFromEnd = global::Naxam.Busuu.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ScrimInsetsFrameLayout = global::Naxam.Busuu.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::Naxam.Busuu.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ScrollingViewBehavior_Layout = global::Naxam.Busuu.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::Naxam.Busuu.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_android_focusable = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_android_imeOptions = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_android_inputType = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_android_maxWidth = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_closeIcon = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_commitIcon = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_defaultQueryHint = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_goIcon = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_iconifiedByDefault = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_layout = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_queryBackground = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_queryHint = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_searchHintIcon = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_searchIcon = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_submitBackground = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_suggestionRowLayout = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SearchView_voiceIcon = global::Naxam.Busuu.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SnackbarLayout = global::Naxam.Busuu.Droid.Resource.Styleable.SnackbarLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SnackbarLayout_android_maxWidth = global::Naxam.Busuu.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SnackbarLayout_elevation = global::Naxam.Busuu.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::Naxam.Busuu.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Spinner = global::Naxam.Busuu.Droid.Resource.Styleable.Spinner;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Spinner_android_dropDownWidth = global::Naxam.Busuu.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Spinner_android_entries = global::Naxam.Busuu.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Spinner_android_popupBackground = global::Naxam.Busuu.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Spinner_android_prompt = global::Naxam.Busuu.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Spinner_popupTheme = global::Naxam.Busuu.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_android_textOff = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_android_textOn = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_android_thumb = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_showText = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_splitTrack = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_switchMinWidth = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_switchPadding = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_switchTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_thumbTextPadding = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_thumbTint = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_thumbTintMode = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_track = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_trackTint = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.SwitchCompat_trackTintMode = global::Naxam.Busuu.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabItem = global::Naxam.Busuu.Droid.Resource.Styleable.TabItem;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabItem_android_icon = global::Naxam.Busuu.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabItem_android_layout = global::Naxam.Busuu.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabItem_android_text = global::Naxam.Busuu.Droid.Resource.Styleable.TabItem_android_text;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabBackground = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabContentStart = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabGravity = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabIndicatorColor = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabIndicatorHeight = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabMaxWidth = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabMinWidth = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabMode = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabPadding = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabPaddingBottom = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabPaddingEnd = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabPaddingStart = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabPaddingTop = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabSelectedTextColor = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TabLayout_tabTextColor = global::Naxam.Busuu.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.TextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextAppearance_android_shadowColor = global::Naxam.Busuu.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextAppearance_android_shadowDx = global::Naxam.Busuu.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextAppearance_android_shadowDy = global::Naxam.Busuu.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextAppearance_android_shadowRadius = global::Naxam.Busuu.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextAppearance_android_textColor = global::Naxam.Busuu.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextAppearance_android_textColorHint = global::Naxam.Busuu.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextAppearance_android_textSize = global::Naxam.Busuu.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextAppearance_android_textStyle = global::Naxam.Busuu.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextAppearance_android_typeface = global::Naxam.Busuu.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextAppearance_textAllCaps = global::Naxam.Busuu.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_android_hint = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_android_textColorHint = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_counterEnabled = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_counterMaxLength = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_counterTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_errorEnabled = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_errorTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_hintEnabled = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_hintTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_passwordToggleTint = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::Naxam.Busuu.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_android_gravity = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_android_minHeight = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_buttonGravity = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_collapseContentDescription = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_collapseIcon = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_contentInsetEnd = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_contentInsetLeft = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_contentInsetRight = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_contentInsetStart = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_logo = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_logo;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_logoDescription = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_maxButtonHeight = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_navigationContentDescription = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_navigationIcon = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_popupTheme = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_subtitle = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_subtitleTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_subtitleTextColor = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_title = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_title;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_titleMargin = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_titleMarginBottom = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_titleMarginEnd = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_titleMarginStart = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_titleMarginTop = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_titleMargins = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_titleTextAppearance = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.Toolbar_titleTextColor = global::Naxam.Busuu.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.View = global::Naxam.Busuu.Droid.Resource.Styleable.View;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.View_android_focusable = global::Naxam.Busuu.Droid.Resource.Styleable.View_android_focusable;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.View_android_theme = global::Naxam.Busuu.Droid.Resource.Styleable.View_android_theme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.View_paddingEnd = global::Naxam.Busuu.Droid.Resource.Styleable.View_paddingEnd;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.View_paddingStart = global::Naxam.Busuu.Droid.Resource.Styleable.View_paddingStart;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.View_theme = global::Naxam.Busuu.Droid.Resource.Styleable.View_theme;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ViewBackgroundHelper = global::Naxam.Busuu.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ViewBackgroundHelper_android_background = global::Naxam.Busuu.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::Naxam.Busuu.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::Naxam.Busuu.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ViewStubCompat = global::Naxam.Busuu.Droid.Resource.Styleable.ViewStubCompat;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ViewStubCompat_android_id = global::Naxam.Busuu.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Naxam.Busuu.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Naxam.Busuu.Droid.Review.Resource.Styleable.ViewStubCompat_android_layout = global::Naxam.Busuu.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Naxam.Busuu.Droid.Social.Resource.Animation.abc_fade_in = global::Naxam.Busuu.Droid.Resource.Animation.abc_fade_in;
 			global::Naxam.Busuu.Droid.Social.Resource.Animation.abc_fade_out = global::Naxam.Busuu.Droid.Resource.Animation.abc_fade_out;
 			global::Naxam.Busuu.Droid.Social.Resource.Animation.abc_grow_fade_in_from_bottom = global::Naxam.Busuu.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -11900,44 +13819,44 @@ namespace Naxam.Busuu.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0a0075
-			public const int abc_background_cache_hint_selector_material_dark = 2131361909;
+			// aapt resource value: 0x7f0a007d
+			public const int abc_background_cache_hint_selector_material_dark = 2131361917;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int abc_background_cache_hint_selector_material_light = 2131361910;
+			// aapt resource value: 0x7f0a007e
+			public const int abc_background_cache_hint_selector_material_light = 2131361918;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int abc_btn_colored_borderless_text_material = 2131361911;
+			// aapt resource value: 0x7f0a007f
+			public const int abc_btn_colored_borderless_text_material = 2131361919;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int abc_btn_colored_text_material = 2131361912;
+			// aapt resource value: 0x7f0a0080
+			public const int abc_btn_colored_text_material = 2131361920;
 			
-			// aapt resource value: 0x7f0a0079
-			public const int abc_color_highlight_material = 2131361913;
+			// aapt resource value: 0x7f0a0081
+			public const int abc_color_highlight_material = 2131361921;
 			
-			// aapt resource value: 0x7f0a007a
-			public const int abc_hint_foreground_material_dark = 2131361914;
+			// aapt resource value: 0x7f0a0082
+			public const int abc_hint_foreground_material_dark = 2131361922;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int abc_hint_foreground_material_light = 2131361915;
+			// aapt resource value: 0x7f0a0083
+			public const int abc_hint_foreground_material_light = 2131361923;
 			
 			// aapt resource value: 0x7f0a001e
 			public const int abc_input_method_navigation_guard = 2131361822;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int abc_primary_text_disable_only_material_dark = 2131361916;
+			// aapt resource value: 0x7f0a0084
+			public const int abc_primary_text_disable_only_material_dark = 2131361924;
 			
-			// aapt resource value: 0x7f0a007d
-			public const int abc_primary_text_disable_only_material_light = 2131361917;
+			// aapt resource value: 0x7f0a0085
+			public const int abc_primary_text_disable_only_material_light = 2131361925;
 			
-			// aapt resource value: 0x7f0a007e
-			public const int abc_primary_text_material_dark = 2131361918;
+			// aapt resource value: 0x7f0a0086
+			public const int abc_primary_text_material_dark = 2131361926;
 			
-			// aapt resource value: 0x7f0a007f
-			public const int abc_primary_text_material_light = 2131361919;
+			// aapt resource value: 0x7f0a0087
+			public const int abc_primary_text_material_light = 2131361927;
 			
-			// aapt resource value: 0x7f0a0080
-			public const int abc_search_url_text = 2131361920;
+			// aapt resource value: 0x7f0a0088
+			public const int abc_search_url_text = 2131361928;
 			
 			// aapt resource value: 0x7f0a001f
 			public const int abc_search_url_text_normal = 2131361823;
@@ -11948,38 +13867,41 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0a0021
 			public const int abc_search_url_text_selected = 2131361825;
 			
-			// aapt resource value: 0x7f0a0081
-			public const int abc_secondary_text_material_dark = 2131361921;
-			
-			// aapt resource value: 0x7f0a0082
-			public const int abc_secondary_text_material_light = 2131361922;
-			
-			// aapt resource value: 0x7f0a0083
-			public const int abc_tint_btn_checkable = 2131361923;
-			
-			// aapt resource value: 0x7f0a0084
-			public const int abc_tint_default = 2131361924;
-			
-			// aapt resource value: 0x7f0a0085
-			public const int abc_tint_edittext = 2131361925;
-			
-			// aapt resource value: 0x7f0a0086
-			public const int abc_tint_seek_thumb = 2131361926;
-			
-			// aapt resource value: 0x7f0a0087
-			public const int abc_tint_spinner = 2131361927;
-			
-			// aapt resource value: 0x7f0a0088
-			public const int abc_tint_switch_thumb = 2131361928;
-			
 			// aapt resource value: 0x7f0a0089
-			public const int abc_tint_switch_track = 2131361929;
+			public const int abc_secondary_text_material_dark = 2131361929;
+			
+			// aapt resource value: 0x7f0a008a
+			public const int abc_secondary_text_material_light = 2131361930;
+			
+			// aapt resource value: 0x7f0a008b
+			public const int abc_tint_btn_checkable = 2131361931;
+			
+			// aapt resource value: 0x7f0a008c
+			public const int abc_tint_default = 2131361932;
+			
+			// aapt resource value: 0x7f0a008d
+			public const int abc_tint_edittext = 2131361933;
+			
+			// aapt resource value: 0x7f0a008e
+			public const int abc_tint_seek_thumb = 2131361934;
+			
+			// aapt resource value: 0x7f0a008f
+			public const int abc_tint_spinner = 2131361935;
+			
+			// aapt resource value: 0x7f0a0090
+			public const int abc_tint_switch_thumb = 2131361936;
+			
+			// aapt resource value: 0x7f0a0091
+			public const int abc_tint_switch_track = 2131361937;
 			
 			// aapt resource value: 0x7f0a0022
 			public const int accent_material_dark = 2131361826;
 			
 			// aapt resource value: 0x7f0a0023
 			public const int accent_material_light = 2131361827;
+			
+			// aapt resource value: 0x7f0a006d
+			public const int background = 2131361901;
 			
 			// aapt resource value: 0x7f0a0024
 			public const int background_floating_material_dark = 2131361828;
@@ -11998,6 +13920,15 @@ namespace Naxam.Busuu.Droid
 			
 			// aapt resource value: 0x7f0a0014
 			public const int black_alpha_50 = 2131361812;
+			
+			// aapt resource value: 0x7f0a006c
+			public const int black_semi_transparent = 2131361900;
+			
+			// aapt resource value: 0x7f0a0072
+			public const int blue_semi_transparent = 2131361906;
+			
+			// aapt resource value: 0x7f0a0073
+			public const int blue_semi_transparent_pressed = 2131361907;
 			
 			// aapt resource value: 0x7f0a0028
 			public const int bright_foreground_disabled_material_dark = 2131361832;
@@ -12026,8 +13957,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0a0015
 			public const int colorAccent = 2131361813;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int colorAnswer = 2131361903;
+			// aapt resource value: 0x7f0a0077
+			public const int colorAnswer = 2131361911;
 			
 			// aapt resource value: 0x7f0a0064
 			public const int colorButtonDisable = 2131361892;
@@ -12041,8 +13972,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0a006a
 			public const int colorEnable = 2131361898;
 			
-			// aapt resource value: 0x7f0a0073
-			public const int colorFalse = 2131361907;
+			// aapt resource value: 0x7f0a007b
+			public const int colorFalse = 2131361915;
 			
 			// aapt resource value: 0x7f0a0067
 			public const int colorHintEditText = 2131361895;
@@ -12059,20 +13990,20 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0a0017
 			public const int colorPrimaryDark = 2131361815;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int colorQuestion = 2131361902;
+			// aapt resource value: 0x7f0a0076
+			public const int colorQuestion = 2131361910;
 			
-			// aapt resource value: 0x7f0a0072
-			public const int colorSelected = 2131361906;
+			// aapt resource value: 0x7f0a007a
+			public const int colorSelected = 2131361914;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int colorTextCorrect = 2131361905;
+			// aapt resource value: 0x7f0a0079
+			public const int colorTextCorrect = 2131361913;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int colorTextIncorrect = 2131361904;
+			// aapt resource value: 0x7f0a0078
+			public const int colorTextIncorrect = 2131361912;
 			
-			// aapt resource value: 0x7f0a006d
-			public const int colorTextInput = 2131361901;
+			// aapt resource value: 0x7f0a0075
+			public const int colorTextInput = 2131361909;
 			
 			// aapt resource value: 0x7f0a0018
 			public const int colorTextPrimary = 2131361816;
@@ -12080,8 +14011,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0a0066
 			public const int colorTextSecondary = 2131361894;
 			
-			// aapt resource value: 0x7f0a0074
-			public const int colorTrue = 2131361908;
+			// aapt resource value: 0x7f0a007c
+			public const int colorTrue = 2131361916;
 			
 			// aapt resource value: 0x7f0a0065
 			public const int colorWhite = 2131361893;
@@ -12116,8 +14047,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0a0058
 			public const int design_bottom_navigation_shadow_color = 2131361880;
 			
-			// aapt resource value: 0x7f0a008a
-			public const int design_error = 2131361930;
+			// aapt resource value: 0x7f0a0092
+			public const int design_error = 2131361938;
 			
 			// aapt resource value: 0x7f0a0059
 			public const int design_fab_shadow_end_color = 2131361881;
@@ -12149,8 +14080,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0a0062
 			public const int design_textinput_error_color_light = 2131361890;
 			
-			// aapt resource value: 0x7f0a008b
-			public const int design_tint_password_toggle = 2131361931;
+			// aapt resource value: 0x7f0a0093
+			public const int design_tint_password_toggle = 2131361939;
 			
 			// aapt resource value: 0x7f0a0011
 			public const int dialogplus_black_overlay = 2131361809;
@@ -12182,14 +14113,17 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0a0019
 			public const int grey = 2131361817;
 			
+			// aapt resource value: 0x7f0a006e
+			public const int half_black = 2131361902;
+			
 			// aapt resource value: 0x7f0a0036
 			public const int highlighted_text_material_dark = 2131361846;
 			
 			// aapt resource value: 0x7f0a0037
 			public const int highlighted_text_material_light = 2131361847;
 			
-			// aapt resource value: 0x7f0a006c
-			public const int lvColorSelector = 2131361900;
+			// aapt resource value: 0x7f0a0074
+			public const int lvColorSelector = 2131361908;
 			
 			// aapt resource value: 0x7f0a0038
 			public const int material_blue_grey_800 = 2131361848;
@@ -12235,6 +14169,12 @@ namespace Naxam.Busuu.Droid
 			
 			// aapt resource value: 0x7f0a0045
 			public const int notification_material_background_media_default_color = 2131361861;
+			
+			// aapt resource value: 0x7f0a0070
+			public const int pink = 2131361904;
+			
+			// aapt resource value: 0x7f0a0071
+			public const int pink_pressed = 2131361905;
 			
 			// aapt resource value: 0x7f0a0046
 			public const int primary_dark_material_dark = 2131361862;
@@ -12284,11 +14224,11 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0a0055
 			public const int switch_thumb_disabled_material_light = 2131361877;
 			
-			// aapt resource value: 0x7f0a008c
-			public const int switch_thumb_material_dark = 2131361932;
+			// aapt resource value: 0x7f0a0094
+			public const int switch_thumb_material_dark = 2131361940;
 			
-			// aapt resource value: 0x7f0a008d
-			public const int switch_thumb_material_light = 2131361933;
+			// aapt resource value: 0x7f0a0095
+			public const int switch_thumb_material_light = 2131361941;
 			
 			// aapt resource value: 0x7f0a0056
 			public const int switch_thumb_normal_material_dark = 2131361878;
@@ -12323,14 +14263,17 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0a0010
 			public const int vpi__bright_foreground_inverse_holo_light = 2131361808;
 			
-			// aapt resource value: 0x7f0a008e
-			public const int vpi__dark_theme = 2131361934;
+			// aapt resource value: 0x7f0a0096
+			public const int vpi__dark_theme = 2131361942;
 			
-			// aapt resource value: 0x7f0a008f
-			public const int vpi__light_theme = 2131361935;
+			// aapt resource value: 0x7f0a0097
+			public const int vpi__light_theme = 2131361943;
 			
 			// aapt resource value: 0x7f0a001b
 			public const int white = 2131361819;
+			
+			// aapt resource value: 0x7f0a006f
+			public const int white_pressed = 2131361903;
 			
 			static Color()
 			{
@@ -13132,26 +15075,26 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020115
-			public const int avd_hide_password_1 = 2130837781;
+			// aapt resource value: 0x7f02011c
+			public const int avd_hide_password_1 = 2130837788;
 			
-			// aapt resource value: 0x7f020116
-			public const int avd_hide_password_2 = 2130837782;
+			// aapt resource value: 0x7f02011d
+			public const int avd_hide_password_2 = 2130837789;
 			
-			// aapt resource value: 0x7f020117
-			public const int avd_hide_password_3 = 2130837783;
+			// aapt resource value: 0x7f02011e
+			public const int avd_hide_password_3 = 2130837790;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020118
-			public const int avd_show_password_1 = 2130837784;
+			// aapt resource value: 0x7f02011f
+			public const int avd_show_password_1 = 2130837791;
 			
-			// aapt resource value: 0x7f020119
-			public const int avd_show_password_2 = 2130837785;
+			// aapt resource value: 0x7f020120
+			public const int avd_show_password_2 = 2130837792;
 			
-			// aapt resource value: 0x7f02011a
-			public const int avd_show_password_3 = 2130837786;
+			// aapt resource value: 0x7f020121
+			public const int avd_show_password_3 = 2130837793;
 			
 			// aapt resource value: 0x7f020055
 			public const int background1 = 2130837589;
@@ -13268,466 +15211,487 @@ namespace Naxam.Busuu.Droid
 			public const int dotted = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int exo_controls_fastforward = 2130837627;
+			public const int entity_strength_0 = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int exo_controls_next = 2130837628;
+			public const int entity_strength_1 = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int exo_controls_pause = 2130837629;
+			public const int entity_strength_2 = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int exo_controls_play = 2130837630;
+			public const int entity_strength_3 = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int exo_controls_previous = 2130837631;
+			public const int entity_strength_4 = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int exo_controls_rewind = 2130837632;
+			public const int exo_controls_fastforward = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int flag_arabic = 2130837633;
+			public const int exo_controls_next = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int flag_chinese = 2130837634;
+			public const int exo_controls_pause = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int flag_english = 2130837635;
+			public const int exo_controls_play = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int flag_french = 2130837636;
+			public const int exo_controls_previous = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int flag_german = 2130837637;
+			public const int exo_controls_rewind = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int flag_italian = 2130837638;
+			public const int flag_arabic = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int flag_japanese = 2130837639;
+			public const int flag_chinese = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int flag_polish = 2130837640;
+			public const int flag_english = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int flag_portuguese = 2130837641;
+			public const int flag_french = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int flag_russian = 2130837642;
+			public const int flag_german = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int flag_small_arabic = 2130837643;
+			public const int flag_italian = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int flag_small_chinese = 2130837644;
+			public const int flag_japanese = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int flag_small_english = 2130837645;
+			public const int flag_polish = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int flag_small_french = 2130837646;
+			public const int flag_portuguese = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int flag_small_german = 2130837647;
+			public const int flag_russian = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int flag_small_indonesia = 2130837648;
+			public const int flag_small_arabic = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int flag_small_italian = 2130837649;
+			public const int flag_small_chinese = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int flag_small_japanese = 2130837650;
+			public const int flag_small_english = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int flag_small_polish = 2130837651;
+			public const int flag_small_french = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int flag_small_portuguese = 2130837652;
+			public const int flag_small_german = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int flag_small_russian = 2130837653;
+			public const int flag_small_indonesia = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int flag_small_spanish = 2130837654;
+			public const int flag_small_italian = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int flag_small_turkish = 2130837655;
+			public const int flag_small_japanese = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int flag_spanish = 2130837656;
+			public const int flag_small_polish = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int flag_turkish = 2130837657;
+			public const int flag_small_portuguese = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int folder_placeholder = 2130837658;
+			public const int flag_small_russian = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int forgot_password_button_background = 2130837659;
+			public const int flag_small_spanish = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int forgot_password_button_background_disable = 2130837660;
+			public const int flag_small_turkish = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int forgot_password_button_background_enable = 2130837661;
+			public const int flag_spanish = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int gradient_bottom_background = 2130837662;
+			public const int flag_turkish = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int ic_account = 2130837663;
+			public const int folder_placeholder = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int ic_arrow_back = 2130837664;
+			public const int forgot_password_button_background = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int ic_book_course = 2130837665;
+			public const int forgot_password_button_background_disable = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int ic_camera = 2130837666;
+			public const int forgot_password_button_background_enable = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int ic_camera_white = 2130837667;
+			public const int gradient_bottom_background = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int ic_comment_thumbsup = 2130837668;
+			public const int ic_account = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int ic_component_memorise = 2130837669;
+			public const int ic_arrow_back = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int ic_conversation_speak = 2130837670;
+			public const int ic_book_course = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int ic_conversation_speak_blue = 2130837671;
+			public const int ic_camera = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int ic_conversation_speak_red = 2130837672;
+			public const int ic_camera_white = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int ic_conversation_write = 2130837673;
+			public const int ic_comment_thumbsup = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int ic_delete = 2130837674;
+			public const int ic_component_memorise = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ic_done_white = 2130837675;
+			public const int ic_conversation_speak = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int ic_download = 2130837676;
+			public const int ic_conversation_speak_blue = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int ic_download_white = 2130837677;
+			public const int ic_conversation_speak_red = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int ic_expand_arrow = 2130837678;
+			public const int ic_conversation_write = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int ic_expand_arrow_20_20 = 2130837679;
+			public const int ic_delete = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int ic_gallery = 2130837680;
+			public const int ic_done_white = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int ic_heart_outline_white_24dp = 2130837681;
+			public const int ic_download = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int ic_indicator_selected = 2130837682;
+			public const int ic_download_white = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int ic_indicator_unselected = 2130837683;
+			public const int ic_expand_arrow = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int ic_light = 2130837684;
+			public const int ic_expand_arrow_20_20 = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int ic_lock = 2130837685;
+			public const int ic_gallery = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int ic_menu_learn = 2130837686;
+			public const int ic_heart_outline_white_24dp = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int ic_menu_profile = 2130837687;
+			public const int ic_indicator_selected = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int ic_menu_review = 2130837688;
+			public const int ic_indicator_unselected = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int ic_menu_social = 2130837689;
+			public const int ic_light = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int ic_mic = 2130837690;
+			public const int ic_lock = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int ic_pause = 2130837691;
+			public const int ic_menu_learn = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int ic_pause_btn = 2130837692;
+			public const int ic_menu_profile = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int ic_phone = 2130837693;
+			public const int ic_menu_review = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int ic_play_arrow = 2130837694;
+			public const int ic_menu_social = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int ic_play_blue = 2130837695;
+			public const int ic_mic = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int ic_play_btn = 2130837696;
+			public const int ic_pause = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int ic_profile = 2130837697;
+			public const int ic_pause_btn = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int ic_profile_location = 2130837698;
+			public const int ic_phone = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int ic_right = 2130837699;
+			public const int ic_play_arrow = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int ic_send = 2130837700;
+			public const int ic_play_blue = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int ic_settings = 2130837701;
+			public const int ic_play_btn = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int ic_stop = 2130837702;
+			public const int ic_profile = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int ic_thumbnail_cmt = 2130837703;
+			public const int ic_profile_location = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int ic_trophy = 2130837704;
+			public const int ic_right = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int ic_wrong = 2130837705;
+			public const int ic_search_white = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int ic_yellow_star = 2130837706;
+			public const int ic_send = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int icdownload = 2130837707;
+			public const int ic_settings = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int Icon = 2130837708;
+			public const int ic_stop = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int icon_book_search = 2130837709;
+			public const int ic_thumbnail_cmt = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int icon_book_side = 2130837710;
+			public const int ic_trophy = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int icon_book_tick = 2130837711;
+			public const int ic_wrong = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int icon_bubbles = 2130837712;
+			public const int ic_yellow_star = 2130837712;
 			
 			// aapt resource value: 0x7f0200d1
-			public const int icon_cloud_tick = 2130837713;
+			public const int icdownload = 2130837713;
 			
 			// aapt resource value: 0x7f0200d2
-			public const int icon_dialogue = 2130837714;
+			public const int Icon = 2130837714;
 			
 			// aapt resource value: 0x7f0200d3
-			public const int icon_google_drawble_transparent = 2130837715;
+			public const int icon_book_search = 2130837715;
 			
 			// aapt resource value: 0x7f0200d4
-			public const int icon_lightning = 2130837716;
+			public const int icon_book_side = 2130837716;
 			
 			// aapt resource value: 0x7f0200d5
-			public const int icon_recording = 2130837717;
+			public const int icon_book_tick = 2130837717;
 			
 			// aapt resource value: 0x7f0200d6
-			public const int icon_vocabulary = 2130837718;
+			public const int icon_bubbles = 2130837718;
 			
 			// aapt resource value: 0x7f0200d7
-			public const int image_placeholder = 2130837719;
+			public const int icon_cloud_tick = 2130837719;
 			
 			// aapt resource value: 0x7f0200d8
-			public const int intercom_close = 2130837720;
+			public const int icon_dialogue = 2130837720;
 			
 			// aapt resource value: 0x7f0200d9
-			public const int jw_play_button = 2130837721;
+			public const int icon_google_drawble_transparent = 2130837721;
 			
 			// aapt resource value: 0x7f0200da
-			public const int landcape = 2130837722;
+			public const int icon_lightning = 2130837722;
 			
 			// aapt resource value: 0x7f0200db
-			public const int learn_background_button_go = 2130837723;
+			public const int icon_recording = 2130837723;
 			
 			// aapt resource value: 0x7f0200dc
-			public const int learn_border_image = 2130837724;
+			public const int icon_vocabulary = 2130837724;
 			
 			// aapt resource value: 0x7f0200dd
-			public const int lightbult = 2130837725;
+			public const int image_placeholder = 2130837725;
 			
 			// aapt resource value: 0x7f0200de
-			public const int listview_selector = 2130837726;
+			public const int intercom_close = 2130837726;
 			
 			// aapt resource value: 0x7f0200df
-			public const int logo = 2130837727;
+			public const int jw_play_button = 2130837727;
 			
 			// aapt resource value: 0x7f0200e0
-			public const int logo_facebook = 2130837728;
+			public const int landcape = 2130837728;
 			
 			// aapt resource value: 0x7f0200e1
-			public const int logo_facebook_40_40 = 2130837729;
+			public const int learn_background_button_go = 2130837729;
 			
 			// aapt resource value: 0x7f0200e2
-			public const int logo_google = 2130837730;
+			public const int learn_border_image = 2130837730;
 			
 			// aapt resource value: 0x7f0200e3
-			public const int logo_google_40_40 = 2130837731;
+			public const int lightbult = 2130837731;
 			
 			// aapt resource value: 0x7f0200e4
-			public const int navigation_empty_icon = 2130837732;
+			public const int listview_selector = 2130837732;
 			
 			// aapt resource value: 0x7f0200e5
-			public const int notification_action_background = 2130837733;
+			public const int logo = 2130837733;
 			
 			// aapt resource value: 0x7f0200e6
-			public const int notification_bg = 2130837734;
+			public const int logo_facebook = 2130837734;
 			
 			// aapt resource value: 0x7f0200e7
-			public const int notification_bg_low = 2130837735;
+			public const int logo_facebook_40_40 = 2130837735;
 			
 			// aapt resource value: 0x7f0200e8
-			public const int notification_bg_low_normal = 2130837736;
+			public const int logo_google = 2130837736;
 			
 			// aapt resource value: 0x7f0200e9
-			public const int notification_bg_low_pressed = 2130837737;
+			public const int logo_google_40_40 = 2130837737;
 			
 			// aapt resource value: 0x7f0200ea
-			public const int notification_bg_normal = 2130837738;
+			public const int navigation_empty_icon = 2130837738;
 			
 			// aapt resource value: 0x7f0200eb
-			public const int notification_bg_normal_pressed = 2130837739;
+			public const int notification_action_background = 2130837739;
 			
 			// aapt resource value: 0x7f0200ec
-			public const int notification_icon_background = 2130837740;
-			
-			// aapt resource value: 0x7f020113
-			public const int notification_template_icon_bg = 2130837779;
-			
-			// aapt resource value: 0x7f020114
-			public const int notification_template_icon_low_bg = 2130837780;
+			public const int notification_bg = 2130837740;
 			
 			// aapt resource value: 0x7f0200ed
-			public const int notification_tile_bg = 2130837741;
+			public const int notification_bg_low = 2130837741;
 			
 			// aapt resource value: 0x7f0200ee
-			public const int notify_panel_notification_icon_bg = 2130837742;
+			public const int notification_bg_low_normal = 2130837742;
 			
 			// aapt resource value: 0x7f0200ef
-			public const int premium_card_background = 2130837743;
+			public const int notification_bg_low_pressed = 2130837743;
 			
 			// aapt resource value: 0x7f0200f0
-			public const int progress_progressbar = 2130837744;
+			public const int notification_bg_normal = 2130837744;
 			
 			// aapt resource value: 0x7f0200f1
-			public const int quila = 2130837745;
+			public const int notification_bg_normal_pressed = 2130837745;
 			
 			// aapt resource value: 0x7f0200f2
-			public const int quila2 = 2130837746;
+			public const int notification_icon_background = 2130837746;
+			
+			// aapt resource value: 0x7f02011a
+			public const int notification_template_icon_bg = 2130837786;
+			
+			// aapt resource value: 0x7f02011b
+			public const int notification_template_icon_low_bg = 2130837787;
 			
 			// aapt resource value: 0x7f0200f3
-			public const int rectange_drawable_text = 2130837747;
+			public const int notification_tile_bg = 2130837747;
 			
 			// aapt resource value: 0x7f0200f4
-			public const int rounded_image = 2130837748;
+			public const int notify_panel_notification_icon_bg = 2130837748;
 			
 			// aapt resource value: 0x7f0200f5
-			public const int scrollbar_handle_holo_dark = 2130837749;
+			public const int play_btn = 2130837749;
 			
 			// aapt resource value: 0x7f0200f6
-			public const int scrollbar_handle_holo_light = 2130837750;
+			public const int premium_card_background = 2130837750;
 			
 			// aapt resource value: 0x7f0200f7
-			public const int sea = 2130837751;
+			public const int progress_progressbar = 2130837751;
 			
 			// aapt resource value: 0x7f0200f8
-			public const int selector_item_gray_color = 2130837752;
+			public const int quila = 2130837752;
 			
 			// aapt resource value: 0x7f0200f9
-			public const int selector_list_item = 2130837753;
+			public const int quila2 = 2130837753;
 			
 			// aapt resource value: 0x7f0200fa
-			public const int star_white = 2130837754;
+			public const int rectange_drawable_text = 2130837754;
 			
 			// aapt resource value: 0x7f0200fb
-			public const int subscription_image_c_1 = 2130837755;
+			public const int rounded_image = 2130837755;
 			
 			// aapt resource value: 0x7f0200fc
-			public const int subscription_image_c_2 = 2130837756;
+			public const int scrollbar_handle_holo_dark = 2130837756;
 			
 			// aapt resource value: 0x7f0200fd
-			public const int subscription_image_c_3 = 2130837757;
+			public const int scrollbar_handle_holo_light = 2130837757;
 			
 			// aapt resource value: 0x7f0200fe
-			public const int subscription_image_c_4 = 2130837758;
+			public const int sea = 2130837758;
 			
 			// aapt resource value: 0x7f0200ff
-			public const int subscription_image_c_5 = 2130837759;
+			public const int selector_item_gray_color = 2130837759;
 			
 			// aapt resource value: 0x7f020100
-			public const int tall_short_couble = 2130837760;
+			public const int selector_list_item = 2130837760;
 			
 			// aapt resource value: 0x7f020101
-			public const int transparent = 2130837761;
+			public const int star_white = 2130837761;
 			
 			// aapt resource value: 0x7f020102
-			public const int underline_background_focus = 2130837762;
+			public const int subscription_image_c_1 = 2130837762;
 			
 			// aapt resource value: 0x7f020103
-			public const int underline_background_normal = 2130837763;
+			public const int subscription_image_c_2 = 2130837763;
 			
 			// aapt resource value: 0x7f020104
-			public const int usa_flag = 2130837764;
+			public const int subscription_image_c_3 = 2130837764;
 			
 			// aapt resource value: 0x7f020105
-			public const int user_profile_city_marker = 2130837765;
+			public const int subscription_image_c_4 = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int user_profile_gender = 2130837766;
+			public const int subscription_image_c_5 = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int v = 2130837767;
+			public const int tall_short_couble = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int vnflag = 2130837768;
+			public const int transparent = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int vocab_trainer_icon = 2130837769;
+			public const int underline_background_focus = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int vpi__tab_indicator = 2130837770;
+			public const int underline_background_normal = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int vpi__tab_selected_focused_holo = 2130837771;
+			public const int usa_flag = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int vpi__tab_selected_holo = 2130837772;
+			public const int user_profile_city_marker = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int vpi__tab_selected_pressed_holo = 2130837773;
+			public const int user_profile_gender = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int vpi__tab_unselected_focused_holo = 2130837774;
+			public const int v = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int vpi__tab_unselected_holo = 2130837775;
+			public const int vnflag = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int vpi__tab_unselected_pressed_holo = 2130837776;
+			public const int vocab_trainer_icon = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int x = 2130837777;
+			public const int vpi__tab_indicator = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int yellow_star_d = 2130837778;
+			public const int vpi__tab_selected_focused_holo = 2130837778;
+			
+			// aapt resource value: 0x7f020113
+			public const int vpi__tab_selected_holo = 2130837779;
+			
+			// aapt resource value: 0x7f020114
+			public const int vpi__tab_selected_pressed_holo = 2130837780;
+			
+			// aapt resource value: 0x7f020115
+			public const int vpi__tab_unselected_focused_holo = 2130837781;
+			
+			// aapt resource value: 0x7f020116
+			public const int vpi__tab_unselected_holo = 2130837782;
+			
+			// aapt resource value: 0x7f020117
+			public const int vpi__tab_unselected_pressed_holo = 2130837783;
+			
+			// aapt resource value: 0x7f020118
+			public const int x = 2130837784;
+			
+			// aapt resource value: 0x7f020119
+			public const int yellow_star_d = 2130837785;
 			
 			static Drawable()
 			{
@@ -13829,11 +15793,11 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f0051
 			public const int all = 2131689553;
 			
-			// aapt resource value: 0x7f0f0189
-			public const int alterView = 2131689865;
+			// aapt resource value: 0x7f0f018d
+			public const int alterView = 2131689869;
 			
-			// aapt resource value: 0x7f0f018a
-			public const int alterView2 = 2131689866;
+			// aapt resource value: 0x7f0f018e
+			public const int alterView2 = 2131689870;
 			
 			// aapt resource value: 0x7f0f0039
 			public const int always = 2131689529;
@@ -13883,8 +15847,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00c4
 			public const int bt_speak = 2131689668;
 			
-			// aapt resource value: 0x7f0f0195
-			public const int bt_vocabulary_continue = 2131689877;
+			// aapt resource value: 0x7f0f0199
+			public const int bt_vocabulary_continue = 2131689881;
 			
 			// aapt resource value: 0x7f0f00c1
 			public const int bt_write = 2131689665;
@@ -13903,6 +15867,9 @@ namespace Naxam.Busuu.Droid
 			
 			// aapt resource value: 0x7f0f0112
 			public const int btnDownload = 2131689746;
+			
+			// aapt resource value: 0x7f0f017e
+			public const int btnFavorite = 2131689854;
 			
 			// aapt resource value: 0x7f0f0119
 			public const int btnFb = 2131689753;
@@ -13925,8 +15892,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f0179
 			public const int btnRegister = 2131689849;
 			
-			// aapt resource value: 0x7f0f0187
-			public const int btnTryAgain = 2131689863;
+			// aapt resource value: 0x7f0f018b
+			public const int btnTryAgain = 2131689867;
 			
 			// aapt resource value: 0x7f0f00a9
 			public const int btn_complete_sentence_play = 2131689641;
@@ -14186,17 +16153,17 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00b9
 			public const int im_description = 2131689657;
 			
-			// aapt resource value: 0x7f0f017d
-			public const int im_main_background = 2131689853;
+			// aapt resource value: 0x7f0f0181
+			public const int im_main_background = 2131689857;
 			
 			// aapt resource value: 0x7f0f00a0
 			public const int im_premium_icon = 2131689632;
 			
-			// aapt resource value: 0x7f0f017e
-			public const int im_second_background = 2131689854;
+			// aapt resource value: 0x7f0f0182
+			public const int im_second_background = 2131689858;
 			
-			// aapt resource value: 0x7f0f0192
-			public const int im_vocabulary_description = 2131689874;
+			// aapt resource value: 0x7f0f0196
+			public const int im_vocabulary_description = 2131689878;
 			
 			// aapt resource value: 0x7f0f006c
 			public const int image = 2131689580;
@@ -14204,14 +16171,17 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f010b
 			public const int image_view = 2131689739;
 			
-			// aapt resource value: 0x7f0f017b
-			public const int imgAnswer = 2131689851;
+			// aapt resource value: 0x7f0f017f
+			public const int imgAnswer = 2131689855;
 			
 			// aapt resource value: 0x7f0f00b1
 			public const int imgAvatar = 2131689649;
 			
 			// aapt resource value: 0x7f0f0108
 			public const int imgClose = 2131689736;
+			
+			// aapt resource value: 0x7f0f017b
+			public const int imgCover = 2131689851;
 			
 			// aapt resource value: 0x7f0f010d
 			public const int imgExercise = 2131689741;
@@ -14234,8 +16204,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f0107
 			public const int imgMic = 2131689735;
 			
-			// aapt resource value: 0x7f0f018f
-			public const int imgPhoto = 2131689871;
+			// aapt resource value: 0x7f0f0193
+			public const int imgPhoto = 2131689875;
 			
 			// aapt resource value: 0x7f0f0105
 			public const int imgPlayBtn = 2131689733;
@@ -14243,8 +16213,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00f5
 			public const int imgReputation = 2131689717;
 			
-			// aapt resource value: 0x7f0f017c
-			public const int imgResult = 2131689852;
+			// aapt resource value: 0x7f0f0180
+			public const int imgResult = 2131689856;
 			
 			// aapt resource value: 0x7f0f0101
 			public const int imgSetting = 2131689729;
@@ -14252,14 +16222,17 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f014c
 			public const int imgStar = 2131689804;
 			
+			// aapt resource value: 0x7f0f017c
+			public const int imgStrength = 2131689852;
+			
 			// aapt resource value: 0x7f0f00e2
 			public const int imgViewDownload = 2131689698;
 			
 			// aapt resource value: 0x7f0f00a8
 			public const int img_complete_sentence_description = 2131689640;
 			
-			// aapt resource value: 0x7f0f0181
-			public const int indicator = 2131689857;
+			// aapt resource value: 0x7f0f0185
+			public const int indicator = 2131689861;
 			
 			// aapt resource value: 0x7f0f013b
 			public const int info = 2131689787;
@@ -14273,14 +16246,14 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00e1
 			public const int layout = 2131689697;
 			
-			// aapt resource value: 0x7f0f018c
-			public const int layoutCenter = 2131689868;
+			// aapt resource value: 0x7f0f0190
+			public const int layoutCenter = 2131689872;
 			
 			// aapt resource value: 0x7f0f00fa
 			public const int layoutFriends = 2131689722;
 			
-			// aapt resource value: 0x7f0f0183
-			public const int layoutMark = 2131689859;
+			// aapt resource value: 0x7f0f0187
+			public const int layoutMark = 2131689863;
 			
 			// aapt resource value: 0x7f0f0173
 			public const int layoutPhone = 2131689843;
@@ -14291,8 +16264,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f012c
 			public const int layoutStep = 2131689772;
 			
-			// aapt resource value: 0x7f0f0188
-			public const int layoutTip = 2131689864;
+			// aapt resource value: 0x7f0f018c
+			public const int layoutTip = 2131689868;
 			
 			// aapt resource value: 0x7f0f0168
 			public const int layout_clear_data = 2131689832;
@@ -14408,8 +16381,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00fd
 			public const int main_toolbar = 2131689725;
 			
-			// aapt resource value: 0x7f0f0197
-			public const int masked = 2131689879;
+			// aapt resource value: 0x7f0f019b
+			public const int masked = 2131689883;
 			
 			// aapt resource value: 0x7f0f0135
 			public const int media_actions = 2131689781;
@@ -14420,35 +16393,35 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00e0
 			public const int memoriseBody = 2131689696;
 			
-			// aapt resource value: 0x7f0f0190
-			public const int menuTip = 2131689872;
+			// aapt resource value: 0x7f0f0194
+			public const int menuTip = 2131689876;
 			
 			// aapt resource value: 0x7f0f0117
 			public const int menu_bottom = 2131689751;
 			
-			// aapt resource value: 0x7f0f019f
-			public const int menu_change_photo = 2131689887;
-			
-			// aapt resource value: 0x7f0f0198
-			public const int menu_learn = 2131689880;
-			
-			// aapt resource value: 0x7f0f019b
-			public const int menu_notification = 2131689883;
+			// aapt resource value: 0x7f0f01a3
+			public const int menu_change_photo = 2131689891;
 			
 			// aapt resource value: 0x7f0f019c
-			public const int menu_profile = 2131689884;
+			public const int menu_learn = 2131689884;
 			
-			// aapt resource value: 0x7f0f0199
-			public const int menu_review = 2131689881;
+			// aapt resource value: 0x7f0f019f
+			public const int menu_notification = 2131689887;
+			
+			// aapt resource value: 0x7f0f01a0
+			public const int menu_profile = 2131689888;
 			
 			// aapt resource value: 0x7f0f019d
-			public const int menu_share = 2131689885;
+			public const int menu_review = 2131689885;
+			
+			// aapt resource value: 0x7f0f01a1
+			public const int menu_share = 2131689889;
+			
+			// aapt resource value: 0x7f0f01a2
+			public const int menu_show_photo = 2131689890;
 			
 			// aapt resource value: 0x7f0f019e
-			public const int menu_show_photo = 2131689886;
-			
-			// aapt resource value: 0x7f0f019a
-			public const int menu_social = 2131689882;
+			public const int menu_social = 2131689886;
 			
 			// aapt resource value: 0x7f0f0038
 			public const int middle = 2131689528;
@@ -14486,8 +16459,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f0059
 			public const int nowrap = 2131689561;
 			
-			// aapt resource value: 0x7f0f0180
-			public const int pager = 2131689856;
+			// aapt resource value: 0x7f0f0184
+			public const int pager = 2131689860;
 			
 			// aapt resource value: 0x7f0f004b
 			public const int parallax = 2131689547;
@@ -14648,8 +16621,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f004a
 			public const int start = 2131689546;
 			
-			// aapt resource value: 0x7f0f017f
-			public const int start_logo = 2131689855;
+			// aapt resource value: 0x7f0f0183
+			public const int start_logo = 2131689859;
 			
 			// aapt resource value: 0x7f0f0134
 			public const int status_bar_latest_event_content = 2131689780;
@@ -14675,8 +16648,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00fb
 			public const int tab_layout = 2131689723;
 			
-			// aapt resource value: 0x7f0f018b
-			public const int test_layout_fragment = 2131689867;
+			// aapt resource value: 0x7f0f018f
+			public const int test_layout_fragment = 2131689871;
 			
 			// aapt resource value: 0x7f0f0143
 			public const int text = 2131689795;
@@ -14762,8 +16735,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00e9
 			public const int tv_title = 2131689705;
 			
-			// aapt resource value: 0x7f0f0193
-			public const int tv_vocabulary_question = 2131689875;
+			// aapt resource value: 0x7f0f0197
+			public const int tv_vocabulary_question = 2131689879;
 			
 			// aapt resource value: 0x7f0f0120
 			public const int txt01 = 2131689760;
@@ -14807,8 +16780,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00a5
 			public const int txtCountry = 2131689637;
 			
-			// aapt resource value: 0x7f0f018e
-			public const int txtDetail = 2131689870;
+			// aapt resource value: 0x7f0f0192
+			public const int txtDetail = 2131689874;
 			
 			// aapt resource value: 0x7f0f011b
 			public const int txtEmail = 2131689755;
@@ -14840,8 +16813,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00f0
 			public const int txtLocation = 2131689712;
 			
-			// aapt resource value: 0x7f0f0184
-			public const int txtMark = 2131689860;
+			// aapt resource value: 0x7f0f0188
+			public const int txtMark = 2131689864;
 			
 			// aapt resource value: 0x7f0f00b2
 			public const int txtName = 2131689650;
@@ -14861,8 +16834,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00f4
 			public const int txtReputation = 2131689716;
 			
-			// aapt resource value: 0x7f0f0186
-			public const int txtResult = 2131689862;
+			// aapt resource value: 0x7f0f018a
+			public const int txtResult = 2131689866;
 			
 			// aapt resource value: 0x7f0f00f2
 			public const int txtSex = 2131689714;
@@ -14870,17 +16843,20 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00f3
 			public const int txtSpeak = 2131689715;
 			
-			// aapt resource value: 0x7f0f0182
-			public const int txtStatus = 2131689858;
+			// aapt resource value: 0x7f0f0186
+			public const int txtStatus = 2131689862;
 			
 			// aapt resource value: 0x7f0f012e
 			public const int txtStep = 2131689774;
 			
+			// aapt resource value: 0x7f0f017d
+			public const int txtSubTitle = 2131689853;
+			
 			// aapt resource value: 0x7f0f0114
 			public const int txtTime = 2131689748;
 			
-			// aapt resource value: 0x7f0f018d
-			public const int txtTip = 2131689869;
+			// aapt resource value: 0x7f0f0191
+			public const int txtTip = 2131689873;
 			
 			// aapt resource value: 0x7f0f0145
 			public const int txtTitle = 2131689797;
@@ -14888,8 +16864,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f0113
 			public const int txtTopic = 2131689747;
 			
-			// aapt resource value: 0x7f0f0185
-			public const int txtTotal = 2131689861;
+			// aapt resource value: 0x7f0f0189
+			public const int txtTotal = 2131689865;
 			
 			// aapt resource value: 0x7f0f0100
 			public const int txtUserName = 2131689728;
@@ -14954,8 +16930,8 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f002e
 			public const int useLogo = 2131689518;
 			
-			// aapt resource value: 0x7f0f0191
-			public const int viewPager = 2131689873;
+			// aapt resource value: 0x7f0f0195
+			public const int viewPager = 2131689877;
 			
 			// aapt resource value: 0x7f0f010c
 			public const int view_alpha = 2131689740;
@@ -14969,11 +16945,11 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0f00c2
 			public const int view_space = 2131689666;
 			
-			// aapt resource value: 0x7f0f0196
-			public const int visible = 2131689878;
+			// aapt resource value: 0x7f0f019a
+			public const int visible = 2131689882;
 			
-			// aapt resource value: 0x7f0f0194
-			public const int vocabulary_question_layout = 2131689876;
+			// aapt resource value: 0x7f0f0198
+			public const int vocabulary_question_layout = 2131689880;
 			
 			// aapt resource value: 0x7f0f00e8
 			public const int walkthrough_slide_content = 2131689704;
@@ -15401,64 +17377,73 @@ namespace Naxam.Busuu.Droid
 			public const int RegisterActivity = 2130968688;
 			
 			// aapt resource value: 0x7f040071
-			public const int select_dialog_item_material = 2130968689;
+			public const int review_activity = 2130968689;
 			
 			// aapt resource value: 0x7f040072
-			public const int select_dialog_multichoice_material = 2130968690;
+			public const int review_header_item = 2130968690;
 			
 			// aapt resource value: 0x7f040073
-			public const int select_dialog_singlechoice_material = 2130968691;
+			public const int review_item = 2130968691;
 			
 			// aapt resource value: 0x7f040074
-			public const int select_word_with_image_item = 2130968692;
+			public const int select_dialog_item_material = 2130968692;
 			
 			// aapt resource value: 0x7f040075
-			public const int select_word_with_image_layout = 2130968693;
+			public const int select_dialog_multichoice_material = 2130968693;
 			
 			// aapt resource value: 0x7f040076
-			public const int select_words_layout = 2130968694;
+			public const int select_dialog_singlechoice_material = 2130968694;
 			
 			// aapt resource value: 0x7f040077
-			public const int select_words_layout_non_image = 2130968695;
+			public const int select_word_with_image_item = 2130968695;
 			
 			// aapt resource value: 0x7f040078
-			public const int StartPage = 2130968696;
+			public const int select_word_with_image_layout = 2130968696;
 			
 			// aapt resource value: 0x7f040079
-			public const int summary_layout = 2130968697;
+			public const int select_words_layout = 2130968697;
 			
 			// aapt resource value: 0x7f04007a
-			public const int support_simple_spinner_dropdown_item = 2130968698;
+			public const int select_words_layout_non_image = 2130968698;
 			
 			// aapt resource value: 0x7f04007b
-			public const int test_fill_list_sentence_layout = 2130968699;
+			public const int StartPage = 2130968699;
 			
 			// aapt resource value: 0x7f04007c
-			public const int test_layout = 2130968700;
+			public const int summary_layout = 2130968700;
 			
 			// aapt resource value: 0x7f04007d
-			public const int tip_dialog_layout = 2130968701;
+			public const int support_simple_spinner_dropdown_item = 2130968701;
 			
 			// aapt resource value: 0x7f04007e
-			public const int tip_layout = 2130968702;
+			public const int test_fill_list_sentence_layout = 2130968702;
 			
 			// aapt resource value: 0x7f04007f
-			public const int toolbar = 2130968703;
+			public const int test_layout = 2130968703;
 			
 			// aapt resource value: 0x7f040080
-			public const int tooltip_textview = 2130968704;
+			public const int tip_dialog_layout = 2130968704;
 			
 			// aapt resource value: 0x7f040081
-			public const int user_photo_layout = 2130968705;
+			public const int tip_layout = 2130968705;
 			
 			// aapt resource value: 0x7f040082
-			public const int vocabulary_activity = 2130968706;
+			public const int toolbar = 2130968706;
 			
 			// aapt resource value: 0x7f040083
-			public const int vocabulary_question = 2130968707;
+			public const int tooltip_textview = 2130968707;
 			
 			// aapt resource value: 0x7f040084
-			public const int vocabulary_viewpager_layout = 2130968708;
+			public const int user_photo_layout = 2130968708;
+			
+			// aapt resource value: 0x7f040085
+			public const int vocabulary_activity = 2130968709;
+			
+			// aapt resource value: 0x7f040086
+			public const int vocabulary_question = 2130968710;
+			
+			// aapt resource value: 0x7f040087
+			public const int vocabulary_viewpager_layout = 2130968711;
 			
 			static Layout()
 			{
@@ -16509,20 +18494,20 @@ namespace Naxam.Busuu.Droid
 			// aapt resource value: 0x7f0d018f
 			public const int StyleButton = 2131558799;
 			
+			// aapt resource value: 0x7f0d0190
+			public const int StyleButtonConfirmDialog = 2131558800;
+			
 			// aapt resource value: 0x7f0d0193
-			public const int StyleButtonConfirmDialog = 2131558803;
-			
-			// aapt resource value: 0x7f0d0191
-			public const int StyleButtonFacebook = 2131558801;
-			
-			// aapt resource value: 0x7f0d0192
-			public const int StyleButtonGoogle = 2131558802;
+			public const int StyleButtonFacebook = 2131558803;
 			
 			// aapt resource value: 0x7f0d0194
-			public const int StyleEditText = 2131558804;
+			public const int StyleButtonGoogle = 2131558804;
 			
-			// aapt resource value: 0x7f0d0190
-			public const int StyleEnableButton = 2131558800;
+			// aapt resource value: 0x7f0d0191
+			public const int StyleEditText = 2131558801;
+			
+			// aapt resource value: 0x7f0d0192
+			public const int StyleEnableButton = 2131558802;
 			
 			// aapt resource value: 0x7f0d0196
 			public const int StyleNextButton = 2131558806;

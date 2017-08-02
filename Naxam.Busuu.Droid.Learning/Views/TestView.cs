@@ -17,7 +17,7 @@ using Naxam.Busuu.Droid.Learning.Control.Memo;
 
 namespace Naxam.Busuu.Droid.Learning.Views
 {
-    [Activity(Label = "Premium", Theme = "@style/AppTheme.Premium", MainLauncher = true)]
+    [Activity(Label = "Premium", Theme = "@style/AppTheme.Premium" )]
     public class TestView : MvxAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)

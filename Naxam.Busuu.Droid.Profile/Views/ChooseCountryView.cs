@@ -22,6 +22,9 @@ using Naxam.Busuu.Profile.ViewModels;
 using MvvmCross.Core.ViewModels;
 using System.ComponentModel;
 using System.Linq.Expressions;
+using Naxam.Busuu.Droid.Core.Utils;
+using Naxam.Busuu.Droid.Core.Controls;
+using Naxam.Busuu.Droid.Core.Adapter;
 
 namespace Naxam.Busuu.Droid.Profile.Views
 {

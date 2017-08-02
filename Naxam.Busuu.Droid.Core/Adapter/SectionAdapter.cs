@@ -13,7 +13,7 @@ using static Android.Widget.AdapterView;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Droid.Views;
 
-namespace Naxam.Busuu.Droid.Profile.Utils
+namespace Naxam.Busuu.Droid.Core.Adapter
 {
     public abstract class SectionAdapter : BaseAdapter, IOnItemClickListener  
     {

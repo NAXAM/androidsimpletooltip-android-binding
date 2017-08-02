@@ -10,7 +10,7 @@ using Naxam.Busuu.iOS.Review.Views;
 using Naxam.Busuu.Review.ViewModels;
 using Naxam.Busuu.iOS.Social.Views;
 using Naxam.Busuu.Notification.ViewModels;
-using Naxam.Busuu.Profile.ViewModel;
+using Naxam.Busuu.Profile.ViewModels;
 using Naxam.Busuu.Social.ViewModels;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using Naxam.Busuu.iOS.Core.CustomBindings;
@@ -68,7 +68,7 @@ namespace Naxam.Busuu.iOS
 				typeof(ReviewViewModel).Assembly,
                 typeof(SocialViewModel).Assembly,
                 typeof(NotificationViewModel).Assembly,
-                typeof(ProfileViewModel).Assembly,
+                typeof(ProfileSettingViewModel).Assembly,
                 typeof(PremiumViewModel).Assembly
 			};
 
