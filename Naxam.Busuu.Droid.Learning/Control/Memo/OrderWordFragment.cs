@@ -24,29 +24,30 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
         FlexboxLayout FillFlex, DisplayFlex;
         LinearLayout LayoutAnswer;
         Rect currentRect, fillRect;
-        List<string> input;
-        List<string> answer;
+        Button btnNext;
+        List<string> answer, input;
         float dX, dY;
         float oX, oY;
-        bool busy;
-        RelativeLayout root;
+        bool clicked, correct;
+        int dpMargin;
         private GestureDetector gestureDetector;
         public OrderWordFragment(UnitModel Item)
         {
             this.Item = Item;
-            gestureDetector = new GestureDetector(Context, new SimpleGestureListener());
+
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.order_word_layout, container, false);
+            gestureDetector = new GestureDetector(Context, new SimpleGestureListener());
             InitView(view);
-            root = (RelativeLayout)view;
             return view;
         }
 
         private void InitView(View view)
         {
+            dpMargin = (int)Util.Util.PxFromDp(Context, 8);
             fillRect = new Rect();
             currentRect = new Rect();
             txtTitle = view.FindViewById<TextView>(Resource.Id.txtTitle);
@@ -54,9 +55,28 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
             txtAnswer = view.FindViewById<TextView>(Resource.Id.txtAnswer);
             FillFlex = view.FindViewById<FlexboxLayout>(Resource.Id.FillFlexBox);
             DisplayFlex = view.FindViewById<FlexboxLayout>(Resource.Id.DisplayFlexBox);
-            //LayoutAnswer = view.FindViewById<LinearLayout>(Resource.Id.FillFlexBox);
-            Random random = new Random();
+            LayoutAnswer = view.FindViewById<LinearLayout>(Resource.Id.LayoutAnswer);
+            btnNext = view.FindViewById<Button>(Resource.Id.btnNext);
+            if (string.IsNullOrEmpty(Item.Title))
+            {
+                txtTitle.LayoutParameters.Height = 0;
+                FillFlex.SetPadding(FillFlex.PaddingLeft, dpMargin * 5 - dpMargin / 2, FillFlex.PaddingRight, FillFlex.PaddingBottom);
+            }
+            else
+            {
+                txtTitle.Text = Item.Title;
+            }
 
+            btnNext.Click += (s, e) =>
+            {
+                NextClicked?.Invoke(s, correct ? 1 : 0);
+            };
+            txtAnswer.Text = Item.Input[0];
+            FillFlex.ChildViewAdded += FillFlex_ChildViewAdded;
+            FillFlex.ChildViewRemoved += FillFlex_ChildViewRemoved;
+            Random random = new Random();
+            txtGuide.SetX(0);
+            txtGuide.SetY(0);
             answer = new List<string>(Item.Input[0].Split(' '));
             input = new List<string>();
             while (input.Count < answer.Count)
@@ -67,7 +87,7 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                     input.Add(temp);
                 }
             }
-            int dpMargin = (int)Util.Util.PxFromDp(Context, 8);
+
             for (int i = 0; i < input.Count; i++)
             {
                 LinearLayout layout = new LinearLayout(Context);
@@ -79,33 +99,73 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                 {
                     txtAnswer.Elevation = dpMargin / 4;
                 }
-                var param = new FlexboxLayout.LayoutParams(-2, -2);
+                var param = new FlexboxLayout.LayoutParams(-2, dpMargin * 6);
                 var textParam = new LinearLayout.LayoutParams(-2, -2);
-                textParam.SetMargins(dpMargin, dpMargin / 2, dpMargin, dpMargin / 2);
+                textParam.Gravity = GravityFlags.Top;
+                textParam.SetMargins(dpMargin / 2, dpMargin / 2, dpMargin / 2, dpMargin / 2);
 
                 layout.AddView(txtAnswer, textParam);
                 DisplayFlex.AddView(layout, param);
-                layout.Touch -= Layout_Touch;
                 layout.Touch += Layout_Touch;
             }
         }
 
+
+        private void FillFlex_ChildViewRemoved(object sender, ViewGroup.ChildViewRemovedEventArgs e)
+        {
+
+            if (((FlexboxLayout)sender).ChildCount > 0)
+                return;
+            txtGuide.Text = "Kéo từ vào đây";
+        }
+
+        private void FillFlex_ChildViewAdded(object sender, ViewGroup.ChildViewAddedEventArgs e)
+        {
+            if (((FlexboxLayout)sender).ChildCount == answer.Count)
+            {
+                correct = true;
+                var view = (FlexboxLayout)sender;
+                for (int i = 0; i < view.ChildCount; i++)
+                {
+                    LinearLayout child = (LinearLayout)view.GetChildAt(i);
+                    TextView text = (TextView)child.GetChildAt(0);
+                    text.SetBackgroundColor(text.Text == answer[i] ? Context.Resources.GetColor(Resource.Color.colorTextCorrect) : Context.Resources.GetColor(Resource.Color.colorTextIncorrect));
+                    if (text.Text != answer[i])
+                    {
+                        correct = false;
+                    }
+
+                    text.SetTextColor(Color.White);
+                    child.Enabled = false;
+                    text.Enabled = false;
+                }
+                LayoutAnswer.Visibility = ViewStates.Visible;
+                btnNext.Visibility = ViewStates.Visible;
+            }
+            if (txtGuide.Text == "")
+                return;
+            txtGuide.Text = "";
+        }
+
         private void Layout_Touch(object sender, View.TouchEventArgs e)
         {
-            LinearLayout layout = (LinearLayout)sender;
-            var param = new FlexboxLayout.LayoutParams(-2, -2);
             txtGuide.GetHitRect(fillRect);
+            LinearLayout layout = (LinearLayout)sender;
+            var param = new FlexboxLayout.LayoutParams(-2, dpMargin * 6);
             if (gestureDetector.OnTouchEvent(e.Event))
             {
+
                 if (layout.Parent == DisplayFlex)
                 {
                     ((ViewGroup)layout.Parent).RemoveView(layout);
-                    FillFlex.AddView(layout, FillFlex.ChildCount, param);
+                    FillFlex.AddView(layout, param);
+                    clicked = true;
                 }
                 else
                 {
                     ((ViewGroup)layout.Parent).RemoveView(layout);
-                    DisplayFlex.AddView(layout, DisplayFlex.ChildCount, param);
+                    DisplayFlex.AddView(layout, param);
+                    clicked = true;
                 }
             }
             else
@@ -113,41 +173,71 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                 switch (e.Event.Action)
                 {
                     case MotionEventActions.Down:
+                        clicked = false;
                         oX = layout.GetX();
                         oY = layout.GetY();
                         dX = layout.GetX() - e.Event.RawX;
                         dY = layout.GetY() - e.Event.RawY;
+                        var paramT = layout.LayoutParameters;
+                        paramT.Height = paramT.Height * 2;
+                        layout.LayoutParameters = paramT;
                         break;
                     case MotionEventActions.Up:
+                        if (clicked)
+                            break;
+                        if (layout.GetX() == oX && Math.Abs(layout.GetY() - oY) <= dpMargin * 6)
+                        {
+                            if (layout.Parent == DisplayFlex)
+                            {
+                                ((ViewGroup)layout.Parent).RemoveView(layout);
+                                FillFlex.AddView(layout, param);
+
+                            }
+                            else
+                            {
+                                ((ViewGroup)layout.Parent).RemoveView(layout);
+                                DisplayFlex.AddView(layout, param);
+
+                            }
+                            break;
+                        }
+                        var paramL = layout.LayoutParameters;
+                        paramL.Height = paramL.Height / 2;
+                        layout.LayoutParameters = paramL;
                         if (currentRect.Intersect(fillRect))
                         {
                             if (layout.Parent == DisplayFlex)
                             {
-                                DisplayFlex.RemoveView(layout);
-                                FillFlex.AddView(layout, FillFlex.ChildCount, param);
+                                ((ViewGroup)layout.Parent).RemoveView(layout);
+                                layout.TranslationX = 0;
+                                layout.TranslationY = 0;
+                                FillFlex.AddView(layout, param);
                             }
                             else
                             {
-                                layout.SetX(oX);
-                                layout.SetY(oY);
+                                layout.TranslationX = 0;
+                                layout.TranslationY = 0;
                             }
                         }
                         else
                         {
                             if (layout.Parent == DisplayFlex)
                             {
-                                layout.SetX(oX);
-                                layout.SetY(oY);
+                                layout.TranslationX = 0;
+                                layout.TranslationY = 0;
                             }
                             else
                             {
-                                FillFlex.RemoveView(layout);
+                                ((ViewGroup)layout.Parent).RemoveView(layout);
+                                layout.TranslationX = 0;
+                                layout.TranslationY = 0;
                                 DisplayFlex.AddView(layout, param);
                             }
                         }
-
+                        txtGuide.SetBackgroundColor(Color.ParseColor("#D8DDE7"));
                         break;
                     case MotionEventActions.Move:
+
                         layout.GetHitRect(currentRect);
                         if (currentRect.Intersect(fillRect))
                         {
@@ -157,8 +247,8 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
                         {
                             txtGuide.SetBackgroundColor(Color.ParseColor("#D8DDE7"));
                         }
-                        layout.SetX(e.Event.RawX + dX);
-                        layout.SetY(e.Event.RawY + dY);
+                        layout.TranslationX = e.Event.RawX - oX + dX;
+                        layout.TranslationY = e.Event.RawY - oY + dY;
                         break;
                 }
             }
@@ -169,6 +259,11 @@ namespace Naxam.Busuu.Droid.Learning.Control.Memo
         public override bool OnSingleTapUp(MotionEvent e)
         {
             return true;
+        }
+
+        public override bool OnSingleTapConfirmed(MotionEvent e)
+        {
+            return base.OnSingleTapConfirmed(e);
         }
     }
 

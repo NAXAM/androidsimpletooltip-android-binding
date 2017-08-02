@@ -28,7 +28,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
             OrderWordFragment frag = new OrderWordFragment(new UnitModel {
                 Input = new List<string>
                 {
-                    "Naxam Cong Ty Binding Hang Dau Viet Nam"
+                    "See you later."
                 }
             });
             Android.Support.V4.App.FragmentManager manager = SupportFragmentManager;
