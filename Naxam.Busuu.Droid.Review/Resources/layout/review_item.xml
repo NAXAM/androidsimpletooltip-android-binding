@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                 xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="16dp"
@@ -10,15 +10,14 @@
       android:layout_marginTop="16dp"
       android:id="@+id/imgCover"
       android:layout_width="40dp"
-      android:layout_height="40dp"
-      android:background="#123123"
+      android:layout_height="40dp" 
         />
   <ImageView
       android:id="@+id/imgStrength"
       android:layout_width="32dp"
       android:layout_height="32dp"
-      android:layout_marginTop="16dp"
-      android:layout_marginLeft="10dp"
+      android:layout_marginTop="32dp"
+      android:layout_marginLeft="8dp" 
         />
   <TextView
       android:layout_marginTop="16dp"
@@ -55,7 +54,7 @@
 
   <ImageView
       android:id="@+id/btnFavorite"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="24dp"
       android:layout_width="24dp"
       android:layout_marginRight="16dp"
       android:layout_height="24dp"
@@ -95,12 +94,12 @@
         android:text="Tôi Ổn"
             />
     <Naxam.Busuu.Droid.Core.Controls.QuickPlayButton
-      android:id="@+id/btnPlaySample" 
-      android:layout_width="48dp"
-      android:layout_height="48dp" 
-      app:qpb_icon="@drawable/play_btn_dark"
-      android:layout_alignParentRight="true"
-        />
+        android:id="@+id/btnPlaySample"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:qpb_icon="@drawable/play_btn_dark"
+        android:layout_alignParentRight="true"
+            />
   </RelativeLayout>
   <View
       android:layout_marginTop="16dp"

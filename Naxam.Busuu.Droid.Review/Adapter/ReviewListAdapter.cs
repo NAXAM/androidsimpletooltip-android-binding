@@ -10,13 +10,17 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
-using Naxam.Busuu.Droid.Core.Adapter;
+
 using Naxam.Busuu.Review.Models;
 using Com.Bumptech.Glide;
-using Naxam.Busuu.Droid.Core.Utils;
+
 using Android.Graphics;
 using Android.Animation;
+using Naxam.Busuu.Droid.Core.Utils;
+using Naxam.Busuu.Droid.Core.Adapter;
 using Naxam.Busuu.Droid.Core.Controls;
+using Android.Support.V4.Util;
+using Naxam.Busuu.Droid.Core.Transform;
 
 namespace Naxam.Busuu.Droid.Review.Adapter
 {
@@ -26,13 +30,14 @@ namespace Naxam.Busuu.Droid.Review.Adapter
         Context context;
         IList<ReviewModel> reviews;
         List<IGrouping<char, ReviewModel>> ListSection;
-
+        List<ReviewModel> lstEx;
         public ReviewListAdapter(Context context, IList<ReviewModel> reviews)
         {
             this.context = context;
             this.reviews = new List<ReviewModel>(reviews);
             ListSection = new List<IGrouping<char, ReviewModel>>();
             ListSection = reviews.OrderBy(d => d.Title).GroupBy((d) => d.Title[0]).ToList();
+            lstEx = new List<ReviewModel>(); 
         }
 
         public override Java.Lang.Object GetRowItem(int section, int row)
@@ -55,12 +60,11 @@ namespace Naxam.Busuu.Droid.Review.Adapter
             return true;
         }
 
-
         public override View GetRowView(int section, int row, View convertView, ViewGroup parent)
         {
             if (convertView == null)
             {
-                convertView = LayoutInflater.FromContext(context).Inflate(Resource.Layout.review_item, null);
+                convertView = LayoutInflater.FromContext(context).Inflate(Resource.Layout.review_item, parent, false);
             }
             TextView txtTitle = convertView.FindViewById<TextView>(Resource.Id.txtTitle);
             TextView txtSubTitle = convertView.FindViewById<TextView>(Resource.Id.txtSubTitle);
@@ -74,19 +78,31 @@ namespace Naxam.Busuu.Droid.Review.Adapter
             ImageView btnFavorite = convertView.FindViewById<ImageView>(Resource.Id.btnFavorite);
             RelativeLayout relativeSample = convertView.FindViewById<RelativeLayout>(Resource.Id.relativeSample);
             relativeSample.Background = BackgroundUtil.BackgroundRound(context, (int)Util.PxFromDp(context, 2), Color.ParseColor("#F2F5F8"));
-             
-            ReviewModel review = RowItem(section, row);
 
+            System.Diagnostics.Debug.WriteLine("-->" + convertView.Tag+" - "+ lstEx.Count);
+
+            ReviewModel review = RowItem(section, row);
+            convertView.Tag = new Pair(section, row);
+            if (lstEx.Contains(review))
+            {
+                relativeSample.Visibility = ViewStates.Visible;
+            }
+            else
+            {
+                relativeSample.Visibility = ViewStates.Gone;
+            }
             btnPlay.AudioPath = review.SoundUrl;
             if (review.Sample != null)
             {
                 txtTitleSample.Text = review.Sample.Title;
                 txtSubTitleSample.Text = review.Sample.SubTitle;
+
                 btnPlaySample.AudioPath = review.Sample.SoundUrl;
+
             }
             txtTitle.Text = review.Title;
             txtSubTitle.Text = review.SubTitle;
-            Glide.With(context).Load(review.ImgWord).Into(imgCover);
+            Glide.With(context).Load(review.ImgWord).Transform(new RoundedCornersTransformation(context,2,0,RoundedCornersTransformation.CornerType.All)).Into(imgCover);
             switch (review.StrengthLevel)
             {
                 case 0:
@@ -105,26 +121,29 @@ namespace Naxam.Busuu.Droid.Review.Adapter
                     imgStrength.SetImageResource(Resource.Drawable.entity_strength_4);
                     break;
             }
+            convertView.Click -= ConvertView_Click;
             convertView.Click += ConvertView_Click;
-
             return convertView;
         }
 
         private void ConvertView_Click(object sender, EventArgs e)
         {
-            ViewGroup convertView = (ViewGroup)sender;
-            RelativeLayout relativeSample = convertView.FindViewById<RelativeLayout>(Resource.Id.relativeSample);
-            TextView txtTitleSample = convertView.FindViewById<TextView>(Resource.Id.txtTitleSample);
-            if (relativeSample.Visibility == ViewStates.Gone && !string.IsNullOrEmpty(txtTitleSample.Text))
+            View view = (View)sender;
+            RelativeLayout relativeSample = view.FindViewById<RelativeLayout>(Resource.Id.relativeSample);
+            TextView txtTitleSample = view.FindViewById<TextView>(Resource.Id.txtTitleSample);
+            if (string.IsNullOrEmpty(txtTitleSample.Text))
+                return;
+            Pair pair = (Pair)view.Tag;
+            var item = RowItem((int)pair.First, (int)pair.Second);
+            if (relativeSample.Visibility == ViewStates.Gone)
             {
                 relativeSample.Visibility = ViewStates.Visible;
+                lstEx.Add(item);
             }
             else
             {
-                if (relativeSample.Visibility == ViewStates.Visible)
-                {
-                    relativeSample.Visibility = ViewStates.Gone;
-                }
+                relativeSample.Visibility = ViewStates.Gone;
+                lstEx.Remove(item);
             }
         }
 
@@ -145,7 +164,22 @@ namespace Naxam.Busuu.Droid.Review.Adapter
 
         public override void OnRowItemClick(AdapterView parent, View view, int section, int row, long id)
         {
-            base.OnRowItemClick(parent, view, section, row, id);
+            RelativeLayout relativeSample = view.FindViewById<RelativeLayout>(Resource.Id.relativeSample);
+            TextView txtTitleSample = view.FindViewById<TextView>(Resource.Id.txtTitleSample);
+            if (string.IsNullOrEmpty(txtTitleSample.Text))
+                return;
+            var item = RowItem(section, row);
+            if (relativeSample.Visibility == ViewStates.Gone)
+            {
+                relativeSample.Visibility = ViewStates.Visible;
+                lstEx.Add(item);
+                view.Tag = "da click";
+            }
+            else
+            {
+                relativeSample.Visibility = ViewStates.Gone;
+                view.Tag = "chua click";
+            }
             SelectReview?.Invoke(this, RowItem(section, row));
         }
 

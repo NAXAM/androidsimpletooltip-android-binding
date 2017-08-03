@@ -90,10 +90,14 @@ namespace Naxam.Busuu.Droid.Core.Controls
                 anim.SetDuration(200);
                 anim.Start();
 
-                MediaPlayer media = new MediaPlayer();
-                media.SetDataSourceAsync(AudioPath);
-                media.PrepareAsync();
-                media.Start();
+                try
+                {
+                    MediaPlayer media = new MediaPlayer();
+                    media.SetDataSourceAsync(AudioPath);
+                    media.PrepareAsync();
+                    media.Start();
+                }
+                catch { }
             };
             AddView(view, new ViewGroup.LayoutParams(-1, -1));
         }

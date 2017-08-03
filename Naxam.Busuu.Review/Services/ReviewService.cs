@@ -13,7 +13,7 @@ namespace Naxam.Busuu.Review.Services
         {
             var random = new Random();
             var items = new List<ReviewModel>();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 100; i++)
             {
                 items.Add(new ReviewModel
                 {
