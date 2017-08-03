@@ -26,6 +26,12 @@
     <item name="android:textColorSecondary">@color/colorHintEditText</item>
   </style>
   <!--Style Text Title-->
+  <style name="StyleTextFloatMenu">
+    <item name="android:textSize">14sp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">#010101</item>
+    <item name="android:textAllCaps">true</item>
+  </style>
   <style name="styleTextDescription">
     <item name="android:textColor">#A7B0B7</item>
     <item name="android:textSize">14sp</item>

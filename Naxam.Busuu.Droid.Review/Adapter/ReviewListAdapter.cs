@@ -13,6 +13,10 @@ using Java.Lang;
 using Naxam.Busuu.Droid.Core.Adapter;
 using Naxam.Busuu.Review.Models;
 using Com.Bumptech.Glide;
+using Naxam.Busuu.Droid.Core.Utils;
+using Android.Graphics;
+using Android.Animation;
+using Naxam.Busuu.Droid.Core.Controls;
 
 namespace Naxam.Busuu.Droid.Review.Adapter
 {
@@ -36,8 +40,6 @@ namespace Naxam.Busuu.Droid.Review.Adapter
             return null;
         }
 
-
-
         public override int NumberOfRows(int section)
         {
             return ListSection.ElementAt(section < 0 ? 0 : section).Count<ReviewModel>();
@@ -47,7 +49,6 @@ namespace Naxam.Busuu.Droid.Review.Adapter
         {
             return ListSection.Count;
         }
-
 
         public override bool HasSectionHeaderView(int section)
         {
@@ -63,13 +64,26 @@ namespace Naxam.Busuu.Droid.Review.Adapter
             }
             TextView txtTitle = convertView.FindViewById<TextView>(Resource.Id.txtTitle);
             TextView txtSubTitle = convertView.FindViewById<TextView>(Resource.Id.txtSubTitle);
+            TextView txtTitleSample = convertView.FindViewById<TextView>(Resource.Id.txtTitleSample);
+            TextView txtSubTitleSample = convertView.FindViewById<TextView>(Resource.Id.txtSubTitleSample);
             ImageView imgCover = convertView.FindViewById<ImageView>(Resource.Id.imgCover);
             ImageView imgStrength = convertView.FindViewById<ImageView>(Resource.Id.imgStrength);
-            ImageView btnPlay = convertView.FindViewById<ImageView>(Resource.Id.btnPlay);
+            QuickPlayButton btnPlay = convertView.FindViewById<QuickPlayButton>(Resource.Id.btnPlay);
+            QuickPlayButton btnPlaySample = convertView.FindViewById<QuickPlayButton>(Resource.Id.btnPlaySample);
+
             ImageView btnFavorite = convertView.FindViewById<ImageView>(Resource.Id.btnFavorite);
-
-
+            RelativeLayout relativeSample = convertView.FindViewById<RelativeLayout>(Resource.Id.relativeSample);
+            relativeSample.Background = BackgroundUtil.BackgroundRound(context, (int)Util.PxFromDp(context, 2), Color.ParseColor("#F2F5F8"));
+             
             ReviewModel review = RowItem(section, row);
+
+            btnPlay.AudioPath = review.SoundUrl;
+            if (review.Sample != null)
+            {
+                txtTitleSample.Text = review.Sample.Title;
+                txtSubTitleSample.Text = review.Sample.SubTitle;
+                btnPlaySample.AudioPath = review.Sample.SoundUrl;
+            }
             txtTitle.Text = review.Title;
             txtSubTitle.Text = review.SubTitle;
             Glide.With(context).Load(review.ImgWord).Into(imgCover);
@@ -91,9 +105,27 @@ namespace Naxam.Busuu.Droid.Review.Adapter
                     imgStrength.SetImageResource(Resource.Drawable.entity_strength_4);
                     break;
             }
-
+            convertView.Click += ConvertView_Click;
 
             return convertView;
+        }
+
+        private void ConvertView_Click(object sender, EventArgs e)
+        {
+            ViewGroup convertView = (ViewGroup)sender;
+            RelativeLayout relativeSample = convertView.FindViewById<RelativeLayout>(Resource.Id.relativeSample);
+            TextView txtTitleSample = convertView.FindViewById<TextView>(Resource.Id.txtTitleSample);
+            if (relativeSample.Visibility == ViewStates.Gone && !string.IsNullOrEmpty(txtTitleSample.Text))
+            {
+                relativeSample.Visibility = ViewStates.Visible;
+            }
+            else
+            {
+                if (relativeSample.Visibility == ViewStates.Visible)
+                {
+                    relativeSample.Visibility = ViewStates.Gone;
+                }
+            }
         }
 
         private ReviewModel RowItem(int section, int row)
@@ -105,7 +137,6 @@ namespace Naxam.Busuu.Droid.Review.Adapter
         {
             return 2;
         }
-
 
         public override int GetSectionHeaderItemViewType(int section)
         {

@@ -16,6 +16,7 @@ using static Android.Widget.ImageView;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Bindings;
 using Naxam.Busuu.Droid.Core.Adapter;
+using Android.Graphics;
 
 namespace Naxam.Busuu.Droid.Core.Controls
 {
@@ -362,7 +363,8 @@ namespace Naxam.Busuu.Droid.Core.Controls
 
             public InternalListView(Context context, IAttributeSet attrs) : base(context, attrs)
             { 
-               // Divider = context.GetDrawable(Resource.Drawable.underline_background_normal);
+                Divider = Utils.BackgroundUtil.BackgroundRound(context,0,Color.Transparent);
+                DividerHeight = 0;
             }
 
             public int ComputeVerticalScrollExtentIternal

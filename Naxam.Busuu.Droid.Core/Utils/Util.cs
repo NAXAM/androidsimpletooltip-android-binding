@@ -43,5 +43,7 @@ namespace Naxam.Busuu.Droid.Core.Utils
 
             return background;
         }
+
+    
     }
 }

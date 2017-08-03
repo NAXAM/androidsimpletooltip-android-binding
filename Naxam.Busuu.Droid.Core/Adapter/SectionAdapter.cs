@@ -210,7 +210,6 @@ namespace Naxam.Busuu.Droid.Core.Adapter
             }
         }
 
-  
         public override sealed int ViewTypeCount
         {
             get
@@ -219,7 +218,6 @@ namespace Naxam.Busuu.Droid.Core.Adapter
             }
         }
          
-
         public override bool IsEnabled(int position)
         {
             return (DisableHeaders() || !IsSectionHeader(position)) && IsRowEnabled(GetSection(position), GetRowInSection(position));

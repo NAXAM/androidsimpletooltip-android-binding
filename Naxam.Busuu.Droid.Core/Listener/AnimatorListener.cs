@@ -4,7 +4,7 @@ using static Android.Views.Animations.Animation;
 using Android.Animation;
 using static Android.Animation.Animator;
 
-namespace Naxam.Busuu.Droid.Learning.Control
+namespace Naxam.Busuu.Droid.Core.Listener
 {
     public class AnimatorListener : Java.Lang.Object, IAnimatorListener
     {

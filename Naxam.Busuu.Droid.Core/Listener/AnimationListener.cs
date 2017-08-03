@@ -2,7 +2,7 @@
 using Android.Views.Animations;
 using static Android.Views.Animations.Animation;
 
-namespace Naxam.Busuu.Droid.Learning.Control
+namespace Naxam.Busuu.Droid.Core.Listener
 {
     public class AnimationListener : Java.Lang.Object, IAnimationListener
     {

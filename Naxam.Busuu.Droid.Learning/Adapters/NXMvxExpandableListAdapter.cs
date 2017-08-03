@@ -19,6 +19,7 @@ using Android.Graphics;
 using Android.Graphics.Drawables.Shapes;
 using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Core.ViewModels;
+using Naxam.Busuu.Droid.Core.Listener;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {

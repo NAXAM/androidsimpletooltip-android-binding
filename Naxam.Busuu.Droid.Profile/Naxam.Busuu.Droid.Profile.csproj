@@ -68,8 +68,8 @@
     <Reference Include="MvvmCross.Droid.Support.Core.UI, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmCross.Droid.Support.Core.UI.5.1.1\lib\MonoAndroid70\MvvmCross.Droid.Support.Core.UI.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Droid.Support.Core.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Droid.Support.Core.Utils.4.4.1\lib\MonoAndroid70\MvvmCross.Droid.Support.Core.Utils.dll</HintPath>
+    <Reference Include="MvvmCross.Droid.Support.Core.Utils, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Droid.Support.Core.Utils.5.1.1\lib\MonoAndroid70\MvvmCross.Droid.Support.Core.Utils.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Droid.Support.Fragment, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmCross.Droid.Support.Fragment.5.1.1\lib\MonoAndroid70\MvvmCross.Droid.Support.Fragment.dll</HintPath>
@@ -344,13 +344,29 @@
       <Project>{fe265042-a31b-44ce-8e0c-2260a89b2b12}</Project>
       <Name>Naxam.Busuu.Droid.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Naxam.Busuu.Droid.Learning\Naxam.Busuu.Droid.Learning.csproj">
-      <Project>{DD07F5A3-ACA2-4CDF-B4BA-591A395175F9}</Project>
-      <Name>Naxam.Busuu.Droid.Learning</Name>
+    <ProjectReference Include="..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
+      <Project>{e1334ff3-bc22-4f7c-b363-a01de69429f8}</Project>
+      <Name>Naxam.Busuu.Learning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Notification\Naxam.Busuu.Notification.csproj">
+      <Project>{2eadb781-e679-4485-8a53-ae7a8945cd1b}</Project>
+      <Name>Naxam.Busuu.Notification</Name>
     </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
       <Project>{B6F89F5C-B669-40B1-BCE1-C72089933F2F}</Project>
       <Name>Naxam.Busuu.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
+      <Project>{baaa7577-3be2-423b-a051-61b47489b015}</Project>
+      <Name>Naxam.Busuu.Review</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
+      <Project>{6255cda3-b742-4d16-ac6c-03e414eac000}</Project>
+      <Name>Naxam.Busuu.Social</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Start\Naxam.Busuu.Start.csproj">
+      <Project>{115d0c30-6675-4814-89ac-5aef6e5edaec}</Project>
+      <Name>Naxam.Busuu.Start</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

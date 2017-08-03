@@ -14,6 +14,7 @@ using static Android.Resource;
 using Java.Lang;
 using Android.Views.Animations;
 using Naxam.Busuu.Droid.Learning.Control.Memo;
+using Naxam.Busuu.Droid.Core.Listener;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {
