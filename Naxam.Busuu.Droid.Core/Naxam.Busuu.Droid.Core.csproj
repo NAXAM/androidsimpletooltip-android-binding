@@ -111,6 +111,10 @@
     <Folder Include="Resources\Drawable\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Naxam.Busuu.Droid.Profile\Naxam.Busuu.Droid.Profile.csproj">
+      <Project>{dfd37792-d1a1-463e-ba9f-8dd045e61178}</Project>
+      <Name>Naxam.Busuu.Droid.Profile</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
       <Project>{B6F89F5C-B669-40B1-BCE1-C72089933F2F}</Project>
       <Name>Naxam.Busuu.Profile</Name>

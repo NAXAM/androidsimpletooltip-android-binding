@@ -87,6 +87,9 @@
     <Reference Include="MvvmCross.Plugins.DownloadCache.Droid, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.5.1.0\lib\MonoAndroid\MvvmCross.Plugins.DownloadCache.Droid.dll</HintPath>
     </Reference>
+    <Reference Include="Naxam.SimpleRatingBar.Droid, Version=0.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Naxam.SimpleRatingBar.Droid.0.1.5\lib\MonoAndroid10\Naxam.SimpleRatingBar.Droid.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
@@ -140,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Controls\MyExpandableLayout.cs" />
     <Compile Include="Resources\DownloadDialogView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,12 +155,14 @@
     <Compile Include="Utils\MyDialog.cs" />
     <Compile Include="Utils\MyPagerAdapter.cs" />
     <Compile Include="Utils\SectionAdapter.cs" />
+    <Compile Include="Utils\TriangleShapeView.cs" />
     <Compile Include="Views\ChooseCountryView.cs" />
     <Compile Include="Views\ChooseLanguageView.cs" />
     <Compile Include="Views\ConfirmChooseLanguageView.cs" />
     <Compile Include="Views\FillSentenceAudioView.cs" />
     <Compile Include="Views\ForgotPasswordView.cs" />
     <Compile Include="Views\GeneralProfileView.cs" />
+    <Compile Include="Views\ItWork.cs" />
     <Compile Include="Views\MachingSentenceView.cs" />
     <Compile Include="Views\RegisterView.cs" />
     <Compile Include="Views\LoginView.cs" />
@@ -191,6 +197,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\layout1.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\item_list_correction.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -523,6 +532,18 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Menu\popup_menu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ireland.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\triangle.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_chart_bussu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
