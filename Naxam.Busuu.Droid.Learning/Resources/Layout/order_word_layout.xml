@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Đặt các từ đúng thứ tự để tạo thành câu"
+        android:textAlignment="center"
+        android:textColor="#4DB2F6"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/txtGuide"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/txtTitle"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#D6DEE6"
+        android:gravity="center"
+        android:text="Kéo từ vào đây" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/FillFlexBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtTitle"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        app:alignContent="flex_start"
+        app:alignItems="flex_start"
+        app:flexDirection="row"
+        app:flexWrap="wrap" />
+
+    <LinearLayout
+        android:id="@+id/LayoutAnswer"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff"
+        android:elevation="4dp"
+        android:layout_below="@+id/txtGuide"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Correct answer" />
+
+        <TextView
+            android:id="@+id/txtAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="See you later" />
+    </LinearLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/DisplayFlexBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtTitle"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        app:alignContent="flex_end"
+        app:alignItems="flex_end"
+        app:flexDirection="row"
+        app:flexWrap="wrap" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Continue"
+        android:visibility="gone" />
+</RelativeLayout>

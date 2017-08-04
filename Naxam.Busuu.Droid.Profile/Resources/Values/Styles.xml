@@ -1,4 +1,11 @@
 ﻿<resources>
+  <style name="AppTheme.Premium" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">#FEAB35</item>
+    <item name="colorPrimaryDark">#D38E2C</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:textColorSecondary">@color/colorHintEditText</item>
+  </style>
   <!-- Base application theme. -->
   <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
     <item name="colorPrimary">@color/colorPrimary</item>
@@ -11,7 +18,27 @@
     <item name="colorAccent">@color/colorAccent</item>
     <item name="android:textColorSecondary">@color/colorHintEditText</item>
   </style>
+  <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:textColorSecondary">@color/colorHintEditText</item>
+  </style>
   <!--Style Text Title-->
+  <style name="styleTextDescription">
+    <item name="android:textColor">#A7B0B7</item>
+    <item name="android:textSize">14sp</item>
+  </style>
+  <style name="styleTextNormal">
+    <item name="android:textColor">#3E3E3E</item>
+    <item name="android:textSize">16sp</item>
+  </style>
+  <style name="styleTextHeader">
+    <item name="android:textColor">#252B2F</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:textStyle">bold</item>
+  </style>
   <style name="StyleTextTitle">
     <item name="android:textColor">@color/colorTextPrimary</item>
     <item name="android:textSize">@dimen/textSizeTitle</item>
@@ -67,4 +94,7 @@
     <item name="android:textSize">@dimen/textSizeSubTitle</item>
     <item name="android:layout_height">@dimen/buttonHeightDefault</item>
   </style>
+  <!--Style ProgressBar-->
+   
+  
 </resources>

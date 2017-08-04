@@ -14,7 +14,7 @@ using MvvmCross.Droid.Support.V7.AppCompat;
 
 namespace Naxam.Busuu.Droid.Profile.Views
 {
-    [Activity(Label = "Forgot Password", ParentActivity = typeof(ChooseLanguageView))]
+    [Activity(Label = "Forgot Password", ParentActivity = typeof(LoginView))]
     public class ForgotPasswordView : MvxAppCompatActivity
     {
         protected override void OnViewModelSet()

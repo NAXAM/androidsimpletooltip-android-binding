@@ -1,372 +1,259 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded"
+    >
+  <android.support.design.widget.AppBarLayout
+      android:id="@+id/main.appbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/main.collapsing"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="RtlHardcoded">
-
-        <android.support.design.widget.AppBarLayout
-            android:id="@+id/main.appbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-            <android.support.design.widget.CollapsingToolbarLayout
-                android:id="@+id/main.collapsing"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/main.imageview.placeholder"
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/quila2"
-                        android:tint="#11000000"
-                        app:layout_collapseMode="parallax"
-                        app:layout_collapseParallaxMultiplier="0.9" />
-
-
-                </FrameLayout>
-
-                <FrameLayout
-                    android:id="@+id/main.framelayout.title"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:background="#FFFFFF"
-                    android:orientation="vertical"
-                    app:layout_collapseMode="parallax"
-                    app:layout_collapseParallaxMultiplier="0.3">
-
-                    <LinearLayout
-                        android:id="@+id/main.linearlayout.title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:layout_marginLeft="16dp"
-                        android:orientation="vertical">
-                        <TextView
-                            android:id="@+id/txtName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="32dp"
-                            android:text="Đỗ Thanh Bình"
-                            android:textColor="#000B0E"
-                            android:textSize="20dp" />
-
-                    </LinearLayout>
-                </FrameLayout>
-            </android.support.design.widget.CollapsingToolbarLayout>
-        </android.support.design.widget.AppBarLayout>
-
-
-        <!--scroll view-->
-        <android.support.v4.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:background="#FFFFFF"
-            android:scrollbars="none"
-            app:behavior_overlapTop="48dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-
+        android:layout_height="wrap_content"
+        android:background="#ffff"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
             >
 
-            <LinearLayout
+      <ImageView
+          android:id="@+id/main.imageview.placeholder"
+          android:layout_width="match_parent"
+          android:layout_height="160dp"
+          android:scaleType="fitXY"
+          android:layout_gravity="top"
+          android:src="@drawable/cover_user"
+          app:layout_collapseParallaxMultiplier="1"
+                />
+
+      <LinearLayout
+                android:id="@+id/main.framelayout.title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:orientation="vertical">
+                android:layout_marginTop="240dp"
+                android:padding="16dp"
+                android:orientation="vertical"
+                app:layout_collapseParallaxMultiplier="1"
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                >
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
-                            android:background="@drawable/ic_profile_location"
-                            android:scaleType="centerInside" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="8dp"
-                            android:gravity="center"
-                            android:text="Australia" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
-                            android:background="@drawable/ic_profile"
-                            android:scaleType="centerInside" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="8dp"
-                            android:gravity="center"
-                            android:text="Undisclosed" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Speaks English, German and French. Learning English."
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Reputation"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
-                            android:background="@drawable/ic_trophy"
-                            android:scaleType="centerInside" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="8dp"
-                            android:gravity="center"
-                            android:text="0 BEST CORRECTIONS" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
-                            android:background="@drawable/ic_thumbnail_cmt"
-                            android:scaleType="centerInside" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="8dp"
-                            android:gravity="center"
-                            android:text="1 LIKES" />
-                    </LinearLayout>
-                </LinearLayout>
-                <!--Firends-->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Friends(5)"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:id="@+id/linearFriends"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:orientation="horizontal">
-                  
-                </LinearLayout>
-
-                <!--upgrade to premium-->
-                <View
-                    android:layout_marginRight="16dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#EDEDED" />
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="16dp"
-                        android:layout_weight="1"
-                        android:text="Upgrade to Premium" />
-
-                    <TextView
-                        android:id="@+id/txtPremium"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end|center_vertical"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="12dp"
-                        android:layout_marginRight="16dp"
-                        android:elevation="3dp"
-                        android:gravity="center"
-                        android:paddingBottom="8dp"
-                        android:paddingLeft="32dp"
-                        android:paddingRight="32dp"
-                        android:paddingTop="8dp"
-                        android:text="GO"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF" />
-                </LinearLayout>
-                <View
-                    android:layout_marginRight="16dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#EDEDED" />
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <android.support.design.widget.TabLayout
-                        android:background="#FFFFFF"
-                        app:tabIndicatorColor="#3FABF7"
-                        android:layout_marginRight="16dp"
-                        android:layout_alignParentTop="true"
-                        android:id="@+id/tab_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        app:tabSelectedTextColor="#3FABF7"
-                        app:tabTextColor="#B0B7BF"
-
-                        />
-                    <android.support.v4.view.ViewPager
-                        android:layout_marginRight="16dp"
-                        android:background="#F01E1E"
-                        android:layout_below="@id/tab_layout"
-                        android:id="@+id/view_pager"
-                        android:layout_width="match_parent"
-                        android:layout_height="500dp"
-                        />
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
-        </android.support.v4.widget.NestedScrollView>
-
-        <!--tool bar-->
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/main.toolbar"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_anchor="@id/main.framelayout.title"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark"
-            app:title="">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+                    >
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+          <ImageView
+              android:id="@+id/imgLocation"
+              android:layout_width="12dp"
+              android:layout_height="12dp"
+              android:layout_gravity="center"
+              android:src="@drawable/user_profile_city_marker"
+                        />
 
-                <Space
-                    android:layout_width="@dimen/image_final_width"
-                    android:layout_height="@dimen/image_final_width" />
+          <TextView
+              android:id="@+id/txtLocation"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8dp"
+              android:layout_gravity="center"
+              style="@style/styleTextDescription"
+              android:text="Australia" />
 
-                <TextView
-                    android:id="@+id/main.textview.title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="8dp"
-                    android:gravity="center_vertical"
-                    android:text="Đỗ Thanh Bình"
-                    android:textColor="@android:color/white"
-                    android:textSize="20sp" />
+          <ImageView
+              android:id="@+id/icSex"
+              android:layout_width="12dp"
+              android:layout_gravity="center"
+              android:layout_height="12dp"
+              android:layout_marginLeft="16dp"
+              android:src="@drawable/user_profile_gender" />
 
-            </LinearLayout>
-        </android.support.v7.widget.Toolbar>
+          <TextView
+              android:id="@+id/txtSex"
+              android:layout_gravity="center"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8dp"
+              style="@style/styleTextDescription"
+              android:text="Australia" />
 
-        <!-- avatar and flag -->
-        <ImageView
-            android:id="@+id/avatar"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:layout_gravity="start"
-            android:layout_marginLeft="16dp"
-            android:src="@drawable/quila"
-            app:finalHeight="@dimen/image_final_width"
-            app:finalYPosition="2dp"
-            app:layout_behavior="@string/fab_scroll_translation_autohide_behavioravatar"
-            app:startHeight="2dp"
-            app:startToolbarPosition="2dp"
-            app:startXPosition="2dp" />
-
-        <ImageView
-            android:id="@+id/flag_country"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:layout_gravity="start"
-            android:layout_marginLeft="98dp"
-            android:paddingBottom="32dp"
-            android:paddingRight="32dp"
-            android:paddingTop="32dp"
-            android:src="@drawable/usa_flag"
-            app:finalHeight="@dimen/image_final_width"
-            app:finalYPosition="2dp"
-            app:layout_behavior="@string/fab_scroll_translation_autohide_behaviorFlag"
-            app:startHeight="2dp"
-            app:startToolbarPosition="2dp"
-            app:startXPosition="2dp" />
-    </android.support.design.widget.CoordinatorLayout>
-
-    <!--setting button-->
-    <ImageView
-        android:id="@+id/settings"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_gravity="end"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/ic_settings" />
+        </LinearLayout>
 
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/txtSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Australia Australia Australia Australia Australia"
+            style="@style/styleTextNormal"/>
+
+        <TextView
+            android:id="@+id/txtReputation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSpeak"
+            android:layout_marginTop="16dp"
+            style="@style/styleTextHeader"
+            android:text="Reputation" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+                    >
+          <ImageView
+              android:id="@+id/imgReputation"
+              android:layout_width="12dp"
+              android:layout_height="12dp"
+              android:src="@drawable/ic_trophy"
+              android:layout_gravity="center"
+
+                        />
+
+          <TextView
+              android:id="@+id/txtBestCorrections"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8dp"
+              android:layout_gravity="center"
+              style="@style/styleTextDescription"
+              android:text="xxx" />
+
+          <ImageView
+              android:id="@+id/icLike"
+              android:layout_width="12dp"
+              android:layout_height="12dp"
+              android:layout_marginLeft="16dp"
+              android:layout_gravity="center"
+              android:src="@drawable/ic_comment_thumbsup"
+                       />
+
+          <TextView
+              android:id="@+id/txtLikes"
+              android:layout_gravity="center"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8dp"
+              style="@style/styleTextDescription"
+              android:text="1231 LIKES" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/styleTextHeader"
+            android:text="Friend(1)" />
+        <LinearLayout
+            android:id="@+id/layoutFriends"
+             android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+                    ></LinearLayout>
+
+      </LinearLayout>
+ 
+    </android.support.design.widget.CollapsingToolbarLayout>
+  </android.support.design.widget.AppBarLayout>
+
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scrollbars="none" 
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"        >
+
+     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <android.support.design.widget.TabLayout
+                android:layout_marginTop="56dp"
+                android:background="#ffff"
+                app:tabIndicatorColor="#3FABF7"
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:tabSelectedTextColor="#3FABF7"
+                app:tabTextColor="#B0B7BF"
+                />
+            <android.support.v4.view.ViewPager
+                android:layout_marginRight="16dp"
+                android:background="#F01E1E"
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+
+  </android.support.v4.widget.NestedScrollView>
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/main.toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_anchor="@id/main.imageview.placeholder"
+      app:layout_anchorGravity="bottom"
+      app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        >
+  </android.support.v7.widget.Toolbar>
+  <LinearLayout
+      android:id="@+id/backgroundToolbar"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="#38A9F6"
+      app:layout_behavior="Naxam.Busuu.Droid.Profile.Behavior.ToolbarBehavior"
+        />
+  <ImageView
+      android:id="@+id/imgAvatar"
+      android:layout_width="@dimen/image_width"
+      android:layout_height="@dimen/image_width"
+      android:layout_marginLeft="16dp"
+      android:src="@drawable/quila"
+      android:padding="2dp" 
+      android:background="#ffff"
+      app:layout_behavior="Naxam.Busuu.Droid.Profile.Behavior.AvatarBehavior"
+        />
+  <ImageView
+      android:id="@+id/imgLanguage"
+      android:layout_width="32dp"
+      android:layout_height="32dp"
+      android:src="@drawable/quila"
+      android:background="#ffff"
+      android:padding="2dp"
+      app:layout_behavior="Naxam.Busuu.Droid.Profile.Behavior.LanguageBehavior"
+        />
+
+  <TextView
+      android:id="@+id/txtUserName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Do Thanh Binh"
+      android:textColor="@android:color/black"
+      app:layout_behavior="Naxam.Busuu.Droid.Profile.Behavior.UserNameBehavior"
+      android:textSize="20sp"
+
+        />
+  <ImageView
+      android:id="@+id/imgSetting"
+      android:layout_width="56dp"
+      android:layout_height="56dp"
+      android:padding="12dp"
+      android:layout_gravity="right|top"
+      android:src="@drawable/ic_settings"
+      app:MvxBind="Click SettingCommand"
+        />
+</android.support.design.widget.CoordinatorLayout>

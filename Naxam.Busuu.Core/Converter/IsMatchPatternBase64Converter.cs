@@ -13,7 +13,6 @@ namespace Naxam.Busuu.Core.Converter
     {
         protected override bool Convert(string value, Type targetType, object parameter, CultureInfo culture)
         {
-
             byte[] textAsBytes = System.Convert.FromBase64String(parameter.ToString());
             string decoded = Encoding.UTF8.GetString(textAsBytes, 0, textAsBytes.Length);
             Regex regex = new Regex(decoded);
@@ -42,6 +41,7 @@ namespace Naxam.Busuu.Core.Converter
             return regex.IsMatch(value);
         }
     }
+
     public class EmailPhoneValidConverter : MvxValueConverter<string, bool>
     {
         protected override bool Convert(string value, Type targetType, object parameter, CultureInfo culture)

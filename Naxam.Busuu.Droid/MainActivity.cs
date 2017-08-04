@@ -16,7 +16,7 @@ using Naxam.Busuu.Droid.Learning;
 
 namespace Naxam.Busuu.Droid
 {
-    [Activity(Label = "MainActivity", MainLauncher = true, SupportsPictureInPicture = true, AllowEmbedded = true)]
+    [Activity(Label = "MainActivity", SupportsPictureInPicture = true, AllowEmbedded = true)]
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

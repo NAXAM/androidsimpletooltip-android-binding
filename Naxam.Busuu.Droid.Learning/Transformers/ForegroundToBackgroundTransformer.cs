@@ -31,7 +31,7 @@ namespace Naxam.Busuu.Droid.Learning.Transformers
             }
             else if (position <= 1)
             { // [-1,1]
-                if (view.Tag.Equals("1"))
+                if (view.Tag?.Equals("1")==true)
                 {
 
                     // Modify the default slide transition to shrink the page as well
