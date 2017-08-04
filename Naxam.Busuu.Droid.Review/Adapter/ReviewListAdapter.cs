@@ -26,7 +26,8 @@ namespace Naxam.Busuu.Droid.Review.Adapter
 {
     public class ReviewListAdapter : SectionAdapter
     {
-        public event EventHandler<ReviewModel> SelectReview;
+        public event EventHandler<ReviewModel> ItemClicked;
+        public event EventHandler<ReviewModel> FavoriteClicked;
         Context context;
         IList<ReviewModel> reviews;
         List<IGrouping<char, ReviewModel>> ListSection;
@@ -37,7 +38,7 @@ namespace Naxam.Busuu.Droid.Review.Adapter
             this.reviews = new List<ReviewModel>(reviews);
             ListSection = new List<IGrouping<char, ReviewModel>>();
             ListSection = reviews.OrderBy(d => d.Title).GroupBy((d) => d.Title[0]).ToList();
-            lstEx = new List<ReviewModel>(); 
+            lstEx = new List<ReviewModel>();
         }
 
         public override Java.Lang.Object GetRowItem(int section, int row)
@@ -79,9 +80,11 @@ namespace Naxam.Busuu.Droid.Review.Adapter
             RelativeLayout relativeSample = convertView.FindViewById<RelativeLayout>(Resource.Id.relativeSample);
             relativeSample.Background = BackgroundUtil.BackgroundRound(context, (int)Util.PxFromDp(context, 2), Color.ParseColor("#F2F5F8"));
 
-            System.Diagnostics.Debug.WriteLine("-->" + convertView.Tag+" - "+ lstEx.Count);
-
             ReviewModel review = RowItem(section, row);
+
+            btnFavorite.Click -= BtnFavorite_Click;
+            btnFavorite.Click += BtnFavorite_Click;
+            btnFavorite.Tag = new Pair(section, row);
             convertView.Tag = new Pair(section, row);
             if (lstEx.Contains(review))
             {
@@ -102,7 +105,7 @@ namespace Naxam.Busuu.Droid.Review.Adapter
             }
             txtTitle.Text = review.Title;
             txtSubTitle.Text = review.SubTitle;
-            Glide.With(context).Load(review.ImgWord).Transform(new RoundedCornersTransformation(context,2,0,RoundedCornersTransformation.CornerType.All)).Into(imgCover);
+            Glide.With(context).Load(review.ImgWord).Transform(new RoundedCornersTransformation(context, 2, 0, RoundedCornersTransformation.CornerType.All)).Into(imgCover);
             switch (review.StrengthLevel)
             {
                 case 0:
@@ -121,30 +124,18 @@ namespace Naxam.Busuu.Droid.Review.Adapter
                     imgStrength.SetImageResource(Resource.Drawable.entity_strength_4);
                     break;
             }
-            convertView.Click -= ConvertView_Click;
-            convertView.Click += ConvertView_Click;
+
             return convertView;
         }
 
-        private void ConvertView_Click(object sender, EventArgs e)
+        private void BtnFavorite_Click(object sender, EventArgs e)
         {
-            View view = (View)sender;
-            RelativeLayout relativeSample = view.FindViewById<RelativeLayout>(Resource.Id.relativeSample);
-            TextView txtTitleSample = view.FindViewById<TextView>(Resource.Id.txtTitleSample);
-            if (string.IsNullOrEmpty(txtTitleSample.Text))
-                return;
+            ImageView view = (ImageView)sender;
             Pair pair = (Pair)view.Tag;
             var item = RowItem((int)pair.First, (int)pair.Second);
-            if (relativeSample.Visibility == ViewStates.Gone)
-            {
-                relativeSample.Visibility = ViewStates.Visible;
-                lstEx.Add(item);
-            }
-            else
-            {
-                relativeSample.Visibility = ViewStates.Gone;
-                lstEx.Remove(item);
-            }
+            item.IsFavorite = !item.IsFavorite;
+            view.SetImageResource(item.IsFavorite ? Resource.Drawable.yellow_star_d : Resource.Drawable.star_white_small_disabled);
+            FavoriteClicked?.Invoke(sender, item);
         }
 
         private ReviewModel RowItem(int section, int row)
@@ -168,19 +159,19 @@ namespace Naxam.Busuu.Droid.Review.Adapter
             TextView txtTitleSample = view.FindViewById<TextView>(Resource.Id.txtTitleSample);
             if (string.IsNullOrEmpty(txtTitleSample.Text))
                 return;
-            var item = RowItem(section, row);
+            Pair pair = (Pair)view.Tag;
+            var item = RowItem((int)pair.First, (int)pair.Second);
             if (relativeSample.Visibility == ViewStates.Gone)
             {
                 relativeSample.Visibility = ViewStates.Visible;
                 lstEx.Add(item);
-                view.Tag = "da click";
             }
             else
             {
                 relativeSample.Visibility = ViewStates.Gone;
-                view.Tag = "chua click";
+                lstEx.Remove(item);
             }
-            SelectReview?.Invoke(this, RowItem(section, row));
+            ItemClicked?.Invoke(this, RowItem(section, row));
         }
 
         public override View GetSectionHeaderView(int section, View convertView, ViewGroup parent)
