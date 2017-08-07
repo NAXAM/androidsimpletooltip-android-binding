@@ -11,15 +11,9 @@
       android:layout_height="56dp"
       android:background="@color/colorPrimary"
       app:theme="@style/ThemeOverlay.AppCompat.Dark">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Review"
-        android:textColor="@color/colorWhite"
-        android:textSize="22sp" />
-
+ 
     <EditText
+       android:id="@+id/txtSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Search"
@@ -28,11 +22,21 @@
         android:visibility="gone" />
 
     <ImageView
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_gravity="right"
-        android:padding="12dp"
+       android:id="@+id/imgSearch"
+       android:layout_width="48dp"
+       android:layout_height="48dp"
+       android:layout_gravity="right|center_vertical"
+       android:padding="12dp"
      android:src="@drawable/ic_search_white"
+            />
+    <ImageView
+       android:id="@+id/imgClose"
+       android:layout_width="48dp"
+       android:layout_height="48dp"
+       android:layout_gravity="right|center_vertical"
+       android:padding="16dp"
+       android:visibility="gone"
+       android:src="@drawable/x"
             />
   </android.support.v7.widget.Toolbar>
 
