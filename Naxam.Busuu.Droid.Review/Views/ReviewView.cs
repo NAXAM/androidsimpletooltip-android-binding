@@ -20,7 +20,7 @@ using Naxam.Busuu.Droid.Core.Utils;
 
 namespace Naxam.Busuu.Droid.Review.Views
 {
-    [Activity(Label = "Review", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "Review", Theme = "@style/AppTheme.NoActionBar" )]
     public class ReviewView : MvxAppCompatActivity
     {
         ViewPager viewPager;

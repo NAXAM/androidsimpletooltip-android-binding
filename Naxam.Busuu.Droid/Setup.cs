@@ -30,7 +30,9 @@ using Com.Github.Lzyzsd.Circleprogress;
 using MvvmCross.Binding.Droid.Views;
 using Naxam.Busuu.Droid.Learning.Converter;
 using Naxam.Busuu.Droid.Review.Views;
+using Naxam.Busuu.Droid.Social.Views;
 using Naxam.Busuu.Review.ViewModels;
+using Naxam.Busuu.Social.ViewModels;
 
 namespace Naxam.Busuu.Droid
 {
@@ -73,6 +75,7 @@ namespace Naxam.Busuu.Droid
             list.Add(typeof(ForgotPasswordViewModel).Assembly);
             list.Add(typeof(ReviewViewModel).Assembly);
             list.Add(typeof(LearnViewModel).Assembly);
+            list.Add(typeof(SocialViewModel).Assembly);
             return list.ToArray();
         }
 
@@ -116,6 +119,7 @@ namespace Naxam.Busuu.Droid
             list.Add(typeof(ForgotPasswordView).Assembly);
             list.Add(typeof(ReviewView).Assembly);
             list.Add(typeof(LearnView).Assembly);
+            list.Add(typeof(SocialView).Assembly);
             return list.ToArray();
         }
 
