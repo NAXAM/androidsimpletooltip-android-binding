@@ -35,7 +35,7 @@ using Naxam.Busuu.Review.ViewModels;
 using Naxam.Busuu.Social.ViewModels;
 using Naxam.Busuu.Droid.Profile;
 using Naxam.Busuu.Profile;
-using Naxam.Busuu.Droid.Notification.Views;
+using Naxam.Busuu.Droid.Notification;
 
 namespace Naxam.Busuu.Droid
 {

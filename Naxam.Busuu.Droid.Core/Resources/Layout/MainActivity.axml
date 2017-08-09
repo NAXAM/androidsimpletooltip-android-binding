@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+    <!--<com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
         android:id="@+id/menu_bottom"
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -12,5 +12,5 @@
         android:background="#FFFFFF"
         app:itemIconTint="@drawable/selector_item_gray_color"
         app:itemTextColor="@drawable/selector_item_gray_color" 
-        app:menu="@menu/menu_bottom" />
+        app:menu="@menu/menu_bottom" />-->
 </FrameLayout>

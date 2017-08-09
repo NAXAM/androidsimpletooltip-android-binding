@@ -14,9 +14,9 @@ using Android.Support.V7.Widget;
 using Naxam.Busuu.Droid.Notification.Adapters;
 using Naxam.Busuu.Droid.Notification.Models;
 
-namespace Naxam.Busuu.Droid.Notification.Views
+namespace Naxam.Busuu.Droid.Notification
 {
-    [Activity(Label = "FriendRequestView")]
+    [Activity(Label = "FriendRequestView", MainLauncher =true)]
     public class FriendRequestView : AppCompatActivity
     {
         private RecyclerView FriendRecyclerView;
@@ -27,9 +27,7 @@ namespace Naxam.Busuu.Droid.Notification.Views
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_friend_request);
             bindViews();
-
         }
-
         private void bindViews()
         {
             friendModels = new List<FriendModel>();
@@ -45,4 +43,5 @@ namespace Naxam.Busuu.Droid.Notification.Views
             FriendRecyclerView.SetAdapter(adapterFriend);
         }
     }
+
 }

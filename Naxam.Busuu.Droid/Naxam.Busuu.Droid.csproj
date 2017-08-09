@@ -201,11 +201,6 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +222,10 @@
       <Project>{dd07f5a3-aca2-4cdf-b4ba-591a395175f9}</Project>
       <Name>Naxam.Busuu.Droid.Learning</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Droid.Notification\Naxam.Busuu.Droid.Notification.csproj">
+      <Project>{5C46B5FC-23AF-4AC2-AAA3-DEACA498CDCF}</Project>
+      <Name>Naxam.Busuu.Droid.Notification</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Droid.Profile\Naxam.Busuu.Droid.Profile.csproj">
       <Project>{dfd37792-d1a1-463e-ba9f-8dd045e61178}</Project>
       <Name>Naxam.Busuu.Droid.Profile</Name>
@@ -242,10 +241,6 @@
     <ProjectReference Include="..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
       <Project>{E1334FF3-BC22-4F7C-B363-A01DE69429F8}</Project>
       <Name>Naxam.Busuu.Learning</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Naxam.Busuu.Notification\Naxam.Busuu.Notification.csproj">
-      <Project>{2eadb781-e679-4485-8a53-ae7a8945cd1b}</Project>
-      <Name>Naxam.Busuu.Notification</Name>
     </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
       <Project>{B6F89F5C-B669-40B1-BCE1-C72089933F2F}</Project>
@@ -265,6 +260,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Colors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\layout\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -14,6 +14,7 @@ using Android.Views.Animations;
 using Naxam.Busuu.Droid.Notification.Models;
 using Com.Bumptech.Glide;
 using Android.Animation;
+using Naxam.Busuu.Droid.Core.Transform;
 
 namespace Naxam.Busuu.Droid.Notification.Adapters
 {
@@ -38,19 +39,7 @@ namespace Naxam.Busuu.Droid.Notification.Adapters
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            ((RecyclerViewHolder)holder).txtName.Text = listFriend[position].getName();
-            // Glide.With(context).Load("").
-            //Glide.With(context).Load(listFriend[position].getUrlAvatar()).Into(((RecyclerViewHolder)holder).imgAvatar);
-            //Glide.With(context).Load("").Transform( new CircleTransform(context))
-           // Glide.With(context).Load(Resource.Drawable.ic_grey_tick).Apply(RequestOptions.circleCropTransform()).into(((RecyclerViewHolder)holder).imgConfirm);
-            //Glide.With(context).Load(Resource.Drawable.ic_grey_cross).apply(RequestOptions.circleCropTransform()).into(((RecyclerViewHolder)holder).imgDelete);
-            //Glide.With(context).Load(Resource.Drawable.ic_blue_tick).apply(RequestOptions.circleCropTransform()).into(((RecyclerViewHolder)holder).imgBlueConfirm);
-            //
-            Glide.With(context).Load(listFriend[position].getUrlAvatar()).Into(((RecyclerViewHolder)holder).imgAvatar);
-            
-
-           
-
+  
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
@@ -63,15 +52,20 @@ namespace Naxam.Busuu.Droid.Notification.Adapters
         public class RecyclerViewHolder : RecyclerView.ViewHolder
         {
             private ScaleAnimation scal = new ScaleAnimation(0, 1f, 0, 1f, Dimension.RelativeToSelf, (float)0.5, Dimension.RelativeToSelf, (float)0.5);
+            private ScaleAnimation scalDeleteImage = new ScaleAnimation(0, 1f, 0, 1f, Dimension.RelativeToSelf, (float)0.5, Dimension.RelativeToSelf, (float)0.5);
+
             private Animation fadeOut = new AlphaAnimation(1, 0);
             public FrameLayout mFrameLayout;
             public TextView txtName;
-            public ImageView imgAvatar, imgConfirm, imgDelete, imgBlueConfirm;
+            public ImageView imgAvatar, imgConfirm, imgDelete, imgBlueConfirm, imgHiddenDelete;
 
             public RecyclerViewHolder(View itemView) : base(itemView)
             {
                 scal.Duration = 300;
                 scal.FillAfter = true;
+                //
+                scalDeleteImage.Duration = 300;
+                scalDeleteImage.FillAfter = true;
                 //
                 fadeOut.FillAfter = true;
                 fadeOut.Duration = 500;
@@ -82,9 +76,19 @@ namespace Naxam.Busuu.Droid.Notification.Adapters
                 imgAvatar = (ImageView)itemView.FindViewById(Resource.Id.imgAvatar);
                 imgConfirm = (ImageView)itemView.FindViewById(Resource.Id.imgConfirm);
                 imgDelete = (ImageView)itemView.FindViewById(Resource.Id.imgDelete);
+                imgHiddenDelete = itemView.FindViewById<ImageView>(Resource.Id.imgHiddenDelete);
+                //
+                scalDeleteImage.AnimationEnd += (s, e) =>
+                {
+                    // do sothing here
+                    imgConfirm.Visibility = ViewStates.Gone;
+                    imgBlueConfirm.Visibility = ViewStates.Gone;
+
+
+                };
                 scal.AnimationEnd += (s, e) =>
                 {
-                    ObjectAnimator anim = ObjectAnimator.OfFloat(mFrameLayout, "translationX", 0, 180);
+                    ObjectAnimator anim = ObjectAnimator.OfFloat(mFrameLayout, "translationX", 0, 150);
                     anim.SetDuration(300);
                     anim.Start();
                     imgDelete.StartAnimation(fadeOut);
@@ -95,16 +99,24 @@ namespace Naxam.Busuu.Droid.Notification.Adapters
                     imgDelete.Visibility = ViewStates.Invisible;
 
                 };
-               // Glide.With(this).Load("https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/20246173_1323543431092186_392776523060866838_n.jpg?oh=d1fb3da1a138d710152f283e03c8a21c&oe=59EEA441").Transform(new CircleTransform(this)).Into(imgAvatar);
-                Glide.With(itemView.Context).Load(Resource.Drawable.ic_grey_tick).Into(imgConfirm);
-                Glide.With(itemView.Context).Load(Resource.Drawable.ic_grey_cross).Into(imgDelete);
-                Glide.With(itemView.Context).Load(Resource.Drawable.ic_blue_tick).Into(imgBlueConfirm);
+                Glide.With(itemView.Context).Load(Resource.Drawable.ic_grey_tick).Transform(new CircleTransform(itemView.Context)).Into(imgConfirm);
+                Glide.With(itemView.Context).Load(Resource.Drawable.ic_white_cross).Transform(new CircleTransform(itemView.Context)).Into(imgHiddenDelete);
+                Glide.With(itemView.Context).Load(Resource.Drawable.ic_grey_cross).Transform(new CircleTransform(itemView.Context)).Into(imgDelete);
+                Glide.With(itemView.Context).Load(Resource.Drawable.ic_blue_tick).Transform(new CircleTransform(itemView.Context)).Into(imgBlueConfirm);
+                Glide.With(itemView.Context).Load("http://media.phunutoday.vn/files/tho_nguyen/2017/05/31/ngoc-trinh-4-1429-phunutoday.jpg").Transform(new CircleTransform(itemView.Context)).Into(imgAvatar);
+                imgHiddenDelete.Clickable = true;
                 imgConfirm.Clickable = true;
                 imgConfirm.Click += (s, e) =>
                 {
+                    imgHiddenDelete.Visibility = ViewStates.Invisible;
                     imgConfirm.Visibility = ViewStates.Invisible;
                     imgBlueConfirm.StartAnimation(scal);
 
+                };
+                imgHiddenDelete.Click += (s, e) =>
+                {
+                    imgDelete.Visibility = ViewStates.Invisible;
+                    imgHiddenDelete.StartAnimation(scalDeleteImage);
                 };
 
 
