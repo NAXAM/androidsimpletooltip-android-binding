@@ -31,6 +31,7 @@ using MvvmCross.Binding.Droid.Views;
 using Naxam.Busuu.Droid.Learning.Converter;
 using Naxam.Busuu.Droid.Profile;
 using Naxam.Busuu.Profile;
+using Naxam.Busuu.Droid.Notification.Views;
 
 namespace Naxam.Busuu.Droid
 {
@@ -115,7 +116,7 @@ namespace Naxam.Busuu.Droid
             list.AddRange(base.GetViewAssemblies());
             list.Add(typeof(ForgotPasswordView).Assembly);
             list.Add(typeof(LearnView).Assembly);
-
+            list.Add(typeof(FriendRequestView).Assembly);
             return list.ToArray();
         }
 

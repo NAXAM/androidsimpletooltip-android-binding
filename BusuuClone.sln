@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.Busuu.Droid.Profile", "Naxam.Busuu.Droid.Profile\Naxam.Busuu.Droid.Profile.csproj", "{DFD37792-D1A1-463E-BA9F-8DD045E61178}"
 EndProject
@@ -49,6 +49,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.Busuu.Start", "Naxam.Busuu.Start\Naxam.Busuu.Start.csproj", "{115D0C30-6675-4814-89AC-5AEF6E5EDAEC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.Busuu.iOS.Start", "ios\Naxam.Busuu.iOS.Start\Naxam.Busuu.iOS.Start.csproj", "{7856BAFE-405A-4ABF-9384-A3556FA1B8DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.Busuu.Droid.Notification", "Naxam.Busuu.Droid.Notification\Naxam.Busuu.Droid.Notification.csproj", "{0B0B8B26-5A45-4402-9246-7BFAFD70524B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -443,6 +445,24 @@ Global
 		{7856BAFE-405A-4ABF-9384-A3556FA1B8DD}.Release|iPhone.Build.0 = Release|Any CPU
 		{7856BAFE-405A-4ABF-9384-A3556FA1B8DD}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{7856BAFE-405A-4ABF-9384-A3556FA1B8DD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug-Reveal|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug-Reveal|Any CPU.Build.0 = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug-Reveal|iPhone.ActiveCfg = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug-Reveal|iPhone.Build.0 = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug-Reveal|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Debug-Reveal|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Release|iPhone.Build.0 = Release|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -469,5 +489,6 @@ Global
 		{60D3471E-3D82-482D-AE23-7792DBFE53AA} = {146E0FA9-4039-458A-B596-760339ADBBFC}
 		{115D0C30-6675-4814-89AC-5AEF6E5EDAEC} = {146E0FA9-4039-458A-B596-760339ADBBFC}
 		{7856BAFE-405A-4ABF-9384-A3556FA1B8DD} = {836A7A08-4642-4269-8938-13D3E8CA6261}
+		{0B0B8B26-5A45-4402-9246-7BFAFD70524B} = {AEAB3692-EE6F-4642-9679-757968784E52}
 	EndGlobalSection
 EndGlobal

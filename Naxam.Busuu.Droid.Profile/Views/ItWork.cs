@@ -17,7 +17,7 @@ using Naxam.Busuu.Droid.Core.Utils;
 
 namespace Naxam.Busuu.Droid.Profile.Views
 {
-    [Activity(Label = "ItWork", MainLauncher = true)]
+    [Activity(Label = "ItWork", MainLauncher =true)]
     public class ItWork : AppCompatActivity
     {
         private Button btnReadFull;
