@@ -31,7 +31,7 @@ namespace Naxam.Busuu.Droid
             Mvx.RegisterType<ILearningService, LearningService>();
             Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainViewModel>());
             RegisterAppStart<MainViewModel>();
-           // Mvx.RegisterType<IDialogService, DialogService>();
+          //  Mvx.RegisterType<IDialogService, DialogService>();
         }
         public override void Initialize()
         { 

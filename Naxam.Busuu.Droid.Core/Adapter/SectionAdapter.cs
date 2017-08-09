@@ -13,7 +13,7 @@ using static Android.Widget.AdapterView;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Droid.Views;
 
-namespace Naxam.Busuu.Droid.Profile.Utils
+namespace Naxam.Busuu.Droid.Core.Adapter
 {
     public abstract class SectionAdapter : BaseAdapter, IOnItemClickListener  
     {
@@ -210,7 +210,6 @@ namespace Naxam.Busuu.Droid.Profile.Utils
             }
         }
 
-  
         public override sealed int ViewTypeCount
         {
             get
@@ -219,7 +218,6 @@ namespace Naxam.Busuu.Droid.Profile.Utils
             }
         }
          
-
         public override bool IsEnabled(int position)
         {
             return (DisableHeaders() || !IsSectionHeader(position)) && IsRowEnabled(GetSection(position), GetRowInSection(position));

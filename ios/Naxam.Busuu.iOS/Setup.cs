@@ -68,7 +68,7 @@ namespace Naxam.Busuu.iOS
 				typeof(ReviewViewModel).Assembly,
                 typeof(SocialViewModel).Assembly,
                 typeof(NotificationViewModel).Assembly,
-                typeof(GeneralProfileViewModel).Assembly,
+                typeof(ProfileSettingViewModel).Assembly,
                 typeof(PremiumViewModel).Assembly
 			};
 

@@ -21,6 +21,7 @@ using static Naxam.Busuu.Droid.Learning.Control.NXPlayButton;
 using Com.Longtailvideo.Jwplayer.Core;
 using Com.Longtailvideo.Jwplayer.Events;
 using Com.Longtailvideo.Jwplayer.Media.Playlists;
+using Naxam.Busuu.Droid.Core.Listener;
 
 namespace Naxam.Busuu.Droid.Learning.Control
 {

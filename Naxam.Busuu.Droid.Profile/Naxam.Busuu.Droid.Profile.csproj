@@ -92,9 +92,6 @@
     <Reference Include="Naxam.DialogPlus.Droid, Version=1.11.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Naxam.DialogPlus.Droid.1.11.0.2\lib\MonoAndroid10\Naxam.DialogPlus.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="Naxam.ExpandableLayout.Droid">
-      <HintPath>..\..\ExpandableLayout-droid\Naxam.ExpandableLayout.Droid\bin\Debug\Naxam.ExpandableLayout.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="Naxam.ImagePicker.Droid, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Naxam.ImagePicker.Droid.1.1.3\lib\MonoAndroid10\Naxam.ImagePicker.Droid.dll</HintPath>
     </Reference>
@@ -103,9 +100,6 @@
     </Reference>
     <Reference Include="MvvmCross.Plugins.DownloadCache, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.5.1.0\lib\MonoAndroid\MvvmCross.Plugins.DownloadCache.dll</HintPath>
-    </Reference>
-    <Reference Include="Naxam.RippleEffect.Droid, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Naxam.RippleEffect.Droid.1.3.0\lib\MonoAndroid10\Naxam.RippleEffect.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Naxam.TargetTooltip.Droid, Version=1.3.15.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Naxam.TargetTooltip.Droid.1.3.15\lib\MonoAndroid10\Naxam.TargetTooltip.Droid.dll</HintPath>
@@ -172,7 +166,6 @@
     <Compile Include="Behavior\AvatarBehavior.cs" />
     <Compile Include="Behavior\ToolbarBehavior.cs" />
     <Compile Include="Behavior\UserNameBehavior.cs" />
-    <Compile Include="Controls\MyExpandableLayout.cs" />
     <Compile Include="Dialogs\UserPhotoDialog.cs" />
     <Compile Include="Resources\DownloadDialogView.cs" />
     <Compile Include="Controls\NXIndicator.cs" />
@@ -191,7 +184,6 @@
     <Compile Include="Views\DialogImagePickerAdapter.cs" />
     <Compile Include="Views\ForgotPasswordView.cs" />
     <Compile Include="Views\GeneralProfileView.cs" />
-    <Compile Include="Views\ItWork.cs" />
     <Compile Include="Views\ProfileInputView.cs" />
     <Compile Include="Views\ProfileSettingView.cs" />
     <Compile Include="Views\RegisterView.cs" />
@@ -352,13 +344,29 @@
       <Project>{fe265042-a31b-44ce-8e0c-2260a89b2b12}</Project>
       <Name>Naxam.Busuu.Droid.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Naxam.Busuu.Droid.Learning\Naxam.Busuu.Droid.Learning.csproj">
-      <Project>{DD07F5A3-ACA2-4CDF-B4BA-591A395175F9}</Project>
-      <Name>Naxam.Busuu.Droid.Learning</Name>
+    <ProjectReference Include="..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
+      <Project>{e1334ff3-bc22-4f7c-b363-a01de69429f8}</Project>
+      <Name>Naxam.Busuu.Learning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Notification\Naxam.Busuu.Notification.csproj">
+      <Project>{2eadb781-e679-4485-8a53-ae7a8945cd1b}</Project>
+      <Name>Naxam.Busuu.Notification</Name>
     </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
       <Project>{B6F89F5C-B669-40B1-BCE1-C72089933F2F}</Project>
       <Name>Naxam.Busuu.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
+      <Project>{baaa7577-3be2-423b-a051-61b47489b015}</Project>
+      <Name>Naxam.Busuu.Review</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
+      <Project>{6255cda3-b742-4d16-ac6c-03e414eac000}</Project>
+      <Name>Naxam.Busuu.Social</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Start\Naxam.Busuu.Start.csproj">
+      <Project>{115d0c30-6675-4814-89ac-5aef6e5edaec}</Project>
+      <Name>Naxam.Busuu.Start</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -641,23 +649,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\user_photo_layout.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\activity_it_work.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\recycler_view_list_row.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\triangle.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\party.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\ic_chart_bussu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

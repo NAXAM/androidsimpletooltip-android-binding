@@ -2,7 +2,7 @@
 using Android.Animation;
 using static Android.Animation.ValueAnimator;
 
-namespace Naxam.Busuu.Droid.Learning.Control
+namespace Naxam.Busuu.Droid.Core.Listener
 {
     public class AnimatorUpdateListener : Java.Lang.Object, IAnimatorUpdateListener
     {

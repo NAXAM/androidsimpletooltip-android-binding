@@ -17,7 +17,7 @@ using Naxam.Busuu.Droid.Learning.Control.Memo;
 
 namespace Naxam.Busuu.Droid.Learning.Views
 {
-    [Activity(Label = "Premium", Theme = "@style/AppTheme.Premium")]
+    [Activity(Label = "Test", Theme = "@style/AppTheme.Premium")]
     public class TestView : MvxAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -28,7 +28,7 @@ namespace Naxam.Busuu.Droid.Learning.Views
             OrderWordFragment frag = new OrderWordFragment(new UnitModel {
                 Input = new List<string>
                 {
-                    "Naxam Cong Ty Binding Hang Dau Viet Nam"
+                    "See you later."
                 }
             });
             Android.Support.V4.App.FragmentManager manager = SupportFragmentManager;

@@ -89,5 +89,21 @@ namespace Naxam.Busuu.Review.Models
 				}
             }
         }
+
+        private ReviewModel _sample;
+
+        public ReviewModel Sample
+        {
+            get { return _sample; }
+            set
+            {
+                if (_sample != value)
+                {
+                    _sample = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
     }
 }

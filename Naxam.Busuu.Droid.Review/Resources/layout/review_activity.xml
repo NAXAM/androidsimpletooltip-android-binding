@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@color/colorPrimary"
+      app:theme="@style/ThemeOverlay.AppCompat.Dark">
+ 
+    <EditText
+       android:id="@+id/txtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:visibility="gone" />
+
+    <ImageView
+       android:id="@+id/imgSearch"
+       android:layout_width="48dp"
+       android:layout_height="48dp"
+       android:layout_gravity="right|center_vertical"
+       android:padding="12dp"
+     android:src="@drawable/ic_search_white"
+            />
+    <ImageView
+       android:id="@+id/imgClose"
+       android:layout_width="48dp"
+       android:layout_height="48dp"
+       android:layout_gravity="right|center_vertical"
+       android:padding="16dp"
+       android:visibility="gone"
+       android:src="@drawable/x"
+            />
+  </android.support.v7.widget.Toolbar>
+
+  <android.support.design.widget.TabLayout
+      android:id="@+id/tab_layout"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:layout_below="@+id/toolbar"
+      android:background="@color/colorWhite"
+      app:tabIndicatorColor="@color/colorPrimary"
+      app:tabSelectedTextColor="@color/colorPrimary"
+      app:tabTextColor="@color/colorTextSecondary" />
+
+  <android.support.v4.view.ViewPager
+      android:id="@+id/view_pager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/tab_layout" />
+  <View
+    android:id="@+id/layoutBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCffffff"
+    android:visibility="gone"
+        />
+  <com.getbase.floatingactionbutton.FloatingActionsMenu
+    android:id="@+id/btnFloating"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="16dp"
+    app:fab_addButtonColorNormal="@color/colorPrimary"
+    app:fab_addButtonColorPressed="@color/colorPrimary"
+    app:fab_addButtonPlusIconColor="@color/colorWhite"
+    app:fab_addButtonSize="normal"
+    app:fab_labelStyle="@style/StyleTextFloatMenu"
+    app:fab_labelsPosition="left">
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menu_test_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="#D6DEE6"
+        app:fab_size="mini"
+        app:fab_icon="@drawable/star_white_small_disabled"
+        app:fab_title="Test Favorites" />
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menu_strengthen_vocabulary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="#EB4331"
+        app:fab_size="mini"
+        app:fab_icon="@drawable/strength_bar"
+        app:fab_title="Strengthen vocabulary" />
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menu_test_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="#38A9F6"
+        app:fab_size="mini"
+        app:fab_icon="@drawable/ic_check_white"
+        app:fab_title="Test All" />
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menu_continue_learning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_colorNormal="#ffff"
+        app:fab_size="mini"
+        app:fab_icon="@drawable/blue_arrow"
+        app:fab_title="Continue Learning" />
+  </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</RelativeLayout>

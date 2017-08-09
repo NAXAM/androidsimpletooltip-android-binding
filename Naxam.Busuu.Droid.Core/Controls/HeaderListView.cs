@@ -15,8 +15,10 @@ using Android.Graphics.Drawables;
 using static Android.Widget.ImageView;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Bindings;
+using Naxam.Busuu.Droid.Core.Adapter;
+using Android.Graphics;
 
-namespace Naxam.Busuu.Droid.Profile.Utils
+namespace Naxam.Busuu.Droid.Core.Controls
 {
     public class HeaderListView : RelativeLayout 
     {
@@ -68,7 +70,9 @@ namespace Naxam.Busuu.Droid.Profile.Utils
             AddView(mHeader);
 
             // The list view's scroll bar can be hidden by the header, so we display our own scroll bar instead
-            Drawable scrollBarDrawable = Resources.GetDrawable(Resource.Drawable.scrollbar_handle_holo_light, this.Context.Theme);
+            Drawable scrollBarDrawable = Resources.GetDrawable(Resource.Drawable.abc_ab_share_pack_mtrl_alpha, this.Context.Theme);
+
+           // Drawable scrollBarDrawable = Resources.GetDrawable(Resource.Drawable.scrollbar_handle_holo_light, this.Context.Theme);
             mScrollView = new FrameLayout(Context);
             LayoutParams scrollParams = new LayoutParams(scrollBarDrawable.IntrinsicWidth, RelativeLayout.LayoutParams.MatchParent);
             scrollParams.AddRule(LayoutRules.AlignParentRight);
@@ -359,7 +363,8 @@ namespace Naxam.Busuu.Droid.Profile.Utils
 
             public InternalListView(Context context, IAttributeSet attrs) : base(context, attrs)
             { 
-                Divider = context.GetDrawable(Resource.Drawable.underline_background_normal);
+                Divider = Utils.BackgroundUtil.BackgroundRound(context,0,Color.Transparent);
+                DividerHeight = 0;
             }
 
             public int ComputeVerticalScrollExtentIternal
