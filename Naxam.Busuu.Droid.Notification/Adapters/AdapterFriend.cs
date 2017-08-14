@@ -80,7 +80,6 @@ namespace Naxam.Busuu.Droid.Notification.Adapters
                 //
                 scalDeleteImage.AnimationEnd += (s, e) =>
                 {
-                    // do sothing here
                     imgConfirm.Visibility = ViewStates.Gone;
                     imgBlueConfirm.Visibility = ViewStates.Gone;
 

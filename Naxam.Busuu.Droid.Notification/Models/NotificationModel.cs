@@ -14,6 +14,7 @@ namespace Naxam.Busuu.Droid.Notification.Models
 {
     public class NotificationModel
     {
+        private bool IsSeen;
         private String Name;
         private String TimePost;
         private String UrlAvatar;
@@ -27,10 +28,20 @@ namespace Naxam.Busuu.Droid.Notification.Models
 
         public NotificationModel()
         {
+            IsSeen = false;
             Name = "Binh Do";
             TimePost = "3 hours ago";
             UrlAvatar = "http://anh.eva.vn/upload/4-2016/images/2016-12-30/truoc-khi-yeu-hoang-kieu-ngoc-trinh-cung-tung-o-trong-nhung-ngoi-nha-the-nay-nu-hoang-noi-y-ngoc-trinh-tu-khai-guong-mat-dao-keo-hinh-4-1483096395-width500height583.jpg";
 
+        }
+        public bool getIsSeen()
+        {
+            return IsSeen;
+        }
+
+        public void setIsSeee(bool isSeen)
+        {
+            IsSeen = isSeen;
         }
 
         public String getName()

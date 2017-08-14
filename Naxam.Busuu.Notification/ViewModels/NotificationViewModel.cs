@@ -1,6 +1,6 @@
 ﻿using System;
 using MvvmCross.Core.ViewModels;
-using Naxam.Busuu.Notification.Models;
+using Naxam.Busuu.Core.Models;
 using Naxam.Busuu.Notification.Services;
 using Naxam.Busuu.Social.Models;
 using Naxam.Busuu.Social.ViewModels;
@@ -15,6 +15,7 @@ namespace Naxam.Busuu.Notification.ViewModels
 
 		public NotificationViewModel(IDataNotification datanotification)
 		{
+
 			_datanotification = datanotification;
 		}
 
@@ -42,11 +43,13 @@ namespace Naxam.Busuu.Notification.ViewModels
 
         void ExecuteViewNotificationCommand(NotificationModel item)
 		{
-            ShowViewModel<SocialDetailViewModel>(new SocialModel
-			{
-				Id = item.Id
-			});
-		}
+            item.Check = true;
+            if(item.TypeView== ViewType.Request)
+            {
+                ShowViewModel<FriendRequestViewModel>();
+            }
+           
+        }
 
         string _notificationCount;
 

@@ -4,7 +4,7 @@ using System;
 
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
-using Naxam.Busuu.Notification.Models;
+using Naxam.Busuu.Core.Models;
 
 namespace Naxam.Busuu.iOS.Notification.Cells
 {

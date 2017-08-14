@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Naxam.Busuu.Notification.Models;
+using Naxam.Busuu.Core.Models;
 using Naxam.Busuu.Social.Models;
 using Naxam.Busuu.Social.Services;
 
@@ -36,27 +36,42 @@ namespace Naxam.Busuu.Notification.Services
                 {
                     list.Add(new NotificationModel()
                     {
+                        TypeView = ViewType.Correct,
                         Id = x,
-                        ImgUser = "user_avatar_placeholder.png",
+                        ImgUser = "http://media.phunutoday.vn/files/tho_nguyen/2017/05/31/ngoc-trinh-4-1429-phunutoday.jpg",
                         NameUser = dataScial[x].Name,
                         Details = dataScial[x].Name + "| has asked you to correct their exercise",
                         Time = new DateTime(2017, 7, z--),
-                        Check = bbb
+                        Check = false,
                     });
                 }
                 else
                 {
 					list.Add(new NotificationModel()
 					{
-						Id = x,
-						ImgUser = "user_avatar_placeholder.png",
+                        TypeView = ViewType.Reply,
+                        Id = x,
+						ImgUser = "http://media.phunutoday.vn/files/tho_nguyen/2017/05/31/ngoc-trinh-4-1429-phunutoday.jpg",
 						NameUser = dataScial[x].Name,
-						Details = dataScial[x].Name + "| has asked you to correct their exercise",
+						Details = dataScial[x].Name + " has asked you to correct their exercise",
 						Time = new DateTime(2017, 7, 1),
-						Check = bbb
+						Check = false,
 					});
                 }
             }
+            //
+            //list.RemoveAt(0);
+            list.Insert(0, new NotificationModel()
+            {
+                TypeView = ViewType.Request,
+                Id = 1,
+                ImgUser = "http://anh.24h.com.vn/upload/3-2016/images/2016-08-25/1472094439-147203352566000-1464421146-1464415976-bang-kieu-showbiz247-15.jpg",
+                NameUser = "Thao Luu",
+                Details = "Thao Luu has asked you to correct their exercise",
+                Time = new DateTime(2017, 7, 1),
+                Check = false,
+
+            });
 
             return list.ToArray();
         }

@@ -13,11 +13,12 @@ using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Naxam.Busuu.Droid.Notification.Adapters;
 using Naxam.Busuu.Droid.Notification.Models;
+using MvvmCross.Droid.Views;
 
 namespace Naxam.Busuu.Droid.Notification
 {
-    [Activity(Label = "FriendRequestView", MainLauncher =true)]
-    public class FriendRequestView : AppCompatActivity
+    [Activity(Label = "FriendRequestView")]
+    public class FriendRequestView : MvxActivity
     {
         private RecyclerView FriendRecyclerView;
         private AdapterFriend adapterFriend;

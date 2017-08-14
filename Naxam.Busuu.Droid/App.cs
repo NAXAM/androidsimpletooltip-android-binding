@@ -17,6 +17,7 @@ using Naxam.Busuu.Social.Services;
 using Naxam.Busuu.Review.Services;
 using Naxam.Busuu.Learning.Services;
 using Naxam.Busuu.Learning.ViewModel;
+using Naxam.Busuu.Notification.Services;
 
 namespace Naxam.Busuu.Droid
 {
@@ -28,6 +29,7 @@ namespace Naxam.Busuu.Droid
            // Mvx.RegisterType<IDataNotification, DataNotification>();
             Mvx.RegisterType<IReviewService, ReviewService>();
             Mvx.RegisterType<ILearningService, LearningService>();
+            Mvx.RegisterType<IDataNotification, DataNotification>();
             Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainViewModel>());
             RegisterAppStart<MainViewModel>();
           //  Mvx.RegisterType<IDialogService, DialogService>();

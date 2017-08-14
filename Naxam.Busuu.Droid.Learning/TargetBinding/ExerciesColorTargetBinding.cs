@@ -20,6 +20,7 @@ namespace Naxam.Busuu.Droid.Learning.TargetBinding
     {
         public ExerciesColorTargetBinding(object target) : base(target)
         {
+
         }
 
         public override Type TargetType => typeof(ExerciesView);

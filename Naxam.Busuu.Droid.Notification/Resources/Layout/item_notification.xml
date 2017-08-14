@@ -1,44 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mItemNotification"
+    app:MvxBind="BackgroundColor Check, Converter=BoolToColor;"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <ImageView
-        android:id="@+id/imgAvatar"
-        android:layout_marginTop="16dp"
+  
+  <!--giữ nguyên trong 2 cases-->
+  <ImageView
+      android:id="@+id/imgAvatar"
+      android:layout_marginTop="16dp"
+      android:layout_marginLeft="24dp"
+      app:MvxBind="Source ImgUser;"
+      android:layout_alignParentStart="true"
+      android:layout_width="48dp"
+      android:layout_height="48dp" />
+  
+  <!--hidden view-->
+   <TextView
+        android:text="Friend requests"
+        android:layout_toRightOf="@id/imgAvatar"
+        android:layout_alignBaseline="@id/imgAvatar"
         android:layout_marginLeft="24dp"
-        android:layout_alignParentStart="true"
-        android:layout_width="48dp"
-        android:layout_height="48dp" />
-   <LinearLayout
-       android:layout_toRightOf="@id/imgAvatar"
-       android:layout_marginTop="16dp"
-       android:layout_marginRight="24dp"
-       android:layout_marginLeft="24dp"
-       android:orientation="vertical"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
-       <TextView
-           android:id="@+id/txtNotify"
-           android:textColor="#000000"
-           android:text="Binh Do has asked you to correct their exercise"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content" />
-       <TextView
-           android:id="@+id/txtTimePost"
-           android:text="3 hours ago"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content" />
-
-
-   </LinearLayout>
-
+        android:textColor="#000000"
+        app:MvxBind="Visible TypeView,Converter=XXX;"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+  <!--hidden view-->
+  <TextView
+        android:id="@+id/txtRequestCount"
+        app:MvxBind="Visible TypeView,Converter=XXX;"
+        android:layout_marginLeft="8dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="24dp"
+        android:layout_gravity="center_vertical"
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+  <!--hidden view-->
     <ImageView
-        android:layout_marginLeft="72dp"
-        android:background="#DEDEDE"
-        android:layout_marginTop="16dp"
-        android:layout_below="@id/imgAvatar"
+       android:layout_toLeftOf="@id/txtRequestCount"
+        app:MvxBind="Visible TypeView,Converter=XXX;"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_circle_red"
+        android:layout_width="10dp"
+        android:layout_height="10dp" />
+    
+  <LinearLayout
+       app:MvxBind="Visible TypeView,Converter=NotifyTypeToVisibleItem;"
+      android:layout_toRightOf="@id/imgAvatar"
+      android:layout_marginTop="16dp"
+      android:layout_marginRight="24dp"
+      android:layout_marginLeft="24dp"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <TextView
+       
+        android:id="@+id/txtNotify"
+        android:textColor="#000000"
+        android:text="Binh Do has asked you to correct their exercise"
         android:layout_width="match_parent"
-        android:layout_height="1dp" />
+        app:MvxBind="TextNotify .;"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txtTimePost"
+        app:MvxBind="Text Time, Converter=NotificationDatetime"
+        android:text="3 hours ago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+  </LinearLayout>
+
+  <ImageView
+        app:MvxBind="Visible TypeView,Converter=NotifyTypeToVisibleItem;"
+      android:layout_marginLeft="96dp"
+      android:background="#DEDEDE"
+      android:layout_marginTop="16dp"
+      android:layout_below="@id/imgAvatar"
+      android:layout_width="match_parent"
+      android:layout_height="1dp" />
 
 </RelativeLayout>

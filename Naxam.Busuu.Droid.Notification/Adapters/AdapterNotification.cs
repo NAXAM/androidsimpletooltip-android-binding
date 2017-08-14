@@ -12,17 +12,18 @@ using Android.Widget;
 using Android.Support.V7.Widget;
 using Android.Text;
 using Android.Text.Style;
-using Naxam.Busuu.Droid.Notification.Models;
 using Com.Bumptech.Glide;
 using Naxam.Busuu.Droid.Core.Transform;
+//using Naxam.Busuu.Notification.Models;
+using Naxam.Busuu.Core.Models;
 
 namespace Naxam.Busuu.Droid.Notification.Adapters
 {
     public class AdapterNotification: RecyclerView.Adapter
     {
-        private List<NotificationModel> listNotify = new List<NotificationModel>();
+        private IList<NotificationModel> listNotify;
 
-        public AdapterNotification(List<NotificationModel> listNotify)
+        public AdapterNotification(IList<NotificationModel> listNotify)
         {
             this.listNotify = listNotify;
         }
@@ -30,9 +31,8 @@ namespace Naxam.Busuu.Droid.Notification.Adapters
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            //do something here later
-            String name = listNotify[position].getName();
-             SpannableStringBuilder sb = new SpannableStringBuilder(name + " has asked you to correct their excise");
+            String name = listNotify[position].NameUser;
+            SpannableStringBuilder sb = new SpannableStringBuilder(name + " has asked you to correct their excise");
 
              StyleSpan bss = new StyleSpan(Android.Graphics.TypefaceStyle.Bold); // Span to make text bold
             sb.SetSpan(bss, 0, name.Length, SpanTypes.InclusiveInclusive); 
@@ -49,6 +49,7 @@ namespace Naxam.Busuu.Droid.Notification.Adapters
 
         public class RecyclerViewHolder : RecyclerView.ViewHolder
         {
+            public RelativeLayout mRelative;
             public TextView txtNotify, txtTimePost;
             public ImageView imgAvatar;
 

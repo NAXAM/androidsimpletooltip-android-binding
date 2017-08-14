@@ -34,13 +34,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\FriendRequestViewModel.cs" />
     <Compile Include="ViewModels\NotificationViewModel.cs" />
-    <Compile Include="Models\NotificationModel.cs" />
     <Compile Include="Services\DataNotification.cs" />
     <Compile Include="Services\IDataNotification.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{a9928524-db7a-4812-9c3a-81fe280939ef}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
       <Project>{6255CDA3-B742-4D16-AC6C-03E414EAC000}</Project>
       <Name>Naxam.Busuu.Social</Name>

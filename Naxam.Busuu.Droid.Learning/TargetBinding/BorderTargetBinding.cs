@@ -21,6 +21,7 @@ namespace Naxam.Busuu.Droid.Learning.TargetBinding
     {
         public BorderTargetBinding(object target) : base(target)
         {
+
         }
 
         public override Type TargetType => typeof(View);

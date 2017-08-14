@@ -1,5 +1,5 @@
 ﻿using System;
-using Naxam.Busuu.Notification.Models;
+using Naxam.Busuu.Core.Models;
 
 namespace Naxam.Busuu.Notification.Services
 {

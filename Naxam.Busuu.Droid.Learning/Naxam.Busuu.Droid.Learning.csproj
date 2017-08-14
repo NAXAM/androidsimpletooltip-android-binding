@@ -180,7 +180,6 @@
     <Compile Include="Control\NXExpandableListView.cs" />
     <Compile Include="Control\NXPlayButton.cs" />
     <Compile Include="Converter\AlphaColorConverter.cs" />
-    <Compile Include="Converter\BoolToColorConverter.cs" />
     <Compile Include="Converter\ExerciseTypeToDrawableConverter.cs" />
     <Compile Include="Converter\NumberToStringConverter.cs" />
     <Compile Include="Converter\ReverseBoolConverter.cs" />

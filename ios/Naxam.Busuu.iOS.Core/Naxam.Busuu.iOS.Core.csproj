@@ -126,7 +126,6 @@
     <Compile Include="CustomBindings\AttributedTextTargetBinding.cs" />
     <Compile Include="Converter\ImageUriConverter.cs" />
     <Compile Include="Converter\NotificationTextConverter.cs" />
-    <Compile Include="Converter\NotificationDatetimeConverter.cs" />
     <Compile Include="Converter\NotificationColorConverter.cs" />
     <Compile Include="Converter\BoolInverseConverter.cs" />
     <Compile Include="Converter\StarTextConverter.cs" />

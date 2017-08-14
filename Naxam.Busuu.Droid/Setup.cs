@@ -36,6 +36,9 @@ using Naxam.Busuu.Social.ViewModels;
 using Naxam.Busuu.Droid.Profile;
 using Naxam.Busuu.Profile;
 using Naxam.Busuu.Droid.Notification;
+using Naxam.Busuu.Notification.ViewModels;
+using Naxam.Busuu.Droid.Core.Converters;
+using Naxam.Busuu.Droid.Core.TargetBinding;
 
 namespace Naxam.Busuu.Droid
 {
@@ -65,6 +68,7 @@ namespace Naxam.Busuu.Droid
             get
             {
                 var toReturn = base.ValueConverterAssemblies as IList;
+                toReturn.Add(typeof(BoolToColorConverter).Assembly);
                 toReturn.Add(typeof(IsMatchPatternBase64Converter).Assembly);
                 toReturn.Add(typeof(AlphaColorConverter).Assembly);
                 return (IEnumerable<Assembly>)toReturn;
@@ -79,6 +83,7 @@ namespace Naxam.Busuu.Droid
             list.Add(typeof(ReviewViewModel).Assembly);
             list.Add(typeof(LearnViewModel).Assembly);
             list.Add(typeof(SocialViewModel).Assembly);
+            list.Add(typeof(NotificationViewModel).Assembly);
             return list.ToArray();
         }
 
@@ -93,6 +98,7 @@ namespace Naxam.Busuu.Droid
             }
         }
 
+        // target binding
         protected override void FillTargetFactories(IMvxTargetBindingFactoryRegistry registry)
         {
             base.FillTargetFactories(registry);
@@ -112,6 +118,7 @@ namespace Naxam.Busuu.Droid
             registry.RegisterCustomBindingFactory<ExerciesView>("Color", view => new ExerciesColorTargetBinding(view));
             registry.RegisterCustomBindingFactory<NXMvxExpandableListView>("DownloadCommand", view => new DownloadCommandTargetBinding(view));
             registry.RegisterCustomBindingFactory<NXMvxExpandableListView>("ExerciseClick", view => new ExerciseClickCommandTargetBinding(view));
+            registry.RegisterCustomBindingFactory<TextView>("TextNotify", view => new TextNotifyTargetBinding(view));
             registry.RegisterCustomBindingFactory<MemoriseBodyView>("Item", view => new MemoriseTargetBinding(view));
         }
 

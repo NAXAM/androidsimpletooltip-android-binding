@@ -64,7 +64,7 @@ namespace Naxam.Busuu.Droid.Profile.Controls
             {
                 expandableLayout.Toggle();
 
-                
+
             };
             expandableLayout.SetInRecyclerView(true);
             expandableLayout.SetInterpolator(EX.Utils.CreateInterpolator(EX.Utils.AccelerateDecelerateInterpolator));

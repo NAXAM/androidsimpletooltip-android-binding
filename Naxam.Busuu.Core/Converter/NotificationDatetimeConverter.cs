@@ -2,7 +2,7 @@
 using System.Globalization;
 using MvvmCross.Platform.Converters;
 
-namespace Naxam.Busuu.iOS.Core.Converter
+namespace Naxam.Busuu.Core.Converter
 {
     public class NotificationDatetimeConverter : MvxValueConverter<DateTime, string>
     {
@@ -18,11 +18,11 @@ namespace Naxam.Busuu.iOS.Core.Converter
 			}
 			else if ((diff2 > 0) && (diff2 <= 3))
 			{
-                return diff2.ToString() + " days ago, " + value.ToShortTimeString();
+                return diff2.ToString() + " days ago, " + value.ToString("h:mm tt");
 			}
 			else
 			{
-                return value.ToString("M") + ", " + value.ToShortTimeString();
+                return value.ToString("M") + ", " + value.ToString("h:mm tt");
 			}
 		}
     }

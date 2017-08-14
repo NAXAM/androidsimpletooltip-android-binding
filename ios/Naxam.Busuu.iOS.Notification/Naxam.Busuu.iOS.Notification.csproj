@@ -101,6 +101,10 @@
     <InterfaceDefinition Include="Notification.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{a9928524-db7a-4812-9c3a-81fe280939ef}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Naxam.Busuu.Notification\Naxam.Busuu.Notification.csproj">
       <Project>{2EADB781-E679-4485-8A53-AE7A8945CD1B}</Project>
       <Name>Naxam.Busuu.Notification</Name>
