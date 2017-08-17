@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
+  
+
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
@@ -25,15 +27,16 @@
         android:layout_height="150dp"
         android:scaleType="fitXY"
         android:src="@drawable/sea"  />
-
-    <!--<com.andexert.library.RippleView
+    
+      
+     <com.andexert.library.RippleView
         android:layout_marginTop="32dp"
         android:id="@+id/rippleView"
         app:rv_zoomScale="3.0"
         app:rv_framerate="30"
         app:rv_alpha="255"
         rv_centered="true"
-        app:rv_color="#FF0000"
+        app:rv_color="#E2E2E2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
             >
@@ -52,6 +55,24 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
                     />
+      </LinearLayout>
+    </com.andexert.library.RippleView>
+    
+     <com.andexert.library.RippleView
+        android:id="@+id/rippleView"
+        app:rv_zoomScale="3.0"
+        app:rv_framerate="30"
+        app:rv_alpha="255"
+        rv_centered="true"
+        app:rv_color="#E2E2E2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            >
+
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
         <ImageView
             android:background="#D9D9D9"
             android:layout_width="match_parent"
@@ -66,8 +87,10 @@
             android:background="#D9D9D9"
             android:layout_width="match_parent"
             android:layout_height="1dp"/>
+        
       </LinearLayout>
-    </com.andexert.library.RippleView>-->
+    </com.andexert.library.RippleView>
+    
     <!--<com.andexert.library.RippleView
         android:layout_marginTop="32dp"
         android:id="@+id/rippleView"

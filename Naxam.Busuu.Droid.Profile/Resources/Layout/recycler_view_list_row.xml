@@ -39,7 +39,7 @@
         android:id="@+id/expandableLayout"
         android:clickable="false"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/txtTitle"
         android:orientation="vertical"
         app:ael_duration="0"
@@ -52,7 +52,6 @@
             android:textSize="16dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:paddingTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="Vi thao dep trai"
             />

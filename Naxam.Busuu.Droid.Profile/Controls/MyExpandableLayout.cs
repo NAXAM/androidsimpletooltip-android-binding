@@ -63,17 +63,15 @@ namespace Naxam.Busuu.Droid.Profile.Controls
             relativelayout.Click += (s, e) =>
             {
                 expandableLayout.Toggle();
-
-
             };
             expandableLayout.SetInRecyclerView(true);
             expandableLayout.SetInterpolator(EX.Utils.CreateInterpolator(EX.Utils.AccelerateDecelerateInterpolator));
             expandableLayout.Expanded = expandState.Get(0);
             expandableLayout.SetListener(new mExpandableLayoutListener(expandState, buttonLayout));
-            buttonLayout.Rotation = expandState.Get(0) ? 180f : 0f;
+            buttonLayout.Rotation = expandState.Get(0) ? 180f : 0f; 
+
             this.AddView(view);
         }
-        //
        
         //
         private class mExpandableLayoutListener : ExpandableLayoutListenerAdapter
