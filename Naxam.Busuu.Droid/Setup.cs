@@ -39,6 +39,7 @@ using Naxam.Busuu.Droid.Notification;
 using Naxam.Busuu.Notification.ViewModels;
 using Naxam.Busuu.Droid.Core.Converters;
 using Naxam.Busuu.Droid.Core.TargetBinding;
+using Naxam.Busuu.Droid.Notification.Views;
 
 namespace Naxam.Busuu.Droid
 {

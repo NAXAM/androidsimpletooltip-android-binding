@@ -109,7 +109,7 @@
   <ItemGroup>
     <Compile Include="Adapters\AdapterFriend.cs" />
     <Compile Include="Adapters\AdapterNotification.cs" />
-    <Compile Include="FriendRequestView.cs" />
+    <Compile Include="Views\FriendRequestView.cs" />
     <Compile Include="Models\FriendModel.cs" />
     <Compile Include="Models\NotificationModel.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

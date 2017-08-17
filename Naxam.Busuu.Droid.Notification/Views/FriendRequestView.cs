@@ -15,7 +15,7 @@ using Naxam.Busuu.Droid.Notification.Adapters;
 using Naxam.Busuu.Droid.Notification.Models;
 using MvvmCross.Droid.Views;
 
-namespace Naxam.Busuu.Droid.Notification
+namespace Naxam.Busuu.Droid.Notification.Views
 {
     [Activity(Label = "FriendRequestView")]
     public class FriendRequestView : MvxActivity

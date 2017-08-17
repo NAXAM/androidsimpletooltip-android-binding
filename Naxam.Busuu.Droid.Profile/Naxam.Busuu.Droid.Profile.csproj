@@ -191,7 +191,7 @@
     <Compile Include="Views\DialogImagePickerAdapter.cs" />
     <Compile Include="Views\ForgotPasswordView.cs" />
     <Compile Include="Views\GeneralProfileView.cs" />
-    <Compile Include="Views\ItWork.cs" />
+    <Compile Include="Views\ItWorkView.cs" />
     <Compile Include="Views\ProfileInputView.cs" />
     <Compile Include="Views\ProfileSettingView.cs" />
     <Compile Include="Views\RegisterView.cs" />
