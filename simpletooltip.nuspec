@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>Naxam.SimpleTooltip.Droid</id>
+        <version>0.2.1</version>
+        <description>Xamarin Binding Library - SimpleTooltip</description>
+        <authors>Vu Duc Tuyen</authors>
+        <owners>NAXAM CO.,LTD</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <title>Naxam - SimpleTooltip</title>
+        <releaseNotes>SimpleTooltip v0.2.1</releaseNotes>
+        <summary>Xamarin Binding Library - SimpleTooltip</summary>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/NAXAM/xam-accountkit-android</projectUrl>
+        <copyright>Copyright (c) 2017 NAXAM</copyright>
+        <tags>Xamarin.Android, SimpleTooltip</tags>
+        <dependencies>
+            <dependency id="Xamarin.Android.Support.Annotations" version="25.4.0.1" />
+        </dependencies>
+    </metadata>
+    <!-- Optional 'files' node -->
+    <files>
+        <file src="Naxam.SimpleTooltip.Droid/bin/Release/Naxam.SimpleTooltip.Droid.dll" target="lib/MonoAndroid10/Naxam.SimpleTooltip.Droid.dll" />
+    </files>
+</package>

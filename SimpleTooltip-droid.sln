@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naxam.SimpleTooltip.Droid", "Naxam.SimpleTooltip.Droid\Naxam.SimpleTooltip.Droid.csproj", "{74B50806-88D0-495A-A0E6-175375750E1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTooltipQs", "SimpleTooltipQs\SimpleTooltipQs.csproj", "{6434ACA5-9E76-4F6C-AB9E-4059E1141BBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{74B50806-88D0-495A-A0E6-175375750E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74B50806-88D0-495A-A0E6-175375750E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74B50806-88D0-495A-A0E6-175375750E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6434ACA5-9E76-4F6C-AB9E-4059E1141BBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6434ACA5-9E76-4F6C-AB9E-4059E1141BBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6434ACA5-9E76-4F6C-AB9E-4059E1141BBF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6434ACA5-9E76-4F6C-AB9E-4059E1141BBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6434ACA5-9E76-4F6C-AB9E-4059E1141BBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6434ACA5-9E76-4F6C-AB9E-4059E1141BBF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
