@@ -18,7 +18,7 @@ using Naxam.Busuu.Droid.Core.Utils;
 
 namespace Naxam.Busuu.Droid.Notification.Views
 {
-    [Activity(Label = "Notification", MainLauncher =true)]
+    [Activity(Label = "Notification")]
     public class NotificationView : MvxActivity
     {
         private RecyclerView recyclerView;
