@@ -16,6 +16,7 @@ using System.Threading;
 using Android.Text;
 using IO.Github.Douglasjunior.AndroidSimpleTooltip;
 using Android.Graphics;
+using Android.Views.InputMethods;
 
 namespace Naxam.Busuu.Droid.Social.Views
 {
@@ -29,7 +30,7 @@ namespace Naxam.Busuu.Droid.Social.Views
         private TextView txtSwipe;
         private Button btnClick;
         private ImageView imgBack;
-        private ProgressBar progressBar;
+        private ProgressBar progressBar, circleProgressbar;
         private bool IsSend = false;
         private EditText edtMessage;
         private FloatingActionButton btnSend;
@@ -81,6 +82,10 @@ namespace Naxam.Busuu.Droid.Social.Views
 
                 if (SendButtonLongPressed)
                 {
+                    InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
+                    imm.HideSoftInputFromWindow(pView.WindowToken, 0);
+                    btnSend.Visibility=ViewStates.Gone;
+                    circleProgressbar.Visibility= ViewStates.Visible;
                     // Do something when the button is released.
                     txtSwipe.SetX(initXtxt);
                     txtSwipe.SetY(initXtxt);
@@ -139,6 +144,8 @@ namespace Naxam.Busuu.Droid.Social.Views
             String str = "< swipe to cancle";
             txtSwipe.Text = str;
             imgBack = (ImageView)dialog.FindViewById(Resource.Id.imgBack);
+            circleProgressbar = (ProgressBar)dialog.FindViewById(Resource.Id.circleProgressbar);
+
             edtMessage = (EditText)dialog.FindViewById(Resource.Id.edtMessage);
             btnSend = (FloatingActionButton)dialog.FindViewById(Resource.Id.btnSend);
             progressBar = (ProgressBar)dialog.FindViewById(Resource.Id.mProgressBar);
@@ -153,18 +160,23 @@ namespace Naxam.Busuu.Droid.Social.Views
             {
                 if (IsSend == true)
                 {
+                    InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
+                    imm.HideSoftInputFromWindow(btnSend.WindowToken, 0);
+                    btnSend.Visibility = ViewStates.Gone;
+                    circleProgressbar.Visibility = ViewStates.Visible;
+
                     // do something when clicking the send button
-                    new SimpleTooltip.Builder(dialog.Context)
-                            .AnchorView(btnSend)
-                            .Text("Tap and hold to record")
-                            .ArrowColor(Color.ParseColor("#000000"))
-                            .Gravity((int)GravityFlags.Top)
-                            .BackgroundColor(Color.ParseColor("#000000"))
-                            .TextColor(Color.ParseColor("#FFFFFF"))
-                            .DismissOnOutsideTouch(false)
-                            .DismissOnInsideTouch(true)
-                            .Build()
-                            .Show();
+                    //new SimpleTooltip.Builder(dialog.Context)
+                    //        .AnchorView(btnSend)
+                    //        .Text("Tap and hold to record")
+                    //        .ArrowColor(Color.ParseColor("#000000"))
+                    //        .Gravity((int)GravityFlags.Top)
+                    //        .BackgroundColor(Color.ParseColor("#000000"))
+                    //        .TextColor(Color.ParseColor("#FFFFFF"))
+                    //        .DismissOnOutsideTouch(false)
+                    //        .DismissOnInsideTouch(true)
+                    //        .Build()
+                    //        .Show();
                 }
 
             };
