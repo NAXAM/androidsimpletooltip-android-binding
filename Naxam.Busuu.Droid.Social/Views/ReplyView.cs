@@ -22,6 +22,8 @@ namespace Naxam.Busuu.Droid.Social.Views
     [Activity(Label = "ReplyView", MainLauncher = true)]
     public class ReplyView : AppCompatActivity, View.IOnLongClickListener, View.IOnTouchListener
     {
+        // fixing an error
+
         private Dialog dialog;
         private int progress = 0;
         private TextView txtSwipe;
