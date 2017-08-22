@@ -40,6 +40,7 @@ using Naxam.Busuu.Notification.ViewModels;
 using Naxam.Busuu.Droid.Core.Converters;
 using Naxam.Busuu.Droid.Core.TargetBinding;
 using Naxam.Busuu.Droid.Notification.Views;
+using Naxam.Busuu.Droid.Social.TargetBinding;
 
 namespace Naxam.Busuu.Droid
 {
@@ -120,6 +121,7 @@ namespace Naxam.Busuu.Droid
             registry.RegisterCustomBindingFactory<NXMvxExpandableListView>("DownloadCommand", view => new DownloadCommandTargetBinding(view));
             registry.RegisterCustomBindingFactory<NXMvxExpandableListView>("ExerciseClick", view => new ExerciseClickCommandTargetBinding(view));
             registry.RegisterCustomBindingFactory<TextView>("TextNotify", view => new TextNotifyTargetBinding(view));
+            registry.RegisterCustomBindingFactory<ImageView>("GlideUrl", view => new UrlGlideTargetBinding(view));
             registry.RegisterCustomBindingFactory<MemoriseBodyView>("Item", view => new MemoriseTargetBinding(view));
         }
 

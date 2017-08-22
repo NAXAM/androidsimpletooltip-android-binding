@@ -24,21 +24,54 @@ namespace Naxam.Busuu.Social.ViewModels
                 }
             }
         }
+
+        private IMvxCommand _BackCmd;
+
+        public IMvxCommand BackCmd
+        {
+            get { return _BackCmd = _BackCmd ?? new MvxCommand(RunBackCmd); }
+
+        }
+
+        void RunBackCmd()
+        {
+
+        }
+
+
+
+
+
+        private IMvxCommand _SendCmd;
+
+        public IMvxCommand SendCmd
+        {
+            get { return _SendCmd = _SendCmd ?? new MvxCommand(RunsendCmd); }
+
+        }
+
+        void RunsendCmd()
+        {
+            // do stuff when clicking a send button
+        }
+
+
         // constructor here
         public GiveFeedbackAnswerViewModel()
         {
             createData();
 
         }
+
         private void createData()
         {
             Feedback = new GiveFeedbackAnswerModel
             {
-                UrlImage="",
-                Answer="",
-                Question="",
+                UrlImage= "http://3.bp.blogspot.com/-tCecMKwoSts/VMmKTA1BtbI/AAAAAAAAWK8/AM-yDDTbrgs/s1600/anh-ngoc-trinh-dep-hoa-than-thanh-cong-chua-bong-bong-xinh-nhu-bup-be-13.jpg",
+                Answer= "social practices such as kinship and marriage, expressive forms such as art, music, dance, ritual, and religion, and technologies such as tool usage, cooking, shelter, and clothing are said to be cultural universals",
+                Question= "What are the thing that define a culture?",
                 Comment="",
-                Rate=3
+                Rating = 3
             };
 
         }

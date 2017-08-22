@@ -14,12 +14,14 @@ using Android.Text;
 using Java.Lang;
 using Android.Graphics;
 using Android.Text.Style;
+using MvvmCross.Droid.Support.V7.AppCompat;
 
 namespace Naxam.Busuu.Droid.Social.Views
 {
     [Activity(Label = "GiveFeedbackAnswerView", MainLauncher =true)]
-    public class GiveFeedbackAnswerView : AppCompatActivity, ITextWatcher
+    public class GiveFeedbackAnswerView : MvxAppCompatActivity, ITextWatcher, View.IOnClickListener
     {
+        private ImageView btnSend;
         private EditText edtAnswer;
         private int Start;
         private Toolbar toolbar;
@@ -27,19 +29,29 @@ namespace Naxam.Busuu.Droid.Social.Views
         public void AfterTextChanged(IEditable s)
         {
             if (Start + 1 <= s.Length() && len <= s.Length())
-                s.SetSpan(new ForegroundColorSpan(Color.ParseColor("#7A965F")), Start, Start + 1, SpanTypes.InclusiveInclusive);
+                s.SetSpan(new ForegroundColorSpan(Color.ParseColor("#00D800")), Start, Start + 1, SpanTypes.InclusiveInclusive);
         }
 
         public void BeforeTextChanged(ICharSequence s, int start, int count, int after)
         {
-            // throw new NotImplementedException();
             len = s.Length();
             Start = start;
         }
 
+        public void OnClick(View v)
+        {
+            if (v.Id == btnSend.Id) {
+                Dialog dialog = new Dialog(v.Context);
+                dialog.Window.SetLayout(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.WrapContent);
+                dialog.RequestWindowFeature((int)WindowFeatures.NoTitle);
+                dialog.SetContentView(Resource.Layout.dialog_send);
+                dialog.Show();
+
+            }
+        }
+
         public void OnTextChanged(ICharSequence s, int start, int before, int count)
         {
-            //throw new NotImplementedException();
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -55,6 +67,11 @@ namespace Naxam.Busuu.Droid.Social.Views
         {
            edtAnswer = (EditText)FindViewById(Resource.Id.edtAnswer);
            edtAnswer.AddTextChangedListener(this);
+            btnSend = (ImageView)FindViewById(Resource.Id.imgSend);
+            btnSend.SetOnClickListener(this);
+            btnSend.Focusable = true;
+            btnSend.RequestFocus();
+
         }
     }
 }

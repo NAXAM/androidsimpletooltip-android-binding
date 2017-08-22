@@ -56,16 +56,16 @@ namespace Naxam.Busuu.Social.Models
             }
         }
 
-        private float _rate;
+        private float _rating;
 
-        public float Rate
+        public float Rating
         {
-            get { return _rate; }
+            get { return _rating; }
             set
             {
-                if (_rate != value)
+                if (_rating != value)
                 {
-                    _rate = value;
+                    _rating = value;
                     RaisePropertyChanged();
                 }
             }
