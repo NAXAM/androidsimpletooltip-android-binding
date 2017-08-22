@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+      <RelativeLayout
+          android:id="@+id/toolbar"
+          android:elevation="5dp"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
+          android:background="#0080FF"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <ImageView
+              android:id="@+id/imgBack"
+              android:layout_marginLeft="16dp"
+              android:layout_centerVertical="true"
+              android:src="@drawable/ic_back"
+              android:layout_width="32dp"
+              android:layout_height="32dp" />
+          <TextView
+              android:id="@+id/txtTitle"
+              android:layout_marginLeft="32dp"
+              android:textSize="20dp"
+              android:textColor="#FFFFFF"
+              android:layout_toRightOf="@id/imgBack"
+              android:layout_centerVertical="true"
+              android:layout_centerHorizontal="true"
+              android:text="Correct Exercise"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+          <ImageView
+              android:id="@+id/imgSend"
+              android:layout_marginRight="16dp"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:src="@drawable/send_btn"
+              android:layout_width="32dp"
+              android:layout_height="32dp" />
+      </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            tools:context="saulmm.myapplication.GiveFeedbackAnswer">
+
+            <ImageView
+                android:id="@+id/img_cover_culture"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_culture_cover" />
+
+            <TextView
+                android:id="@+id/txtQuestion"
+                android:layout_width="match_parent"
+                android:textSize="16dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_cover_culture"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:text="What are the thing that define a culture?"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/txtHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtQuestion"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Tap on the text to correct it"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/edtAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHint"
+                android:background="#E2E8EB"
+                android:padding="8dp"
+                android:text="social practices such as kinship and marriage, expressive forms such as art, music, dance, ritual, and religion, and technologies such as tool usage, cooking, shelter, and clothing are said to be cultural universals" />
+
+            <TextView
+                android:id="@+id/txtSurvey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtAnswer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:text="How did Elena Gorbikeova do?"
+                android:textSize="20dp" />
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSurvey"
+                app:srb_drawBorderEnabled="false"
+                app:srb_starsSeparation="16dp"
+                app:srb_fillColor="#FFAA30"
+                app:srb_isIndicator="false"
+                app:srb_numberOfStars="5"
+                app:srb_starBackgroundColor="#D6DFE6"
+                app:srb_starCornerRadius="100"
+                app:srb_starSize="32dp"
+
+                app:srb_stepSize="1" />
+
+            <EditText
+                android:id="@+id/edtComment"
+                android:layout_marginBottom="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/ratingBar"
+                android:background="#E5E8ED"
+                android:gravity="start"
+                android:hint="Leave a comment"
+                android:padding="8dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

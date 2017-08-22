@@ -20,11 +20,10 @@ using Android.Views.InputMethods;
 
 namespace Naxam.Busuu.Droid.Social.Views
 {
-    [Activity(Label = "ReplyView", MainLauncher = true)]
+    [Activity(Label = "ReplyView")]
     public class ReplyView : AppCompatActivity, View.IOnLongClickListener, View.IOnTouchListener
     {
         // fixing an error
-
         private Dialog dialog;
         private int progress = 0;
         private TextView txtSwipe;
@@ -145,6 +144,7 @@ namespace Naxam.Busuu.Droid.Social.Views
             txtSwipe.Text = str;
             imgBack = (ImageView)dialog.FindViewById(Resource.Id.imgBack);
             circleProgressbar = (ProgressBar)dialog.FindViewById(Resource.Id.circleProgressbar);
+            circleProgressbar.IndeterminateDrawable.SetColorFilter(Color.ParseColor("#33AAFA"), Android.Graphics.PorterDuff.Mode.Multiply);
 
             edtMessage = (EditText)dialog.FindViewById(Resource.Id.edtMessage);
             btnSend = (FloatingActionButton)dialog.FindViewById(Resource.Id.btnSend);

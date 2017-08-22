@@ -80,6 +80,9 @@
     <Reference Include="MvvmCross.Platform.Droid, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmCross.Platform.5.1.1\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
     </Reference>
+    <Reference Include="Naxam.SimpleRatingBar.Droid, Version=0.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Naxam.SimpleRatingBar.Droid.0.1.5\lib\MonoAndroid10\Naxam.SimpleRatingBar.Droid.dll</HintPath>
+    </Reference>
     <Reference Include="Naxam.SimpleTooltip.Droid">
       <HintPath>..\..\Visual Studio 2017\Projects\SimpleTooltip-droid\Naxam.SimpleTooltip.Droid\bin\Release\Naxam.SimpleTooltip.Droid.dll</HintPath>
     </Reference>
@@ -131,6 +134,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\FilterView.cs" />
+    <Compile Include="Views\GiveFeedbackAnswerView.cs" />
     <Compile Include="Views\ReplyView.cs" />
     <Compile Include="Views\SocialView.cs" />
   </ItemGroup>
@@ -199,9 +203,6 @@
     <AndroidResource Include="Resources\Layout\test_layout.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\ic_back.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\Drawable\ic_mic.png" />
   </ItemGroup>
   <ItemGroup>
@@ -209,6 +210,18 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\ic_send_social.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\activity_give_feedback_answer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_culture_cover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\send_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
